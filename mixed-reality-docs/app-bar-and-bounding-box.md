@@ -1,0 +1,54 @@
+---
+title: Rettangolo di selezione e barra dell'App
+description: Barra dell'App è un menu a livello di oggetto che contiene una serie di pulsanti che viene visualizzato sul bordo inferiore dei limiti di ologramma.
+author: radicalad
+ms.author: adlinv
+ms.date: 03/21/2018
+ms.topic: article
+keywords: Realtà mista di Windows, App a barre, rettangolo di selezione
+ms.openlocfilehash: bdce92e00193230d1f7a487f11ef0487f1d6657c
+ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59602082"
+---
+# <a name="bounding-box-and-app-bar"></a>Finestra di contenimento e barra dell'App
+![Rettangolo di selezione è l'interfaccia standard per la manipolazione dell'oggetto nella realtà mista.](images/640px-boundingbox-hero.jpg)<br>
+
+## <a name="what-is-the-bounding-box"></a>Che cos'è la finestra di contenimento?
+
+Rettangolo di selezione è l'interfaccia standard per la manipolazione dell'oggetto nella realtà mista. L'utente fornisce un intuitività che l'oggetto è attualmente modificabile. Gli angoli informare l'utente che l'oggetto è possibile scalare anche. Questo intuitività visual Mostra agli utenti l'area totale dell'oggetto, anche se non è visibile all'esterno di una modalità di regolazione. Ciò è particolarmente importante poiché se non esiste, potrebbe apparire un oggetto a un altro oggetto o nell'area ancorato si comporti come se si è verificato lo spazio intorno a esso che non deve essere presenti. HoloLens 2, il riquadro delimitatore risponde alla prossimità del dito dell'utente. Mostra commenti visivi per consentire percepire la distanza dall'oggetto. 
+
+![HoloLens punto di vista del ridimensionamento di un oggetto tramite rettangolo di selezione](images/bounding-box-scale.gif)<br>
+*Il ridimensionamento di un oggetto tramite rettangolo di selezione*
+
+Simile a cubo angoli del rettangolo seguono un modello ampiamente riconosciuto per regolare la scala. Accoppiato con l'azione esplicita dell'inserimento di un oggetto in "modificare la modalità" è evidente che possono entrambi spostare l'oggetto, ma anche ridimensionarlo nel proprio ambiente.
+
+![HoloLens punto di vista della rotazione di un oggetto tramite rettangolo di selezione](images/bounding-box-rotate.gif)<br>
+*Ruotare un oggetto tramite rettangolo di selezione*
+
+I affordance sferiche sui bordi del rettangolo di selezione sono indicatori di rotazione. Questo account offre all'utente ulteriori regolazione loro vntana inserito. Non solo può è regolare e scalabilità, ma ora ruotare anche.
+
+* Per lo sviluppo di app Unity, vedere [rettangolo di selezione in Unity-Toolkit realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
+## <a name="what-is-the-app-bar"></a>Che cos'è barra dell'App?
+
+Barra dell'App è un menu a livello di oggetto che contiene una serie di pulsanti che viene visualizzato sul bordo inferiore dei limiti di ologramma. Questo modello viene comunemente usato per concedere agli utenti la possibilità di rimuovere e modificare vntana.
+
+Poiché questo modello viene usato con gli oggetti che sono world bloccato, come un utente si sposta l'oggetto barra dell'App viene sempre visualizzato sul lato degli oggetti più vicino all'utente. Anche se ciò non è del billboard, in modo efficace raggiunge lo stesso risultato. impedisce la funzionalità di blocco che altrimenti sarebbero disponibile da una posizione diversa nel proprio ambiente o posizione per nasconde i colori di un utente.
+
+![Walking intorno ologramma. Segue barra dell'App.](images/holobar-followuser.gif)<br>
+*Walking intorno ologramma, segue barra dell'App*
+
+Barra dell'App è stata progettata principalmente come un modo per gestire gli oggetti inseriti in un ambiente dell'utente. Usato in combinazione con il rettangolo di selezione, un utente dispone del controllo completo su come e dove gli oggetti sono orientati in realtà mista.
+
+* Per lo sviluppo di app Unity, vedere [barra dell'App in Unity-Toolkit realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)
+
+## <a name="see-also"></a>Vedere anche
+* [Rettangolo in Unity-Toolkit realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+* [Barra dell'App in Unity-Toolkit realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)
+* [Oggetto si](interactable-object.md)
+* [Testo in Unity](text-in-unity.md)
+* [Raccolta di oggetti](object-collection.md)
+* [Visualizzazione dello stato](progress.md)
