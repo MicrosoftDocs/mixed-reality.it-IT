@@ -152,7 +152,7 @@ Per eseguire il training del progetto di visione artificiale personalizzato:
 
     ![](images/AzureLabs-Lab310-10.png)
 
-6.  Premere **caricare i file** dopo aver selezionato tutte le immagini che si desidera eseguire il training con il progetto. I file verranno avviato il caricamento. Dopo aver conferma del caricamento, fare clic su ****.
+6.  Premere **caricare i file** dopo aver selezionato tutte le immagini che si desidera eseguire il training con il progetto. I file verranno avviato il caricamento. Dopo aver conferma del caricamento, fare **clic** su 
 
     ![](images/AzureLabs-Lab310-11.png)
 
