@@ -80,21 +80,28 @@
 ## Introduzione alla progettazione
 ### [Che cos'è la realtà mista?](mixed-reality.md)
 ### [Che cos'è un ologramma?](hologram.md)
+### [Comodità](Comfort.md)
+### [Frame olografico](Holographic-frame.md)
+### [Progettazione del mapping spaziale](Spatial-mapping-design.md)
+### [Progettazione dell'audio spaziale](Spatial-sound-design.md)
 ### [Il mio primo anno nel team di progettazione](case-study-my-first-year-on-the-hololens-design-team.md)
 ### [Espansione del processo di progettazione per la realtà mista](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [La ricerca di un'esperienza di uso del computer più personale](case-study-the-pursuit-of-more-personal-computing.md)
 ### [Processo di AfterNow - Concetto, prototipo, creazione](case-study-afternows-process-envisioning,-prototyping,-building.md)
-## Progettazione delle interazioni
-### [Concetti fondamentali delle interazioni](Interaction-fundamentals.md)
-### [Comodità](Comfort.md)
-### [Selezione della destinazione con lo sguardo](Gaze-targeting.md)
-### [Movimenti](Gestures.md)
-### [Progettazione delle interazioni vocali](Voice-design.md)
-### [Che cos'è un ologramma?](Hologram.md)
-### [Frame olografico](Holographic-frame.md)
-### [Progettazione del mapping spaziale](Spatial-mapping-design.md)
-### [Progettazione dell'audio spaziale](Spatial-sound-design.md)
-### [Controller del movimento](Motion-controllers.md)
+## Sistema e strumenti di progettazione per la realtà mista
+### [Interazioni istintive](Interaction-fundamentals.md)
+#### [Mani e controller del movimento](hands-and-tools.md)
+##### [Manipolazione diretta](direct-manipulation.md)
+##### [Puntamento e commit](point-and-commit.md)
+##### [Controller del movimento](Motion-controllers.md)
+#### [Mani libere](hands-free.md)
+##### [Sguardo fisso e attesa](Gaze-and-dwell.md)
+##### [Sguardo fisso e voce](Voice-design.md)
+#### [Puntamento con la testa e commit](gaze-and-commit.md)
+### Interazioni supplementari
+#### [Tracciamento oculare](eye-tracking.md)
+#### [Selezione della destinazione con lo sguardo](Gaze-targeting.md)
+#### [Movimenti](Gestures.md)
 ## Stile
 ### [Colore, luce e materiali](color,-light-and-materials.md)
 ### [Progettazione dell'audio spaziale](spatial-sound-design.md)
@@ -130,7 +137,8 @@
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 ### Attività iniziali
-#### [Toolkit per realtà mista](mrtk-getting-started.md)
+#### [Accelerare lo sviluppo con Mixed Reality Toolkit v2](mrtk-getting-started.md)
+#### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
 #### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
 #### [Modalità di gioco Unity](unity-play-mode.md)
 #### [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
@@ -141,6 +149,7 @@
 #### [Persistenza in Unity](persistence-in-unity.md)
 #### [Sguardo fisso in Unity](gaze-in-unity.md)
 #### [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
+#### [Tracciamento delle mani e oculare in Unity](hand-eye-in-unit.md)
 #### [Input vocale in Unity](voice-input-in-unity.md)
 #### [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
 #### [Audio spaziale in Unity](spatial-sound-in-unity.md)
@@ -153,6 +162,7 @@
 ### Argomenti avanzati
 #### [Uso dello spazio dei nomi Windows con le app Unity per HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
+### Documenti legacy (Unity 2017.4/HTK/MRTK v1)
 ## Unreal
 ### Unreal per HoloLens 2 - presto disponibile!
 ## DirectX
@@ -176,9 +186,18 @@
 #### [Aggiungere Holographic Remoting](add-holographic-remoting.md)
 ## WebVR
 ### [Uso di WebVR in Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
-## [Esercitazioni e app di esempio](academy.md)
+## [Esercitazioni e app di esempio](tutorials.md)
 ### Unity
-#### App di esempio open source
+#### Moduli di apprendimento sulla realtà mista
+##### HoloLens 2
+###### [Modulo di base: panoramica e obiettivi](mrlearning-base.md)
+####### [Inizializzazione del progetto e prima applicazione](mrlearning-base-ch1.md)
+####### [Interfaccia utente, tracciamento delle mani e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
+####### [Posizionamento del contenuto dinamico e risolutori](mrlearning-base-ch3.md)
+####### [Interazione con oggetti 3D](mrlearning-base-ch4.md)
+####### [Input avanzati](mrlearning-base-ch5.md)
+####### [App demo](mrlearning-base-ch6.md)
+#### App di esempio open source per HoloLens (prima generazione)
 ##### [Periodic Table of the Elements](periodic-table-of-the-elements.md)
 ##### [Lunar Module](lunar-module.md)
 ##### [Galaxy Explorer](galaxy-explorer.md)
@@ -266,8 +285,8 @@
 
 # Programmi ed eventi
 ## [Mixed Reality Dev Days](mr-dev-days.md)
+### [Sessioni Mixed Reality Dev Days](mr-dev-days-sessions.md)
 ### [Domande frequenti per Mixed Reality Dev Days](mr-dev-days-faq.md)
-## [The Realities Show](realities-show.md)
 ## [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
 ## [CVPR 2018 - Sessione sulla modalità ricerca HoloLens](cvpr-2018.md)
 ## [ECCV 2018 - HoloLens come strumento per la ricerca nell'ambito della visione artificiale](eccv-2018.md)
