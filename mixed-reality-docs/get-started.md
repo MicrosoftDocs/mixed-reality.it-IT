@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: iniziare a usare, nozioni di base, HoloLens, visore VR immersivi, ar, vr, unity, visual studio, Guida introduttiva, come
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601343"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873966"
 ---
 # <a name="get-started"></a>Informazioni di base
 
@@ -63,7 +63,7 @@ Ora che i PC e dispositivi sono configurati, si è pronti per creare il primo pr
 
 Ora che è stato creato correttamente il primo progetto di MR, ora è possibile probabilmente fame per altre informazioni. Ecco alcune risorse per:
 * [Documentazione per sviluppatori di realtà mista](mixed-reality.md) : si è già qui, ma è molto altro ancora per l'estrazione, tra cui documentazione tecnica, linee guida di progettazione, progetti di esempio e casi di Studio.
-* [Academy realtà mista](academy.md) -segui le esercitazioni che trattano di tutto impostare progetti, all'implementazione di blocchi di compilazione MR principali, per l'integrazione di Azure, servizi cloud nella tua app MR.
+* [Esercitazioni di realtà mista](tutorials.md) -segui le esercitazioni che trattano di tutto impostare progetti, all'implementazione di blocchi di compilazione MR principali, per l'integrazione di Azure, servizi cloud nella tua app MR.
 * [Informazioni su Unity](https://unity3d.com/learn) -sito Web di Unity offre esercitazioni, progetti e sessioni di formazione in tempo reale per gli autori in ogni fase di apprendimento.
 
 È anche possibile ottenere assistenza da queste risorse grande community:

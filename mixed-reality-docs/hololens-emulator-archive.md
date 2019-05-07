@@ -1,25 +1,35 @@
 ---
 title: Archivio dell'emulatore di HoloLens
 description: Elenco di compilazioni rilasciate dell'emulatore di Microsoft HoloLens.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 10/18/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/25/2019
 ms.topic: article
 keywords: HoloLens, emulatore, compilazioni, le versioni
-ms.openlocfilehash: 05ef9ff84f6079289e8c81b62865775c9b16667f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 75ea6d1ab3f949d28364baca408d79ec9e4bb846
+ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601272"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64914631"
 ---
-# <a name="hololens-emulator-archive"></a>Archivio dell'emulatore di HoloLens
+Emulatore HoloLens (dal 1 ° generazione) e le compilazioni di HoloLens 2 emulatore installare side-by-side. È in genere consigliabile usare la build più recente disponibile, ma potrebbero esserci casi in cui è preferibile o necessario testare un'app in un emulatore precedente. Questa pagina include collegamenti a versioni rilasciate.
 
-Le compilazioni emulatore HoloLens installare side-by-side. È in genere consigliabile usare la build più recente disponibile, ma potrebbero esserci casi in cui è preferibile o necessario testare un'app in un emulatore precedente. Questa pagina include collegamenti a versioni rilasciate.
+
+# <a name="hololens-2-emulator-archive"></a>Archivio dell'emulatore 2 HoloLens
+
 
 |  Build |  Data di rilascio |  Note | 
 |----------|----------|----------|
-|  [Emulatore HoloLens compilazione 10.0.17763.253](https://go.microsoft.com/fwlink/?linkid=2065980) | 19 novembre 2018 | Build più recente. Aggiornamento di Windows 10 ottobre 2018. |
+|  [HoloLens 2 emulatore compilazione 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 aprile 2019 | Build più recente di HoloLens 2. |
+
+
+# <a name="hololens-emulator-1st-gen-archive"></a>Emulatore HoloLens (dal 1 ° generazione) archive
+
+
+|  Build |  Data di rilascio |  Note | 
+|----------|----------|----------|
+|  [Emulatore HoloLens compilazione 10.0.17763.253](https://go.microsoft.com/fwlink/?linkid=2065980) | 19 novembre 2018 | HoloLens più recente (1 ° generazione) di compilazione. Aggiornamento di Windows 10 ottobre 2018. |
 |  [Emulatore HoloLens compilazione 10.0.17134.80](https://go.microsoft.com/fwlink/?linkid=874531) | 21 maggio 2018 | 
 |  [Emulatore HoloLens compilazione 10.0.14393.1358](https://go.microsoft.com/fwlink/?linkid=852626) |  7 luglio 2017 |
 |  [Emulatore HoloLens compilazione 10.0.14393.0](http://go.microsoft.com/fwlink/?LinkID=823018) |  2 agosto 2016 |

@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettazione
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600682"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873919"
 ---
+# <a name="gaze-and-dwell"></a>Sguardo e permanenza
+Esistono molti modi diversi per verificare un _commit_ quale la combinazione di sguardo con _vocali_ oppure _mano i movimenti_.
+Esistono diversi scenari utente, tuttavia, in cui le mani degli utenti potrebbero essere occupate o non possono essere rilevate (ad esempio, factory gli utenti che svolgono guanti dimensioni eccessive pesante). Input vocale anche potrebbero non essere disponibili a causa delle preferenze utente, contesto basati su social network o ambienti alti.
+Come soluzione di fallback un'altra opzione per eseguire una _commit_ consiste nel mantenere fissare lo un elemento dell'interfaccia utente che costituiscono _permanenza_.
+Oggetto _permanenza_ può essere eseguita con sguardo head o rossi. L'idea è semplice e può essere suddivisa nelle fasi seguenti: 
+1. Si inizia a un pulsante holographic gazing
+
+2. Dopo un ritardo di onset breve (ad esempio, 150 ms) viene avviata l'animazione alcune indicazioni visive. Il ritardo del set viene utilizzato per evitare di sovraccaricare l'utente visualizzando immediatamente commenti e suggerimenti continuamente.
+    - Per la _sguardo occhio_, si consiglia quanto segue per la progettazione dell'oggetto visivo permanenza commenti e suggerimenti:
+      - **Blend**: Blend senza problemi i commenti e suggerimenti da poco visibile nella prima di tutto a completamente opaco. In questo modo i commenti e suggerimenti meno rappresentano una distrazione e overwhleming e perfettamente in linea con la certezza che il sistema è che l'utente desideri interagire con questo pulsante.
+      - **Trascinarlo in**: Creare un feedback visivo che riduce le dimensioni e si sposta verso il centro della destinazione, chiama l'attenzione dell'utente visual. 
+
+3. Dopo avere una durata di permanenza predefiniti (ad esempio, 800 ms), la permanenza completa e si verifica un evento associato.
+    - Fornire alcuni finalizzazione acustica o feedback visivo davvero portare home che l'elemento è stato selezionato ora.
+
+![Permanenza stati](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>Sguardo targeting
 
 Tutte le interazioni vengono compilate al momento la possibilità di un utente di destinazione l'elemento a cui che si desidera interagire, indipendentemente dalla modalità di input. Realtà mista di Windows, questa operazione viene in genere eseguita usando sguardo dell'utente.
@@ -32,7 +50,7 @@ Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione
 </table>
 
 > [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+> Altre indicazioni specifiche su 2 HoloLens [presto](index.md).
 
 ## <a name="target-sizing-and-feedback"></a>Commenti e suggerimenti e le dimensioni di destinazione
 
@@ -81,5 +99,5 @@ Quando si determina quale vicino agli elementi interattivi per attivare, fornire
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)
-* [Progettazione vocale](voice-design.md)
+* [Progettazione delle interazioni vocali](voice-design.md)
 * [Cursori](cursors.md)

@@ -3,15 +3,15 @@ title: Comfort
 description: Durante la visualizzazione fisica, il sistema di visual umano si basa su più origini di informazioni o "segnali," per interpretare le forme 3D e la posizione relativa degli oggetti.
 author: erickjpaul
 ms.author: erpau
-ms.date: 02/13/2019
+ms.date: 04/5/2019
 ms.topic: article
-keywords: Realtà mista, progettazione, il fattore di comfort
-ms.openlocfilehash: dbf7080f5b9a2ebafdbd06fca79fae717b3207ed
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Progettazione, realtà mista comfort, 2 HoloLens, HoloLens (dal 1 ° generazione)
+ms.openlocfilehash: 3dac997923b3f2319cb97137c1bbd9a12c4126b1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604930"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993631"
 ---
 # <a name="comfort"></a>Comfort
 
@@ -34,7 +34,7 @@ Consente di visualizzare HoloLens corretti a una distanza ottica circa 2.0m lont
 ![Distanza ottima per il posizionamento vntana da parte dell'utente.](images/distanceguiderendering-950px.png)<br>
 *Distanza ottima per il posizionamento vntana da parte dell'utente*
 
-#### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedure consigliate per HoloLens (dal 1 ° generazione) e 2 di HoloLens
+### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedure consigliate per HoloLens (dal 1 ° generazione) e 2 di HoloLens
 
 Per la massima comodità, **zona ottima per la selezione host ologrammi è compreso tra 5m e m 1,25**. In ogni caso, le finestre di progettazione deve tentare in modo invisibile del contenuto di struttura per incoraggiare gli utenti di interagire 1 milione o più lontano rispetto al contenuto (ad esempio, regolare [le dimensioni del contenuto e i parametri di selezione host predefiniti](gaze-targeting.md)). 
 
@@ -42,10 +42,14 @@ Anche se il contenuto in alcuni casi potrebbe essere necessario deve essere visu
 
 Gli oggetti che gestiscono lo spostamento in modo approfondito hanno più probabili rispetto agli oggetti fermo per produrre disturbo a causa del conflitto vergence facilitazione. In modo analogo, richiedendo agli utenti di passare rapidamente da quasi messa a fuoco e decisamente lo stato attivo (ad esempio, a causa di ologramma popup che richiede l'interazione diretta) può causare la fatica e disturbo visual. Pertanto **prestare particolare attenzione deve essere prelevato per ridurre al minimo la frequenza gli utenti sono: visualizzazione di contenuto che è in movimento in modo approfondito; o Cambio rapido lo stato attivo tra vntana vicino e lontano**. 
 
-Quando si progetta il contenuto per il parametro direct (quasi) interazione in 2 HoloLens, oppure **in tutte le applicazioni in cui il contenuto deve essere poste più vicino a 1 milione, extra deve prestare attenzione per garantire il comfort utente**. Le probabilità di disturbo a causa del conflitto vergence facilitazione aumentano in modo esponenziale con riduzione distanza di visualizzazione. **Si consiglia di creare un "budget depth" per le App in base alla quantità di tempo è previsto che un utente di visualizzare il contenuto che si avvicina (< 1 milione) e lo spostamento in modo approfondito**. Un esempio consiste nell'evitare di inserire l'utente in tali situazioni più del 25% del tempo. Se viene superato il budget di profondità, è consigliabile un'attenta utente test per garantire che rimane un'esperienza pratica.
+### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Considerazioni aggiuntive per 2 HoloLens e quasi le distanze di interazione
 
-> [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+Quando si progetta il contenuto per il parametro direct (quasi) interazione in 2 HoloLens, oppure **in tutte le applicazioni in cui il contenuto deve essere poste più vicino a 1 milione, extra deve prestare attenzione per garantire il comfort utente**. Le probabilità di disturbo a causa del conflitto vergence facilitazione aumentano in modo esponenziale con riduzione distanza di visualizzazione. Inoltre, gli utenti potrebbero riscontrare un aumento bluriness quando la visualizzazione di contenuto a quasi le distanze di interazione, pertanto si consiglia di test contenuto sottoposto a rendering sia all'interno dell'area di posizionamento ottimale ologrammi anche come più vicino (minore di 1,0 m down il piano di ritaglio) per Assicurarsi che rimanga chiari e semplici da visualizzare. 
+
+**Si consiglia di creare un "budget depth" per le App in base alla quantità di tempo è previsto che un utente di visualizzare il contenuto che si avvicina (minore di 1.0 m) e lo spostamento in modo approfondito**. Un esempio consiste nell'evitare di inserire l'utente in tali situazioni più del 25% del tempo. Se viene superato il budget di profondità, è consigliabile un'attenta utente test per garantire che rimane un'esperienza pratica. 
+
+In generale, è inoltre consigliabile fare attenzione prima verificare eventuali requisiti di interazione (ad esempio, la velocità di movimento, raggiungibilità, e così via) a quasi distanze interazione rimangono comodo per gli utenti. 
+
 
 ### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi coinvolgenti
 
@@ -65,8 +69,7 @@ Per HoloLens (dal 1 ° generazione), stimato e impostato durante dispositivo IPD
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+Per HoloLens 2, stimate e impostato durante occhio/dispositivo IPD [calibrazione](calibration.md). Per i nuovi utenti a un già impostato di dispositivo, è necessario eseguire calibrazione per garantire IPD sia impostata correttamente. VO viene incluso automaticamente nella 2 HoloLens. 
 
 ### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi coinvolgenti
 
@@ -120,7 +123,7 @@ Nel primo-persona-tiro a segno videogames, Heads-up display (HUDs) presentare in
 
 ## <a name="text-legibility"></a>Migliorare la leggibilità testo
 
-Migliorare la leggibilità ottimale testo consente di ridurre agli occhi e mantenere la comodità per l'utente, in particolare negli scenari che richiedono agli utenti di leggere in un HMD o applicazioni. Migliorare la leggibilità testo dipende da diversi fattori tra cui varie le proprietà di visualizzazione (ad esempio, densità in pixel, luminosità, contrasto elevato), proprietà lens (ad esempio, cromatica cromatiche) e le proprietà del tipo di carattere o testo (ad esempio, il tipo di carattere specifico le caratteristiche come spessore, grazie, colore del tipo di carattere, colore di sfondo e così via).  
+Migliorare la leggibilità ottimale testo consente di ridurre agli occhi e mantenere la comodità per l'utente, in particolare negli scenari che richiedono agli utenti di leggere in un HMD o applicazioni. Migliorare la leggibilità testo dipende da diversi fattori tra cui varie le proprietà di visualizzazione (ad esempio, densità in pixel, luminosità, contrasto elevato), proprietà lens (ad esempio, cromatica cromatiche) e le proprietà del tipo di carattere o testo (ad esempio, il tipo di carattere specifico le caratteristiche, ad esempio weight, spaziatura, grazie, e così via, colore del tipo di carattere, colore di sfondo).  
 
 In generale, è consigliabile testare le applicazioni specifiche per migliorare la leggibilità e rendendo le dimensioni dei caratteri grande quanto è fattibile per un'esperienza pratica. Di seguito sono disponibili linee guida generali come punto di partenza per lo sviluppo. Si noti che tutte le dimensioni del carattere vengono inserite in gradi del [angolo visual](https://en.wikipedia.org/wiki/Visual_angle) anziché fisica di dimensioni specifiche, che fornisce indicazioni per qualsiasi distanza all'interno dell'area di posizionamento ottimale ologrammi perché lo conteggia le dimensioni del il testo e la distanza che viene visualizzato nel Visualizzatore. 
 
@@ -130,18 +133,25 @@ Per i dispositivi holographic, il rendering del testo scuro/nero su sfondo bianc
 
 #### <a name="hololens-1st-gen"></a>HoloLens (dal 1 ° generazione)
 
-Le dimensioni minime del carattere verticali leggibile sono circa 0.35° e una dimensione del carattere verticali familiarità è almeno circa 0,5 ° per la lettura del contenuto presentata all'utente a una distanza di 2 minuti. 
+Le dimensioni minime del carattere leggibili (misurazione dalla linea di base del tipo di carattere da ascender) sono di circa 0.35° e una dimensione del carattere familiarità è almeno circa 0,5 ° per la lettura del contenuto presentata all'utente a una distanza di 2 minuti. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+Le dimensioni minime del carattere leggibili (misurazione dalla linea di base del tipo di carattere da ascender) sono di almeno circa: 
+   - ° 0,4-0,5 ° a 45cm (distanza manipolazione diretta) 
+   - ° 0.35-0,4 ° m 2.0
+   
+Le dimensioni del carattere facilmente leggibili (misurazione dalla linea di base del tipo di carattere da ascender) sono di almeno circa: 
+   - ° 0,65-0,8 ° a 45cm (distanza manipolazione diretta)
+   - ° 0.6-0,75 ° m 2.0
+
+Si noti che le dimensioni dei caratteri devono essere leggermente superiori per il testo con le distanze di manipolazione diretta a causa del conflitto vergence facilitazione descritto in precedenza (gli occhi degli utenti sono da tenere conto a una distanza di m 2.0 sullo schermo HoloLens, in modo che il contenuto sottoposto a rendering in, ad esempio, 45 cm è possibile visualizzare più sfocati agli utenti). 
 
 ### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi coinvolgenti
 
-Dispositivi coinvolgenti in genere avere contrasto in a causa dell'occlusione completa dell'ambiente esterno, ma minore densità di pixel effettivi in parte a causa l'ingrandimento degli obiettivi davanti verrà visualizzato il. 
+In genere dispositivi coinvolgenti hanno contrasto in a causa dell'occlusione completa dell'ambiente esterno, ma potrebbero essere minore densità di pixel effettivi in parte a causa l'ingrandimento degli obiettivi davanti verrà visualizzato il. 
 
-Per HMDs coinvolgenti di realtà mista di Windows, le dimensioni minime del carattere verticali leggibile sono circa 0,7-0.9 ° e una dimensione del carattere verticali familiarità è circa 1.0° per la lettura del contenuto presentata all'utente a una distanza di 2 minuti.
+Per HMDs coinvolgenti di realtà mista di Windows, le dimensioni minime del carattere verticali leggibili (misurazione dalla linea di base del tipo di carattere da ascender) sono circa 0,7-0.9 ° e una dimensione del carattere verticali familiarità è circa 1.0° per la lettura del contenuto presentata a una distanza di 2 minuti per il utente.
 
 ## <a name="gaze-direction"></a>Direzione sguardo
 
@@ -160,8 +170,8 @@ L'angolo di sguardo ottimale (sospeso) viene considerato tra 10 e 20 gradi sotto
 Quando gli utenti dovrebbero tenere una mano generata per tutta la durata di un'esperienza, può accumulare la fatica di tutto le competenze necessarie. Può anche essere fatiguing per richiedere all'utente di eseguire ripetutamente air toccare i movimenti per periodi prolungati. È quindi consigliabile da esperienze per evitare che richiede l'input costante, ripetute movimento. Questo obiettivo può essere ottenuto che incorpora le interruzioni di breve o offre una combinazione di gesti e riconoscimento vocale per interagire con l'app di input.
 
 ## <a name="see-also"></a>Vedere anche
-* [Sguardo](gaze.md)
-* [Stabilità ologrammi](hologram-stability.md)
-* [Nozioni fondamentali di interazione](interaction-fundamentals.md)
-* [Frame holographic](holographic-frame.md)
+* [Sguardo fisso](gaze.md)
+* [Stabilità degli ologrammi](hologram-stability.md)
+* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Frame olografico](holographic-frame.md)
 * [Calibrazione](calibration.md)

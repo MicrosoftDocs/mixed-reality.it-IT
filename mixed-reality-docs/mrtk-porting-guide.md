@@ -1,21 +1,21 @@
 ---
 title: Operazioni preliminari per HoloLens 2 all'app
 description: Rivolto agli sviluppatori che hanno un'app esistente per HoloLens (dal 1 ° generazione) e/o meno recenti MRTK e cercando alla porta al MRTK versione 2 e HoloLens 2.
-author: author:grbury
+author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 keywords: Realtà mista di Windows, testare, MRTK, MRTK versione 2, 2 HoloLens
-ms.openlocfilehash: a5a329f69f5f9cc64666483adc92786ae8910b2f
-ms.sourcegitcommit: 07773e094ace2e828e329bd55da759983be3b8c1
+ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59605289"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873908"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Operazioni preliminari per HoloLens 2 l'app esistente
 
-Questa guida è progettata appositamente per aiutare gli sviluppatori che dispongono di un'app esistente di Unity per HoloLens 1 alla propria applicazione per il nuovo dispositivo HoloLens 2 di porta. Esistono quattro passaggi principali di porting di un'app Unity di HoloLens 1 a 2 HoloLens. Le sezioni seguenti in modo dettagliato le informazioni per ogni fase. 
+Questa guida è progettata appositamente per aiutare gli sviluppatori che dispongono di un'app esistente di Unity per HoloLens (dal 1 ° generazione) alla propria applicazione per il nuovo dispositivo HoloLens 2 di porta. Esistono quattro passaggi principali per il porting di un HoloLens (dal 1 ° generazione) dell'app Unity HoloLens 2. Le sezioni seguenti in modo dettagliato le informazioni per ogni fase. 
 
 | Passaggio 1 | Passaggio 2 | Passaggio 3 | Passaggio 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -31,11 +31,12 @@ Si tratta **altamente consigliato** che, prima di iniziare il processo di portin
 
 ## <a name="migrate-project-to-latest-version-of-unity"></a>Eseguire la migrazione di progetti alla versione più recente di Unity
 
-Il primo passaggio per il porting dell'applicazione di Unity sarà possibile aprirlo nella versione più recente di Unity. Attualmente, sono disponibili due opzioni per scegliere tra: Unity 2018.3.x or Unity 2019.1.x beta. Esistono più i compromessi tra queste due versioni, ma la differenza principale consiste nel significativo è la possibilità di compilare il codice per ARM64 in Unity 2019 +. 
+Se si usa la versione 2 MRTK, Unity 2018 LTS sarà il percorso di supporto migliore a lungo termine senza modifiche di rilievo in Unity o in MRTK.  La compilazione di Unity consigliata, per il precedente "Installa gli strumenti" è 2018.3 Unity, che diventerà la versione LTS di Unity 2018.  Inoltre, la v2 MRTK verrà sempre garantire il supporto per Unity 2018 LTS ma non necessariamente garantisce il supporto per ogni iterazione di Unity 2019.x. 
 
-Gli sviluppatori devono valutare eventuali [dipendenze di plug-in](https://docs.unity3d.com/Manual/Plugins.html) che attualmente esistenti nel progetto e se queste DLL possono essere compilate per ARM64. Se non è possibile creare un plug-in di dipendenza rigida per ARM64 uno sarà necessario usare Unity 2018 LTS. Portabilità in ARM64 è in genere desiderato, se possibile, poiché sono presenti molti miglioramenti delle prestazioni visualizzati nei dispositivi rispetto ai ARM32.
+Per aiutare a chiarire le differenze aggiuntive tra Unity 2018.3.x o Unity 2019.1.x, seguente sono riportati i compromessi tra queste due versioni, con la differenza principale consiste nel significativo è la possibilità di compilare il codice per ARM64 in Unity 2019. 
 
-Inoltre, il Toolkit V2 di realtà mista verrà sempre garantire il supporto per Unity 2018 LTS ma non necessariamente garantisce il supporto per ogni iterazione del 2019.x+ Unity. 
+Gli sviluppatori devono valutare eventuali [dipendenze di plug-in](https://docs.unity3d.com/Manual/Plugins.html) che attualmente esistenti nel progetto e se queste DLL possono essere compilate per ARM64. Se non è possibile creare un plug-in di dipendenza rigida per ARM64 uno sarà necessario usare Unity 2018 LTS.
+
 
 | Unity 2018.3.x | Unity 2019.1 + |
 |----------|-------------------|

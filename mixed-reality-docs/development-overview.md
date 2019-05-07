@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: recupero started, nozioni di base, HoloLens, 2, HoloLens visore VR immersivi, unity, visual studio
-ms.openlocfilehash: 1d23e458477cc23252ccd4c44f67c400aa356965
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605110"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873981"
 ---
 # <a name="development-overview"></a>Cenni preliminari sullo sviluppo
 
@@ -41,13 +41,13 @@ Questi sono i blocchi predefiniti di base per lo sviluppo della realtà mista:
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">Controller di movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">Controller del movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th> Percezione e nuove funzionalità spaziali</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
 </tr><tr>
 <td> <a href="coordinate-systems.md">Coordinate complessive</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">Spaziale audio</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">Audio spaziale</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-mapping.md">Mapping spaziale</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>
@@ -75,13 +75,13 @@ Indipendentemente dal tipo di app che tu stia creando, questi strumenti facilite
 * [Portale di dispositivi di Windows](using-the-windows-device-portal.md)
 * [HoloLens emulatore](using-the-hololens-emulator.md) (emulatore HoloLens 2 presto disponibile)
 * [Simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md)
-* [Criteri di qualità delle App](app-quality-criteria.md)
+* [Criteri di qualità delle app](app-quality-criteria.md)
 
 ## <a name="see-also"></a>Vedere anche
 * [Installare gli strumenti](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Servizi di realtà mista</a>
-* [Esercitazioni di realtà miste](academy.md)
+* [Esercitazioni di realtà miste](tutorials.md)
 * [Progetti open source](open-source-projects.md)
-* [Nozioni fondamentali di MR 100: Introduzione a Unity](holograms-100.md)
+* [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
 * [Realtà mista di Windows minimo PC compatibilità alle linee guida hardware](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Invio di un'app di Windows Store](submitting-an-app-to-the-microsoft-store.md)

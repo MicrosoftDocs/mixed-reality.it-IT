@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mista realtà, realtà mista di Windows, HoloLens, vr immersivi, mr, iniziare a usare, ologrammi, academy, esercitazione
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597562"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993617"
 ---
 >[!NOTE]
 >Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
@@ -97,7 +97,7 @@ In questo capitolo, si imposterà alcune impostazioni del progetto Unity aiutarc
 
 Poiché la gestione di ad alta frequenza dei fotogrammi in HoloLens è così importante, è opportuno le impostazioni di qualità ottimizzate per prestazioni ottimali. Per altre informazioni sulle prestazioni, [raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md).
 1. Selezionare **Modifica > impostazioni del progetto > qualità**
-2. Selezionare il **elenco a discesa** sotto il **Windows Store** logo e selezionare **molto bassa**. Si saprà che l'impostazione viene applicata in modo corretto quando la casella nella colonna di Windows Store e riga più veloce è verde.
+2. Selezionare il **elenco a discesa** sotto il **Windows Store** logo e selezionare **molto bassa**. È quindi possibile sapere l'impostazione viene applicata in modo corretto quando la casella nella colonna di Windows Store e **molto bassa** riga è di colore verde.
 
 **Per le applicazioni di realtà mista destinate agli schermi bloccati**, è possibile lasciare le impostazioni di qualità sui valori predefiniti.
 
@@ -219,7 +219,7 @@ Assicurarsi che nel dispositivo sia connesso tramite il cavo USB.
 Ora che l'app viene distribuita, provare a spostare tutto il cubo e osservare che il messaggio rimane nel mondo sempre a disposizione.
 
 ## <a name="see-also"></a>Vedere anche
-* [Panoramica sullo sviluppo per Unity](unity-development-overview.md)
-* [Le procedure consigliate per l'uso di Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+* [Panoramica dello sviluppo per Unity](unity-development-overview.md)
+* [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
 * [MR Basics 101](holograms-101.md)
 * [Nozioni di base di MR 101E](holograms-101e.md)

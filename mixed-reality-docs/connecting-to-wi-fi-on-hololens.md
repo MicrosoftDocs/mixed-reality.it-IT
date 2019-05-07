@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 09/27/2018
 ms.topic: article
 keywords: HoloLens, Wi-Fi, senza fili, internet, ip, indirizzo ip
-ms.openlocfilehash: 0440c3dad48d73db51e7d730e79d6eb1e74a5694
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b064514124d861c0734ca51b3878d4a68b592fab
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670119"
 ---
 # <a name="connecting-to-wi-fi-on-hololens"></a>La connessione alla rete Wi-Fi in HoloLens
 
@@ -40,7 +40,7 @@ HoloLens contiene un 802.11ac-in grado di supportare, 2 x 2 radio Wi-Fi. La conn
 5. Selezionare l'opzione di dispositivo di scorrimento Wi-Fi per spostarlo nella posizione "Off". Verrà disattivare i componenti RF della radio Wi-Fi e disabilitare tutte le funzionalità Wi-Fi nei HoloLens. 
 
     >[!WARNING]
-    >HoloLens non sarà in grado di caricare automaticamente il [spazi](environment-considerations-for-hololens.md#spaces) quando l'opzione Wi-Fi è disabilitato.
+    >HoloLens non sarà in grado di caricare automaticamente il [spazi](environment-considerations-for-hololens.md#WiFi fingerprint considerations) quando l'opzione Wi-Fi è disabilitato.
     
 6. Spostare il commutatore di dispositivo di scorrimento in una posizione "On" per attivare l'opzione Wi-Fi e ripristinare la funzionalità Wi-Fi in Microsoft HoloLens. Lo stato di radio Wi-Fi selezionato ("On" di "Off") vengono mantenute tra i riavvii.
 

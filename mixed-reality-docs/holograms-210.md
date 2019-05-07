@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, sguardo dell'esercitazione, academy,
-ms.openlocfilehash: 63c55e8a7a348f2a3e0cc29a9795d7fabcef5df0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599373"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993550"
 ---
 >[!NOTE]
 >Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
@@ -103,7 +103,7 @@ Infine, aggiorneremo le impostazioni di qualità per ottenere una rapida prestaz
 
 1. Passare a **Modifica > impostazioni del progetto > qualità**.
 2. Fare clic sulla freccia rivolta nel **predefinito** riga sotto l'icona di Windows Store.
-3. Selezionare **veloce** per **le app di Windows Store**.
+3. Selezionare **molto bassa** per **le app di Windows Store**.
 
 ### <a name="import-project-assets"></a>Importare le risorse del progetto
 

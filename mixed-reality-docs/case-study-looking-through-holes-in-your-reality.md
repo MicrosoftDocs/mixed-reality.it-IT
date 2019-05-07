@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, finestra magic, parallasse
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600752"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873933"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Case study: ricerca sui difetti nella realtà
 
@@ -93,7 +93,7 @@ Dispone un HoloLens e si desidera provare l'effetto personali? La cosa più semp
 
 Visualizzazione di questo modello nell'editor di Unity mostrerà una scatola nera grande tutto il flowerpot. Su HoloLens, la finestra scomparirà, modo un effetto di finestra magic.
 
-Se si desidera compilare un'app che usa questa tecnica, consultare il [esercitazione MR nozioni di base 101](holograms-101.md) nel [Academy di realtà mista](academy.md). Capitolo 7 termina con un'esplosione del piano che rivela un underworld nascosti (come illustrato nella figura sopra). Chi ha detto esercitazioni dovevano essere noioso?
+Se si desidera compilare un'app che usa questa tecnica, consultare il [esercitazione MR nozioni di base 101](holograms-101.md) nel [esercitazioni di realtà mista](tutorials.md). Capitolo 7 termina con un'esplosione del piano che rivela un underworld nascosti (come illustrato nella figura sopra). Chi ha detto esercitazioni dovevano essere noioso?
 
 Di seguito sono riportate alcune idee di in cui è possibile eseguire questa idea Avanti:
 * Pensare al modo per rendere il contenuto all'interno del foro virtuale interattive. Consentire agli utenti di influire oltre le pareti può migliorare effettivamente le assimilata sorprende che può fornire il trucco.
@@ -109,7 +109,7 @@ Di seguito sono riportate alcune idee di in cui è possibile eseguire questa ide
 </table>
 
 ## <a name="see-also"></a>Vedere anche
-* [Nozioni fondamentali di MR 101: Progetto completo con dispositivo](holograms-101.md)
+* [Nozioni di base MR 101: Progetto completo con dispositivo](holograms-101.md)
 * [Sistemi di coordinate](coordinate-systems.md)
-* [Ancoraggi spaziali](spatial-anchors.md)
+* [Ancoraggi nello spazio](spatial-anchors.md)
 * [Mapping spaziale](spatial-mapping.md)

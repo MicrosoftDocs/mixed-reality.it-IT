@@ -1,17 +1,17 @@
 ---
 title: Il simulatore di realtà mista di Windows
 description: Il simulatore di realtà mista di Windows consente di testare le app di realtà mista sul PC senza un visore VR immersivi di realtà mista di Windows.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows misti realtà, simulatore, test
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603636"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580697"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Il simulatore di realtà mista di Windows
 
@@ -28,7 +28,7 @@ Il simulatore di realtà mista di Windows consente di testare le app di realtà 
    4. Fare clic su **configurare** per confermare la scelta
 4. Scegliere il **per gli sviluppatori** pulsante sul lato sinistro del portale di realtà mista
 5. Impostare l'opzione di attivazione/disattivazione di simulazione **su**
-   * Questa operazione richiede le autorizzazioni di amministratore e la finestra di dialogo controllo dell'Account utente che viene visualizzato, è necessario accettare
+   * Abilitazione della simulazione, installa e abilita il controller a sinistra simulato 6-i gradi di libertà per impostazione predefinita.  Prima di Windows 10 maggio 2019 aggiornamento, installare un controller simulato 6-gradi di libertà richiede le autorizzazioni di amministratore.  Se viene visualizzato uno, è necessario accettare la finestra di dialogo controllo dell'Account utente.
 
 Dovrebbe ora essere in esecuzione con simulazione!
 
@@ -50,14 +50,16 @@ Per controllare il simulatore, indirizzando le operazioni eseguite da un utente 
 ## <a name="tracked-controllers"></a>Controller di rilevamento
 
 Il simulatore di realtà mista consente di simulare fino a due controller di movimento rilevati palmari. Abilitarle usando le opzioni di attivazione/disattivazione nel portale di realtà mista. Ogni controller simulato è:
-* Posizione nello spazio
+* Posizione e l'orientamento nello spazio
 * Pulsante Home
 * Pulsante Menu
 * Pulsante di triangolo di ridimensionamento
 * Touchpad
+* Thumbstick
+* Livello della batteria
 
 ## <a name="see-also"></a>Vedere anche
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)
 * [Advanced Input simulatore realtà mista](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
-* [Mapping spaziale DirectX](spatial-mapping-in-directx.md)
+* [Mapping spaziale in DirectX](spatial-mapping-in-directx.md)

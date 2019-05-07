@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600153"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993607"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -19,13 +19,24 @@ Unity offre un set di opzioni predefinite che sono in genere la metà dei casi p
 
 ## <a name="performant-environment-set-up"></a>Configurare l'ambiente ad alte prestazioni
 
-### <a name="low-quality-setting"></a>Impostazione della qualità bassa
+### <a name="low-quality-settings"></a>Impostazioni relative alla qualità bassa
 
-È importante modificare il **le impostazioni di qualità di Unity** per l'ambiente per **"veloce"**. Questo contribuisce a garantire che l'applicazione viene eseguita con efficacia nella frequenza dei fotogrammi appropriato. Ciò è estremamente importante per lo sviluppo di Hololens. Per lo sviluppo in auricolari coinvolgenti, a seconda delle specifiche del desktop di potenziamento dell'esperienza di realtà virtuale, uno ancora possibile ottenere una frequenza senza i parametri di qualità più bassi. 
+È importante modificare il **le impostazioni di qualità di Unity** per l'ambiente per **molto bassa**. Questo contribuisce a garantire che l'applicazione viene eseguita con efficacia nella frequenza dei fotogrammi appropriato. Ciò è estremamente importante per lo sviluppo di Hololens. Per lo sviluppo in auricolari coinvolgenti, a seconda delle specifiche del desktop di potenziamento dell'esperienza di realtà virtuale, uno ancora possibile ottenere una frequenza senza i parametri di qualità più bassi. 
 
 In Unity 2018 LTS +, è possibile impostare il livello di qualità del progetto:
 
-Sotto **modifica** > **impostazioni del progetto** > **qualità** > impostare il **predefinito** facendo clic sul la freccia rivolta verso il basso per il **Fastest** a livello di qualità
+Sotto **modifica** > **impostazioni del progetto** > **qualità** > impostare il **predefinito** facendo clic sul la freccia rivolta verso il basso per il **molto bassa** a livello di qualità
+
+### <a name="lighting-settings"></a>Impostazioni di illuminazione
+
+Come per le impostazioni di scena Quality, è importante impostare le impostazioni di illuminazione ottimali per l'applicazione di realtà mista. In Unity, è l'impostazione di illuminazione che in genere hanno il maggiore impatto sulle prestazioni su scena **illuminazione globale in tempo reale**. Ciò può essere disattivato selezionando **finestra** > **Rendering** > **impostazioni illuminazione** > **in tempo reale Illuminazione globale**. 
+
+È un'altra impostazione di illuminazione **integrati globale illuminazione**. Questa impostazione può fornire risultati visivamente accattivanti e ad alte prestazioni su auricolari immersive ma in genere non è applicabile per lo sviluppo di HoloLens. **Compresa Illumniation globale** viene calcolata solo per Gameobject statici che non sono generalmente disponibili nelle scene HoloLens a causa della natura di un ambiente sconosciuto e modificabile.
+
+Leggi [illuminazione globale da Unity](https://docs.unity3d.com/Manual/GIIntro.html) per altre informazioni. 
+
+>[!NOTE]
+> **Illuminazione globale in tempo reale** è impostata **per ogni scena** e pertanto gli sviluppatori devono salvare questa proprietà per ogni scena Unity nel progetto. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>Percorso per il rendering delle istanze solo passaggio
 
@@ -139,6 +150,6 @@ Le funzionalità applicabili per abilitare le API di usate comune per le app Hol
 |  InternetClient  |  DictationRecognizer (e usare il Profiler di Unity) | 
 
 ## <a name="see-also"></a>Vedere anche
-* [Panoramica sullo sviluppo per Unity](unity-development-overview.md)
+* [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 * [Prestazioni Understaing per realtà mista](understanding-performance-for-mixed-reality.md)
-* [Raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md)
+* [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)

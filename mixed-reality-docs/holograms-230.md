@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, esercitazione, mapping spaziale, la ricostruzione della superficie, mesh
-ms.openlocfilehash: 8d5715337ddd20e9868b18fdf0c63c704f584972
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600923"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993555"
 ---
 >[!NOTE]
 >Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
@@ -85,7 +85,7 @@ ms.locfileid: "59600923"
     * Microfono
     * SpatialPerception
 * Passare a **Modifica > impostazioni del progetto > qualità**
-* Nel **Inspector** del pannello, sotto l'icona di Windows Store, seleziona la freccia nera elenco a discesa sotto la riga 'Default' e modificare l'impostazione predefinita al **Fastest**.
+* Nel **Inspector** del pannello, sotto l'icona di Windows Store, seleziona la freccia nera elenco a discesa sotto la riga 'Default' e modificare l'impostazione predefinita al **molto bassa**.
 * Passare a **asset > Importa pacchetto > pacchetto personalizzato**.
 * Passare il **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** cartella.
 * Fare clic su **Planetarium.unitypackage**.
