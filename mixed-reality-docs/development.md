@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, directx, unity
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597502"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993586"
 ---
 # <a name="development-launchpad"></a>Finestra di avvio di sviluppo
 
@@ -38,7 +38,7 @@ ms.locfileid: "59597502"
                             <a href="install-the-tools.md">Installare gli strumenti</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">Esercitazioni e le app di esempio</a>
+                            <a href="mrlearning-base-ch1.md">MR learning: HoloLens 2 e MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ Unreal - presto disponibile!
                     <div class="cardText">
                         <h3>Guide alla conversione</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">L'aggiornamento il più recente mixed<br>Reality Toolkit (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">L'aggiornamento di App per HoloLens 2<br>da HoloLens (dal 1 ° generazione)</a>
                         </p>
                         <p>
-HoloLens (dal 1 ° generazione) a 2 HoloLens<br>- Prossimamente!
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Mixed Reality Toolkit (MRTK)<br>Guida al porting di API</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">App visore VR immersivi</a>
@@ -202,13 +202,13 @@ Questi sono i blocchi predefiniti di base per lo sviluppo della realtà mista:
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">Controller di movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">Controller del movimento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th style="width:175px">Percezione e nuove funzionalità spaziali</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
 </tr><tr>
 <td> <a href="coordinate-systems.md">Coordinate complessive</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">Spaziale audio</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">Audio spaziale</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-mapping.md">Mapping spaziale</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>
@@ -235,5 +235,5 @@ Indipendentemente dal tipo di app che tu stia creando, questi strumenti facilite
 * [Portale di dispositivi di Windows](using-the-windows-device-portal.md)
 * [Emulatore di HoloLens](using-the-hololens-emulator.md)
 * [Simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md)
-* [Criteri di qualità delle App](app-quality-criteria.md)
+* [Criteri di qualità delle app](app-quality-criteria.md)
 
