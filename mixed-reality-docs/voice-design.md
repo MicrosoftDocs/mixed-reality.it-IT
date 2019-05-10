@@ -1,21 +1,21 @@
 ---
-title: Progettazione vocale
+title: Sguardo e della voce
 description: Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens. Questo articolo fornisce indicazioni precise sulla progettazione vocali.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, l'interazione vocale
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604140"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469076"
 ---
-# <a name="voice-design"></a>Progettazione vocale
+# <a name="gaze-and-voice"></a>Sguardo e della voce
 
-Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens. [Estasiati](gaze.md) usato con un [cursore](cursors.md) è il meccanismo per un utente di destinazione del contenuto sono pronti per interagirvi. [Movimento](gestures.md) oppure [vocale](voice-input.md) costituiscono i meccanismi di intenzione. Sguardo è utilizzabile con movimento o chiamata vocale per completare un'interazione.
+Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens (dal 1 ° generazione). [Estasiati](gaze.md) usato con un [cursore](cursors.md) è il meccanismo per un utente di destinazione del contenuto sono pronti per interagirvi. [Movimento](gestures.md) oppure [vocale](voice-input.md) costituiscono i meccanismi di intenzione. Sguardo è utilizzabile con movimento o chiamata vocale per completare un'interazione.
 
 In coinvolgenti auricolari, il mezzo principale di interazione è sguardo e commit e il punto e commit (con un [controller di movimento](motion-controllers.md)). Se l'utente ha le cuffie con funzionalità vocali, vocale è utilizzabile in combinazione con sguardo o il punto per completare un'azione.
 
@@ -27,7 +27,7 @@ Durante la progettazione delle App, è necessario considerare come è possibile 
 <tr>
 <th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
 </tr><tr>
-<td> Comandi vocali</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
+<td>Sguardo e della voce</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Quando voce viene applicata in modo corretto, l'utente capisca **cosa possono ad
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)
-* [Sguardo targeting](gaze-targeting.md)
+* [Selezione della destinazione con lo sguardo](gaze-targeting.md)

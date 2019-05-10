@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Progettare sguardo, sguardo targeting, interazione, realtà mista
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993596"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469099"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione a instinctual interazioni
 La filosofia di interazioni semplice, instinctual sperimentare tutta la piattaforma Microsoft di realtà mista.  Sono state utilizzate tre passaggi per garantire che gli sviluppatori e progettisti di applicazioni possono offrire le interazioni semplice e intuitive per i clienti. 
@@ -61,7 +61,7 @@ Il grafico seguente viene fornita una panoramica semplificata.  Informazioni det
         <td>HoloLens 2<br>HoloLens (dal 1 ° generazione)<br> Coinvolgenti di Windows</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Head-sguardo ed eseguire il commit</a></td>
+        <td><a href="gaze-and-commit.md">Puntamento con la testa e commit</a></td>
         <td>Drill-through esperienze, ad esempio 3D presentazioni, demo</td>
         <td>Richiede la formazione su HMDs ma non su dispositivi mobili<br>Ideale per i controller accessibili<br>Ideale per HoloLens (dal 1 ° generazione)</td>
         <td>HoloLens 2<br>HoloLens (dal 1 ° generazione)<br> Coinvolgenti di Windows<br> AR per dispositivi mobili</td>
@@ -107,7 +107,7 @@ Di seguito sono riportati alcuni esempi del modo in cui affordance e i comportam
     <tr>
         <td><strong>Modello</strong></td>
         <td><strong>Come si capisce funziona?</strong></td>
-        <td><strong>Come faccio a sapere che cosa posso fare?</strong></td>
+        <td><strong>Come sapere cosa posso fare?</strong></td>
         <td><strong>Come sapere ciò che ho appena fatto?</strong></td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Di seguito sono riportati alcuni esempi del modo in cui affordance e i comportam
         <td>Posso sentire sonori e visualizzare animazioni in quadratini di ridimensionamento e il rilascio.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Head-sguardo ed eseguire il commit</a></td>
+        <td><a href="gaze-and-commit.md">Puntamento con la testa e commit</a></td>
         <td>Viene visualizzato un cursore al centro del mio campo visivo.</td>
         <td>Il cursore sguardo Cambia stato quando su determinati oggetti.</td>
         <td>Posso vedere o ascolta le conferme e acustico quando intervenire.</td>
@@ -175,9 +175,9 @@ Se più modelli di interazione richiede l'esperienza, abbiamo scoperto che molti
  
 
 ## <a name="see-also"></a>Vedere anche
-* [Head-sguardo ed eseguire il commit](gaze-and-commit.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Manipolazione diretta](direct-manipulation.md)
-* [Punto e commit](point-and-commit.md)
+* [Puntamento e commit](point-and-commit.md)
 * [Selezione della destinazione con lo sguardo](gaze-targeting.md)
 * [Movimenti](gestures.md)
 * [Progettazione delle interazioni vocali](voice-design.md)

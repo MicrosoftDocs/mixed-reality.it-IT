@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Progettare sguardo, permanenza, interazione, realtà mista
-ms.openlocfilehash: a50ae948a351f5152ebb98778da9be8c08090d72
-ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
+ms.openlocfilehash: d99180b6eb278eb6d7bf322c01a1c7cceb7fad1f
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914614"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469067"
 ---
 # <a name="gaze-and-dwell"></a>Sguardo e permanenza
 
@@ -128,7 +128,7 @@ Forniscono un meccanismo per le interazioni completo invisibile all'utente, senz
  
  ## <a name="see-also"></a>Vedere anche
 * [Manipolazione diretta](direct-manipulation.md)
-* [Punto e commit](point-and-commit.md)
+* [Puntamento e commit](point-and-commit.md)
 * [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
-* [Head-sguardo ed eseguire il commit](gaze-and-commit.md)
-* [Sguardo e della voce](voice-design.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
+* [Sguardo fisso e voce](voice-design.md)
