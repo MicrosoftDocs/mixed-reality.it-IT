@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, l'interazione, stile, colore, i modelli dell'app, controlli, le app di esempio, il Toolkit di realtà mista, MRTK
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603707"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469090"
 ---
 # <a name="design-for-mixed-reality"></a>Progettazione per realtà mista
 
@@ -64,21 +64,21 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Progettazione di interazioni</h3>
-                        <p>
-                            <a href="interaction-fundamentals.md">Nozioni fondamentali di interazione</a>
-                        </p>
+                        <h3>Progettazione delle interazioni</h3>
                         <p>
                             <a href="comfort.md">Comfort</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">Sguardo targeting</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Interazioni instinctual</a>
                         </p>
                         <p>
-                            <a href="gestures.md">Movimenti</a>
+                            <a href="hands-and-tools.md">Le mani e controller</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">Mani libere</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">Progettazione vocale</a>
+                            <a href="gaze-and-commit.md">Head-sguardo ed eseguire il commit</a>
                         </p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Modelli dell'App</h3>
+                        <h3>Modelli di app</h3>
                         <p>
                             <a href="types-of-mixed-reality-apps.md">Tipi di App di realtà mista</a>
                         </p>
