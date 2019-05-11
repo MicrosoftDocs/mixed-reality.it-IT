@@ -6,19 +6,19 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Progettare sguardo, sguardo targeting, interazione, realtà mista
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469099"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524344"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione a instinctual interazioni
 La filosofia di interazioni semplice, instinctual sperimentare tutta la piattaforma Microsoft di realtà mista.  Sono state utilizzate tre passaggi per garantire che gli sviluppatori e progettisti di applicazioni possono offrire le interazioni semplice e intuitive per i clienti. 
 
 In primo luogo, siamo quindi assicurati le straordinari sensori e tecnologie per l'input, tra cui mano rilevamento sotto controllo di rilevamento e linguaggio naturale, combinare in modelli di interazione multimodale invisibile.  Basato su ricerca, progettazione e lo sviluppo multimodally e non basati su singoli input, è essenziale per la creazione di esperienze instinctual.
 
-In secondo luogo, è possibile riconoscere che molti sviluppatori di supportare più dispositivi, indipendentemente dal fatto che questa 2 HoloLens e HoloLens (dal 1 ° generazione) o HoloLens e VR.  In modo che è stato progettato i nostri modelli di interazione per funzionare in diversi dispositivi (anche se la tecnologia input varia in ogni dispositivo).  Ad esempio, interazione decisamente su un auricolare coinvolgenti di Windows con un controller 6DOF e interazione decisamente su un 2 HoloLens entrambi usare gli affordance identici e modelli, rendendo più semplice per applicazioni multidispositivo. È non solo questo utile per gli sviluppatori e progettisti, ma è scontata agli utenti finali. 
+In secondo luogo, è possibile riconoscere che molti sviluppatori di supportare più dispositivi, indipendentemente dal fatto che questa 2 HoloLens e HoloLens (dal 1 ° generazione) o HoloLens e VR.  In modo che è stato progettato i nostri modelli di interazione per funzionare in diversi dispositivi (anche se la tecnologia input varia in ogni dispositivo).  Ad esempio, interazione decisamente su un auricolare coinvolgenti di Windows con un controller 6DoF e interazione decisamente su un 2 HoloLens entrambi usare gli affordance identici e modelli, rendendo più semplice per applicazioni multidispositivo. È non solo questo utile per gli sviluppatori e progettisti, ma è scontata agli utenti finali. 
 
 Infine, anche se è possibile riconoscere che sono presenti migliaia di validità, coinvolgenti e interazioni magiche presenti possibili in MR, si è constatato che utilizza intenzionalmente un modello di sola interazione end-to-end in un'applicazione è il modo migliore per assicurarsi che gli utenti hanno esito positivo e avere un'esperienza ottimale.  A tale scopo, sono state incluse tre operazioni in questo materiale sussidiario interazione:
 * È stata strutturata questo materiale sussidiario i tre modelli di interazione principale e i componenti e i modelli necessari per ogni
@@ -51,8 +51,8 @@ Il grafico seguente viene fornita una panoramica semplificata.  Informazioni det
     <tr>
         <td><a href="hands-and-tools.md">Strumenti e le mani</a></td>
         <td>Esperienze spaziali 3D<br>ad esempio spaziale layout e progettazione, manipolazione del contenuto o simulazione</td>
-        <td>Ottima soluzione per i nuovi utenti<br>Curva di apprendimento<br>Piedi affordance visual semplice<br>Esperienza utente coerente in mano di rilevamento e controller i gradi di libertà 6<br>Bene quando è associata vocali, estasiati occhio rilevamento o head</td>
-        <td>HoloLens 2<br>Windows coinvolgenti con 6DOF controller</td>
+        <td>Ottima soluzione per i nuovi utenti<br>Curva di apprendimento<br>Piedi affordance visual semplice<br>Esperienza utente coerente tra mano di rilevamento e 6DoF controller<br>Bene quando è associata vocali, estasiati occhio rilevamento o head</td>
+        <td>HoloLens 2<br>Windows coinvolgenti con 6DoF controller</td>
     </tr>
     <tr>
         <td><a href="hands-free.md">Mani libere</a></td>

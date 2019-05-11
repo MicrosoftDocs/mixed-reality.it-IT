@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realtà mista, mani libere, estasiati, estasiati targeting, interazione, progettazione
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581031"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524334"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>Ottimizzazione delle app per mani libere
 
@@ -42,7 +42,7 @@ Utilizzando la voce di comando e controllo di che un'interfaccia può non solo c
 
 In alcune situazioni invisibile all'utente, utilizzando la voce non è ideale o persino possibile. Gli ambienti di factory l, sulla privacy o norme social possono essere tutti i vincoli. Head estasiati + permanenza modello consente all'utente di spostarsi tra l'app usando il vettore head in modo da puntare, mentre il tempo di ritardo, o rimanere su un pulsante verrà attivarlo dopo un determinato periodo di tempo (in genere entro 1 secondo o operazione). 
 
-* [Sguardo e permanenza](gaze-and-dwell.md)
+* [Sguardo fisso e attesa](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>In fase di transizione da e verso mani libere
 
@@ -97,6 +97,6 @@ L'utente comprensione...
 
 
 ## <a name="see-also"></a>Vedere anche
-* [Sguardo ed eseguire il commit](gaze-and-commit.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Manipolazione diretta](direct-manipulation.md)
-* [Punto e commit](point-and-commit.md)
+* [Puntamento e commit](point-and-commit.md)
