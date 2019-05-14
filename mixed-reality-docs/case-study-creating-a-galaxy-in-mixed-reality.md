@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Esplora Galaxy, HoloLens, realtà mista di Windows, Condividi la tua idea, case study
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59604830"
@@ -147,7 +147,7 @@ In questo cloud schermo intero e il tentativo di sfocatura li sarebbe stata una 
 
 ### <a name="a-bit-of-context-first"></a>Prima di tutto un bit del contesto
 
-Quando si usano le trame in un gioco per le dimensioni della trama corrisponderanno raramente l'area in cui si vuole usarlo in, ma è possibile usare un tipo diverso di filtro per ottenere la scheda grafica per interpolare il colore dai pixel della trama della trama ([filtraggio della trama<C3/>). Il filtro che ci interessa sia [bilineare](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) che calcola il valore di qualsiasi pixel usando il 4 vicini più prossimi.
+Quando si usano le trame in un gioco per le dimensioni della trama corrisponderanno raramente l'area in cui si vuole usarlo in, ma è possibile usare un tipo diverso di filtro per ottenere la scheda grafica per interpolare il colore dai pixel della trama della trama ([filtraggio della trama<C3/>).](https://msdn.microsoft.com/library/dn642451.aspx) Il filtro che ci interessa sia [bilineare](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) che calcola il valore di qualsiasi pixel usando il 4 vicini più prossimi.
 
 ![Originale prima dell'applicazione di filtri](images/texture-1.png)
 
