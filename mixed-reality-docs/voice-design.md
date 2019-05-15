@@ -35,7 +35,7 @@ Durante la progettazione delle App, è necessario considerare come è possibile 
 
 ## <a name="how-to-use-voice"></a>Come usare la forma
 
-È consigliabile aggiungere comandi vocali per alcuna esperienza che si compila. Voce è un modo pratico e potente di controllo del sistema e le app. Poiché gli utenti parlano con un'ampia gamma di dialetti e accenti, la scelta migliore delle parole chiave vocali garantirà che i comandi degli utenti vengano interpretati in modo non ambiguo.
+È consigliabile aggiungere comandi vocali per alcuna esperienza che si compila. Voce è un modo pratico e potente di controllo del sistema e le app. Poiché gli utenti parlano con un'ampia gamma di lingue regionali e accenti, la scelta migliore delle parole chiave vocali garantirà che i comandi degli utenti vengano interpretati in modo non ambiguo.
 
 ### <a name="best-practices"></a>Procedure consigliate
 
