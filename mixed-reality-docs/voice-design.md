@@ -1,25 +1,23 @@
 ---
-title: Sguardo e della voce
+title: L'esecuzione di comandi vocali
 description: Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens. Questo articolo fornisce indicazioni precise sulla progettazione vocali.
-author: grbury
-ms.author: grbury
+author: shentan
+ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Realtà mista di Windows, progettazione, l'interazione vocale
-ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469076"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730794"
 ---
-# <a name="gaze-and-voice"></a>Sguardo e della voce
+# <a name="voice-commanding"></a>L'esecuzione di comandi vocali
 
-Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens (dal 1 ° generazione). [Estasiati](gaze.md) usato con un [cursore](cursors.md) è il meccanismo per un utente di destinazione del contenuto sono pronti per interagirvi. [Movimento](gestures.md) oppure [vocale](voice-input.md) costituiscono i meccanismi di intenzione. Sguardo è utilizzabile con movimento o chiamata vocale per completare un'interazione.
+Quando si usano i comandi vocali, sguardo viene in genere utilizzato come mechaninism targeting, sia come un puntatore ("select") o per indirizzare il comando a un'applicazione ("visualizzarlo, dice"). Naturalmente, alcuni comandi vocali non richiedono una destinazione, ad esempio "go to start" o "Hey, Cortana."
 
-In coinvolgenti auricolari, il mezzo principale di interazione è sguardo e commit e il punto e commit (con un [controller di movimento](motion-controllers.md)). Se l'utente ha le cuffie con funzionalità vocali, vocale è utilizzabile in combinazione con sguardo o il punto per completare un'azione.
-
-Durante la progettazione delle App, è necessario considerare come è possibile apportare queste interazioni interagiscono bene.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -27,7 +25,7 @@ Durante la progettazione delle App, è necessario considerare come è possibile 
 <tr>
 <th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
 </tr><tr>
-<td>Sguardo e della voce</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
+<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
 </tr>
 </table>
 
@@ -35,7 +33,7 @@ Durante la progettazione delle App, è necessario considerare come è possibile 
 
 ## <a name="how-to-use-voice"></a>Come usare la forma
 
-È consigliabile aggiungere comandi vocali per alcuna esperienza che si compila. Voce è un modo pratico e potente di controllo del sistema e le app. Poiché gli utenti parlano con un'ampia gamma di lingue regionali e accenti, la scelta migliore delle parole chiave vocali garantirà che i comandi degli utenti vengano interpretati in modo non ambiguo.
+È consigliabile aggiungere comandi vocali per alcuna esperienza che si compila. Voce è un modo pratico e potente di controllo del sistema e le app. Poiché gli utenti parlano con un'ampia gamma di dialetti e accenti, la scelta migliore delle parole chiave vocali garantirà che i comandi degli utenti vengano interpretati in modo non ambiguo.
 
 ### <a name="best-practices"></a>Procedure consigliate
 
@@ -51,13 +49,16 @@ Di seguito vengono illustrate alcune tecniche che contribuiranno a smooth ricono
    * "Ehi Cortana"
    * "Select"
 
-### <a name="what-users-can-say"></a>Ciò che gli utenti possono ad esempio
+### <a name="select"></a>"Select"
 
-Quando un utente è destinato a qualsiasi pulsante tramite sguardo o fa riferimento, dice la parola **"Selezionare"** attivare tale pulsante. "Select" è una delle parole chiave che è sempre in ascolto di basso consumo energetico. Approfondimenti, un utente può anche usare "pulsante grammatica" nel sistema o nelle app. Ad esempio, durante la ricerca in un'app, un utente può pronunciare il comando "Remove", ovvero nella barra dell'app, rimuovere l'app da tutto il mondo.
+Che indica che "select" in qualsiasi momento si attiverà qualunque sia il cursore sguardo punta a. 
+
+>Nota: HoloLens 2, le esigenze di cursore sguardo prima di tutto necessario richiamare specificando la parola "select". Ad esempio, "selezionare" nuovo per l'attivazione. Per nascondere il cursore sguardo, usando le mani - airtap o un oggetto di tocco. 
 
 ### <a name="see-it-say-it"></a>Visualizzarlo, ad esempio
 
 Realtà mista di Windows ha incaricato un modello di casella vocale "visualizzarlo, dice" dove **le etichette nei pulsanti sono identiche ai comandi vocali associato**. Poiché non c'è alcun dissonance tra l'etichetta e i comandi vocali, agli utenti di comprendere meglio cosa significa controllare il sistema. Per ribadire, mentre appartamento su un pulsante, un **"vocale permanenza suggerimento"** viene visualizzato per comunicare i pulsanti sono servizio voce abilitato.
+
 
 ![Vederlo dice esempio 1](images/voice-seeitsayit1-640px.jpg)
 

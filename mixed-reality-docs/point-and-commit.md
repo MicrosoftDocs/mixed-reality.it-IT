@@ -1,71 +1,57 @@
 ---
-title: Punto e commit
+title: Punto ed eseguire il commit con le mani
 description: Panoramica del modello di input punto ed eseguire il commit
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/05/2019
 ms.topic: article
-keywords: Progettare l'interazione, realtà mista
-ms.openlocfilehash: e0e9c97053734ac0125fce40be7ffe9afbd2dd68
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.localizationpriority: high
+keywords: Mista realtà, l'interazione, progettazione, hololens, indicatori, a questo momento, scegliere ed eseguire il commit
+ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581311"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730808"
 ---
-# <a name="point-and-commit"></a>Punto e commit
-Punto ed eseguire il commit è un modello di input, che consente agli utenti di destinazione, selezionare e modificare contenuto 2D e 3D oggetti in una distanza. Questa tecnica di interazione di "Asia" è un'esperienza interattiva ombelico che non è risorse umane in corso durante la loro interazione quotidiana con tutto il mondo reale. Ad esempio, in un filmato hero con privilegi avanzati, è in grado di raggiungere e la modifica di un oggetto tramite le mani una distanza decisamente Magneto, ma umane non è possibile farlo in realtà. In Microsoft HoloLens (AR) e la realtà mista di Microsoft (VR), abbiamo dotare utenti questa potenza magico scrivendo, il vincolo fisico del mondo reale non solo di avere esperienza eccellente ai con contenuto holographic ma per rendere più efficace l'interazione di rilievo e efficiente.
+# <a name="point-and-commit-with-hands"></a>Punto ed eseguire il commit con le mani
+Punto ed eseguire il commit con le mani è un modello di input che consente agli utenti di destinazione, selezionare e manipolare oggetti 3D e contenuti 2D della distanza. Questa tecnica di interazione "molto" è univoca per realtà mista e non gli esseri umani un modo naturale intereact con tutto il mondo reale. Ad esempio, in questo film eroe *X-uomini*, il carattere [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) è in grado di raggiungere e la modifica di un oggetto decisamente la distanza con il suo mani. Ciò non gli esseri umani eseguibili in realtà. In HoloLens (AR) e realtà mista (VR), abbiamo dotare gli utenti con questo power magico scrivendo, il vincolo fisico del mondo reale non solo avere un'esperienza eccellente ai con contenuto holographic ma anche per rendere l'interazione più efficace ed efficiente di rilievo.
 
 ## <a name="device-support"></a>Supporto di dispositivi
-<table>
-    <colgroup>
-    <col width="40%" />
-    <col width="20%" />
-    <col width="20%" />
-    <col width="20%" />
-    </colgroup>
-    <tr>
-        <td><strong>Modello di input</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
-    </tr>
-     <tr>
-        <td>Punto ed eseguire il commit (l'interazione manuale distante)</td>
-        <td>❌ Non supportato</td>
-        <td>✔️ Consigliato</td>
-        <td>✔️ Consigliato</td>
-    </tr>
-</table>
-<br>
-Punto ed eseguire il commit è stato uno dei modelli di input primari in 2 HoloLens, utilizzando l'icona della mano articolati e nuovo sistema di registrazione. Questo modello di input è anche il modello di input primario su immersive auricolari tramite l'uso di controller di movimento. Punto ed eseguire il Commit è il modello di input che è consigliabile per sostituire l'Head estasiati ed eseguire il Commit in HoloLens (dal 1 ° generazione). 
+
+Modello di input | [HoloLens (dal 1 ° generazione)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Auricolari coinvolgenti](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
+| ---------| -----| ----- | ---------|
+Punto ed eseguire il commit (l'interazione manuale distante) | ❌ Non supportato | ✔️ Consigliato | ✔️ Consigliato
+
+Punto e commit, noto anche come mani a questo momento, è una delle nuove funzionalità che utilizza il nuovo sistema di rilevamento delle modifiche manuale articolato. Questo modello di input è anche il modello di input primario su immersive auricolari tramite l'uso di controller di movimento.
 
 ## <a name="hand-rays"></a>Raggi mano
-In 2 HoloLens, creiamo un raggio di mano la ripresa dal centro di un dispositivo. Raggio viene considerato come un'estensione della lancetta. Un cursore di forma di grafico ad anello è collegato all'estremità del raggio implica la posizione in cui il raggio si interseca con un oggetto hitted. L'oggetto che arriva il cursore riceverà comandi gestuali dall'icona della mano. 
 
-Il comando gestuali molto semplice viene avviato usando thumb e con un dito indice eseguire movimento dell'indice puntato. Con ray mano per puntare e puntare al commit, gli utenti possono attivare un pulsante o un collegamento ipertestuale in un contenuto web. Con gesti composite più, gli utenti sono in grado di passare il contenuto web e la modifica di oggetti 3D in una distanza. La progettazione visiva del raggio mano deve reagire anche per scegliere ed eseguire il commit degli stati: <br>
-* Nello stato di puntamento, raggio è dash inline e il cursore si trova una forma di grafico ad anello.
-* nello stato di commit, il raggio si trasforma in una linea continua e il cursore viene ridotta a un punto.<br><br>
-![](images/Hand-Rays-720px.jpg)<br>
+In 2 HoloLens, abbiamo creato un raggio di parte che emette dal centro di un dispositivo. Questo ray viene considerato come un'estensione della lancetta. Un cursore a forma di grafico ad anello è collegato alla fine del raggio per indicare il percorso in cui il raggio si interseca con un oggetto di destinazione. L'oggetto che apre il cursore può quindi ricevere comandi gestuali dall'icona della mano.
+
+Questo comando gestuali base viene avviato usando il controllo thumb e con un dito indice per eseguire l'azione indice puntato. Tramite il raggio di mano per puntare e puntare al commit, gli utenti possono attivare un pulsante o un collegamento ipertestuale in un contenuto web. Con gesti composite più, gli utenti sono in grado di esplorazione del contenuto web e la modifica di oggetti 3D da una distanza. La progettazione visiva del raggio mano anche deve reagire in questi stati punto ed eseguire il commit, come descritto e illustrato di seguito: 
+
+* Nel *puntando* lo stato, il raggio è una linea tratteggiata e il cursore si trova una forma di grafico ad anello.
+* Nel *commit* lo stato, il raggio si trasforma in una linea continua e il cursore viene ridotta a un punto.
+
+![](images/Hand-Rays-720px.jpg)
 
 ## <a name="transition-between-near-and-far"></a>Eseguire la transizione tra vicino e lontano
-Invece di usare movimenti specifici, ad esempio puntando con dito indice per indirizzare il raggio, è progettare il raggio prossimamente dal centro del palmo, rilasciando e riservare le dita per manipolazioni gestuali altre cinque. Pertanto, HoloLens 2 supporta esattamente lo stesso insieme di movimenti della mano per l'interazione sia vicino. Quando gli utenti di transito da vicino alle interazioni estrema e viceversa, non è necessaria alcuna conoscenza più approfondita. Gli utenti possono usare la stessa combinazione di quadratini di ridimensionamento per manipolare gli oggetti alle distanze diverse. La chiamata di raggi è automatico e basati su prossimità: <br>
-* Quando un oggetto all'interno di Azure Resource Manager raggiunto distanza (all'incirca 50 cm), sono disattivati incoraggiando automaticamente per l'interazione con quasi raggi. 
-* Quando l'oggetto è un cm 50, i raggi siano accesi.
 
-Questo meccanismo consente il passaggio diretto e immediato.<br>
-![](images/Transition-Between-Near-And-Far-720px.jpg)<br>
+Invece di usare movimenti specifici, ad esempio "punta verso con dito indice" per indirizzare il raggio, abbiamo progettato il raggio presto out dal centro del palmo, rilasciando e riservare le cinque dita per movimenti manipulative altre, ad esempio avvicinare le dita e prendo. Con questa struttura, creiamo un unico modello mentale, esattamente lo stesso insieme di movimenti della mano di supporto per l'interazione sia vicino. È possibile usare la stessa combinazione di quadratini di ridimensionamento per manipolare gli oggetti alle distanze diverse. La chiamata di raggi è automatico e basati su prossimità:
+
+*  Quando un oggetto all'interno di Azure Resource Manager raggiunto distanza (all'incirca 50 cm), sono disattivati incoraggiando automaticamente per l'interazione con quasi raggi.
+*  Quando l'oggetto è un cm 50, i raggi siano accesi. La transizione deve essere diretto e immediato.
+
+![](images/Transition-Between-Near-And-Far-720px.jpg)
 
 ## <a name="2d-slate-interaction"></a>Interazione dello slate 2D
-Uno slate 2D è un contenitore holographic hosting di contenuto dell'app 2D, ad esempio web browser. Il concetto di progettazione di gran lunga l'interazione con uno slate 2D consiste nell'usare rays mano per puntare e puntare al commit.<br>
 
-Per l'interazione con il contant dello slate:<br>
+Uno Slate 2D è un contenitore holographic hosting di contenuto dell'app 2D, ad esempio web browser. Il concetto di progettazione di gran lunga l'interazione con uno slate 2D consiste nell'usare rays mano a tap air e di destinazione da selezionare. Dopo la destinazione con un raggio di mano, gli utenti possono puntare l'indice per attivare un collegamento ipertestuale o un pulsante. Un lato possono usare per "aria tocco e trascinare" scorrere un contenuto dello slate e ridurre le prestazioni. Il movimento relativo dell'utilizzo di due mani all'aria tocco e trascinare per ingrandire e il contenuto dello slate.
 
-* Gli utenti possono puntare a un collegamento ipertestuale o un pulsante, quindi indice puntato per attivarlo. 
-* Gli utenti possono usare una parte per eseguire un gesto di spostamento di eseguire uno scorrimento verticale di un contenuto dello slate. 
-* Gli utenti possono usare due mani per eseguire i movimenti di navigazione per ingrandire e ridurre il contenuto dello slate.<br><br>
+Come destinazione il raggio mano nel bordo e angoli rivela la più vicina intuitività di manipolazione. Per "quadratini di ridimensionamento e trascinare" affordance la manipolazione, gli utenti possono eseguire uniform scalabilità tramite i affordance angolo e ridisporre il lo slate tramite i affordance edge. Selezionandola e trascinando la holobar nella parte superiore dello slate 2D gli utenti possono spostare lo slate intero.
 
-![](images/2D-Slate-Interaction-Far-720px.jpg)<br>
+![](images/2D-Slate-Interaction-Far-720px.jpg)
 
 Per la manipolazione 2D ardesia stesso:<br>
 
@@ -76,9 +62,10 @@ Per la manipolazione 2D ardesia stesso:<br>
 <br>
 
 ## <a name="3d-object-manipulation"></a>Modifica di oggetti 3D
-Manipolazione diretta, esistono due modi per gli utenti modificare un oggetto 3D, intuitività manipolazione di base e Non affordnace basato su Modifica. Nel modello di punto e il commit, gli utenti sono in grado di raggiungere esattamente le stesse attività tramite i raggi di mano. Non è necessaria alcuna conoscenza più approfondita.<br>
 
-### <a name="affordance-based-manipulation"></a>Manipolazione intuitività basato su
+Manipolazione diretta, esistono due modi agli utenti di modificare oggetti 3D, basato su intuitività manipolazione e la modifica in base non intuitività. Nel modello di punto e il commit, gli utenti sono in grado di raggiungere esattamente le stesse attività tramite i raggi di mano. Non è necessaria alcuna conoscenza più approfondita.<br>
+
+### <a name="affordance-based-manipulation"></a>Basato su intuitività manipulation
 Gli utenti usare rays mano per puntare e individuare il riquadro delimitatore e affordance manipolazione. Gli utenti possono applicare il movimento di manipolazione nel rettangolo di selezione per spostare l'intero oggetto, sul affordance bordo per ruotare e di coner affordance ridimensionare in modo uniforme. <br>
 
 ![](images/3D-Object-Manipulation-Far-720px.jpg) <br>
@@ -90,17 +77,21 @@ Gli utenti punto con rays mano per rivelare il rettangolo di selezione e quindi 
 <br>
 
 ## <a name="instinctual-gesturers"></a>Gesturers instinctual
-Il concetto di movimenti instinctual per punto e il commit è sincronizzato con quella per la modifica diretta. Ciò che gli utenti di movimenti si supponga che per eseguire su un oggetto 3D sono guidato dalla progettazione del affordance dell'interfaccia utente. Un punto di controllo di piccole dimensioni sarebbe motivare agli utenti di eseguire il movimento thumb con dito indice, mentre un oggetto di grandi dimensioni consente agli utenti di ottenere con un dito 5.
+Il concetto di movimenti instinctual per punto e il commit è simile a quella di manipolazione diretta. Per impostazione predefinita di affordance dell'interfaccia utente vengono indirizzati i movimenti che gli utenti dovranno per eseguire su un oggetto 3D. Ad esempio, un punto di controllo di piccole dimensioni potrebbe motivare agli utenti di eseguire il movimento con dito indice e controllo thumb mentre un utente potrebbe voler recuperare un oggetto più grande con tutte le 5 dita.
 
 ![](images/Instinctual-Gestures-Far-720px.jpg)<br>
 
 ## <a name="symmetric-design-between-hands-and-6-dof-controller"></a>Progettazione simmetrica tra le mani e controller di gradi di libertà 6 
-Il concetto di modello di punto e il commit per l'interazione con estrema in primo luogo viene creato e definito per il misto realtà portale (MRP), in cui gli utenti wear un visore VR immersivi e interagire con l'oggetto 3d tramite controller di movimento. I controller di movimento relativi out rays per sta puntando e manipolare oggetti distante. Sono disponibili pulsanti sui controller per confermare un'ulteriore funzionalità diverse. Abbiamo sfruttare il modello di interazione di raggi e allegarli in entrambe le mani. Con questa struttura simmetrica, non sarà necessario imparare a utilizzare un altro modello di interazione per che punta a questo momento e la manipolazione durante la prima volta usando HoloLen 2, gli utenti che hanno familiari con MRP e viceversa.    
+Il concetto di punto e il commit per l'interazione con estrema è stato inizialmente creato e definito per il misto realtà portale (MRP), in cui un utente ha un visore VR immersivi e interagisce con oggetti 3D tramite controller di movimento. I controller di movimento relativi out rays per sta puntando e manipolare oggetti distante. Sono disponibili pulsanti sui controller per ulteriormente il commit delle azioni diverse. Abbiamo sfruttare il modello di interazione di raggi e li collegato a entrambe le mani. Con questa struttura simmetrica, gli utenti che hanno familiari con MRP non sarà necessario per informazioni su un altro modello di interazione per la modifica e che puntano a questo momento, quando vengono usate 2 HoloLen e viceversa.    
 
 ![](images/Symmetric-Design-For-Rays-720px.jpg)<br>
 
+## <a name="instinctual-gestures"></a>Movimenti instinctual
+
+![](images/Instinctual-Gestures-Far-720px.jpg)
 
 ## <a name="see-also"></a>Vedere anche
-* [Sguardo ed eseguire il commit](gaze-and-commit.md)
-* [Manipolazione diretta](direct-manipulation.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Interazioni istintive](interaction-fundamentals.md)
+

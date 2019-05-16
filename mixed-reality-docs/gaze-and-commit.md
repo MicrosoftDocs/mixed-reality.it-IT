@@ -1,17 +1,18 @@
 ---
-title: Sguardo ed eseguire il commit
-description: Panoramica del modello di input sguardo ed eseguire il commit
+title: Head-sguardo ed eseguire il commit
+description: Panoramica del modello di input sguardo di inizio e commit
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Progettare sguardo, sguardo targeting, interazione, realtà mista
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873977"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730813"
 ---
 # <a name="head-gaze-and-commit"></a>Head-sguardo ed eseguire il commit
 Head-sguardo ed eseguire il commit è un modello di input che coinvolge destinato a un oggetto con direzione di inizio in avanti che punta (head-direction) e quindi agisce su di esso con una replica secondaria di input, ad il movimento mano Air toccare o voce di comando "Select". Viene considerato un modello di input "molto" con manipolazione indiretta, ovvero che viene utilizzato meglio per l'interazione con contenuto che è di là arms raggiungere.
@@ -53,14 +54,14 @@ Dopo la destinazione è un oggetto o un elemento dell'interfaccia utente, l'uten
 - Fare clic sul pulsante 'A' su un Xbox Gamepad
 - Fare clic sul pulsante 'A' in un Controller adattivo Xbox
 
-### <a name="gaze-and-air-tap-gesture"></a>Sguardo e aria gesto tocco
+### <a name="head-gaze-and-air-tap-gesture"></a>Head-sguardo e aria gesto tocco
 Indice puntato è un gesto tocco con l'icona della mano mantenuto in verticale. Per eseguire l'indice puntato, generare il dito indice nella posizione pronto, quindi avvicinare le dita con il controllo thumb e generare il dito indice eseguire il backup per rilasciare. In 1 HoloLens, indice puntato è l'input secondario più comune.
 
 ![Con un dito nella posizione pronta e quindi un movimento toccare o fare clic su](images/readyandpress.jpg)<br>
 
 Indice puntato è disponibile anche su HoloLens 2 e è stato aumentato dalla versione originale. Quasi tutti i tipi di pinches sono ora supportati, fino a quando l'icona della mano è verticale e ha ancora. Questo rende molto più semplice per gli utenti apprendere e di eseguire il movimento.  Questo nuovo indice puntato sostituisca il precedente tramite l'API stessa, in modo che le applicazioni esistenti otterranno automaticamente il nuovo comportamento dopo la ricompilazione per HoloLens 2.
 
-### <a name="gaze-and-select-voice-command"></a>Sguardo e comandi vocali "Seleziona"
+### <a name="head-gaze-and-select-voice-command"></a>Head-sguardo e "Selezionare" vocali comando
 L'esecuzione di comandi vocali è uno dei metodi di interazione principale nella realtà mista. Fornisce un meccanismo molto potente "Mani libero" per controllare il sistema. Sono disponibili tipi differente di modelli di interazione vocale:
 
 - Il comando generico "Select" che consente di eseguire un "fare clic su" azionamento o commit come input secondari.
@@ -72,7 +73,7 @@ L'esecuzione di comandi vocali è uno dei metodi di interazione principale nella
 Per trovare altri dettagli e un elenco di comprenhesive di comandi disponibili e sul relativo utilizzo, consultare il [vocali progettazione](voice-design.md) indicazioni.
 
 
-### <a name="gaze-and-hololens-clicker"></a>Sguardo e HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>Head-sguardo e HoloLens Clicker
 Il HoloLens Clicker è il primo dispositivo periferico creato appositamente per HoloLens e viene fornita con la versione di sviluppo di HoloLens 1. Il HoloLens Clicker consente all'utente di fare clic su con movimento manuale minimo ed eseguire il commit come input secondari. Il clicker HoloLens si connette a HoloLens 1 o 2 tramite Bluetooth Low Energy (BTLE).
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ Sono disponibili altre informazioni e istruzioni per associare il dispositivo [q
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Sguardo e Controller Xbox Wireless
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Head-sguardo e Controller Xbox Wireless
 Il Controller Wireless Xbox consente l'esecuzione di un azionamento "fare clic su" come database secondario con il pulsante di input. Il dispositivo viene mappato a un set predefinito di azioni che consentono di esplorare e controllo del sistema. Se si desidera personalizzare il controller, usare l'App di Accesories Xbox per configurare il Controller Wireless Xbox.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Controller Xbox Wireless
 [Associazione di un controller Xbox con il PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Controller adattivo sguardo e Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Controller adattivo head sguardo e Xbox
 Progettato principalmente per soddisfare le esigenze dei giocatori con difficoltà, il Controller di Adaptive Xbox è un hub unificato per i dispositivi che consente di rendere più accessibile realtà mista.
 
 Il Controller adattivo Xbox consente l'esecuzione di un azionamento "fare clic su" come un database secondario con il pulsante di input. Il dispositivo viene mappato a un set predefinito di azioni che consentono di esplorare e controllo del sistema. Se si desidera personalizzare il controller, usare l'App di Accesories Xbox per configurare il Controller adattivo Xbox.
@@ -110,16 +111,11 @@ Porta Controller adattivo Xbox
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Altre informazioni disponibili sul sito Xbox</a>
 
 
-# <a name="device-support"></a>Supporto di dispositivi
-Estasiati HEAD e il commit è disponibile in tutte le cuffie per realtà mista. È il modello di input primario su HoloLens v1. Altri auricolari in genere includono un meccanismo di puntamento basato su manualmente, ad esempio i controller di movimento o articolata mano di rilevamento. In questi dispositivi, è preferibile l'applicazioni [punto di commit](point-and-commit.md) per le interazioni distante quando possibile.
-
-Sguardo occhio e commit è disponibile in HoloLens 2, ma non è il modello di input primari. Passare alla sezione "Indicazioni per la progettazione delle sguardo rossi" per una discussione su quando ciò può rivelarsi utile per l'applicazione.
-
-# <a name="head-gaze-design-guidelines"></a>Head estasiati linee guida di progettazione
+# <a name="head-gaze-design-guidelines"></a>Linee guida di progettazione head sguardo
 > [!NOTE]
 > Informazioni aggiuntive specifiche di progettazione estasiati [presto](index.md).
 
-## <a name="gaze-targeting"></a>Sguardo targeting
+## <a name="head-gaze-targeting"></a>Head-sguardo targeting
 Tutte le interazioni vengono compilate al momento la possibilità di un utente di destinazione l'elemento a cui che si desidera interagire, indipendentemente dalla modalità di input. Realtà mista di Windows, questa operazione viene in genere eseguita usando sguardo dell'utente.
 Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione calcolata del sistema della finalità dell'utente e l'intenzione dell'utente effettivo, deve essere allineati quanto più vicina. Al grado che il sistema interpreta le azioni dell'utente desiderato correttamente, le prestazioni e aumenta la soddisfazione migliora.
 
@@ -142,7 +138,7 @@ Gli utenti spesso riuscirà a trovare gli elementi dell'interfaccia utente che v
 ## <a name="improving-targeting-behaviors"></a>Miglioramento della destinazione dei comportamenti
 Se l'intenzione dell'utente a un elemento di destinazione può essere determinato o approssimati a stretto contatto, può essere molto utile accettare "near miss" tentativi di interazione come se esse sono destinate in modo corretto. Esistono un numero limitato di metodi corretta che può essere incorporato nelle esperienze di realtà mista:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Stabilizzazione sguardo ("aree di gravità")
+### <a name="head-gaze-stabilization-gravity-wells"></a>Head-sguardo stabilizzazione ("aree di gravità")
 Questa deve essere attiva per la maggior parte/all del tempo. Questa tecnica consente di rimuovere l'instabilità head/collo naturale che gli utenti possono avere. Anche lo spostamento a causa dei comportamenti di ricerca/parlando.
 
 ### <a name="closest-link-algorithms"></a>Algoritmi di collegamento più vicino
@@ -209,10 +205,10 @@ Esistono tre aspetti da considerare:
 
 ## <a name="see-also"></a>Vedere anche
 * [Manipolazione diretta](direct-manipulation.md)
-* [Punto e commit](point-and-commit.md)
+* [Puntamento e commit](point-and-commit.md)
 * [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
-* [Sguardo e permanenza](gaze-targeting.md)
-* [Sguardo e della voce](voice-design.md)
+* [Sguardo fisso e attesa](gaze-targeting.md)
+* [Sguardo fisso e voce](voice-design.md)
 
 
 
