@@ -6,13 +6,14 @@ author: grbury
 ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, directx, unity
-ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 59b41c6b71e546bac6e3b76c038229d6de45b535
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993586"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730790"
 ---
 # <a name="development-launchpad"></a>Finestra di avvio di sviluppo
 
@@ -192,7 +193,7 @@ Questi sono i blocchi predefiniti di base per lo sviluppo della realtà mista:
 </tr><tr>
 <td> <a href="gaze.md">Head sguardo</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="gaze.md">Sguardo sotto controllo</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
+<td> <a href="gaze.md">Tracciamento oculare</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
 </tr><tr>
  <td> <a href="gestures.md">Articolati e mani</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
 </tr><tr>
