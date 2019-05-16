@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realtà mista, sguardo, interazione, progettazione
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604970"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629099"
 ---
 # <a name="gaze"></a>Sguardo fisso
 
@@ -61,6 +61,6 @@ La maggior parte delle App devono usare una [cursore](cursors.md) (o un'altra in
 Dopo avere l'utente è incluso un ologrammi o un oggetto reale con loro sguardo, il passaggio successivo è intervenire su tale oggetto. Sono i metodi principali per un utente intervenire attraverso [movimenti](gestures.md), [movimento controller](motion-controllers.md) e [vocale](voice-input.md).
 
 ## <a name="see-also"></a>Vedere anche
-* [Input di MR 210: Sguardo](holograms-210.md)
-* [Sguardo, gesti e controller di movimento in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Estasiati Unity](gaze-in-unity.md)
+* [Input MR 210: Sguardo fisso](holograms-210.md)
+* [Testa e occhio estasiati DirectX](gaze-in-directx.md)
+* [Sguardo fisso in Unity](gaze-in-unity.md)

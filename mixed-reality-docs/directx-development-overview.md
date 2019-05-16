@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, holographic il rendering, native app native, WinRT, WinRT app, le API della piattaforma, motore personalizzato, middleware
-ms.openlocfilehash: 047144cb8fcf158f74375e9ec69dca92a2a1cf01
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 60c4de7025099f38f0902e2ff24579e7088835a6
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598632"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628982"
 ---
 # <a name="directx-development-overview"></a>Panoramica dello sviluppo DirectX
 
-Usare le app di realtà mista di Windows il [rendering holographic](rendering.md), [estasiati](gaze.md), [movimento](gestures.md), [controller movimento](motion-controllers.md), [vocale ](voice-input.md) e [mapping spaziale](spatial-mapping.md) le API per compilare [realtà mista](mixed-reality.md) esperienze per HoloLens e auricolari coinvolgente e concreto. È possibile creare usando un motore 3D, ad esempio le app di realtà mista [Unity](unity-development-overview.md), oppure è possibile usare le API di realtà mista di Windows con DirectX 11. Si noti che DirectX 12 non è attualmente supportato. Se si stanno sfruttando la piattaforma direttamente, essenzialmente creando il proprio middleware o framework. Le API di Windows supportano le app scritte sia in C++ e C#. Se si desidera utilizzare C#, l'applicazione può sfruttare il [SharpDX](http://sharpdx.org/) libreria di software open source.
+Usare le app di realtà mista di Windows il [rendering holographic](rendering.md), [estasiati](gaze.md), [movimento](gestures.md), [controller movimento](motion-controllers.md), [vocale ](voice-input.md) e [mapping spaziale](spatial-mapping.md) le API per compilare [realtà mista](mixed-reality.md) esperienze per HoloLens e auricolari coinvolgente e concreto. È possibile creare usando un motore 3D, ad esempio le app di realtà mista [Unity](unity-development-overview.md), oppure è possibile immettere direttamente il codice per le API di realtà mista di Windows usando DirectX 11 o DirectX 12. Se si stanno sfruttando la piattaforma direttamente, essenzialmente creando il proprio middleware o framework. Le API di Windows supportano le app scritte sia in C++ e C#. Se si desidera utilizzare C#, l'applicazione può sfruttare il [SharpDX](http://sharpdx.org/) libreria di software open source.
 
 Realtà mista di Windows supporta [due tipi di app](app-views.md):
 * **Le App per realtà mista** (UWP o Win32), che usano i [HolographicSpace API](getting-a-holographicspace.md) per eseguire il rendering un [visualizzazione coinvolgenti](app-views.md) all'utente che riempie la visualizzazione visore Vr.
@@ -25,7 +25,7 @@ Le differenze tra lo sviluppo per DirectX [visualizzazioni 2D e coinvolgenti vis
 
 Per iniziare lo sviluppo di App immersive:
 * Per la **le app UWP**, [creare un nuovo progetto UWP usando i modelli in Visual Studio](creating-a-holographic-directx-project.md). La lingua, in base **Visual C++**  oppure **Visual C#** , si troverà i modelli UWP in **universale di Windows**  >   **Holographic**.
-* Per **App Win32**, [creare un nuovo progetto desktop Win32](creating-a-holographic-directx-project.md#creating-a-win32-project) e quindi seguire le istruzioni di Win32 [introduzione un HolographicSpace](getting-a-holographicspace.md) pagina per ottenere un HolographicSpace.
+* Per la **App Win32**, [avviare dal *BasicHologram* esempio Win32](creating-a-holographic-directx-project.md#creating-a-win32-project).
 
 Questo è un ottimo modo per ottenere il codice che è necessario aggiungere supporto per il rendering holographic a un'app o un motore esistente. Nel modello in modo familiare per gli sviluppatori di software interattivo in tempo reale vengono presentati i concetti e codice.
 
@@ -40,16 +40,17 @@ Gli argomenti seguenti descrivono i requisiti di base dell'aggiunta del supporto
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Aggiunta di input e le funzionalità di realtà mista
 
 Per abilitare la migliore esperienza possibile per gli utenti delle App immersive, è necessario supportare i blocchi predefiniti principali seguenti:
-* [Sguardo, gesti e controller di movimento in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Testa e occhio estasiati DirectX](gaze-in-directx.md)
+* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)
 * [Audio spaziale in DirectX](spatial-sound-in-directx.md)
-* [Mapping spaziale DirectX](spatial-mapping-in-directx.md)
+* [Mapping spaziale in DirectX](spatial-mapping-in-directx.md)
 
 Sono disponibili altre funzionalità chiave che molte applicazioni coinvolgenti dovranno usare, che vengono esposte anche ad App DirectX:
-* [Condiviso spaziali ancoraggi in DirectX](shared-spatial-anchors-in-directx.md)
+* [Ancoraggi nello spazio condivisi in DirectX](shared-spatial-anchors-in-directx.md)
 * [Fotocamera individuabile in DirectX](locatable-camera-in-directx.md)
-* [Input di tastiera, mouse e controller DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [Input da tastiera, mouse e controller in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 
 ## <a name="see-also"></a>Vedere anche
-* [Modello di App](app-model.md)
-* [Viste di App](app-views.md)
+* [Modello di app](app-model.md)
+* [Visualizzazioni delle app](app-views.md)

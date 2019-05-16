@@ -1,19 +1,19 @@
 ---
-title: Ottimizzazione delle app per mani libere
+title: Senza mani
 description: Ottimizzazione delle app per mani libere
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realtà mista, mani libere, estasiati, estasiati targeting, interazione, progettazione
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524334"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629015"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>Ottimizzazione delle app per mani libere
+# <a name="hands-free"></a>Senza mani
 
 
 
@@ -31,18 +31,16 @@ Potrebbero essere alcuni scenari specifici:
 
 ## <a name="hands-free-modalities"></a>Modalità invisibile all'utente
 
-### <a name="voice-commanding"></a>L'esecuzione di comandi vocali
+### <a name="voice-commandingvoice-designmd"></a>[L'esecuzione di comandi vocali](voice-design.md)
 
 Utilizzando la voce di comando e controllo di che un'interfaccia può non solo consentono all'utente di operare in viva voce, ma anche ignorare più passaggi. L'utilizzo di questa modalità può variare da consentire all'utente di nome del pulsante, qualsiasi operazione di lettura a voce alta per attivarlo, come vedere-it-say-it, alla conversazione con un agente che consentono di eseguire attività per l'utente.
 
-* [Progettazione delle interazioni vocali](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>Head sguardo e permanenza
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head-sguardo e permanenza](gaze-and-dwell.md)
 
 In alcune situazioni invisibile all'utente, utilizzando la voce non è ideale o persino possibile. Gli ambienti di factory l, sulla privacy o norme social possono essere tutti i vincoli. Head estasiati + permanenza modello consente all'utente di spostarsi tra l'app usando il vettore head in modo da puntare, mentre il tempo di ritardo, o rimanere su un pulsante verrà attivarlo dopo un determinato periodo di tempo (in genere entro 1 secondo o operazione). 
 
-* [Sguardo fisso e attesa](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>In fase di transizione da e verso mani libere
 

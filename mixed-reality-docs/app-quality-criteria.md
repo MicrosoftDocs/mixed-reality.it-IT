@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criteri di qualità delle App, realtà mista mista app per realtà
-ms.openlocfilehash: 8070a434be462a636b314527c59f299ca77fb6d4
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602382"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628983"
 ---
 # <a name="app-quality-criteria"></a>Criteri di qualità delle App
 
@@ -61,7 +61,7 @@ Frequenza dei fotogrammi è il primo pilastro dello ologrammi stabilità comodit
 * [Ottenere informazioni sulle prestazioni per realtà mista](understanding-performance-for-mixed-reality.md)
 * [Frequenza dei fotogrammi e la stabilità di ologramma](hologram-stability.md#frame-rate)
 * [Budget di prestazioni di asset](asset-creation-process.md)
-* [Raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md)
+* [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
@@ -119,8 +119,8 @@ Mentre l'usura del dispositivo e l'esperienza di visualizzazione:
 * [Frequenza dei fotogrammi e la stabilità di ologramma](hologram-stability.md#frame-rate)
 * [Case study, utilizzando il piano di stabilizzazione](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
 * [Ottenere informazioni sulle prestazioni per realtà mista](understanding-performance-for-mixed-reality.md)
-* [Raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md)
-* [Ancoraggi spaziali](spatial-anchors.md)
+* [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
+* [Ancoraggi nello spazio](spatial-anchors.md)
 * [Gestione degli errori di rilevamento](coordinate-systems.md#handling-tracking-errors)
 * [Fotogramma di riferimento fisso](coordinate-systems.md#stationary-frame-of-reference)
 
@@ -173,7 +173,7 @@ Disallineamenti di vntana con oggetti fisici (se deve essere posizionato in rela
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [MR Spatial 230: Mapping spaziale](holograms-230.md)
+* [Spaziale MR 230: Mapping spaziale](holograms-230.md)
 * [MR Toolkit, le librerie di Mapping spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [MR Companion Kit, Poster Calibration Sample](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [MR Companion Kit, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -225,7 +225,7 @@ Controllo App per gli sviluppatori in cui eseguire la convergenza occhi degli ut
 ### <a name="resources"></a>Risorse
 
 * [Eseguire il rendering di distanza](hologram-stability.md#hologram-render-distances)
-* [Punto di stato attivo in Unity](focus-point-in-unity.md)
+* [Punto focale in Unity](focus-point-in-unity.md)
 * [Esperimenti con scala](scale.md#experimenting-with-scale)
 * [Testo, la dimensione del carattere consigliato](typography.md#recommended-font-size)
 
@@ -260,7 +260,7 @@ Indipendentemente dall'area di visualizzazione dei problemi di fattore di comfor
 ### <a name="resources"></a>Risorse
 
 * [Eseguire il rendering di distanza](hologram-stability.md#hologram-render-distances)
-* [Punto di stato attivo in Unity](focus-point-in-unity.md)
+* [Punto focale in Unity](focus-point-in-unity.md)
 
 ## <a name="use-of-spatial-sound"></a>Utilizzo dell'audio spaziale
 
@@ -300,15 +300,15 @@ Nella realtà mista di Windows, il motore di audio fornisce il componente acusti
 
 #### <a name="documentation"></a>Documentazione
 
-* [Spaziale audio](spatial-sound.md)
-* [Progettazione spaziale](spatial-sound-design.md)
+* [Audio spaziale](spatial-sound.md)
+* [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)
 * [Case study, spaziali audio per HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Case study, utilizzando spaziale audio in RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [MR Spatial 220: Spaziale audio](holograms-220.md)
+* [Spaziale MR 220: Audio spaziale](holograms-220.md)
 * [MRToolkit, Spatial Audio](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Concentrarsi sui limiti holographic frame (campo di visualizzazione)
@@ -348,7 +348,7 @@ Esperienze utente ben progettata possono creare e gestire un contesto utile dell
 
 #### <a name="documentation"></a>Documentazione
 
-* [Frame holographic](holographic-frame.md)
+* [Frame olografico](holographic-frame.md)
 * [Case Study, HoloStudio UI e conoscenze di progettazione di interazione](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
 * [Scalabilità degli oggetti e gli ambienti](scale.md)
 * [Cursori, segnali visivi](cursors.md#visual-cues)
@@ -402,13 +402,13 @@ Ologrammi devono reagire in all'utente di posizionare in approssimativamente ste
 
 * [Progettazione di interazioni](hologram.md)
 * [Colore, chiaro e materiale](color,-light-and-materials.md)
-* [Del billboard e tag-along](billboarding-and-tag-along.md)
-* [Nozioni fondamentali di interazione](interaction-fundamentals.md)
+* [Billboarding e tag-along](billboarding-and-tag-along.md)
+* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
 * [Self-animati e locomotion utente](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Input di MR 210: Sguardo](holograms-210.md)
+* [Input MR 210: Sguardo fisso](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Maggiore chiarezza l'interazione dell'input
 
@@ -453,20 +453,21 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 
 * [Nozioni fondamentali di interazione tra Windows MR](interaction-fundamentals.md)
 * [Oggetti si](interactable-object.md)
-* [Sguardo targeting](gaze-targeting.md)
+* [Selezione della destinazione con lo sguardo](gaze-targeting.md)
 * [Cursori](cursors.md)
 * [Fattore di comfort e sguardo](comfort.md#gaze-direction)
 * [Movimenti](gestures.md)
 * [Input vocale](voice-input.md)
-* [Progettazione vocale](voice-design.md)
-* [Controller di movimento](motion-controllers.md)
-* [Input porting guide per Unity](input-porting-guide-for-unity.md)
+* [Progettazione delle interazioni vocali](voice-design.md)
+* [Controller del movimento](motion-controllers.md)
+* [Guida alla conversione dell'input per Unity](input-porting-guide-for-unity.md)
 * [Input da tastiera in Unity](keyboard-input-in-unity.md)
-* [Estasiati Unity](gaze-in-unity.md)
-* [I movimenti e i controller di movimento in Unity](gestures-and-motion-controllers-in-unity.md)
+* [Sguardo fisso in Unity](gaze-in-unity.md)
+* [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Input vocale in Unity](voice-input-in-unity.md)
-* [Input di tastiera, mouse e controller DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Sguardo, gesti e controller di movimento in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Input da tastiera, mouse e controller in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [Testa e occhio estasiati DirectX](gaze-in-directx.md)
+* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
@@ -475,9 +476,9 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 * [Eseguire il cast di Studio: Insegnamenti di progettazione HoloStudio UI e l'interazione](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 * [App di esempio: Tabella periodico degli elementi](periodic-table-of-the-elements.md)
 * [App di esempio: Modulo lunare](lunar-module.md)
-* [Input di MR 210: Sguardo](holograms-210.md)
-* [Input di MR 211: Movimenti](holograms-211.md)
-* [Input di MR 212: Voice](holograms-212.md)
+* [Input MR 210: Sguardo fisso](holograms-210.md)
+* [Input MR 211: Movimenti](holograms-211.md)
+* [Input MR 212: Voce](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Oggetti si
 
@@ -515,10 +516,10 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
 
 #### <a name="documentation"></a>Documentazione
 
-* [Oggetto si](interactable-object.md)
+* [Oggetto che supporta interazioni](interactable-object.md)
 * [Testo in Unity](text-in-unity.md)
-* [Rettangolo di selezione e barra dell'App](app-bar-and-bounding-box.md)
-* [Progettazione vocale](voice-design.md)
+* [Barra dell'app e rettangolo di selezione](app-bar-and-bounding-box.md)
+* [Progettazione delle interazioni vocali](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
@@ -560,7 +561,7 @@ Le app che richiedono i dati di mapping spaziale si basano sul dispositivo per r
 
 #### <a name="documentation"></a>Documentazione
 
-* [Visualizzazione analisi chat room](room-scan-visualization.md)
+* [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
 * [Case study: Distribuire le funzionalità di mapping spaziale di HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [Case study: Progettazione per HoloTour spaziale](case-study-spatial-sound-design-for-holotour.md)
 * [Case study: Creazione di un'esperienza coinvolgente su in frammenti](case-study-creating-an-immersive-experience-in-fragments.md)
@@ -600,7 +601,7 @@ In un'app di realtà mista, il contenuto sia all'esterno del campo di visualizza
 
 ### <a name="resources"></a>Risorse
 
-* [Frame holographic](holographic-frame.md)
+* [Frame olografico](holographic-frame.md)
 
 ## <a name="data-loading"></a>Caricamento dei dati
 

@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6DOF controller, controller di movimento
-ms.openlocfilehash: b44964ab872bd080349ecf1b04b3f7082b521a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604960"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629116"
 ---
 # <a name="motion-controllers"></a>Controller di movimento
 
@@ -230,10 +230,10 @@ Visualizzare [risoluzione dei problemi controller di movimento](https://docs.mic
 [Invia commenti e suggerimenti](give-us-feedback.md) nell'Hub di commenti e suggerimenti, utilizzando la categoria "Input realtà mista ->".
 
 ## <a name="see-also"></a>Vedere anche
-* [I movimenti e i controller di movimento in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Sguardo, gesti e controller di movimento in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
+* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Movimenti](gestures.md)
-* [Input di MR 213: Controller di movimento](mixed-reality-213.md)
+* [Input MR 213: Controller del movimento](mixed-reality-213.md)
 * [Guida della appassionato: La realtà mista di Windows home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Guida della appassionato: Uso di App e giochi in realtà mista di Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [Funzionamento del rilevamento interno a esterno](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

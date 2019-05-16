@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Eseguire il rendering di realtà mista di Windows, vntana, rendering, grafica 3D, HolographicFrame, loop, ciclo di aggiornamento, procedura dettagliata, codice di esempio
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605160"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629040"
 ---
 # <a name="rendering-in-directx"></a>Per il rendering in DirectX
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Sguardo processo e il movimento di input
 
-[Estasiati](gaze.md) e [movimento](gestures.md) non sono basati sul tempo di input e pertanto non è necessario aggiornare il **StepTimer** (funzione). Tuttavia [questo input](gaze,-gestures,-and-motion-controllers-in-directx.md) è qualcosa che l'app deve esaminare ogni fotogramma.
+[Estasiati](gaze-in-directx.md) e [mano](hands-and-motion-controllers-in-directx.md) non sono basati sul tempo di input e pertanto non è necessario aggiornare il **StepTimer** (funzione). Tuttavia questo input è qualcosa che l'app deve esaminare ogni fotogramma.
 
 ### <a name="process-time-based-updates"></a>Elaborazione degli aggiornamenti basati sul tempo
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mista realtà, indicatore di posizione spaziale, frame di riferimento spaziale, spaziale sistema di coordinate, fase spaziali, esempio codice, stabilizzazione immagine, ancoraggio spaziale, spaziali store di ancoraggio, rilevamento perdite, procedura dettagliata
-ms.openlocfilehash: c8cdb39cbf4634edb4ed0a595381fc70f1388ce4
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605150"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628978"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemi di coordinate in DirectX
 
@@ -622,7 +622,7 @@ Vogliamo ologrammi nostro esempio di seguire l'utente [estasiati](gaze.md), anal
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
 ```
 
-Questo SpatialPointerPose contiene le informazioni necessarie per posizionare l'ologrammi in base al [intestazione corrente dell'utente](gaze,-gestures,-and-motion-controllers-in-directx.md).
+Questo SpatialPointerPose contiene le informazioni necessarie per posizionare l'ologrammi in base al [intestazione corrente dell'utente](gaze-in-directx.md).
 
 Per ragioni di comodità per l'utente, si userà l'interpolazione lineare ("lerp") per semplificare la modifica della posizione in modo che si verifica un periodo di tempo. Questo è più pratico per l'utente di blocco di ologramma per loro sguardo. Posizione del ologrammi tag-along consente anche di stabilizzare l'ologrammi dal blocco del movimento; Lerping Se si non è stato il blocco della, l'utente visualizzerà l'ologrammi instabilità a causa di ciò che sono normalmente considerati impercettibili spostamenti principale dell'utente di.
 
@@ -796,7 +796,8 @@ Il [mapping spaziale](spatial-mapping-in-directx.md) alle API di utilizzo di sis
 
 ## <a name="see-also"></a>Vedere anche
 * [Sistemi di coordinate](coordinate-systems.md)
-* [Ancoraggi spaziali](spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Anchor spaziali</a>
-* [Sguardo, gesti e controller di movimento in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Mapping spaziale DirectX](spatial-mapping-in-directx.md)
+* [Ancoraggi nello spazio](spatial-anchors.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>
+* [Testa e occhio estasiati DirectX](gaze-in-directx.md)
+* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Mapping spaziale in DirectX](spatial-mapping-in-directx.md)
