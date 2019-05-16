@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: sistema di coordinate, spaziale sistema di coordinate, su scala mondiale, mondo, scalabilità, posizione, orientamento, ancoraggio, ancoraggio spaziale, bloccato al mondo, world blocca il thread, persistenza, la condivisione
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605109"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730855"
 ---
 # <a name="spatial-anchors"></a>Ancoraggi spaziali
 
@@ -74,8 +75,8 @@ Per gli ancoraggi spaziali cloud, è possibile aumentare lo spazio di archiviazi
 
 ## <a name="see-also"></a>Vedere anche
 * [Sistemi di coordinate](coordinate-systems.md)
-* [Condividere esperienze in realtà mista](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Anchor spaziali</a>
+* [Esperienze condivise nella realtà mista](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>
 * [Persistenza in Unity](persistence-in-unity.md)
 * [Ancoraggi spaziali in DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Case study: ricerca sui difetti nella realtà](case-study-looking-through-holes-in-your-reality.md)

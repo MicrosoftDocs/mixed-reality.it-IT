@@ -6,13 +6,14 @@ author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
+ms.localizationpriority: high
 keywords: Realtà mista di Windows, progettazione, l'interazione, stile, colore, i modelli dell'app, controlli, le app di esempio, il Toolkit di realtà mista, MRTK
-ms.openlocfilehash: aa7b1ba42823324bf247580781b46a4f4c885d99
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524346"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730841"
 ---
 # <a name="design-for-mixed-reality"></a>Progettazione per realtà mista
 

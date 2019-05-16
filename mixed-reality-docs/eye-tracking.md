@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Rilevamento rossi, mista realtà, Input, sguardo sotto controllo
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581051"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730770"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Occhio rilevamento su HoloLens 2
 HoloLens 2 consente un livello completamente nuovo di contesto e informazioni sulle risorse umane all'interno di Holographic esperienza, offrendo agli sviluppatori la possibilità straordinaria con informazioni su ciò che siano esaminando gli utenti. Questa pagina offre una panoramica del modo in cui gli sviluppatori possono trarre vantaggio dal rilevamento di occhio per diversi casi d'uso e gli elementi da cercare durante la progettazione di interfacce utente basate su occhio-sguardo. 
