@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Progettare sguardo, permanenza, interazione, realtà mista
-ms.openlocfilehash: 9f9fa89d7730e21e89bd24ce3b483d129c8a16db
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730774"
+ms.locfileid: "65813987"
 ---
 # <a name="head-gaze-and-dwell"></a>Head-sguardo e permanenza
 
@@ -92,9 +92,9 @@ Usare un breve ritardo prima di avviare un feedback visivo per evitare lo sfarfa
 ### <a name="high-frequency-buttons"></a>Pulsanti ad alta frequenza
 ![Pulsante Avanti di Microsoft Dynamics 365 Guide](images/GuideNextButton.png "pulsante Avanti di Microsoft Dynamics 365 Guide") pulsanti ad alta frequenza sono disponibili pulsanti che vengono comunemente utilizzati in tutta l'applicazione. Un buon esempio di questi sono i pulsanti Avanti e indietro nelle guide di Microsoft Dynamics 365.
 
-* Pulsanti ad alta frequenza devono...
-  * essere pulsanti più grandi, più facile da colpire con head sguardo
-  * rimangono quasi altezza sotto controllo per evitare ergonomico sforzo.
+Pulsanti ad alta frequenza devono...
+* essere pulsanti più grandi, più facile da colpire con head sguardo
+* rimangono quasi altezza sotto controllo per evitare ergonomico sforzo.
 
 ### <a name="low-frequency-buttons"></a>Pulsanti di bassa frequenza
 I pulsanti di bassa frequenza sono pulsanti che non sono ha interagiti con regolarmente in tutta l'applicazione. Un buon esempio potrebbe essere un pulsante per accedere al menu impostazioni, o un pulsante per cancellare tutto il lavoro.

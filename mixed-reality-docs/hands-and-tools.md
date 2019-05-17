@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realtà, le mani, controller di movimento, interazione, mista progettare
-ms.openlocfilehash: 4f4231dd816dc71e42d16aca1b518ad03440116e
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629022"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65813985"
 ---
 # <a name="hands-and-motion-controllers"></a>Le mani e controller di movimento
 ## <a name="scenarios"></a>Scenari
@@ -28,7 +28,7 @@ Potrebbero essere alcuni scenari specifici:
 ### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Manipolazione diretta con le mani](direct-manipulation.md)
 Si tratta di una modalità sfruttando la potenza delle lancette, con cui gli utenti sono in grado di tocco e manipolazione diretta di vntana. Da leaveraging vita quotidiana esperienze e fornire affordance visual appropriate, gli utenti sono in grado di utilizzare le stesse modalità di modifica di oggetti reali per interagire con quelle virtuali.   
 
-### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Punto ed eseguire il commit con le mani](point-and-commit.md)
+### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Puntamento e commit con le mani](point-and-commit.md)
 Questa modalità permette agli utenti di interagire con vntana in una distanza. Consente agli utenti di ottimizzare l'uso dell'ambiente circostante. Gli utenti possono inserire in qualsiasi punto ologrammi e possono ancora accedere da qualsiasi distanze. I modelli mentali e i movimenti per il controllo e manipolazione 2D e 3D vntana sono altamente sincronizzati con quelli della manipolazione diretta.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Controller del movimento](motion-controllers.md)

@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, hololens, esercitazione di unity,
-ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730933"
+ms.locfileid: "65814006"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>Modulo MR Learning Base - inizializzazione di progetto e la prima applicazione
 
