@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mista realtà, sviluppo, operazioni preliminari, nuovo progetto
-ms.openlocfilehash: 4ee81eca25109da428d7b3addf59e102ddc5c5cf
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993544"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940758"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurare un nuovo progetto Unity per realtà mista di Windows 
 
@@ -36,6 +36,9 @@ Per impostare come destinazione la realtà mista di Windows, è necessario innan
 4. Nel **impostazioni XR** sezione, verificare il **realtà virtuale supportato** casella di controllo per aggiungere il **dispositivi per realtà virtuale** elenco.
 5. Nel **impostazioni XR** gruppo, verificare che **"Windows Mixed Reality"** viene elencato come un dispositivo supportato. (questa verifica può sembrare come "Windows Holographic" nelle versioni precedenti di Unity)
 
+![Impostazioni di qualità di Unity](images/getting-started-unity-quality-settings.jpg)<br>
+*Impostazioni di Unity xr*
+
 L'app ora è possibile eseguire spaziali input e base per il rendering holographic. Per andare oltre e sfruttare alcune funzionalità, l'app deve dichiarare le funzionalità appropriate nel relativo manifesto. Le dichiarazioni del manifesto possono essere rese Unity in modo che vengono inclusi in ogni esportazione progetto successivo. L'impostazione si trovano **Player Settings > impostazioni per la Universal Windows Platform > Impostazioni di pubblicazione > funzionalità**. Le funzionalità applicabili per l'abilitazione di uso comune le API di Unity per realtà mista sono:
 
 |  Capability  |  API che richiedono funzionalità | 
@@ -48,7 +51,7 @@ L'app ora è possibile eseguire spaziali input e base per il rendering holograph
 
 **Impostazioni di qualità di Unity**
 
-![Impostazioni di qualità di Unity](images/unityqualitysettings-350px.png)<br>
+![Impostazioni di qualità di Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Impostazioni di qualità di Unity*
 
 HoloLens ha una GPU di classi di dispositivi mobili. Se l'app è destinata a HoloLens, è opportuno le impostazioni di qualità ottimizzate per prestazioni più veloci per garantire che manteniamo framerate completo:

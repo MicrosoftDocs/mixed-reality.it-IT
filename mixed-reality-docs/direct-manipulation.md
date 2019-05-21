@@ -7,19 +7,15 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettare, mani near, HoloLens
-ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: 412d77a1d7446f82ddf43f051fdb149cb1fd559c
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65814001"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940771"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipolazione diretta con le mani
 Manipolazione diretta è un modello di input che coinvolge tocca vntana direttamente con le mani. L'obiettivo con manipolazione diretta è che gli oggetti si comportano come avviene nel mondo reale. Pulsanti possono essere attivati semplicemente premendo li, gli oggetti possono essere selezionati da essi selezionandola e contenuto 2D si comporta come un touchscreen virtuale.  Per questo motivo, è facile per gli utenti per altre manipolazione diretta, e il relativo divertimento troppo.  Viene considerato un "near" modello di input, vale a dire che viene utilizzato meglio per l'interazione con contenuto che è all'interno di arms raggiungere.
-
-Il 2 HoloLens prevede un modello di input di manipolazione diretta che ti permette di tocco vntana direttamente con le mani. L'obiettivo con manipolazione diretta è per gli oggetti a comportarsi come avviene nel mondo reale. È possibile attivare i pulsanti premendo semplicemente e anche e prelevare agganciare e spostare gli oggetti. In questi scenari, il contenuto 2D si comporta come un touchscreen virtuale.
-
-Indirizzare manipolazione è facile per utenti di apprendere e ha troppo divertenti. Viene considerato un "passa quasi" modello di input, vale a dire che viene utilizzato meglio per l'interazione con contenuto che si trova all'interno di copertura di un arm.
 
 Manipolazione diretta è basato su intuitività, vale a dire è facili da usare. Non esistono Nessun movimenti simbolici per insegnare agli utenti. Tutte le interazioni vengono compilate intorno a un elemento visivo che è possibile toccare o selezionare.
 
@@ -148,6 +144,6 @@ In questo modo, si sposta accidentalmente la mano tra alcuni pulsanti holographi
 ## <a name="see-also"></a>Vedere anche
 
 * [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Puntamento e commit](point-and-commit.md)
+* [Puntamento e commit con le mani](point-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 
