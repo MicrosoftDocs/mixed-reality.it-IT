@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettare, mani near, HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730507"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974753"
 ---
 # <a name="direct-manipulation"></a>Manipolazione diretta
 
@@ -143,6 +143,6 @@ Si supponga, ad esempio, che si legge un testo (filmato) holographic quando ragg
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Sguardo ed eseguire il commit](gaze-and-commit.md)
-* [Puntamento e commit](point-and-commit.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
+* [Puntamento e commit con le mani](point-and-commit.md)
+* [Interazioni istintive](interaction-fundamentals.md)

@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Progettare sguardo, sguardo targeting, interazione, realtà mista
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730813"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974871"
 ---
 # <a name="head-gaze-and-commit"></a>Head-sguardo ed eseguire il commit
 Head-sguardo ed eseguire il commit è un modello di input che coinvolge destinato a un oggetto con direzione di inizio in avanti che punta (head-direction) e quindi agisce su di esso con una replica secondaria di input, ad il movimento mano Air toccare o voce di comando "Select". Viene considerato un modello di input "molto" con manipolazione indiretta, ovvero che viene utilizzato meglio per l'interazione con contenuto che è di là arms raggiungere.
@@ -70,7 +70,7 @@ L'esecuzione di comandi vocali è uno dei metodi di interazione principale nella
 - Interfacce utente conversazione o entità, come Cortana dotati di una funzionalità del linguaggio naturale per intelligenza artificiale.
 - File personalizzato
 
-Per trovare altri dettagli e un elenco di comprenhesive di comandi disponibili e sul relativo utilizzo, consultare il [vocali progettazione](voice-design.md) indicazioni.
+Per trovare altri dettagli e un elenco di comprenhesive di comandi disponibili e sul relativo utilizzo, consultare il [l'esecuzione di comandi vocali](voice-design.md) indicazioni.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>Head-sguardo e HoloLens Clicker
@@ -204,11 +204,11 @@ Esistono tre aspetti da considerare:
 
 
 ## <a name="see-also"></a>Vedere anche
-* [Manipolazione diretta](direct-manipulation.md)
-* [Puntamento e commit](point-and-commit.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
-* [Sguardo fisso e attesa](gaze-targeting.md)
-* [Sguardo fisso e voce](voice-design.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Puntamento e commit con le mani](point-and-commit.md)
+* [Interazioni istintive](interaction-fundamentals.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 
 
 

@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Visual Studio, HoloLens, realtà mista, debug, distribuzione
 ms.openlocfilehash: 6bd47d7212d321791a11ff4db91c3e172c91f463
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59601372"
@@ -71,7 +71,7 @@ Seguire queste istruzioni quando si usa un visore VR immersivi realtà mista di 
 
 ## <a name="pairing-your-device---hololens-1st-gen"></a>Associazione del dispositivo - HoloLens (dal 1 ° generazione)
 
-La prima volta che si distribuisce un'app da Visual Studio per il HoloLens, verrà richiesto un PIN. Generare un PIN in HoloLens, avviando l'app impostazioni, passare a **Update > per gli sviluppatori** e toccare **coppia**. Un PIN verrà visualizzato nella finestra di HoloLens; Immettere questo PIN in Visual Studio. Al termine dell'associazione, toccare su per chiudere la finestra di dialogo di HoloLens. **** Questo PC è ora associato ai HoloLens e sarà in grado di distribuire automaticamente le app. Ripetere questi passaggi per ogni PC successivi che consente di distribuire le app di HoloLens.
+La prima volta che si distribuisce un'app da Visual Studio per il HoloLens, verrà richiesto un PIN. Generare un PIN in HoloLens, avviando l'app impostazioni, passare a **Update > per gli sviluppatori** e toccare **coppia**. Un PIN verrà visualizzato nella finestra di HoloLens; Immettere questo PIN in Visual Studio. Al termine dell'associazione, toccare su per chiudere la finestra di dialogo di HoloLens. ****  Questo PC è ora associato ai HoloLens e sarà in grado di distribuire automaticamente le app. Ripetere questi passaggi per ogni PC successivi che consente di distribuire le app di HoloLens.
 
 Per annullare la coppia di HoloLens da tutti i computer a cui è stato associato, avviare il **le impostazioni** app e passare alla **Update > per gli sviluppatori** e toccare **Cancella**.
 

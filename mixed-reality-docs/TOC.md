@@ -24,6 +24,7 @@
 #### [Vedere le foto](see-your-photos.md)
 #### [Regolazione dei sensori](sensor-tuning.md)
 #### [Aggiornamento di HoloLens](updating-hololens.md)
+#### [Condivisione dei dispositivi](device-sharing.md)
 #### [Guida per indossare e pulire un dispositivo dimostrativo HoloLens](hololens-demo-guide.md)
 ### Visori VR immersive
 #### [Dettagli sull'hardware dei visori VR immersive](immersive-headset-hardware-details.md)
@@ -160,6 +161,7 @@
 #### [Input da tastiera in Unity](keyboard-input-in-unity.md)
 ### Argomenti avanzati
 #### [Uso dello spazio dei nomi Windows con le app Unity per HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+#### [Oggetti nativi di realtà mista in Unity](unity-xrdevice-advanced.md)
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 ### Documenti legacy (Unity 2017.4/HTK/MRTK v1)
 ## Unreal

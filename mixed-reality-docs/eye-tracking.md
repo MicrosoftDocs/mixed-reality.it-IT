@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Rilevamento rossi, mista realtà, Input, sguardo sotto controllo
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730770"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974770"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Occhio rilevamento su HoloLens 2
 HoloLens 2 consente un livello completamente nuovo di contesto e informazioni sulle risorse umane all'interno di Holographic esperienza, offrendo agli sviluppatori la possibilità straordinaria con informazioni su ciò che siano esaminando gli utenti. Questa pagina offre una panoramica del modo in cui gli sviluppatori possono trarre vantaggio dal rilevamento di occhio per diversi casi d'uso e gli elementi da cercare durante la progettazione di interfacce utente basate su occhio-sguardo. 
@@ -127,7 +127,7 @@ In caso di un cursore, questo può comportare l'effetto "cursore fuga" a causa d
 5. **Account per le imprecisioni:** Sono disponibili due tipi delle imprecisioni che sono evidenti per gli utenti: Offset e instabilità. Il modo più semplice per gli offset di indirizzo è fornire destinazioni sufficientemente grande per interagire con (> 2° in angolo visual – come riferimento: l'anteprima è circa 2° in angolo visual quando il ridimensionamento orizzontale di Azure Resource Manager (1)). Ciò comporta il materiale sussidiario seguente:
     - Non forzare la selezione di destinazioni di piccole dimensioni: Research ha dimostrato che se le destinazioni sono sufficientemente grandi e il sistema è progettato anche, gli utenti descrivono l'interazione come semplificata e magico scrivendo. Se le destinazioni diventano troppo piccole, gli utenti descrivono l'esperienza come difficoltoso e frustrazione.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>Linee guida di progettazione sguardo occhio (segnaposto)
+# <a name="eye-gaze-design-guidelines"></a>Linee guida di progettazione sguardo sotto controllo
 
 Con 2 HoloLens, abbiamo la straordinaria opportunità per rendere sguardo & commit più veloce e più a proprio agio usando occhio sguardo anziché sguardo head. Tuttavia, sguardo occhio si comporta in modo molto diverso da sguardo head in determinati modi e pertanto viene fornito con una serie di difficoltà univoco. Nell'occhio estasiati linee guida di progettazione, riepilogheremo generali vantaggi e problematiche da prendere in considerazione quando si usa registrazione sotto controllo come un supporto di input nell'app holographic. In questa sezione, focalizzata sulla progettazione specifiche per sguardo occhio & commit. Prima di tutto gli occhi spostare incredibilmente veloce e sono quindi ideali in rapidamente come destinazione attraverso la vista. In questo modo occhio estasiati ideale per sguardo rapido & commit azioni, soprattutto se combinate con commit veloce, ad esempio una macchina-indice puntato o un pulsante.
 
@@ -138,9 +138,8 @@ Cercano di ottenere commenti e suggerimenti al passaggio del mouse combinata men
 Osservando la sincronizzazione segnali sguardo ed eseguire il commit: La sincronizzazione di input segnali possono essere meno difficile per semplice sguardo & commit, pertanto, non preoccuparti! È un elemento da cercare nel caso in cui si desidera usare azioni commit più complicate, ma che può comportare movimenti della mano complesse o i comandi vocali lunghi. Si supponga Esaminiamo target e utter un comando vocali lunghi. Presa in considerazione l'ora in cui è necessario parlare e l'ora in cui il sistema è necessaria per determinare cosa hai detto, lo sguardo occhio in genere tempo passa all'alcuni nuova destinazione nella scena. Di conseguenza, rendere gli utenti consapevoli che possono dover mantenere esaminando una destinazione fino a quando non è stato riconosciuto il comando o gestire l'input in un modo per determinare che genera del comando e ciò che l'utente era stata esaminando epoca.
 
 ## <a name="see-also"></a>Vedere anche
-* [Sguardo ed eseguire il commit](gaze-and-commit.md)
-* [Head estasiati targeting](gaze-targeting.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Movimenti](gestures.md)
-* [Progettazione delle interazioni vocali](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 * [Controller del movimento](motion-controllers.md)
 * [Comodità](comfort.md)

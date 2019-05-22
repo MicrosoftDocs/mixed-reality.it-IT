@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629060"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974882"
 ---
 # <a name="gestures"></a>Movimenti
 
@@ -110,9 +110,9 @@ Esistono tre aspetti da considerare:
 * Conseguenze di compromettere il funzionamento i limiti di frame di movimento dovrebbero essere ridotta a icona. In genere, ciò significa che il risultato di un movimento deve essere arrestato in corrispondenza del limite, ma non invertito. Ad esempio, se un utente sta spostando un oggetto holographic attraverso una chat room, lo spostamento deve essere interrotta quando viene superata la cornice di movimento, ma **non** da restituire per il punto di partenza. L'utente potrebbe esperienza alcuni frustrazione, ma può comprendere più rapidamente i limiti e non è necessario riavviare le azioni desiderate complete ogni volta che.
 
 ## <a name="see-also"></a>Vedere anche
-* [Selezione della destinazione con lo sguardo](gaze-targeting.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
 * [Progettazione delle interazioni vocali](voice-design.md)
 * [Input MR 211: Movimento](holograms-211.md)
 * [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Mani e controller del movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Controller del movimento](motion-controllers.md)

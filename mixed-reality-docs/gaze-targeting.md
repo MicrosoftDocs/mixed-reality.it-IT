@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettazione
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873919"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974921"
 ---
 # <a name="gaze-and-dwell"></a>Sguardo e permanenza
 Esistono molti modi diversi per verificare un _commit_ quale la combinazione di sguardo con _vocali_ oppure _mano i movimenti_.
@@ -99,5 +99,5 @@ Quando si determina quale vicino agli elementi interattivi per attivare, fornire
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)
-* [Progettazione delle interazioni vocali](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 * [Cursori](cursors.md)

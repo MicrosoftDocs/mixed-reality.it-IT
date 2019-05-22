@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettare, hololens, MMR, multimodali
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730827"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974910"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione a instinctual interazioni
 
@@ -141,12 +141,13 @@ Se più modelli di interazione richiede l'esperienza, abbiamo scoperto che molti
 
 ## <a name="see-also"></a>Vedere anche
 * [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Manipolazione diretta](direct-manipulation.md)
-* [Puntamento e commit](point-and-commit.md)
-* [Selezione della destinazione con lo sguardo](gaze-targeting.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Puntamento e commit con le mani](point-and-commit.md)
 * [Movimenti](gestures.md)
-* [Progettazione delle interazioni vocali](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 * [Controller del movimento](motion-controllers.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Progettazione del mapping spaziale](spatial-mapping-design.md)
 * [Comodità](comfort.md)
+

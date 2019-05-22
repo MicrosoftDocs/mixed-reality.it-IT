@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Progettare sguardo, permanenza, interazione, realtà mista
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813987"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974870"
 ---
 # <a name="head-gaze-and-dwell"></a>Head-sguardo e permanenza
 
@@ -124,8 +124,8 @@ Alcuni suggerimenti per la Progettazione visualizzazioni elenco:
 * riutilizzare lo stesso modello più frequentemente possibile per stabilire la conoscenza dell'esperienza utente
  
  ## <a name="see-also"></a>Vedere anche
-* [Manipolazione diretta](direct-manipulation.md)
-* [Puntamento e commit](point-and-commit.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Puntamento e commit con le mani](point-and-commit.md)
+* [Interazioni istintive](interaction-fundamentals.md)
 * [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Sguardo fisso e voce](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)

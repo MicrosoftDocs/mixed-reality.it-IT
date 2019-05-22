@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realtà mista, Azure, academy, unity, esercitazione, api, servizi multimediali, lo streaming di video, 360, coinvolgenti, vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59599483"
@@ -96,7 +96,7 @@ Usare la **servizio di archiviazione di Azure**, sarà necessario creare e confi
 
     3.  Per la **tipologia Account**, selezionare **archiviazione (utilizzo generico v1)**.
 
-    4.  Per la **Performance**, selezionare **Standard *.**
+    4.  Per la **Performance**, selezionare **Standard*.**
 
     5.  Per la **replica** selezionate **l'archiviazione con ridondanza locale (LRS)**.
 
@@ -226,7 +226,7 @@ Per usare il servizio di supporto di Azure, è necessario configurare un'istanza
 
     ![Il portale di Azure](images/AzureLabs-Lab6-21.png)
 
-20. Si noterà un video insieme a un altro, che è impostato su * * Asset di tipo * a più Bitrate MP4 * * *.
+20. Si noterà un video insieme a un altro, che è impostato su **Asset di tipo *a più Bitrate MP4***.
 
     ![Il portale di Azure](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ Di seguito è una tipica configurato per lo sviluppo con la realtà mista e di c
 
 8.  Una volta apportate queste modifiche, chiudere la **Build Settings** finestra.
 
-9.  Salvare il progetto **File* * Salva progetto * *.
+9.  Salvare il progetto **File* *Salva progetto**.
 
 
 
@@ -625,7 +625,7 @@ Per creare questa classe:
 
 1.  Andare alla **script** cartella creata in precedenza.
 
-2.  Fare doppio clic nella **Project** Pannello di **creare* * C\# Script * *. Denominare lo script **estasiati**.
+2.  Fare doppio clic nella **Project** Pannello di **creare* *C\# Script**. Denominare lo script **estasiati**.
 
 3.  Fare doppio clic su nuova ***estasiati*** script per aprirlo con **Visual Studio 2017.**
 

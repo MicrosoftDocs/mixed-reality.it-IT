@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realtà mista, Azure, academy, unity, esercitazione, api, graph microsoft, hololens, coinvolgenti, vr
 ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59597662"
@@ -266,12 +266,12 @@ Durante questo capitolo si configurerà la fotocamera principale della scena:
 
 Per creare questa classe:
 
-1.  Fare clic sul **asset** cartella la *pannello progetto*, quindi selezionare **crea* > * cartella * *. Denominare la cartella **script**.
+1.  Fare clic sul **asset** cartella la *pannello progetto*, quindi selezionare **crea* > *cartella**. Denominare la cartella **script**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Aprire il **gli script** cartella, quindi, all'interno di tale cartella, fare doppio clic su, **Create* > * C\# Script * *. Denominare lo script **MeetingsUI.**
+2.  Aprire il **gli script** cartella, quindi, all'interno di tale cartella, fare doppio clic su, **Create* > *C\# Script**. Denominare lo script **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -939,7 +939,7 @@ Per creare il Tag:
 
 Tutti gli elementi necessari per la sezione di Unity di questo progetto è ora stato completato, è il momento per la compilazione da Unity.
 
-1.  Passare a *impostazioni di compilazione* (**File* > * Impostazioni * * di compilazione).
+1.  Passare a *impostazioni di compilazione* (**File* > *Impostazioni di compilazione**).
 
     ![](images/AzureLabs-Lab311-33.png)
 

@@ -6,12 +6,12 @@ ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
 keywords: realtà virtuale, lbe, intrattenimento basato su posizione, vr arcade, codice a matrice arcade, coinvolgenti, codici a matrice,
-ms.openlocfilehash: b0f4480496c15f811979f76143acbd456d89e249
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: e6588552c0cfa8bffa19ac2be5c247c5f73dc19c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605119"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974892"
 ---
 # <a name="qr-code-tracking"></a>Codice a matrice di rilevamento
 
@@ -176,7 +176,7 @@ Il plug-in QRTracking espone le API per il codice a matrice di rilevamento. Per 
 È possibile trovare un esempio di come usare l'API di gestione di codici a matrice nel Toolkit di realtà mista [sito GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker).
 
 MRTK ha implementato gli script necessari per simpilify i codici a matrice per tracciare l'utilizzo. Tutte le risorse necessarie per sviluppare a matrice di tenere traccia delle applicazioni si trovano nella cartella "QRTracker". Esistono due scene: il primo è un esempio per visualizzare semplicemente i dettagli dei codici QR quando vengono rilevati e la seconda viene illustrato come utilizzare il sistema di coordinate collegato del codice a matrice per visualizzare vntana.
-È presente un prefab "QRScanner" che aggiunto tutti i scrips necessari per le scene usare QRCodes. Lo script QRCodeManager è una classe singileton che implementa l'API QRCode è possibile aggiungerlo alla scena si. Gli script "AttachToQRCode" viene usata per collegare vntana ai sistemi coodridnate codice a matrice, questo script può essere aggiunto a uno qualsiasi dei vntana. "SpatialGraphCoordinateSystem" viene illustrato come utilizzare il sistema di coordinate QRCode. Questi script possono essere usati quando è nelle scene progetto oppure è possibile scrivere il proprio direttamente usando il plug-in come descritto in precedenza.
+È presente un prefab "QRScanner" aggiunto tutti gli script necessari per le scene usare QRCodes. Lo script QRCodeManager è una classe singleton che implementa l'API QRCode. Questa operazione deve essere aggiunto alla scena. Lo script "AttachToQRCode" viene usato per collegare vntana ai sistemi di coordinate del codice a matrice, questo script può essere aggiunto a uno qualsiasi dei vntana. "SpatialGraphCoordinateSystem" viene illustrato come utilizzare il sistema di coordinate QRCode. Questi script possono essere usati come-è nel progetto scene oppure è possibile scrivere il proprio direttamente usando il plug-in come descritto in precedenza.
 
 ### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementazione di codice a matrice in Unity senza MRTK di rilevamento
 

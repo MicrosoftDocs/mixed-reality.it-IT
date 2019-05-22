@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Progettazione, realtà mista comfort, 2 HoloLens, HoloLens (dal 1 ° generazione)
-ms.openlocfilehash: 3dac997923b3f2319cb97137c1bbd9a12c4126b1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993631"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974772"
 ---
 # <a name="comfort"></a>Comfort
 
@@ -172,6 +172,6 @@ Quando gli utenti dovrebbero tenere una mano generata per tutta la durata di un'
 ## <a name="see-also"></a>Vedere anche
 * [Sguardo fisso](gaze.md)
 * [Stabilità degli ologrammi](hologram-stability.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Interazioni istintive](interaction-fundamentals.md)
 * [Frame olografico](holographic-frame.md)
 * [Calibrazione](calibration.md)

@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, realtà mista di Windows, holographic frame, il campo visivo
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598792"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974920"
 ---
 # <a name="holographic-frame"></a>Frame holographic
 
@@ -127,8 +127,8 @@ Come un'esperienza coinvolgente su, questi utenti erano incoraggiati a cercare, 
 La rappresentazione realistica di Buzz fornito un punto focale potente, completato con le tecniche di meno evidenti per attivare social bookmarking su verso all'utente la sensazione è presente, parlando all'utente. Quando l'utente sposta relative all'esperienza, social bookmarking su sposterà verso chi guarda su una soglia prima di tornare a uno stato neutro se l'utente sposta troppo oltre il perimetro. Se l'utente avrà l'aspetto da social bookmarking su completamente (ad esempio, per esaminare un elemento in un' posizione nella scena) poi ai social bookmarking su, will posizione direzionale dell'Assistente vocale una sola volta nuovamente essere incentrato sull'utente. Le tecniche simile al seguente forniscono un certo senso potente di full immersion e creare un punto focale all'interno della cornice holographic, riducendo testina eccessivo e innalzamento di livello [fattore di comfort utente](comfort.md).
 
 ## <a name="see-also"></a>Vedere anche
-* [Nozioni fondamentali di interazione](interaction-fundamentals.md)
-* [Comfort](comfort.md)
+* [Interazioni istintive](interaction-fundamentals.md)
+* [Comodità](comfort.md)
 * [Ridimensiona](scale.md)
-* [Sguardo targeting](gaze-targeting.md)
-* [Stabilità ologrammi](hologram-stability.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
+* [Stabilità degli ologrammi](hologram-stability.md)

@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criteri di qualità delle App, realtà mista mista app per realtà
-ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 756bc148f290aa3406c9ac8bb7003d463c62772c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628983"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974745"
 ---
 # <a name="app-quality-criteria"></a>Criteri di qualità delle App
 
@@ -403,7 +403,7 @@ Ologrammi devono reagire in all'utente di posizionare in approssimativamente ste
 * [Progettazione di interazioni](hologram.md)
 * [Colore, chiaro e materiale](color,-light-and-materials.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
-* [Concetti fondamentali delle interazioni](interaction-fundamentals.md)
+* [Interazioni istintive](interaction-fundamentals.md)
 * [Self-animati e locomotion utente](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
@@ -451,14 +451,14 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 
 #### <a name="documentation"></a>Documentazione
 
-* [Nozioni fondamentali di interazione tra Windows MR](interaction-fundamentals.md)
+* [Interazioni istintive](interaction-fundamentals.md)
 * [Oggetti si](interactable-object.md)
-* [Selezione della destinazione con lo sguardo](gaze-targeting.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
 * [Cursori](cursors.md)
 * [Fattore di comfort e sguardo](comfort.md#gaze-direction)
 * [Movimenti](gestures.md)
 * [Input vocale](voice-input.md)
-* [Progettazione delle interazioni vocali](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 * [Controller del movimento](motion-controllers.md)
 * [Guida alla conversione dell'input per Unity](input-porting-guide-for-unity.md)
 * [Input da tastiera in Unity](keyboard-input-in-unity.md)
@@ -466,8 +466,8 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 * [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Input vocale in Unity](voice-input-in-unity.md)
 * [Input da tastiera, mouse e controller in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Testa e occhio estasiati DirectX](gaze-in-directx.md)
-* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Puntamento con la testa e sguardo fisso in DirectX](gaze-in-directx.md)
+* [Mani e controller del movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
@@ -519,7 +519,7 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
 * [Oggetto che supporta interazioni](interactable-object.md)
 * [Testo in Unity](text-in-unity.md)
 * [Barra dell'app e rettangolo di selezione](app-bar-and-bounding-box.md)
-* [Progettazione delle interazioni vocali](voice-design.md)
+* [Esecuzione di comandi vocali](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 

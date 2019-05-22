@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, introduzione, il materiale sussidiario
-ms.openlocfilehash: b4f128c001a2fa6ed72e1548ef82693ad1488099
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ca69118dfeb766c1386420cd81053b9acb485ba7
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598933"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974854"
 ---
 # <a name="about-this-design-guidance"></a>Su questo materiale sussidiario di progettazione
 
@@ -31,7 +31,7 @@ E sappiamo che molte innovazioni verranno generate dalla community di progettazi
 
 Ecco una rapida panoramica del modo in cui è organizzata in questa Guida di progettazione. Le sezioni sono disponibili per ognuna di queste aree, con collegamenti ad articoli più.
 * **[Iniziare a progettare](mixed-reality.md)**  : leggere i commenti ad alto livello e comprendere i principi si seguirà.
-* **[Progettazione di interazioni](interaction-fundamentals.md)**  -informazioni su input, l'esecuzione di comandi, la navigazione e altri concetti di base di interazione per la progettazione delle app.
+* **[Interazioni instinctual](interaction-fundamentals.md)**  -informazioni su input, l'esecuzione di comandi, la navigazione e altri concetti di base di interazione per la progettazione delle app.
 * **[Stile](typography.md)**  -rendere l'app fantastici tramite colore, tipografia e movimento.
 * **[I modelli dell'app](types-of-mixed-reality-apps.md)**  -informazioni su come le app possono estendersi su scenari per gli ambienti coinvolgenti e realistici.
 * **[I controlli](interactable-object.md)**  -utilizzo di controlli e modelli come esperienza di blocchi predefiniti per creare la tua app.
