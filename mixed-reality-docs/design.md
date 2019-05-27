@@ -8,12 +8,12 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista di Windows, progettazione, l'interazione, stile, colore, i modelli dell'app, controlli, le app di esempio, il Toolkit di realtà mista, MRTK
-ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039205"
 ---
 # <a name="design-for-mixed-reality"></a>Progettazione per realtà mista
 
@@ -73,7 +73,7 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                             <a href="interaction-fundamentals.md">Interazioni instinctual</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Le mani e controller</a>
+                            <a href="hands-and-tools.md">Le mani e controller di movimento</a>
                         </p>
                         <p>
                             <a href="hands-free.md">Mani libere</a>
