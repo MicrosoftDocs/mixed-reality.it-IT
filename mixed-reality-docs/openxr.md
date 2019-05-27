@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 3/18/2019
 ms.topic: article
 keywords: Realtà mista OpenXR Developer Preview
-ms.openlocfilehash: c5ac87145ca23e4a6fbe578a285e27d50f1f22a1
-ms.sourcegitcommit: 36192101052666da01dd6c59cad4cfabd4ecb6f9
+ms.openlocfilehash: 723b0b85785d4b6dd735430aa76a24b9ce05b5c7
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039176"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ Per iniziare a usare l'anteprima per sviluppatori di OpenXR realtà mista in 2 H
 
 Per iniziare a usare l'anteprima per sviluppatori di OpenXR realtà mista in un PC desktop:
 
-1. Verificare che Windows è in esecuzione almeno il 10 ottobre 2018 Update (1809).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di ottobre 2018 Update usando le [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).  Se lo si avventuroso, è possibile installare una [build di Windows 10 Insider Preview di maggio 2019 Update (1903)](https://insider.windows.com).
+1. Verificare che si esegue Windows 10 ottobre 2018 Update (1809) o Windows 10 può 2019 aggiornare (1903).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di maggio 2019 aggiornamento usando il [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 1. Consente di impostare un visore VR realtà mista di Windows o per seguire le istruzioni [Abilita il simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md).
 1. Installare il [realtà mista OpenXR Developer Preview app](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  Questa app ti permette di configurare con l'anteprima OpenXR runtime per Windows 10 ottobre 2018 Update (1809) o versione successiva.  Dopo aver installato l'app, il Windows Store consente di mantenere il runtime aggiornato.
 1. Eseguire l'app mista realtà OpenXR Developer Preview dal menu Start e seguire le istruzioni per rendere il runtime attivo.  A breve, questa app sarà possibile esplorare anche altre informazioni di debug OpenXR.
@@ -45,7 +45,9 @@ Per iniziare a usare l'anteprima per sviluppatori di OpenXR realtà mista in un 
 
 ### <a name="support-for-windows-10-october-2018-update"></a>Supporto per Windows 10 ottobre 2018 Update
 
-Per procedere con l'anteprima per sviluppatori di OpenXR realtà mista in un PC desktop con Windows 10 ottobre 2018 Update (1809, la versione corrente di Windows), è necessario seguire alcuni passaggi aggiuntivi:
+Se si esegue Windows 10 maggio 2019 aggiornare (1903) e seguita la procedura descritta sopra, si è pronti a usare l'anteprima per sviluppatori di OpenXR realtà mista.
+
+Se non si è pronti a [aggiornare il PC desktop a maggio 2019 Update](https://www.microsoft.com/en-us/software-download/windows10), è possibile procedere in Windows 10 ottobre 2018 aggiornare (1809) seguendo un altro passaggio:
 
 1. Seguire i passaggi precedenti per installare l'anteprima per sviluppatori di OpenXR realtà mista.
 1. Per impostare l'anteprima per sviluppatori di OpenXR realtà mista come runtime OpenXR attivo del sistema, installare il [mista realtà OpenXR Developer Preview Compatibility Pack](https://aka.ms/openxr-compat).
@@ -70,7 +72,7 @@ Se l'app OpenXR non si avvii la realtà mista di Windows durante l'esecuzione, l
 
 ### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>Non è possibile installare app OpenXR Developer Preview di realtà mista 
 
-Verificare che Windows è in esecuzione almeno il 10 ottobre 2018 Update (1809).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di ottobre 2018 Update usando le [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
+Verificare che Windows è in esecuzione almeno il 10 ottobre 2018 Update (1809).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di maggio 2019 aggiornare (1903) usando il [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
 Se l'installazione pulsante nell'app mista realtà OpenXR Developer Preview non esegue alcuna operazione in Windows 10 ottobre 2018 Aggiorna, il sistema potrebbe viene memorizzato nella cache i requisiti di sistema non aggiornato per l'app.  È possibile eseguire il comando `wsreset.exe` da un prompt dei comandi per cancellare la cache.
 

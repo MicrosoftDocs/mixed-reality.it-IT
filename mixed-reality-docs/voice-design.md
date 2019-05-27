@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista di Windows, progettazione, l'interazione vocale
-ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730794"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039186"
 ---
 # <a name="voice-commanding"></a>L'esecuzione di comandi vocali
 
@@ -103,4 +103,4 @@ Quando voce viene applicata in modo corretto, l'utente capisca **cosa possono ad
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)
-* [Selezione della destinazione con lo sguardo](gaze-targeting.md)
+* [Puntamento con la testa e attesa](gaze-and-dwell.md)
