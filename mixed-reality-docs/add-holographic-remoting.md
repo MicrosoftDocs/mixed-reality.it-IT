@@ -6,17 +6,21 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, vntana, holographic .NET remoting, remoto per il rendering, rete per il rendering, HoloLens, vntana remoto
-ms.openlocfilehash: 4726c6af43fe1b89fc8298e459a1af9dfa5fc667
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605129"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270353"
 ---
 # <a name="add-holographic-remoting"></a>Aggiungere .NET remoting holographic
 
+## <a name="hololens-2"></a>HoloLens 2
+
 > [!NOTE]
 > Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+
+Gli sviluppatori di HoloLens che utilizzano .NET Remoting Holographic sarà necessario aggiornare le proprie App per renderli compatibili con 2 HoloLens.  Questo richiederà una nuova versione del pacchetto NuGet di .NET Remoting Holographic che non è ancora disponibile pubblicamente.  Se un'applicazione usando il pacchetto NuGet di HoloLens tenta di connettersi al lettore di .NET Remoting Holographic in 2 HoloLens, la connessione avrà esito negativo.  Guarda questa pagina per gli aggiornamenti quando il pacchetto NuGet 2 HoloLens è disponibile.
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Aggiungere .NET remoting holographic a un'app UWP o il desktop
 

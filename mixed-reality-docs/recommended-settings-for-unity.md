@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993607"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270369"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -83,6 +83,9 @@ Unity è deprecato il supporto per .NET lo script back-end e quindi consiglia ag
 3) Usare un'unità SSD per la compilazione
 
 Leggi [ottimizzazione tempi di compilazione per IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) per altre informazioni.
+
+> [!NOTE]
+> Inoltre, potrebbe essere utile per l'installazione una [Server di Cache](https://docs.unity3d.com/Manual/CacheServer.html), soprattutto per i progetti Unity con una grande quantità di risorse (esclusi i file di script) o costantemente modifica assets/scenes. Quando si apre un progetto, Unity idonei gli asset vengono archiviati in un formato della cache interna sul computer per lo sviluppo. Elementi devono essere nuovamente importati e quindi elaborati nuovamente quando modificare. Questo processo può essere eseguito una volta e salvato in un Server Cache e, di conseguenza, condivisi con altri sviluppatori di risparmiare tempo, invece di tutti gli sviluppatori di importare di nuovo di nuove modifiche in locale di elaborazione.
 
 ## <a name="publishing-properties"></a>Le opzioni di pubblicazione
 

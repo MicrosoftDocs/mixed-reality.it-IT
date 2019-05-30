@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettare, hololens, MMR, multimodali
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974910"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270378"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione a instinctual interazioni
 
@@ -36,11 +36,11 @@ Questi modelli di interazione può essere paragonato a modello mentale dell'uten
 
 Ognuno di questi modelli di interazione è conveniente, efficiente ed utilizzabile in sé e tutte sono ottimizzate per una serie di esigenze dei clienti. Visualizzare il grafico seguente, per gli scenari, esempi e i vantaggi di ogni modello di interazione.  
 
-**Modello** | **[Strumenti e le mani](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[Mani libere](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[Estasiati ed eseguire il Commit](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Modello** | **[Le mani e controller di movimento](hands-and-tools.md)** | **[Mani libere](hands-free.md)** | **[Head-sguardo ed eseguire il commit](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **Scenari di esempio** | Del contenuto 3D esperienze spaziali, ad esempio spatial layout e progettazione, modifica o simulazione | Esperienze contestuale in cui sono occupate mani dell'utente, ad esempio, nella formazione, la manutenzione del processo| Esperienze drill-through interno, ad esempio 3D presentazioni e demo
-**Fit** | Un'ottima soluzione per i nuovi utenti, wit accoppiata vocali, dell'occhio sguardo rilevamento o head. Curva di apprendimento. Esperienza utente coerente tra mano di rilevamento e 6 controller i gradi di libertà. | Alcuni di apprendimento obbligatorio. Se sono coppie non disponibile anche con vocali e il linguaggio naturale | Richiede la formazione su HMDs ma non su dispositivi mobili. Ideale per i controller accessibili migliore per HoloLens (dal 1 ° generazione) |
-**Hardware** | HoloLens 2 Immersive auricolari | HoloLens 2 HoloLens (dal 1 ° generazione) auricolari coinvolgenti | HoloLens 2 Immersive auricolari | HoloLens 2 HoloLens (dal 1 ° generazione) coinvolgenti auricolari AR per dispositivi mobili |
+**Fit** | Un'ottima soluzione per i nuovi utenti, wit accoppiata vocali, dell'occhio sguardo rilevamento o head. Curva di apprendimento. Esperienza utente coerente tra mano di rilevamento e 6 controller i gradi di libertà. | Alcuni di apprendimento obbligatorio. Se sono coppie non disponibile anche con vocali e il linguaggio naturale | Richiede la formazione su HMDs ma non su dispositivi mobili. Ideale per i controller accessibili. Ideale per HoloLens (dal 1 ° generazione). |
+**Hardware** | HoloLens 2 <br>Visori VR immersive | HoloLens 2 <br>HoloLens (dal 1 ° generazione) <br>Visori VR immersive | HoloLens 2 <br>Visori VR immersive | HoloLens 2 <br>HoloLens (dal 1 ° generazione) <br>Visori VR immersive <br>AR per dispositivi mobili |
 
 Informazioni dettagliate per l'uso in perfetta sintonia, tutti gli input disponibili in ogni modello di interazione sono nelle pagine che seguono, nonché le illustrazioni e collegamenti a contenuto di esempio dal nostro MRTK di Unity.
 
@@ -75,7 +75,7 @@ Di seguito sono riportati alcuni esempi del modo in cui affordance e i comportam
         <td><strong>Come sapere ciò che ho appena fatto?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">Strumenti e le mani</a></td>
+        <td><a href="hands-and-tools.md">Mani e controller del movimento</a></td>
         <td>Una mano mesh, vedere un intuitività punta del dito o manualmente / rays controller.</td>
         <td>Viene visualizzato un riquadro vengono visualizzate quando la mano si avvicina o handle grabbable.</td>
         <td>Posso sentire sonori e visualizzare animazioni in quadratini di ridimensionamento e il rilascio.</td>

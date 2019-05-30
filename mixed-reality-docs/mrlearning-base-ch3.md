@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, hololens, esercitazione di unity,
-ms.openlocfilehash: 04ed2217c473c5649c1850fcc757d866e23b9b56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 6f05b2cecd388b1b2f13e7e5228bc90091eee3bd
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730899"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270406"
 ---
 # <a name="mr-learning-base-module---dynamic-content-placement-and-solvers"></a>Modulo di Base Learning MR - risolutori e posizionamento del contenuto dinamico
 
@@ -48,7 +48,7 @@ L'obiettivo di questo capitolo è migliorare l'insieme di pulsanti creata in pre
 
 3. Per configurare l'insieme di pulsanti per seguire l'utente, è necessario implementare le modifiche seguenti (vedere anche l'immagine seguente):
 - Nello script Orbital, impostare l'elenco di riepilogo a discesa "tipo di orientamento" a "Solo rotazione". In questo modo, in modo che solo un asse dell'oggetto ruota come indicato di seguito l'utente.
-- Impostare l'offset locale su 0 in tutti gli assi. Impostare l'Offset del mondo su x = 0, y = -0.1 e z = 0,6. Questo blocca lo spostamento dell'oggetto in modo che quando l'utente modifica l'altezza, l'oggetto rimarrà abbia un'altezza fissa dell'ambiente fisico, consentendo comunque seguire l'utente quando l'utente sposta sull'ambiente. Questi valori possono essere modificati per ottenere un intervallo wade dei comportamenti.
+- Impostare l'offset locale su 0 in tutti gli assi. Impostare l'Offset del mondo su x = 0, y = -0.1 e z = 0,6. Questo blocca lo spostamento dell'oggetto in modo che quando l'utente modifica l'altezza, l'oggetto rimarrà abbia un'altezza fissa dell'ambiente fisico, consentendo comunque seguire l'utente quando l'utente sposta sull'ambiente. Questi valori possono essere modificati per ottenere un'ampia gamma di comportamenti.
 - Per un comportamento seguire in base al quale i pulsanti seguono solo la visualizzazione dell'utente dopo che l'utente diventa sufficientemente testa la propria, è possibile selezionare la casella di controllo "Usa angolo esecuzione di un'istruzione per l'offset world" (Nota: Questo titolo potrebbe essere troncato in alcune schermate, come nell'immagine seguente.) Ad esempio, affinché l'oggetto seguire l'utente solo ogni 90 gradi, impostare il numero di passaggi uguale a 4 (contrassegnati da una freccia verde nell'esempio a sinistra). 
 
 ![Lezione 3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)
