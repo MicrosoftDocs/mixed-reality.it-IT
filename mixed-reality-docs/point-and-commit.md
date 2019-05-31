@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mista realtà, l'interazione, progettazione, hololens, indicatori, a questo momento, scegliere ed eseguire il commit
-ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730808"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402376"
 ---
 # <a name="point-and-commit-with-hands"></a>Punto ed eseguire il commit con le mani
 Punto ed eseguire il commit con le mani è un modello di input che consente agli utenti di destinazione, selezionare e manipolare oggetti 3D e contenuti 2D della distanza. Questa tecnica di interazione "molto" è univoca per realtà mista e non gli esseri umani un modo naturale intereact con tutto il mondo reale. Ad esempio, in questo film eroe *X-uomini*, il carattere [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) è in grado di raggiungere e la modifica di un oggetto decisamente la distanza con il suo mani. Ciò non gli esseri umani eseguibili in realtà. In HoloLens (AR) e realtà mista (VR), abbiamo dotare gli utenti con questo power magico scrivendo, il vincolo fisico del mondo reale non solo avere un'esperienza eccellente ai con contenuto holographic ma anche per rendere l'interazione più efficace ed efficiente di rilievo.
@@ -21,7 +21,7 @@ Punto ed eseguire il commit con le mani è un modello di input che consente agli
 
 Modello di input | [HoloLens (dal 1 ° generazione)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Auricolari coinvolgenti](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-Punto ed eseguire il commit (l'interazione manuale distante) | ❌ Non supportato | ✔️ Consigliato | ✔️ Consigliato
+Punto ed eseguire il commit con le mani | ❌ Non supportato | ✔️ Consigliato | ✔️ Consigliato
 
 Punto e commit, noto anche come mani a questo momento, è una delle nuove funzionalità che utilizza il nuovo sistema di rilevamento delle modifiche manuale articolato. Questo modello di input è anche il modello di input primario su immersive auricolari tramite l'uso di controller di movimento.
 

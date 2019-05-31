@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realtà mista, mani libere, estasiati, estasiati targeting, interazione, progettazione
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629015"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402338"
 ---
 # <a name="hands-free"></a>Senza mani
 
@@ -31,13 +31,13 @@ Potrebbero essere alcuni scenari specifici:
 
 ## <a name="hands-free-modalities"></a>Modalità invisibile all'utente
 
-### <a name="voice-commandingvoice-designmd"></a>[L'esecuzione di comandi vocali](voice-design.md)
+### <a name="voice-commandingvoice-designmd"></a>[Esecuzione di comandi vocali](voice-design.md)
 
 Utilizzando la voce di comando e controllo di che un'interfaccia può non solo consentono all'utente di operare in viva voce, ma anche ignorare più passaggi. L'utilizzo di questa modalità può variare da consentire all'utente di nome del pulsante, qualsiasi operazione di lettura a voce alta per attivarlo, come vedere-it-say-it, alla conversazione con un agente che consentono di eseguire attività per l'utente.
 
 
 
-### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head-sguardo e permanenza](gaze-and-dwell.md)
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Puntamento con la testa e attesa](gaze-and-dwell.md)
 
 In alcune situazioni invisibile all'utente, utilizzando la voce non è ideale o persino possibile. Gli ambienti di factory l, sulla privacy o norme social possono essere tutti i vincoli. Head estasiati + permanenza modello consente all'utente di spostarsi tra l'app usando il vettore head in modo da puntare, mentre il tempo di ritardo, o rimanere su un pulsante verrà attivarlo dopo un determinato periodo di tempo (in genere entro 1 secondo o operazione). 
 
@@ -96,5 +96,5 @@ L'utente comprensione...
 
 ## <a name="see-also"></a>Vedere anche
 * [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Manipolazione diretta](direct-manipulation.md)
-* [Puntamento e commit](point-and-commit.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Puntamento e commit con le mani](point-and-commit.md)

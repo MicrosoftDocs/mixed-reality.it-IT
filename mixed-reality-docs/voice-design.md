@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista di Windows, progettazione, l'interazione vocale
-ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039186"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402375"
 ---
 # <a name="voice-commanding"></a>L'esecuzione di comandi vocali
 
@@ -25,7 +25,7 @@ Quando si usano i comandi vocali, sguardo viene in genere utilizzato come mechan
 <tr>
 <th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
 </tr><tr>
-<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
+<td>L'esecuzione di comandi vocali</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ Quando voce viene applicata in modo corretto, l'utente capisca **cosa possono ad
 ![Stati di commenti e suggerimenti vocali per cursori](images/voicefeedbackstates.png)<br>
 *Stati di commenti e suggerimenti vocali per cursori*
 
-## <a name="top-things-users-should-know-about-speech-on-windows-mixed-reality"></a>Prime operazioni che gli utenti devono conoscere per "speech" realtà mista di Windows
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Prime operazioni che gli utenti devono conoscere per "speech" nella realtà mista
 * Pronunciare **"Selezionare"** durante l'assegnazione di un pulsante (è possibile usare questo ovunque fare clic su un pulsante).
 * È possibile dire il **nome dell'etichetta di un pulsante della barra app** in alcune app di eseguire un'azione. Durante la ricerca in un'app, ad esempio, un utente può pronunciare il comando "Remove" per rimuovere l'app da tutto il mondo (Ciò consente di risparmiare tempo evitando il selezionarlo con mano).
 * È possibile avviare Cortana in ascolto affermando **"Ehi Cortana".** È possibile porre suo domande ("Ehi Cortana, l'altezza è la Torre Eiffel"), dille di aprire un'app ("Ehi Cortana, open Netflix") o dille di visualizzare il Menu di avvio ("Ehi Cortana, take me home") e altro ancora.

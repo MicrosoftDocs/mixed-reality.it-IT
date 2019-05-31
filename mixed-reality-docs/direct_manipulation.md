@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettare, mani near, HoloLens
-ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: bb44244a3cb932a56703f84ba129def5ee5f9b67
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974753"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402362"
 ---
 # <a name="direct-manipulation"></a>Manipolazione diretta
 
@@ -25,7 +25,7 @@ Manipolazione diretta è basato su intuitività, vale a dire è facili da usare.
 
 | Modello di input | [HoloLens (dal 1 ° generazione)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Auricolari coinvolgenti](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
-| Manipolazione diretta | ❌ Non supportato | ✔️ Consigliato | Un'alternativa ➕ [punto ed eseguire il commit](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) è consigliato.
+| Manipolazione diretta | ❌ Non supportato | ✔️ Consigliato | ➕ Un'alternativa [punto ed eseguire il commit con le mani](point-and-commit.md) è consigliato.
 
 Manipolazione diretta è un modello di input primario per HoloLens 2 e utilizza il nuovo sistema di rilevamento delle modifiche manuale articolato. Il modello di input è disponibile anche su immersive auricolari tramite l'uso di controller di movimento, ma non è consigliato come mezzo principale per l'interazione di fuori di manipolazione dell'oggetto.  Manipluation diretto non è disponibile nella versione 1 di HoloLens.
 
