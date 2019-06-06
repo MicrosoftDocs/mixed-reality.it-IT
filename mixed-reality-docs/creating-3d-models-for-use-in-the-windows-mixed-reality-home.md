@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Limiti di modellazione 3D, indicazioni, requisiti di asset, creazione di linee guida, utilità di avvio, 3D dell'utilità di avvio, la trama, materiali, complessità, triangoli, mesh, poligoni, polycount, di modellazione
-ms.openlocfilehash: 209a92a8e7070ca23bcb9402d8716f3f91747a96
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598873"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692290"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Creare modelli 3D per l'uso nell'ambiente domestico
 
@@ -29,11 +29,11 @@ Il resto di questo articolo include una panoramica dettagliata di questi requisi
 
 ## <a name="detailed-guidance"></a>Indicazioni dettagliate
 
-## <a name="exporting-models"></a>Esportazione di modelli
+### <a name="exporting-models"></a>Esportazione di modelli
 
 La realtà mista di Windows home prevede che gli asset 3D da recapitare usando il formato di file .glb con immagini incorporate e i dati binari. Glb è la versione binaria del formato di glTF ovvero royalty gratuita standard aperto per il recapito di asset 3D gestito dal gruppo di Khronos. Evolversi glTF come standard per il contenuto 3D interoperativo di settore tra esperienze e le app di Windows verrà così il supporto Microsoft per il formato. Se è stato ancora creato un asset glTF prima di poter trovare una [elenco di utilità di esportazione supportati e i convertitori](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) nella pagina github del gruppo di lavoro glTF.  
 
-## <a name="modeling-guidelines"></a>Linee guida per la modellazione delle minacce
+### <a name="modeling-guidelines"></a>Linee guida per la modellazione delle minacce
 
 Windows prevede che l'asset deve essere generato usando le linee guida di modellazione seguenti per garantire la compatibilità con l'esperienza iniziale di realtà mista. Durante la modellazione nel programma di propria scelta tenere presente le raccomandazioni e le limitazioni seguenti:
 1. L'asse verticale deve essere impostato su "Y".
@@ -57,7 +57,7 @@ La realtà mista di Windows home non supporta i modelli con più di 10.000 trian
 |  LOD 1 |  5,000  |  10,000 | 
 |  LOD 2 |  2,500  |  10,000 | 
 
-### <a name="node-counts-and-submesh-limits"></a>Limiti di numero di nodi e il Sottomesh
+### <a name="node-counts-and-submesh-limits"></a>Il sottomesh limiti e i conteggi di nodo
 La realtà mista di Windows home non supporta i modelli con più di 64 nodi o 32 submeshes per TRAMA. I nodi sono un concetto del [glTF specifica](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) che definiscono gli oggetti nella scena. Submeshes sono definiti nella matrice di [primitive](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) nel mesh nell'oggetto. 
 
 |  Funzionalità |  Descrizione  |  Numero massimo supportato | Documentazione |
@@ -279,6 +279,6 @@ MR Windows non supporta i punti e linee di modalità primitivo.
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Implementare nelle schermate di avvio app 3D (app UWP)](implementing-3d-app-launchers.md)
-* [Implementare nelle schermate di avvio app 3D (app Win32)](implementing-3d-app-launchers-win32.md)
-* [Esplorazione di realtà mista di Windows home](navigating-the-windows-mixed-reality-home.md)
+* [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)
+* [Implementare utilità di avvio per app 3D (app Win32)](implementing-3d-app-launchers-win32.md)
+* [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
