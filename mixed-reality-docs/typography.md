@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, lo stile, del tipo di carattere, tipografia, dell'interfaccia utente, esperienza utente
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692390"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750343"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -67,9 +67,9 @@ Per utilizzare testo scuro, è necessario utilizzare un vivace piatto back-per r
 
 ## <a name="recommended-font-size"></a>Dimensione del carattere consigliato
 
-Come si può immaginare, le dimensioni di tipo che viene usato in un PC o un dispositivo Tablet PC (in genere compresa tra 12: 32 pt) esaminare risulta piuttosto piccole una distanza massima 2 metri. Dipende dalle caratteristiche di ogni tipo di carattere, ma sono in genere quello minimo consigliato visualizzazione angolo e l'altezza dei caratteri per migliorare la leggibilità intorno 0.35°-0.4°/12.21-13.97mm basato sul nostro ricerche su utente. Ciò che è 35 40pt con il fattore di scala illustrato in precedenza. 
+Come si può immaginare, le dimensioni di tipo che viene usato in un PC o un dispositivo Tablet PC (in genere compresa tra 12: 32 pt) esaminare risulta piuttosto piccole una distanza massima 2 metri. Dipende dalle caratteristiche di ogni tipo di carattere, ma sono in genere quello minimo consigliato visualizzazione angolo e l'altezza dei caratteri per migliorare la leggibilità intorno 0.35°-0.4°/12.21-13.97mm basato sul nostro ricerche su utente. Si tratta di 35 40pt con il fattore di scala introdotta in [testo in Unity](text-in-unity.md) pagina. 
 
-Per l'interazione quasi in 0.45m(45cm), angolo di visualizzazione minima leggibile del tipo di carattere e l'altezza sono 0.4 °-0,5 ° / 3.14-3.9 mm. Ciò che è 12 pt 9 con fattore di scala illustrato in precedenza.
+Per l'interazione quasi in 0.45m(45cm), angolo di visualizzazione minima leggibile del tipo di carattere e l'altezza sono 0.4 °-0,5 ° / 3.14-3.9 mm. Si tratta di 9 a 12 pt con il fattore di scala introdotta in [testo in Unity](text-in-unity.md).
 
 ![Più vicino e lontano intervallo interazione](images/typography-distance-1000px.jpg)
 *intervallo contenuto in vicino e lontano interazione*

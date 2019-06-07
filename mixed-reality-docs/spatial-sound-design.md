@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, spaziale audio, progettazione, lo stile
-ms.openlocfilehash: c8f5268faf5eef779401c046947c3137d177cb89
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597612"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750308"
 ---
 # <a name="spatial-sound-design"></a>Progettazione spaziale
 
@@ -26,12 +26,23 @@ Se hai mai partecipato [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(ga
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Audio spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Progettazione spaziale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
+
 
 ## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Esegue quattro suono spaziali aspetti fondamentali per lo sviluppo della realtà mista
 
@@ -96,5 +107,5 @@ Quando si utilizza segnali acustici per dirigere l'attenzione dell'utente oltre 
 Nella realtà mista, per la migliore esperienza utente, 3D audio deve essere ottenuto tramite spaziale audio anziché legacy tecnologie audio 3D. In generale, il miglioramento spatialization vale la pena piccole della CPU su standard 3D audio. Audio 3D standard è utilizzabile per priorità bassa suoni, suoni spatialized, ma non necessariamente collegati a un oggetto fisico o virtuale e gli oggetti che l'utente mai necessario individuare per interagire con l'app.
 
 ## <a name="see-also"></a>Vedere anche
-* [Spaziale audio](spatial-sound.md)
+* [Audio spaziale](spatial-sound.md)
 * [Mapping spaziale](spatial-mapping.md)
