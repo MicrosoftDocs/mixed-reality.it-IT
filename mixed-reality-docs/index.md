@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
-ms.openlocfilehash: ed319e2abf61caed5f36b425a4cc609ca9501dec
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813752"
 ---
 # <a name="mixed-reality-documentation"></a>Documentazione sulla realtà mista
 
@@ -171,10 +171,10 @@ Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il 
 <td>Anteprima delle nuove funzionalità in MRTK per HoloLens 2</td><td>Aprile 2019</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>Documentazione su MRTK</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-getting-started>Introduzione a MRTK v2</a></td>
 </tr>
 <tr>
-<td>Linee guida per la progettazione e lo sviluppo per HoloLens 2</td><td>Aprile 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Installare gli strumenti</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>Emulatore HoloLens 2</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Linee guida per la progettazione di interazioni istintive</a>
+<td>Linee guida per la progettazione e lo sviluppo per HoloLens 2</td><td>Aprile 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Installare gli strumenti</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>Emulatore HoloLens 2</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Linee guida per la progettazione di interazioni istintive</a></td>
 </tr>
 <tr>
-  <td>Altre informazioni su Unreal</td><td>Maggio 2019</td><td></td>
+  <td>Altre informazioni su Unreal</td><td>Maggio 2019</td><td> <ul><li><a href=https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access>Accesso in anteprima a Unreal Engine 4</a></td>
 </tr>
 </table>
 
