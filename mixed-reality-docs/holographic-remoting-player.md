@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, servizi remoti .NET Remoting Holographic
-ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: b8354295f9752e73cc9b34c1769254e49808b63f
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270308"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813714"
 ---
 # <a name="holographic-remoting-player"></a>.NET Remoting holographic Player
 
@@ -52,5 +52,5 @@ Quando è attiva la schermata principale, è possibile dire **"disabilitare la d
 * È consigliabile che Connetti il tuo PC alla rete tramite ethernet per ridurre il numero di hop Wireless.
 
 ## <a name="see-also"></a>Vedere anche
-* [Condizioni di licenza software per Holographic Remoting](microsoft-holographic-remoting-software-license-terms.md)
+* [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Informativa sulla Privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

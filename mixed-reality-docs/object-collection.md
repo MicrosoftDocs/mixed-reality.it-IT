@@ -6,19 +6,19 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, controlli, progettazione
-ms.openlocfilehash: 88ab0359d5083d43d5d6312ef1185f67ca0caa7d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7c3bbd82ec909b5a2e3c81f122366be564934f4d
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605010"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813876"
 ---
 # <a name="object-collection"></a>Raccolta di oggetti
 
-Raccolta di oggetti è un controllo layout che consente di layout di una matrice di oggetti in una forma predefinita tridimensionale. Supporta quattro diversi stili di superficie - **piano, cilindro, sphere** e **dispersione**. È possibile regolare il raggio e le dimensioni degli oggetti e lo spazio tra di essi. Raccolta di oggetti supporta qualsiasi oggetto di Unity - sia 2D e 3D. Nel  **[Toolkit di realtà mista](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ObjectCollection.md)**, sono stati creati script di Unity e [scena esempio](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Scenes/ObjectCollectionExample.unity) che consentirà di creare una raccolta di oggetti.
+Raccolta di oggetti è un controllo layout che consente di layout di una matrice di oggetti in una forma predefinita tridimensionale. Supporta diversi stili di superficie - **piano, cilindro, sphere** e **radiale**. È possibile regolare il raggio e le dimensioni degli oggetti e lo spazio tra di essi. Raccolta di oggetti supporta qualsiasi oggetto di Unity - sia 2D e 3D. Nel  **[Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , abbiamo creato uno script di Unity e gli esempi che consentono di creano una raccolta di oggetti.
 
 ![Raccolta di oggetti utilizzato nella tabella periodico dell'app elementi](images/640px-objectcollection-hero-640px.jpg)<br>
-*Raccolta di oggetti utilizzato nella tabella periodico dell'app di esempio di elementi*
+*Esempi di utilizzo di raccolta di oggetti*
 
 ## <a name="object-collection-examples"></a>Esempi di raccolta di oggetti
 
@@ -41,8 +41,9 @@ Raccolta di oggetti è un controllo layout che consente di layout di una matrice
 ![Un esempio di immagini 2D con raccolta di oggetti](images/640px-layout-3dobjects-3.jpg)
 
 ![Un esempio di immagini 2D con raccolta di oggetti](images/640px-layout-2dimages.jpg)<br>
-*Esempi di immagini 2D con raccolta di oggetti*
+*Esempi di utilizzo dell'insieme di oggetti con immagini 2D*
 
 ## <a name="see-also"></a>Vedere anche
-* [Gli script e prefabs per la raccolta di oggetti nel Toolkit di realtà mista su GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
-* [Oggetto si](interactable-object.md)
+* [Gli script e prefabs per la raccolta di oggetti nel Toolkit di realtà mista su GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+* [Oggetto che supporta interazioni](interactable-object.md)
+* [Rettangolo di selezione](app-bar-and-bounding-box.md)
