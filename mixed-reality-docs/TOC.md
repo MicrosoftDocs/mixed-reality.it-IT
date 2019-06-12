@@ -119,7 +119,7 @@
 ### [Oggetto che supporta interazioni](interactable-object.md)
 ### [Raccolta di oggetti](object-collection.md)
 ### [Visualizzazione dello stato](progress.md)
-### [Barra dell'app e rettangolo di selezione](app-bar-and-bounding-box.md)
+### [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 ## Progettazione per lo spazio iniziale di realtà mista
 ### [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)
 ### [Creare modelli 3D per l'uso nello spazio iniziale](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
@@ -136,7 +136,7 @@
 ### [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
-### Attività iniziali
+### Guida introduttiva
 #### [Accelerare lo sviluppo con Mixed Reality Toolkit v2](mrtk-getting-started.md)
 #### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
 #### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
@@ -168,7 +168,7 @@
 ### [Accesso in anteprima a Unreal per HoloLens 2](https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access)
 ## DirectX
 ### [Panoramica dello sviluppo DirectX](directx-development-overview.md)
-### Attività iniziali
+### Guida introduttiva
 #### [Creazione di un progetto DirectX olografico](creating-a-holographic-directx-project.md)
 #### [Ottenere un HolographicSpace](getting-a-holographicspace.md)
 #### [Rendering in DirectX](rendering-in-directx.md)
