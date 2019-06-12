@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974882"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829768"
 ---
 # <a name="gestures"></a>Movimenti
 
@@ -24,14 +24,30 @@ Movimenti della mano consentono agli utenti intraprendere l'azione nella realtà
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Movimenti</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
-</tr>
-<tr>
-<td> Articolati e mani</td><td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Movimenti</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+     <tr>
+        <td>Articolati e mani</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 > [!NOTE]

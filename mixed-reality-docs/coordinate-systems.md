@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate spaziale, solo l'orientamento, seduti a scalabilità, la condizione di scalabilità, chat room-scalabilità, mondo della scala, viene posizionata a 360 gradi, e la condizione, chat room, world, scalabilità, posizione, orientamento, stazionaria, collegati, fase, ancoraggio, spaziale ancoraggio, bloccato al mondo, blocco a livello mondiale, bloccato corpo, corpo del blocco, limiti, persistenza, condivisione, rilevamento di perdite, cloud ancoraggio spaziale
-ms.openlocfilehash: fc76a30895a85ab5ca8396540a82965cc35c494e
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605149"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829866"
 ---
 # <a name="coordinate-systems"></a>Sistemi di coordinate
 
@@ -24,19 +24,48 @@ Loro core sul posto di App di realtà mista [vntana](hologram.md) nel tuo mondo 
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stationary-frame-of-reference">Fotogramma di riferimento fisso</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#attached-frame-of-reference">Collegati fotogramma di riferimento</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stage-frame-of-reference">Fase fotogramma di riferimento</a></td><td style="text-align: center;"> Non ancora supportato</td><td style="text-align: center;"> Non ancora supportato</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#spatial-anchors">Ancoraggi spaziali</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">Mapping spaziale</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="40%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="20%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Fotogramma di riferimento fisso</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Collegati fotogramma di riferimento</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Fase fotogramma di riferimento</a></td>
+        <td>Non ancora supportato</td>
+        <td>Non ancora supportato</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#spatial-anchors">Ancoraggi nello spazio</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="spatial-mapping.md">Mapping spaziale</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Scale di esperienza di realtà mista
@@ -196,7 +225,7 @@ In alcuni casi, un indirizzo di base o altri spazi possono avere due aree identi
 * [Presentazione di GDC 2017 on spatial coordinate systems e holographic rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemi di coordinate in Unity](coordinate-systems-in-unity.md)
 * [Sistemi di coordinate in DirectX](coordinate-systems-in-directx.md)
-* [Ancoraggi spaziali](spatial-anchors.md)
-* [Condividere esperienze in realtà mista](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Anchor spaziali</a>
+* [Ancoraggi nello spazio](spatial-anchors.md)
+* [Esperienze condivise nella realtà mista](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>
 * [Case study: ricerca sui difetti nella realtà](case-study-looking-through-holes-in-your-reality.md)

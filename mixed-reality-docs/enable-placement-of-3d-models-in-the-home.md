@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, model, sul posto nella home page, sul posto, mondo, modellazione, realtà mista home, web, app
-ms.openlocfilehash: 3a50353aae8e03c3ebb3ee9ec2f642f21836e925
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 954086b79e3614e1b75ceb7560f9fc87435530fa
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605020"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829730"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>La posizione di modelli 3D in realtà mista home
 
@@ -25,11 +25,21 @@ Ad esempio, se si sta sviluppando un'applicazione che espone un catalogo di 3D a
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td>Aggiungere il protocollo di modello</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Aggiungere il protocollo di modello</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="overview"></a>Panoramica
@@ -84,4 +94,4 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 ## <a name="see-also"></a>Vedere anche
 
 * [Creazione di modelli 3D per l'uso di casa di realtà mista di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Esplorazione di realtà mista di Windows home](navigating-the-windows-mixed-reality-home.md)
+* [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)

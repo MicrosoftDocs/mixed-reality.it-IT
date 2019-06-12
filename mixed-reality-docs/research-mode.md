@@ -6,12 +6,12 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modalità di ricerca, convalida incrociata, rs4, visione artificiale, ricerca, HoloLens
-ms.openlocfilehash: 5feda021bd6a1a90fd98c751b1cea768eed980af
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597512"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829929"
 ---
 # <a name="hololens-research-mode"></a>Modalità HoloLens Research
 
@@ -29,11 +29,21 @@ Modalità di ricerca è una nuova funzionalità di HoloLens che fornisce accesso
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Modalità di ricerca</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Modalità di ricerca</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-using-research-mode"></a>Prima di usare la modalità di ricerca
@@ -72,4 +82,4 @@ Vedere le [tracker problema](https://github.com/Microsoft/HololensForCV/issues) 
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repository HoloLensForCV GitHub](https://github.com/Microsoft/HoloLensForCV)
-* [Utilizzando il Windows Device Portal](using-the-windows-device-portal.md)
+* [Avviare il Portale di dispositivi di Windows](using-the-windows-device-portal.md)

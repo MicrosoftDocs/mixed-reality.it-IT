@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Realtà mista di Windows, realtà mista, realtà virtuale, VR, MR, Home, ambienti personalizzati, posizioni, casa cliff, skyloft, utente, creazione
-ms.openlocfilehash: ef140efd88aa0d3329ae2aa7e5b202c3bfe77c0a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597522"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829646"
 ---
 # <a name="add-custom-home-environments"></a>Aggiungere gli ambienti home personalizzati
 
@@ -25,11 +25,21 @@ Quando si usa un ambiente personalizzato, si noterà che teleporting, l'interazi
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Ambienti home personalizzati</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Ambienti home personalizzati</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="trying-a-sample-environment"></a>Il tentativo di un ambiente di esempio
@@ -91,7 +101,7 @@ Flag|Valori consigliati|Descrizione
 -max-texture-size|1024 o 2048| Modificare questa opzione per migliorare la qualità delle trame, valore predefinito è 512 x 512. Si noti che un valore maggiore influirà in modo significativo le dimensioni del file dell'ambiente bene tenere il limite di 256 mb presente
 -min-version|1803|Gli ambienti personalizzati sono supportati solo nelle versioni di windows > = 1803. Questo flag rimuoverà le trame per le versioni precedenti e ridurre le dimensioni del file dell'asset finale
 
-Ad esempio: 
+Ad esempio:
 
 ```cmd
 WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1803

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mapping di realtà mista di Windows, progettazione, spaziali, HoloLens, surface ricostruzione, mesh
-ms.openlocfilehash: d2ddcbf9458769a60cd3ed2871c5f3405c75f10c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597883"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829964"
 ---
 # <a name="spatial-mapping-design"></a>Progettazione di mapping spaziale
 
@@ -20,11 +20,21 @@ Uso di mapping spaziale all'interno di HoloLens richiede un'attenta considerazio
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Mapping spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Progettazione di mapping spaziale</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="why-is-spatial-mapping-important"></a>Perché è importante mapping spaziale?
@@ -196,6 +206,6 @@ Di seguito sono riportati alcuni esempi di diversi tipi di rete mesh di elaboraz
 * È consigliabile eseguire il test con utenti reali (e idealmente non coached), perché non possono utilizzare il HoloLens o l'applicazione in esattamente la stessa modalità utilizzata. In realtà, potrebbe sembrare strano, è il comportamento delle persone come non coerente, possono essere conoscenze e presupposti.
 
 ## <a name="see-also"></a>Vedere anche
-* [Visualizzazione analisi chat room](room-scan-visualization.md)
-* [Progettazione spaziale](spatial-sound-design.md)
+* [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
+* [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Persistenza in Unity](persistence-in-unity.md)

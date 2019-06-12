@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: suono spaziale, audio di tipo surround, 3d audio, 3d audio, spaziale audio
-ms.openlocfilehash: ccb236a8b53e757ba632a1c7c6cb2d4f07735910
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600833"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829926"
 ---
 # <a name="spatial-sound"></a>Audio spaziale
 
@@ -26,13 +26,24 @@ Sebbene vntana può apparire solo in modo visivo in cui fa riferimento sguardo d
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-
-<td> Audio spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie)</td>
-
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Audio spaziale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con le cuffie)</td>
+    </tr>
 </table>
 
 ## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulazione di percorso percepito e distanza di suoni
@@ -62,4 +73,4 @@ Motore audio spaziali degli Windows supporta solo una frequenza di campionamento
 * [MR Spatial 220](holograms-220.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)
 * [Audio spaziale in DirectX](spatial-sound-in-directx.md)
-* [Progettazione spaziale](spatial-sound-design.md)
+* [Progettazione dell'audio spaziale](spatial-sound-design.md)

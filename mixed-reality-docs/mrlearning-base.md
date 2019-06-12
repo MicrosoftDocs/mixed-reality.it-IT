@@ -6,23 +6,36 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, hololens, esercitazione di unity,
-ms.openlocfilehash: 80b9b8d7cd3659c9cc20824114cdedc05eae8a85
-ms.sourcegitcommit: 45a0a7d5ce45440b251293a0380ad5b722dbbad3
+ms.openlocfilehash: 2fe07efe87086e9a8c06e1953fcef8544b03c80a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64933647"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829881"
 ---
 # <a name="mr-learning-base-module-overview--objectives"></a>Obiettivi di & Base Learning MR modulo Panoramica
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th><th style="width:150px"> <a href="https://www.microsoft.com/en-us/hololens/hardware">HoloLens 2</a></th>
-</tr><tr>
-<td></td><td style="text-align: center;"> </td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Corso</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><a href="https://www.microsoft.com/en-us/hololens/hardware"><strong>HoloLens 2</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-you-start"></a>Prima di iniziare

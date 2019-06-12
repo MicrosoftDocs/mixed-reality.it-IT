@@ -1,17 +1,17 @@
 ---
-title: Rettangolo di selezione e barra dell'App
+title: Finestra di contenimento e barra dell'App
 description: Barra dell'App è un menu a livello di oggetto che contiene una serie di pulsanti che viene visualizzato sul bordo inferiore dei limiti di ologramma.
 author: radicalad
 ms.author: adlinv
-ms.date: 03/21/2018
+ms.date: 06/07/2019
 ms.topic: article
 keywords: Realtà mista di Windows, App a barre, rettangolo di selezione
-ms.openlocfilehash: ab472e1c988e6bdfb0a69d90e90280082b3db759
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813867"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829680"
 ---
 # <a name="bounding-box-and-app-bar"></a>Finestra di contenimento e barra dell'App
 ![Rettangolo di selezione è l'interfaccia standard per la manipolazione dell'oggetto nella realtà mista.](images/640px-boundingbox-hero.jpg)<br>

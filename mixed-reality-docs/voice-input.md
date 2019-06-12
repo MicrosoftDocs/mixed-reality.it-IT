@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: ggv, voce, cortana, il riconoscimento vocale, di input
-ms.openlocfilehash: 7fb5618c13ff1ed446241f744b598cfe2484ea45
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604740"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829956"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -26,11 +26,24 @@ Input vocale è una tecnologia di [stesso motore](https://msdn.microsoft.com/lib
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Input vocale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con microfono)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Input vocale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con microfono)</td>
+    </tr>
 </table>
 
 ## <a name="the-select-command"></a>Il comando "select"
@@ -114,4 +127,4 @@ Per la versione di Windows misti realtà Developer Edition 2017, la logica di ge
 ## <a name="see-also"></a>Vedere anche
 * [Input vocale in DirectX](voice-input-in-directx.md)
 * [Input vocale in Unity](voice-input-in-unity.md)
-* [Input di MR 212: Voice](holograms-212.md)
+* [Input MR 212: Voce](holograms-212.md)

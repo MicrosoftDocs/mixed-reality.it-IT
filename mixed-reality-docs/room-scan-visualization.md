@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, i modelli dell'App, la progettazione, HoloLens, analisi di chat, spaziali mapping, surface, ricostruzione mesh
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604649"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829907"
 ---
 # <a name="room-scan-visualization"></a>Visualizzazione analisi chat room
 
@@ -27,11 +27,21 @@ Si noti che in tutti questi casi i dati effettivi raccolti durante l'esplorazion
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Visualizzazione analisi chat room</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Visualizzazione analisi chat room</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -83,6 +93,6 @@ Alcune applicazioni possono basarsi via prosegue l'analisi per aggiornare i dati
 Un buon caso per questo metodo è uno in cui è previsti vntana per interagire con lo spostamento di oggetti, ad esempio, un'automobile holographic unità sul pavimento potrebbe voler correttamente si incorra nello sportello di una se è aperto o chiuso.
 
 ## <a name="see-also"></a>Vedere anche
-* [Progettazione di mapping spaziale](spatial-mapping-design.md)
+* [Progettazione del mapping spaziale](spatial-mapping-design.md)
 * [Sistemi di coordinate](coordinate-systems.md)
-* [Progettazione spaziale](spatial-sound-design.md)
+* [Progettazione dell'audio spaziale](spatial-sound-design.md)

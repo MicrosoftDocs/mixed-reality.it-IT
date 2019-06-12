@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettazione
-ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974921"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829845"
 ---
 # <a name="gaze-and-dwell"></a>Sguardo e permanenza
 Esistono molti modi diversi per verificare un _commit_ quale la combinazione di sguardo con _vocali_ oppure _mano i movimenti_.
@@ -40,13 +40,30 @@ Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Sguardo targeting</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️ </td>
-</tr><tr>
-<td> Destinazione rossi</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+    </tr>
+     <tr>
+        <td>Sguardo targeting</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+     <tr>
+        <td>Destinazione rossi</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 > [!NOTE]
