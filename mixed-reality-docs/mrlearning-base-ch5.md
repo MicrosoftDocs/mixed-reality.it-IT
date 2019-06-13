@@ -1,206 +1,206 @@
 ---
-title: Modulo MR Learning Base - avanzate Input
-description: Completare questo corso di informazioni su come implementare il riconoscimento di volti di Azure all'interno di un'applicazione di realtà mista.
+title: Modulo di apprendimento di base sulla realtà mista - Input avanzato
+description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: realtà mista, hololens, esercitazione di unity,
+keywords: realtà mista, unity, esercitazione, hololens
 ms.openlocfilehash: 32141aafd43c5d729919673509c93bb2014edd37
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730928"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719892"
 ---
-# <a name="mr-learning-base-module---advanced-input"></a>Modulo MR Learning Base - avanzate Input
+# <a name="mr-learning-base-module---advanced-input"></a>Modulo di apprendimento di base sulla realtà mista - Input avanzato
 
-In questa lezione, esamineremo varie opzioni avanzate di input per il 2 HoloLens, incluso l'uso di comandi vocali, panoramica movimento e sotto controllo di rilevamento. 
+In questa lezione esamineremo varie opzioni di input avanzate per HoloLens 2, come l'uso di comandi vocali, il movimento di panoramica e il tracciamento oculare. 
 
 ## <a name="objectives"></a>Obiettivi
 
-- Informazioni su come attivare eventi utilizzando le parole chiave e i comandi vocali
-- Usare le mani rilevate per fare una panoramica di trame e oggetti 3D
-- Sfruttare l'occhio del 2 HoloLens funzionalità per selezionare gli oggetti di rilevamento
+- Apprendere come attivare gli eventi usando parole chiave e comandi vocali
+- Usare le mani tracciate per fare una panoramica di trame e oggetti 3D
+- Sfruttare le funzionalità di tracciamento oculare di HoloLens 2 per selezionare gli oggetti
 
 ## <a name="instructions"></a>Istruzioni
 
-### <a name="enabling-voice-commands"></a>Abilitare i comandi vocali
+### <a name="enabling-voice-commands"></a>Abilitazione dei comandi vocali
 
-In questa sezione, è necessario implementare due comandi vocali. Innanzitutto, la possibilità di attivare o disattivare il pannello di diagnostica di frequenza fotogrammi specificando "Attiva/Disattiva diagnostica". Secondo, la possibilità di riprodurre un suono con un comando vocale. Verranno innanzitutto analizzati i profili di MRTK e impostazioni responsabile per la configurazione di comandi vocali. 
+In questa sezione implementeremo due comandi vocali. Il primo consente di attivare o disattivare il pannello di diagnostica della frequenza dei fotogrammi pronunciando "toggle diagnostics". Il secondo consente di riprodurre un suono. Prima di tutto esamineremo i profili e le impostazioni di MRTK che sono responsabili della configurazione di comandi vocali. 
 
-1. Nella gerarchia della scena di Base selezionare "MixedRealityToolkit." Nel Pannello di controllo, scorrere verso il basso le impostazioni di sistema di input. Fare doppio clic per aprire il profilo di sistema di input. Clonare il profilo di sistema di input per renderlo modificabile, come illustrato in precedenza [lezione 1](mrlearning-base-ch1.md) 
+1. Nella gerarchia della scena di base seleziona "MixedRealityToolkit". Nel pannello di controllo scorri verso il basso fino alle impostazioni del sistema di input. Fai doppio clic per aprire il profilo del sistema di input. Clona il profilo del sistema di input per renderlo modificabile, come illustrato in precedenza nella [lezione 1](mrlearning-base-ch1.md) 
 
-Nel profilo di sistema di input, si noterà un'ampia gamma di impostazioni. Per i comandi vocali, andare in cui è visualizzato, "Impostazioni di comando di riconoscimento vocale". 
+Nel profilo del sistema di input è presente un'ampia gamma di impostazioni. Per i comandi vocali, scorri verso il basso fino a "Speech Command Settings" (Impostazioni comandi vocali). 
 
-![Lesson5 capitolo 1 Step2im](images/Lesson5_Chapter1_step2im.PNG)
+![Immagine lezione 5 capitolo 1 passaggio 2](images/Lesson5_Chapter1_step2im.PNG)
 
-2. Clonare il profilo di comandi vocali per renderlo modificabile, come illustrato in precedenza [lezione 1](mrlearning-base-ch1.md). Fare doppio clic sul profilo del comando vocale, in cui si noterà una gamma di impostazioni. Per una descrizione completa su queste impostazioni, vedere la [documentazione su riconoscimento vocale MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html>). 
+2. Clona il profilo dei comandi vocali per renderlo modificabile, come illustrato in precedenza nella [lezione 1](mrlearning-base-ch1.md). Fai doppio clic sul profilo dei comandi vocali, in cui noterai un'ampia gamma di impostazioni. Per una descrizione completa su queste impostazioni, vedi la [documentazione sui comandi vocali di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html>). 
 
->Nota: Per impostazione predefinita, il comportamento generale è l'avvio automatico. Che può essere modificato in manuale-inizio se lo si desidera, ma per questo esempio si userà per mantenerla in avvio automatico. Il MRTK include diversi comandi vocali predefiniti (ad esempio menu, attiva/disattiva diagnostica e profiler attiva/disattiva). Verrà usata la parola chiave "Attiva/Disattiva diagnostica" per attivare e disattivare il contatore di frequenza dei fotogrammi di diagnostica. Verrà inoltre aggiunto un nuovo comando vocale nei passaggi seguenti.
+>Nota: come comportamento generale predefinito è impostato l'avvio automatico. Puoi modificare questo comportamento in avvio manuale, ma ai fini di questo esempio manterremo l'impostazione di avvio automatico. In MRTK sono inclusi diversi comandi vocali predefiniti, come Menu, Toggle Diagnostics (Attiva/Disattiva diagnostica) e Toggle Profiler (Attiva/Disattiva profiler). Useremo la parola chiave "toggle diagnostics" per abilitare e disabilitare il contatore della frequenza dei fotogrammi per la diagnostica. Aggiungeremo inoltre un nuovo comando vocale nei passaggi seguenti.
 >
-> ![Lesson5 capitolo 1 Noteim](images/Lesson5_chapter1_noteim.PNG)
+> ![Immagine nota lezione 5 capitolo 1](images/Lesson5_chapter1_noteim.PNG)
 
-3. Aggiungere un nuovo comando vocali. Per aggiungere un nuovo comando vocale, fare clic sul pulsante "+ Aggiungi un nuovo comando speech" e si noterà una nuova riga verso il basso visualizzato sotto l'elenco di comandi vocali esistenti. Digitare il comando della voce da usare. In questo esempio musicample si intende usare il comando "Riproduci musica".
+3. Aggiungi un nuovo comando vocale. Per aggiungere un nuovo comando vocale, fai clic sul pulsante "+ Add a New Speech Command" (Aggiungi un nuovo comando vocale). Noterai una nuova riga sotto l'elenco dei comandi vocali esistenti. Digita il comando vocale che vuoi usare. In questo esempio musicale useremo il comando "Play Music" (Riproduci musica).
 
->Suggerimento: È anche possibile impostare un codice per i comandi vocali. In questo modo per i comandi vocali per attivare su preme un tasto della tastiera.   
+>Suggerimento: poi anche impostare un valore di keycode per i comandi vocali. In questo modo, i comandi vocali vengono attivati in seguito alla pressione di un tasto sulla tastiera.   
 
-4. Aggiungere la possibilità di rispondere a comandi vocali. Selezionare un oggetto qualsiasi nella gerarchia di scena base che non dispone di qualsiasi altro script di input collegato a esso (ad esempio, nessun gestore manipulation.) Nel Pannello di controllo, fare clic su "Aggiungi componente". Digitare "gestore input vocale." Selezionarla.
-   ![Lesson5 capitolo 1 Step4im](images/Lesson5_chapter1_step4im.PNG)
-
-   
-
-Per impostazione predefinita, si visualizzeranno le caselle di 2 controllo, uno è la casella di controllo "non è richiesto lo stato attivo". Ciò significa, purché facciano riferimento all'oggetto con un raggio sguardo, (visiva, head sguardo, controller sguardo o mano sguardo) verrà attivato il comando vocali. Deselezionare questa casella di controllo per fare in modo che l'utente dispone esaminare l'oggetto da usare i comandi vocali.
-
-5. Aggiungere la possibilità di rispondere a un comando vocali. A tale scopo, selezionare la parola chiave per rispondere a fare clic sul pulsante "+" è il gestore di input vocale.
-
-   > Nota: Queste parole chiave vengono popolate in base al profilo che è stato modificato nel passaggio precedente.
-
-![Lesson5 capitolo 1 Step5im](images/Lesson5_chapter1_step5im.PNG)
-
-6. Accanto a "Parola chiave" verrà visualizzato un menu a discesa. Selezionare "Attiva/Disattiva diagnostica". In questo modo, in modo che ogni volta che l'utente indicato la frase "Attiva/Disattiva diagnostica" attiverà un'azione. Si noti che potrebbe essere necessario espandere "elemento 0" premere la freccia accanto a esso.
-
-![Lesson5 capitolo 1 Step6im](images/Lesson5_chapter1_step6im.PNG)
-
-7. Aggiungere lo "diagnostica controllo script della demo" per attivare la diagnostica di contatore frequenza dei fotogrammi e disattivare. A tale scopo, premere il pulsante "Aggiungi componente" e cercare "script di controllo di diagnostica demo", quindi aggiungerlo di nuovo dal menu di scelta. Questo script può essere aggiunto a qualsiasi oggetto, ma per semplicità, si aggiungerà lo allo stesso oggetto come il gestore di input vocale. 
-
-   > Nota: questo script è solo incluso con questi moduli e non è incluso con la MRTK originale.
-
-![Lesson5 capitolo 1 Step7im](images/Lesson5_chapter1_step7im.PNG)
-
-8. Aggiungere una nuova risposta nel gestore di Input vocale. Scegliere il pulsante "+" sotto in cui verrà visualizzato il numero di "risposta ()" (contrassegnati da una freccia verde nella figura precedente).
-
-![Lesson5 capitolo 1 Step7im](images/Lesson5_chapter1_step8.PNG)
-
-9. Trascinare l'oggetto con lo script di controlli di diagnostica Demo per la nuova risposta che appena creato nel passaggio 8.
-    ![Lesson5 capitolo 1 Step9im](images/Lesson5_chapter1_step9im.PNG)
-
-10. A questo punto selezionare l'elenco a discesa "Nessuna funzione", selezionare i controlli di diagnostica demo e quindi "su Attiva/Disattiva diagnostica ()". Questa funzione consente di attivare la diagnostica e off.  ![Lesson5 capitolo 1 Step10im](images/Lesson5_chapter1_step10im.PNG)
-    
-> Si noti che prima della compilazione per il dispositivo è necessario abilitare le impostazioni di mic. A scopo quindi fare clic sul file, passare a impostazioni, da qui, le impostazioni del giocatore, compilazione e verificare che la funzionalità di microfono è impostata.
-
-Successivamente, verrà aggiunta la possibilità di riprodurre un file audio da comandi vocali utilizzando l'oggetto "ottaidrato". Si ricorderà da [lezione 4](mrlearning-base-ch4.md), è stata aggiunta la possibilità di riprodurre clip audio da toccare l'oggetto ottaidrato. Per i comandi vocali musica verrà sfruttato questa stessa origine audio.
-
-11. Selezionare l'oggetto ottaidrato nella gerarchia della scena di base.
-
-12. Aggiungere un altro gestore input vocale (ripetere i passaggi 4 e 5), ma con l'oggetto ottaidrato. 
-
-13. Anziché aggiungere il comando vocale "Attiva/Disattiva diagnostica" del passaggio 6, aggiungere il comando vocale "Riproduci musica", come illustrato nell'immagine seguente.
-    
-     ![Lesson5 capitolo 1 Step13im](images/Lesson5_chapter1_step13im.PNG)
-    
-    
-    
-14. Come con i passaggi 8 e 9, aggiungere una nuova risposta e trascinare l'ottaidrato lo slot vuoto nella risposta.
-
-15. Selezionare il menu a discesa con la dicitura "Nessuna funzione," selezionare "origine Audio", quindi selezionare "PlayOneShot (AudioClip)."
-
-![Lesson5 capitolo 1 Step15im](images/Lesson5_chapter1_step15im.PNG)
-
-16. Per il clip audio, in questo esempio si userà per usare la stessa clip audio da [lezione 4](mrlearning-base-ch4.md). Passare al pannello del progetto, cercare "MRTK_Gem" clip audio e trascinarlo nello slot di origine audio, come illustrato nell'immagine seguente. A questo punto l'applicazione dovrebbe essere in grado di rispondere ai comandi vocali "Attiva/Disattiva diagnostica" per attivare o disattivare il pannello di contatore frequenza fotogrammi e "Riproduci musica" per riprodurre il brano MRTK_Gem.
-     ![Lesson5 capitolo 1 Step16im](images/Lesson5_chapter1_step16im.PNG)
-
-
-### <a name="the-pan-gesture"></a>Il movimento di zoom 
-
-In questo capitolo, si apprenderà come usare il movimento di zoom. È utile per lo scorrimento (uso del dito o manualmente per scorrere il contenuto). È anche possibile usare il movimento di zoom per ruotare gli oggetti, per scorrere una raccolta di oggetti 3D, o persino scorrere un 2D dell'interfaccia utente. Microsoft learning come usare il movimento di zoom per alterare una trama. Verrà anche illustrato come spostare una raccolta di oggetti 3D.
-
-1. Creare un quadrato. Nella gerarchia scena base, fare clic destro, selezionare "3D Object", quindi "Quad."
-
-![Lesson5 Chapter2 Step2im](images/Lesson5_chapter2_step2im.PNG)
-
-2. Riposizionare il quad come appropriato. Per questo esempio, impostiamo la x = 0, y = 0 e il valore z Version=1.5 dalla camera per una posizione comoda da 2 HoloLens.
-
-   > Nota: Se i blocchi quad (è per infront di) tutti i contenuti dalle lezioni precedenti, assicurarsi di spostare in modo che non blocca gli altri oggetti.
-
-3. Applicare un materiale al quad. Questo materiale sarà il materiale che è sarà lo scorrimento di con il movimento di zoom. 
-
-![Lesson5 Chapter2 Step3im](images/Lesson5_chapter2_step3im.PNG)
-
-4. Nel Pannello di progetti, digitare nella casella di ricerca "pan contenuto". Trascinare questo materiale a quad nella scena. 
-
-> Nota: Il materiale "Far scorrere il contenuto" non è incluso nel MRTK, ma è una risorsa nel pacchetto di asset dal modulo, come importato nelle lezioni precedenti. 
-
-> Nota: Quando si aggiunge il contenuto di zoom, potrebbero essere estesa. È possibile risolvere il problema modificando i valori x, y e z i valori delle dimensioni dei / quad fino a quando non si è soddisfatti con l'aspetto.
-
-Per usare il movimento di zoom, è necessario un collider sull'oggetto. È possibile riscontrare che il quad esiste già un collider mesh. Tuttavia, il collider mesh non è ideale, perché è estremamente ridotte e difficili da selezionare. È consigliabile sostituire l'oggetto collider mesh con un collider casella.
-
-5. Fare clic con il pulsante destro l'oggetto collider mesh che si trova nel quad (nel Pannello di controllo), quindi rimuoverlo facendo clic su "Rimuovi componente". 
-   ![Lesson5 Chapter2 Step5im](images/Lesson5_chapter2_step5im.PNG)
-
-6. Ora aggiungere l'oggetto collider finestra facendo clic su "Aggiungi componente" e la ricerca di "casella collider". Il valore predefinito aggiunto collider finestra è ancora troppo magri, quindi fare clic sul pulsante "Modifica collider" per la modifica. Quando viene premuto, è possibile regolare le dimensioni usando x, y e z valori o gli elementi nell'editor di scena. In questo esempio si vuole estendere un po' oggetto collider casella dietro il quad. Nell'editor di scena, trascinare l'oggetto collider casella dal retro, esterno (vedere la figura seguente). Cosa si farà è consentire all'utente di usare non solo il dito, ma le mani intera da scorrere. 
-    ![Lesson5 Chapter2 Step6im](images/Lesson5_chapter2_step6im.PNG)
-7. Rendere interattivo. Poiché si vuole interagire direttamente con il quadruplo processore, è opportuno utilizzare il componente "quasi interazione touchable" (abbiamo utilizzato anche in questo nella lezione 4 per la riproduzione di musica dall'ottaidrato). Fare clic su "Aggiungi componente" e cercare "quasi interazione touchable" e selezionare, come illustrato nelle immagini seguenti. 
-
-8. Aggiungere la capacità di riconoscere il movimento di zoom. Fare clic su "Aggiungi componente" e digitare "pan interazione a mano". Hai una scelta tra ray mano (consentendo di eseguire una panoramica a distanza) e con un dito indice. Per questo esempio, lasciare il dito indice. 
-    ![Lesson5 Chapter2 8Im passaggio 7](images/Lesson5_chapter2_step7-8im.PNG)
-
-![Lesson5 Chapter2 Step8im](images/Lesson5_chapter2_step8im.PNG)
-
-9. Nello script pan interazione manuale, il "blocco orizzontale" e le caselle di controllo "blocco verticale" bloccherà i movimenti, rispettivamente. Le impostazioni di trama a capo automatico renderà la trama (mapping di trama) seguire i movimenti di zoom dell'utente. In questo esempio verrà seleziona questa casella. È anche disponibile "velocity active" che, se non è selezionata, il movimento di zoom non funziona. Anche questa casella di controllo. A questo punto si avrà un quad pan-abilitata.
+4. Aggiungi la capacità di rispondere ai comandi vocali. Nella gerarchia della scena di base seleziona un oggetto a cui non siano associati altri script di input. Ad esempio, non selezionare un gestore di manipolazione. Nel pannello di controllo fai clic su "Add Component" (Aggiungi componente). Digita "speech input handler". Seleziona il componente.
+   ![Immagine lezione 5 capitolo 1 passaggio 4](images/Lesson5_chapter1_step4im.PNG)
 
    
 
-   Successivamente, si imparerà a fare una panoramica degli oggetti 3D. 
+Per impostazione predefinita, verranno visualizzate due caselle di controllo, una delle quali è "Is Focus Required" (Stato attivo richiesto). Ciò significa che il comando vocale viene attivato solo quando l'utente punta all'oggetto tramite un raggio fisso (con lo sguardo, la testa, il controller o la mano). Deseleziona questa casella di controllo per fare in modo che l'utente non sia costretto a guardare l'oggetto per usare il comando vocale.
 
-10. Fare clic con il pulsante destro dell'oggetto quad, selezionare l'oggetto 3D, quindi fare clic su "cubo". Scalabilità del cubo in modo che sia all'incirca x = 0,1, y = compresa tra 0.1 e z = 0,1. Copiare tale cubo 3 volte (facendo clic con il pulsante destro del cubo e premendo duplicati o dal controllo premendo/comando D). Distanziarli in modo uniforme. La scena dovrebbe essere simile all'immagine seguente.
+5. Aggiungi la capacità di rispondere a un comando vocale. Per eseguire questa operazione, fai clic sul pulsante "+" nel gestore di input vocale e seleziona la parola chiave a cui vuoi rispondere.
 
-![Lesson5 Chapter2 Step10im](images/Lesson5_chapter2_step10im.PNG)
+   > Nota: queste parole chiave vengono popolate in base al profilo che hai modificato nel passaggio precedente.
 
+![Immagine lezione 5 capitolo 1 passaggio 5](images/Lesson5_chapter1_step5im.PNG)
 
+6. Accanto a "Keyword" (Parola chiave) verrà visualizzato un menu a discesa. Seleziona "Toggle Diagnostics" (Attiva/Disattiva diagnostica). In questo modo, ogni volta che l'utente pronuncia "Toggle Diagnostics", viene attivata un'azione. Tieni presente che può essere necessario espandere "Element 0" (Elemento 0) selezionando la freccia visualizzata accanto.
 
+![Immagine lezione 5 capitolo 1 passaggio 6](images/Lesson5_chapter1_step6im.PNG)
 
+7. Aggiungi lo script "Diagnostics Demo Controls" (Controlli demo diagnostica) per attivare o disattivare il contatore della frequenza dei fotogrammi per la diagnostica. Per eseguire questa operazione, fai clic sul pulsante "Aggiungi componente" (Aggiungi componente), cerca lo script "diagnostics demo controls" e quindi aggiungilo dal menu. Questo script può essere aggiunto a qualsiasi oggetto, ma per semplicità lo aggiungeremo allo stesso oggetto del gestore di input vocale. 
 
+   > Nota: questo script è incluso solo in questi moduli e non è disponibile nella versione originale di MRTK.
 
+![Immagine lezione 5 capitolo 1 passaggio 7](images/Lesson5_chapter1_step7im.PNG)
 
-11. Selezionare di nuovo il quad, e con lo script pan interazione manuale, sarà necessario impostare le azioni pan a ciascuno dei cubi. In "ricevitori di eventi pan" vogliamo specificare il numero di oggetti che ricevono l'evento. Poiché sono presenti 4 cubi, tipo "4" e premere INVIO. 4 campi vuoti devono essere visualizzati.
+8. Aggiungi una nuova risposta nel gestore di input vocale. Per eseguire questa operazione, fai clic sul pulsante "+" sottostante in cui è indicato "Response ()", contrassegnato da una freccia verde nella figura precedente.
 
+![Immagine lezione 5 capitolo 1 passaggio 7](images/Lesson5_chapter1_step8.PNG)
 
-![Lesson5 Chapter2 Step11im](images/Lesson5_chapter2_step11im.PNG)
+9. Trascina l'oggetto con lo script Diagnostics Demo Controls (Controlli demo diagnostica) nella nuova risposta che hai appena creato nel passaggio 8.
+    ![Immagine lezione 5 capitolo 1 passaggio 9](images/Lesson5_chapter1_step9im.PNG)
 
-
-
-12. Trascinare ognuno dei cubi in ognuno degli slot elemento vuoto.
-     ![Lesson5 Chapter2 Step12im](images/Lesson5_chapter2_step12im.PNG)
+10. Ora seleziona l'elenco a discesa "No Function" (Nessuna funzione), seleziona i controlli demo di diagnostica e quindi "OnToggleDiagnostics ()". Questa funzione consente di attivare o disattivare la diagnostica.  ![Immagine lezione 5 capitolo 1 passaggio 10](images/Lesson5_chapter1_step10im.PNG)
     
-13. Aggiungere lo script "spostamento con pan" per tutti i cubi. Per eseguire questa operazione, premere e tenere premuto/comando di controllo e selezionare ogni oggetto. Quindi, nel Pannello di controllo, fare clic su "Aggiungi componente" e cercare "lo spostamento con pan". Fare clic sullo script e verrà aggiunto a ogni cubo. Ora gli oggetti 3D verranno spostata insieme il movimento di zoom. Se si rimuove il rendering mesh di quad, si avranno ora un quad invisibile in cui è possibile fare una panoramica di un elenco di oggetti 3D.
+> Tieni presente che prima di creare il dispositivo devi abilitare le impostazioni del microfono. Per eseguire questa operazione, fai clic su un file, passa alle impostazioni di compilazione, quindi alle impostazioni del lettore e verifica che la funzionalità del microfono sia impostata.
 
-### <a name="eye-tracking"></a>Sotto controllo di rilevamento
+Aggiungeremo quindi la capacità di riprodurre un file audio da un comando vocale usando l'oggetto "ottaedro". Ricorderai che nella [lezione 4](mrlearning-base-ch4.md) abbiamo aggiunto la capacità di riprodurre un clip audio toccando l'oggetto ottaedro. Sfrutteremo la stessa origine audio per il comando vocale musicale.
 
-In questo capitolo verrà illustrato come abilitare il rilevamento di occhio nella nostra demo. La voci di menu 3D si ruoterà lentamente quando sono in corso gazed al momento con sguardo sotto controllo. È anche attiverà una divertente effetto quando viene selezionato l'elemento gazed a una.
+11. Seleziona l'oggetto ottaedro nella gerarchia della scena.
 
-1. Verificare che siano configurati correttamente i profili di Toolkit di realtà mista. Al momento della stesura di questo documento, la configurazione del profilo di realtà mista toolkit non include sotto controllo le funzionalità di gestione per impostazione predefinita. Per aggiungere le funzionalità di gestione sotto controllo, seguire le istruzioni nella sezione "Configurare i profili MRTK necessari a tenere sotto controllo", come descritto nel [documentazione di Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#setting-up-the-mrtk-profiles-required-for-eye-tracking  ). Assicurarsi che sotto controllo di rilevamento è configurato correttamente eseguendo tutti i passaggi rimanenti nel collegamento di documentazione precedente, inclusa l'abilitazione di rilevamento di occhi in GazeProvider (componente collegato a fotocamera) e l'abilitazione di simulazione d'occhio rilevamento nell'editor di Unity. Si noti che la versione futura del MRTK può includere rilevamento occhio per impostazione predefinita.
+12. Aggiungi un altro gestore di input vocale (ripeti i passaggi 4 e 5), ma con l'oggetto ottaedro. 
 
-    Il collegamento sopra riportato vengono fornite istruzioni breve per:
+13. Invece di aggiungere il comando vocale "Toggle Diagnostics" (Attiva/Disattiva diagnostica) del passaggio 6, aggiungi il comando vocale "Play Music" (Riproduci musica), come illustrato nell'immagine seguente.
+    
+     ![Immagine lezione 5 capitolo 1 passaggio 13](images/Lesson5_chapter1_step13im.PNG)
+    
+    
+    
+14. Come nei passaggi 8 e 9, aggiungi una nuova risposta e trascina l'ottaedro nello slot vuoto sulla risposta.
 
-    - Creazione di un occhio estasiati Data Provider per l'uso nel profilo MRTK
-    - Abilitazione del rilevamento delle occhio nel Provider estasiati
-    - Configurare per la simulazione occhio rilevamento nell'editor
-    - Funzionalità della soluzione Visual Studio per tenere traccia sotto controllo nell'applicazione compilata di modifica
+15. Seleziona il menu a discesa denominato "No Function" (Nessuna funzione), quindi "AudioSource" e infine "PlayOneShot (AudioClip)".
 
-2. Aggiungere il componente di destinazione di rilevamento agli oggetti di destinazione. Per consentire a un oggetto di rispondere agli eventi sguardo rossi, è necessario aggiungere il componente EyeTrackingTarget su ogni oggetto che si desidera interagire tramite sguardo sotto controllo. Aggiungere questo componente per ognuno degli oggetti 3D nove che fanno parte della raccolta della griglia. Suggerimento: selezionare più elementi nella gerarchia per il componente EyeTrackingTarget-Aggiungi in blocco.
-    ![Passaggio 2 Chapter3 Lesson5](images/Lesson5Chapter3Step2.JPG)
+![Immagine lezione 5 capitolo 1 passaggio 15](images/Lesson5_chapter1_step15im.PNG)
 
-3. Ora si aggiungerà lo script EyeTrackingTutorialDemo per alcune interazioni interessanti. Lo script EyeTrackingTutorialDemo è incluso come parte del repository di questa serie di esercitazioni e non è incluso per impostazione predefinita con il Toolkit di realtà mista. Per ogni oggetto 3D nell'insieme della griglia, aggiungere lo script EyeTrackingTutorialDemo eseguendo una ricerca per il componente nel menu "Aggiungi componente".
-   ![Passaggio 3 Chapter3 Lesson5](images/Lesson5Chapter3Step3.JPG)
-
-   4. Ruotare l'oggetto durante la ricerca nella destinazione. Vorremmo configurare l'oggetto 3D da ruotare mentre si sta esaminando. A tale scopo, inserire un nuovo campo nella sezione "Durante la ricerca in Target" del componente EyeTrackingTarget, come illustrato nell'immagine seguente. 
-
-![Lesson5 Chapter3 Step4a](images/Lesson5Chapter3Step4a.JPG)
-![Lesson5 Chapter3 Step4b](images/Lesson5Chapter3Step4b.JPG)
+16. Per quanto riguarda il clip audio, per questo esempio useremo lo stesso clip della [lezione 4](mrlearning-base-ch4.md). Passa al pannello del progetto, cerca il clip audio "MRTK_Gem" e trascinalo nello slot dell'origine audio, come illustrato nell'immagine seguente. A questo punto, l'applicazione dovrebbe essere in grado di rispondere ai comandi vocali "Toggle Diagnostics" (Attiva/Disattiva diagnostica) per attivare o disattivare il pannello del contatore della frequenza dei fotogrammi e "Play Music" (Riproduci musica) per riprodurre il brano MRTK_Gem.
+     ![Immagine lezione 5 capitolo 1 passaggio 16](images/Lesson5_chapter1_step16im.PNG)
 
 
+### <a name="the-pan-gesture"></a>Il movimento di panoramica 
 
-Nel campo appena creato, aggiungere l'oggetto gioco corrente per il campo vuoto e selezionare EyeTrackingTutorialDemo > RotateTarget() come illustrato nell'immagine seguente. L'oggetto 3D è ora configurato per rotazione quando è in corso gazed al momento si utilizza il rilevamento sotto controllo. 
+In questo capitolo impareremo a usare il movimento di panoramica. Questo movimento è utile per le operazioni di scorrimento del contenuto (tramite il dito o la mano) e può essere usato anche per ruotare gli oggetti, scorrere una raccolta di oggetti 3D o persino scorrere un'interfaccia utente 2D. Apprenderemo come usare il movimento di panoramica per distorcere una trama. Vedremo anche come spostare una raccolta di oggetti 3D.
 
-5. Aggiungere capacità a "destinazione di problema" che è in corso gazed al momento di selezionare (-indice puntato, o pronunciare "selezionare"). Analogamente al passaggio 4, che si vuole attivare EyeTrackingTutorialDemo > BlipTarget() assegnandolo al campo "Select ()" dell'oggetto gioco del componente EyeTrackingTarget, come illustrato nella figura seguente. Con questa configurazione a questo punto, si noterà un problema di lieve nell'oggetto di gioco ogni volta che si attiva un'azione Seleziona, ad esempio-indice puntato o i comandi vocali "seleziona". 
-    ![Passaggio 5 Chapter3 Lesson5](images/Lesson5Chapter3Step5.JPG)
-6. Verificare le funzionalità di gestione sotto controllo siano configurate correttamente prima della compilazione a HoloLens 2. Al momento della stesura di questo documento, Unity non ancora disponibile la possibilità di impostare la capacità di input (per il rilevamento rossi) sguardo. L'impostazione di questa funzionalità è necessaria per il rilevamento di occhio lavorare su 2 HoloLens. Seguire queste istruzioni nella documentazione di toolkit di realtà mista per abilitare la funzionalità di input sguardo: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
+1. Crea un quadrilatero. Nella gerarchia della scena di base fai clic con il pulsante destro del mouse, seleziona "3D Object" (Oggetto 3D) e quindi "Quad".
+
+![Immagine lezione 5 capitolo 2 passaggio 2](images/Lesson5_chapter2_step2im.PNG)
+
+2. Riposiziona il quadrilatero nel modo appropriato. Per questo esempio, impostiamo x = 0, y = 0 e z = 1.5, lontano dalla videocamera per consentire una posizione comoda dal dispositivo HoloLens 2.
+
+   > Nota: se il quadrilatero si trova in primo piano rispetto a oggetti di contenuto delle lezioni precedenti, assicurati di spostarlo per evitare che blocchi gli altri oggetti.
+
+3. Applica un materiale al quadrilatero. Questo sarà il materiale che scorreremo con il movimento di panoramica. 
+
+![Immagine lezione 5 capitolo 2 passaggio 3](images/Lesson5_chapter2_step3im.PNG)
+
+4. Nel pannello del progetto digita "pan content" nella casella di ricerca. Trascina il materiale sul quadrilatero nella scena. 
+
+> Nota: il materiale "Pan content" (Contenuto panoramica) non è disponibile in MRTK, ma è un asset incluso nel pacchetto di asset del modulo importato nelle lezioni precedenti. 
+
+> Nota: quando aggiungi il contenuto per la panoramica, potrebbe avere un aspetto allungato. Puoi risolvere il problema modificando i valori x, y e z delle dimensioni del quadrilatero fino a ottenere l'aspetto desiderato.
+
+Per usare il movimento di panoramica, avrai bisogno di un collisore sull'oggetto. Noterai che nel quadrilatero è già presente un collisore di tipo mesh. Tuttavia, questo tipo di collisore non è ideale, perché è estremamente sottile e difficile da selezionare. Consigliamo quindi di sostituirlo con un collisore cubico.
+
+5. Fai clic con il pulsante destro del mouse sul collisore di tipo mesh presente nel quadrilatero (nel pannello di controllo) e rimuovilo facendo clic su "Remove Component" (Rimuovi componente). 
+   ![Immagine lezione 5 capitolo 2 passaggio 5](images/Lesson5_chapter2_step5im.PNG)
+
+6. Aggiungi ora il collisore cubico facendo clic su "Add Component" (Aggiungi componente) e cercando "box collider". Il collisore cubico predefinito è ancora troppo sottile, quindi fai clic sul pulsante "Edit Collider" (Modifica collisore) per modificarlo. Quando il pulsante è premuto, puoi regolare le dimensioni usando i valori x, y e z o gli elementi nell'editor della scena. Per questo esempio, vogliamo estendere leggermente il collisore cubico dietro il quadrilatero. Nell'editor della scena trascina il collisore cubico dal retro verso l'esterno, come illustrato nell'immagine seguente. In questo modo si consentirà all'utente di usare non solo il dito ma l'intera mano per eseguire l'azione di scorrimento. 
+    ![Immagine lezione 5 capitolo 2 passaggio 6](images/Lesson5_chapter2_step6im.PNG)
+7. Configura l'interattività. Poiché vogliamo interagire direttamente con il quadrilatero, decidiamo di usare il componente "Near Interaction Touchable" (Toccabile con interazione da vicino), lo stesso che abbiamo usato nella lezione 4 per riprodurre musica dall'ottaedro. Fai clic su "Add Component" (Aggiungi componente), cerca "near interaction touchable" e seleziona il componente, come illustrato nelle immagini seguenti. 
+
+8. Aggiungi la capacità di riconoscere il movimento di panoramica. Fai clic su "Add component" (Aggiungi componente) e digita "hand interaction pan". Potrai scegliere tra Hand Ray (Raggio mano), in modo da eseguire una panoramica a distanza, e Index Finger (Dito indice). Per questo esempio, manterremo impostata la seconda opzione. 
+    ![Immagine lezione 5 capitolo 2 passaggio 7 immagine 8](images/Lesson5_chapter2_step7-8im.PNG)
+
+![Immagine lezione 5 capitolo 2 passaggio 8](images/Lesson5_chapter2_step8im.PNG)
+
+9. Nello script Hand Interaction Pan (Panoramica con interazione manuale), le caselle di controllo "Lock Horizontal" (Blocca in orizzontale) e "Lock Vertical" (Blocca in verticale) bloccheranno i movimenti, rispettivamente in orizzontale e in verticale. Le impostazioni di Wrap texture (Avvolgi trama) consentiranno alla trama (mapping della trama) di seguire i movimenti di panoramica dell'utente. Per questo esempio, selezioneremo questa casella. È inoltre disponibile l'opzione "Velocity Active" (Attivo in base a velocità) che, se deselezionata, impedisce il movimento di panoramica. Seleziona anche questa casella. A questo punto, dovresti avere un quadrilatero abilitato per la panoramica.
+
+   
+
+   Imparerai ora a fare una panoramica degli oggetti 3D. 
+
+10. Fai clic con il pulsante destro del mouse sull'oggetto Quad, seleziona 3D Object (Oggetto 3D) e quindi fai clic su "Cube". Ridimensiona il cubo in modo che assuma approssimativamente i valori x = 0.1, y = 0.1 e z = 0.1. Copia il cubo tre volte, facendo clic con il pulsante destro del mouse sul cubo e scegliendo Duplicate (Duplica) oppure premendo CTRL/Comando+D. Distanzia i cubi in modo uniforme. La scena dovrebbe avere un aspetto simile all'immagine seguente.
+
+![Immagine lezione 5 capitolo 2 passaggio 10](images/Lesson5_chapter2_step10im.PNG)
 
 
-### <a name="congratulations"></a>La procedura è stata completata. 
-È stato aggiunto correttamente base sotto controllo le funzionalità di gestione all'applicazione. Queste azioni sono solo l'inizio di un mondo di possibilità con sotto controllo di rilevamento. In questo capitolo articolo conclude anche lezione 5, in cui sono state apprese funzionalità avanzate di input, ad esempio comandi vocali, la panoramica di movimenti e rilevamento sotto controllo. 
 
-[Lezione successiva: Esperienza di esempio di modulo lunare Assembly](mrlearning-base-ch6.md)
+
+
+
+
+11. Seleziona di nuovo il quadrilatero e, con lo script Hand Interaction Pan (Panoramica con interazione manuale), imposta le azioni di panoramica su ciascuno dei cubi. In "Pan Event Receivers" (Destinatari evento panoramica) specifica il numero di oggetti che ricevono l'evento. Poiché sono presenti quattro cubi, digita "4" e premi INVIO. Verranno visualizzati quattro campi vuoti.
+
+
+![Immagine lezione 5 capitolo 2 passaggio 11](images/Lesson5_chapter2_step11im.PNG)
+
+
+
+12. Trascina ciascuno dei cubi in uno degli slot di elemento vuoti.
+     ![Immagine lezione 5 capitolo 2 passaggio 12](images/Lesson5_chapter2_step12im.PNG)
+    
+13. Aggiungi lo script "Move With Pan" (Sposta con panoramica) a tutti i cubi. Per eseguire questa operazione, tieni premuto CTRL/Comando e seleziona ogni oggetto. Nel pannello di controllo fai clic sul pulsante "Add Component" (Aggiungi componente) e cerca "move with pan". Fai clic sullo script, che verrà aggiunto a ogni cubo. Ora gli oggetti 3D si sposteranno seguendo il tuo movimento di panoramica. Se rimuovi il renderer della mesh sul quadrilatero, dovresti ottenere un quadrilatero invisibile in cui puoi fare una panoramica attraverso un elenco di oggetti 3D.
+
+### <a name="eye-tracking"></a>Tracciamento oculare
+
+In questo capitolo esamineremo come abilitare il tracciamento oculare nella nostra demo. Ruoteremo lentamente voci di menu 3D quando sono sotto il controllo dello sguardo fisso. Attiveremo inoltre un effetto divertente al momento della selezione dell'oggetto fissato.
+
+1. Verifica che i profili di Mixed Reality Toolkit siano configurati correttamente. Al momento della stesura di questo documento, la configurazione dei profili di Mixed Reality Toolkit non include le funzionalità di tracciamento oculare per impostazione predefinita. Per aggiungere queste funzionalità, segui le istruzioni nella sezione "Configurazione dei profili di MRTK necessari per il tracciamento oculare" nella [documentazione di Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#setting-up-the-mrtk-profiles-required-for-eye-tracking  ). Assicurati che il tracciamento oculare sia configurato correttamente eseguendo i passaggi rimanenti nella pagina visualizzata tramite il precedente collegamento alla documentazione, incluse l'abilitazione del tracciamento oculare in GazeProvider (componente collegato alla videocamera) e l'abilitazione della simulazione del tracciamento oculare nell'editor di Unity. Tieni presente che la versione futura di MRTK potrebbe includere le funzionalità di tracciamento oculare per impostazione predefinita.
+
+    Il collegamento precedente consente di accedere a brevi istruzioni per:
+
+    - Creare un provider di dati per lo sguardo fisso da usare nel profilo di MRTK
+    - Abilitare il tracciamento oculare nel provider di dati per lo sguardo fisso
+    - Definire la configurazione per simulare il tracciamento oculare nell'editor
+    - Modificare le funzionalità della soluzione Visual Studio per consentire il tracciamento oculare nell'applicazione compilata
+
+2. Aggiungi il componente Eye Tracking Target (Destinazione tracciamento oculare) agli oggetti di destinazione. Per consentire a un oggetto di rispondere agli eventi dello sguardo fisso, dobbiamo aggiungere questo componente a ogni oggetto con cui vogliamo interagire usando lo sguardo. Aggiungi questo componente a ciascuno dei nove oggetti 3D che fanno parte della raccolta griglia. Suggerimento: seleziona più elementi nella gerarchia per aggiungere in blocco il componente Eye Tracking Target (Destinazione tracciamento oculare).
+    ![Lezione 5 capitolo 3 passaggio 2](images/Lesson5Chapter3Step2.JPG)
+
+3. A questo punto aggiungeremo lo script EyeTrackingTutorialDemo per alcune interessanti interazioni. Questo script è incluso nel repository di questa serie di esercitazioni e non è disponibile per impostazione predefinita in Mixed Reality Toolkit. Per ogni oggetto 3D nella raccolta griglia, aggiungi lo script EyeTrackingTutorialDemo eseguendo una ricerca del componente nel menu "Add Component" (Aggiungi componente).
+   ![Lezione 5 capitolo 3 passaggio 3](images/Lesson5Chapter3Step3.JPG)
+
+   4. Configura l'oggetto in modo da ruotare mentre il tuo sguardo è rivolto verso la destinazione. Vogliamo ora configurare un oggetto 3D in modo da ruotare mentre lo stiamo fissando. Per eseguire questa operazione, inserisci un nuovo campo nella sezione "While Looking At Target" (Sguardo verso la destinazione) del componente Eye Tracking Target (Destinazione tracciamento oculare), come illustrato nell'immagine seguente. 
+
+![Lezione 5 capitolo 3 passaggio 4a](images/Lesson5Chapter3Step4a.JPG)
+![Lezione 5 capitolo 3 passaggio 4b](images/Lesson5Chapter3Step4b.JPG)
+
+
+
+Nel campo appena creato, aggiungi l'oggetto gioco corrente nel campo vuoto e seleziona EyeTrackingTutorialDemo > RotateTarget(), come illustrato nell'immagine seguente. L'oggetto 3D è ora configurato in modo da ruotare quando viene fissato con il tracciamento oculare. 
+
+5. Aggiungi ora una funzione per far lampeggiare la destinazione quando viene fissata al momento della selezione (tramite simulazione del tocco o con il comando vocale "select"). In modo analogo al passaggio 4, attiva EyeTrackingTutorialDemo > BlipTarget() assegnando questa funzione al campo "Select()" dell'oggetto gioco del componente Eye Tracking Target (Destinazione tracciamento oculare), come illustrato nella figura seguente. Con questa configurazione, noterai un lieve lampeggiamento dell'oggetto gioco ogni volta che attiverai un'azione di selezione, ad esempio tramite simulazione del tocco o con il comando vocale "select". 
+    ![Lezione 5 capitolo 3 passaggio 5](images/Lesson5Chapter3Step5.JPG)
+6. Verifica che le funzionalità di tracciamento oculare siano configurate correttamente prima di compilarle in HoloLens 2. Al momento della stesura di questo documento, in Unity non è ancora possibile impostare la funzionalità di input dello sguardo fisso (per il tracciamento oculare). L'impostazione di questa funzionalità è necessaria per il funzionamento del tracciamento oculare su HoloLens 2. Per abilitare la funzionalità di input dello sguardo fisso, segui queste istruzioni nella documentazione di Mixed Reality Toolkit: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
+
+
+### <a name="congratulations"></a>A questo punto, 
+Hai ora aggiunto all'applicazione le funzionalità di base per il tracciamento oculare. Queste azioni sono solo l'inizio del vasto mondo di possibilità offerte dal tracciamento oculare. Con questo capitolo si conclude anche la lezione 5, in cui hai imparato a usare funzionalità di input avanzate, come i comandi vocali, i movimenti di panoramica e il tracciamento oculare. 
+
+[Lezione successiva: Esperienza di esempio di assemblaggio di un modulo lunare](mrlearning-base-ch6.md)
 

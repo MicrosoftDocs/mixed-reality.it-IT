@@ -1,106 +1,106 @@
 ---
-title: L'esecuzione di comandi vocali
-description: Sguardo, gesti e voce (GGV) sono un mezzo principale di interazione su HoloLens. Questo articolo fornisce indicazioni precise sulla progettazione vocali.
+title: Esecuzione di comandi vocali
+description: La direzione dello sguardo, i movimenti e i comandi vocali (GGV, Gaze, Gesture and Voice) sono un mezzo di interazione fondamentale in HoloLens. Questo articolo fornisce indicazioni precise sulla progettazione dei comandi vocali.
 author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Realtà mista di Windows, progettazione, l'interazione vocale
+keywords: Windows Mixed Reality, progettazione, interazione, comandi vocali
 ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66402375"
 ---
-# <a name="voice-commanding"></a>L'esecuzione di comandi vocali
+# <a name="voice-commanding"></a>Esecuzione di comandi vocali
 
-Quando si usano i comandi vocali, sguardo viene in genere utilizzato come mechaninism targeting, sia come un puntatore ("select") o per indirizzare il comando a un'applicazione ("visualizzarlo, dice"). Naturalmente, alcuni comandi vocali non richiedono una destinazione, ad esempio "go to start" o "Hey, Cortana."
+Con i comandi vocali, lo sguardo viene in genere usato come meccanismo di selezione della destinazione da sfruttare come puntatore ("seleziona") o per indirizzare il comando a un'applicazione ("guarda, parla"). Naturalmente alcuni comandi vocali non richiedono una destinazione, ad esempio "Vai all'inizio" o "Ehi Cortana".
 
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
 <tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
+<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (prima generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>L'esecuzione di comandi vocali</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con le cuffie collegata)</td>
+<td>Esecuzione di comandi vocali</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con il visore VR collegato)</td>
 </tr>
 </table>
 
 
 
-## <a name="how-to-use-voice"></a>Come usare la forma
+## <a name="how-to-use-voice"></a>Modalità di utilizzo dei comandi vocali
 
-È consigliabile aggiungere comandi vocali per alcuna esperienza che si compila. Voce è un modo pratico e potente di controllo del sistema e le app. Poiché gli utenti parlano con un'ampia gamma di dialetti e accenti, la scelta migliore delle parole chiave vocali garantirà che i comandi degli utenti vengano interpretati in modo non ambiguo.
+Valuta l'opportunità di aggiungere comandi vocali a un'esperienza che stai creando. La voce è un modo pratico e potente di controllare il sistema e le app. Poiché gli utenti parlano con un'ampia gamma di dialetti e accenti, la scelta appropriata delle parole chiave di contenuti vocali garantirà un'interpretazione non ambigua dei comandi degli utenti.
 
 ### <a name="best-practices"></a>Procedure consigliate
 
-Di seguito vengono illustrate alcune tecniche che contribuiranno a smooth riconoscimento vocale.
-* **Usare i comandi concisi** : quando possibile, scegliere le parole chiave di due o più sillabe. Una sillaba parole tendono a utilizzare suoni vocali diversi pronuncia da persone con accenti diversi. Esempio: "Riproduci il video" è preferibile rispetto a "Guarda il video attualmente selezionato"
-* **Usare vocabolario semplice** -esempio: "Show nota" è preferibile rispetto a "Show manifesto"
-* **Assicurarsi che i comandi sono non distruttivi** : assicurarsi che sia non distruttive qualsiasi azione che può essere eseguite da un comando di riconoscimento vocale e può essere annullata facilmente in caso di un'altra persona che parla vicino all'utente accidentalmente attiva un comando.
-* **Evitare i comandi di una voce simile** -evitare di registrare più comandi vocali che sembrare molto simili. Esempio: "Mostra più" e "Show store" può essere pronunciati in modo molto simile.
-* **Annullare la registrazione all'app quando non usa** : quando l'app non è in uno stato in cui un comando di riconoscimento vocale specifico non è valido, è consigliabile annullarne la registrazione in modo che gli altri comandi non vengono confuse a quella.
-* **Test con accenti diversi** -testare l'app con gli utenti di accenti diversi.
-* **Mantenere la coerenza di comandi vocali** : se "Vai Indietro" passa alla pagina precedente, mantenere questo comportamento nelle applicazioni.
-* **Evitare di usare i comandi del sistema** -comandi vocali seguenti sono riservati per il sistema. Non devono essere usati dalle applicazioni.
+Di seguito vengono illustrate alcune procedure che semplificheranno il riconoscimento vocale.
+* **Usa comandi concisi**. Quando possibile, scegli parole chiave di due o più sillabe. Le parole di una sillaba tendono a usare suoni di vocali differenti se pronunciate da persone con accenti diversi. Esempio: "Riproduci il video" è preferibile rispetto a "Riproduci il video attualmente selezionato".
+* **Usa un vocabolario semplice**. Esempio: "Mostra nota" è preferibile rispetto a "Mostra cartello".
+* **Assicurati che i comandi non siano distruttivi**. Verifica che tutte le azioni eseguibili con un comando vocale siano di tipo non distruttivo e possano essere annullate facilmente qualora un'altra persona che parla vicino all'utente attivi accidentalmente un comando.
+* **Evita comandi con suoni simili**. Non registrare più comandi vocali con suoni molto simili. Esempio: "Mostra altro" e "Mostra in alto" possono avere un suono molto simile.
+* **Annulla la registrazione dell'app quando non è in uso**. Quando l'app non è in uno stato in cui sia valido un comando vocale specifico, è consigliabile annullarne la registrazione in modo da evitare confusione tra i comandi.
+* **Esegui test con accenti diversi**. Testa l'app con utenti con accenti diversi.
+* **Mantieni la coerenza dei comandi vocali**. Se "Indietro" porta alla pagina precedente, mantieni questo comportamento nelle applicazioni.
+* **Evita di usare i comandi di sistema**. I comandi vocali seguenti sono riservati per il sistema. Non devono essere usati dalle applicazioni.
    * "Ehi Cortana"
-   * "Select"
+   * "Seleziona"
 
-### <a name="select"></a>"Select"
+### <a name="select"></a>"Seleziona"
 
-Che indica che "select" in qualsiasi momento si attiverà qualunque sia il cursore sguardo punta a. 
+Pronunciare "seleziona" in qualsiasi momento attiva la destinazione a cui punta il cursore sguardo fisso. 
 
->Nota: HoloLens 2, le esigenze di cursore sguardo prima di tutto necessario richiamare specificando la parola "select". Ad esempio, "selezionare" nuovo per l'attivazione. Per nascondere il cursore sguardo, usando le mani - airtap o un oggetto di tocco. 
+>Nota: in HoloLens 2 è necessario richiamare prima il cursore sguardo fisso pronunciando la parola "seleziona". Pronuncia di nuovo "seleziona" per l'attivazione. Per nascondere il cursore sguardo fisso, usa le mani: simula il tocco o tocca un oggetto. 
 
-### <a name="see-it-say-it"></a>Visualizzarlo, ad esempio
+### <a name="see-it-say-it"></a>Guarda, parla
 
-Realtà mista di Windows ha incaricato un modello di casella vocale "visualizzarlo, dice" dove **le etichette nei pulsanti sono identiche ai comandi vocali associato**. Poiché non c'è alcun dissonance tra l'etichetta e i comandi vocali, agli utenti di comprendere meglio cosa significa controllare il sistema. Per ribadire, mentre appartamento su un pulsante, un **"vocale permanenza suggerimento"** viene visualizzato per comunicare i pulsanti sono servizio voce abilitato.
+Windows Mixed Reality ha usato un modello di comando vocale "guarda, parla" in cui le **etichette sui pulsanti sono identiche ai comandi vocali associati**. Poiché non esiste alcuna dissonanza tra l'etichetta e il comando vocale, gli utenti possono capire meglio cosa dire per controllare il sistema. Per maggiore chiarezza, soffermandosi su un pulsante, viene visualizzato un **"suggerimento vocale attesa"** per comunicare quali pulsanti vengono abilitati mediante comandi vocali.
 
 
-![Vederlo dice esempio 1](images/voice-seeitsayit1-640px.jpg)
+![Esempio 1 per "guarda, parla"](images/voice-seeitsayit1-640px.jpg)
 
-![Vederlo dice esempio 2](images/voice-seeitsayit2-640px.jpg)<br>
-*Esempi di "visualizzarlo, dice"*
+![Esempio 2 per "guarda, parla"](images/voice-seeitsayit2-640px.jpg)<br>
+*Esempi di "guarda, parla"*
 
-### <a name="voices-strengths"></a>Punti di forza del Voice
+### <a name="voices-strengths"></a>Punti di forza dei comandi vocali
 
-Input vocale è un modo semplice per comunicare l'Intent. Vocale è particolarmente efficaci per interfaccia **attraversamenti** perché ciò può aiutare gli utenti con serenità più passaggi di un'interfaccia (un utente potrebbe ad esempio "tornare" durante la ricerca nella pagina Web, invece di dover configurare e fare clic sul pulsante Indietro nell'app). Il risparmio di tempo piccola è una potente **effetto emotivo** utente di percezione dell'esperienza e fornisce a ognuna superpower una piccola quantità. Con voice è anche un pratico metodo di input quando si hanno i rami completi oppure sono **multitasking**. Nei dispositivi in cui è difficile, digitazione di una tastiera **vocali dettatura** può essere un'alternativa efficiente di input. Infine, in alcuni casi, quando la **intervallo di precisione** per sguardo e movimenti sono limitati, voce potrebbe essere un utente solo attendibili metodo di input.
+L'input vocale è un modo naturale di comunicare le intenzioni. La voce è particolarmente efficace a livello di **attraversamenti** dell'interfaccia perché può aiutare gli utenti a eseguire rapidamente più passaggi in un'interfaccia. Un utente può ad esempio dire "indietro" mentre guarda la pagina Web invece di tornare indietro e fare clic sul pulsante Indietro nell'app. Questo piccolo risparmio di tempo produce un potente **effetto emotivo** sulla percezione dell'esperienza dell'utente potenziandone lievemente i vantaggi. I comandi vocali rappresentano anche un pratico metodo di input quando hai le mani occupate oppure quando sei in modalità **multitasking**. Nei dispositivi in cui è difficile digitare su una tastiera, la **dettatura vocale** può essere un'alternativa efficiente di input. Infine, in alcuni casi in cui la **precisione** dello sguardo e dei movimenti è limitata, la voce può rivelarsi l'unico metodo di input attendibile di un utente.
 
-**Come utilizzare voce possono trarre vantaggio all'utente**
-* Riduce il tempo, si deve stabilire l'obiettivo finale più efficiente.
-* Riduce al minimo impegno - si devono stabilire le attività più fluida e semplificata.
-* Consente di ridurre il carico conoscitivo - è intuitive e facili da imparare e ricordare.
-* Si tratta di socialmente accettabile: dovrebbe rappresentare con le norme in termini di comportamento.
-* Le routine - vocale può facilmente diventare un comportamento abituale.
+**In che modo i comandi vocali possono rivelarsi utili per l'utente**
+* Riducono i tempi: devono rendere l'obiettivo finale più efficiente.
+* Riducono al minimo lo sforzo: devono rendere le attività più fluide e semplici.
+* Riducono il carico cognitivo: sono intuitivi e facili da imparare e ricordare.
+* Sono socialmente accettabili: devono essere conformi alle regole della società in termini di comportamento.
+* Rappresentano la routine: i comandi vocali possono facilmente diventare un comportamento abituale.
 
-### <a name="voices-weaknesses"></a>Punti di debolezza del Voice
+### <a name="voices-weaknesses"></a>Svantaggi dei comandi vocali
 
-La voce presenta anche alcuni svantaggi. Controllo con granularità fine è uno di essi. (ad esempio un utente potrebbe essere indicato "più alto", ma non si può dire quanto. "Un piccolo" sia difficile quantificare. Lo spostamento o la scalabilità cose con vocale è anche difficile (vocale non offre la granularità di controllo). Vocale può anche essere perfetto. In alcuni casi un sistema vocale in modo non corretto ascolta un comando o ha esito negativo lieti di ricevere un comando. Il ripristino da tali errori è un problema in qualsiasi interfaccia. Infine, voce potrebbe non essere socialmente accettabile in luoghi pubblici. Esistono alcuni aspetti che gli utenti non possono o non devono pronunciare. Questi vegetazione consentono riconoscimento vocale da utilizzare per ciò che è consigliabile in.
+I comandi vocali presentano anche alcuni svantaggi. Uno di essi è la granularità del controllo. Un utente, ad esempio, può dire "più alto", ma non può dire di quanto. "Leggermente" è difficile da quantificare. Con i comandi vocali è difficile anche effettuare operazioni di spostamento o ridimensionamento (il comando vocale non offre la granularità del controllo). I comandi vocali possono anche essere imperfetti. In alcuni casi un sistema vocale percepisce in modo non corretto un comando o non lo percepisce affatto. Il ripristino da tali errori è un problema in qualsiasi interfaccia. Infine, i comandi vocali possono non essere socialmente accettabili nei luoghi pubblici. Esistono alcune cose che gli utenti non possono o non devono pronunciare. Queste considerazioni permettono di individuare gli scenari in cui i comandi vocali offrono risultati ottimali.
 
-### <a name="voice-feedback-states"></a>Stati di commenti e suggerimenti vocale
+### <a name="voice-feedback-states"></a>Stati di feedback dei comandi vocali
 
-Quando voce viene applicata in modo corretto, l'utente capisca **cosa possono ad esempio e ottenere commenti e suggerimenti chiaro** il sistema **sentito dire loro correttamente**. Questi due segnali di impostare l'utente di sentirsi sicuri usando vocale come un input primari. Seguito è riportato un diagramma che illustra che cosa accade per il cursore quando l'input vocale riconosciuto e le modalità di comunicazione che all'utente.
+Quando i comandi vocali vengono applicati in modo corretto, l'utente capisce **cosa può dire e ottiene un feedback chiaro** a indicare che il sistema ha **recepito correttamente i comandi**. Questi due segnali fanno sì che l'utente si senta sicuro di usare i comandi vocali come input principale. Di seguito è riportato un diagramma che illustra che cosa accade al cursore quando l'input vocale viene riconosciuto e come tale risultato viene comunicato all'utente.
 
-![Stati di commenti e suggerimenti vocali per cursori](images/voicefeedbackstates.png)<br>
-*Stati di commenti e suggerimenti vocali per cursori*
+![Stati di feedback dei comandi vocali per il cursore](images/voicefeedbackstates.png)<br>
+*Stati di feedback dei comandi vocali per il cursore*
 
-## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Prime operazioni che gli utenti devono conoscere per "speech" nella realtà mista
-* Pronunciare **"Selezionare"** durante l'assegnazione di un pulsante (è possibile usare questo ovunque fare clic su un pulsante).
-* È possibile dire il **nome dell'etichetta di un pulsante della barra app** in alcune app di eseguire un'azione. Durante la ricerca in un'app, ad esempio, un utente può pronunciare il comando "Remove" per rimuovere l'app da tutto il mondo (Ciò consente di risparmiare tempo evitando il selezionarlo con mano).
-* È possibile avviare Cortana in ascolto affermando **"Ehi Cortana".** È possibile porre suo domande ("Ehi Cortana, l'altezza è la Torre Eiffel"), dille di aprire un'app ("Ehi Cortana, open Netflix") o dille di visualizzare il Menu di avvio ("Ehi Cortana, take me home") e altro ancora.
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Nozioni di base sui comandi vocali che gli utenti devono conoscere per la realtà mista
+* Pronuncia **"Seleziona"** quando la destinazione è un pulsante. Puoi usare questo comando ovunque per fare clic su un pulsante.
+* Puoi pronunciare il **nome dell'etichetta di un pulsante della barra dell'app** in alcune app per eseguire un'azione. Mentre guarda un'app, ad esempio, un utente può pronunciare il comando "Rimuovi" per rimuovere definitivamente l'app, senza dover fare clic su di essa con la mano e risparmiando così tempo.
+* Puoi avviare l'ascolto da parte di Cortana dicendo **"Ehi Cortana"** . Puoi porre domande ("Ehi Cortana, quanto è alta la Torre Eiffel?"), chiedere di aprire un'app ("Ehi Cortana, apri Netflix") o chiedere di visualizzare il menu di avvio ("Ehi Cortana, portami all'inizio") e altro ancora.
 
-## <a name="common-questions-and-concerns-users-have-about-voice"></a>Gli utenti di domande e dubbi più comuni hanno sulla voce
-* Che cosa posso dire?
-* Come si capisce che sistema sentito parlare a me correttamente?
-   * Il sistema continua a mio comandi vocali errato.
-   * Non reagisce quando si fa riferimento a un comando vocale.
-* Quando si fa riferimento a un comando vocale reagisce in modo non corretto.
-* Come applicare la voce da una specifica app o un comando di app?
-* È possibile usare vocale per le operazioni di comando out frame holographic HoloLens?
+## <a name="common-questions-and-concerns-users-have-about-voice"></a>Domande e dubbi comuni degli utenti sui comandi vocali
+* Cosa posso dire?
+* Come posso sapere se il sistema mi ha capito correttamente?
+   * Il sistema continua a interpretare i miei comandi vocali in modo errato.
+   * Non reagisce quando pronuncio un comando vocale.
+* Reagisce in modo non corretto quando pronuncio un comando vocale.
+* Come posso indirizzare un comando vocale a una specifica app o un comando di app?
+* Posso usare i comandi vocali per operazioni all'esterno del fotogramma olografico di HoloLens?
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Movimenti](gestures.md)
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)

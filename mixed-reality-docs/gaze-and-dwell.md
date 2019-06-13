@@ -1,26 +1,26 @@
 ---
-title: Head-sguardo e permanenza
-description: Panoramica del modello di input sguardo a capo e permanenza
+title: Puntamento con la testa e attesa
+description: Panoramica del modello di input puntamento con la testa e attesa
 author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Progettare sguardo, permanenza, interazione, realtà mista
-ms.openlocfilehash: ae4688da791fd3afb7be66069049bbe51102dd7e
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+keywords: realtà mista, sguardo fisso, attesa, interazione, progettazione
+ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039203"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516011"
 ---
-# <a name="head-gaze-and-dwell"></a>Head-sguardo e permanenza
+# <a name="head-gaze-and-dwell"></a>Puntamento con la testa e attesa
 
-Quando le mani sono occupate con gli strumenti e le parti, i movimenti possono essere difficile o impossibile. I comandi vocali, quali i movimenti, possono non essere affidabili in determinati contesti, ad esempio in condizioni eccessivamente elevate. Inoltre, utilizzando voce di controllo nei computer non è universalmente comune, ma certamente sta per essere steam! Head-sguardo e permanenza offre il meccanismo più familiare e facile master per l'utilizzo di heads-up e automatizzate su HoloLens. Inoltre, head-sguardo e permanenza è affidabile al 100% indipendente dai vincoli rumore di interferenze né inattività nell'ambiente operativo.
+Quando le mani sono occupate con gli attrezzi e le parti, i movimenti possono risultare difficili o addirittura impossibili. I comandi vocali, come i movimenti, possono non essere affidabili in determinati contesti, ad esempio in ambienti particolarmente rumorosi. Inoltre, l'uso della voce per controllare i computer, nonostante conosca una rapida diffusione, non è ancora una pratica comune ovunque. Il modello di input puntamento con la testa e attesa offre un meccanismo già familiare e di facilissima gestione per lavorare in HoloLens con la testa sollevata e senza avere bisogno di usare le mani. Questo modello di input è anche affidabile al 100%, indipendentemente dall'interferenza di possibili rumori o da eventuali obblighi di restare in silenzio nell'ambiente operativo.
 
 ## <a name="scenarios"></a>Scenari
 
-Head-sguardo e permanenza è ideale per scenari in cui una persona sono occupato con altre attività e vocale non è 100% sul valore a causa delle limitazioni ambientali o di social networking o affidabili. Un buon esempio è una persona che portano un HoloLens per sovrapporre informazioni di riferimento durante il ripristino di un motore di automobili. Le mani siano occupate con gli strumenti o supportare corpo come essi fare affidamento nel raggruppamento di motore. Lo spazio garage è elevato, con la costante banging e nuovo di strumenti, rendendo difficile comandi vocali. Head-sguardo e permanenza consente alla persona HoloLens per esplorare in tutta sicurezza il materiale di riferimento senza interruzione in flusso di lavoro. 
+Il puntamento con la testa e l'attesa offrono un metodo ottimale a cui ricorrere per gli scenari in cui le mani di una persona sono occupate a svolgere altre attività e l'uso della voce non è affidabile al 100% o non consentito per vincoli sociali o correlati all'ambiente. Un buon esempio di questo tipo di situazioni è dato da una persona che indossa un dispositivo HoloLens per la sovrimpressione di informazioni di riferimento mentre ripara il motore di un'automobile. Le sue mani sono occupate con gli attrezzi o devono sostenere il corpo mentre la persona si protende sul vano motore. L'autofficina è rumorosa a causa dei colpi e del ronzio costanti degli attrezzi da lavoro, quindi l'uso dei comandi vocali risulterebbe particolarmente difficoltoso. Il puntamento con la testa e l'attesa consentono alla persona in HoloLens di navigare in modo sicuro all'interno del materiale di riferimento senza interrompere il flusso di lavoro. 
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -33,12 +33,12 @@ Head-sguardo e permanenza è ideale per scenari in cui una persona sono occupato
     </colgroup>
     <tr>
         <td><strong>Modello di input</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Head-sguardo e permanenza</td>
+        <td>Puntamento con la testa e attesa</td>
         <td>✔️ Consigliato</td>
         <td>✔️ Consigliato</td>
         <td>✔️ Consigliato</td>
@@ -47,83 +47,83 @@ Head-sguardo e permanenza è ideale per scenari in cui una persona sono occupato
 
 ## <a name="goals"></a>Obiettivi
 
-Forniscono un meccanismo per le interazioni completamente invisibile, senza usare vocali.
+Fornire un meccanismo che consenta di interagire lasciando libere le mani e senza usare la voce.
 
 ## <a name="design-principles"></a>Principi di progettazione
 
-1. Evitare "Estasiati un'arma"
+1. Evitare di usare lo "sguardo fisso come un'arma"
 
-    Head-sguardo e permanenza richiede indicazioni visive per essere intuitiva, ma possono indurre la anxiety troppa commenti e suggerimenti. I commenti e suggerimenti dovrebbero aiutare un utente di sapere cosa destinazione, ma non di auto-select contro il loro scopo. La lettura di testo, icone e le etichette richiede considerazioni aggiuntive per fornire una stanza di persona per assorbire le informazioni prima di selezionare.
+    Il puntamento con la testa e l'attesa richiedono un feedback visivo intuitivo, ma una mole eccessiva di feedback può produrre ansia. Il feedback deve aiutare l'utente a capire cosa sta puntando, ma non selezionare automaticamente una destinazione contrariamente alla sua intenzione. Per leggere un testo, le icone e le etichette servono più tempo e più attenzione, quindi considera questo aspetto per dare alla persona modo di assorbire le informazioni prima di effettuare la selezione.
     
-2. Velocità di Riccioli d'oro di ricerca
+2. Cercare di ottenere una velocità ottimale
     
-    Interazioni di permanenza possono avere diversi timer base all'impatto di navigazione: funzioni più utilizzate in genere trarranno vantaggio da tempi di riempimento, mentre le funzioni più CONSEQUENZIALI possono trarre vantaggio da tempi più lunghi di riempimento. Quando si usa un effetto di riempimento per visualizzare questi timer, curve di animazione del colore di riempimento possono influire positivamente un sentimento di tempi di riempimento. Considerazione da eseguire per abilitare la decisione di utente da fast/Media/lente compilare le sostituzioni di velocità.
+    Le interazioni di attesa possono avere timer diversi in base all'impatto sulla navigazione: le funzioni usate con maggiore frequenza in genere traggono vantaggio da tempi di riempimento più ridotti, mentre le funzioni più consequenziali possono trarre vantaggio da tempi di riempimento più lunghi. Quando viene usato un effetto di riempimento per mostrare questi timer, le curve di animazione del colore di riempimento possono indurre positivamente la sensazione che i tempi di riempimento siano più rapidi. Considera questi aspetti per consentire all'utente di prendere le sue decisioni scegliendo override della velocità di riempimento alta/media/bassa.
     
-3. Ad esempio no-no effetto yo-yo
+3. Evitare l'effetto yo-yo
 
-    L'effetto yo-yo è un modello disagio di movimento della testina che è possibile che durante il posizionamento dei controlli contenuto e head sguardo e permanenza impone agli utenti di costantemente aspetto ripetutamente e in verticale. Barra di spostamento a un elenco con il pulsante head sguardo e permanenza nella parte inferiore, ad esempio, provoca un ciclo di - aspetto verso il basso per permanenza, esaminare risultati, cercare verso il basso di permanenza e così via. Questo modello risulta è spiacevole e deve essere evitato, inserendo i controlli di navigazione in una posizione centralizzata che richiede meno avanti e indietro. Posizione di sosta pulsanti rispetto alla loro effetti diventa importante per comodità.
+    L'effetto yo-yo è uno scomodo andamento del movimento della testa che può verificarsi quando la posizione del contenuto e dei controlli per il puntamento con la testa e l'attesa obbligano gli utenti a guardare ripetutamente in alto e in basso. Ad esempio, se il pulsante per scorrere un elenco mediante puntamento della testa e attesa è posizionato in fondo, l'utente dovrà guardare in basso per effettuare l'attesa, guardare in alto per esaminare i risultati, guardare di nuovo in basso per effettuare l'attesa e così via. Ne risulta una sequenza di movimenti scomoda che è possibile evitare posizionando i controlli di navigazione in un punto centrale per cui si renda meno necessario alzare e abbassare continuamente lo sguardo. Il posizionamento dei pulsanti di attesa in base al loro effetto diventa un fattore importante per il comfort dell'utente.
 
-## <a name="ux-guidelines-and-best-practices"></a>Linee guida dell'esperienza utente e le procedure consigliate
+## <a name="ux-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per l'esperienza utente
 
 ### <a name="target-sizes"></a>Dimensioni delle destinazioni
-  Per essere facilmente accessibile, head sguardo permanenza le destinazioni devono essere sufficientemente grande da destinazione comforatably e tenere premuto uno head stabily nella destinazione per il periodo di tempo prestabilito. Si consiglia una dimensione di destinazione minimo di 2 gradi per ottenere l'esperienza di maggiore familiarità. 
+  Per essere facilmente accessibili, le destinazioni del puntamento con la testa e dell'attesa devono essere grandi abbastanza da consentire all'utente di puntarle agevolmente e di mantenere stabilmente la testa puntata su di esse per l'intervallo di tempo previsto. È consigliabile che le destinazioni abbiano una dimensione di almeno 2 gradi per garantire un'esperienza con il massimo comfort. 
 
 ### <a name="visual-feedback"></a>Feedback visivo
 
-Quando si usa un riempimento radiale per rappresentare il timer di permanenza, iniziare dal centro del pulsante. Una risposta coerente è meno ambiguo rispetto a tutte le direzioni diverse in diversi pulsanti. 
+Quando usi un riempimento radiale per rappresentare il timer di attesa, inizia dalla parte centrale del pulsante. Una risposta uniforme genera meno confusione di tante indicazioni diverse sui vari pulsanti. 
 
-  * Questa regola può essere interrotta anche se per le interazioni direzionale (ad esempio, nav su/giù/sinistra/destra, ecc.). Ad esempio, Microsoft Dynamics 365 Guide rende un'eccezione in avanti/indietro verrà mantenuto riempie a destra.
-  * Prendere in considerazione l'inversione di riempimento radiale dall'esterno, per gli scenari, ad esempio usare un pulsante di disattivazione. Il sentimento inversa di pressione di un pulsante è un modello visual interessante per mantenere. 
+  * È tuttavia possibile contravvenire a questa regola per le interazioni direzionali, ad esempio per la navigazione verso l'alto, il basso, a sinistra, a destra e così via. Ad esempio, Microsoft Dynamics 365 Guides fa un'eccezione per AVANTI/INDIETRO, trattandosi di riempimenti sinistra-destra.
+  * Considera la possibilità di invertire il riempimento radiale dall'esterno per scenari come quelli di disattivazione di un pulsante. La sensazione opposta di premere un pulsante è un effetto visivo piacevole da mantenere. 
 
-### <a name="progressive-disclosure"></a>Presentazione progressiva delle
+### <a name="progressive-disclosure"></a>Rivelazione progressiva
 
-Presentazione progressiva delle significa solo che mostra i dettagli che è pertinente in ogni fase di un'interazione. Per la permanenza, ciò significa che la destinazione di permanenza viene visualizzata in evidenziazione (ad esempio, in un controllo elenco).
+Con la rilevazione progressiva vengono mostrati solo i dettagli rilevanti in ciascuna fase di un'interazione. Nel caso dell'attesa, ciò significa rivelare la destinazione con l'evidenziazione, ad esempio in un controllo elenco.
 
  ### <a name="oversized-targets"></a>Destinazioni di dimensioni eccessive
-Permanenza area può essere maggiore di icona inattiva per renderne più semplice da usare, ad esempio il pulsante Indietro nelle guide di Microsoft Dynamics 365.
+L'area di attesa può essere più grande dell'icona inattiva per agevolare l'uso, come nel caso del pulsante Indietro in Microsoft Dynamics 365 Guides.
 
-### <a name="prevent-flickering-with-delayed-feedback"></a>Evitare lo sfarfallio ritardata e suggerimenti
-Usare un breve ritardo prima di avviare un feedback visivo per evitare lo sfarfallio quando un utente passa su un obiettivo di permanenza.
-* Per pulsanti inteacted con frequenza, mantenere il ritardo molto breve in modo che l'applicazione scelga reattiva.
-* Per i pulsanti sono ha interagiti con infrequenctly un ritardo maggiore può essere approprate per evitare l'interfaccia sente twitchy.
+### <a name="prevent-flickering-with-delayed-feedback"></a>Evitare lo sfarfallio con un feedback ritardato
+Aggiungi un breve ritardo prima di avviare il feedback visivo per evitare lo sfarfallio quando qualcuno passa su una destinazione di attesa.
+* Per i pulsanti con cui si interagisce frequentemente, specifica un ritardo molto breve in modo che l'applicazione risulti reattiva.
+* Per i pulsanti con cui si interagisce di rado, può essere utile specificare un ritardo maggiore per evitare che l'interfaccia risulti tremolante.
 
-## <a name="ui-patterns"></a>Modelli dell'interfaccia utente
+## <a name="ui-patterns"></a>Modelli per l'interfaccia utente
 
-### <a name="high-frequency-buttons"></a>Pulsanti ad alta frequenza
-![Pulsante Avanti di Microsoft Dynamics 365 Guide](images/GuideNextButton.png "pulsante Avanti di Microsoft Dynamics 365 Guide") pulsanti ad alta frequenza sono disponibili pulsanti che vengono comunemente utilizzati in tutta l'applicazione. Un buon esempio di questi sono i pulsanti Avanti e indietro nelle guide di Microsoft Dynamics 365.
+### <a name="high-frequency-buttons"></a>Pulsanti usati frequentemente
+![Pulsante Avanti di Microsoft Dynamics 365 Guides](images/GuideNextButton.png "Pulsante Avanti di Microsoft Dynamics 365 Guides") I pulsanti usati frequentemente sono pulsanti usati comunemente all'interno di un'applicazione. Un buon esempio è rappresentato dai pulsanti Avanti e Indietro in Microsoft Dynamics 365 Guides.
 
-Pulsanti ad alta frequenza devono...
-* essere pulsanti più grandi, più facile da colpire con head sguardo
-* rimangono quasi altezza sotto controllo per evitare ergonomico sforzo.
+I pulsanti usati frequentemente dovrebbero:
+* essere pulsanti piuttosto grandi, in modo che sia più facile puntarli mediante puntamento con la testa;
+* essere posizionati all'altezza degli occhi per evitare la tensione dei muscoli a vantaggio dell'ergonomia.
 
-### <a name="low-frequency-buttons"></a>Pulsanti di bassa frequenza
-I pulsanti di bassa frequenza sono pulsanti che non sono ha interagiti con regolarmente in tutta l'applicazione. Un buon esempio potrebbe essere un pulsante per accedere al menu impostazioni, o un pulsante per cancellare tutto il lavoro.
+### <a name="low-frequency-buttons"></a>Pulsanti usati raramente
+I pulsanti usati raramente sono pulsanti con cui si interagisce con meno regolarità all'interno dell'applicazione. Un buon esempio è rappresentato da un pulsante che consente di accedere al menu delle impostazioni o di cancellare tutto il lavoro svolto.
 
-* Provare a mantenere questi pulsanti dall'area percorsi head sguardo frequenti per evitare l'attivazione accidentale. 
+* Prova a posizionare questi pulsanti in modo che non intralcino i percorsi di puntamento con la testa di uso frequente per evitare che vengano attivati accidentalmente. 
 
 ### <a name="confirmations"></a>Conferme
-![Finestra di dialogo Conferma le guide Microsoft Dynamics 365](images/GuidesConfirmation.png "finestra di dialogo Conferma le guide Microsoft Dynamics 365")
+![Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides](images/GuidesConfirmation.png "Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides")
 
-Quando un'azione ha un impatto significativo, come l'addebito di costi, l'eliminazione di lavoro o avviare un processo lungo, è utile verificare che un utente deve selezionare un pulsante. Head-sguardo e permanenza interfacce utente vi sono alcune considerazioni per le finestre di dialogo di conferma e sui modelli:
+Quando un'azione ha un impatto significativo, ad esempio perché determina un addebito di denaro, l'eliminazione del lavoro svolto o l'avvio di un lungo processo, è utile chiedere alla persona di confermare che intendesse effettivamente selezionare un determinato pulsante. Per le interfacce utente di puntamento con la testa e attesa è necessario attenersi ad alcuni modelli e considerare alcuni aspetti relativi alle finestre di dialogo di conferma:
 
-  * Mostra evidenziazione della selezione nel pulsante principale.
-  * Rivelare destinazione permanenza in contemporanea con evidenziazione della selezione.
-  * Per il pulsante secondario, evidenziare la destinazione di permanenza in head sguardo.
+  * Mostra l'evidenziazione della selezione sul pulsante principale.
+  * Rivela la destinazione dell'attesa contemporaneamente all'evidenziazione della selezione.
+  * Per il pulsante secondario, rivela la destinazione dell'attesa al momento del puntamento con la testa.
         
 ### <a name="toggle-buttons"></a>Interruttori
-Pulsanti interruttore richiedono una logica di immagini per il corretto funzionamento. Quando un utente trova su un interruttore e actives lo, devono uscire il pulsante e quindi tornare a riavviare la logica di permanenza. È importante che i pulsanti tipo hanno un chiaro attiva rispetto a stato inattivo. 
+Per funzionare correttamente, gli interruttori necessitano di una logica più sottile. Quando una persona si sofferma (ovvero resta in attesa) su un interruttore e lo attiva, deve uscire dal pulsante e quindi tornare per riavviare la logica di attesa. È importante che i pulsanti attivabili o disattivabili come interruttori abbiano uno stato attivo chiaramente diverso dallo stato inattivo. 
 
 ### <a name="list-views"></a>Visualizzazioni elenco
-![Finestra di dialogo Conferma le guide di Microsoft Dynamics 365](images/GuidesListView.png "finestra di dialogo Conferma le guide di Microsoft Dynamics 365") visualizzazioni elenco presentano una sfida particolare per head sguardo e permanenza input. Gli utenti devono essere in grado di analizzare il contenuto senza senso che è necessario tiptoe tutto gli obiettivi di permanenza. 
+![Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides](images/GuidesListView.png "Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides") Le visualizzazioni elenco presentano una specifica problematica correlata all'input mediante il puntamento con la testa e l'attesa. Gli utenti devono poter analizzare il contenuto senza avere la sensazione di doversi muovere con cautela tra le destinazioni di attesa. 
 
-Alcuni suggerimenti per la Progettazione visualizzazioni elenco:
-* dispone l'intera riga evidenziare quando gazed head ma non inizia permanenza, a meno che non è head sguardo nella destinazione permanenza specifico.
-* Mostra solo la destinazione di permanenza quando la riga viene evidenziata per ridurre qualsiasi disturbo visivo.
-* essere chiari e coerenti con la posizione di sosta destinazioni.
-* Non vengono visualizzati che tutti permanenza destinazioni in una sola volta per evitare ricorrenti dell'interfaccia utente
-* riutilizzare lo stesso modello più frequentemente possibile per stabilire la conoscenza dell'esperienza utente
+Seguono alcuni suggerimenti per progettare le visualizzazioni elenco:
+* Fai in modo che l'intera riga venga evidenziata quando viene puntata con la testa, ma fai iniziare l'attesa solo quando con la testa viene puntata la destinazione di attesa specifica.
+* Mostra la destinazione di attesa solo quando la riga è evidenziata per ridurre il disturbo visivo.
+* Posiziona le destinazioni di attesa in modo chiaro e coerente.
+* Non mostrare tutte le destinazioni di attesa contemporaneamente, in modo da non fornire un'interfaccia utente ripetitiva.
+* Riutilizza lo stesso modello il più possibile per sviluppare un senso di familiarità con l'esperienza utente.
  
- ## <a name="see-also"></a>Vedere anche
+ ## <a name="see-also"></a>Vedi anche
 * [Manipolazione diretta con le mani](direct-manipulation.md)
 * [Puntamento e commit con le mani](point-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)

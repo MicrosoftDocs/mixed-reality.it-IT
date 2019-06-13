@@ -1,25 +1,25 @@
 ---
 layout: LandingPage
 title: Progettazione
-description: Questo materiale sussidiario è stato creato da finestre di progettazione, gli sviluppatori, i responsabili del programma Microsoft e i ricercatori, la cui attività coinvolge holographic dispositivi (ad esempio, HoloLens) e coinvolgente e concreto (ad esempio le cuffie Acer e realtà mista di HP Windows). Pertanto, prendere in considerazione questo lavoro come un set di argomenti per 'sulla progettazione per gli schermi azionata Windows'.
+description: Queste linee guida sono state create da progettisti, sviluppatori, program manager e ricercatori Microsoft impegnati nella realizzazione di dispositivi olografici (come HoloLens) e dispositivi di tipo immersive (come i visori VR di Windows Mixed Reality Acer e HP). Si tratta di un set di argomenti utili per la progettazione di app Windows per caschi con visore.
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
-keywords: Realtà mista di Windows, progettazione, l'interazione, stile, colore, i modelli dell'app, controlli, le app di esempio, il Toolkit di realtà mista, MRTK
+keywords: Windows Mixed Reality, progettazione, interazione, stile, colore, modelli di app, controlli, app di esempio, Mixed Reality Toolkit, MRTK
 ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66039205"
 ---
-# <a name="design-for-mixed-reality"></a>Progettazione per realtà mista
+# <a name="design-for-mixed-reality"></a>Progettazione per la realtà mista
 
-![Progettazione per realtà mista](images/Bicycle-Leschi10.gif)
+![Progettazione per la realtà mista](images/Bicycle-Leschi10.gif)
 
-Questo materiale sussidiario è stato creato da finestre di progettazione, gli sviluppatori, i responsabili del programma Microsoft e i ricercatori, la cui attività coinvolge holographic dispositivi (ad esempio, HoloLens) e coinvolgente e concreto (ad esempio le cuffie Acer e realtà mista di HP Windows). Pertanto, prendere in considerazione questo lavoro come un set di argomenti per 'sulla progettazione per gli schermi azionata Windows'.
+Queste linee guida sono state create da progettisti, sviluppatori, program manager e ricercatori Microsoft impegnati nella realizzazione di dispositivi olografici (come HoloLens) e dispositivi di tipo immersive (come i visori VR di Windows Mixed Reality Acer e HP). Si tratta di un set di argomenti utili per la progettazione di app Windows per caschi con visore.
 
 ## <a name="article-categories"></a>Categorie di articoli
 
@@ -34,21 +34,21 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Iniziare a progettare</h3>
+                        <h3>Introduzione alla progettazione</h3>
                         <p>
-                            <a href="mixed-reality.md">Che cos'è impostato su mixed realtà?</a>
+                            <a href="mixed-reality.md">Che cos'è la realtà mista?</a>
                         </p>
                         <p>
-                            <a href="about-this-design-guidance.md">Su questo materiale sussidiario</a>
+                            <a href="about-this-design-guidance.md">Informazioni su queste linee guida per la progettazione</a>
                         </p>
                         <p>
-                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Il primo anno del team di progettazione</a>
+                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Il mio primo anno nel team di progettazione</a>
                         </p>
                         <p>
-                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Espandendo il processo di progettazione per realtà mista</a>
+                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Espansione del processo di progettazione per la realtà mista</a>
                         </p>
                         <p>
-                            <a href="case-study-the-pursuit-of-more-personal-computing.md">L'esercizio di elaborazione più personale</a>
+                            <a href="case-study-the-pursuit-of-more-personal-computing.md">La ricerca di un'esperienza di uso del computer più personale</a>
                         </p>
                     </div>
                 </div>
@@ -67,19 +67,19 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                     <div class="cardText">
                         <h3>Sistema e strumenti di progettazione per la realtà mista</h3>
                         <p>
-                            <a href="comfort.md">Comfort</a>
+                            <a href="comfort.md">Comodità</a>
                         </p>
             <p>
-                            <a href="interaction-fundamentals.md">Interazioni instinctual</a>
+                            <a href="interaction-fundamentals.md">Interazioni istintive</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Le mani e controller di movimento</a>
+                            <a href="hands-and-tools.md">Mani e controller del movimento</a>
                         </p>
                         <p>
                             <a href="hands-free.md">Mani libere</a>
                         </p>
                          <p>
-                            <a href="gaze-and-commit.md">Head-sguardo ed eseguire il commit</a>
+                            <a href="gaze-and-commit.md">Puntamento con la testa e commit</a>
                         </p>
                     </div>
                 </div>
@@ -101,13 +101,13 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                             <a href="color,-light-and-materials.md">Colore, chiaro e materiali</a>
                         </p>
                          <p>
-                            <a href="spatial-sound-design.md">Progettazione spaziale</a>
+                            <a href="spatial-sound-design.md">Progettazione dell'audio spaziale</a>
                         </p>
                         <p>
-                            <a href="typography.md">Typography</a>
+                            <a href="typography.md">Tipografia</a>
                         </p>
                         <p>
-                            <a href="scale.md">Scalabilità</a>
+                            <a href="scale.md">Ridimensionamento</a>
                         </p>                      
                     </div>
                 </div>
@@ -126,16 +126,16 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                     <div class="cardText">
                         <h3>Modelli di app</h3>
                         <p>
-                            <a href="types-of-mixed-reality-apps.md">Tipi di App di realtà mista</a>
+                            <a href="types-of-mixed-reality-apps.md">Tipi di app di realtà mista</a>
                         </p>
                         <p>
-                            <a href="room-scan-visualization.md">Visualizzazione analisi chat room</a>
+                            <a href="room-scan-visualization.md">Visualizzazione della scansione dello spazio</a>
                         </p>
                         <p>
                             <a href="cursors.md">Cursori</a>
                         </p>
                         <p>
-                            <a href="billboarding-and-tag-along.md">Del billboard e tag-along</a>
+                            <a href="billboarding-and-tag-along.md">Billboarding e tag-along</a>
                         </p>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                             <a href="text-in-unity.md">Testo in Unity</a>
                         </p>
                         <p>
-                            <a href="interactable-object.md">Oggetto si</a>
+                            <a href="interactable-object.md">Oggetto con supporto per interazioni</a>
                         </p>
                         <p>
                             <a href="object-collection.md">Raccolta di oggetti</a>
@@ -166,7 +166,7 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
                             <a href="progress.md">Visualizzazione dello stato</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Rettangolo di selezione e barra dell'App</a>
+                            <a href="app-bar-and-bounding-box.md">Barra dell'app e cubo di delimitazione</a>
                         </p>
                     </div>
                 </div>
@@ -178,12 +178,12 @@ Questo materiale sussidiario è stato creato da finestre di progettazione, gli s
 
 ## <a name="sample-apps"></a>App di esempio
 
-Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro team.
+Crea esperienze di alto livello a partire dagli esempi progettati e creati dal nostro team.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
-        <a href="periodic-table-of-the-elements.md" title="Tabella periodico degli elementi" data-linktype="absolute-path">
+        <a href="periodic-table-of-the-elements.md" title="Tavola periodica degli elementi" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -193,8 +193,8 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Tabella periodico degli elementi</h3>
-                            <p>Informazioni su come creare il layout una matrice di oggetti nello spazio 3D con vari tipi di area con una raccolta di oggetti.</p>
+                            <h3>Tavola periodica degli elementi</h3>
+                            <p>Informazioni su come definire il layout di una matrice di oggetti nello spazio 3D con vari tipi di superficie usando una raccolta di oggetti.</p>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                         <div class="cardText">
                             <h3>Modulo lunare</h3>
-                            <p>Informazioni su come estendere i movimenti di base di HoloLens con rilevamento due mani e input controller Xbox.</p>
+                            <p>Informazioni su come estendere i movimenti di base di HoloLens con tracciamento a due mani e input del controller Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
         </a>
     </li>
     <li>
-        <a href="galaxy-explorer.md" title="Esplora Galaxy" data-linktype="absolute-path">
+        <a href="galaxy-explorer.md" title="Galaxy Explorer" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -232,7 +232,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                         <div class="cardText">
                             <h3>Galaxy Explorer</h3>
-                            <p>Il progetto di Esplora Galaxy è pronto. È condiviso le tue idee con la community, ha scelto di un'app, guardata compilare la soluzione, un team e può ora ottenere il codice sorgente.</p>
+                            <p>Il progetto Galaxy Explorer è pronto. Hai condiviso le tue idee con la community, hai scelto un'app, hai osservato un team durante la fase di sviluppo e ora puoi avere il codice sorgente.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Toolkit di realtà mista - Unity" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -258,7 +258,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Toolkit di realtà mista - Unity</h3>
+                        <h3>Mixed Reality Toolkit - Unity</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -267,7 +267,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
       </a>  
     </li>
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Toolkit di realtà mista" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Mixed Reality Toolkit" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -277,7 +277,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Toolkit di realtà mista</h3>
+                        <h3>Mixed Reality Toolkit</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -326,11 +326,11 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
 </ul>
 
 
-## <a name="general-design-resources"></a>Risorse di progettazione generale
+## <a name="general-design-resources"></a>Risorse di progettazione generali
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="http://fluent.microsoft.com" title="Sistema Fluent Design" data-linktype="absolute-path">
+    <a href="http://fluent.microsoft.com" title="Sistema di progettazione Fluent Design" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -349,7 +349,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
       </a>  
     </li>
     <li>
-    <a href="https://www.microsoft.com/design/inclusive" title="Inclusivo progettazione presso Microsoft" data-linktype="absolute-path">
+    <a href="https://www.microsoft.com/design/inclusive" title="Progettazione inclusiva di Microsoft" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -359,7 +359,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Inclusivo progettazione presso Microsoft</h3>
+                        <h3>Progettazione inclusiva di Microsoft</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -368,7 +368,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Progettazione di app Universal Windows Platform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Progettazione di app UWP (Universal Windows Platform)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +378,7 @@ Compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Progettazione di app Universal Windows Platform (UWP)</h3>
+                        <h3>Progettazione di app UWP (Universal Windows Platform)</h3>
                         <p> </p>
                     </div>
                 </div>

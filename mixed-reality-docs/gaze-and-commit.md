@@ -1,21 +1,21 @@
 ---
-title: Head-sguardo ed eseguire il commit
-description: Panoramica del modello di input sguardo di inizio e commit
+title: Puntamento con la testa e commit
+description: Panoramica del modello di input puntamento con la testa e commit
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Progettare sguardo, sguardo targeting, interazione, realtà mista
-ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
-ms.translationtype: MT
+keywords: realtà mista, sguardo fisso, selezione della destinazione con lo sguardo fisso, interazione, progettazione
+ms.openlocfilehash: d9eae3c0cfceba7c2c31425941dfce865f3aa609
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974871"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692308"
 ---
-# <a name="head-gaze-and-commit"></a>Head-sguardo ed eseguire il commit
-Head-sguardo ed eseguire il commit è un modello di input che coinvolge destinato a un oggetto con direzione di inizio in avanti che punta (head-direction) e quindi agisce su di esso con una replica secondaria di input, ad il movimento mano Air toccare o voce di comando "Select". Viene considerato un modello di input "molto" con manipolazione indiretta, ovvero che viene utilizzato meglio per l'interazione con contenuto che è di là arms raggiungere.
+# <a name="head-gaze-and-commit"></a>Puntamento con la testa e commit
+Puntamento con la testa e commit è un modello di input che prevede la selezione di un oggetto come destinazione puntando avanti con la testa (direzione della testa) e agendo su di esso con un input secondario quale il movimento della mano per la simulazione del tocco o il comando vocale "Seleziona". Viene considerato un modello di input "da lontano" con manipolazione indiretta, in quanto è consigliabile usarlo per interagire con contenuto non raggiungibile nemmeno stendendo le braccia.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -28,182 +28,182 @@ Head-sguardo ed eseguire il commit è un modello di input che coinvolge destinat
     </colgroup>
     <tr>
         <td><strong>Modello di input</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Head-sguardo ed eseguire il commit</td>
+        <td>Puntamento con la testa e commit</td>
         <td>✔️ Consigliato</td>
-        <td>✔️ Consigliato (in terza scelta - <a href="interaction-fundamentals.md">vedere le altre opzioni</a>)</td>
-        <td>Opzione alternativa ➕</td>
+        <td>✔️ Consigliato (terza scelta - <a href="interaction-fundamentals.md">Vedi le altre opzioni</a>)</td>
+        <td>➕ Opzione alternativa</td>
     </tr>
 </table>
 
-## <a name="head-gaze"></a>Head-sguardo
-Realtà mista auricolari usano la posizione e l'orientamento della testina dell'utente per determinare il vettore di direzione head. È possibile considerare questo come il laser che faccia riferimento dritto dal direttamente tra gli occhi dell'utente. Si tratta di un piuttosto grossolana approssimazione di dove sta guardando l'utente. L'applicazione possa interseca il raggio con oggetti reali o virtuali e creare un cursore in tale posizione per consentire all'utente di sapere che cosa sono in uso.
+## <a name="head-gaze"></a>Puntamento con la testa
+I visori VR realtà mista usano la posizione e l'orientamento della testa dell'utente per determinare il vettore di direzione della testa. Per comprendere questo concetto, pensa a un laser che punti dritto davanti partendo direttamente tra gli occhi dell'utente. Questa è una grossolana approssimazione del punto guardato dall'utente. L'applicazione è in grado di intersecare questo raggio con oggetti virtuali o del mondo reale e di disegnare un cursore in quella posizione per consentire all'utente di capire cosa sta puntando in quel momento.
 
-Oltre a head sguardo, alcuni auricolari realtà mista, ad esempio le 2 HoloLens includono sotto controllo i sistemi che producono un vettore visiva di rilevamento. Ciò fornisce una misura con granularità fine del dove sta guardando l'utente. È possibile compilare sguardo ed eseguire il commit le interazioni tramite sguardo sotto controllo, ma ciò comporta un set di vincoli di progettazione, che verranno trattati separatamente in molto diverso il [occhio rilevamento articolo](eye-tracking.md).
+Oltre al puntamento con la testa, alcuni visori VR realtà mista come HoloLens 2 includono sistemi di tracciamento oculare che producono un vettore di sguardo fisso. In questo modo si ottiene una misurazione precisa di dove sta guardando l'utente. Usando lo sguardo fisso è possibile creare interazioni basate sullo sguardo fisso e sul commit, ma in questo caso è necessario tenere conto di una serie molto diversa di vincoli di progettazione che verranno trattati separatamente nell'[articolo relativo al tracciamento oculare](eye-tracking.md).
 
-## <a name="commit"></a>Eseguire il commit
-Dopo la destinazione è un oggetto o un elemento dell'interfaccia utente, l'utente può interagire o "click" su di essa utilizzando input secondari. Questo è noto come il passaggio di commit del modello. Sono supportati i seguenti metodi di commit:
+## <a name="commit"></a>Commit
+Dopo aver selezionato come destinazione un elemento dell'interfaccia utente o un oggetto, l'utente può interagire con esso o "farvi clic" usando un input secondario. Questo è il cosiddetto passaggio di commit del modello. Sono supportati i metodi di commit seguenti:
 
-- Movimento dell'indice puntato
-- Pronunciare il comando vocale "Select" o uno dei comandi vocali destinazione
-- Fare clic sul pulsante singolo un [HoloLens Clicker](hardware-accessories.md#hololens-clicker)
-- Fare clic sul pulsante 'A' su un Xbox Gamepad
-- Fare clic sul pulsante 'A' in un Controller adattivo Xbox
+- Eseguire una simulazione del tocco
+- Pronunciare il comando vocale "Seleziona" o uno dei comandi vocali specifici per la situazione
+- Premere il pulsante singolo su un [dispositivo Clicker HoloLens](hardware-accessories.md#hololens-clicker)
+- Premere il pulsante 'A' su un game pad Xbox
+- Premere il pulsante 'A' su un controller adattivo Xbox
 
-### <a name="head-gaze-and-air-tap-gesture"></a>Head-sguardo e aria gesto tocco
-Indice puntato è un gesto tocco con l'icona della mano mantenuto in verticale. Per eseguire l'indice puntato, generare il dito indice nella posizione pronto, quindi avvicinare le dita con il controllo thumb e generare il dito indice eseguire il backup per rilasciare. In 1 HoloLens, indice puntato è l'input secondario più comune.
+### <a name="head-gaze-and-air-tap-gesture"></a>Puntamento con la testa e simulazione del tocco
+Per simulazione del tocco si intende un gesto tocco fatto con la mano mantenuta in verticale. Per simulare il tocco, alza il dito indice in posizione di pronto e poi avvicinalo al pollice, quindi alza di nuovo l'indice per rilasciare. In HoloLens 1 la simulazione del tocco è l'input secondario più comune.
 
-![Con un dito nella posizione pronta e quindi un movimento toccare o fare clic su](images/readyandpress.jpg)<br>
+![Dito in posizione di pronto e quindi un movimento di tocco o di clic](images/readyandpress.jpg)<br>
 
-Indice puntato è disponibile anche su HoloLens 2 e è stato aumentato dalla versione originale. Quasi tutti i tipi di pinches sono ora supportati, fino a quando l'icona della mano è verticale e ha ancora. Questo rende molto più semplice per gli utenti apprendere e di eseguire il movimento.  Questo nuovo indice puntato sostituisca il precedente tramite l'API stessa, in modo che le applicazioni esistenti otterranno automaticamente il nuovo comportamento dopo la ricompilazione per HoloLens 2.
+La simulazione del tocco è disponibile anche in HoloLens 2 e viene riconosciuta con maggiore flessibilità rispetto alla versione originaria. Ora sono supportati quasi tutti i tipi di avvicinamento delle dita, purché la mano venga mantenuta in verticale e ferma. Ciò consente agli utenti di apprendere ed eseguire più facilmente il movimento.  Questa nuova simulazione del tocco sostituisce quella precedente tramite la stessa API, pertanto le applicazioni esistenti avranno automaticamente il nuovo comportamento dopo la ricompilazione per HoloLens 2.
 
-### <a name="head-gaze-and-select-voice-command"></a>Head-sguardo e "Selezionare" vocali comando
-L'esecuzione di comandi vocali è uno dei metodi di interazione principale nella realtà mista. Fornisce un meccanismo molto potente "Mani libero" per controllare il sistema. Sono disponibili tipi differente di modelli di interazione vocale:
+### <a name="head-gaze-and-select-voice-command"></a>Puntamento con la testa e comando vocale "Seleziona"
+L'uso di comandi vocali è uno dei principali metodi di interazione nella realtà mista e offre un potente meccanismo per controllare il sistema "senza usare le mani". Sono disponibili diversi tipi di modelli di interazione vocale:
 
-- Il comando generico "Select" che consente di eseguire un "fare clic su" azionamento o commit come input secondari.
-- Comandi dell'oggetto, ad esempio "Chiudi" o "Ingrandirlo" che consente di eseguire ed eseguire il commit a un'azione come input secondari.
-- File globali, ad esempio "Torna all'inizio" che non richiedono una destinazione.
-- Interfacce utente conversazione o entità, come Cortana dotati di una funzionalità del linguaggio naturale per intelligenza artificiale.
-- File personalizzato
+- Il comando generico "Seleziona" che consente di eseguire un "clic" oppure un commit come input secondario.
+- I comandi oggetto come "Chiudi" o "Più grande" che consentono di eseguire un'azione e di effettuarne il commit come input secondario.
+- I comandi globali come "Vai a Start" che non richiedono una destinazione.
+- Le interfacce utente di conversazione o le entità come Cortana che hanno la capacità di usare un linguaggio naturale IA.
+- Comandi personalizzati.
 
-Per trovare altri dettagli e un elenco di comprenhesive di comandi disponibili e sul relativo utilizzo, consultare il [l'esecuzione di comandi vocali](voice-design.md) indicazioni.
-
-
-### <a name="head-gaze-and-hololens-clicker"></a>Head-sguardo e HoloLens Clicker
-Il HoloLens Clicker è il primo dispositivo periferico creato appositamente per HoloLens e viene fornita con la versione di sviluppo di HoloLens 1. Il HoloLens Clicker consente all'utente di fare clic su con movimento manuale minimo ed eseguire il commit come input secondari. Il clicker HoloLens si connette a HoloLens 1 o 2 tramite Bluetooth Low Energy (BTLE).
-
-![](images/hololens-clicker-500px.jpg)<br>
-HoloLens Clicker
-
-Sono disponibili altre informazioni e istruzioni per associare il dispositivo [qui](hardware-accessories.md#pairing-bluetooth-accessories)
+Per altri dettagli e un elenco completo dei comandi disponibili e di come usarli, vedi le istruzioni relative all'[esecuzione dei comandi vocali](voice-design.md).
 
 
+### <a name="head-gaze-and-hololens-clicker"></a>Puntamento con la testa e dispositivo Clicker HoloLens
+Il dispositivo Clicker HoloLens è la prima periferica realizzata specificamente per HoloLens e viene fornito con HoloLens 1 Development Edition. Tale dispositivo consente a un utente di fare clic con un movimento minimo della mano e di eseguire il commit come input secondario. Il dispositivo Clicker HoloLens può essere collegato a HoloLens 1 o 2 tramite Bluetooth Low Energy (BTLE).
+
+![Dispositivo Clicker HoloLens](images/hololens-clicker-500px.jpg)<br>
+*Dispositivo Clicker HoloLens*
+
+Per altre informazioni e istruzioni su come associare il dispositivo, fai clic [qui](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="head-gaze-and-xbox-wireless-controller"></a>Head-sguardo e Controller Xbox Wireless
-Il Controller Wireless Xbox consente l'esecuzione di un azionamento "fare clic su" come database secondario con il pulsante di input. Il dispositivo viene mappato a un set predefinito di azioni che consentono di esplorare e controllo del sistema. Se si desidera personalizzare il controller, usare l'App di Accesories Xbox per configurare il Controller Wireless Xbox.
-
-![](images/xboxcontroller.jpg)<br>
-Controller Xbox Wireless
-
-[Associazione di un controller Xbox con il PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="head-gaze-and-xbox-adaptive-controller"></a>Controller adattivo head sguardo e Xbox
-Progettato principalmente per soddisfare le esigenze dei giocatori con difficoltà, il Controller di Adaptive Xbox è un hub unificato per i dispositivi che consente di rendere più accessibile realtà mista.
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Puntamento con la testa e controller wireless Xbox
+Il controller wireless Xbox consente di eseguire un "clic" come input secondario mediante il pulsante A. Il dispositivo viene mappato a un set predefinito di azioni che facilitano la navigazione all'interno del sistema e il controllo del sistema stesso. Se vuoi personalizzare il controller wireless Xbox, configuralo usando l'app Accessori Xbox.
 
-Il Controller adattivo Xbox consente l'esecuzione di un azionamento "fare clic su" come un database secondario con il pulsante di input. Il dispositivo viene mappato a un set predefinito di azioni che consentono di esplorare e controllo del sistema. Se si desidera personalizzare il controller, usare l'App di Accesories Xbox per configurare il Controller adattivo Xbox.
+![Controller wireless Xbox](images/xboxcontroller.jpg)<br>
+*Controller wireless Xbox*
 
-![](images/xbox-adaptive-controller-devices.jpg)<br>
-Controller adattivo Xbox
+[Associazione di un controller Xbox al PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
-Connetti i dispositivi esterni, ad esempio commutatori, pulsanti, punti di montaggio e joystick per creare un'esperienza personalizzata controller che ricade sul cliente in modo univoco. Pulsante, thumbstick e trigger di input vengono controllate con tecnologie e dispositivi connessi tramite jack mm 3.5 e le porte USB.
 
-![](images/xbox-adaptive-controller-ports.jpg)<br>
-Porta Controller adattivo Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Puntamento con la testa e controller adattivo Xbox
+Progettato principalmente per soddisfare le esigenze dei giocatori con mobilità ridotta, il controller adattivo Xbox è un hub unificato per i dispositivi che contribuisce a rendere più accessibile la realtà mista.
+
+Il controller adattivo Xbox consente di eseguire un "clic" come input secondario mediante il pulsante A. Il dispositivo viene mappato a un set predefinito di azioni che facilitano la navigazione all'interno del sistema e il controllo del sistema stesso. Se vuoi personalizzare il controller adattivo Xbox, configuralo usando l'app Accessori Xbox.
+
+![Controller adattivo Xbox](images/xbox-adaptive-controller-devices.jpg)<br>
+*Controller adattivo Xbox*
+
+Collega dispositivi esterni come interruttori, pulsanti, montaggi e joystick per personalizzare l'utilizzo del controller e creare un'esperienza unicamente tua. Gli input di pulsanti, levette e grilletti sono controllati tramite dispositivi assistivi collegati tramite connettori jack da 3,5 mm e porte USB.
+
+![Porte del controller adattivo Xbox](images/xbox-adaptive-controller-ports.jpg)<br>
+*Porte del controller adattivo Xbox*
 
 [Istruzioni per associare il dispositivo](hardware-accessories.md#pairing-bluetooth-accessories)
 
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Altre informazioni disponibili sul sito Xbox</a>
 
 
-# <a name="head-gaze-design-guidelines"></a>Linee guida di progettazione head sguardo
+## <a name="design-guidelines"></a>Linee guida per la progettazione
 > [!NOTE]
-> Informazioni aggiuntive specifiche di progettazione estasiati [presto](index.md).
+> Saranno [presto disponibili](index.md) altre istruzioni di progettazione specifiche per lo sguardo fisso.
 
-## <a name="head-gaze-targeting"></a>Head-sguardo targeting
-Tutte le interazioni vengono compilate al momento la possibilità di un utente di destinazione l'elemento a cui che si desidera interagire, indipendentemente dalla modalità di input. Realtà mista di Windows, questa operazione viene in genere eseguita usando sguardo dell'utente.
-Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione calcolata del sistema della finalità dell'utente e l'intenzione dell'utente effettivo, deve essere allineati quanto più vicina. Al grado che il sistema interpreta le azioni dell'utente desiderato correttamente, le prestazioni e aumenta la soddisfazione migliora.
+## <a name="head-gaze-targeting"></a>Selezione della destinazione mediante puntamento con la testa
+Tutte le interazioni si basano sulla capacità di un utente di selezionare come destinazione l'elemento con cui vuole interagire, indipendentemente dalla modalità di input. In Windows Mixed Reality questo avviene in genere mediante lo sguardo dell'utente.
+Per consentire a un utente di usufruire con successo di un'esperienza, la comprensione dell'intenzione dell'utente calcolata dal sistema e l'effettiva intenzione dell'utente devono essere allineate il più possibile. Più il sistema interpreta correttamente le azioni che l'utente intende compiere, più aumenta la soddisfazione e migliorano le prestazioni.
 
 
-## <a name="target-sizing-and-feedback"></a>Commenti e suggerimenti e le dimensioni di destinazione
-Il vettore sguardo è stato dimostrato ripetutamente per poter essere usato per specificare come destinazione bene, ma spesso è adatto per gross targeting (acquisizione leggermente maggiori destinazioni). Le dimensioni di destinazione minimo di 1 a 1.5 gradi devono consentire le azioni dell'utente ha esito positivo nella maggior parte degli scenari, anche se le destinazioni di gradi 3 spesso consentono maggiore velocità. Si noti che le dimensioni che le destinazioni degli utenti in modo efficace è un'area 2D anche per gli elementi 3D, qualunque proiezione è rivolta essi devono essere l'area definibili come destinazione. Fornendo alcune salienti della segnalazione che un elemento è "active" (che l'utente è destinato a si) è molto utile: può trattarsi di trattamenti come effetti visibili "mouse", evidenzia audio o fa clic su, o cancellare l'allineamento di un cursore con un elemento.
+## <a name="target-sizing-and-feedback"></a>Dimensioni della destinazione e feedback
+In più occasioni è stato dimostrato come il vettore di sguardo fisso sia utilizzabile per selezionare con precisione la destinazione, ma spesso tale vettore funziona in modo ottimale per selezionare la destinazione con minore precisione, ovvero quando sia necessario acquisire destinazioni di dimensioni più grandi. Dimensioni minime della destinazione da 1 a 1,5 gradi dovrebbero garantire una corretta esecuzione delle azioni dell'utente nella maggior parte degli scenari, benché destinazioni di 3 gradi spesso consentano una velocità superiore. Le dimensioni che l'utente punta come destinazione corrispondono in effetti a un'area 2D persino per gli elementi 3D: qualunque proiezione vi sia di fronte deve essere l'area selezionabile come destinazione. È estremamente utile fornire un segnale che indichi quando un elemento è "attivo", ossia quando l'utente lo sta puntando come destinazione. A tale scopo, possono essere usati effetti visibili "al passaggio del puntatore", clic o evidenziazioni audio oppure il chiaro allineamento di un cursore a un elemento.
 
-![Dimensioni di destinazione ottimale a distanza di 2 metri](images/gazetargeting-size-1000px.jpg)<br>
-*Dimensioni di destinazione ottimale a distanza di 2 metri*
+![Dimensioni ottimali della destinazione a una distanza di 2 metri](images/gazetargeting-size-1000px.jpg)<br>
+*Dimensioni ottimali della destinazione a una distanza di 2 metri*
 
-![Un esempio di evidenziazione di un oggetto di destinazione sguardo](images/gazetargeting-highlighting-640px.jpg)<br>
-*Un esempio di evidenziazione di un oggetto di destinazione sguardo*
+![Esempio di evidenziazione di un oggetto selezionato come destinazione con lo sguardo fisso](images/gazetargeting-highlighting-640px.jpg)<br>
+*Esempio di evidenziazione di un oggetto selezionato come destinazione con lo sguardo fisso*
 
-## <a name="target-placement"></a>Selezione host di destinazione
-Gli utenti spesso riuscirà a trovare gli elementi dell'interfaccia utente che vengono posizionati in modo molto elevato o molto bassa nel loro campo visivo, concentrandosi la maggior parte dei loro attenzione sulle aree intorno a loro lo stato attivo principale (in genere circa livello rossi). Consente l'inserimento di quasi tutte le destinazioni in alcune fuori banda ragionevole intorno a livello di attenzione. Data la tendenza per gli utenti per concentrarsi su un'area visual relativamente piccola in qualsiasi momento (cono attentional della visione è all'incirca 10 gradi), raggruppare gli elementi dell'interfaccia utente per il livello che sono correlati a livello concettuale possono sfruttare i comportamenti di concatenamento dell'attenzione da elemento a un elemento con un account utente viene spostata loro sguardo all'interno di un'area. Durante la progettazione dell'interfaccia utente, tenere presenti le variazioni di grandi dimensioni potenziali nel campo visivo tra HoloLens e auricolari coinvolgente e concreto.
+## <a name="target-placement"></a>Posizionamento della destinazione
+Gli utenti spesso non riescono a trovare gli elementi dell'interfaccia utente posizionati molto in alto o molto in basso nel loro campo visivo, in quanto tendono a concentrare l'attenzione sulle aree intorno al punto focale principale, che in genere si trova approssimativamente al livello degli occhi. Può pertanto rivelarsi utile posizionare la maggior parte delle destinazioni in una fascia ragionevole attorno al livello degli occhi. Data la tendenza degli utenti a concentrarsi su un'area visiva relativamente limitata in un determinato momento (il cono attenzionale della visione è all'incirca di 10 gradi), il fatto di raggruppare gli elementi dell'interfaccia utente in base a come sono correlati concettualmente può dare luogo a comportamenti di concatenamento dell'attenzione da un elemento all'altro man mano che l'utente sposta lo sguardo all'interno di un'area. Quando progetti l'interfaccia utente, tieni presente la grande differenza potenziale di campo visivo tra i visori HoloLens e i visori VR immersive.
 
-![Un esempio di elementi dell'interfaccia utente raggruppati per più semplice sguardo targeting in Esplora Galaxy](images/gazetargeting-grouping-1000px.jpg)<br>
-*Un esempio di elementi dell'interfaccia utente raggruppati per più semplice sguardo targeting in Esplora Galaxy*
+![Esempio di elementi dell'interfaccia utente raggruppati per facilitare la selezione della destinazione con lo sguardo fisso in Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
+*Esempio di elementi dell'interfaccia utente raggruppati per facilitare la selezione della destinazione con lo sguardo fisso in Galaxy Explorer*
 
-## <a name="improving-targeting-behaviors"></a>Miglioramento della destinazione dei comportamenti
-Se l'intenzione dell'utente a un elemento di destinazione può essere determinato o approssimati a stretto contatto, può essere molto utile accettare "near miss" tentativi di interazione come se esse sono destinate in modo corretto. Esistono un numero limitato di metodi corretta che può essere incorporato nelle esperienze di realtà mista:
+## <a name="improving-targeting-behaviors"></a>Miglioramento dei comportamenti di selezione della destinazione
+Se è possibile determinare (o approssimare con una certa precisione) l'intenzione dell'utente di selezionare un elemento come destinazione, può essere molto utile accettare i tentativi di interazione "quasi riusciti" come se avessero avuto esito positivo. Sono disponibili alcuni metodi validi che possono essere incorporati nelle esperienze di realtà mista:
 
-### <a name="head-gaze-stabilization-gravity-wells"></a>Head-sguardo stabilizzazione ("aree di gravità")
-Questa deve essere attiva per la maggior parte/all del tempo. Questa tecnica consente di rimuovere l'instabilità head/collo naturale che gli utenti possono avere. Anche lo spostamento a causa dei comportamenti di ricerca/parlando.
+### <a name="head-gaze-stabilization-gravity-wells"></a>Stabilizzazione del puntamento con la testa ("pozzi di gravità")
+Deve essere attivata per tutto o per la maggior parte del tempo. Questa tecnica consente di eliminare i tremolii naturali della testa o del collo che possono avere gli utenti, nonché il movimento che si produce guardando o parlando.
 
 ### <a name="closest-link-algorithms"></a>Algoritmi di collegamento più vicino
-Queste funzionano meglio in aree con sparse contenuti interattivi. Se è presente un'elevata probabilità che è possibile determinare quali un utente ha tentato di interagire con, è possibile integrare la capacità targeting semplicemente assumendo un certo livello di intent.
+Funzionano al meglio nelle aree con contenuto interattivo sparso. Se vi è un'alta probabilità di determinare l'elemento con cui un utente stava tentando di interagire, puoi integrare le sue capacità di selezione della destinazione semplicemente presupponendo un certo livello di intenzione.
 
-### <a name="backdatingpostdating-actions"></a>Azioni backdating/postdating
-Questo meccanismo è utile per le attività che richiedono velocità. Quando un utente è in movimento attraverso una serie di targeting/attivazione evasive alla velocità, può essere utile per presuppone alcune finalità e consentire mancati passaggi su cui intervenire destinazioni che l'utente ha lo stato attivo leggermente prima o leggermente dopo il tocco (50 ms prima/dopo è rimasto in vigore in test preliminare).
+### <a name="backdatingpostdating-actions"></a>Retrodatazione o postdatazione delle azioni
+Questo meccanismo è utile per le attività che richiedono velocità. Quando un utente esegue rapidamente una serie di operazioni di selezione della destinazione o di attivazione, può essere utile presupporre una certa intenzione e consentire che i passaggi mancati agiscano sulle destinazioni che l'utente aveva come obiettivo leggermente prima o dopo il tocco (50 millisecondi è stato un intervallo efficace nei primi test).
 
-### <a name="smoothing"></a>Anti-aliasing
-Questo meccanismo è utile per gli spostamenti di ricerca del percorso, riducendo l'instabilità/oscillazione leggero a causa di caratteristiche naturale movimento della testina. Quando l'anti-aliasing tramite i movimenti di ricerca del percorso, arrotondare di dimensioni/distanza di spostamenti di tipo invece che nel corso del tempo
+### <a name="smoothing"></a>Definizione di movimenti uniformi
+Questo meccanismo è utile per i movimenti che consentono di disegnare un percorso, in quanto riduce il leggero tremolio o la lieve oscillazione dovuta alle naturali caratteristiche del movimento della testa. Quando decidi di rendere uniformi i movimenti che disegnano un percorso, uniformali in base alla loro entità o distanza anziché in base al tempo.
 
-### <a name="magnetism"></a>Campi magnetici
-Questo meccanismo può essere considerato come una versione più generale degli algoritmi "Più vicino link" - Creazione di un cursore verso una destinazione o aumentare semplicemente hitboxes (se visibilmente o No) quando gli utenti si avvicinano probabilmente destinazioni, tramite una certa conoscenza del layout interattiva per intenzione dell'utente approccio migliore. Ciò risulta particolarmente utile per le destinazioni di piccole dimensioni.
+### <a name="magnetism"></a>Magnetismo
+Questo meccanismo può essere considerato come una versione più generale degli algoritmi di "collegamento più vicino"; è possibile disegnare un cursore verso una destinazione o semplicemente aumentare le hitbox (in modo visibile o meno) man mano che gli utenti si avvicinano a probabili destinazioni, avvalendosi di una certa conoscenza del layout interattivo per avvicinarsi con maggior accuratezza all'intenzione dell'utente. Questa soluzione può risultare particolarmente efficace per le destinazioni di piccole dimensioni.
 
-### <a name="focus-stickiness"></a>Persistenza dello stato attivo
-Quando si determina quale vicino agli elementi interattivi per attivare, fornire un valore di bias all'elemento che è attualmente attivo. Ciò consentirà di ridurre lo stato attivo imprevedibile cambio comportamenti quando mobile in un punto intermedio tra due elementi con rumore naturale.
+### <a name="focus-stickiness"></a>Spostamento dello stato attivo in base all'elemento di interesse corrente
+Quando determini gli elementi interattivi vicini su cui spostare lo stato attivo, prediligi l'elemento su cui è attualmente concentrata l'attenzione. Ciò consentirà di ridurre i passaggi imprevedibili da un'area di interesse all'altra quando ci si trova in un punto intermedio tra due elementi con disturbi naturali.
 
 
 ## <a name="composite-gestures"></a>Movimenti compositi
-Le App in grado di riconoscere le scelte più di solo i singoli. Dalla combinazione scelta, tenere premuto e rilasciare con lo spostamento della mano, movimenti compositi più complessi possono essere eseguiti. Questi gesti compositi o ad alto livello si basano su di basso livello inpui dati spaziali (da indice puntato e Bloom) che gli sviluppatori hanno accesso a.
+Le app sono in grado di riconoscere molto più dei singoli tocchi. Combinando il tocco, la pressione prolungata e il rilascio con il movimento della mano, possono essere eseguiti movimenti compositi più complessi. Questi movimenti compositi o di alto livello si basano sui dati di input spaziali di basso livello (provenienti dalla simulazione del tocco e dall'apertura della mano a fiore) a cui hanno accesso gli sviluppatori.
 
-### <a name="air-tap"></a>Indice puntato
-Il movimento dell'indice puntato (nonché i movimenti seguenti) reagisce solo a un tocco specifico. Per rilevare altre scelte, ad esempio Menu o. é quindi, l'app deve usare direttamente le interazioni di basso livello descritte due componenti chiave movimenti in precedenza nella sezione.
+### <a name="air-tap"></a>Simulazione del tocco
+La simulazione del tocco (come gli altri movimenti descritti di seguito) reagisce solo a un tocco specifico. Per rilevare altri tocchi, come Menu o Afferra, l'app deve usare direttamente le interazioni di livello più basso descritte nella sezione precedente relativa ai due movimenti componente chiave.
 
-### <a name="tap-and-hold"></a>Toccare e tenere premuto
-Tenere premuto è mantenere semplicemente la posizione di un dito verso il basso dell'indice puntato. La combinazione di aria toccare e tenere premuto consente un'ampia gamma di interazioni più complesse "fare clic e trascinare" in combinazione con lo spostamento di gestione risorse di Azure, ad esempio esegue la scelta di un oggetto anziché attivarlo o interazioni secondario "mousedown", ad esempio che mostra un menu di scelta rapida.
-Prestare attenzione quando si progetta per questa azione, tuttavia, come gli utenti può essere soggetta a si rilassa loro maneggevolezza manualmente nel corso di un'operazione estesa.
+### <a name="tap-and-hold"></a>Tocco e pressione prolungata
+La pressione prolungata consiste nel mantenere la posizione del dito abbassato della simulazione del tocco. La combinazione della simulazione del tocco e della pressione prolungata rende possibile una serie di interazioni più complesse di tipo "fare clic e trascinare" se usata insieme al movimento del braccio (ad esempio, per raccogliere un oggetto invece di attivarlo) oppure consente interazioni secondarie di tipo "premere il pulsante del mouse" (ad esempio, per visualizzare un menu di scelta rapida).
+È tuttavia consigliabile prestare attenzione durante la progettazione di questo movimento perché gli utenti possono avere la tendenza ad allentare la posizione della mano durante l'esecuzione di un movimento esteso.
 
 ### <a name="manipulation"></a>Manipolazione
-I movimenti di manipolazione sono utilizzabile per spostare, ridimensionare o ruotare ologramma quando si desidera che l'ologrammi reagire 1:1 per gli spostamenti manuale dell'utente. Un utilizzo di tali spostamenti di tipo 1:1 consiste nel consentire all'utente di disegnare o disegnare nel mondo.
-La selezione di destinazioni iniziali per un movimento di manipolazione deve essere eseguita da sguardo o fa riferimento. Una volta avviata la toccare e tenere premuto, qualsiasi modifica dell'oggetto viene quindi gestita manualmente gli spostamenti, liberando Guardatevi intorno mentre che modificano, all'utente.
+I movimenti di manipolazione possono essere usati per spostare, ridimensionare o ruotare un ologramma quando vuoi che quest'ultimo reagisca con un rapporto 1:1 ai movimenti della mano dell'utente. Uno degli usi possibili di tali movimenti 1:1 è quello di consentire all'utente di disegnare o dipingere nel mondo.
+La selezione iniziale della destinazione per un movimento di manipolazione dovrebbe avvenire mediante sguardo fisso o puntamento. Quando inizia la sequenza tocco e pressione prolungata, qualunque manipolazione dell'oggetto viene gestita dai movimenti della mano, consentendo all'utente di guardarsi intorno mentre esegue la manipolazione.
 
 ### <a name="navigation"></a>Navigazione
-Movimenti di esplorazione operano come un joystick virtuale e possono essere utilizzati per spostarsi di widget dell'interfaccia utente, ad esempio menu radiali. Toccare e tenere premuto per avviare il movimento e quindi spostare la mano all'interno di un cubo 3D normalizzato, incentrata sulla stampa iniziale. È possibile spostare la mano lungo l'asse X, Y o Z da un valore pari a -1 a 1, dove 0 è il punto di partenza.
-Navigazione utilizzabile per compilare in base al relativo alla velocità lo scorrimento continuo o i movimenti zoom, simili alla visualizzazione a scorrimento un'interfaccia utente 2D facendo clic sul pulsante centrale del mouse e quindi spostando il puntatore del mouse su e giù.
+I movimenti di navigazione funzionano come un joystick virtuale e possono essere usati per spostarsi nei widget dell'interfaccia utente, ad esempio nei menu radiali. Tocca e tieni premuto per avviare il movimento, quindi sposta la mano all'interno di un cubo 3D normalizzato, centrato attorno al punto di pressione iniziale. Puoi spostare la mano lungo l'asse X, Y o Z da un valore -1 a 1, essendo lo 0 il punto di partenza.
+La navigazione può essere usata per creare movimenti continui di scorrimento o zoom basati sulla velocità, analoghi allo scorrimento di un'interfaccia utente 2D mediante il clic sul pulsante centrale del mouse e il successivo spostamento del mouse verso l'alto o il basso.
 
-Navigazione con rails si riferisce alla capacità di riconoscere gli spostamenti in determinati asse fino al raggiungimento di determinate soglia su quell'asse. Ciò è utile, solo quando lo spostamento in più di un asse è abilitato in un'applicazione dallo sviluppatore, ad esempio, se un'applicazione è configurata per riconoscere i movimenti di navigazione tra asse Y X, ma anche specificata con rails asse X. In questo caso sistema riconoscerà mano gli spostamenti tra asse X fino a quando rimangono all'interno di un immaginario Guide (Guida) dell'asse X se lo spostamento di disponibilità si verifica anche asse Y.
+Per navigazione con binari si intende la capacità di riconoscere i movimenti su un determinato asse fino al raggiungimento di una certa soglia sullo stesso asse. Ciò è utile quando lo sviluppatore abilita lo spostamento su più di un asse in un'applicazione, ad esempio se l'applicazione è configurata per riconoscere i movimenti di navigazione sugli assi X e Y, ma viene specificato anche l'asse X con binari. In questo caso il sistema riconoscerà i movimenti della mano sull'asse X finché rimangono entro binari (guida) immaginari sull'asse X, se il movimento della mano ha luogo anche sull'asse Y.
 
-All'interno delle App 2D, gli utenti possono usare i movimenti di spostamento verticale a scorrere, eseguire lo zoom avanti o trascinare all'interno dell'app. Questo viene inserito virtuale con un dito tocca all'app per simulare i movimenti tocco dello stesso tipo. Gli utenti possono selezionare le azioni avvengono attivando e disattivando tra gli strumenti della barra di sopra dell'app, selezionando il pulsante o indicante che '< scorrimento/trascinare/> dello zoom'.
+Nelle app 2D gli utenti possono usare movimenti di navigazione verticali per scorrere, eseguire lo zoom o trascinare all'interno dell'app. In questo modo vengono inseriti nell'app tocchi delle dita virtuali per simulare tocchi dello stesso tipo. Gli utenti possono selezionare quali di queste azioni eseguire muovendosi tra gli strumenti sulla barra al di sopra dell'app, facendo clic sul pulsante o dicendo "Strumento <Scorri/Trascina/Zoom>".
 
 [Altre informazioni sui movimenti compositi](gestures.md#composite-gestures)
 
-## <a name="gesture-recognizers"></a>Riconoscitori di movimento
+## <a name="gesture-recognizers"></a>Strumenti di riconoscimento dei movimenti
 
-Un vantaggio dell'utilizzo di riconoscimento del movimento è che è possibile configurare un riconoscitore di movimento solo per i movimenti che di destinazione corrente ologrammi possono accettare. La piattaforma verrà eseguita solo la risoluzione dell'ambiguità necessarie per distinguere questi gesti supportati particolari. In questo modo, ologramma che supporta solo l'indice puntato può accettare qualsiasi periodo di tempo tra pressione e rilascio, mentre un ologrammi che supporta sia toccare e tenere premuto possibile alzare di livello il tocco per l'attesa dopo la soglia di tempo di attesa.
+Uno dei vantaggi derivanti dall'uso del riconoscimento dei movimenti è poter configurare uno strumento di riconoscimento solo per i movimenti che l'ologramma attualmente selezionato come destinazione può accettare. La piattaforma eseguirà esclusivamente la disambiguazione necessaria per distinguere i movimenti supportati specifici. In questo modo, un ologramma che supporta solo la simulazione del tocco può accettare che trascorra un intervallo di tempo di qualunque durata tra la pressione e il rilascio, mentre un ologramma che supporta sia il tocco che la pressione prolungata può trasformare il tocco in pressione prolungata dopo il superamento della soglia temporale per la pressione prolungata.
 
-## <a name="hand-recognition"></a>Riconoscimento di mano
-HoloLens riconosce i movimenti della mano per rilevare la posizione di una o entrambe le mani visibili al dispositivo. HoloLens vede le mani quando sono in stato ready (parte posteriore l'icona della mano è rivolta con dito indice) o lo stato di premuto (parte posteriore l'icona della mano rivolta verso il basso è il dito indice). Quando sono in altri può causare, di HoloLens tali file verranno ignorati.
-Per ogni indicatore rileva tale HoloLens, è possibile accedere alla posizione (senza l'orientamento) e il relativo stato premuto. Quando l'icona della mano si avvicina il bordo della cornice di movimento, ha anche fornito con un vettore di direzione, è possibile mostrare all'utente in modo che sappia come spostare le mani per ottenerlo di nuovo in cui HoloLens può visualizzarlo.
+## <a name="hand-recognition"></a>Riconoscimento della mano
+HoloLens riconosce i movimenti della mano tenendo traccia della posizione di una o di entrambe le mani visibili al dispositivo. HoloLens vede le mani quando sono in stato pronto (dorso della mano rivolto verso di te con il dito indice alzato) o in stato premuto (dorso della mano rivolto verso di te con il dito indice abbassato). Quando le mani sono in altre posizioni, vengono ignorate da HoloLens.
+Per ogni mano rilevata da HoloLens, puoi accedere alla sua posizione (senza orientamento) e allo stato premuto. Non appena la mano si avvicina al bordo della cornice di movimento, viene fornito anche un vettore direzionale che puoi decidere di mostrare all'utente in modo che sappia come muovere la mano per riportarla dove può essere vista da HoloLens.
 
-## <a name="gesture-frame"></a>Frame di movimento
-Per movimenti su HoloLens, l'icona della mano deve essere all'interno di un"movimento", in un intervallo che il rilevamento del movimento fotocamere possono visualizzare in modo appropriato (molto più o meno da naso vita e tra ricade). Gli utenti devono essere sottoposti a training su un'area del riconoscimento per l'esito positivo dell'azione e per i propri comfort (molti utenti inizialmente presupporrà che il frame di movimento deve essere entro la visualizzazione tramite HoloLens e contenere le armi uncomfortably per interagire). Quando si usa il HoloLens Clicker, subito a usare non è necessario essere all'interno della cornice di movimento.
+## <a name="gesture-frame"></a>Cornice di movimento
+Per i movimenti in HoloLens, la mano deve trovarsi all'interno di una "cornice di movimento", in un'area che possa essere vista adeguatamente dalle videocamere di rilevamento dei movimenti (approssimativamente un'area che va dal naso alla vita e che si estende tra le spalle). Gli utenti devono essere addestrati a usare quest'area di riconoscimento sia per la corretta esecuzione delle operazioni sia per il loro comfort (molti di essi inizialmente presumeranno che la cornice di movimento debba essere all'interno della visualizzazione attraverso HoloLens e terranno scomodamente le braccia alzate per interagire). Quando usi il dispositivo Clicker HoloLens, non è necessario che le tue mani si trovino all'interno della cornice di movimento.
 
-Nel caso di movimenti continuati, in particolare, vi è alcuni rischi correlati agli utenti lo spostamento le mani fuori dalla cornice movimenti mentre è in movimento a metà (durante lo spostamento di un determinato oggetto holographic, ad esempio) e la perdita di base al risultato desiderato.
+Soprattutto nel caso di movimenti che continuano, vi è il rischio che gli utenti portino le mani al di fuori della cornice di movimento quando l'operazione non è ancora completata (ad esempio, mentre spostano un oggetto olografico), non riuscendo quindi a ottenere il risultato desiderato.
 
-Esistono tre aspetti da considerare:
+Sono tre gli aspetti da considerare:
 
-- Formazione dell'utente del movimento frame esistenza e limiti approssimativi (tenuto durante l'installazione di HoloLens).
+- Necessità di formare l'utente in merito all'esistenza della cornice di movimento e ai relativi limiti approssimativi (formazione tenuta durante l'installazione di HoloLens).
 
-- Informare gli utenti quando i movimenti sono prossime alla/sostanziale i limiti di intervallo movimento all'interno di un'applicazione, come accade in un movimento perso porterà a risultati indesiderati. Research ha illustrato le qualità di chiave di un sistema di notifica e la shell di HoloLens fornisce un buon esempio di questo tipo di notifica (visual, sul cursore centrale, che indica la direzione nella quale limite attraversamento è in corso).
+- Necessità di notificare agli utenti quando con i loro movimenti si stanno avvicinando o stanno superando i limiti della cornice di movimento all'interno di un'applicazione, in quanto un movimento andato perduto può generare risultati indesiderati. Le ricerche svolte hanno mostrato i principali vantaggi di un tale sistema di notifica e la shell HoloLens ne costituisce un buon esempio (notifica visiva, sul cursore centrale, che indica la direzione in cui si sta oltrepassando il limite).
 
-- Conseguenze di compromettere il funzionamento i limiti di frame di movimento dovrebbero essere ridotta a icona. In genere, ciò significa che il risultato di un movimento deve essere arrestato in corrispondenza del limite, ma non invertito. Ad esempio, se un utente sta spostando un oggetto holographic attraverso una chat room, lo spostamento deve essere interrotta quando viene superata la cornice di movimento, ma non verranno restituita al punto di partenza. L'utente potrebbe esperienza alcuni frustrazione, ma può comprendere più rapidamente i limiti e non è necessario riavviare le azioni desiderate complete ogni volta che.
+- Necessità di ridurre al minimo le conseguenze del superamento dei limiti della cornice di movimento. Questo, in generale, significa che il risultato di un movimento deve arrestarsi in corrispondenza del limite, ma non essere annullato. Ad esempio, se un utente sta spostando un oggetto olografico all'interno di una stanza, lo spostamento deve essere arrestato quando la cornice di movimento viene oltrepassata, ma l'oggetto non deve essere riportato al punto di partenza. L'utente può sentirsi frustrato in questo caso, ma può rendersi conto più rapidamente dei limiti senza dover ricominciare ogni volta a eseguire per intero le azioni desiderate.
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Manipolazione diretta con le mani](direct-manipulation.md)
 * [Puntamento e commit con le mani](point-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)

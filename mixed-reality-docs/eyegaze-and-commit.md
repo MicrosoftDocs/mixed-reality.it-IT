@@ -1,42 +1,42 @@
 ---
-title: Visiva e commit
-description: Panoramica del modello di input visiva e commit
+title: Sguardo fisso e commit
+description: Panoramica del modello di input sguardo fisso e commit
 author: sostel
 ms.author: sostel
 ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Rilevamento rossi, mista realtà, Input, sguardo sotto controllo, come destinazione rossi, HoloLens 2, selezione basata su sotto controllo
+keywords: tracciamento oculare, realtà mista, input, sguardo fisso, selezione oculare della destinazione, HoloLens 2, selezione con gli occhi
 ms.openlocfilehash: 9cc27f24e1275223f33becd1ff0ec6bdf5b43a57
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66455087"
 ---
-# <a name="eye-gaze-and-commit"></a>Visiva e commit
-Con 2 HoloLens, abbiamo la straordinaria opportunità per rendere sguardo & commit più veloce e più a proprio agio usando occhio sguardo anziché sguardo head. Ciò consente di estendere i comuni [head sguardo ed eseguire il commit](gaze-and-commit.md) modello di interazione: 
-1. È sufficiente esaminare una destinazione e 
-2. Per confermare l'intenzione di selezionare la destinazione, eseguire un database secondario con esplicito di input, ad esempio r:  
-   - Movimento mano (ad esempio, un aereo toccare)
-   - Fare clic sul pulsante (ad esempio, su una tastiera Bluetooth o clicker)
-   - Esprimere il comando (ad esempio, "Select")
-   - Appartamento (ad esempio, l'utente mantiene analizzando semplicemente selezionare la destinazione)
+# <a name="eye-gaze-and-commit"></a>Sguardo fisso e commit
+Con HoloLens 2 hai l'incredibile opportunità di eseguire la sequenza sguardo fisso e commit in modo più rapido e pratico usando lo sguardo fisso anziché il puntamento con la testa. Ciò consente di estendere il comune modello di interazione [puntamento con la testa e commit](gaze-and-commit.md): 
+1. Guarda una destinazione e 
+2. Conferma l'intenzione di selezionare tale destinazione effettuando esplicitamente uno degli input secondari seguenti:  
+   - Movimento con la mano (ad esempio, una simulazione del tocco)
+   - Pressione di un pulsante (ad esempio, su una tastiera Bluetooth o su un dispositivo Clicker)
+   - Comando vocale (ad esempio, "Seleziona")
+   - Attesa (ovvero l'utente deve semplicemente continuare a guardare la destinazione da selezionare)
 
-Tuttavia, sguardo occhio si comporta in modo molto diverso da sguardo head in determinati modi e pertanto viene fornito con una serie di difficoltà univoco. Nel [occhio estasiati Design Guidelines](eye-tracking.md), riepilogheremo generali vantaggi e problematiche da prendere in considerazione quando si usa dell'occhio rilevamento come input per l'app holographic. In questa sezione presenteremo le considerazioni di progettazione specifiche per visiva & commit.
-Prima di tutto gli occhi spostare incredibilmente veloce e sono quindi ideali in rapidamente come destinazione attraverso la vista. Ciò rende occhio estasiati ideale per azioni rapide sguardo e commit soprattutto se combinate con commit veloce, ad esempio una macchina-indice puntato o un pulsante.
+Lo sguardo fisso tuttavia ha un comportamento molto diverso da quello del puntamento con la testa da vari punti di vista, pertanto presenta alcune problematiche specifiche. Nelle [linee guida di progettazione per l'uso dello sguardo fisso](eye-tracking.md) vengono riepilogati i vantaggi generali e le problematiche di cui tenere conto quando si usa il tracciamento oculare come input nell'app olografica. In questa sezione vengono trattate le considerazioni relative alla progettazione specifiche per l'uso dello sguardo fisso e del commit.
+I nostri occhi prima di tutto si muovono con una rapidità incredibile e quindi sono un mezzo straordinario per individuare velocemente una destinazione all'interno della visualizzazione. Questo rende lo sguardo fisso la soluzione ideale per eseguire rapide azioni di sguardo fisso e commit, soprattutto se combinate con commit rapidi come quelli effettuati tramite simulazione del tocco o pressione di un pulsante.
    
-Nell'esempio seguente, si risolverà linee guida di progettazione quando si utilizzano occhio estasiati per questo tipo di interazione e verranno illustrate le differenze tra sguardo head e occhio è necessario tenere in considerazione.
+Di seguito verranno fornite le linee guida per la progettazione a cui attenersi quando viene usato lo sguardo fisso per questo tipo di interazione e verranno illustrate le differenze da tenere presenti tra il puntamento con la testa e lo sguardo fisso.
 
-## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Linee guida per visiva e il commit di progettazione
+## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Linee guida di progettazione per sguardo fisso e commit
 
-**Non visualizzare un cursore**: Mentre è quasi impossibile interagire senza un cursore quando si usa head estasiati, il cursore diventa rapidamente rappresentano una distrazione e indesiderate quando si usa sguardo sotto controllo. Anziché basarsi su un cursore per informare l'utente se occhio rilevamento funziona e ha corretto ha rilevato l'attualmente cercato nella destinazione, usare meno evidenti visual Evidenzia (ulteriori dettagli sotto).
+**Non mostrare un cursore**: se è quasi impossibile interagire senza un cursore quando si usa il puntamento con la testa, il cursore diventa rapidamente un elemento di distrazione e di disturbo quando si usa lo sguardo fisso. Invece di servirti di un cursore per indicare all'utente se il tracciamento oculare funziona e se la destinazione che sta guardando è stata rilevata correttamente, usa evidenziazioni visive non eccessive (altri dettagli vengono forniti più avanti).
 
-**Cercano di ottenere commenti e suggerimenti al passaggio del mouse combinata sottili**: Che cosa sembra eccezionale indicazioni visive per sguardo head può comportare esperienze terribile, piuttosto complessa usando sguardo sotto controllo. Tenere presente che gli occhi sono molto veloci, darting rapidamente tra i punti del campo di visualizzazione. Modifiche di evidenziazione improvvisi rapida (attivato/disattivato) possono comportare flickery commenti e suggerimenti durante la ricerca. Pertanto, quando si forniscono commenti e suggerimenti al passaggio del mouse, è consigliabile con un'evidenziazione in modo uniforme devono essere smussati aggiuntivo (e devono essere smussati-out durante la ricerca da subito). Ciò significa che inizialmente è poco notare i commenti e suggerimenti quando si esamina una destinazione. Nel corso di 500 e 1000 ms aumenterebbe di intensità di evidenziazione. Mentre gli utenti meno esperti potrebbero mantenere esamina la destinazione per assicurarsi che il sistema ha determinato correttamente che la destinazione con lo stato attivo, può rapidamente estasiati & commit viene eseguito senza attendere il feedback è la massima intensità da utenti esperti. Inoltre, è anche consigliabile usare una sfumatura orizzontale quando dissolvenza in uscita i commenti e suggerimenti al passaggio del mouse. Research ha dimostrato che modifiche di movimento e contrasto rapide sono molto evidenti nella tua vision periferiche (questa operazione, l'area del campo visivo in cui non è indispensabile). La dissolvenza privo di lentezza del blend aggiuntivo. Questo è fondamentale solo quando è disponibile a contrasto elevato o modifiche ai colori per l'evidenziazione. Se i commenti e suggerimenti al passaggio del mouse è stato alquanto impercettibile per iniziare, probabilmente non si verificherà una differenza.
+**Cercare di fornire un feedback poco invasivo e graduale da visualizzare al passaggio del puntatore**: un feedback visivo ritenuto utile quando si usa il puntamento con la testa può risultare orribile e opprimente quando si usa lo sguardo fisso. Ricorda che i tuoi occhi si muovono molto rapidamente e che si spostano velocemente da un punto all'altro del campo visivo. Rapide e improvvise variazioni dell'evidenziazione (attivata/disattivata) possono produrre un feedback tremolante quando ci si guarda attorno. Pertanto, quando fornisci un feedback da visualizzare al passaggio del puntatore, è consigliabile usare un'evidenziazione graduale, che scompaia altrettanto gradualmente quando si distoglie lo sguardo. Questo significa che all'inizio il feedback sarà appena distinguibile quando si guarda una destinazione. Nel giro di 500-1000 millisecondi l'evidenziazione aumenterà di intensità. Gli utenti alle prime armi potrebbero continuare a guardare la destinazione per essere certi che il sistema l'abbia determinata correttamente, ma gli utenti esperti potrebbero guardare ed eseguire il commit rapidamente senza attendere che il feedback compaia con la massima intensità. È inoltre consigliabile applicare un effetto graduale quando il feedback visualizzato al passaggio del puntatore deve scomparire mediante dissolvenza. Le ricerche svolte hanno dimostrato come le rapide variazioni di movimento e contrasto siano particolarmente rilevabili dalla vista periferica e quindi nell'area del campo visivo che non si sta guardando. Non è necessario che l'effetto dissolvenza finale avvenga con la stessa lentezza dell'effetto iniziale di evidenziazione graduale. Questo fattore è fondamentale solo in caso di evidenti variazioni di contrasto o colore per l'evidenziazione. Se il feedback visualizzato al passaggio del puntatore inizialmente ha un carattere piuttosto sottile, è probabile che non si noti alcuna differenza.
 
-**Cercare la sincronizzazione dei segnali sguardo e commit**: La sincronizzazione di input segnali possono essere meno difficile per semplice sguardo & commit, pertanto, non preoccuparti! È un elemento da cercare nel caso in cui si desidera usare azioni commit più complicate, ma che può comportare movimenti della mano complesse o i comandi vocali lunghi. Si supponga Esaminiamo target e utter un comando vocali lunghi. Presa in considerazione l'ora in cui è necessario parlare e l'ora in cui il sistema è necessaria per determinare cosa hai detto, lo sguardo occhio in genere tempo passa all'alcuni nuova destinazione nella scena. Di conseguenza, rendere gli utenti consapevoli che possono dover mantenere esaminando una destinazione fino a quando non è stato riconosciuto il comando o gestire l'input in un modo per determinare che genera del comando e ciò che l'utente era stata esaminando epoca.
+**Cercare di ottenere la sincronizzazione dei segnali dello sguardo fisso e del commit**: la sincronizzazione dei segnali di input non è essenziale per un uso di base dello sguardo fisso e del commit. Devi tuttavia cercare di ottenerla se vuoi usare azioni di commit più complesse che possono comportare lunghi comandi vocali o movimenti della mano complicati. Immagina di guardare una destinazione e di pronunciare un lungo comando vocale. Considerando il tempo che impieghi per parlare e il tempo necessario al sistema per rilevare quanto hai detto, lo sguardo in genere si sposta su una nuova destinazione presente nella scena. Pertanto, avvisa gli utenti che potrebbero dover continuare a guardare la destinazione fino al riconoscimento del comando oppure gestisci l'input in modo da determinare l'inizio del comando e l'elemento che l'utente stava guardando.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Movimenti della mano](gestures.md)
 * [Input vocale](voice-design.md)
