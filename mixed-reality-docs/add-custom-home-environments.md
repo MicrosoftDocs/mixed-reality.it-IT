@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Realtà mista di Windows, realtà mista, realtà virtuale, VR, MR, Home, ambienti personalizzati, posizioni, casa cliff, skyloft, utente, creazione
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829646"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024536"
 ---
 # <a name="add-custom-home-environments"></a>Aggiungere gli ambienti home personalizzati
 
@@ -150,6 +150,5 @@ Il percorso di generazione predefinito si trova in 0, 0,0 nell'ambiente. Il non 
 Quando si crea un ambiente personalizzato, userà una simulazione di rendering acustica che non corrisponde lo spazio fisico che è stato creato. Suono possono provenire dalle indicazioni di problemi e possa sembrare ovattato. 
 
 ## <a name="see-also"></a>Vedere anche
-* [Esplorazione di Windows misti realtà Home](#navigating-the-windows-mixed-reality-home.md)
 * [Windows misti realtà Asset convertitore (su GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

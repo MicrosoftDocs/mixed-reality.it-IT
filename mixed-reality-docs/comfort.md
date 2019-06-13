@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Progettazione, realtà mista comfort, 2 HoloLens, HoloLens (dal 1 ° generazione)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974772"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024439"
 ---
 # <a name="comfort"></a>Comfort
 
@@ -126,6 +126,8 @@ Nel primo-persona-tiro a segno videogames, Heads-up display (HUDs) presentare in
 Migliorare la leggibilità ottimale testo consente di ridurre agli occhi e mantenere la comodità per l'utente, in particolare negli scenari che richiedono agli utenti di leggere in un HMD o applicazioni. Migliorare la leggibilità testo dipende da diversi fattori tra cui varie le proprietà di visualizzazione (ad esempio, densità in pixel, luminosità, contrasto elevato), proprietà lens (ad esempio, cromatica cromatiche) e le proprietà del tipo di carattere o testo (ad esempio, il tipo di carattere specifico le caratteristiche, ad esempio weight, spaziatura, grazie, e così via, colore del tipo di carattere, colore di sfondo).  
 
 In generale, è consigliabile testare le applicazioni specifiche per migliorare la leggibilità e rendendo le dimensioni dei caratteri grande quanto è fattibile per un'esperienza pratica. Di seguito sono disponibili linee guida generali come punto di partenza per lo sviluppo. Si noti che tutte le dimensioni del carattere vengono inserite in gradi del [angolo visual](https://en.wikipedia.org/wiki/Visual_angle) anziché fisica di dimensioni specifiche, che fornisce indicazioni per qualsiasi distanza all'interno dell'area di posizionamento ottimale ologrammi perché lo conteggia le dimensioni del il testo e la distanza che viene visualizzato nel Visualizzatore. 
+
+Visualizzare [funzionalità tipografiche](typography.md) e [testo in Unity](text-in-unity.md) pagine per le linee guida dettagliate.
 
 ### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi holographic
 

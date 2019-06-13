@@ -1,17 +1,17 @@
 ---
 title: Fotocamera individuabile
-description: Informazioni generali relative alla fotocamera con connessione front-HoloLens.
+description: Informazioni generali sulla fotocamera anteriore HoloLens, come funziona e i profili e le soluzioni disponibili per gli sviluppatori.
 author: wguyman
 ms.author: wguyman
-ms.date: 02/24/2019
+ms.date: 06/12/2019
 ms.topic: article
-keywords: fotocamera, hololens, fotocamera, colore di primo piano con connessione
-ms.openlocfilehash: ffcd6faf15dd8556db393237d468a3cdf60e4bdb
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: fotocamera, hololens, fotocamera colore, affiancate, hololens, 2, cv, visione artificiale, stima front, marcatori, codice a matrice, a matrice, foto, video
+ms.openlocfilehash: cadcd0762b8adf1001896c614451d2e1c9776c65
+ms.sourcegitcommit: 79398a6b5b7037babcb05d86a5bcc336fd089ea0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603620"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028606"
 ---
 # <a name="locatable-camera"></a>Fotocamera individuabile
 
@@ -21,7 +21,7 @@ HoloLens include una fotocamera posta sul world nella parte anteriore del dispos
 
 ### <a name="hololens-first-generation"></a>HoloLens (prima generazione)
 
-* Fotocamera foto/video (PV) lo stato attivo predefinito, con bilanciamento automatico del bianco, l'esposizione automatica e pipe di elaborazione di immagini completi
+* Fotocamera foto/video (PV) lo stato attivo predefinito con pipeline di elaborazione di immagini completi, l'esposizione automatica e bilanciamento automatico del bianco.
 * LED di Privacy white rivolta verso il mondo si accende ogni volta che la fotocamera è attiva
 * La fotocamera supporta le modalità seguenti (tutte le modalità sono proporzioni 16:9) a 5 fps, 24, 20, 15 e 30:
 
@@ -35,20 +35,32 @@ HoloLens include una fotocamera posta sul world nella parte anteriore del dispos
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* Fotocamera foto/video (PV) e messa a fuoco, con bilanciamento automatico del bianco, l'esposizione automatica e pipe di elaborazione di immagini completi
-* LED di Privacy white rivolta verso il mondo si accende ogni volta che la fotocamera è attiva
-* La fotocamera supporta le modalità seguenti (tutte le modalità di video sono proporzioni 16:9):
+* Fotocamera foto/video (PV) e messa a fuoco con pipeline di elaborazione di immagini completi, l'esposizione automatica e bilanciamento automatico del bianco.
+* LED di Privacy white rivolta verso il mondo si accende ogni volta che la fotocamera è attiva.
+* HoloLens 2 supporta i profili di fotocamera diversi. Informazioni su come [individuare e selezionare le funzionalità di fotocamera](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* La fotocamera supporta i profili e le risoluzioni (tutte le modalità di video sono proporzioni 16:9) seguenti:
+  
+  | Profilo                                         | Video     | Anteprima   | Ancora     | Frequenze dei fotogrammi | Orizzontale campo visualizzazione (H) | Utilizzo consigliato                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Registrazione video di alta qualità                |
+  | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Acquisizione di foto di qualità elevata                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Scenari di lunga durata                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Scenari di lunga durata                     |
+  | Applicazioni di videoconferenza, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Applicazioni di videoconferenza, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1128x635  |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 960 x 540   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 760x428   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 640x360   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 500x282   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 424x240   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
 
-  >[!NOTE]
-  >Queste modalità sono soggetti a modifiche prima della disponibilità generale di HoloLens 2.
-
-  |  Video  |  Anteprima  |  Ancora  |  Frequenze dei fotogrammi  |  Orizzontale campo visualizzazione (H) |  Utilizzo consigliato | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  N/D |  30, 15 fps  |  54deg  |  (modalità predefinita con la stabilizzazione video) | 
-  |  N/D |  N/D |  3904X2196 |  N/D  |  64deg |  Immagini più elevata risoluzione | 
-  |  2272x1278 |  2272x1278 |  N/D |  30, 15 fps  |  64deg |  Risoluzione overscan (riempimento) prima di stabilizzazione video | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 fps  |  64deg |  Alta qualità di streaming | 
-  |  1280x720 |  1280x720 |  N/D |  30, 15, 5 fps  |  64deg |  Modalità di bassa alimentazione/risoluzione per lo streaming e l'attività di elaborazione di immagini | 
+>[!NOTE]
+>I clienti possono sfruttare [acquisizione di realtà mista](mixed-reality-capture.md) foto della tua app, tra cui ologrammi e stabilizzazione video o video.
+>
+>Gli sviluppatori, ci sono considerazioni che è necessario tenere conto quando si crea l'app se si desidera eseguire la ricerca ottimale, quando un cliente consente di acquisire il contenuto. È possibile anche attivare (e personalizzare) l'acquisizione di realtà mista da direttamente all'interno dell'app. Altre informazioni, vedi [mista acquisizione realtà per gli sviluppatori](mixed-reality-capture-for-developers.md).
 
 ## <a name="locating-the-device-camera-in-the-world"></a>Individuare la fotocamera del dispositivo in tutto il mondo
 
@@ -64,7 +76,7 @@ Ogni frame di immagini (se foto o video) include un sistema di coordinate, nonch
 * Dati di pixel (nel formato RGB/NV12/JPEG/e così via)
 * 3 parti di metadati (archiviati come [IMFAttributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx)) che rendono ogni frame "individuabili":
 
-|  Nome attributo  |  Tipo  |  GUID  |  Descrizione | 
+|  Nome attributo  |  Type  |  GUID  |  Descrizione | 
 |----------|----------|----------|----------|
 |  MFSampleExtension_Spatial_CameraCoordinateSystem  |  IUnknown ([SpatialCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.aspx))  |  {9D13C82F-2199-4E67-91CD-D1A4181F2534}  |  Archivia le [sistema di coordinate](coordinate-systems-in-directx.md) del frame acquisito | 
 |  MFSampleExtension_Spatial_CameraViewTransform  |  Blob ([Matrix4x4](https://msdn.microsoft.com/library/windows/apps/windows.foundation.numerics.matrix4x4.aspx))  |  {4E251FA4-830F-4770-859A-4B8D99AA809B}  |  Archivia trasformazione estrinseche della fotocamera nel sistema di coordinate | 
@@ -278,6 +290,6 @@ Esempi:
 ## <a name="see-also"></a>Vedere anche
 * [Fotocamera individuabile in DirectX](locatable-camera-in-directx.md)
 * [Fotocamera individuabile in Unity](locatable-camera-in-unity.md)
-* [Acquisizione di realtà mista](mixed-reality-capture.md)
-* [Mista acquisizione realtà per gli sviluppatori](mixed-reality-capture-for-developers.md)
+* [Acquisizione realtà mista](mixed-reality-capture.md)
+* [Acquisizione realtà mista per sviluppatori](mixed-reality-capture-for-developers.md)
 * [Introduzione di acquisizione di Media](https://msdn.microsoft.com/library/windows/apps/mt243896.aspx)

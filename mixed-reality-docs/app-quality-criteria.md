@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criteri di qualità delle App, realtà mista mista app per realtà
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750321"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024490"
 ---
 # <a name="app-quality-criteria"></a>Criteri di qualità delle App
 
@@ -618,7 +618,7 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
 
 * [Oggetto che supporta interazioni](interactable-object.md)
 * [Testo in Unity](text-in-unity.md)
-* [Barra dell'app e rettangolo di selezione](app-bar-and-bounding-box.md)
+* [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Esecuzione di comandi vocali](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni

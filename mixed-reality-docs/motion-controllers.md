@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6DOF controller, controller di movimento
-ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: fc6b0dcf7f338224af9ea9bc59e07187c33adda2
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629116"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024548"
 ---
 # <a name="motion-controllers"></a>Controller di movimento
 
@@ -23,10 +23,23 @@ I controller di movimento sono [accessori hardware](hardware-accessories.md) che
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
 <tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (dal 1 ° generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
-</tr><tr>
-<td> Controller di movimento</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
+     <td><strong>Funzionalità</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+</tr>
+<tr>
+     <td>Controller di movimento</td>
+     <td>❌</td>
+     <td>❌</td>
+     <td>✔️</td>
 </tr>
 </table>
 
@@ -185,7 +198,7 @@ Sono le interazioni principali tra le mani e controller di movimento **seleziona
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Movimenti compositi: Input spaziali ad alto livello
 
-Entrambe [mano i movimenti](gestures.md) e i controller di movimento possono essere monitorati nel corso del tempo per rilevare un set comune di alto livello  **[movimenti compositi](gestures.md#composite-gestures)**. Questo consente all'app per il rilevamento di alto livello **toccare**, **contenere**, **manipolazione** e **navigazione** movimenti, se gli utenti comporta l'utilizzo di le mani o controller.
+Entrambe [mano i movimenti](gestures.md) e i controller di movimento possono essere monitorati nel corso del tempo per rilevare un set comune di alto livello  **[movimenti compositi](gestures.md#composite-gestures)** . Questo consente all'app per il rilevamento di alto livello **toccare**, **contenere**, **manipolazione** e **navigazione** movimenti, se gli utenti comporta l'utilizzo di le mani o controller.
 
 ## <a name="rendering-the-motion-controller-model"></a>Il modello di controller di movimento per il rendering
 
@@ -231,7 +244,7 @@ Visualizzare [risoluzione dei problemi controller di movimento](https://docs.mic
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti e controller del movimento in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Le mani e i controller di movimento in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Mani e controller del movimento in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Movimenti](gestures.md)
 * [Input MR 213: Controller del movimento](mixed-reality-213.md)
 * [Guida della appassionato: La realtà mista di Windows home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
