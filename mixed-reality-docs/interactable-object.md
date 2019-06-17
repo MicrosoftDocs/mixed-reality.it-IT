@@ -3,15 +3,15 @@ title: Oggetto si
 description: Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un evento in tutto il mondo astratto 2D. Nel mondo tridimensionale realtà mista, non dobbiamo riguardare esclusivamente questo mondo di astrazione più.
 author: cre8ivepark
 ms.author: jennyk
-ms.date: 02/24/2019
+ms.date: 06/06/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, dell'interfaccia utente, esperienza utente
-ms.openlocfilehash: eea7eff6c591a9319b920936ce2be511cecb7496
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148757"
 ---
 # <a name="interactable-object"></a>Oggetto si
 
@@ -84,20 +84,51 @@ Per tutti gli oggetti si, è importante supportare opzioni di interazione altern
 
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Descrizione comando per i comandi vocali" width="350"><br/>*Descrizione comando per i comandi vocali*
 
+## <a name="sizing"></a>Ridimensionamento
+Per garantire che tutti gli oggetti si possono facilmente essere modificate da utenti è consigliabile garantire la si soddisfa una dimensione minima, spesso espressa in gradi angolo visual, in base alla distanza che viene inserito dall'utente. Gradi angolo visual è basato sulla distanza tra l'utente e l'oggetto e rimane costante, mentre le dimensioni fisiche della destinazione potrebbero cambiare quando la distanza dalle modifiche utente. Per determinare la dimensione fisica necessaria di un oggetto in base alla distanza da un che e dal grado angolo visual provare a utilizzare una calcolatrice, ad esempio: http://elvers.us/perception/visualAngle/
+
+Di seguito sono le raccomandazioni per le dimensioni minime del contenuto si
+
+### <a name="target-size-for-direct-hand-interaction"></a>Dimensioni di destinazione per l'interazione diretta mano
+| distanza | Angolo di visualizzazione | Dimensione |
+|---------|---------|---------|
+| 45cm  | non inferiore a 2° | 1.6 a 1,6 cm |
+
+![Dimensioni di destinazione per l'interazione diretta mano](images/TargetSizingNear.jpg)<br>
+*Dimensioni di destinazione per l'interazione diretta mano*
+
+Quando si creano i pulsanti per l'interazione diretta, si consiglia una dimensione minima maggiore di cm 3.2 x 3.2 per garantire che vi sia spazio sufficiente per contenere un'icona e potenzialmente alcune testo * *
+
+| distanza | Dimensione minima |
+|---------|---------|
+| 45cm  | 3.2 x 3.2 cm |
+
+![Dimensioni di destinazione per i pulsanti](images/TargetSizingButtons.png)<br>
+*Dimensioni di destinazione per i pulsanti*
+
+
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Dimensioni di ray mano di destinazione o estasiati interazione
+| distanza | Angolo di visualizzazione | Dimensione |
+|---------|---------|---------|
+| 2 minuti  | non inferiore a 1° | 3.5 3,5 cm |
+
+![Dimensioni di ray mano di destinazione o estasiati interazione](images/TargetSizingFar.jpg)<br>
+*Dimensioni di ray mano di destinazione o estasiati interazione*
+
 ## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Creazione oggetto si con Toolkit di realtà mista (MRTK)
 
 Nel  **[Toolkit di realtà mista](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , è possibile trovare la serie di script Unity e prefabs che consenta di creare oggetti si. È possibile usare questi a rendere gli oggetti di rispondere ai vari tipi di stati di interazione di input.
 
-* **[Si](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)**
-* **[Pulsante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)**
-* **[Mano interazione esempi scena](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)**
+* [Si](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Pulsante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [Mano interazione esempi scena](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 Shader Standard del MixedRealityToolkit fornisce diverse opzioni, ad esempio **light prossimità** che consente di creare segnali audio e video.
-* **[MRTK Standard Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)**
+* [MRTK Shader Standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>Vedere anche
 
-* **[Rettangolo di selezione](app-bar-and-bounding-box.md)**
-* **[Raccolta di oggetti](object-collection.md)**
-* **[Del billboard e tag-along](billboarding-and-tag-along.md)**
+* [rettangolo di selezione](app-bar-and-bounding-box.md)
+* [Raccolta di oggetti](object-collection.md)
+* [Billboarding e tag-along](billboarding-and-tag-along.md)

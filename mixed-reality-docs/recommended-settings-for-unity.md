@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270369"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148664"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -65,6 +65,12 @@ Per abilitare questa funzionalità nel progetto Unity
 
 Inoltre, è consigliabile selezionare **profondità 16 bit** sotto il **profondità formato** impostazione di questo pannello, in particolare per lo sviluppo di Hololens. La selezione di 16 bit rispetto a 24 bit riduce significativamente i requisiti di larghezza di banda saranno necessario meno dati da spostare o elaborare.
 
+Affinché la piattaforma di realtà mista di Windows ottimizzare la stabilità di ologramma, si affidano ai buffer di profondità per essere accurato e far corrispondere tutti vntana sottoposto a rendering sullo schermo. Pertanto, con la condivisione su un buffer di profondità, è importante quando il rendering di colori, anche il rendering di profondità. In Unity, la maggior parte dei materiali opaco o TransparentCutout verranno eseguito il rendering profondità per impostazione predefinita ma trasparenti e oggetti di testo a livello generale non eseguirà il rendering profondità anche se si tratta dello shader dipendente e così via. 
+
+Se si usa lo shader Toolkit realtà mista Standard, eseguire il rendering di profondità per gli oggetti trasparenti:
+1) Selezionare il materiale trasparente che utilizza lo shader MRTK Standard e aprire la finestra dell'editor Inspector
+2) Impostare **modalità di Rendering** al **Custom** quindi impostare **modalità** per **Transparent** e infine impostare **profondità scrivere**a **su**
+
 >[!NOTE]
 > Gli sviluppatori devono prestare attenzione Z-fighting durante la modifica di questi valori, insieme alle impostazioni di piano quasi/lontano della camera. Z-Fighting si verifica quando due gameobject tenta di eseguire il rendering per lo stesso pixel e a causa delle limitazioni di fedeltà del buffer di profondità (ad es. profondità di z), Unity non è possibile discernere quale oggetto viene davanti a altro. Gli sviluppatori si noterà un sfarfallio tra due oggetti giochi man mano che vengono *combattere* per lo stesso valore z e approfondita. Ciò può essere risolto da passa al formato a 24 bit profondità saranno un intervallo più ampio di valori per ogni oggetto per il calcolo al momento la profondità z dalla fotocamera.
 >
@@ -85,7 +91,7 @@ Unity è deprecato il supporto per .NET lo script back-end e quindi consiglia ag
 Leggi [ottimizzazione tempi di compilazione per IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) per altre informazioni.
 
 > [!NOTE]
-> Inoltre, potrebbe essere utile per l'installazione una [Server di Cache](https://docs.unity3d.com/Manual/CacheServer.html), soprattutto per i progetti Unity con una grande quantità di risorse (esclusi i file di script) o costantemente modifica assets/scenes. Quando si apre un progetto, Unity idonei gli asset vengono archiviati in un formato della cache interna sul computer per lo sviluppo. Elementi devono essere nuovamente importati e quindi elaborati nuovamente quando modificare. Questo processo può essere eseguito una volta e salvato in un Server Cache e, di conseguenza, condivisi con altri sviluppatori di risparmiare tempo, invece di tutti gli sviluppatori di importare di nuovo di nuove modifiche in locale di elaborazione.
+> Inoltre, potrebbe essere utile configurare un [server di cache](https://docs.unity3d.com/Manual/CacheServer.html), soprattutto per i progetti Unity con una grande quantità di asset (esclusi i file di script) o con asset/scene in continua evoluzione. All'apertura di un progetto, Unity archivia gli asset validi in un formato della cache interna nel computer di sviluppo. Gli elementi devono essere reimportati e quindi rielaborati in caso di modifica. Questo processo può essere eseguito una volta, salvato in un server di cache e quindi condiviso con altri sviluppatori in modo da risparmiare tempo, evitando a ciascuno sviluppatore di elaborare la reimportazione di nuove modifiche in locale.
 
 ## <a name="publishing-properties"></a>Le opzioni di pubblicazione
 

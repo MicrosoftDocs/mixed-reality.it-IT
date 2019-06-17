@@ -1,9 +1,9 @@
 # [Installare gli strumenti](install-the-tools.md)
 # [Preparare l'app per HL2](mrtk-porting-guide.md)
-# [Informazioni generali](index.md)
+# Rileva
+## [Documentazione sulla realtà mista](index.md)
 ## [Che cos'è la realtà mista?](mixed-reality.md)
 ## [Che cos'è un ologramma?](hologram.md)
-
 ## Hardware
 ### HoloLens
 #### [Dettagli sull'hardware HoloLens 2](https://www.microsoft.com/hololens/hardware)
@@ -78,7 +78,8 @@
 ### [Note sulla versione - maggio 2016](release-notes-may-2016.md)
 ### [Note sulla versione - marzo 2016](release-notes-march-2016.md)
 
-# [Progetta](design.md)
+# Progettazione
+## [Progettazione per la realtà mista](design.md)
 ## [Informazioni su queste linee guida per la progettazione](about-this-design-guidance.md)
 ## Introduzione alla progettazione
 ### [Che cos'è la realtà mista?](mixed-reality.md)
@@ -129,14 +130,15 @@
 ### [HoloSketch](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Processo di creazione degli asset](asset-creation-process.md)
 
-# [Sviluppa](development.md)
+# Sviluppo
+## [Finestra di avvio per lo sviluppo](development.md)
 ## Servizi cloud di realtà mista
 ### [Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors)
 ### [Holographic Remoting Player](holographic-remoting-player.md)
 ### [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
-### Guida introduttiva
+### Attività iniziali
 #### [Accelerare lo sviluppo con Mixed Reality Toolkit v2](mrtk-getting-started.md)
 #### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
 #### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
@@ -168,7 +170,7 @@
 ### [Accesso in anteprima a Unreal per HoloLens 2](https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access)
 ## DirectX
 ### [Panoramica dello sviluppo DirectX](directx-development-overview.md)
-### Guida introduttiva
+### Attività iniziali
 #### [Creazione di un progetto DirectX olografico](creating-a-holographic-directx-project.md)
 #### [Ottenere un HolographicSpace](getting-a-holographicspace.md)
 #### [Rendering in DirectX](rendering-in-directx.md)

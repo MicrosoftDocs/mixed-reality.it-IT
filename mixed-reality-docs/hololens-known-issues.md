@@ -6,20 +6,37 @@ ms.author: mazeller
 ms.date: 04/1/2019
 ms.topic: article
 keywords: risolvere i problemi, problema noto, Guida
-ms.openlocfilehash: a92ab52c899de44f9c5c8c86ebb6f9cd8433d395
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148699"
 ---
 # <a name="hololens-known-issues"></a>Problemi noti di HoloLens
 
 Si tratta dell'elenco corrente dei problemi noti per gli sviluppatori che hanno effetto sui HoloLens. Vedere prima qui se si nota un comportamento strano. Questo elenco verrà mantenuto aggiornato quando vengono individuati o segnalati nuovi problemi o quando i problemi vengono risolti negli aggiornamenti futuri di software HoloLens.
 
+## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Non è possibile connettere e distribuire in HoloLens tramite Visual Studio
+
+>[!NOTE]
+>Ultimo aggiornamento: 6, 14 6 PM - rilasciare in corso il controllo.
+
+I team di HoloLens e Visual Studio sono esaminando un problema che potrebbe impedire agli utenti di distribuzione nel dispositivo HoloLens tramite Visual Studio.
+ 
+Durante la fase di distribuzione, gli utenti segnalano il messaggio di errore seguente, nonostante dispositivi HoloLens e per gli sviluppatori macchina having *modalità sviluppatore* abilitata:
+
+*DEP0100: Assicurarsi che tale dispositivo di destinazione è abilitata la modalità sviluppatore. Non è stato possibile ottenere una licenza per sviluppatori su <device IP> a causa dell'errore 80004005.*
+ 
+**Soluzione temporanea**: 
+ 
+Gli utenti segnalano che il ripristino del dispositivo consente di risolvere il problema ma non è possibile garantire che ciò funziona in tutti i casi. È possibile trovare istruzioni per reimpostare il dispositivo [qui](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens).
+ 
+Microsoft fornirà un aggiornamento, non appena il problema è causato radice. 
+
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemi di avvio di Microsoft Store e App in HoloLens
 
->[!IMPORTANT]
+>[!NOTE]
 >Ultimo aggiornamento: 4/2 AM 10 - risoluzione del problema. 
 
 Si potrebbero riscontrare problemi durante il tentativo di avviare l'App in HoloLens e Microsoft Store. È stato determinato che il problema si verifica quando gli aggiornamenti delle app in background distribuire una versione più recente dei pacchetti di framework di sequenze specifiche mentre uno o più delle proprie App dipendenti sono ancora in esecuzione. In questo caso, un aggiornamento automatici delle app recapitato una nuova versione di .NET Framework nativo (versione 10.0.25531 a 10.0.27413) ha causato l'App in esecuzione in modo non corretto aggiornamento per tutte le App in esecuzione, utilizzo la versione precedente di framework.  Il flusso per l'aggiornamento framework è come segue:-
@@ -74,7 +91,7 @@ Durante la configurazione guidata impostazioni, è un timeout di credenziale di 
 
 ## <a name="visual-studio"></a>Visual Studio
 * Visualizzare [installare gli strumenti](install-the-tools.md) per la versione più aggiornata di Visual Studio consigliato per lo sviluppo di HoloLens.
-* Quando si distribuisce un'app da Visual Studio di HoloLens, si verifichi l'errore: **L'operazione richiesta non può essere eseguita su un file con un utente con mapping eseguito sezione aperta. (Eccezione da HRESULT: 0x800704C8)**. In questo caso, ripetere l'operazione e la distribuzione in genere avranno esito positivo.
+* Quando si distribuisce un'app da Visual Studio di HoloLens, si verifichi l'errore: **L'operazione richiesta non può essere eseguita su un file con un utente con mapping eseguito sezione aperta. (Eccezione da HRESULT: 0x800704C8)** . In questo caso, ripetere l'operazione e la distribuzione in genere avranno esito positivo.
 
 ## <a name="emulator"></a>Emulatore
 * Non tutte le app di Microsoft Store sono compatibili con l'emulatore. Ad esempio, Conker Young e i frammenti non sono riproducibili nell'emulatore.
