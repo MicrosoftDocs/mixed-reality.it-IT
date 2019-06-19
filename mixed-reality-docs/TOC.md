@@ -145,6 +145,7 @@
 #### [Modalità di gioco Unity](unity-play-mode.md)
 #### [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
 #### [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+#### [Debug gestito con Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
 ### Componenti fondamentali
 #### [Fotocamera in Unity](camera-in-unity.md)
 #### [Sistemi di coordinate in Unity](coordinate-systems-in-unity.md)
