@@ -153,7 +153,7 @@ La realtà mista combina contenuti del mondo reale e virtuali in ambienti ibridi
 
 <h3>Aprile 2019</h3>
 
-Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il feedback degli utenti è molto importante per Microsoft, che invita tutti a [partecipare alla conversazione](https://holodevelopersslack.azurewebsites.net/) per proporre argomenti, richiedere informazioni, istruzioni o esercitazioni specifiche e altro ancora. È anche possibile restare in contatto con Microsoft tramite [Twitter](https://twitter.com/MxdRealityDev) e [partecipare al programma per sviluppatori](https://aka.ms/iwantmr) per ricevere aggiornamenti diretti sulle novità per documentazione, strumenti, eventi e così via. Altre informazioni saranno disponibili prossimamente.
+Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il tuo feedback è molto importante per Microsoft, che ti invita a [partecipare alla conversazione](https://holodevelopersslack.azurewebsites.net/) per proporre argomenti, richiedere informazioni, istruzioni o esercitazioni specifiche e altro ancora. È anche possibile restare in contatto con Microsoft tramite [Twitter](https://twitter.com/MxdRealityDev) e [partecipare al programma per sviluppatori](https://aka.ms/iwantmr) per ricevere aggiornamenti diretti sulle novità per documentazione, strumenti, eventi e così via. Altre informazioni saranno disponibili prossimamente.
 
 <table>
 <tr>

@@ -71,7 +71,7 @@
 
 
 ## Note sulla versione per la realtà mista
-### [Note sulla versione correnti](release-notes-october-2018.md)
+### [Note sulla versione corrente](release-notes-october-2018.md)
 ### [Note sulla versione - aprile 2018](release-notes-april-2018.md)
 ### [Note sulla versione - ottobre 2017](release-notes-october-2017.md)
 ### [Note sulla versione - agosto 2016](release-notes-august-2016.md)
