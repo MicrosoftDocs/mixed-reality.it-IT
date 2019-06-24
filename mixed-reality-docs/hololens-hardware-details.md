@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, componenti, sensori, technology, tecnologia, eliminazione, disinstallazione,
-ms.openlocfilehash: ddbce274a0573ab72e1ff7b523b6ac4b8fbb6ba2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604630"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326199"
 ---
 # <a name="hololens-1st-gen-hardware-details"></a>HoloLens (dal 1 ° generazione) dettagli sull'hardware
 
@@ -21,7 +21,7 @@ Microsoft HoloLens è computer di holographic completamente senza i limiti prima
 
 ## <a name="how-to-get-microsoft-hololens"></a>Come ottenere Microsoft HoloLens
 
-Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development Edition e una configurazione Commercial Suite (che include una funzionalità di garanzia ed enterprise per la gestione dei dispositivi e di sicurezza aggiuntiva). Se lavora in America del Nord, è possibile noleggiare HoloLens anche tramite un partner.
+Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development Edition e aggiunta di una configurazione di Commercial Suite che include una funzionalità di garanzia ed enterprise per la gestione dei dispositivi e sicurezza. Se lavora in America del Nord, è possibile noleggiare HoloLens anche tramite un partner.
 
 [Fare clic qui per ulteriori informazioni sull'acquisto o noleggio Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
 
@@ -62,7 +62,7 @@ Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development
 * LED di stato della batteria
 * Wi-Fi 802.11ac
 * Micro USB 2.0
-* 4.1 Bluetooth LE
+* 4\.1 Bluetooth LE
 
 ### <a name="power"></a>Alimentazione
 * Durata della batteria
@@ -78,11 +78,11 @@ Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development
 * Unità di elaborazione olografica Microsoft personalizzate (HPU 1.0)
 
 ### <a name="weight"></a>Peso
-* 579g
+* 579 g
 
 ### <a name="memory"></a>Memoria
-* 64GB Flash
-* 2GB RAM
+* 64 GB Flash
+* 2 GB di RAM
 
 ### <a name="whats-in-the-box"></a>Che cos'è nella finestra di
 * HoloLens Development Edition

@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mista realtà, sviluppo, operazioni preliminari, nuovo progetto
-ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940758"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326096"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurare un nuovo progetto Unity per realtà mista di Windows 
 
@@ -21,7 +21,7 @@ Se si vuole creare un nuovo progetto Unity senza importare Toolkit di realtà mi
 
 ## <a name="per-project-settings"></a>Impostazioni per ogni progetto
 
-Per impostare come destinazione la realtà mista di Windows, è necessario innanzitutto impostare il progetto di Unity per l'esportazione come app Universal Windows Platform:
+Per impostare come destinazione la realtà mista di Windows, è necessario innanzitutto impostare il progetto di Unity per l'esportazione come app Universal Windows Platform: 
 1. Selezionare **File > Impostazioni di compilazione...**
 2. Selezionare **Universal Windows Platform** nella piattaforma di elenco e fare clic su **commutatore piattaforma**
 3. Impostare **SDK** a **10 universali**
