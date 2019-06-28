@@ -7,18 +7,18 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, esercitazione
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874053"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415398"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e le app di esempio
 
 Attualmente tutte le esercitazioni e le app di esempio sono basati su Unity.  Quando si sviluppa il contenuto per altri motori e piattaforme, si noterà li sotto l'intestazione rilevante nel sommario.
 
-## <a name="mr-learning-modules"></a>MR Learning Modules
+## <a name="mr-learning-modules"></a>Moduli di apprendimento sulla realtà mista
 
 I moduli di apprendimento MR sono progettati per consentire agli sviluppatori informazioni su entrambe le tecniche e procedure consigliate per lo sviluppo di applicazioni di realtà mista.  I moduli iniziali per HoloLens 2 che implementano il Toolkit 2.0 realtà mista (MRTK 2.0).
 * Il modulo di base è lo scopo di illustrare agli sviluppatori come configurare il progetto con MRTK, nonché di implementazione dell'interfaccia utente, il Mapping spaziale e interazioni di base e avanzate
