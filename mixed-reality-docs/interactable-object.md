@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, dell'interfaccia utente, esperienza utente
-ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148757"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415356"
 ---
 # <a name="interactable-object"></a>Oggetto si
 
@@ -85,12 +85,12 @@ Per tutti gli oggetti si, è importante supportare opzioni di interazione altern
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Descrizione comando per i comandi vocali" width="350"><br/>*Descrizione comando per i comandi vocali*
 
 ## <a name="sizing"></a>Ridimensionamento
-Per garantire che tutti gli oggetti si possono facilmente essere modificate da utenti è consigliabile garantire la si soddisfa una dimensione minima, spesso espressa in gradi angolo visual, in base alla distanza che viene inserito dall'utente. Gradi angolo visual è basato sulla distanza tra l'utente e l'oggetto e rimane costante, mentre le dimensioni fisiche della destinazione potrebbero cambiare quando la distanza dalle modifiche utente. Per determinare la dimensione fisica necessaria di un oggetto in base alla distanza da un che e dal grado angolo visual provare a utilizzare una calcolatrice, ad esempio: http://elvers.us/perception/visualAngle/
+Per garantire che tutti gli oggetti si possono facilmente essere modificati dagli utenti, è consigliabile assicurarsi che la si soddisfa una dimensione minima (angolo visual spesso misurato in gradi dell'arco visual) in base alla distanza che viene inserito dall'utente. Angolo Visual è basato sulla distanza tra gli occhi dell'utente e l'oggetto e rimane costante, mentre le dimensioni fisiche della destinazione potrebbero cambiare quando la distanza dalle modifiche utente. Per determinare la dimensione fisica necessaria di un oggetto in base alla distanza da parte dell'utente, provare a usare, ad esempio una calcolatrice visual angolo [quella](http://elvers.us/perception/visualAngle/).
 
-Di seguito sono le raccomandazioni per le dimensioni minime del contenuto si
+Di seguito sono le raccomandazioni per le dimensioni minime del contenuto si.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Dimensioni di destinazione per l'interazione diretta mano
-| distanza | Angolo di visualizzazione | Dimensione |
+| distanza | Angolo di visualizzazione | Size |
 |---------|---------|---------|
 | 45cm  | non inferiore a 2° | 1.6 a 1,6 cm |
 
@@ -108,7 +108,7 @@ Quando si creano i pulsanti per l'interazione diretta, si consiglia una dimensio
 
 
 ### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Dimensioni di ray mano di destinazione o estasiati interazione
-| distanza | Angolo di visualizzazione | Dimensione |
+| distanza | Angolo di visualizzazione | Size |
 |---------|---------|---------|
 | 2 minuti  | non inferiore a 1° | 3.5 3,5 cm |
 
@@ -121,7 +121,7 @@ Nel  **[Toolkit di realtà mista](https://github.com/Microsoft/MixedRealityToolk
 
 * [Si](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Pulsante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
-* [Mano interazione esempi scena](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
+* [Scena esempi di interazione manuale](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 Shader Standard del MixedRealityToolkit fornisce diverse opzioni, ad esempio **light prossimità** che consente di creare segnali audio e video.
 * [MRTK Shader Standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)

@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: sguardo, head sguardo, head di rilevamento, sotto controllo di rilevamento, directx, input, vntana
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453735"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414414"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>Testa e occhio estasiati input DirectX
 
@@ -149,7 +149,7 @@ Tuttavia, per l'input viene indirizzata attraverso il SpatialInteractionManager,
 
 ## <a name="see-also"></a>Vedere anche
 * [Head sguardo ed eseguire il commit del modello di input](gaze-and-commit.md)
-* [Occhio rilevamento su HoloLens 2](eye-tracking.md)
+* [Visiva in HoloLens 2](eye-tracking.md)
 * [Sistemi di coordinate in DirectX](coordinate-systems-in-directx.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)
 * [Mani e controller del movimento in DirectX](hands-and-motion-controllers-in-directx.md)

@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, introduzione, il materiale sussidiario
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326122"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414165"
 ---
 # <a name="about-this-design-guidance"></a>Su questo materiale sussidiario di progettazione
 
@@ -33,7 +33,7 @@ Ecco una rapida panoramica del modo in cui è organizzata in questa Guida di pro
 * **[Iniziare a progettare](mixed-reality.md)**  : leggere i commenti ad alto livello e comprendere i principi si seguirà.
 * **[Interazioni instinctual](interaction-fundamentals.md)**  -informazioni su input, l'esecuzione di comandi, la navigazione e altri concetti di base di interazione per la progettazione delle app.
 * **[Stile](typography.md)**  -rendere l'applicazione fantastici tramite colore, tipografia e movimento.
-* **[I modelli dell'app](types-of-mixed-reality-apps.md)**  -informazioni su come app; ications può estendersi su scenari per gli ambienti coinvolgenti e realistici.
+* **[I modelli dell'app](types-of-mixed-reality-apps.md)**  -informazioni su come le applicazioni possono estendersi su scenari per gli ambienti coinvolgenti e realistici.
 * **[I controlli](interactable-object.md)**  -usare i controlli e modelli come blocchi predefiniti per creare un'esperienza dell'applicazione.
 * **[App di esempio](design.md#sample-apps)**  -compilare esperienze all'avanguardia dagli esempi progettato e creato dal nostro team.
 * **[Strumenti e risorse di progettazione](design.md#design-tools)**  -avviare il progetto con i modelli di progettazione e strumenti.
@@ -72,7 +72,7 @@ Una delle difficoltà che offrono indicazioni di progettazione in questo nuovo s
 
 ![Il giusto equilibrio di progettazione globale e locale](images/500px-fluentdesign.jpg) <br>
 
-Offerti due livelli di linee guida di progettazione: globale e locale. Le indicazioni di progettazione 'global' incorporate nel [Fluent Design sistema](http://fluent.microsoft.com). Dettagli Fluent modo di pensare nozioni di base, ad esempio chiaro, profondità, movimento, materiale e scalabilità tra tutti i Microsoft design: i dispositivi, i prodotti, strumenti e servizi. Ciò premesso, sono presenti differenze significative specifiche del dispositivo in questo sistema più grande. Pertanto, nostro indicazioni di progettazione 'local' per gli schermi azionata descrivono la progettazione per i dispositivi holographic e coinvolgente e concreto che spesso avere diversi input e output i metodi, nonché le diverse esigenze degli utenti e gli scenari. Linee guida di progettazione locale vengono trattati argomenti univoci per HMDs. Ad esempio:  Gli ambienti 3D e gli oggetti. ambienti condivisi; l'utilizzo di sensori, rilevamento occhio e mapping spaziale; e le opportunità di spaziale audio. In tutta la linea guida prescrive verrà visualizzato a fare riferimento a questi globale e gli aspetti locali. Si spera Ciò consentirà a terra del lavoro in una base più grande della progettazione sfruttando contemporaneamente le differenze di progettazione tra dispositivi specifici.
+Offerti due livelli di linee guida di progettazione: globale e locale. Le indicazioni di progettazione 'global' incorporate nel [Fluent Design sistema](http://fluent.microsoft.com). Dettagli Fluent modo di pensare nozioni di base, ad esempio chiaro, profondità, movimento, materiale e scalabilità tra tutti i Microsoft design: i dispositivi, i prodotti, strumenti e servizi. Ciò premesso, sono presenti differenze significative specifiche del dispositivo in questo sistema più grande. Pertanto, nostro indicazioni di progettazione 'local' per gli schermi azionata descrivono la progettazione per i dispositivi holographic e coinvolgente e concreto che spesso avere diversi input e output i metodi, nonché le diverse esigenze degli utenti e gli scenari. Linee guida di progettazione locale vengono trattati argomenti univoci per HMDs. Ad esempio: Gli ambienti 3D e gli oggetti. ambienti condivisi; l'utilizzo di sensori, rilevamento occhio e mapping spaziale; e le opportunità di spaziale audio. In tutta la linea guida prescrive verrà visualizzato a fare riferimento a questi globale e gli aspetti locali. Si spera Ciò consentirà a terra del lavoro in una base più grande della progettazione sfruttando contemporaneamente le differenze di progettazione tra dispositivi specifici.
 
 ### <a name="have-a-discussion"></a>Dispone di una discussione
 

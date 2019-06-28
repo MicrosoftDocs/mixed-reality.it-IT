@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Realtà mista, mani libere, estasiati, estasiati targeting, interazione, progettazione
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326147"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414388"
 ---
 # <a name="hands-free"></a>Senza mani
 
@@ -39,10 +39,10 @@ Utilizzando la voce di comando e controllo di che un'interfaccia può non solo c
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Puntamento con la testa e attesa](gaze-and-dwell.md)
 
-In alcune situazioni invisibile all'utente, utilizzando la voce non è ideale o persino possibile. Gli ambienti di factory l, sulla privacy o norme social possono essere tutti i vincoli. Head estasiati + permanenza modello consente all'utente di spostarsi tra l'app usando il vettore head in modo da puntare, mentre il tempo di ritardo, o rimanere su un pulsante verrà attivarlo dopo un determinato periodo di tempo, normalmente circa 1 secondo o in questo caso. 
+In alcune situazioni invisibile all'utente, utilizzando la voce non è ideale o persino possibile. Gli ambienti di factory l, sulla privacy o norme social possono essere tutti i vincoli. Head estasiati + permanenza modello consente all'utente di spostarsi tra l'app usando il vettore head in modo da puntare, mentre il tempo di ritardo, o rimanere su un pulsante verrà attivarlo dopo un determinato periodo di tempo, in genere entro 1 secondo o operazione. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>In fase di transizione da e verso le mani freey
+## <a name="transitioning-in-and-out-of-hands-free"></a>In fase di transizione da e verso mani libere
 
 Per questi scenari, liberando le mani di interagire con vntana per l'esecuzione di comandi e la navigazione può essere compreso tra da un requisito assoluto all'esecuzione dell'applicazione, end-to-end, per praticità che l'utente può eseguire la transizione in e out di in corrispondenza di qualsiasi ora. 
 
@@ -54,7 +54,7 @@ Se l'utente di destinazione deve essere in grado di passare da mani a invisibile
 Ad esempio, se l'utente è nell'ambiente di produzione, guardare un video riferimento sul suo Hololens e decide di prelevare una chiave inglese per iniziare a lavorare, Anna molto probabilmente verrebbe iniziare a lavorare in viva voce senza la necessità di impostare la chiave inglese a premere un pulsante. Deve essere in grado di richiamare una sessione vocale con un comando vocale, il caso di soffermarsi su un'interfaccia utente già visibili per iniziare a permanenza, o ad esempio la parola "select".
 
 L'utente deve avere la possibilità di: 
-* Passare a in viva voce durante in viva voce
+* Passa a mani libere mentre mani libere
 * Passare a mani con le mani
 * Passare al controller usando un controller 
 
@@ -96,5 +96,5 @@ L'utente comprensione...
 
 ## <a name="see-also"></a>Vedere anche
 * [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Manipolazione diretta](direct-manipulation.md)
-* [Puntamento e commit](point-and-commit.md)
+* [Manipolazione diretta con le mani](direct-manipulation.md)
+* [Puntamento e commit con le mani](point-and-commit.md)

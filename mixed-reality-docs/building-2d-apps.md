@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App 2D, UWP, app flat, HoloLens, coinvolgenti le cuffie, possono, modello di app, eseguire il pulsante, barra dell'app, dpi, risoluzione, scalabilità
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602183"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414218"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>L'aggiornamento di App UWP 2D per realtà mista
 
@@ -147,7 +147,7 @@ Le visualizzazioni 2D sono decorate con una barra app sopra il relativo contenut
 
 **Titolo:** consente di visualizzare il *displayname* del riquadro associato all'istanza di app
 
-**Pulsante indietro:** genera il *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* eventi quando premuto. Visibilità pulsante Indietro è controllata dal  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)*.
+**Pulsante indietro:** genera il *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* eventi quando premuto. Visibilità pulsante Indietro è controllata dal  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
 ![App barra dell'interfaccia utente nella vista app 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *App barra dell'interfaccia utente nella vista app 2D*
@@ -176,10 +176,10 @@ Di seguito sono i concetti o scenari di alto livello che è necessario comprende
 Una volta che l'app è in esecuzione, pacchetto dell'app per [lo invii a di Microsoft Store](submitting-an-app-to-the-microsoft-store.md).
 
 ## <a name="see-also"></a>Vedere anche
-* [Modello di App](app-model.md)
-* [Sguardo](gaze.md)
+* [Modello di app](app-model.md)
+* [Sguardo fisso](gaze.md)
 * [Movimento](gestures.md)
-* [Controller di movimento](motion-controllers.md)
-* [Voce](voice-input.md)
-* [Invio di un'app per i Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+* [Controller del movimento](motion-controllers.md)
+* [Input vocale](voice-input.md)
+* [Invio di un'app a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)

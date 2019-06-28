@@ -3,15 +3,15 @@ title: Problemi noti di HoloLens
 description: Si tratta dell'elenco di problemi noti che possono interessare gli sviluppatori di HoloLens.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 04/1/2019
+ms.date: 06/14/2019
 ms.topic: article
 keywords: risolvere i problemi, problema noto, Guida
-ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: fd70171a908dab016b375e2207436dc11d625af9
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148699"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414355"
 ---
 # <a name="hololens-known-issues"></a>Problemi noti di HoloLens
 
