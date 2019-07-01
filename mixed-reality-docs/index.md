@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
-ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813752"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415394"
 ---
 # <a name="mixed-reality-documentation"></a>Documentazione sulla realtà mista
 
@@ -72,7 +72,7 @@ La realtà mista combina contenuti del mondo reale e virtuali in ambienti ibridi
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Distribuire</h3>
-                                                  <p>Preparare l'app per gli utenti e valutare la possibilità di creare un'utilità di avvio 3D.</p>
+                                                  <p>Preparare l'applicazione per gli utenti e valutare la possibilità di creare un'utilità di avvio 3D.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,7 +151,7 @@ La realtà mista combina contenuti del mondo reale e virtuali in ambienti ibridi
 
 <h2>Novità e note</h2>
 
-<h3>Aprile 2019</h3>
+<h3>Giugno 2019</h3>
 
 Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il tuo feedback è molto importante per Microsoft, che ti invita a [partecipare alla conversazione](https://holodevelopersslack.azurewebsites.net/) per proporre argomenti, richiedere informazioni, istruzioni o esercitazioni specifiche e altro ancora. È anche possibile restare in contatto con Microsoft tramite [Twitter](https://twitter.com/MxdRealityDev) e [partecipare al programma per sviluppatori](https://aka.ms/iwantmr) per ricevere aggiornamenti diretti sulle novità per documentazione, strumenti, eventi e così via. Altre informazioni saranno disponibili prossimamente.
 
@@ -162,7 +162,7 @@ Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il 
 <tr>
 <td><b>Guide alla conversione</b> <br>1. Da HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) a MRTK versione 2
 <br>2. Da HoloLens (prima generazione) a HoloLens 2 (da x86 ad ARM, consigli per le interazioni e la progettazione)
-</td></td><td>Marzo - maggio 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparare un'app esistente per HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>Da HoloToolKit ad API MRTK</a></td>
+</td></td><td>Marzo - maggio 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparare un'applicazione esistente per HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>Da HoloToolKit ad API MRTK</a></td>
 </tr>
 <tr>
 <td>Moduli per sviluppatori open source mensili (esercitazioni/app di esempio)</td><td>Marzo - giugno 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>Modulo di apprendimento di base sulla realtà mista</a></td>
@@ -183,4 +183,4 @@ Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il 
 
 
 >[!IMPORTANT]
->Tutto il materiale per lo sviluppo della realtà mista viene fornito in questo sito solo per riferimento. L'app, il relativo utilizzo e l'impatto sugli utenti finali sono esclusiva responsabilità dello sviluppatore dell'app, che è tenuto anche ad assicurarsi che l'app non causi disagi, lesioni o altri danni agli utenti finali, oltre che a includere le dichiarazioni di non responsabilità e le avvertenze appropriate. È sempre necessario che lo sviluppatore adotti le misure appropriate in fase di sviluppo e pubblicazione dell'app per assicurarsi che l'app sia sicura e soddisfi gli obblighi previsti nel [Contratto per gli sviluppatori di app con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Tutto il materiale per lo sviluppo della realtà mista viene fornito in questo sito solo per riferimento. L'applicazione, il relativo utilizzo e l'impatto sugli utenti finali sono esclusiva responsabilità dello sviluppatore dell'applicazione, che è tenuto anche ad assicurarsi che l'applicazione non causi disagi, lesioni o altri danni agli utenti finali, oltre che a includere le dichiarazioni di non responsabilità e le avvertenze appropriate. È sempre necessario che lo sviluppatore adotti le misure appropriate in fase di sviluppo e pubblicazione dell'applicazione per assicurarsi che l'applicazione sia sicura e soddisfi tutti gli obblighi previsti nel [Contratto per gli sviluppatori di app con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
