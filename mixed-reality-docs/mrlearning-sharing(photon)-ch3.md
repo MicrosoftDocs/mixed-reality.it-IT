@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 4625acfcb3353e9537961a444012452139705359
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465211"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523308"
 ---
-# <a name="connecting-multiple-users"></a>**Ci si connette più utenti** 
+# <a name="connecting-multiple-users"></a>Ci si connette più utenti
 
 In questa lezione, è informazioni su come connettere più utenti come parte di una condividere esperienze in tempo reale. Al termine di questa lezione, sarà in grado di aprire l'applicazione in più dispositivi e vedere avatar, rappresentato da una sfera, le rappresentazioni di ogni persona che unisce in join. 
 

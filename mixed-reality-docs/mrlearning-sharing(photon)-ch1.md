@@ -6,20 +6,20 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: f612fa89db1a3f5ed34f6e0bb7062b53780f09b8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 80cefb36ec1944ec6f537aafcbf4b63f7f812d26
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416122"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523296"
 ---
-# <a name="setting-up-photon"></a>Configurazione di Photon
+#  <a name="setting-up-photon-unity-networking"></a>Configurazione di rete di Unity Photon
 
-In questa lezione si apprenderà come prepararsi per la creazione di un'esperienza condivisa tramite l'importazione di Networking Unity Photon (stato) nel progetto Unity. Photon è una delle diverse opzioni di rete disponibili per gli sviluppatori di realtà mista per creare esperienze condivise. Si si apprenderà come creare un account Photon, importare Photon e creare un server locale facoltativo
+In questa esercitazione, è informazioni su come prepararsi per la creazione di un'esperienza condivisa tramite l'importazione di Networking Unity Photon (stato) nel progetto Unity. Photon è una delle diverse opzioni di rete disponibili per gli sviluppatori di realtà mista per creare esperienze condivise. Si si apprenderà come creare un account Photon, importare Photon e creare un server locale facoltativo
 
 Obiettivi:
 
-* Informazioni su come creare account Photon
+* Informazioni su come creare un account Photon
 
 * Informazioni su come individuare e importare Networking Unity Photon
 
@@ -38,32 +38,32 @@ Obiettivi:
 
 ![Module3Chapter1step6im](images/module3chapter1step6im.PNG)
 
-2. Creare un ID applicazione facendo clic sul pulsante "Crea una nuova app".
+2. Creare un ID applicazione, fare clic su Crea un pulsante Nuova App.
 
 ![Module3Chapter1step7aim](images/module3chapter1step7aim.PNG)
 
-3. Selezionare "Photon considerato" nel menu a discesa in "tipo photon". Assegnargli un nome, in questo esempio, è denominato "HoloLensPhotonProject." Al termine, fare clic sul pulsante "Crea".
+3. Selezionare poi Photon nel menu a discesa sotto Photon tipo. Assegnargli un nome. In questo esempio è denominato HoloLensPhotonProject. Al termine, fare clic sul pulsante Crea.
 
 ![Module3Chapter1step7bim](images/module3chapter1step7bim.PNG)
 
-4. Al termine dell'operazione, tornare alla pagina delle applicazioni e verrà visualizzato qualcosa di simile all'immagine seguente. Fare clic sull'ID dell'app e copiarlo. Incolla è in una posizione che facilmente accessibile.  
+4. Al termine dell'operazione, tornare alla pagina delle applicazioni e verrà visualizzato qualcosa di simile all'immagine seguente. Fare clic sull'ID applicazione e copiarlo. Incolla è in una posizione che facilmente accessibile.  
 
 ![Module3Chapter1step8im](images/module3chapter1step8im.PNG)
 
-5. Creare un nuovo progetto unity e denominarla "HLSharingProject." Per istruzioni su come creare un nuovo progetto Unity, consultare [sezione "Creare progetto Unity" del modulo Base](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
+5. Creare un nuovo progetto unity e denominarla HLSharingProject. Per istruzioni su come creare un nuovo progetto Unity, consultare [sezione "Creare progetto Unity" del modulo Base](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
 
-6. Una volta che il progetto viene caricato, fare clic sulla scheda "asset store", come illustrato nell'immagine seguente. Quindi, nella casella di ricerca evidenziata nell'immagine seguente, digitare "Stato" e selezionare l'asset "Photon stato 2 - gratuito" dai risultati della ricerca. 
+6. Una volta che il progetto viene caricato, fare clic sulla scheda Asset Store, come illustrato nell'immagine seguente. Quindi, nella casella di ricerca evidenziata nell'immagine seguente, digitare in poi e selezionare il 2 in poi Photon - da FRE"asset dai risultati della ricerca. 
 
 ![Module3Chapter1step10im](images/module3chapter1step10im.PNG)
 
-7. Scaricare e importare questo asset facendo clic sul pulsante "Download" e "Import".
+7. Scaricare e importare questo asset facendo clic sul pulsante Download e importazione.
 
 ![Module3Chapter1step11im](images/module3chapter1step11im.PNG)
 
-8. Una volta Photon completato il processo di importazione, verrà visualizzata la procedura guidata in poi. Richiedere l'ID dell'applicazione (che deve essere copiata negli Appunti) del passaggio 4 e incollarlo nella casella di AppID e fare clic sul pulsante "Progetto di installazione". 
+8. Una volta Photon completato il processo di importazione, verrà visualizzata la procedura guidata in poi. Richiedere l'ID dell'applicazione (che deve essere copiata negli Appunti) nel passaggio 4, incollarlo nella casella di AppID e premere il pulsante di progetto di installazione. 
 ![module3chapter1step12im](images/module3chapter1step12im.PNG)
 
-9. Dopo aver aggiunto l'AppID, passare a "Photon"->"PhotonUnityNetworking" -> "Risorse" -> "PhotonServerSettings" negli asset. Selezionare l'opzione "Usa nome Server" e impostare l'area fisso in "us" o l'area di servizio photon.
+9. Dopo aver aggiunto l'AppID, passare a Photon -> PhotonUnityNetworking -> risorse -> PhotonServerSettings negli asset. Selezionare l'opzione utilizza un nome Server e impostare il fisso area Stati Uniti o l'area di servizio yourPphoton.
 
    ![module3chapter1step13im](images/module3chapter1step13im.PNG)
 
@@ -71,5 +71,5 @@ Obiettivi:
 
 Si hanno correttamente creato un account Photon configurare un server Photon locale e importato in poi in Unity. Il passaggio successivo è impostare il progetto e quindi consentire le connessioni con altri utenti in modo che più utenti possono visualizzare il proprio lavoro. 
 
-[Lezione successiva: Sharing(photon) lezione 2](mrlearning-sharing(photon)-ch2.md)
+[Esercitazione successiva: Operazioni preliminari per lo sviluppo di Unity](mrlearning-sharing(photon)-ch2.md)
 

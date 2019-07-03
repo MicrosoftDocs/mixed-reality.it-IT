@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, i controlli, dell'interfaccia utente, esperienza utente
-ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: 84853a23a73bbece30c1f96b83e586642f3ab762
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813734"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523258"
 ---
 # <a name="displaying-progress"></a>Visualizzazione dello stato
 
@@ -48,7 +48,7 @@ Solo un anello di stato ha uno stato indeterminato e deve essere usato quando qu
 
 ## <a name="see-also"></a>Vedere anche
 * [Gli script di stato di avanzamento e prefabs nel Toolkit di realtà mista](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [Rettangolo di selezione](app-bar-and-bounding-box.md)
+* [rettangolo di selezione](app-bar-and-bounding-box.md)
 * [Oggetto che supporta interazioni](interactable-object.md)
 * [Raccolta di oggetti](object-collection.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)

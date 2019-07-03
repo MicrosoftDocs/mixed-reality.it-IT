@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465228"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523200"
 ---
-# <a name="synchronizing-shared-object-movements"></a>La sincronizzazione gli spostamenti di oggetti condivisi
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. La condivisione di spostamenti di tipo di oggetto con più utenti
 
-In questa lezione, abbiamo illustrato come condividere gli spostamenti degli oggetti in modo che tutti i partecipanti di una sessione condivisa è possono collaborare insieme e visualizzare le interazioni degli altri. Questa lezione si basa l'utilità di avvio lunare che è stato compilato come parte del [esercitazioni di modulo Base](mrlearning-base.md).
+In questa esercitazione, è come condividere gli spostamenti degli oggetti in modo che tutti i partecipanti di una sessione condivisa è possono collaborare insieme e visualizzare le interazioni degli altri. Questa lezione si basa l'utilità di avvio lunare che è stato compilato come parte del [esercitazioni di modulo Base](mrlearning-base.md).
 
 Obiettivi:
 
@@ -26,7 +26,7 @@ Obiettivi:
 ### <a name="instructions"></a>Istruzioni
 
 
-1. Salvare la scena nella lezione precedente (CTRL + + S). È possibile specificare un nome HLSharedProjectMainPart4.unity in modo che risulti più semplice trovare quando ti serve.
+1. Salvare la scena nella lezione precedente (CTRL + + S). È possibile specificare un nome, HLSharedProjectMainPart4.unity, in modo che risulti più semplice trovare quando ti serve.
 
 2. Nella finestra del progetto negli asset -> cartella degli script, fare doppio clic su GenericNetSync per aprirlo in Visual Studio o che mai code editor in uso.  ![](images/module3chapter4updatestep2.png)
 

@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: d4220527a7de8e596f2825fd9d199d536510b972
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 389a23129d4dfc5819cdc45d071b678e3792089d
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148629"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523151"
 ---
-# <a name="mr-learning-base-module-overview--objectives"></a>Obiettivi di & Base Learning MR modulo Panoramica
+# <a name="1-overview-and-objectives"></a>1. Panoramica e gli obiettivi
 
 ## <a name="device-support"></a>Supporto di dispositivi
 

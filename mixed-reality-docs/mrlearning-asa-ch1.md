@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415274"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523232"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>Introduzione a Azure spaziali ancoraggi su HoloLens 2
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introduzione a Azure gli ancoraggi spaziali
 
-Benvenuti al secondo modulo dell'esercitazione 2 HoloLens. Prima di iniziare, assicurarsi che tutti del [prerequisiti](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) vengono completate. Se non è stata completata, il primo [modulo di Base](mrlearning-base.md) ancora, è consigliabile completare prima di tutto tale modulo. Se sta iniziando da un nuovo progetto Unity, seguire la procedura di creazione nuovo progetto nel [modulo di Base](mrlearning-base.md). 
+Benvenuti al secondo modulo delle esercitazioni HoloLens 2. Prima di iniziare, assicurarsi che tutti del [prerequisiti](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) vengono completate. Se non è stata completata, il primo [modulo di Base](mrlearning-base.md) ancora, è consigliabile completare prima di tutto tale modulo. Se sta iniziando da un nuovo progetto Unity, seguire la procedura di creazione nuovo progetto nel [modulo di Base](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Obiettivi
 
@@ -40,7 +40,7 @@ Prima di iniziare, scaricare e importare le risorse seguenti:
 
 > Nota: Per istruzioni specifiche su come importare gli ancoraggi spaziale di Azure, passaggio 6 per istruzioni specifiche per il modulo di Base di MR pacchetto di Asset e i passaggi 3 e 4 per istruzioni specifiche sul Toolkit di realtà mista (MRKT), vedere il passaggio 5.
 
-1. creare una nuova scena nel progetto. Pulsante destro del mouse fare clic sulla cartella scena, fare clic su "Crea", quindi scena. Nome della nuova scena ASALearningmodule.
+1. creare una nuova scena nel progetto. Pulsante destro del mouse fare clic sulla cartella scena, fare clic su Crea, quindi scena. Nome della nuova scena ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ Prima di iniziare, scaricare e importare le risorse seguenti:
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Nota: Verrà visualizzato un messaggio popup che afferma, "È necessario scegliere un file per il Toolkit di realtà mista". Fare clic su Ok, si offre al passaggio 4.
+> Nota: Verrà visualizzato un popup con la dicitura, è necessario scegliere un file per il Toolkit di realtà mista. Fare clic su Ok, si offre al passaggio 4.
 
 4. Quando si sceglie un file per il MRTK, select, DefaultMixedRealityToolkitConfigurationProfile.
 
@@ -153,7 +153,7 @@ Dopo avere configurato la scena per illustrare i concetti fondamentali di Azure 
 
 7. Prima della compilazione, assicurati che il dispositivo sia in modalità sviluppatore. Se questa è la prima volta che esegui la distribuzione nel dispositivo HoloLens 2, Visual Studio può richiedere di associare HoloLens 2 a un PIN. Seguire [queste istruzioni](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se è necessario abilitare la modalità sviluppatore o l'associazione con Visual Studio.
 
-8. Configurare Visual Studio per la compilazione per il 2 HoloLens, selezionare la configurazione di rilascio e l'architettura "RM".
+8. Configurare Visual Studio per la compilazione per il 2 HoloLens, selezionare la configurazione Release, nonché l'architettura di Resource Manager.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. Il passaggio finale consiste nella compilazione per il dispositivo selezionando Debug > Avvia senza eseguire debug. Se si seleziona Avvia senza eseguire debug, l'applicazione venga avviata immediatamente sul dispositivo alle informazioni di debug ithout compilazione riuscita di Visual Studio. Questo significa anche che, mentre l'applicazione è in esecuzione sul dispositivo HoloLens 2, puoi disconnettere il cavo USB senza arrestare l'applicazione. È anche possibile selezionare compilazione > Distribuisci soluzione da distribuire al dispositivo senza che l'applicazione avvia automaticamente.
@@ -176,9 +176,9 @@ Dopo avere configurato la scena per illustrare i concetti fondamentali di Azure 
     
     7. Avviare la sessione di Azure Anchor spaziale.
     
-    8. Trovare Azure spaziali aachors. 
+    8. Trovare Azure Anchor spaziale. 
     
-    e si dovrebbe tornare nella posizione originale è inserirlo quando è stato creato il punto di ancoraggio).
+    e si dovrebbe tornare nella posizione originale è inserirlo quando è stato creato il punto di ancoraggio.
     9. Eliminare Azure ancoraggio spaziale.
     
     10. Arrestare una sessione di Azure.
@@ -198,7 +198,7 @@ Nelle sezioni precedenti, si è appreso le nozioni di base di Azure gli ancoragg
    > Nota: Sono disponibili diversi di flussi di esperienza utente per il riposizionamento esperienze, incluso l'uso di un pulsante per attivare o disattivare un rettangolo di selezione che circonda l'esperienza, l'utilizzo di un oggetto riposizionamento (ad esempio il cubo usato in questo passaggio), l'uso di posizione e della rotazione gizmo e così via.
 
 ## <a name="congratulations"></a>Lezione completata
-In questa lezione si è appreso le nozioni di base di Azure gli ancoraggi spaziale. Questo esson fornito con diversi pulsanti che consentono di esplorare i vari passaggi necessari per avviare e arrestare una sessione di Azure e creare, caricare e scaricare gli ancoraggi azure in un singolo dispositivo. Nella lezione successiva si apprenderà come salvare gli ID di ancoraggio di Azure per il 2 HoloLens per il recupero, anche dopo il riavvio dell'applicazione. Durante la serie si apprenderà anche come trasferire gli ID di ancoraggio tra più dispositivi per ottenere l'allineamento spaziale e scopri qual è multiutente condivisi sessioni (presto disponibili come parte del modulo di condivisione).
+In questa esercitazione si è appreso le nozioni di base di Azure gli ancoraggi spaziale. Questo esson fornito con diversi pulsanti che consentono di esplorare i vari passaggi necessari per avviare e arrestare una sessione di Azure e creare, caricare e scaricare gli ancoraggi azure in un singolo dispositivo. Nella lezione successiva si apprenderà come salvare gli ID di ancoraggio di Azure per il 2 HoloLens per il recupero, anche dopo il riavvio dell'applicazione. Durante la serie si apprenderà anche come trasferire gli ID di ancoraggio tra più dispositivi per raggiungere allineamento spaziale e apprendere più utenti, sessioni condivisi presto disponibili come parte dell'esercitazione di condivisione.
 
 [Lezione successiva: ASA lezione 2](mrlearning-asa-ch2.md)
 
