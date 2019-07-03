@@ -71,7 +71,8 @@
 
 
 ## Note sulla versione per la realtà mista
-### [Note sulla versione corrente](release-notes-october-2018.md)
+### [Note sulla versione corrente](release-notes-may-2019.md)
+### [Note sulla versione - ottobre 2018](release-notes-october-2018.md)
 ### [Note sulla versione - aprile 2018](release-notes-april-2018.md)
 ### [Note sulla versione - ottobre 2017](release-notes-october-2017.md)
 ### [Note sulla versione - agosto 2016](release-notes-august-2016.md)
@@ -194,16 +195,29 @@
 ### [Uso di WebVR in Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [Esercitazioni e app di esempio](tutorials.md)
 ### Unity
-#### Moduli di apprendimento sulla realtà mista
-##### HoloLens 2
-###### Modulo di base
-####### [Modulo di base: panoramica e obiettivi](mrlearning-base.md)
-####### [Inizializzazione del progetto e prima applicazione](mrlearning-base-ch1.md)
-####### [Interfaccia utente, tracciamento delle mani e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
-####### [Posizionamento del contenuto dinamico e risolutori](mrlearning-base-ch3.md)
-####### [Interazione con oggetti 3D](mrlearning-base-ch4.md)
-####### [Input avanzati](mrlearning-base-ch5.md)
-####### [App demo](mrlearning-base-ch6.md)
+#### Esercitazioni su HoloLens 2
+##### Esercitazioni introduttive
+###### [1. Panoramica e obiettivi](mrlearning-base.md)
+###### [2. Inizializzazione del progetto e prima applicazione](mrlearning-base-ch1.md)
+###### [3. Creazione dell'interfaccia utente e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
+###### [4. Inserimento di contenuto dinamico e uso dei risolutori](mrlearning-base-ch3.md)
+###### [5. Interazione con oggetti 3D](mrlearning-base-ch4.md)
+###### [6. Esplorazione delle opzioni di input avanzate](mrlearning-base-ch5.md)
+###### [7. Creazione dell'applicazione di esempio Lunar Module](mrlearning-base-ch6.md)
+##### Esercitazioni su Ancoraggi nello spazio di Azure
+###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
+###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
+##### Esercitazioni sui servizi Voce di Azure
+###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
+###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
+###### [3. Aggiunta del componente di traduzione vocale in Servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
+###### [4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
+##### Esercitazioni sulle funzionalità multiutente
+###### [1. Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
+###### [2. Preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
+###### [3. Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
+###### [4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
+###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch5.md)
 #### App di esempio open source per HoloLens (prima generazione)
 ##### [Periodic Table of the Elements](periodic-table-of-the-elements.md)
 ##### [Lunar Module](lunar-module.md)
