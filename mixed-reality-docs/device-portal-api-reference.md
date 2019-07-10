@@ -6,12 +6,12 @@ ms.author: JLyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Device Portal, API
-ms.openlocfilehash: 507ab98734adea80d0aad41d99124e3d91846f28
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603276"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694439"
 ---
 # <a name="device-portal-api-reference"></a>Portale del dispositivo di riferimento all'API
 
@@ -278,17 +278,6 @@ Arrestare la registrazione corrente. La registrazione verrà restituita come un 
 
 ## <a name="mixed-reality-capture"></a>Mixed Reality Capture
 
-**/API/holographic/MRC/file (DELETE)**
-
-Elimina una realtà mista di registrazione dal dispositivo.
-
-Parametri
-* nome file: Il nome, hex64 codificato, del file da eliminare
-
-**/api/holographic/mrc/settings (GET)**
-
-Ottiene il valore predefinito realtà mista le impostazioni di acquisizione
-
 **/api/holographic/mrc/file (GET)**
 
 Scarica un file di realtà mista dal dispositivo. Op usare = parametro di query di flusso per lo streaming.
@@ -297,6 +286,38 @@ Parametri
 * nome file: Il nome, hex64 codificato, del file video di introduzione
 * Op: flusso
 
+**/API/holographic/MRC/file (DELETE)**
+
+Elimina una realtà mista di registrazione dal dispositivo.
+
+Parametri
+* nome file: Il nome, hex64 codificato, del file da eliminare
+
+**/API/holographic/MRC/Files (GET)**
+
+Restituisce l'elenco dei file di realtà mista archiviati nel dispositivo
+
+**/api/holographic/mrc/photo (POST)**
+
+Scatta una foto di realtà mista e crea un file nel dispositivo
+
+Parametri
+* holo: acquisire vntana: true o false (valore predefinito è false)
+* PV: acquisizione PV fotocamera: true o false (valore predefinito è false)
+* RenderFromCamera : Rendering (solo 2 HoloLens) dal punto di vista della fotocamera foto/video: true o false (valore predefinito è true)
+
+**/api/holographic/mrc/settings (GET)**
+
+Ottiene il valore predefinito realtà mista le impostazioni di acquisizione
+
+**/api/holographic/mrc/settings (POST)**
+
+Imposta il valore predefinito realtà mista le impostazioni di acquisizione.  Alcune di queste impostazioni vengono applicate a photo MRC e acquisizione video del sistema.
+
+**/api/holographic/mrc/status (GET)**
+
+Ottiene lo stato della realtà mista registrate (in esecuzione, arrestato)
+
 **/api/holographic/mrc/thumbnail (GET)**
 
 Ottiene l'immagine di anteprima per il file specificato.
@@ -304,81 +325,56 @@ Ottiene l'immagine di anteprima per il file specificato.
 Parametri
 * nome file: Il nome, hex64 codificato, del file per cui viene richiesto l'anteprima
 
-**/api/holographic/mrc/status (GET)**
-
-Ottiene lo stato della realtà mista registrate (in esecuzione, arrestato)
-
-**/API/holographic/MRC/Files (GET)**
-
-Restituisce l'elenco dei file di realtà mista archiviati nel dispositivo
-
-**/api/holographic/mrc/settings (POST)**
-
-Imposta il valore predefinito realtà mista le impostazioni di acquisizione
-
 **/api/holographic/mrc/video/control/start (POST)**
 
 Avvia una registrazione di realtà mista
 
 Parametri
-* holo: acquisire vntana: true o false
-* PV: acquisizione PV fotocamera: true o false
-* MIC: acquisizione microfono: true o false
-* loopback: acquisizione di app audio: true o false
+* holo: acquisire vntana: true o false (valore predefinito è false)
+* PV: acquisizione PV fotocamera: true o false (valore predefinito è false)
+* MIC: acquisizione microfono: true o false (valore predefinito è false)
+* loopback: acquisizione di app audio: true o false (valore predefinito è false)
+* RenderFromCamera : Rendering (solo 2 HoloLens) dal punto di vista della fotocamera foto/video: true o false (valore predefinito è true)
+* Vstab: Stabilizzazione video enable (solo 2 HoloLens): true o false (valore predefinito è true)
+* vstabbuffer: Latenza di buffer di stabilizzazione video (solo 2 HoloLens): tra 0 e 30 fotogrammi (impostazione predefinita è 15 fotogrammi)
 
 **/api/holographic/mrc/video/control/stop (POST)**
 
 Viene arrestata la registrazione di realtà mista di corrente
 
-**/api/holographic/mrc/photo (POST)**
+## <a name="mixed-reality-streaming"></a>Realtà mista di Streaming
 
-Scatta una foto di realtà mista e crea un file nel dispositivo
+HoloLens supporta l'anteprima in tempo reale di realtà mista tramite download in blocchi di un file mp4 frammentato.
 
-Parametri
+I flussi di realtà mista condividono lo stesso set di parametri per controllare ciò che viene acquisita:
 * holo: acquisire vntana: true o false
 * PV: acquisizione PV fotocamera: true o false
+* MIC: acquisizione microfono: true o false
+* loopback: acquisizione di app audio: true o false
 
-Realtà mista di Streaming
+Se è stato specificato nessuno di questi elementi: vntana, fotocamera foto/video e audio app verranno acquisite<br>
+Se viene specificato uno: i parametri non specificati per impostazione predefinita saranno false
+
+Parametri facoltativi (solo 2 HoloLens)
+* RenderFromCamera: eseguire il rendering dal punto di vista della fotocamera foto/video: true o false (valore predefinito è true)
+* Vstab: abilitare la stabilizzazione video: true o false (valore predefinito è false)
+* vstabbuffer: latenza di buffer di stabilizzazione video: tra 0 e 30 fotogrammi (impostazione predefinita è 15 fotogrammi)
 
 **/api/holographic/stream/live.mp4 (GET)**
 
-Avviare un download in blocchi di un file MP4 frammentato
-
-Parametri
-* holo: acquisire vntana: true o false
-* PV: acquisizione PV fotocamera: true o false
-* MIC: acquisizione microfono: true o false
-* loopback: acquisizione di app audio: true o false
+Un flusso di 5Mbit 1280x720p 30fps.
 
 **/api/holographic/stream/live_high.mp4 (GET)**
 
-Avviare un download in blocchi di un file MP4 frammentato
-
-Parametri
-* holo: acquisire vntana: true o false
-* PV: acquisizione PV fotocamera: true o false
-* MIC: acquisizione microfono: true o false
-* loopback: acquisizione di app audio: true o false
-
-**/api/holographic/stream/live_low.mp4 (GET)**
-
-Avviare un download in blocchi di un file MP4 frammentato
-
-Parametri
-* holo: acquisire vntana: true o false
-* PV: acquisizione PV fotocamera: true o false
-* MIC: acquisizione microfono: true o false
-* loopback: acquisizione di app audio: true o false
+Un flusso di 5Mbit 1280x720p 30fps.
 
 **/api/holographic/stream/live_med.mp4 (GET)**
 
-Avviare un download in blocchi di un file MP4 frammentato
+Un flusso di 30fps 2.5Mbit 854x480p.
 
-Parametri
-* holo: acquisire vntana: true o false
-* PV: acquisizione PV fotocamera: true o false
-* MIC: acquisizione microfono: true o false
-* loopback: acquisizione di app audio: true o false
+**/api/holographic/stream/live_low.mp4 (GET)**
+
+Un flusso di 15fps 0.6Mbit 428x240p.
 
 ## <a name="networking"></a>Rete
 
@@ -532,5 +528,5 @@ Restituisce i dati
 * Nel menu start, restituisce lo stato di sessione WPR.
 
 ## <a name="see-also"></a>Vedere anche
-* [Utilizzando il Windows Device Portal](using-the-windows-device-portal.md)
+* [Avviare il Portale di dispositivi di Windows](using-the-windows-device-portal.md)
 * [Core portale dispositivo API reference (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

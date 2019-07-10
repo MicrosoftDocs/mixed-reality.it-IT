@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realtà mista, Azure, academy, unity, esercitazione, api, insights dell'applicazione, hololens, coinvolgenti, vr
-ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604770"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694567"
 ---
 >[!NOTE]
 >Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
@@ -38,7 +38,7 @@ Questo corso ti spiegherà come ottenere i risultati da del servizio Application
 
 <table>
 <tr>
-<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
+<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
 <td> MR e Azure 309: Insights dell'applicazione</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -207,7 +207,7 @@ Di seguito è una tipica configurato per lo sviluppo con la realtà mista e di c
 
     1.  Nel **altre impostazioni** scheda:
 
-        1.  **Scripting** **versione Runtime** deve essere **Experimental (.NET 4.6 equivalente)**, che attiverà una necessità di riavviare l'Editor.
+        1.  **Scripting** **versione Runtime** deve essere **Experimental (.NET 4.6 equivalente)** , che attiverà una necessità di riavviare l'Editor.
 
         2.  **Back-end di scripting** deve essere **.NET**
 
@@ -225,11 +225,11 @@ Di seguito è una tipica configurato per lo sviluppo con la realtà mista e di c
 
         ![Configurare il progetto Unity](images/AzureLabs-Lab309-21.png)
 
-9.  Nuovamente in **Build Settings**, **Unity C\# progetti** non è non è più in grigio, selezionare la casella di controllo accanto a questo.
+9.  Nuovamente in **Build Settings**, **Unity C# progetti** non è più è disattivata; selezionare la casella di controllo accanto a questo.
 
 10.  Chiudere la finestra Impostazioni di compilazione.
 
-11.  Salvare la scena e il progetto (**FILE > SAVE SCENE / FILE > Salva progetto**).
+11.  Salvare la scena e il progetto (**FILE** > **SAVE SCENE /file** > **Salva progetto**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>Capitolo 3 - Importa pacchetto Unity
@@ -275,7 +275,7 @@ Per importare Application Insights in un progetto, assicurarsi di avere [scarica
 
 In questo capitolo si configurerà il la fotocamera e i controlli per consentire all'utente di visualizzare e spostarsi nella scena.
 
-1.  Fare clic in un'area vuota nel Pannello di gerarchia, quindi su **Crea > vuoto**.
+1.  Fare clic in un'area vuota nel Pannello di gerarchia, quindi su **Create** > **vuoto**.
 
     ![Configurare i controlli utente e la fotocamera](images/AzureLabs-Lab309-26.png)
 
@@ -377,11 +377,11 @@ Ora si creerà alcune forme di base per la scena, con cui l'utente può interagi
 
 Per creare questa classe:
 
-1.  Fare doppio clic nella *Pannello di progetto*, quindi **Crea > cartella**. Denominare la cartella **script**.
+1.  Fare doppio clic nella *Pannello di progetto*, quindi **creare** > **cartella**. Denominare la cartella **script**.
 
     ![Creare la classe ApplicationInsightsTracker](images/AzureLabs-Lab309-46.png)  ![Creare la classe ApplicationInsightsTracker](images/AzureLabs-Lab309-47.png)
 
-2.  Con il **script** cartella creata, fare doppio clic sopra per avviarlo. Quindi, all'interno di tale cartella, pulsante destro del mouse, **Crea > C\# Script**. Denominare lo script **ApplicationInsightsTracker**.
+2.  Con il **script** cartella creata, fare doppio clic sopra per avviarlo. Quindi, all'interno di tale cartella, pulsante destro del mouse, **Create**  >   **C# Script**. Denominare lo script **ApplicationInsightsTracker**.
 
 3.  Fare doppio clic su nuova **ApplicationInsightsTracker** script per aprirlo con **Visual Studio**.
 
@@ -505,7 +505,7 @@ Lo script successivo da creare è il **estasiati** script. Questo script è resp
 
 1.  Fare doppio clic sulla **script** cartella per aprirla.
 
-2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create** > **C\# Script**. Denominare lo script **estasiati**.
+2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**. Denominare lo script **estasiati**.
 
 3.  Fare doppio clic sullo script per aprirlo con Visual Studio.
 
@@ -699,7 +699,7 @@ Per creare lo script:
 
 1.  Fare doppio clic sulla **script** cartella per aprirla.
 
-2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create** **C\# > Script**. Denominare lo script **ObjectTrigger**.
+2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**. Denominare lo script **ObjectTrigger**.
 
 3.  Fare doppio clic sullo script per aprirlo con Visual Studio. Sostituire il codice esistente con il codice seguente:
 
@@ -771,7 +771,7 @@ Per creare lo script:
 
 1.  Fare doppio clic sulla **script** cartella per aprirla.
 
-2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create** **C\# > Script**. Denominare lo script **DataFromAnalytics**.
+2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**. Denominare lo script **DataFromAnalytics**.
 
 3.  Fare doppio clic sullo script per aprirlo con Visual Studio.
 
@@ -825,7 +825,7 @@ Per creare lo script:
         }
     ```
 
-6.  All'interno del **DataFromAnalytics** classi, pulsante destro del mouse dopo il **Start ()** metodo, aggiungere il seguente metodo chiamato **FetchAnalytics()**. Questo metodo è responsabile della compilazione dell'elenco di coppie chiave-valore, con un *GameObject* e un numero di conteggio di eventi di segnaposto. Vengono quindi inizializzate le **GetWebRequest()** coroutine. La struttura della query della chiamata a *Application Insights* sono disponibili all'interno di questo metodo, inoltre, come le *URL della Query* endpoint.
+6.  All'interno del **DataFromAnalytics** classi, pulsante destro del mouse dopo il **Start ()** metodo, aggiungere il seguente metodo chiamato **FetchAnalytics()** . Questo metodo è responsabile della compilazione dell'elenco di coppie chiave-valore, con un *GameObject* e un numero di conteggio di eventi di segnaposto. Vengono quindi inizializzate le **GetWebRequest()** coroutine. La struttura della query della chiamata a *Application Insights* sono disponibili all'interno di questo metodo, inoltre, come le *URL della Query* endpoint.
 
     ```csharp
         private void FetchAnalytics()
@@ -857,7 +857,7 @@ Per creare lo script:
         }
     ```
 
-7.  Sotto il **FetchAnalytics()** metodo, aggiungere un metodo denominato **GetWebRequest()**, che restituisce un' *IEnumerator*. Questo metodo è responsabile che richiede il numero di volte in cui un evento, corrispondente a uno specifico *GameObject*, è stato chiamato all'interno *Application Insights*. Quando tutte le query inviate hanno restituito, il **DetermineWinner()** viene chiamato il metodo.
+7.  Sotto il **FetchAnalytics()** metodo, aggiungere un metodo denominato **GetWebRequest()** , che restituisce un' *IEnumerator*. Questo metodo è responsabile che richiede il numero di volte in cui un evento, corrispondente a uno specifico *GameObject*, è stato chiamato all'interno *Application Insights*. Quando tutte le query inviate hanno restituito, il **DetermineWinner()** viene chiamato il metodo.
 
     ```csharp
         /// <summary>
@@ -923,7 +923,7 @@ Per creare lo script:
         }
     ```
 
-8.  Il metodo successivo viene **DetermineWinner()**, che consente di ordinare l'elenco dei *GameObject* e *Int* coppie, in base al maggior numero di eventi. Viene quindi modificato il colore del materiale di tale *GameObject* al *verde* (come commenti e suggerimenti per tale necessità il numero più alto). Ciò consente di visualizzare un messaggio con i risultati di analitica.
+8.  Il metodo successivo viene **DetermineWinner()** , che consente di ordinare l'elenco dei *GameObject* e *Int* coppie, in base al maggior numero di eventi. Viene quindi modificato il colore del materiale di tale *GameObject* al *verde* (come commenti e suggerimenti per tale necessità il numero più alto). Ciò consente di visualizzare un messaggio con i risultati di analitica.
 
     ```csharp
         /// <summary>
@@ -1000,7 +1000,7 @@ Per creare lo script:
 
 1.  Fare doppio clic sulla **script** cartella per aprirla.
 
-2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create** > **C\# Script**. Denominare lo script **movimento**.
+2.  Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**. Denominare lo script **movimento**.
 
 3.  Fare doppio clic su script per aprirlo con *Visual Studio*.
 
@@ -1205,7 +1205,7 @@ In questo capitolo è necessario inserire il **lo spostamento dei** nello script
 
 Tutti gli elementi necessari per la sezione di Unity di questo progetto è ora stato completato, è il momento per la compilazione da Unity.
 
-1.  Passare a **impostazioni di compilazione**, **(File > Impostazioni di compilazione...)** .
+1.  Passare a **impostazioni di compilazione**, (**File** > **impostazioni di compilazione**).
 
 2.  Dal **Build Settings** finestra, fare clic su **compilazione**.
 

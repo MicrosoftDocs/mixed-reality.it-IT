@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: fotocamera, hololens, fotocamera colore, affiancate, hololens, 2, cv, visione artificiale, stima front, marcatori, codice a matrice, a matrice, foto, video
-ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523318"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694533"
 ---
 # <a name="locatable-camera"></a>Fotocamera individuabile
 
@@ -43,7 +43,7 @@ HoloLens include una fotocamera posta sul world nella parte anteriore del dispos
   | Profilo                                         | Video     | Anteprima   | Ancora     | Frequenze dei fotogrammi | Orizzontale campo visualizzazione (H) | Utilizzo consigliato                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Registrazione video di alta qualità                |
-  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Registrazione video di alta qualità                |
+  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Anteprima flusso per l'acquisizione di foto di qualità elevata |
   | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Acquisizione di foto di qualità elevata                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Scenari di lunga durata                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Scenari di lunga durata                     |
@@ -51,7 +51,7 @@ HoloLens include una fotocamera posta sul world nella parte anteriore del dispos
   | Applicazioni di videoconferenza, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Videoconferenza, gli scenari di lunga durata |
   | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
   | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
-  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1128x635  |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
+  | Videoconferencing,100 BalancedVideoAndPhoto,120 | 1128x636  |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
   | Videoconferencing,100 BalancedVideoAndPhoto,120 | 960 x 540   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
   | Videoconferencing,100 BalancedVideoAndPhoto,120 | 760x428   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |
   | Videoconferencing,100 BalancedVideoAndPhoto,120 | 640x360   |           |           | 15,30       | 64.69                            | Videoconferenza, gli scenari di lunga durata |

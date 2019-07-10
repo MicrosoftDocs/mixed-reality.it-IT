@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: realtà mista, Azure, academy, edge, iot edge, esercitazione, api, la notifica, funzioni, tabelle, hololens, coinvolgenti, vr, iot, macchina virtuale, ubuntu, python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597572"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694593"
 ---
 >[!NOTE]
 >Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
@@ -49,7 +49,7 @@ Questo corso ti spiegherà come impostare e usare il servizio Hub IoT e quindi v
 
 <table>
 <tr>
-<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
+<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
 <td> MR e Azure 313: Servizio Hub IoT</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -91,7 +91,7 @@ Per informazioni sull'ottimizzazione del sensore, seguire questa [collegamento a
 3. Configurare le **macchina virtuale Ubuntu** utilizzando **Hyper-V**. Le risorse seguenti consentono del processo.
     1.  In primo luogo, fare clic sul collegamento a [scaricare l'immagine ISO LTS (Xenial Xerus) Ubuntu 16.04.4](http://au.releases.ubuntu.com/16.04/). Selezionare il **immagine del desktop PC (AMD64) a 64 bit**.
     2.  Assicurarsi che **Hyper-V** è abilitato nel computer Windows 10. È possibile seguire questo collegamento per indicazioni [installazione e abilitazione di Hyper-V in Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-    3.  Avviare Hyper-V e creare una nuova VM di Ubuntu. È possibile seguire questo collegamento per una [Guida dettagliata su come creare una macchina virtuale con Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando richiesto **"Installa un sistema operativo da un file di immagine di avvio"**, selezionare la **Ubuntu ISO** essere stati scaricati in precedenza.
+    3.  Avviare Hyper-V e creare una nuova VM di Ubuntu. È possibile seguire questo collegamento per una [Guida dettagliata su come creare una macchina virtuale con Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando richiesto **"Installa un sistema operativo da un file di immagine di avvio"** , selezionare la **Ubuntu ISO** essere stati scaricati in precedenza.
 
     > [!NOTE]
     > Usando **creazione rapida di Hyper-V** non è consigliata.  
@@ -320,7 +320,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
     1.  Utilizzare i tasti di direzione sulla tastiera per scorrere verso il basso (è necessario scorrere verso il basso una piccola modo), per raggiungere la riga contenente ":
 
-        "**\<AGGIUNGERE QUI STRINGA DI CONNESSIONE DEL DISPOSITIVO &GT;**".
+        " **\<AGGIUNGERE QUI STRINGA DI CONNESSIONE DEL DISPOSITIVO >** ".
 
     2. Riga, sostituire **incluse le parentesi**, con la **Device Connection String** annotato in precedenza.
 
@@ -370,7 +370,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
 4. Una volta le estensioni vengono installate, chiudere e riaprire Visual Studio Code.
 
-5. Con Visual Studio Code aprire ancora una volta, passare a **Visualizza > terminale integrato**.
+5. Con Visual Studio Code aprire ancora una volta, passare a **View** > **terminale integrato**.
 
 6. A questo punto si installerà **Cookiecutter**. Nel terminale eseguire il comando bash seguente:
 
@@ -390,7 +390,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
 A questo punto, è necessario creare il contenitore, il modulo, eseguire il push nel *registro contenitori di*. Una volta che si è eseguito il push del contenitore, si userà il *Hub di IoT Edge* servizio distribuirla sul dispositivo, che è in esecuzione il *runtime di IoT Edge*.
 
-1. Da Visual Studio Code, fare clic su **Visualizza > riquadro comandi**.
+1. Da Visual Studio Code, fare clic su **View** > **comandi**.
 
 2. Nel riquadro di ricerca ed eseguire **Azure IoT Edge: Nuova soluzione Iot Edge**.
 
@@ -404,7 +404,7 @@ A questo punto, è necessario creare il contenitore, il modulo, eseguire il push
 
 7. Si noterà una preesistente *Repository di immagini Docker* indirizzo verrà visualizzato nella tavolozza. Sarà simile al seguente:
 
-    **localhost:5000 /, il nome del modulo -**. 
+    **localhost:5000 /, il nome del modulo -** . 
 
 8. Eliminare **localhost:5000**e nel relativo inserimento sul posto di *registro contenitori* **Login Server** indirizzo, che si è preso nota quando si crea il **contenitore Servizio Registro di sistema** ([nel passaggio 8, capitolo 2](#chapter-2---the-container-registry-service)). Premere il **invio** chiave, per confermare l'indirizzo.
 
@@ -744,7 +744,7 @@ Verrà quindi creato il *immagini* cartella usato dallo script di python per ver
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capitolo 9 - pacchetto della soluzione come un contenitore
 
-1.  A questo punto si è pronti per "pacchetto" i file come un contenitore ed eseguirne il push per le **registro contenitori di Azure**. All'interno di Visual Studio Code, aprire il *terminale integrato* (**Visualizza > terminale integrato / CTRL + '**) e usare la riga seguente per accedere al **Docker** (sostituire i valori del comando con le credenziali delle **registro contenitori di Azure (ACR)**):
+1.  A questo punto si è pronti per "pacchetto" i file come un contenitore ed eseguirne il push per le **registro contenitori di Azure**. All'interno di Visual Studio Code, aprire il *terminale integrato* (**View** > **terminale integrato** oppure **Ctrl** + **\`** ) e utilizzare la seguente riga per l'accesso al **Docker** (sostituire i valori del comando con le credenziali del **registro contenitori di Azure (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -856,11 +856,11 @@ Passare al portale di Azure, in cui verrà creato un servizio di tabelle di Azur
 
     2. Per la **modello di distribuzione**, fare clic su **Resource manager**.
 
-    3. Per la **tipologia Account**, usando il menu a discesa, fare clic su **archiviazione (utilizzo generico v1)**.
+    3. Per la **tipologia Account**, usando il menu a discesa, fare clic su **archiviazione (utilizzo generico v1)** .
 
     4. Fare clic su un oggetto appropriato **posizione**.
     
-    5. Per il **replica** dal menu a discesa, fare clic su **Read-access-archiviazione geograficamente ridondante (RA-GRS)**.
+    5. Per il **replica** dal menu a discesa, fare clic su **Read-access-archiviazione geograficamente ridondante (RA-GRS)** .
 
     6. Per la **Performance**, fare clic su **Standard**.
 
@@ -916,7 +916,7 @@ Ora che il **servizio tabelle** account di archiviazione è stata configurata, �
 
 1. Aprire **Visual Studio** (**non** Visual Studio Code).
 
-2. Dal menu, fare clic su **Visualizza > Cloud Explorer**.
+2. Dal menu, fare clic su **View** > **Cloud Explorer**.
 
     ![Aprire cloud explorer](images/AzureLabs-Lab313-45.png)
 
@@ -1047,7 +1047,7 @@ In primo luogo, è necessario creare un file che consentirà la funzione di Azur
 
     ![funzione personalizzata](images/AzureLabs-Lab313-59.png)
 
-13. Scorrere verso il basso la pagina successiva, fino a individuare **IoT Hub (Hub eventi)**, quindi fare clic su di esso.
+13. Scorrere verso il basso la pagina successiva, fino a individuare **IoT Hub (Hub eventi)** , quindi fare clic su di esso.
 
     ![funzione personalizzata](images/AzureLabs-Lab313-60.png)
 
