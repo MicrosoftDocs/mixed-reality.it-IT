@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: gli elementi grafici, cpu, gpu, il rendering, la garbage collection, hololens
-ms.openlocfilehash: 37eac566a0315009330ac7fee96edd82348d6ba3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604910"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843339"
 ---
 # <a name="performance-recommendations-for-unity"></a>Raccomandazioni sulle prestazioni per Unity
 
@@ -72,8 +72,9 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 
->[!NOTE] Evitare GetComponent(string) <br/>
-> Quando si usa  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)*, esistono una vasta gamma di overload differenti. È importante usare sempre le implementazioni di tipo di base e mai l'overload di ricerca basate su stringa. La ricerca dalla stringa nella scena è notevolmente più costosa rispetto alla ricerca in base al tipo. <br/>
+>[!NOTE] 
+> Evitare GetComponent(string) <br/>
+> Quando si usa  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , esistono una vasta gamma di overload differenti. È importante usare sempre le implementazioni di tipo di base e mai l'overload di ricerca basate su stringa. La ricerca dalla stringa nella scena è notevolmente più costosa rispetto alla ricerca in base al tipo. <br/>
 > (Valido) Componente GetComponent (tipo tipo) <br/>
 > (Valido) T GetComponent\<T >) <br/>
 > (Negativo) Componente GetComponent(string) > <br/>
@@ -158,7 +159,7 @@ Qualsiasi funzione di callback di Unity (ad esempio ripetuti Aggiornamento) che 
 
     A differenza delle classi, struct sono tipi di valore e quando viene passato direttamente a una funzione, i relativi contenuti vengono copiati in un'istanza appena creata. Questa copia aggiunge della CPU, nonché memoria aggiuntiva nello stack. Per gli struct di piccole dimensioni, l'effetto è in genere molto limitate e pertanto accettabili. Tuttavia, per le funzioni richiamato più volte per ogni fotogramma, nonché le funzioni richiede le strutture di grandi dimensioni, se possibile modificare la definizione di funzione venga passato per riferimento. [Altre informazioni sono disponibili qui](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
 
-#### <a name="miscellaneous"></a>Varie
+#### <a name="miscellaneous"></a>Miscellaneous
 
 1) **Fisica**
 
@@ -225,24 +226,22 @@ Inoltre, è in genere preferibile combinare mesh in un GameObject ove possibile 
 
 ## <a name="gpu-performance-recommendations"></a>Raccomandazioni sulle prestazioni di GPU
 
-Altre informazioni su [ottimizzazione del rendering della grafica in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
+Altre informazioni su [ottimizzazione del rendering della grafica in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
 
-#### <a name="reduce-poly-count"></a>Ridurre il numero di poligono
+### <a name="optimize-depth-buffer-sharing"></a>Ottimizzare la condivisione del buffer di profondità
+
+In genere è consigliabile abilitare **condivisione buffer profondità** sotto **Player XR Settings** per ottimizzare le [stabilità ologrammi](Hologram-stability.md). Quando si abilita la profondità in base al ritardo-stage reprojection con questa impostazione, tuttavia, è consigliabile selezionare **formato di 16 bit profondità** invece di **formato a 24 bit profondità**. La volontà di buffer profondità 16 bit riduce drasticamente la larghezza di banda (e pertanto di alimentazione) associato con il traffico di buffer di profondità. Ciò può essere un successo di una grande potenza, ma è applicabile solo per esperienze con un intervallo di profondità piccole [z-fighting](https://en.wikipedia.org/wiki/Z-fighting) è più probabile che si verificano con 16 bit rispetto a 24 bit. Per evitare questi elementi, modificare i piani di ritaglio quasi/anteriore del [fotocamera Unity](https://docs.unity3d.com/Manual/class-Camera.html) a prendere in considerazione la precisione inferiore. Per le applicazioni basate su HoloLens, un piano di ritaglio anteriore di 50 milioni anziché il valore predefinito di Unity 1000M in genere può eliminare qualsiasi z-fighting.
+
+### <a name="reduce-poly-count"></a>Ridurre il numero di poligono
 
 Numero di poligono in genere viene ridotto di uno
 1) Rimozione di oggetti in una scena
 2) Decimazione asset che riduce il numero di poligoni per una determinata rete
 3) Implementazione di un [sistema a livello di dettaglio della TRAMA](https://docs.unity3d.com/Manual/LevelOfDetail.html) nell'applicazione che esegue il rendering a portata di mano gli oggetti con versione inferiore poligono della stessa geometria
 
-#### <a name="limit-overdraw"></a>Limite di caricamento
+### <a name="understanding-shaders-in-unity"></a>Shader comprensione in Unity
 
-In Unity, uno può visualizzare estenda per le scene, attivando e disattivando il [ **disegnare menu modalità** ](https://docs.unity3d.com/Manual/ViewModes.html) nell'angolo superiore sinistro del **visualizzazione scena** e selezionando **carica presente** .
-
-In generale, estenda può essere attenuata della faccia posteriore oggetti anticipo prima che vengano inviati alla GPU. Unity offre informazioni dettagliate sull'implementazione [occlusione della faccia posteriore](https://docs.unity3d.com/Manual/OcclusionCulling.html) per il motore.
-
-#### <a name="understanding-shaders-in-unity"></a>Shader comprensione in Unity
-
-Un'approssimazione semplice per confrontare gli shader nelle prestazioni è per identificare il numero medio di operazioni ogni eseguita in fase di esecuzione. Questa operazione può essere eseguita abbastanza facilmente in Unity.
+Un'approssimazione semplice per confrontare gli shader nelle prestazioni è per identificare il numero medio di operazioni ogni eseguita in fase di esecuzione. Questa operazione può essere eseguita facilmente in Unity.
 
 1) Selezionare l'asset shader o selezionare un materiale, quindi nell'angolo superiore destro della finestra del controllo, selezionare l'icona a forma di ingranaggio e quindi **"Selezionare Shader"**
 
@@ -255,11 +254,29 @@ Un'approssimazione semplice per confrontare gli shader nelle prestazioni è per 
 
     ![Operazioni Standard di Shader di Unity](images/unity-standard-shader-compilation.png)
 
-##### <a name="unity-standard-shader-alternatives"></a>Alternative Standard shader Unity
+#### <a name="optmize-pixel-shaders"></a>Ottimizzazione dei pixel shader
 
-Anziché utilizzare un rendering basato su fisicamente (PBR) o altri shader di alta qualità, osservare che usano un più efficiente e più economica dello shader. [Toolkit di realtà mista](https://github.com/Microsoft/MixedRealityToolkit-Unity) fornisce una [shader standard](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader) che è stato ottimizzato per i progetti di realtà mista.
+Osservando i risultati di statistica compilata usando il metodo precedente, il [frammento shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) verranno generalmente eseguite più operazioni rispetto al [shader vertice](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) medio. Lo shader frammento, noto anche come il pixel shader, viene eseguito per ogni pixel nella schermata di output del vertex shader viene soltanto eseguito per ogni vertice di tutte le reti da disegnare sullo schermo. 
+
+Di conseguenza, non solo si frammento shader hanno istruzioni maggiore rispetto al vertex shader a causa di tutti i calcoli di illuminazione, gli shader frammento quasi sempre eseguiti in un set di dati più grande. Ad esempio, se l'output dello schermo è una 2K da immagini di 2, quindi lo shader frammento può essere visualizzato eseguita 2, 000 * 2, 000 = 4,000,000 volte. Se il rendering di entrambi gli occhi, questo numero raddoppia poiché sono presenti due schermate seguenti. Se un'applicazione di realtà mista dispone di più passaggi, a schermo intero gli effetti di post-elaborazione o rendering più trame per lo stesso pixel, questo numero verrà incrementato in modo significativo. 
+
+Di conseguenza, riducendo il numero di operazioni nello shader frammento può in genere fornire maggiori miglioramenti delle prestazioni tramite ottimizzazioni in vertex shader.
+
+#### <a name="unity-standard-shader-alternatives"></a>Alternative Standard shader Unity
+
+Anziché utilizzare un rendering basato su fisicamente (PBR) o altri shader di alta qualità, osservare che usano un più efficiente e più economica dello shader. Il [Toolkit di realtà mista](https://github.com/Microsoft/MixedRealityToolkit-Unity) fornisce le [shader standard MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) che è stato ottimizzato per i progetti di realtà mista.
 
 Unity offre anche un spento, vertice è acceso, le opzioni di shader semplificata con riflessione diffusa e altri che sono significativamente più veloce rispetto a shader Unity Standard. Visualizzare [informazioni sull'utilizzo e prestazioni di shader predefinito](https://docs.unity3d.com/Manual/shader-Performance.html) per informazioni più dettagliate.
+
+#### <a name="shader-preloading"></a>Il precaricamento di shader
+
+Uso *Shader precaricamento* e altri consigli per ottimizzare [il tempo di caricamento dello shader](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html). In particolare, il precaricamento di shader significa che non verrà visualizzato alcun rallentamenti o interruzioni a causa di compilazione dello shader di runtime.
+
+### <a name="limit-overdraw"></a>Limite di caricamento
+
+In Unity, uno può visualizzare estenda per le scene, attivando e disattivando il [ **disegnare menu modalità** ](https://docs.unity3d.com/Manual/ViewModes.html) nell'angolo superiore sinistro del **visualizzazione scena** e selezionando **carica presente** .
+
+In generale, estenda può essere attenuata della faccia posteriore oggetti anticipo prima che vengano inviati alla GPU. Unity offre informazioni dettagliate sull'implementazione [occlusione della faccia posteriore](https://docs.unity3d.com/Manual/OcclusionCulling.html) per il motore.
 
 ## <a name="memory-recommendations"></a>Consigli sulla memoria
 
