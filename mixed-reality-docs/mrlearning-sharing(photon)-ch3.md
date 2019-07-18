@@ -1,75 +1,76 @@
 ---
-title: MR Learning condivisione del modulo per HoloLens 2
-description: Completare questo corso di informazioni su come implementare esperienze condivise con più utenti all'interno di un'applicazione 2 HoloLens.
+title: Modulo MR Learning sharing per HoloLens 2
+description: Completare questo corso per apprendere come implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523308"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293663"
 ---
-# <a name="connecting-multiple-users"></a>Ci si connette più utenti
+# <a name="connecting-multiple-users"></a>Connessione di più utenti
 
-In questa lezione, è informazioni su come connettere più utenti come parte di una condividere esperienze in tempo reale. Al termine di questa lezione, sarà in grado di aprire l'applicazione in più dispositivi e vedere avatar, rappresentato da una sfera, le rappresentazioni di ogni persona che unisce in join. 
+In questa lezione verrà illustrato come connettere più utenti nell'ambito di un'esperienza condivisa Live. Al termine di questa lezione sarà possibile aprire l'applicazione su più dispositivi e visualizzare avatar, rappresentati da una sfera, rappresentazioni di ogni persona che si unisce. 
 
-Obiettivi:
+Obiettivi
 
-- Configurare il gioco di parole all'interno dell'applicazione
-- Configurare i lettori
-- Informazioni su come connettere più utenti un'esperienza condiviso
+- Configurare il PUN all'interno dell'applicazione
+- Configurare i giocatori
+- Informazioni su come connettere più utenti in un'esperienza condivisa
 
 ### <a name="instructions"></a>Istruzioni
 
-1. Negli asset -> risorse -> cartella Prefabs nel Pannello di progetto selezionare e trascinare il prefab NetworkLobby in per la gerarchia come illustrato nell'immagine seguente.
+1. Nella cartella Asset-> Resources-> prefabbricates nel pannello del progetto, trascinare il prefabbricato NetworkLobby nella gerarchia, come illustrato nell'immagine seguente.
 
+![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
-   ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+2. Quando si espande NetworkLobby, viene visualizzato un oggetto figlio denominato NetworkRoom. Con NetworkRoom selezionato, passare al pannello Inspector e fare clic su Add Component. Cercare PhotonView e aggiungere il componente.
 
-2. Quando si espande NetworkLobby, si noterà un oggetto figlio denominato NetworkRoom. Con NetworkRoom selezionate, passare al pannello di controllo e fare clic su Add Component. Cercare PhotonView e aggiungere il componente.
+![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
 
-   ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+3. Creare un nuovo oggetto gioco vuoto nella gerarchia. Fare clic con il pulsante destro del mouse nella gerarchia e scegliere vuota dal menu di scelta rapida. Verificare che il posizionamento sia impostato su x = 0, y = 0, z = 0 e assegnare un nome all'oggetto, PhotonUser.
 
-3. Creare un nuovo oggetto gioco vuoto nella gerarchia. Fare clic con il pulsante destro nella gerarchia e seleziona vuoto dal menu di scelta rapida. Verificare che il posizionamento è impostato su x = 0, y = 0, z = 0 e assegnare il nome dell'oggetto, PhotonUser.
+![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
 
-   ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+4. Fare clic su Add Component e digitare Generic NET Sync. Selezionare la classe di sincronizzazione NET generica. Quando viene visualizzata la classe, fare clic sulla casella di controllo utente per attivarla. 
 
-4. Fare clic su Add Component e digitare generico sincronizzazione delta. Selezionare la classe generica sincronizzazione delta. Quando la classe viene visualizzata, fare clic sulla casella di controllo utente per accenderlo. 
+![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
 
-   ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+5. Fare di nuovo clic su Add Component e digitare Photon View. Selezionare la classe di visualizzazione Photon visualizzata nell'elenco a discesa.
 
-5. Fare nuovamente clic su Add Component e digitare Photon View. Selezionare la classe di visualizzazione Photon che viene visualizzato nell'elenco a discesa.
+![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
 
-   ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+6. Fare clic sull'icona file per la classe net Sync generica. Trascinarla e rilasciarla nel campo componenti osservati della visualizzazione Photon. 
 
-6. Fare clic sull'icona del File per la classe generica sincronizzazione delta. Trascinare e rilasciare il campo osservati i componenti della visualizzazione Photon. ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png) 
+![module3chapter3updateStep6im. png](images/module3chapter3updateStep6im.png) 
 
-7. Quindi, creiamo sfere per rappresentare ogni persona che unisce in join un'esperienza condivisa. L'oggetto PhotonUser appena creato e scrolldown a con il pulsante destro fare clic su "oggetto 3D e scegliere sfera. Questo verrà creato un oggetto gioco sfera come elemento figlio dell'oggetto PhotonUser.
+7. Si creeranno quindi le sfere per rappresentare ogni persona che partecipa a un'esperienza condivisa. Fare clic con il pulsante destro del mouse sull'oggetto PhotonUser appena creato e ScrollDown su "oggetto 3D e scegliere Sphere. Verrà creato un oggetto gioco Sphere come figlio dell'oggetto PhotonUser.
 
-   ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
-8. Ridimensionare la sfera down x = 0,06, y = 0,06, ad z = 0,06.
+8. Ridimensionare la sfera fino a x = 0,06, y = 0,06, ad z = 0,06.
 
-   ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
+![Module3hapter3step5im](images/module3chapter3step5im.PNG)
 
-9. Trascinare l'oggetto gioco PhotonUser nella cartella Prefabs nel Pannello di progetto e quindi eliminarlo dalla scena. A questo punto sono stati creati un prefab che può essere utilizzato quando durante la generazione o creare un'istanza nuova giocatori un'esperienza condiviso.
+9. Trascinare l'oggetto PhotonUser Game nella cartella prefabbricates nel pannello Project, quindi eliminarlo dalla scena. A questo punto è stata creata una prefabbricata che può essere usata durante la generazione o la creazione di un'istanza di nuovi giocatori in un'esperienza condivisa.
 
-   ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
+![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
 
-> Nota: assicurarsi che l'oggetto gioco ha copiato correttamente nella cartella Prefabs prima di eliminarlo dalla gerarchia.
+> Nota: assicurarsi che l'oggetto Game sia stato copiato correttamente nella cartella prefabbricates prima di eliminarlo dalla gerarchia.
 
-10. Creare un nuovo oggetto nella gerarchia, seguendo le istruzioni nel passaggio 3 e denominarlo SharedPlayground. Quindi, fare clic su Add Component e cercare il gestore di rete generici e fare clic per aggiungere il componente di gestione di rete generici. Modificare la posizione dell'oggetto su x = 0, y = 0 e z = 0.
+10. Creare un nuovo oggetto nella gerarchia seguendo le istruzioni riportate nel passaggio 3 e denominarlo SharedPlayground. Quindi, fare clic su Aggiungi componente e cercare gestore reti generico e fare clic su di esso per aggiungere il componente generico di gestione reti. Modificare la posizione dell'oggetto in x = 0, y = 0 e z = 0.
 
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 
 
 ## <a name="congratulations"></a>Lezione completata
 
-Dopo che tutti i passaggi precedenti sono stati completati e il processo di compilazione è completo, fare clic sul pulsante play e connettersi i 2 HoloLens. Verrà visualizzata una sfera muove quando si sposta la testa. Questa informazione verrà visualizzata per tutti gli utenti che unisce in join di un progetto Unity.
+Una volta completati tutti i passaggi precedenti e il processo di compilazione è stato completato, premere il pulsante Play (Riproduci) e connettere HoloLens 2. Quando si sposta la testa, verrà visualizzata una sfera. Verrà visualizzato per tutti gli utenti che partecipano al progetto Unity.
 
-[Lezione successiva: Sharing(photon) lezione 4](mrlearning-sharing(photon)-ch4.md)
+[Lezione successiva: Lezione 4 della condivisione (Photon)](mrlearning-sharing(photon)-ch4.md)
 
