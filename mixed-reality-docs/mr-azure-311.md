@@ -939,7 +939,7 @@ Per creare il Tag:
 
 Tutti gli elementi necessari per la sezione di Unity di questo progetto è ora stato completato, è il momento per la compilazione da Unity.
 
-1.  Passare a *impostazioni di compilazione* (**File* > *Impostazioni di compilazione**).
+1.  Passare a *impostazioni di compilazione* (**File* >* Impostazioni di compilazione**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
