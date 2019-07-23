@@ -14,277 +14,277 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67694521"
 ---
 >[!NOTE]
-><span data-ttu-id="9b898-104">Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.</span><span class="sxs-lookup"><span data-stu-id="9b898-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="9b898-105">Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.</span><span class="sxs-lookup"><span data-stu-id="9b898-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="9b898-106">Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.</span><span class="sxs-lookup"><span data-stu-id="9b898-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="9b898-107">Essi verranno mantenute per continuare a utilizzare i dispositivi supportati.</span><span class="sxs-lookup"><span data-stu-id="9b898-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="9b898-108">Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="9b898-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="9b898-109">Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.</span><span class="sxs-lookup"><span data-stu-id="9b898-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
+><span data-ttu-id="a81c3-104">Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="a81c3-105">Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.</span><span class="sxs-lookup"><span data-stu-id="a81c3-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="a81c3-106">Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="a81c3-107">Essi verranno mantenute per continuare a utilizzare i dispositivi supportati.</span><span class="sxs-lookup"><span data-stu-id="a81c3-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="a81c3-108">Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="a81c3-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="a81c3-109">Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.</span><span class="sxs-lookup"><span data-stu-id="a81c3-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
 
-# <a name="mr-and-azure-311---microsoft-graph"></a><span data-ttu-id="9b898-110">MR e 311 - Microsoft Graph di Azure</span><span class="sxs-lookup"><span data-stu-id="9b898-110">MR and Azure 311 - Microsoft Graph</span></span>
+# <a name="mr-and-azure-311---microsoft-graph"></a><span data-ttu-id="a81c3-110">MR e 311 - Microsoft Graph di Azure</span><span class="sxs-lookup"><span data-stu-id="a81c3-110">MR and Azure 311 - Microsoft Graph</span></span>
 
-<span data-ttu-id="9b898-111">In questo corso, si apprenderà come usare *Microsoft Graph* per accedere all'account Microsoft usando l'autenticazione sicura all'interno di un'applicazione di realtà mista.</span><span class="sxs-lookup"><span data-stu-id="9b898-111">In this course, you will learn how to use *Microsoft Graph* to log in into your Microsoft account using secure authentication within a mixed reality application.</span></span> <span data-ttu-id="9b898-112">È quindi e visualizzerà le riunioni pianificate nell'interfaccia dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-112">You will then retrieve and display your scheduled meetings in the application interface.</span></span>
+<span data-ttu-id="a81c3-111">In questo corso, si apprenderà come usare *Microsoft Graph* per accedere all'account Microsoft usando l'autenticazione sicura all'interno di un'applicazione di realtà mista.</span><span class="sxs-lookup"><span data-stu-id="a81c3-111">In this course, you will learn how to use *Microsoft Graph* to log in into your Microsoft account using secure authentication within a mixed reality application.</span></span> <span data-ttu-id="a81c3-112">È quindi e visualizzerà le riunioni pianificate nell'interfaccia dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-112">You will then retrieve and display your scheduled meetings in the application interface.</span></span>
 
 ![](images/AzureLabs-Lab311-00.png)
 
-<span data-ttu-id="9b898-113">*Microsoft Graph* è un set di API progettate per consentire l'accesso a molti dei servizi Microsoft.</span><span class="sxs-lookup"><span data-stu-id="9b898-113">*Microsoft Graph* is a set of APIs designed to enable access to many of Microsoft's services.</span></span> <span data-ttu-id="9b898-114">Microsoft descrive Microsoft Graph come una matrice di risorse connesse tramite relazioni, vale a dire che consente a un'applicazione accedere a tutti i tipi di dati dell'utente connesso.</span><span class="sxs-lookup"><span data-stu-id="9b898-114">Microsoft describes Microsoft Graph as being a matrix of resources connected by relationships, meaning it allows an application to access all sorts of connected user data.</span></span> <span data-ttu-id="9b898-115">Per altre informazioni, visitare il [pagina di Microsoft Graph](https://developer.microsoft.com/graph).</span><span class="sxs-lookup"><span data-stu-id="9b898-115">For more information, visit the [Microsoft Graph page](https://developer.microsoft.com/graph).</span></span>
+<span data-ttu-id="a81c3-113">*Microsoft Graph* è un set di API progettate per consentire l'accesso a molti dei servizi Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a81c3-113">*Microsoft Graph* is a set of APIs designed to enable access to many of Microsoft's services.</span></span> <span data-ttu-id="a81c3-114">Microsoft descrive Microsoft Graph come una matrice di risorse connesse tramite relazioni, vale a dire che consente a un'applicazione accedere a tutti i tipi di dati dell'utente connesso.</span><span class="sxs-lookup"><span data-stu-id="a81c3-114">Microsoft describes Microsoft Graph as being a matrix of resources connected by relationships, meaning it allows an application to access all sorts of connected user data.</span></span> <span data-ttu-id="a81c3-115">Per altre informazioni, visitare il [pagina di Microsoft Graph](https://developer.microsoft.com/graph).</span><span class="sxs-lookup"><span data-stu-id="a81c3-115">For more information, visit the [Microsoft Graph page](https://developer.microsoft.com/graph).</span></span>
 
-<span data-ttu-id="9b898-116">Lo sviluppo include la creazione di un'app in cui l'utente verrà indicato per fissare e quindi toccare una sfera, verrà richiesto all'utente di accedere in modo sicuro a un account Microsoft.</span><span class="sxs-lookup"><span data-stu-id="9b898-116">Development will include the creation of an app where the user will be instructed to gaze at and then tap a sphere, which will prompt the user to log in safely to a Microsoft account.</span></span> <span data-ttu-id="9b898-117">Una volta effettuato l'accesso al proprio account, l'utente sarà in grado di visualizzare un elenco delle riunioni pianificate per la giornata.</span><span class="sxs-lookup"><span data-stu-id="9b898-117">Once logged in to their account, the user will be able to see a list of meetings scheduled for the day.</span></span>
+<span data-ttu-id="a81c3-116">Lo sviluppo include la creazione di un'app in cui l'utente verrà indicato per fissare e quindi toccare una sfera, verrà richiesto all'utente di accedere in modo sicuro a un account Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a81c3-116">Development will include the creation of an app where the user will be instructed to gaze at and then tap a sphere, which will prompt the user to log in safely to a Microsoft account.</span></span> <span data-ttu-id="a81c3-117">Una volta effettuato l'accesso al proprio account, l'utente sarà in grado di visualizzare un elenco delle riunioni pianificate per la giornata.</span><span class="sxs-lookup"><span data-stu-id="a81c3-117">Once logged in to their account, the user will be able to see a list of meetings scheduled for the day.</span></span>
 
-<span data-ttu-id="9b898-118">Dopo aver completato il corso, si avrà una realtà mista applicazione HoloLens, che sarà in grado di eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-118">Having completed this course, you will have a mixed reality HoloLens application, which will be able to do the following:</span></span>
+<span data-ttu-id="a81c3-118">Dopo aver completato il corso, si avrà una realtà mista applicazione HoloLens, che sarà in grado di eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-118">Having completed this course, you will have a mixed reality HoloLens application, which will be able to do the following:</span></span>
 
-1.  <span data-ttu-id="9b898-119">Uso di movimenti di tocco, toccare su un oggetto che richiederà all'utente di accedere a un Account Microsoft (lo spostamento all'esterno dell'app per accedere e quindi eseguire nuovamente il backup nell'app).</span><span class="sxs-lookup"><span data-stu-id="9b898-119">Using the Tap gesture, tap on an object, which will prompt the user to log into a Microsoft Account (moving out of the app to log in, and then back into the app again).</span></span>
-2.  <span data-ttu-id="9b898-120">Visualizzare un elenco delle riunioni pianificate per il giorno.</span><span class="sxs-lookup"><span data-stu-id="9b898-120">View a list of meetings scheduled for the day.</span></span> 
+1.  <span data-ttu-id="a81c3-119">Uso di movimenti di tocco, toccare su un oggetto che richiederà all'utente di accedere a un Account Microsoft (lo spostamento all'esterno dell'app per accedere e quindi eseguire nuovamente il backup nell'app).</span><span class="sxs-lookup"><span data-stu-id="a81c3-119">Using the Tap gesture, tap on an object, which will prompt the user to log into a Microsoft Account (moving out of the app to log in, and then back into the app again).</span></span>
+2.  <span data-ttu-id="a81c3-120">Visualizzare un elenco delle riunioni pianificate per il giorno.</span><span class="sxs-lookup"><span data-stu-id="a81c3-120">View a list of meetings scheduled for the day.</span></span> 
 
-<span data-ttu-id="9b898-121">Nell'applicazione, è responsabilità dell'utente per quanto riguarda la modalità si integrerà i risultati con la progettazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-121">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="9b898-122">Questo corso è pensato per scoprire come integrare un servizio di Azure con il progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-122">This course is designed to teach you how to integrate an Azure Service with your Unity project.</span></span> <span data-ttu-id="9b898-123">È il compito di utilizzare le competenze acquisite in questo corso per migliorare l'applicazione di realtà mista.</span><span class="sxs-lookup"><span data-stu-id="9b898-123">It is your job to use the knowledge you gain from this course to enhance your mixed reality application.</span></span>
+<span data-ttu-id="a81c3-121">Nell'applicazione, è responsabilità dell'utente per quanto riguarda la modalità si integrerà i risultati con la progettazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-121">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="a81c3-122">Questo corso è pensato per scoprire come integrare un servizio di Azure con il progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-122">This course is designed to teach you how to integrate an Azure Service with your Unity project.</span></span> <span data-ttu-id="a81c3-123">È il compito di utilizzare le competenze acquisite in questo corso per migliorare l'applicazione di realtà mista.</span><span class="sxs-lookup"><span data-stu-id="a81c3-123">It is your job to use the knowledge you gain from this course to enhance your mixed reality application.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="9b898-124">Supporto di dispositivi</span><span class="sxs-lookup"><span data-stu-id="9b898-124">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="a81c3-124">Supporto di dispositivi</span><span class="sxs-lookup"><span data-stu-id="a81c3-124">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="9b898-125">Corso</span><span class="sxs-lookup"><span data-stu-id="9b898-125">Course</span></span></th><th style="width:150px"> <span data-ttu-id="9b898-126"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="9b898-126"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="9b898-127"><a href="immersive-headset-hardware-details.md">Visori VR immersive</a></span><span class="sxs-lookup"><span data-stu-id="9b898-127"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="a81c3-125">Corso</span><span class="sxs-lookup"><span data-stu-id="a81c3-125">Course</span></span></th><th style="width:150px"> <span data-ttu-id="a81c3-126"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="a81c3-126"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="a81c3-127"><a href="immersive-headset-hardware-details.md">Visori VR immersive</a></span><span class="sxs-lookup"><span data-stu-id="a81c3-127"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td> <span data-ttu-id="9b898-128">MR e 311 Azure: Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="9b898-128">MR and Azure 311: Microsoft Graph</span></span></td><td style="text-align: center;"> <span data-ttu-id="9b898-129">✔️</span><span class="sxs-lookup"><span data-stu-id="9b898-129">✔️</span></span></td><td style="text-align: center;"> </td>
+<td> <span data-ttu-id="a81c3-128">MR e 311 Azure: Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="a81c3-128">MR and Azure 311: Microsoft Graph</span></span></td><td style="text-align: center;"> <span data-ttu-id="a81c3-129">✔️</span><span class="sxs-lookup"><span data-stu-id="a81c3-129">✔️</span></span></td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a><span data-ttu-id="9b898-130">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="9b898-130">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a81c3-130">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="a81c3-130">Prerequisites</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9b898-131">Questa esercitazione è progettata per gli sviluppatori che hanno esperienza di base con Unity e C#.</span><span class="sxs-lookup"><span data-stu-id="9b898-131">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="9b898-132">Inoltre tenere presente che i prerequisiti e istruzioni scritte in questo documento rappresentano ciò che è stato testato e verificato al momento della stesura (luglio 2018).</span><span class="sxs-lookup"><span data-stu-id="9b898-132">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (July 2018).</span></span> <span data-ttu-id="9b898-133">Si è liberi di utilizzare il software più recente, come indicato all'interno di [installare gli strumenti](install-the-tools.md) articolo, anche se non si deve essere presupposto che le informazioni contenute in questo corso perfettamente corrispondenti ai criteri troveranno nel software più recente rispetto a quanto elencato di seguito.</span><span class="sxs-lookup"><span data-stu-id="9b898-133">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you will find in newer software than what is listed below.</span></span>
+> <span data-ttu-id="a81c3-131">Questa esercitazione è progettata per gli sviluppatori che hanno esperienza di base con Unity e C#.</span><span class="sxs-lookup"><span data-stu-id="a81c3-131">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="a81c3-132">Inoltre tenere presente che i prerequisiti e istruzioni scritte in questo documento rappresentano ciò che è stato testato e verificato al momento della stesura (luglio 2018).</span><span class="sxs-lookup"><span data-stu-id="a81c3-132">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (July 2018).</span></span> <span data-ttu-id="a81c3-133">Si è liberi di utilizzare il software più recente, come indicato all'interno di [installare gli strumenti](install-the-tools.md) articolo, anche se non si deve essere presupposto che le informazioni contenute in questo corso perfettamente corrispondenti ai criteri troveranno nel software più recente rispetto a quanto elencato di seguito.</span><span class="sxs-lookup"><span data-stu-id="a81c3-133">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you will find in newer software than what is listed below.</span></span>
 
-<span data-ttu-id="9b898-134">È consigliabile seguenti prodotti hardware e software per questo corso di:</span><span class="sxs-lookup"><span data-stu-id="9b898-134">We recommend the following hardware and software for this course:</span></span>
+<span data-ttu-id="a81c3-134">È consigliabile seguenti prodotti hardware e software per questo corso di:</span><span class="sxs-lookup"><span data-stu-id="a81c3-134">We recommend the following hardware and software for this course:</span></span>
 
-- <span data-ttu-id="9b898-135">Un computer di sviluppo</span><span class="sxs-lookup"><span data-stu-id="9b898-135">A development PC</span></span>
-- [<span data-ttu-id="9b898-136">Windows 10 Fall Creators Update (o versione successiva) con abilitata la modalità sviluppatore</span><span class="sxs-lookup"><span data-stu-id="9b898-136">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9b898-137">La versione più recente di Windows 10 SDK</span><span class="sxs-lookup"><span data-stu-id="9b898-137">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9b898-138">Unity 2017.4</span><span class="sxs-lookup"><span data-stu-id="9b898-138">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9b898-139">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9b898-139">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
-- <span data-ttu-id="9b898-140">Oggetto [Microsoft HoloLens](hololens-hardware-details.md) con abilitata la modalità sviluppatore</span><span class="sxs-lookup"><span data-stu-id="9b898-140">A [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
-- <span data-ttu-id="9b898-141">Accesso a Internet per la configurazione di Azure e il recupero dei dati di Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="9b898-141">Internet access for Azure setup and Microsoft Graph data retrieval</span></span>
-- <span data-ttu-id="9b898-142">Un valore valido **Account Microsoft** (personale o o dell'istituto)</span><span class="sxs-lookup"><span data-stu-id="9b898-142">A valid **Microsoft Account** (either personal or work/school)</span></span>
-- <span data-ttu-id="9b898-143">Alcune riunioni pianificate per il giorno corrente, usando lo stesso Account Microsoft</span><span class="sxs-lookup"><span data-stu-id="9b898-143">A few meetings scheduled for the current day, using the same Microsoft Account</span></span>
+- <span data-ttu-id="a81c3-135">Un computer di sviluppo</span><span class="sxs-lookup"><span data-stu-id="a81c3-135">A development PC</span></span>
+- [<span data-ttu-id="a81c3-136">Windows 10 Fall Creators Update (o versione successiva) con abilitata la modalità sviluppatore</span><span class="sxs-lookup"><span data-stu-id="a81c3-136">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="a81c3-137">La versione più recente di Windows 10 SDK</span><span class="sxs-lookup"><span data-stu-id="a81c3-137">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="a81c3-138">Unity 2017.4</span><span class="sxs-lookup"><span data-stu-id="a81c3-138">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="a81c3-139">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="a81c3-139">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
+- <span data-ttu-id="a81c3-140">Oggetto [Microsoft HoloLens](hololens-hardware-details.md) con abilitata la modalità sviluppatore</span><span class="sxs-lookup"><span data-stu-id="a81c3-140">A [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
+- <span data-ttu-id="a81c3-141">Accesso a Internet per la configurazione di Azure e il recupero dei dati di Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="a81c3-141">Internet access for Azure setup and Microsoft Graph data retrieval</span></span>
+- <span data-ttu-id="a81c3-142">Un valore valido **Account Microsoft** (personale o o dell'istituto)</span><span class="sxs-lookup"><span data-stu-id="a81c3-142">A valid **Microsoft Account** (either personal or work/school)</span></span>
+- <span data-ttu-id="a81c3-143">Alcune riunioni pianificate per il giorno corrente, usando lo stesso Account Microsoft</span><span class="sxs-lookup"><span data-stu-id="a81c3-143">A few meetings scheduled for the current day, using the same Microsoft Account</span></span>
 
-### <a name="before-you-start"></a><span data-ttu-id="9b898-144">Prima di iniziare</span><span class="sxs-lookup"><span data-stu-id="9b898-144">Before you start</span></span>
+### <a name="before-you-start"></a><span data-ttu-id="a81c3-144">Prima di iniziare</span><span class="sxs-lookup"><span data-stu-id="a81c3-144">Before you start</span></span>
 
-1.  <span data-ttu-id="9b898-145">Per evitare l'insorgere di problemi di compilazione di questo progetto, è consigliabile creare il progetto indicato in questa esercitazione in una cartella radice o in prossimità di primo livello (i percorsi delle cartelle lungo possono causare problemi in fase di compilazione).</span><span class="sxs-lookup"><span data-stu-id="9b898-145">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
-2.  <span data-ttu-id="9b898-146">Configurare e testare l'HoloLens.</span><span class="sxs-lookup"><span data-stu-id="9b898-146">Set up and test your HoloLens.</span></span> <span data-ttu-id="9b898-147">Se è necessario supportano l'impostazione di HoloLens [assicurarsi di passare all'articolo di programma di installazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup).</span><span class="sxs-lookup"><span data-stu-id="9b898-147">If you need support setting up your HoloLens, [make sure to visit the HoloLens setup article](https://docs.microsoft.com/hololens/hololens-setup).</span></span> 
-3.  <span data-ttu-id="9b898-148">È una buona idea eseguire calibrazione e ottimizzazione sensore quando si inizia a sviluppare una nuova App per HoloLens (talvolta può essere utile eseguire tali attività per ogni utente).</span><span class="sxs-lookup"><span data-stu-id="9b898-148">It is a good idea to perform Calibration and Sensor Tuning when beginning developing a new HoloLens App (sometimes it can help to perform those tasks for each user).</span></span> 
+1.  <span data-ttu-id="a81c3-145">Per evitare l'insorgere di problemi di compilazione di questo progetto, è consigliabile creare il progetto indicato in questa esercitazione in una cartella radice o in prossimità di primo livello (i percorsi delle cartelle lungo possono causare problemi in fase di compilazione).</span><span class="sxs-lookup"><span data-stu-id="a81c3-145">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
+2.  <span data-ttu-id="a81c3-146">Configurare e testare l'HoloLens.</span><span class="sxs-lookup"><span data-stu-id="a81c3-146">Set up and test your HoloLens.</span></span> <span data-ttu-id="a81c3-147">Se è necessario supportano l'impostazione di HoloLens [assicurarsi di passare all'articolo di programma di installazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup).</span><span class="sxs-lookup"><span data-stu-id="a81c3-147">If you need support setting up your HoloLens, [make sure to visit the HoloLens setup article](https://docs.microsoft.com/hololens/hololens-setup).</span></span> 
+3.  <span data-ttu-id="a81c3-148">È una buona idea eseguire calibrazione e ottimizzazione sensore quando si inizia a sviluppare una nuova App per HoloLens (talvolta può essere utile eseguire tali attività per ogni utente).</span><span class="sxs-lookup"><span data-stu-id="a81c3-148">It is a good idea to perform Calibration and Sensor Tuning when beginning developing a new HoloLens App (sometimes it can help to perform those tasks for each user).</span></span> 
 
-<span data-ttu-id="9b898-149">Per informazioni su calibrazione, seguire questa [collegamento all'articolo di calibrazione HoloLens](calibration.md#hololens).</span><span class="sxs-lookup"><span data-stu-id="9b898-149">For help on Calibration, please follow this [link to the HoloLens Calibration article](calibration.md#hololens).</span></span>
+<span data-ttu-id="a81c3-149">Per informazioni su calibrazione, seguire questa [collegamento all'articolo di calibrazione HoloLens](calibration.md#hololens).</span><span class="sxs-lookup"><span data-stu-id="a81c3-149">For help on Calibration, please follow this [link to the HoloLens Calibration article](calibration.md#hololens).</span></span>
 
-<span data-ttu-id="9b898-150">Per informazioni sull'ottimizzazione del sensore, seguire questa [collegamento all'articolo HoloLens sensore ottimizzazione](sensor-tuning.md).</span><span class="sxs-lookup"><span data-stu-id="9b898-150">For help on Sensor Tuning, please follow this [link to the HoloLens Sensor Tuning article](sensor-tuning.md).</span></span>
+<span data-ttu-id="a81c3-150">Per informazioni sull'ottimizzazione del sensore, seguire questa [collegamento all'articolo HoloLens sensore ottimizzazione](sensor-tuning.md).</span><span class="sxs-lookup"><span data-stu-id="a81c3-150">For help on Sensor Tuning, please follow this [link to the HoloLens Sensor Tuning article](sensor-tuning.md).</span></span>
 
-## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a><span data-ttu-id="9b898-151">Capitolo 1 - creare l'app nel portale di registrazione dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="9b898-151">Chapter 1 - Create your app in the Application Registration Portal</span></span>
+## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a><span data-ttu-id="a81c3-151">Capitolo 1 - creare l'app nel portale di registrazione dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="a81c3-151">Chapter 1 - Create your app in the Application Registration Portal</span></span>
 
-<span data-ttu-id="9b898-152">Per iniziare, è necessario creare e registrare l'applicazione nel **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="9b898-152">To begin with, you will need to create and register your application in the **Application Registration Portal**.</span></span>
+<span data-ttu-id="a81c3-152">Per iniziare, è necessario creare e registrare l'applicazione nel **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-152">To begin with, you will need to create and register your application in the **Application Registration Portal**.</span></span>
 
-<span data-ttu-id="9b898-153">In questo capitolo sono inoltre disponibili la chiave del servizio che ti permetterà di effettuare chiamate a *Microsoft Graph* di accedere ai contenuti di account.</span><span class="sxs-lookup"><span data-stu-id="9b898-153">In this Chapter you will also find the Service Key that will allow you to make calls to *Microsoft Graph* to access your account content.</span></span>
+<span data-ttu-id="a81c3-153">In questo capitolo sono inoltre disponibili la chiave del servizio che ti permetterà di effettuare chiamate a *Microsoft Graph* di accedere ai contenuti di account.</span><span class="sxs-lookup"><span data-stu-id="a81c3-153">In this Chapter you will also find the Service Key that will allow you to make calls to *Microsoft Graph* to access your account content.</span></span>
 
-1.  <span data-ttu-id="9b898-154">Passare al [portale di registrazione dell'applicazione Microsoft](https://apps.dev.microsoft.com) ed eseguire l'accesso con l'Account Microsoft.</span><span class="sxs-lookup"><span data-stu-id="9b898-154">Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com) and login with your Microsoft Account.</span></span> <span data-ttu-id="9b898-155">Dopo aver eseguito l'accesso, si verrà reindirizzati per il **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="9b898-155">Once you have logged in, you will be redirected to the **Application Registration Portal**.</span></span>
+1.  <span data-ttu-id="a81c3-154">Passare al [portale di registrazione dell'applicazione Microsoft](https://apps.dev.microsoft.com) ed eseguire l'accesso con l'Account Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a81c3-154">Navigate to the [Microsoft Application Registration Portal](https://apps.dev.microsoft.com) and login with your Microsoft Account.</span></span> <span data-ttu-id="a81c3-155">Dopo aver eseguito l'accesso, si verrà reindirizzati per il **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-155">Once you have logged in, you will be redirected to the **Application Registration Portal**.</span></span>
 
-2.  <span data-ttu-id="9b898-156">Nel **applicazioni personali** sezione, fare clic sul pulsante **Aggiungi un'app**.</span><span class="sxs-lookup"><span data-stu-id="9b898-156">In the **My applications** section, click on the button **Add an app**.</span></span>
+2.  <span data-ttu-id="a81c3-156">Nel **applicazioni personali** sezione, fare clic sul pulsante **Aggiungi un'app**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-156">In the **My applications** section, click on the button **Add an app**.</span></span>
 
     ![](images/AzureLabs-Lab311-01.png)![](images/AzureLabs-Lab311-02.png)
 
     > [!IMPORTANT]
-    > <span data-ttu-id="9b898-157">Il **portale di registrazione dell'applicazione** può risultare diversa, a seconda se si è precedentemente utilizzato con *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="9b898-157">The **Application Registration Portal** can look different, depending on whether you have previously worked with *Microsoft Graph*.</span></span> <span data-ttu-id="9b898-158">Di seguito le schermate visualizzate queste diverse versioni.</span><span class="sxs-lookup"><span data-stu-id="9b898-158">The below screenshots display these different versions.</span></span>
+    > <span data-ttu-id="a81c3-157">Il **portale di registrazione dell'applicazione** può risultare diversa, a seconda se si è precedentemente utilizzato con *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="a81c3-157">The **Application Registration Portal** can look different, depending on whether you have previously worked with *Microsoft Graph*.</span></span> <span data-ttu-id="a81c3-158">Di seguito le schermate visualizzate queste diverse versioni.</span><span class="sxs-lookup"><span data-stu-id="a81c3-158">The below screenshots display these different versions.</span></span>
 
-3.  <span data-ttu-id="9b898-159">Aggiungere un nome per l'applicazione e fare clic su **Create**.</span><span class="sxs-lookup"><span data-stu-id="9b898-159">Add a name for your application and click **Create**.</span></span>
+3.  <span data-ttu-id="a81c3-159">Aggiungere un nome per l'applicazione e fare clic su **Create**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-159">Add a name for your application and click **Create**.</span></span>
 
     ![](images/AzureLabs-Lab311-03.png)
 
-4.  <span data-ttu-id="9b898-160">Dopo aver creata l'applicazione, si verrà reindirizzati alla pagina principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-160">Once the application has been created, you will be redirected to the application main page.</span></span> <span data-ttu-id="9b898-161">Copia il **Id applicazione** e assicurarsi di prendere nota del valore in una posizione sicuro, verrà usato presto nel codice.</span><span class="sxs-lookup"><span data-stu-id="9b898-161">Copy the **Application Id** and make sure to note this value somewhere safe, you will use it soon in your code.</span></span>
+4.  <span data-ttu-id="a81c3-160">Dopo aver creata l'applicazione, si verrà reindirizzati alla pagina principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-160">Once the application has been created, you will be redirected to the application main page.</span></span> <span data-ttu-id="a81c3-161">Copia il **Id applicazione** e assicurarsi di prendere nota del valore in una posizione sicuro, verrà usato presto nel codice.</span><span class="sxs-lookup"><span data-stu-id="a81c3-161">Copy the **Application Id** and make sure to note this value somewhere safe, you will use it soon in your code.</span></span>
 
     ![](images/AzureLabs-Lab311-04.png)
 
-5.  <span data-ttu-id="9b898-162">Nel **piattaforme** assicurarsi che **applicazione nativa** viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="9b898-162">In the **Platforms** section, make sure **Native Application** is displayed.</span></span> <span data-ttu-id="9b898-163">Se *non* fare clic su **Aggiungi piattaforma** e selezionare **applicazione nativa**.</span><span class="sxs-lookup"><span data-stu-id="9b898-163">If *not* click on **Add Platform** and select **Native Application**.</span></span>
+5.  <span data-ttu-id="a81c3-162">Nel **piattaforme** assicurarsi che **applicazione nativa** viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="a81c3-162">In the **Platforms** section, make sure **Native Application** is displayed.</span></span> <span data-ttu-id="a81c3-163">Se *non* fare clic su **Aggiungi piattaforma** e selezionare **applicazione nativa**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-163">If *not* click on **Add Platform** and select **Native Application**.</span></span>
 
     ![](images/AzureLabs-Lab311-05.png)
 
-6.  <span data-ttu-id="9b898-164">Scorrere verso il basso nella stessa pagina e nella sezione denominata **autorizzazioni di Microsoft Graph** sarà necessario aggiungere altre autorizzazioni per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-164">Scroll down in the same page and in the section called **Microsoft Graph Permissions** you will need to add additional permissions for the application.</span></span> <span data-ttu-id="9b898-165">Fare clic su **Add** accanto a **autorizzazioni delegate**.</span><span class="sxs-lookup"><span data-stu-id="9b898-165">Click on **Add** next to **Delegated Permissions**.</span></span>
+6.  <span data-ttu-id="a81c3-164">Scorrere verso il basso nella stessa pagina e nella sezione denominata **autorizzazioni di Microsoft Graph** sarà necessario aggiungere altre autorizzazioni per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-164">Scroll down in the same page and in the section called **Microsoft Graph Permissions** you will need to add additional permissions for the application.</span></span> <span data-ttu-id="a81c3-165">Fare clic su **Add** accanto a **autorizzazioni delegate**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-165">Click on **Add** next to **Delegated Permissions**.</span></span>
 
     ![](images/AzureLabs-Lab311-06.png)
 
-7.  <span data-ttu-id="9b898-166">Poiché si desidera che l'applicazione per accedere al calendario dell'utente, selezionare la casella denominata **Calendars** e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="9b898-166">Since you want your application to access the user's Calendar, check the box called **Calendars.Read** and click **OK**.</span></span>
+7.  <span data-ttu-id="a81c3-166">Poiché si desidera che l'applicazione per accedere al calendario dell'utente, selezionare la casella denominata **Calendars** e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-166">Since you want your application to access the user's Calendar, check the box called **Calendars.Read** and click **OK**.</span></span>
 
     ![](images/AzureLabs-Lab311-07.png)
 
-8.  <span data-ttu-id="9b898-167">Scorrere verso il basso e scegliere il **salvare** pulsante.</span><span class="sxs-lookup"><span data-stu-id="9b898-167">Scroll to the bottom and click the **Save** button.</span></span>
+8.  <span data-ttu-id="a81c3-167">Scorrere verso il basso e scegliere il **salvare** pulsante.</span><span class="sxs-lookup"><span data-stu-id="a81c3-167">Scroll to the bottom and click the **Save** button.</span></span>
 
     ![](images/AzureLabs-Lab311-08.png)
 
-9.  <span data-ttu-id="9b898-168">Verrà confermata la salva, è possibile disconnettersi quindi dal **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="9b898-168">Your save will be confirmed, and you can log out from the **Application Registration Portal**.</span></span>
+9.  <span data-ttu-id="a81c3-168">Verrà confermata la salva, è possibile disconnettersi quindi dal **portale di registrazione applicazione**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-168">Your save will be confirmed, and you can log out from the **Application Registration Portal**.</span></span>
 
-## <a name="chapter-2---set-up-the-unity-project"></a><span data-ttu-id="9b898-169">Capitolo 2 - configurare il progetto Unity</span><span class="sxs-lookup"><span data-stu-id="9b898-169">Chapter 2 - Set up the Unity project</span></span>
+## <a name="chapter-2---set-up-the-unity-project"></a><span data-ttu-id="a81c3-169">Capitolo 2 - configurare il progetto Unity</span><span class="sxs-lookup"><span data-stu-id="a81c3-169">Chapter 2 - Set up the Unity project</span></span>
 
-<span data-ttu-id="9b898-170">Di seguito è una tipica configurato per lo sviluppo con realtà mista e di conseguenza, è un buon modello per altri progetti.</span><span class="sxs-lookup"><span data-stu-id="9b898-170">The following is a typical set up for developing with mixed reality, and as such, is a good template for other projects.</span></span>
+<span data-ttu-id="a81c3-170">Di seguito è una tipica configurato per lo sviluppo con realtà mista e di conseguenza, è un buon modello per altri progetti.</span><span class="sxs-lookup"><span data-stu-id="a81c3-170">The following is a typical set up for developing with mixed reality, and as such, is a good template for other projects.</span></span>
 
-1.  <span data-ttu-id="9b898-171">Aprire *Unity* e fare clic su **New**.</span><span class="sxs-lookup"><span data-stu-id="9b898-171">Open *Unity* and click **New**.</span></span>
+1.  <span data-ttu-id="a81c3-171">Aprire *Unity* e fare clic su **New**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-171">Open *Unity* and click **New**.</span></span>
 
     ![](images/AzureLabs-Lab311-09.png)
 
-2.  <span data-ttu-id="9b898-172">È necessario specificare un nome di progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-172">You need to provide a Unity project name.</span></span> <span data-ttu-id="9b898-173">Insert **MSGraphMR**.</span><span class="sxs-lookup"><span data-stu-id="9b898-173">Insert **MSGraphMR**.</span></span> <span data-ttu-id="9b898-174">Verificare che il modello di progetto è impostato su **3D**.</span><span class="sxs-lookup"><span data-stu-id="9b898-174">Make sure the project template is set to **3D**.</span></span> <span data-ttu-id="9b898-175">Impostare il **posizione** a una destinazione appropriata (tenere presente che è preferibile più prossimo a directory radice).</span><span class="sxs-lookup"><span data-stu-id="9b898-175">Set the **Location** to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="9b898-176">Fare quindi clic **Crea progetto**.</span><span class="sxs-lookup"><span data-stu-id="9b898-176">Then, click **Create project**.</span></span>
+2.  <span data-ttu-id="a81c3-172">È necessario specificare un nome di progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-172">You need to provide a Unity project name.</span></span> <span data-ttu-id="a81c3-173">Insert **MSGraphMR**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-173">Insert **MSGraphMR**.</span></span> <span data-ttu-id="a81c3-174">Verificare che il modello di progetto è impostato su **3D**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-174">Make sure the project template is set to **3D**.</span></span> <span data-ttu-id="a81c3-175">Impostare il **posizione** a una destinazione appropriata (tenere presente che è preferibile più prossimo a directory radice).</span><span class="sxs-lookup"><span data-stu-id="a81c3-175">Set the **Location** to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="a81c3-176">Fare quindi clic **Crea progetto**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-176">Then, click **Create project**.</span></span>
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  <span data-ttu-id="9b898-177">Con Unity open, è opportuno verificare il valore predefinito **Editor di Script** è impostata su **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="9b898-177">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="9b898-178">Passare a **Edit** > **preferenze** e quindi dalla nuova finestra, passare al **strumenti esterni**.</span><span class="sxs-lookup"><span data-stu-id="9b898-178">Go to **Edit** > **Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="9b898-179">Change **External Script Editor** al **Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="9b898-179">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="9b898-180">Chiudi il **preferenze** finestra.</span><span class="sxs-lookup"><span data-stu-id="9b898-180">Close the **Preferences** window.</span></span>
+3.  <span data-ttu-id="a81c3-177">Con Unity open, è opportuno verificare il valore predefinito **Editor di Script** è impostata su **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-177">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="a81c3-178">Passare a **Edit** > **preferenze** e quindi dalla nuova finestra, passare al **strumenti esterni**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-178">Go to **Edit** > **Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="a81c3-179">Change **External Script Editor** al **Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-179">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="a81c3-180">Chiudi il **preferenze** finestra.</span><span class="sxs-lookup"><span data-stu-id="a81c3-180">Close the **Preferences** window.</span></span>
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  <span data-ttu-id="9b898-181">Passare a **File** > **Build Settings** e selezionare **Universal Windows Platform**, quindi fare clic sul **commutatore piattaforma** pulsante per applicare la selezione.</span><span class="sxs-lookup"><span data-stu-id="9b898-181">Go to **File** > **Build Settings** and select **Universal Windows Platform**, then click on the **Switch Platform** button to apply your selection.</span></span>
+4.  <span data-ttu-id="a81c3-181">Passare a **File** > **Build Settings** e selezionare **Universal Windows Platform**, quindi fare clic sul **commutatore piattaforma** pulsante per applicare la selezione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-181">Go to **File** > **Build Settings** and select **Universal Windows Platform**, then click on the **Switch Platform** button to apply your selection.</span></span>
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  <span data-ttu-id="9b898-182">Mentre si trovano ancora nella **File** > **Build Settings**, assicurarsi che:</span><span class="sxs-lookup"><span data-stu-id="9b898-182">While still in **File** > **Build Settings**, make sure that:</span></span>
+5.  <span data-ttu-id="a81c3-182">Mentre si trovano ancora nella **File** > **Build Settings**, assicurarsi che:</span><span class="sxs-lookup"><span data-stu-id="a81c3-182">While still in **File** > **Build Settings**, make sure that:</span></span>
 
-    1. <span data-ttu-id="9b898-183">**Dispositivo di destinazione** è impostata su **HoloLens**</span><span class="sxs-lookup"><span data-stu-id="9b898-183">**Target Device** is set to **HoloLens**</span></span>
-    2. <span data-ttu-id="9b898-184">**Tipo di compilazione** è impostata su **D3D**</span><span class="sxs-lookup"><span data-stu-id="9b898-184">**Build Type** is set to **D3D**</span></span>
-    3. <span data-ttu-id="9b898-185">**SDK** è impostata su **installata più recente**</span><span class="sxs-lookup"><span data-stu-id="9b898-185">**SDK** is set to **Latest installed**</span></span>
-    4. <span data-ttu-id="9b898-186">**Versione di Visual Studio** è impostata su **installata più recente**</span><span class="sxs-lookup"><span data-stu-id="9b898-186">**Visual Studio Version** is set to **Latest installed**</span></span>
-    5. <span data-ttu-id="9b898-187">**Compilare ed eseguire** è impostata su **computer locale**</span><span class="sxs-lookup"><span data-stu-id="9b898-187">**Build and Run** is set to **Local Machine**</span></span>
-    6. <span data-ttu-id="9b898-188">Salvare la scena e aggiungerlo alla compilazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-188">Save the scene and add it to the build.</span></span>
+    1. <span data-ttu-id="a81c3-183">**Dispositivo di destinazione** è impostata su **HoloLens**</span><span class="sxs-lookup"><span data-stu-id="a81c3-183">**Target Device** is set to **HoloLens**</span></span>
+    2. <span data-ttu-id="a81c3-184">**Tipo di compilazione** è impostata su **D3D**</span><span class="sxs-lookup"><span data-stu-id="a81c3-184">**Build Type** is set to **D3D**</span></span>
+    3. <span data-ttu-id="a81c3-185">**SDK** è impostata su **installata più recente**</span><span class="sxs-lookup"><span data-stu-id="a81c3-185">**SDK** is set to **Latest installed**</span></span>
+    4. <span data-ttu-id="a81c3-186">**Versione di Visual Studio** è impostata su **installata più recente**</span><span class="sxs-lookup"><span data-stu-id="a81c3-186">**Visual Studio Version** is set to **Latest installed**</span></span>
+    5. <span data-ttu-id="a81c3-187">**Compilare ed eseguire** è impostata su **computer locale**</span><span class="sxs-lookup"><span data-stu-id="a81c3-187">**Build and Run** is set to **Local Machine**</span></span>
+    6. <span data-ttu-id="a81c3-188">Salvare la scena e aggiungerlo alla compilazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-188">Save the scene and add it to the build.</span></span>
 
-        1. <span data-ttu-id="9b898-189">Eseguire questa operazione selezionando **aggiungere scene Open**.</span><span class="sxs-lookup"><span data-stu-id="9b898-189">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="9b898-190">Verrà visualizzata una finestra di salvataggio.</span><span class="sxs-lookup"><span data-stu-id="9b898-190">A save window will appear.</span></span>
+        1. <span data-ttu-id="a81c3-189">Eseguire questa operazione selezionando **aggiungere scene Open**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-189">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="a81c3-190">Verrà visualizzata una finestra di salvataggio.</span><span class="sxs-lookup"><span data-stu-id="a81c3-190">A save window will appear.</span></span>
 
             ![](images/AzureLabs-Lab311-13.png)
 
-        2. <span data-ttu-id="9b898-191">Creare una nuova cartella per questa operazione e qualsiasi futuro, la scena.</span><span class="sxs-lookup"><span data-stu-id="9b898-191">Create a new folder for this, and any future, scene.</span></span> <span data-ttu-id="9b898-192">Selezionare il **nuova cartella** pulsante, per creare una nuova cartella, denominarla **scene**.</span><span class="sxs-lookup"><span data-stu-id="9b898-192">Select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
+        2. <span data-ttu-id="a81c3-191">Creare una nuova cartella per questa operazione e qualsiasi futuro, la scena.</span><span class="sxs-lookup"><span data-stu-id="a81c3-191">Create a new folder for this, and any future, scene.</span></span> <span data-ttu-id="a81c3-192">Selezionare il **nuova cartella** pulsante, per creare una nuova cartella, denominarla **scene**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-192">Select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
 
             ![](images/AzureLabs-Lab311-14.png)
 
-        3. <span data-ttu-id="9b898-193">Aprire appena creato **scene** cartella e quindi la *nome File*: campo di testo, digitare **MR_ComputerVisionScene**, quindi fare clic su **Salva** .</span><span class="sxs-lookup"><span data-stu-id="9b898-193">Open your newly created **Scenes** folder, and then in the *File name*: text field, type **MR_ComputerVisionScene**, then click **Save**.</span></span>
+        3. <span data-ttu-id="a81c3-193">Aprire appena creato **scene** cartella e quindi la *nome File*: campo di testo, digitare **MR_ComputerVisionScene**, quindi fare clic su **Salva** .</span><span class="sxs-lookup"><span data-stu-id="a81c3-193">Open your newly created **Scenes** folder, and then in the *File name*: text field, type **MR_ComputerVisionScene**, then click **Save**.</span></span>
 
             ![](images/AzureLabs-Lab311-15.png)
 
             > [!IMPORTANT] 
-            > <span data-ttu-id="9b898-194">Tenere presente, è necessario salvare le scene di Unity all'interno di *asset* cartella, come devono essere associate al progetto di Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-194">Be aware, you must save your Unity scenes within the *Assets* folder, as they must be associated with the Unity project.</span></span> <span data-ttu-id="9b898-195">Creare la cartella scene (e altre simili) è un modo tipico strutturare un progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-195">Creating the scenes folder (and other similar folders) is a typical way of structuring a Unity project.</span></span>
+            > <span data-ttu-id="a81c3-194">Tenere presente, è necessario salvare le scene di Unity all'interno di *asset* cartella, come devono essere associate al progetto di Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-194">Be aware, you must save your Unity scenes within the *Assets* folder, as they must be associated with the Unity project.</span></span> <span data-ttu-id="a81c3-195">Creare la cartella scene (e altre simili) è un modo tipico strutturare un progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-195">Creating the scenes folder (and other similar folders) is a typical way of structuring a Unity project.</span></span>
 
-    7.  <span data-ttu-id="9b898-196">Le restanti impostazioni, nel *Build Settings*, deve essere lasciato come impostazione predefinita per il momento.</span><span class="sxs-lookup"><span data-stu-id="9b898-196">The remaining settings, in *Build Settings*, should be left as default for now.</span></span>
+    7.  <span data-ttu-id="a81c3-196">Le restanti impostazioni, nel *Build Settings*, deve essere lasciato come impostazione predefinita per il momento.</span><span class="sxs-lookup"><span data-stu-id="a81c3-196">The remaining settings, in *Build Settings*, should be left as default for now.</span></span>
 
-6.  <span data-ttu-id="9b898-197">Nel *Build Settings* finestra, fare clic sul **Player Settings** pulsante, si aprirà il pannello correlato nello spazio in cui il *Inspector* si trova.</span><span class="sxs-lookup"><span data-stu-id="9b898-197">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span> 
+6.  <span data-ttu-id="a81c3-197">Nel *Build Settings* finestra, fare clic sul **Player Settings** pulsante, si aprirà il pannello correlato nello spazio in cui il *Inspector* si trova.</span><span class="sxs-lookup"><span data-stu-id="a81c3-197">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span> 
 
     ![](images/AzureLabs-Lab311-16.png)
 
-7. <span data-ttu-id="9b898-198">In questo pannello, alcune impostazioni devono essere verificati:</span><span class="sxs-lookup"><span data-stu-id="9b898-198">In this panel, a few settings need to be verified:</span></span>
+7. <span data-ttu-id="a81c3-198">In questo pannello, alcune impostazioni devono essere verificati:</span><span class="sxs-lookup"><span data-stu-id="a81c3-198">In this panel, a few settings need to be verified:</span></span>
 
-    1. <span data-ttu-id="9b898-199">Nel **altre impostazioni** scheda:</span><span class="sxs-lookup"><span data-stu-id="9b898-199">In the **Other Settings** tab:</span></span>
+    1. <span data-ttu-id="a81c3-199">Nel **altre impostazioni** scheda:</span><span class="sxs-lookup"><span data-stu-id="a81c3-199">In the **Other Settings** tab:</span></span>
 
-        1.  <span data-ttu-id="9b898-200">**Scripting** **versione Runtime** deve essere **sperimentale** (.NET 4.6 equivalente), che attiverà una necessità di riavviare l'Editor.</span><span class="sxs-lookup"><span data-stu-id="9b898-200">**Scripting** **Runtime Version** should be **Experimental** (.NET 4.6 Equivalent), which will trigger a need to restart the Editor.</span></span>
+        1.  <span data-ttu-id="a81c3-200">**Scripting** **versione Runtime** deve essere **sperimentale** (.NET 4.6 equivalente), che attiverà una necessità di riavviare l'Editor.</span><span class="sxs-lookup"><span data-stu-id="a81c3-200">**Scripting** **Runtime Version** should be **Experimental** (.NET 4.6 Equivalent), which will trigger a need to restart the Editor.</span></span>
 
-        2. <span data-ttu-id="9b898-201">**Back-end di scripting** deve essere **.NET**</span><span class="sxs-lookup"><span data-stu-id="9b898-201">**Scripting Backend** should be **.NET**</span></span>
+        2. <span data-ttu-id="a81c3-201">**Back-end di scripting** deve essere **.NET**</span><span class="sxs-lookup"><span data-stu-id="a81c3-201">**Scripting Backend** should be **.NET**</span></span>
 
-        3. <span data-ttu-id="9b898-202">**Livello di compatibilità delle API** deve essere **.NET 4.6**</span><span class="sxs-lookup"><span data-stu-id="9b898-202">**API Compatibility Level** should be **.NET 4.6**</span></span>
+        3. <span data-ttu-id="a81c3-202">**Livello di compatibilità delle API** deve essere **.NET 4.6**</span><span class="sxs-lookup"><span data-stu-id="a81c3-202">**API Compatibility Level** should be **.NET 4.6**</span></span>
 
             ![](images/AzureLabs-Lab311-17.png)
 
-    2.  <span data-ttu-id="9b898-203">All'interno di **impostazioni di pubblicazione** nella scheda **funzionalità**, controllare:</span><span class="sxs-lookup"><span data-stu-id="9b898-203">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
+    2.  <span data-ttu-id="a81c3-203">All'interno di **impostazioni di pubblicazione** nella scheda **funzionalità**, controllare:</span><span class="sxs-lookup"><span data-stu-id="a81c3-203">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
 
-        - <span data-ttu-id="9b898-204">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="9b898-204">**InternetClient**</span></span>
+        - <span data-ttu-id="a81c3-204">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="a81c3-204">**InternetClient**</span></span>
 
             ![](images/AzureLabs-Lab311-18.png)
 
-    3.  <span data-ttu-id="9b898-205">Più in basso il pannello, nello **XR impostazioni** (disponibile di seguito **impostazioni di pubblicazione**), controllare **supportato di realtà virtuale**, assicurarsi che il **realtà mista di Windows SDK** viene aggiunto.</span><span class="sxs-lookup"><span data-stu-id="9b898-205">Further down the panel, in **XR Settings** (found below **Publish Settings**), check **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
+    3.  <span data-ttu-id="a81c3-205">Più in basso il pannello, nello **XR impostazioni** (disponibile di seguito **impostazioni di pubblicazione**), controllare **supportato di realtà virtuale**, assicurarsi che il **realtà mista di Windows SDK** viene aggiunto.</span><span class="sxs-lookup"><span data-stu-id="a81c3-205">Further down the panel, in **XR Settings** (found below **Publish Settings**), check **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
 
         ![](images/AzureLabs-Lab311-19.png)
 
-8.  <span data-ttu-id="9b898-206">Nuovamente in *Build Settings*, *Unity C# progetti* non è più è disattivata; selezionare la casella di controllo accanto a questo.</span><span class="sxs-lookup"><span data-stu-id="9b898-206">Back in *Build Settings*, *Unity C# Projects* is no longer greyed out; check the checkbox next to this.</span></span>
+8.  <span data-ttu-id="a81c3-206">Nuovamente in *Build Settings*, *Unity C# progetti* non è più è disattivata; selezionare la casella di controllo accanto a questo.</span><span class="sxs-lookup"><span data-stu-id="a81c3-206">Back in *Build Settings*, *Unity C# Projects* is no longer greyed out; check the checkbox next to this.</span></span>
 
-9.  <span data-ttu-id="9b898-207">Chiudi il *Build Settings* finestra.</span><span class="sxs-lookup"><span data-stu-id="9b898-207">Close the *Build Settings* window.</span></span>
+9.  <span data-ttu-id="a81c3-207">Chiudi il *Build Settings* finestra.</span><span class="sxs-lookup"><span data-stu-id="a81c3-207">Close the *Build Settings* window.</span></span>
 
-10.  <span data-ttu-id="9b898-208">Salvare la scena e il progetto (**FILE** > **salvare scene /file** > **Salva progetto**).</span><span class="sxs-lookup"><span data-stu-id="9b898-208">Save your scene and project (**FILE** > **SAVE SCENES / FILE** > **SAVE PROJECT**).</span></span>
+10.  <span data-ttu-id="a81c3-208">Salvare la scena e il progetto (**FILE** > **salvare scene /file** > **Salva progetto**).</span><span class="sxs-lookup"><span data-stu-id="a81c3-208">Save your scene and project (**FILE** > **SAVE SCENES / FILE** > **SAVE PROJECT**).</span></span>
 
-## <a name="chapter-3---import-libraries-in-unity"></a><span data-ttu-id="9b898-209">Capitolo 3 - librerie di importazione in Unity</span><span class="sxs-lookup"><span data-stu-id="9b898-209">Chapter 3 - Import Libraries in Unity</span></span>
+## <a name="chapter-3---import-libraries-in-unity"></a><span data-ttu-id="a81c3-209">Capitolo 3 - librerie di importazione in Unity</span><span class="sxs-lookup"><span data-stu-id="a81c3-209">Chapter 3 - Import Libraries in Unity</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9b898-210">Se si vuole ignorare la *configurare Unity* componente di questo corso e continuare direttamente nel codice, è possibile scaricare questa app [MR-Azure-311.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), importarlo nel progetto come un [ **Custom Package**](https://docs.unity3d.com/Manual/AssetPackages.html)e quindi sono la prosecuzione [capitolo 5](#chapter-5---create-meetingsui-class).</span><span class="sxs-lookup"><span data-stu-id="9b898-210">If you wish to skip the *Unity Set up* component of this course, and continue straight into code, feel free to download this [Azure-MR-311.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), import it into your project as a [**Custom Package**](https://docs.unity3d.com/Manual/AssetPackages.html), and then continue from [Chapter 5](#chapter-5---create-meetingsui-class).</span></span>
+> <span data-ttu-id="a81c3-210">Se si vuole ignorare la *configurare Unity* componente di questo corso e continuare direttamente nel codice, è possibile scaricare questa app [MR-Azure-311.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), importarlo nel progetto come un [ **Custom Package**](https://docs.unity3d.com/Manual/AssetPackages.html)e quindi sono la prosecuzione [capitolo 5](#chapter-5---create-meetingsui-class).</span><span class="sxs-lookup"><span data-stu-id="a81c3-210">If you wish to skip the *Unity Set up* component of this course, and continue straight into code, feel free to download this [Azure-MR-311.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage), import it into your project as a [**Custom Package**](https://docs.unity3d.com/Manual/AssetPackages.html), and then continue from [Chapter 5](#chapter-5---create-meetingsui-class).</span></span>
 
-<span data-ttu-id="9b898-211">Per usare *Microsoft Graph* all'interno di Unity è necessario apportare utilizzare il **Microsoft.Identity.Client** DLL.</span><span class="sxs-lookup"><span data-stu-id="9b898-211">To use *Microsoft Graph* within Unity you need to make use of the  **Microsoft.Identity.Client** DLL.</span></span> <span data-ttu-id="9b898-212">È possibile usare il SDK di Microsoft Graph, tuttavia, sarà necessario l'aggiunta di un pacchetto NuGet dopo aver compilato il progetto di Unity (ovvero la post-compilazione del progetto di modifica).</span><span class="sxs-lookup"><span data-stu-id="9b898-212">It is possible to use the Microsoft Graph SDK, however, it will require the addition of a NuGet package after you build the Unity project (meaning editing the project post-build).</span></span> <span data-ttu-id="9b898-213">Viene considerato più semplice importare le librerie DLL richieste direttamente in Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-213">It is considered simpler to import the required DLLs directly into Unity.</span></span>
+<span data-ttu-id="a81c3-211">Per usare *Microsoft Graph* all'interno di Unity è necessario apportare utilizzare il **Microsoft.Identity.Client** DLL.</span><span class="sxs-lookup"><span data-stu-id="a81c3-211">To use *Microsoft Graph* within Unity you need to make use of the  **Microsoft.Identity.Client** DLL.</span></span> <span data-ttu-id="a81c3-212">È possibile usare il SDK di Microsoft Graph, tuttavia, sarà necessario l'aggiunta di un pacchetto NuGet dopo aver compilato il progetto di Unity (ovvero la post-compilazione del progetto di modifica).</span><span class="sxs-lookup"><span data-stu-id="a81c3-212">It is possible to use the Microsoft Graph SDK, however, it will require the addition of a NuGet package after you build the Unity project (meaning editing the project post-build).</span></span> <span data-ttu-id="a81c3-213">Viene considerato più semplice importare le librerie DLL richieste direttamente in Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-213">It is considered simpler to import the required DLLs directly into Unity.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9b898-214">È attualmente non esiste un problema noto in Unity che richiede i plug-in per essere riconfigurato dopo l'importazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-214">There is currently a known issue in Unity which requires plugins to be reconfigured after import.</span></span> <span data-ttu-id="9b898-215">Questi passaggi (4-7 in questa sezione) non saranno necessari dopo che è stato risolto il bug.</span><span class="sxs-lookup"><span data-stu-id="9b898-215">These steps (4 - 7 in this section) will no longer be required after the bug has been resolved.</span></span>
+> <span data-ttu-id="a81c3-214">È attualmente non esiste un problema noto in Unity che richiede i plug-in per essere riconfigurato dopo l'importazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-214">There is currently a known issue in Unity which requires plugins to be reconfigured after import.</span></span> <span data-ttu-id="a81c3-215">Questi passaggi (4-7 in questa sezione) non saranno necessari dopo che è stato risolto il bug.</span><span class="sxs-lookup"><span data-stu-id="a81c3-215">These steps (4 - 7 in this section) will no longer be required after the bug has been resolved.</span></span>
 
-<span data-ttu-id="9b898-216">Per importare *Microsoft Graph* nel progetto, [scaricare il file MSGraph_LabPlugins.zip](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage).</span><span class="sxs-lookup"><span data-stu-id="9b898-216">To import *Microsoft Graph* into your own project, [download the MSGraph_LabPlugins.zip file](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage).</span></span> <span data-ttu-id="9b898-217">Questo pacchetto è stato creato con le versioni delle librerie che sono state testate.</span><span class="sxs-lookup"><span data-stu-id="9b898-217">This package has been created with versions of the libraries that have been tested.</span></span>
+<span data-ttu-id="a81c3-216">Per importare *Microsoft Graph* nel progetto, [scaricare il file MSGraph_LabPlugins.zip](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage).</span><span class="sxs-lookup"><span data-stu-id="a81c3-216">To import *Microsoft Graph* into your own project, [download the MSGraph_LabPlugins.zip file](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage).</span></span> <span data-ttu-id="a81c3-217">Questo pacchetto è stato creato con le versioni delle librerie che sono state testate.</span><span class="sxs-lookup"><span data-stu-id="a81c3-217">This package has been created with versions of the libraries that have been tested.</span></span>
 
-<span data-ttu-id="9b898-218">Se si vuole saperne di più su come aggiungere DLL personalizzata al progetto Unity [fare clic sul collegamento](https://docs.unity3d.com/Manual/UsingDLL.html).</span><span class="sxs-lookup"><span data-stu-id="9b898-218">If you wish to know more about how to add custom DLLs to your Unity project, [follow this link](https://docs.unity3d.com/Manual/UsingDLL.html).</span></span>
+<span data-ttu-id="a81c3-218">Se si vuole saperne di più su come aggiungere DLL personalizzata al progetto Unity [fare clic sul collegamento](https://docs.unity3d.com/Manual/UsingDLL.html).</span><span class="sxs-lookup"><span data-stu-id="a81c3-218">If you wish to know more about how to add custom DLLs to your Unity project, [follow this link](https://docs.unity3d.com/Manual/UsingDLL.html).</span></span>
 
-<span data-ttu-id="9b898-219">Per importare il pacchetto:</span><span class="sxs-lookup"><span data-stu-id="9b898-219">To import the package:</span></span>
+<span data-ttu-id="a81c3-219">Per importare il pacchetto:</span><span class="sxs-lookup"><span data-stu-id="a81c3-219">To import the package:</span></span>
 
-1.  <span data-ttu-id="9b898-220">Aggiungere il pacchetto Unity per Unity usando il **Assets** > **Importa pacchetto** > **pacchetto personalizzato** l'opzione di menu.</span><span class="sxs-lookup"><span data-stu-id="9b898-220">Add the Unity Package to Unity by using the **Assets** > **Import Package** > **Custom Package** menu option.</span></span> <span data-ttu-id="9b898-221">Selezionare il pacchetto che appena scaricato.</span><span class="sxs-lookup"><span data-stu-id="9b898-221">Select the package you just downloaded.</span></span>
+1.  <span data-ttu-id="a81c3-220">Aggiungere il pacchetto Unity per Unity usando il **Assets** > **Importa pacchetto** > **pacchetto personalizzato** l'opzione di menu.</span><span class="sxs-lookup"><span data-stu-id="a81c3-220">Add the Unity Package to Unity by using the **Assets** > **Import Package** > **Custom Package** menu option.</span></span> <span data-ttu-id="a81c3-221">Selezionare il pacchetto che appena scaricato.</span><span class="sxs-lookup"><span data-stu-id="a81c3-221">Select the package you just downloaded.</span></span>
 
-2.  <span data-ttu-id="9b898-222">Nel **Importa pacchetto Unity** scatola viene, assicurarsi che tutto ciò che in (e tra cui) **plug-in** sia selezionata.</span><span class="sxs-lookup"><span data-stu-id="9b898-222">In the **Import Unity Package** box that pops up, ensure everything under (and including) **Plugins** is selected.</span></span>
+2.  <span data-ttu-id="a81c3-222">Nel **Importa pacchetto Unity** scatola viene, assicurarsi che tutto ciò che in (e tra cui) **plug-in** sia selezionata.</span><span class="sxs-lookup"><span data-stu-id="a81c3-222">In the **Import Unity Package** box that pops up, ensure everything under (and including) **Plugins** is selected.</span></span>
 
     ![](images/AzureLabs-Lab311-20.png)
 
-3.  <span data-ttu-id="9b898-223">Scegliere il **importazione** pulsante per aggiungere elementi al progetto.</span><span class="sxs-lookup"><span data-stu-id="9b898-223">Click the **Import** button to add the items to your project.</span></span>
+3.  <span data-ttu-id="a81c3-223">Scegliere il **importazione** pulsante per aggiungere elementi al progetto.</span><span class="sxs-lookup"><span data-stu-id="a81c3-223">Click the **Import** button to add the items to your project.</span></span>
 
-4.  <span data-ttu-id="9b898-224">Andare alla **Microsoft Graph** cartella sotto **plug-in** nel *pannello progetto* e selezionare il plug-in denominato **Microsoft.Identity.Client**.</span><span class="sxs-lookup"><span data-stu-id="9b898-224">Go to the **MSGraph** folder under **Plugins** in the *Project Panel* and select the plugin called **Microsoft.Identity.Client**.</span></span>
+4.  <span data-ttu-id="a81c3-224">Andare alla **Microsoft Graph** cartella sotto **plug-in** nel *pannello progetto* e selezionare il plug-in denominato **Microsoft.Identity.Client**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-224">Go to the **MSGraph** folder under **Plugins** in the *Project Panel* and select the plugin called **Microsoft.Identity.Client**.</span></span>
 
     ![](images/AzureLabs-Lab311-21.png)
 
-5.  <span data-ttu-id="9b898-225">Con il *plug-in* selezionato, assicurarsi che **Any Platform** non è selezionata, quindi verificare che **WSAPlayer** anche è deselezionata, quindi fare clic su **applica**.</span><span class="sxs-lookup"><span data-stu-id="9b898-225">With the *plugin* selected, ensure that **Any Platform** is unchecked, then ensure that **WSAPlayer** is also unchecked, then click **Apply**.</span></span> <span data-ttu-id="9b898-226">Si tratta semplicemente di confermare che i file siano configurati correttamente.</span><span class="sxs-lookup"><span data-stu-id="9b898-226">This is just to confirm that the files are configured correctly.</span></span>
+5.  <span data-ttu-id="a81c3-225">Con il *plug-in* selezionato, assicurarsi che **Any Platform** non è selezionata, quindi verificare che **WSAPlayer** anche è deselezionata, quindi fare clic su **applica**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-225">With the *plugin* selected, ensure that **Any Platform** is unchecked, then ensure that **WSAPlayer** is also unchecked, then click **Apply**.</span></span> <span data-ttu-id="a81c3-226">Si tratta semplicemente di confermare che i file siano configurati correttamente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-226">This is just to confirm that the files are configured correctly.</span></span>
 
     ![](images/AzureLabs-Lab311-22.png)
 
     > [!NOTE] 
-    > <span data-ttu-id="9b898-227">Contrassegnare questi plug-in Configura perché possano essere usati solo nell'Editor di Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-227">Marking these plugins configures them to only be used in the Unity Editor.</span></span> <span data-ttu-id="9b898-228">Esistono un diverso set di DLL nella cartella WSA che verrà usato dopo che il progetto viene esportato da Unity come un'applicazione di Windows universale.</span><span class="sxs-lookup"><span data-stu-id="9b898-228">There are a different set of DLLs in the WSA folder which will be used after the project is exported from Unity as a Universal Windows Application.</span></span>
+    > <span data-ttu-id="a81c3-227">Contrassegnare questi plug-in Configura perché possano essere usati solo nell'Editor di Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-227">Marking these plugins configures them to only be used in the Unity Editor.</span></span> <span data-ttu-id="a81c3-228">Esistono un diverso set di DLL nella cartella WSA che verrà usato dopo che il progetto viene esportato da Unity come un'applicazione di Windows universale.</span><span class="sxs-lookup"><span data-stu-id="a81c3-228">There are a different set of DLLs in the WSA folder which will be used after the project is exported from Unity as a Universal Windows Application.</span></span>
 
-6.  <span data-ttu-id="9b898-229">Successivamente, è necessario aprire la **WSA** cartella, all'interno di **Microsoft Graph** cartella.</span><span class="sxs-lookup"><span data-stu-id="9b898-229">Next, you need to open the **WSA** folder, within the **MSGraph** folder.</span></span> <span data-ttu-id="9b898-230">Si noterà una copia dello stesso file che appena configurato.</span><span class="sxs-lookup"><span data-stu-id="9b898-230">You will see a copy of the same file you just configured.</span></span> <span data-ttu-id="9b898-231">Selezionare il file, quindi nella finestra di ispezione:</span><span class="sxs-lookup"><span data-stu-id="9b898-231">Select the file, and then in the inspector:</span></span>
+6.  <span data-ttu-id="a81c3-229">Successivamente, è necessario aprire la **WSA** cartella, all'interno di **Microsoft Graph** cartella.</span><span class="sxs-lookup"><span data-stu-id="a81c3-229">Next, you need to open the **WSA** folder, within the **MSGraph** folder.</span></span> <span data-ttu-id="a81c3-230">Si noterà una copia dello stesso file che appena configurato.</span><span class="sxs-lookup"><span data-stu-id="a81c3-230">You will see a copy of the same file you just configured.</span></span> <span data-ttu-id="a81c3-231">Selezionare il file, quindi nella finestra di ispezione:</span><span class="sxs-lookup"><span data-stu-id="a81c3-231">Select the file, and then in the inspector:</span></span>
 
-    -   <span data-ttu-id="9b898-232">Assicurarsi che **piattaforma Any** viene **deselezionata**e che **solo** **WSAPlayer** è **selezionata**.</span><span class="sxs-lookup"><span data-stu-id="9b898-232">ensure that **Any Platform** is **unchecked**, and that **only** **WSAPlayer** is **checked**.</span></span>
+    -   <span data-ttu-id="a81c3-232">Assicurarsi che **piattaforma Any** viene **deselezionata**e che **solo** **WSAPlayer** è **selezionata**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-232">ensure that **Any Platform** is **unchecked**, and that **only** **WSAPlayer** is **checked**.</span></span>
 
-    -   <span data-ttu-id="9b898-233">Assicurarsi **SDK** è impostata su **UWP**, e **back-end di Scripting** è impostata su **Dot Net**</span><span class="sxs-lookup"><span data-stu-id="9b898-233">Ensure **SDK** is set to **UWP**, and **Scripting Backend** is set to **Dot Net**</span></span>
+    -   <span data-ttu-id="a81c3-233">Assicurarsi **SDK** è impostata su **UWP**, e **back-end di Scripting** è impostata su **Dot Net**</span><span class="sxs-lookup"><span data-stu-id="a81c3-233">Ensure **SDK** is set to **UWP**, and **Scripting Backend** is set to **Dot Net**</span></span>
 
-    -   <span data-ttu-id="9b898-234">Assicurarsi che **non elabora** viene **controllato**.</span><span class="sxs-lookup"><span data-stu-id="9b898-234">Ensure that **Don't process** is **checked**.</span></span>
+    -   <span data-ttu-id="a81c3-234">Assicurarsi che **non elabora** viene **controllato**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-234">Ensure that **Don't process** is **checked**.</span></span>
 
         ![](images/AzureLabs-Lab311-23.png)
 
-7.  <span data-ttu-id="9b898-235">Fare clic su **Applica**.</span><span class="sxs-lookup"><span data-stu-id="9b898-235">Click **Apply**.</span></span>
+7.  <span data-ttu-id="a81c3-235">Fare clic su **Applica**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-235">Click **Apply**.</span></span>
 
-## <a name="chapter-4---camera-setup"></a><span data-ttu-id="9b898-236">Capitolo 4 - impostazione della fotocamera</span><span class="sxs-lookup"><span data-stu-id="9b898-236">Chapter 4 - Camera Setup</span></span>
+## <a name="chapter-4---camera-setup"></a><span data-ttu-id="a81c3-236">Capitolo 4 - impostazione della fotocamera</span><span class="sxs-lookup"><span data-stu-id="a81c3-236">Chapter 4 - Camera Setup</span></span>
 
-<span data-ttu-id="9b898-237">Durante questo capitolo si configurerà la fotocamera principale della scena:</span><span class="sxs-lookup"><span data-stu-id="9b898-237">During this Chapter you will set up the Main Camera of your scene:</span></span>
+<span data-ttu-id="a81c3-237">Durante questo capitolo si configurerà la fotocamera principale della scena:</span><span class="sxs-lookup"><span data-stu-id="a81c3-237">During this Chapter you will set up the Main Camera of your scene:</span></span>
 
-1.  <span data-ttu-id="9b898-238">Nel *Pannello di gerarchia*, selezionare la **Main Camera**.</span><span class="sxs-lookup"><span data-stu-id="9b898-238">In the *Hierarchy Panel*, select the **Main Camera**.</span></span>
+1.  <span data-ttu-id="a81c3-238">Nel *Pannello di gerarchia*, selezionare la **Main Camera**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-238">In the *Hierarchy Panel*, select the **Main Camera**.</span></span>
 
-2.  <span data-ttu-id="9b898-239">Una volta selezionata, sarà possibile visualizzare tutti i componenti del **Main Camera** nel *Inspector* pannello.</span><span class="sxs-lookup"><span data-stu-id="9b898-239">Once selected, you will be able to see all the components of the **Main Camera** in the *Inspector* panel.</span></span>
+2.  <span data-ttu-id="a81c3-239">Una volta selezionata, sarà possibile visualizzare tutti i componenti del **Main Camera** nel *Inspector* pannello.</span><span class="sxs-lookup"><span data-stu-id="a81c3-239">Once selected, you will be able to see all the components of the **Main Camera** in the *Inspector* panel.</span></span>
 
-    1.  <span data-ttu-id="9b898-240">Il **oggetto della fotocamera** devono essere denominati **Main Camera** (si noti l'ortografici!)</span><span class="sxs-lookup"><span data-stu-id="9b898-240">The **Camera object** must be named **Main Camera** (note the spelling!)</span></span>
+    1.  <span data-ttu-id="a81c3-240">Il **oggetto della fotocamera** devono essere denominati **Main Camera** (si noti l'ortografici!)</span><span class="sxs-lookup"><span data-stu-id="a81c3-240">The **Camera object** must be named **Main Camera** (note the spelling!)</span></span>
 
-    2.  <span data-ttu-id="9b898-241">Main Camera **Tag** deve essere impostata su **MainCamera** (si noti l'ortografici!)</span><span class="sxs-lookup"><span data-stu-id="9b898-241">The Main Camera **Tag** must be set to **MainCamera** (note the spelling!)</span></span>
+    2.  <span data-ttu-id="a81c3-241">Main Camera **Tag** deve essere impostata su **MainCamera** (si noti l'ortografici!)</span><span class="sxs-lookup"><span data-stu-id="a81c3-241">The Main Camera **Tag** must be set to **MainCamera** (note the spelling!)</span></span>
 
-    3.  <span data-ttu-id="9b898-242">Assicurarsi che il **posizione trasformare** è impostata su **0, 0, 0**</span><span class="sxs-lookup"><span data-stu-id="9b898-242">Make sure the **Transform Position** is set to **0, 0, 0**</span></span>
+    3.  <span data-ttu-id="a81c3-242">Assicurarsi che il **posizione trasformare** è impostata su **0, 0, 0**</span><span class="sxs-lookup"><span data-stu-id="a81c3-242">Make sure the **Transform Position** is set to **0, 0, 0**</span></span>
 
-    4.  <span data-ttu-id="9b898-243">Impostare **cancellare i flag** a **colore a tinta unita**</span><span class="sxs-lookup"><span data-stu-id="9b898-243">Set **Clear Flags** to **Solid Color**</span></span>
+    4.  <span data-ttu-id="a81c3-243">Impostare **cancellare i flag** a **colore a tinta unita**</span><span class="sxs-lookup"><span data-stu-id="a81c3-243">Set **Clear Flags** to **Solid Color**</span></span>
 
-    5.  <span data-ttu-id="9b898-244">Impostare il **colore di sfondo** del componente della fotocamera **nero, Alpha 0** **(Hex codice: #00000000)**</span><span class="sxs-lookup"><span data-stu-id="9b898-244">Set the **Background Color** of the Camera Component to **Black, Alpha 0** **(Hex Code: #00000000)**</span></span>
+    5.  <span data-ttu-id="a81c3-244">Impostare il **colore di sfondo** del componente della fotocamera **nero, Alpha 0** **(Hex codice: #00000000)**</span><span class="sxs-lookup"><span data-stu-id="a81c3-244">Set the **Background Color** of the Camera Component to **Black, Alpha 0** **(Hex Code: #00000000)**</span></span>
 
         ![](images/AzureLabs-Lab311-24.png)
 
-3.  <span data-ttu-id="9b898-245">La struttura dell'oggetto finale nel *gerarchia pannello* dovrebbe essere simile a quello illustrato nell'immagine seguente:</span><span class="sxs-lookup"><span data-stu-id="9b898-245">The final object structure in the *Hierarchy Panel* should be like the one shown in the image below:</span></span>
+3.  <span data-ttu-id="a81c3-245">La struttura dell'oggetto finale nel *gerarchia pannello* dovrebbe essere simile a quello illustrato nell'immagine seguente:</span><span class="sxs-lookup"><span data-stu-id="a81c3-245">The final object structure in the *Hierarchy Panel* should be like the one shown in the image below:</span></span>
 
     ![](images/AzureLabs-Lab311-25.png)
 
-## <a name="chapter-5---create-meetingsui-class"></a><span data-ttu-id="9b898-246">Capitolo 5 - creare MeetingsUI classe</span><span class="sxs-lookup"><span data-stu-id="9b898-246">Chapter 5 - Create MeetingsUI class</span></span>
+## <a name="chapter-5---create-meetingsui-class"></a><span data-ttu-id="a81c3-246">Capitolo 5 - creare MeetingsUI classe</span><span class="sxs-lookup"><span data-stu-id="a81c3-246">Chapter 5 - Create MeetingsUI class</span></span>
 
-<span data-ttu-id="9b898-247">È il primo script da creare **MeetingsUI**, che è responsabile dell'hosting e popolando l'interfaccia utente dell'applicazione (messaggio di benvenuto, istruzioni e i dettagli di riunioni).</span><span class="sxs-lookup"><span data-stu-id="9b898-247">The first script you need to create is **MeetingsUI**, which is responsible for hosting and populating the UI of the application (welcome message, instructions and the meetings details).</span></span>
+<span data-ttu-id="a81c3-247">È il primo script da creare **MeetingsUI**, che è responsabile dell'hosting e popolando l'interfaccia utente dell'applicazione (messaggio di benvenuto, istruzioni e i dettagli di riunioni).</span><span class="sxs-lookup"><span data-stu-id="a81c3-247">The first script you need to create is **MeetingsUI**, which is responsible for hosting and populating the UI of the application (welcome message, instructions and the meetings details).</span></span>
 
-<span data-ttu-id="9b898-248">Per creare questa classe:</span><span class="sxs-lookup"><span data-stu-id="9b898-248">To create this class:</span></span>
+<span data-ttu-id="a81c3-248">Per creare questa classe:</span><span class="sxs-lookup"><span data-stu-id="a81c3-248">To create this class:</span></span>
 
-1.  <span data-ttu-id="9b898-249">Fare clic sul **asset** cartella la *pannello progetto*, quindi selezionare **crea** > **cartella**.</span><span class="sxs-lookup"><span data-stu-id="9b898-249">Right-click on the **Assets** folder in the *Project Panel*, then select **Create** > **Folder**.</span></span> <span data-ttu-id="9b898-250">Denominare la cartella **script**.</span><span class="sxs-lookup"><span data-stu-id="9b898-250">Name the folder **Scripts**.</span></span>
+1.  <span data-ttu-id="a81c3-249">Fare clic sul **asset** cartella la *pannello progetto*, quindi selezionare **crea** > **cartella**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-249">Right-click on the **Assets** folder in the *Project Panel*, then select **Create** > **Folder**.</span></span> <span data-ttu-id="a81c3-250">Denominare la cartella **script**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-250">Name the folder **Scripts**.</span></span>
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  <span data-ttu-id="9b898-251">Aprire il **gli script** cartella, quindi, all'interno di tale cartella, fare doppio clic su, **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="9b898-251">Open the **Scripts** folder then, within that folder, right-click, **Create** > **C# Script**.</span></span> <span data-ttu-id="9b898-252">Denominare lo script **MeetingsUI.**</span><span class="sxs-lookup"><span data-stu-id="9b898-252">Name the script **MeetingsUI.**</span></span>
+2.  <span data-ttu-id="a81c3-251">Aprire il **gli script** cartella, quindi, all'interno di tale cartella, fare doppio clic su, **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-251">Open the **Scripts** folder then, within that folder, right-click, **Create** > **C# Script**.</span></span> <span data-ttu-id="a81c3-252">Denominare lo script **MeetingsUI.**</span><span class="sxs-lookup"><span data-stu-id="a81c3-252">Name the script **MeetingsUI.**</span></span>
 
     ![](images/AzureLabs-Lab311-28.png)
 
-3.  <span data-ttu-id="9b898-253">Fare doppio clic su nuova **MeetingsUI** script per aprirlo con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="9b898-253">Double-click on the new **MeetingsUI** script to open it with *Visual Studio*.</span></span>
+3.  <span data-ttu-id="a81c3-253">Fare doppio clic su nuova **MeetingsUI** script per aprirlo con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="a81c3-253">Double-click on the new **MeetingsUI** script to open it with *Visual Studio*.</span></span>
 
-4.  <span data-ttu-id="9b898-254">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-254">Insert the following namespaces:</span></span>
+4.  <span data-ttu-id="a81c3-254">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-254">Insert the following namespaces:</span></span>
 
     ```csharp
     using System;
     using UnityEngine;
     ```
 
-5.  <span data-ttu-id="9b898-255">All'interno della classe inserire le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-255">Inside the class insert the following variables:</span></span>
+5.  <span data-ttu-id="a81c3-255">All'interno della classe inserire le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-255">Inside the class insert the following variables:</span></span>
 
     ```csharp    
         /// <summary>
@@ -298,7 +298,7 @@ ms.locfileid: "67694521"
         private TextMesh _meetingDisplayTextMesh;
     ```
 
-6.  <span data-ttu-id="9b898-256">Quindi sostituire il **Start ()** metodo e aggiungere un' **Awake()** (metodo).</span><span class="sxs-lookup"><span data-stu-id="9b898-256">Then replace the **Start()** method and add an **Awake()** method.</span></span> <span data-ttu-id="9b898-257">Questi verranno chiamati quando inizializza la classe:</span><span class="sxs-lookup"><span data-stu-id="9b898-257">These will be called when the class initializes:</span></span>
+6.  <span data-ttu-id="a81c3-256">Quindi sostituire il **Start ()** metodo e aggiungere un' **Awake()** (metodo).</span><span class="sxs-lookup"><span data-stu-id="a81c3-256">Then replace the **Start()** method and add an **Awake()** method.</span></span> <span data-ttu-id="a81c3-257">Questi verranno chiamati quando inizializza la classe:</span><span class="sxs-lookup"><span data-stu-id="a81c3-257">These will be called when the class initializes:</span></span>
 
     ```csharp    
         /// <summary>
@@ -319,7 +319,7 @@ ms.locfileid: "67694521"
         }
     ```
 
-7.  <span data-ttu-id="9b898-258">Aggiungere i metodi responsabili per la creazione di *riunioni UI* e popolarla con le riunioni corrente quando richiesto:</span><span class="sxs-lookup"><span data-stu-id="9b898-258">Add the methods responsible for creating the *Meetings UI* and populate it with the current meetings when requested:</span></span>
+7.  <span data-ttu-id="a81c3-258">Aggiungere i metodi responsabili per la creazione di *riunioni UI* e popolarla con le riunioni corrente quando richiesto:</span><span class="sxs-lookup"><span data-stu-id="a81c3-258">Add the methods responsible for creating the *Meetings UI* and populate it with the current meetings when requested:</span></span>
 
     ```csharp    
         /// <summary>
@@ -367,21 +367,21 @@ ms.locfileid: "67694521"
         }
     ```
 
-8. <span data-ttu-id="9b898-259">**Eliminare** il **Update ()** metodo, e **salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-259">**Delete** the **Update()** method, and **save your changes** in Visual Studio before returning to Unity.</span></span> 
+8. <span data-ttu-id="a81c3-259">**Eliminare** il **Update ()** metodo, e **salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-259">**Delete** the **Update()** method, and **save your changes** in Visual Studio before returning to Unity.</span></span> 
 
-## <a name="chapter-6---create-the-graph-class"></a><span data-ttu-id="9b898-260">Capitolo 6: creare la classe di Graph</span><span class="sxs-lookup"><span data-stu-id="9b898-260">Chapter 6 - Create the Graph class</span></span>
+## <a name="chapter-6---create-the-graph-class"></a><span data-ttu-id="a81c3-260">Capitolo 6: creare la classe di Graph</span><span class="sxs-lookup"><span data-stu-id="a81c3-260">Chapter 6 - Create the Graph class</span></span>
 
-<span data-ttu-id="9b898-261">Lo script successivo da creare è il **Graph** script.</span><span class="sxs-lookup"><span data-stu-id="9b898-261">The next script to create is the **Graph** script.</span></span> <span data-ttu-id="9b898-262">Questo script è responsabile di rendere le chiamate per autenticare l'utente e recuperare le riunioni pianificate per il giorno corrente dal calendario dell'utente.</span><span class="sxs-lookup"><span data-stu-id="9b898-262">This script is responsible for making the calls to authenticate the user and retrieve the scheduled meetings for the current day from the user's calendar.</span></span>
+<span data-ttu-id="a81c3-261">Lo script successivo da creare è il **Graph** script.</span><span class="sxs-lookup"><span data-stu-id="a81c3-261">The next script to create is the **Graph** script.</span></span> <span data-ttu-id="a81c3-262">Questo script è responsabile di rendere le chiamate per autenticare l'utente e recuperare le riunioni pianificate per il giorno corrente dal calendario dell'utente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-262">This script is responsible for making the calls to authenticate the user and retrieve the scheduled meetings for the current day from the user's calendar.</span></span>
 
-<span data-ttu-id="9b898-263">Per creare questa classe:</span><span class="sxs-lookup"><span data-stu-id="9b898-263">To create this class:</span></span>
+<span data-ttu-id="a81c3-263">Per creare questa classe:</span><span class="sxs-lookup"><span data-stu-id="a81c3-263">To create this class:</span></span>
 
-1.  <span data-ttu-id="9b898-264">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="9b898-264">Double-click on the **Scripts** folder, to open it.</span></span>
+1.  <span data-ttu-id="a81c3-264">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="a81c3-264">Double-click on the **Scripts** folder, to open it.</span></span>
 
-2.  <span data-ttu-id="9b898-265">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="9b898-265">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="9b898-266">Denominare lo script **Graph**.</span><span class="sxs-lookup"><span data-stu-id="9b898-266">Name the script **Graph**.</span></span>
+2.  <span data-ttu-id="a81c3-265">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-265">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="a81c3-266">Denominare lo script **Graph**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-266">Name the script **Graph**.</span></span>
 
-3.  <span data-ttu-id="9b898-267">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9b898-267">Double-click on the script to open it with Visual Studio.</span></span>
+3.  <span data-ttu-id="a81c3-267">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a81c3-267">Double-click on the script to open it with Visual Studio.</span></span>
 
-4.  <span data-ttu-id="9b898-268">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-268">Insert the following namespaces:</span></span>
+4.  <span data-ttu-id="a81c3-268">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-268">Insert the following namespaces:</span></span>
 
     ```csharp
     using System.Collections.Generic;
@@ -398,11 +398,11 @@ ms.locfileid: "67694521"
     ```
 
     > [!IMPORTANT]
-    > <span data-ttu-id="9b898-269">Si noterà che le parti del codice in questo script vengono eseguito il wrapping intorno [precompilare le direttive](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), questo serve a evitare problemi con le librerie quando si compila la soluzione Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9b898-269">You will notice that parts of the code in this script are wrapped around [Precompile Directives](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), this is to avoid issues with the libraries when building the Visual Studio Solution.</span></span>
+    > <span data-ttu-id="a81c3-269">Si noterà che le parti del codice in questo script vengono eseguito il wrapping intorno [precompilare le direttive](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), questo serve a evitare problemi con le librerie quando si compila la soluzione Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a81c3-269">You will notice that parts of the code in this script are wrapped around [Precompile Directives](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), this is to avoid issues with the libraries when building the Visual Studio Solution.</span></span>
 
-5.  <span data-ttu-id="9b898-270">Eliminare il **Start ()** e **Update ()** metodi, poiché essi non verrà utilizzati.</span><span class="sxs-lookup"><span data-stu-id="9b898-270">Delete the **Start()** and **Update()** methods, as they will not be used.</span></span>
+5.  <span data-ttu-id="a81c3-270">Eliminare il **Start ()** e **Update ()** metodi, poiché essi non verrà utilizzati.</span><span class="sxs-lookup"><span data-stu-id="a81c3-270">Delete the **Start()** and **Update()** methods, as they will not be used.</span></span>
 
-6.  <span data-ttu-id="9b898-271">Di fuori di **Graph** classe, inserire gli oggetti seguenti, che sono necessari per deserializzare l'oggetto JSON che rappresenta le riunioni pianificate giornaliere:</span><span class="sxs-lookup"><span data-stu-id="9b898-271">Outside the **Graph** class, insert the following objects, which are necessary to deserialize the JSON object representing the daily scheduled meetings:</span></span>
+6.  <span data-ttu-id="a81c3-271">Di fuori di **Graph** classe, inserire gli oggetti seguenti, che sono necessari per deserializzare l'oggetto JSON che rappresenta le riunioni pianificate giornaliere:</span><span class="sxs-lookup"><span data-stu-id="a81c3-271">Outside the **Graph** class, insert the following objects, which are necessary to deserialize the JSON object representing the daily scheduled meetings:</span></span>
 
     ```csharp
     /// <summary>
@@ -449,7 +449,7 @@ ms.locfileid: "67694521"
     }
     ```
 
-7.  <span data-ttu-id="9b898-272">All'interno di **Graph** classe, aggiungere le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-272">Inside the **Graph** class, add the following variables:</span></span>
+7.  <span data-ttu-id="a81c3-272">All'interno di **Graph** classe, aggiungere le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-272">Inside the **Graph** class, add the following variables:</span></span>
 
     ```csharp    
         /// <summary>
@@ -475,9 +475,9 @@ ms.locfileid: "67694521"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="9b898-273">Modifica il **appId** valore sia il **App Id** annotato nella  **[capitolo 1](#chapter-1---create-your-app-in-the-application-registration-portal), passaggio 4**.</span><span class="sxs-lookup"><span data-stu-id="9b898-273">Change the **appId** value to be the **App Id** that you have noted in **[Chapter 1](#chapter-1---create-your-app-in-the-application-registration-portal), step 4**.</span></span> <span data-ttu-id="9b898-274">Questo valore deve essere uguale a quello visualizzato nei **portale di registrazione delle applicazioni,** nella pagina di registrazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9b898-274">This value should be the same as that displayed in the **Application Registration Portal,** in your application registration page.</span></span>
+    > <span data-ttu-id="a81c3-273">Modifica il **appId** valore sia il **App Id** annotato nella  **[capitolo 1](#chapter-1---create-your-app-in-the-application-registration-portal), passaggio 4**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-273">Change the **appId** value to be the **App Id** that you have noted in **[Chapter 1](#chapter-1---create-your-app-in-the-application-registration-portal), step 4**.</span></span> <span data-ttu-id="a81c3-274">Questo valore deve essere uguale a quello visualizzato nei **portale di registrazione delle applicazioni,** nella pagina di registrazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a81c3-274">This value should be the same as that displayed in the **Application Registration Portal,** in your application registration page.</span></span>
 
-8.  <span data-ttu-id="9b898-275">All'interno di **Graph** classe, aggiungere i metodi **SignInAsync()** e **AquireTokenAsync()** , che chiederà all'utente di inserire le credenziali di log.</span><span class="sxs-lookup"><span data-stu-id="9b898-275">Within the **Graph** class, add the methods **SignInAsync()** and **AquireTokenAsync()**, that will prompt the user to insert the log-in credentials.</span></span>
+8.  <span data-ttu-id="a81c3-275">All'interno di **Graph** classe, aggiungere i metodi **SignInAsync()** e **AquireTokenAsync()** , che chiederà all'utente di inserire le credenziali di log.</span><span class="sxs-lookup"><span data-stu-id="a81c3-275">Within the **Graph** class, add the methods **SignInAsync()** and **AquireTokenAsync()**, that will prompt the user to insert the log-in credentials.</span></span>
 
     ```csharp
         /// <summary>
@@ -546,11 +546,11 @@ ms.locfileid: "67694521"
         }
     ```
 
-9.  <span data-ttu-id="9b898-276">Aggiungere i due metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-276">Add the following two methods:</span></span>
+9.  <span data-ttu-id="a81c3-276">Aggiungere i due metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-276">Add the following two methods:</span></span>
 
-    1.  <span data-ttu-id="9b898-277">**BuildTodayCalendarEndpoint()** , che si basa l'URI che specifica il giorno e intervallo di tempo, in cui vengono recuperate le riunioni pianificate.</span><span class="sxs-lookup"><span data-stu-id="9b898-277">**BuildTodayCalendarEndpoint()**, which builds the URI specifying the day, and time span, in which the scheduled meetings are retrieved.</span></span>
+    1.  <span data-ttu-id="a81c3-277">**BuildTodayCalendarEndpoint()** , che si basa l'URI che specifica il giorno e intervallo di tempo, in cui vengono recuperate le riunioni pianificate.</span><span class="sxs-lookup"><span data-stu-id="a81c3-277">**BuildTodayCalendarEndpoint()**, which builds the URI specifying the day, and time span, in which the scheduled meetings are retrieved.</span></span>
 
-    2.  <span data-ttu-id="9b898-278">**ListMeetingsAsync()** , che richiede le riunioni pianificate da *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="9b898-278">**ListMeetingsAsync()**, which requests the scheduled meetings from *Microsoft Graph*.</span></span>
+    2.  <span data-ttu-id="a81c3-278">**ListMeetingsAsync()** , che richiede le riunioni pianificate da *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="a81c3-278">**ListMeetingsAsync()**, which requests the scheduled meetings from *Microsoft Graph*.</span></span>
 
     ```csharp
         /// <summary>
@@ -614,21 +614,21 @@ ms.locfileid: "67694521"
         }
     ```
 
-10. <span data-ttu-id="9b898-279">È stata completata la **Graph** script.</span><span class="sxs-lookup"><span data-stu-id="9b898-279">You have now completed the **Graph** script.</span></span> <span data-ttu-id="9b898-280">**Salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-280">**Save your changes** in Visual Studio before returning to Unity.</span></span>
+10. <span data-ttu-id="a81c3-279">È stata completata la **Graph** script.</span><span class="sxs-lookup"><span data-stu-id="a81c3-279">You have now completed the **Graph** script.</span></span> <span data-ttu-id="a81c3-280">**Salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-280">**Save your changes** in Visual Studio before returning to Unity.</span></span>
 
-## <a name="chapter-7---create-the-gazeinput-script"></a><span data-ttu-id="9b898-281">Capitolo 7 - creare uno script di GazeInput</span><span class="sxs-lookup"><span data-stu-id="9b898-281">Chapter 7 - Create the GazeInput script</span></span>
+## <a name="chapter-7---create-the-gazeinput-script"></a><span data-ttu-id="a81c3-281">Capitolo 7 - creare uno script di GazeInput</span><span class="sxs-lookup"><span data-stu-id="a81c3-281">Chapter 7 - Create the GazeInput script</span></span>
 
-<span data-ttu-id="9b898-282">Ora si creerà il **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="9b898-282">You will now create the **GazeInput**.</span></span> <span data-ttu-id="9b898-283">Questa classe gestisce e tiene traccia di sguardo dell'utente, utilizzando un **Raycast** provenienti dalle **Main Camera**, la proiezione in avanti.</span><span class="sxs-lookup"><span data-stu-id="9b898-283">This class handles and keeps track of the user's gaze, using a **Raycast** coming from the **Main Camera**, projecting forward.</span></span>
+<span data-ttu-id="a81c3-282">Ora si creerà il **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-282">You will now create the **GazeInput**.</span></span> <span data-ttu-id="a81c3-283">Questa classe gestisce e tiene traccia di sguardo dell'utente, utilizzando un **Raycast** provenienti dalle **Main Camera**, la proiezione in avanti.</span><span class="sxs-lookup"><span data-stu-id="a81c3-283">This class handles and keeps track of the user's gaze, using a **Raycast** coming from the **Main Camera**, projecting forward.</span></span>
 
-<span data-ttu-id="9b898-284">Per creare lo script:</span><span class="sxs-lookup"><span data-stu-id="9b898-284">To create the script:</span></span>
+<span data-ttu-id="a81c3-284">Per creare lo script:</span><span class="sxs-lookup"><span data-stu-id="a81c3-284">To create the script:</span></span>
 
-1.  <span data-ttu-id="9b898-285">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="9b898-285">Double-click on the **Scripts** folder, to open it.</span></span>
+1.  <span data-ttu-id="a81c3-285">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="a81c3-285">Double-click on the **Scripts** folder, to open it.</span></span>
 
-2.  <span data-ttu-id="9b898-286">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="9b898-286">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="9b898-287">Denominare lo script **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="9b898-287">Name the script **GazeInput**.</span></span>
+2.  <span data-ttu-id="a81c3-286">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-286">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="a81c3-287">Denominare lo script **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-287">Name the script **GazeInput**.</span></span>
 
-3.  <span data-ttu-id="9b898-288">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9b898-288">Double-click on the script to open it with Visual Studio.</span></span>
+3.  <span data-ttu-id="a81c3-288">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a81c3-288">Double-click on the script to open it with Visual Studio.</span></span>
 
-4.  <span data-ttu-id="9b898-289">Modificare il codice degli spazi dei nomi in modo che corrisponda a quello riportato di seguito, con l'aggiunta di ' **\[System.Serializable\]** ' tag sopra il **GazeInput** classe, in modo che possa essere serializzato:</span><span class="sxs-lookup"><span data-stu-id="9b898-289">Change the namespaces code to match the one below, along with adding the '**\[System.Serializable\]**' tag above your **GazeInput** class, so that it can be serialized:</span></span>
+4.  <span data-ttu-id="a81c3-289">Modificare il codice degli spazi dei nomi in modo che corrisponda a quello riportato di seguito, con l'aggiunta di ' **\[System.Serializable\]** ' tag sopra il **GazeInput** classe, in modo che possa essere serializzato:</span><span class="sxs-lookup"><span data-stu-id="a81c3-289">Change the namespaces code to match the one below, along with adding the '**\[System.Serializable\]**' tag above your **GazeInput** class, so that it can be serialized:</span></span>
 
     ```csharp
     using UnityEngine;
@@ -641,7 +641,7 @@ ms.locfileid: "67694521"
     {
     ```
 
-5.  <span data-ttu-id="9b898-290">All'interno di **GazeInput** classe, aggiungere le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-290">Inside the **GazeInput** class, add the following variables:</span></span>
+5.  <span data-ttu-id="a81c3-290">All'interno di **GazeInput** classe, aggiungere le variabili seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-290">Inside the **GazeInput** class, add the following variables:</span></span>
 
     ```csharp    
         [Tooltip("Used to compare whether an object is to be interacted with.")]
@@ -677,7 +677,7 @@ ms.locfileid: "67694521"
         private Vector3 _gazeDirection;
     ```
 
-6.  <span data-ttu-id="9b898-291">Aggiungere il **CreateCursor()** per creare il cursore di HoloLens nella scena e chiamare il metodo dalle **Start ()** metodo:</span><span class="sxs-lookup"><span data-stu-id="9b898-291">Add the **CreateCursor()** method to create the HoloLens cursor in the scene, and call the method from the **Start()** method:</span></span>
+6.  <span data-ttu-id="a81c3-291">Aggiungere il **CreateCursor()** per creare il cursore di HoloLens nella scena e chiamare il metodo dalle **Start ()** metodo:</span><span class="sxs-lookup"><span data-stu-id="a81c3-291">Add the **CreateCursor()** method to create the HoloLens cursor in the scene, and call the method from the **Start()** method:</span></span>
 
     ```csharp    
         /// <summary>
@@ -708,7 +708,7 @@ ms.locfileid: "67694521"
         }
     ```
 
-7.  <span data-ttu-id="9b898-292">I metodi seguenti abilitare sguardo Raycast e tenere traccia degli oggetti con lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="9b898-292">The following methods enable the gaze Raycast and keep track of the focused objects.</span></span>
+7.  <span data-ttu-id="a81c3-292">I metodi seguenti abilitare sguardo Raycast e tenere traccia degli oggetti con lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="a81c3-292">The following methods enable the gaze Raycast and keep track of the focused objects.</span></span>
 
     ```csharp
     /// <summary>
@@ -804,40 +804,40 @@ ms.locfileid: "67694521"
         }
     ```
 
-8.  <span data-ttu-id="9b898-293">**Salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-293">**Save your changes** in Visual Studio before returning to Unity.</span></span>
+8.  <span data-ttu-id="a81c3-293">**Salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-293">**Save your changes** in Visual Studio before returning to Unity.</span></span>
 
-## <a name="chapter-8---create-the-interactions-class"></a><span data-ttu-id="9b898-294">Capitolo 8 - creare la classe interazioni</span><span class="sxs-lookup"><span data-stu-id="9b898-294">Chapter 8 - Create the Interactions class</span></span>
+## <a name="chapter-8---create-the-interactions-class"></a><span data-ttu-id="a81c3-294">Capitolo 8 - creare la classe interazioni</span><span class="sxs-lookup"><span data-stu-id="a81c3-294">Chapter 8 - Create the Interactions class</span></span>
 
-<span data-ttu-id="9b898-295">È ora necessario creare il **interazioni** script, che è responsabile per:</span><span class="sxs-lookup"><span data-stu-id="9b898-295">You will now need to create the **Interactions** script, which is responsible for:</span></span>
+<span data-ttu-id="a81c3-295">È ora necessario creare il **interazioni** script, che è responsabile per:</span><span class="sxs-lookup"><span data-stu-id="a81c3-295">You will now need to create the **Interactions** script, which is responsible for:</span></span>
 
--   <span data-ttu-id="9b898-296">La gestione di **toccare** interazione e il **fotocamera estasiati**, che consente all'utente di interagire con i log in "button" nella scena.</span><span class="sxs-lookup"><span data-stu-id="9b898-296">Handling the **Tap** interaction and the **Camera Gaze**, which enables the user to interact with the log in "button" in the scene.</span></span>
+-   <span data-ttu-id="a81c3-296">La gestione di **toccare** interazione e il **fotocamera estasiati**, che consente all'utente di interagire con i log in "button" nella scena.</span><span class="sxs-lookup"><span data-stu-id="a81c3-296">Handling the **Tap** interaction and the **Camera Gaze**, which enables the user to interact with the log in "button" in the scene.</span></span>
 
--   <span data-ttu-id="9b898-297">Creazione del log nell'oggetto "button" nella scena per l'utente può interagire.</span><span class="sxs-lookup"><span data-stu-id="9b898-297">Creating the log in "button" object in the scene for the user to interact with.</span></span>
+-   <span data-ttu-id="a81c3-297">Creazione del log nell'oggetto "button" nella scena per l'utente può interagire.</span><span class="sxs-lookup"><span data-stu-id="a81c3-297">Creating the log in "button" object in the scene for the user to interact with.</span></span>
 
-<span data-ttu-id="9b898-298">Per creare lo script:</span><span class="sxs-lookup"><span data-stu-id="9b898-298">To create the script:</span></span>
+<span data-ttu-id="a81c3-298">Per creare lo script:</span><span class="sxs-lookup"><span data-stu-id="a81c3-298">To create the script:</span></span>
 
-1.  <span data-ttu-id="9b898-299">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="9b898-299">Double-click on the **Scripts** folder, to open it.</span></span>
+1.  <span data-ttu-id="a81c3-299">Fare doppio clic sulla **script** cartella per aprirla.</span><span class="sxs-lookup"><span data-stu-id="a81c3-299">Double-click on the **Scripts** folder, to open it.</span></span>
 
-2.  <span data-ttu-id="9b898-300">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="9b898-300">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="9b898-301">Denominare lo script **interazioni**.</span><span class="sxs-lookup"><span data-stu-id="9b898-301">Name the script **Interactions**.</span></span>
+2.  <span data-ttu-id="a81c3-300">Pulsante destro del mouse all'interno di **gli script** cartella, fare clic su **Create**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-300">Right-click inside the **Scripts** folder, click **Create** > **C# Script**.</span></span> <span data-ttu-id="a81c3-301">Denominare lo script **interazioni**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-301">Name the script **Interactions**.</span></span>
 
-3.  <span data-ttu-id="9b898-302">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9b898-302">Double-click on the script to open it with Visual Studio.</span></span>
+3.  <span data-ttu-id="a81c3-302">Fare doppio clic sullo script per aprirlo con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a81c3-302">Double-click on the script to open it with Visual Studio.</span></span>
 
-4.  <span data-ttu-id="9b898-303">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9b898-303">Insert the following namespaces:</span></span>
+4.  <span data-ttu-id="a81c3-303">Inserisci gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a81c3-303">Insert the following namespaces:</span></span>
 
     ```csharp
     using UnityEngine;
     using UnityEngine.XR.WSA.Input;
     ```
 
-5.  <span data-ttu-id="9b898-304">Modificare l'ereditarietà del **interazione** classe *MonoBehaviour* al **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="9b898-304">Change the inheritance of the **Interaction** class from *MonoBehaviour* to **GazeInput**.</span></span>
+5.  <span data-ttu-id="a81c3-304">Modificare l'ereditarietà del **interazione** classe *MonoBehaviour* al **GazeInput**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-304">Change the inheritance of the **Interaction** class from *MonoBehaviour* to **GazeInput**.</span></span>
 
-    <span data-ttu-id="9b898-305">~~classe pubblica le interazioni: MonoBehaviour~~</span><span class="sxs-lookup"><span data-stu-id="9b898-305">~~public class Interactions : MonoBehaviour~~</span></span>
+    <span data-ttu-id="a81c3-305">~~classe pubblica le interazioni: MonoBehaviour~~</span><span class="sxs-lookup"><span data-stu-id="a81c3-305">~~public class Interactions : MonoBehaviour~~</span></span>
 
     ```csharp
     public class Interactions : GazeInput
     ```
 
-6.  <span data-ttu-id="9b898-306">All'interno di **interazione** classe inserire la variabile seguente:</span><span class="sxs-lookup"><span data-stu-id="9b898-306">Inside the **Interaction** class insert the following variable:</span></span>
+6.  <span data-ttu-id="a81c3-306">All'interno di **interazione** classe inserire la variabile seguente:</span><span class="sxs-lookup"><span data-stu-id="a81c3-306">Inside the **Interaction** class insert the following variable:</span></span>
 
     ```csharp
         /// <summary>
@@ -846,7 +846,7 @@ ms.locfileid: "67694521"
         private GestureRecognizer _gestureRecognizer;
     ```
 
-7.  <span data-ttu-id="9b898-307">Sostituire il **avviare** metodo; si noti che è un metodo di override, che chiama il metodo della classe sguardo 'base'.</span><span class="sxs-lookup"><span data-stu-id="9b898-307">Replace the **Start** method; notice it is an override method, which calls the 'base' Gaze class method.</span></span> <span data-ttu-id="9b898-308">**Start ()** verrà chiamato quando si inizializza la classe, la registrazione per il riconoscimento di input e la creazione di accesso *pulsante* nella scena:</span><span class="sxs-lookup"><span data-stu-id="9b898-308">**Start()** will be called when the class initializes, registering for input recognition and creating the sign in *button* in the scene:</span></span>
+7.  <span data-ttu-id="a81c3-307">Sostituire il **avviare** metodo; si noti che è un metodo di override, che chiama il metodo della classe sguardo 'base'.</span><span class="sxs-lookup"><span data-stu-id="a81c3-307">Replace the **Start** method; notice it is an override method, which calls the 'base' Gaze class method.</span></span> <span data-ttu-id="a81c3-308">**Start ()** verrà chiamato quando si inizializza la classe, la registrazione per il riconoscimento di input e la creazione di accesso *pulsante* nella scena:</span><span class="sxs-lookup"><span data-stu-id="a81c3-308">**Start()** will be called when the class initializes, registering for input recognition and creating the sign in *button* in the scene:</span></span>
 
     ```csharp    
         /// <summary>
@@ -868,7 +868,7 @@ ms.locfileid: "67694521"
         }
     ```
 
-8.  <span data-ttu-id="9b898-309">Aggiungere il **CreateSignInButton()** metodo, che verrà creata un'istanza di accesso *pulsante* nella scena e impostarne le proprietà:</span><span class="sxs-lookup"><span data-stu-id="9b898-309">Add the **CreateSignInButton()** method, which will instantiate the sign in *button* in the scene and set its properties:</span></span>
+8.  <span data-ttu-id="a81c3-309">Aggiungere il **CreateSignInButton()** metodo, che verrà creata un'istanza di accesso *pulsante* nella scena e impostarne le proprietà:</span><span class="sxs-lookup"><span data-stu-id="a81c3-309">Add the **CreateSignInButton()** method, which will instantiate the sign in *button* in the scene and set its properties:</span></span>
 
     ```csharp    
         /// <summary>
@@ -889,7 +889,7 @@ ms.locfileid: "67694521"
         }
     ```
 
-9.  <span data-ttu-id="9b898-310">Aggiungere il **GestureRecognizer_Tapped()** metodo, che è possibile rispondere per il *toccare* evento utente.</span><span class="sxs-lookup"><span data-stu-id="9b898-310">Add the **GestureRecognizer_Tapped()** method, which be respond for the *Tap* user event.</span></span>
+9.  <span data-ttu-id="a81c3-310">Aggiungere il **GestureRecognizer_Tapped()** metodo, che è possibile rispondere per il *toccare* evento utente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-310">Add the **GestureRecognizer_Tapped()** method, which be respond for the *Tap* user event.</span></span>
 
     ```csharp   
         /// <summary>
@@ -905,94 +905,94 @@ ms.locfileid: "67694521"
         }
     ```
 
-10. <span data-ttu-id="9b898-311">**Eliminare** il **Update ()** metodo e quindi **salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-311">**Delete** the **Update()** method, and then **save your changes** in Visual Studio before returning to Unity.</span></span>
+10. <span data-ttu-id="a81c3-311">**Eliminare** il **Update ()** metodo e quindi **salvare le modifiche** in Visual Studio prima di tornare a Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-311">**Delete** the **Update()** method, and then **save your changes** in Visual Studio before returning to Unity.</span></span>
 
-## <a name="chapter-9---set-up-the-script-references"></a><span data-ttu-id="9b898-312">Capitolo 9: configurare i riferimenti a script</span><span class="sxs-lookup"><span data-stu-id="9b898-312">Chapter 9 - Set up the script references</span></span>
+## <a name="chapter-9---set-up-the-script-references"></a><span data-ttu-id="a81c3-312">Capitolo 9: configurare i riferimenti a script</span><span class="sxs-lookup"><span data-stu-id="a81c3-312">Chapter 9 - Set up the script references</span></span>
 
-<span data-ttu-id="9b898-313">In questo capitolo è necessario inserire il **interazioni** nello script le **Main Camera**.</span><span class="sxs-lookup"><span data-stu-id="9b898-313">In this Chapter you need to place the **Interactions** script onto the **Main Camera**.</span></span> <span data-ttu-id="9b898-314">Lo script gestirà quindi l'inserimento altri script in cui devono essere.</span><span class="sxs-lookup"><span data-stu-id="9b898-314">That script will then handle placing the other scripts where they need to be.</span></span>
+<span data-ttu-id="a81c3-313">In questo capitolo è necessario inserire il **interazioni** nello script le **Main Camera**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-313">In this Chapter you need to place the **Interactions** script onto the **Main Camera**.</span></span> <span data-ttu-id="a81c3-314">Lo script gestirà quindi l'inserimento altri script in cui devono essere.</span><span class="sxs-lookup"><span data-stu-id="a81c3-314">That script will then handle placing the other scripts where they need to be.</span></span>
 
--  <span data-ttu-id="9b898-315">Dal **script** cartella il *pannello progetto*, trascinare lo script **interazioni** per il **Main Camera** dell'oggetto, come illustrata di seguito.</span><span class="sxs-lookup"><span data-stu-id="9b898-315">From the **Scripts** folder in the *Project Panel*, drag the script **Interactions** to the **Main Camera** object, as pictured below.</span></span>
+-  <span data-ttu-id="a81c3-315">Dal **script** cartella il *pannello progetto*, trascinare lo script **interazioni** per il **Main Camera** dell'oggetto, come illustrata di seguito.</span><span class="sxs-lookup"><span data-stu-id="a81c3-315">From the **Scripts** folder in the *Project Panel*, drag the script **Interactions** to the **Main Camera** object, as pictured below.</span></span>
 
     ![](images/AzureLabs-Lab311-29.png)
 
-## <a name="chapter-10---setting-up-the-tag"></a><span data-ttu-id="9b898-316">Capitolo 10 - configurare i Tag</span><span class="sxs-lookup"><span data-stu-id="9b898-316">Chapter 10 - Setting up the Tag</span></span>
+## <a name="chapter-10---setting-up-the-tag"></a><span data-ttu-id="a81c3-316">Capitolo 10 - configurare i Tag</span><span class="sxs-lookup"><span data-stu-id="a81c3-316">Chapter 10 - Setting up the Tag</span></span>
 
-<span data-ttu-id="9b898-317">Il codice che gestisce lo sguardo useranno il Tag **SignInButton** per identificare l'oggetto con cui interagirà l'utente con effettuare l'accesso per *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="9b898-317">The code handling the gaze will make use of the Tag **SignInButton** to identify which object the user will interact with to sign-in to *Microsoft Graph*.</span></span>
+<span data-ttu-id="a81c3-317">Il codice che gestisce lo sguardo useranno il Tag **SignInButton** per identificare l'oggetto con cui interagirà l'utente con effettuare l'accesso per *Microsoft Graph*.</span><span class="sxs-lookup"><span data-stu-id="a81c3-317">The code handling the gaze will make use of the Tag **SignInButton** to identify which object the user will interact with to sign-in to *Microsoft Graph*.</span></span>
 
-<span data-ttu-id="9b898-318">Per creare il Tag:</span><span class="sxs-lookup"><span data-stu-id="9b898-318">To create the Tag:</span></span>
+<span data-ttu-id="a81c3-318">Per creare il Tag:</span><span class="sxs-lookup"><span data-stu-id="a81c3-318">To create the Tag:</span></span>
 
-1.  <span data-ttu-id="9b898-319">Nell'Editor di Unity fare clic sui **Main Camera** nel *gerarchia pannello*.</span><span class="sxs-lookup"><span data-stu-id="9b898-319">In the Unity Editor click on the **Main Camera** in the *Hierarchy Panel*.</span></span>
+1.  <span data-ttu-id="a81c3-319">Nell'Editor di Unity fare clic sui **Main Camera** nel *gerarchia pannello*.</span><span class="sxs-lookup"><span data-stu-id="a81c3-319">In the Unity Editor click on the **Main Camera** in the *Hierarchy Panel*.</span></span>
 
-2.  <span data-ttu-id="9b898-320">Nel *Pannello di controllo* fare clic sulla **MainCamera** *Tag* per aprire un elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="9b898-320">In the *Inspector Panel* click on the **MainCamera** *Tag* to open a drop-down list.</span></span> <span data-ttu-id="9b898-321">Fare clic su **aggiungere Tag...**</span><span class="sxs-lookup"><span data-stu-id="9b898-321">Click on **Add Tag...**</span></span>
+2.  <span data-ttu-id="a81c3-320">Nel *Pannello di controllo* fare clic sulla **MainCamera** *Tag* per aprire un elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="a81c3-320">In the *Inspector Panel* click on the **MainCamera** *Tag* to open a drop-down list.</span></span> <span data-ttu-id="a81c3-321">Fare clic su **aggiungere Tag...**</span><span class="sxs-lookup"><span data-stu-id="a81c3-321">Click on **Add Tag...**</span></span>
 
     ![](images/AzureLabs-Lab311-30.png)
 
-3.  <span data-ttu-id="9b898-322">Fare clic sui **+** pulsante.</span><span class="sxs-lookup"><span data-stu-id="9b898-322">Click on the **+** button.</span></span>
+3.  <span data-ttu-id="a81c3-322">Fare clic sui **+** pulsante.</span><span class="sxs-lookup"><span data-stu-id="a81c3-322">Click on the **+** button.</span></span>
 
     ![](images/AzureLabs-Lab311-31.png)
 
-4.  <span data-ttu-id="9b898-323">Scrivere il nome del Tag come **SignInButton** e fare clic su Salva.</span><span class="sxs-lookup"><span data-stu-id="9b898-323">Write the Tag name as **SignInButton** and click Save.</span></span>
+4.  <span data-ttu-id="a81c3-323">Scrivere il nome del Tag come **SignInButton** e fare clic su Salva.</span><span class="sxs-lookup"><span data-stu-id="a81c3-323">Write the Tag name as **SignInButton** and click Save.</span></span>
 
     ![](images/AzureLabs-Lab311-32.png)
 
-## <a name="chapter-11---build-the-unity-project-to-uwp"></a><span data-ttu-id="9b898-324">Capitolo 11 - compilare il progetto di Unity per UWP</span><span class="sxs-lookup"><span data-stu-id="9b898-324">Chapter 11 - Build the Unity project to UWP</span></span>
+## <a name="chapter-11---build-the-unity-project-to-uwp"></a><span data-ttu-id="a81c3-324">Capitolo 11 - compilare il progetto di Unity per UWP</span><span class="sxs-lookup"><span data-stu-id="a81c3-324">Chapter 11 - Build the Unity project to UWP</span></span>
 
-<span data-ttu-id="9b898-325">Tutti gli elementi necessari per la sezione di Unity di questo progetto è ora stato completato, è il momento per la compilazione da Unity.</span><span class="sxs-lookup"><span data-stu-id="9b898-325">Everything needed for the Unity section of this project has now been completed, so it is time to build it from Unity.</span></span>
+<span data-ttu-id="a81c3-325">Tutti gli elementi necessari per la sezione di Unity di questo progetto è ora stato completato, è il momento per la compilazione da Unity.</span><span class="sxs-lookup"><span data-stu-id="a81c3-325">Everything needed for the Unity section of this project has now been completed, so it is time to build it from Unity.</span></span>
 
-1.  <span data-ttu-id="9b898-326">Passare a *impostazioni di compilazione* (**File* >* Impostazioni di compilazione\*\*).</span><span class="sxs-lookup"><span data-stu-id="9b898-326">Navigate to *Build Settings* (\**File* > \*Build Settings\*\*).</span></span>
+1.  <span data-ttu-id="a81c3-326">Passare a *impostazioni di compilazione* (**File*>*Impostazioni di compilazione**).</span><span class="sxs-lookup"><span data-stu-id="a81c3-326">Navigate to *Build Settings* (\**File* > \*Build Settings\*\*).</span></span>
 
     ![](images/AzureLabs-Lab311-33.png)
 
-2.  <span data-ttu-id="9b898-327">Se non è già, graduazione **C Unity\# progetti**.</span><span class="sxs-lookup"><span data-stu-id="9b898-327">If not already, tick **Unity C\# Projects**.</span></span>
+2.  <span data-ttu-id="a81c3-327">Se non è già, graduazione **C Unity\# progetti**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-327">If not already, tick **Unity C\# Projects**.</span></span>
 
-3.  <span data-ttu-id="9b898-328">Fai clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="9b898-328">Click **Build**.</span></span> <span data-ttu-id="9b898-329">Unity avvierà una **Esplora File** finestra, in cui è necessario creare e quindi selezionare una cartella per compilare l'app in.</span><span class="sxs-lookup"><span data-stu-id="9b898-329">Unity will launch a **File Explorer** window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="9b898-330">Creare ora tale cartella e denominarlo **App**.</span><span class="sxs-lookup"><span data-stu-id="9b898-330">Create that folder now, and name it **App**.</span></span> <span data-ttu-id="9b898-331">Quindi con il **App** cartella selezionata, fare clic su **Seleziona cartella**.</span><span class="sxs-lookup"><span data-stu-id="9b898-331">Then with the **App** folder selected, click **Select Folder**.</span></span>
+3.  <span data-ttu-id="a81c3-328">Fai clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-328">Click **Build**.</span></span> <span data-ttu-id="a81c3-329">Unity avvierà una **Esplora File** finestra, in cui è necessario creare e quindi selezionare una cartella per compilare l'app in.</span><span class="sxs-lookup"><span data-stu-id="a81c3-329">Unity will launch a **File Explorer** window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="a81c3-330">Creare ora tale cartella e denominarlo **App**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-330">Create that folder now, and name it **App**.</span></span> <span data-ttu-id="a81c3-331">Quindi con il **App** cartella selezionata, fare clic su **Seleziona cartella**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-331">Then with the **App** folder selected, click **Select Folder**.</span></span>
 
-4.  <span data-ttu-id="9b898-332">Unity verrà avviata la compilazione del progetto per la **App** cartella.</span><span class="sxs-lookup"><span data-stu-id="9b898-332">Unity will begin building your project to the **App** folder.</span></span>
+4.  <span data-ttu-id="a81c3-332">Unity verrà avviata la compilazione del progetto per la **App** cartella.</span><span class="sxs-lookup"><span data-stu-id="a81c3-332">Unity will begin building your project to the **App** folder.</span></span>
 
-5.  <span data-ttu-id="9b898-333">Una volta Unity ha terminato predefiniti (potrebbe richiedere alcuni minuti), si aprirà un **Esplora File** finestra in corrispondenza della posizione della compilazione (controllare la barra delle applicazioni, essendo, ma potrebbe non venire visualizzato di sopra di notifica di aggiunta di un nuovo finestra).</span><span class="sxs-lookup"><span data-stu-id="9b898-333">Once Unity has finished building (it might take some time), it will open a **File Explorer** window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
+5.  <span data-ttu-id="a81c3-333">Una volta Unity ha terminato predefiniti (potrebbe richiedere alcuni minuti), si aprirà un **Esplora File** finestra in corrispondenza della posizione della compilazione (controllare la barra delle applicazioni, essendo, ma potrebbe non venire visualizzato di sopra di notifica di aggiunta di un nuovo finestra).</span><span class="sxs-lookup"><span data-stu-id="a81c3-333">Once Unity has finished building (it might take some time), it will open a **File Explorer** window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
 
-## <a name="chapter-12---deploy-to-hololens"></a><span data-ttu-id="9b898-334">Capitolo 12 - distribuire a HoloLens</span><span class="sxs-lookup"><span data-stu-id="9b898-334">Chapter 12 - Deploy to HoloLens</span></span>
+## <a name="chapter-12---deploy-to-hololens"></a><span data-ttu-id="a81c3-334">Capitolo 12 - distribuire a HoloLens</span><span class="sxs-lookup"><span data-stu-id="a81c3-334">Chapter 12 - Deploy to HoloLens</span></span>
 
-<span data-ttu-id="9b898-335">Per distribuire in HoloLens:</span><span class="sxs-lookup"><span data-stu-id="9b898-335">To deploy on HoloLens:</span></span>
+<span data-ttu-id="a81c3-335">Per distribuire in HoloLens:</span><span class="sxs-lookup"><span data-stu-id="a81c3-335">To deploy on HoloLens:</span></span>
 
-1.  <span data-ttu-id="9b898-336">È necessario l'indirizzo IP di HoloLens (per la distribuzione remota), e per assicurarsi di HoloLens è nel **modalità sviluppatore.**</span><span class="sxs-lookup"><span data-stu-id="9b898-336">You will need the IP Address of your HoloLens (for Remote Deploy), and to ensure your HoloLens is in **Developer Mode.**</span></span> <span data-ttu-id="9b898-337">A tale scopo, effettuare le seguenti operazioni:</span><span class="sxs-lookup"><span data-stu-id="9b898-337">To do this:</span></span>
+1.  <span data-ttu-id="a81c3-336">È necessario l'indirizzo IP di HoloLens (per la distribuzione remota), e per assicurarsi di HoloLens è nel **modalità sviluppatore.**</span><span class="sxs-lookup"><span data-stu-id="a81c3-336">You will need the IP Address of your HoloLens (for Remote Deploy), and to ensure your HoloLens is in **Developer Mode.**</span></span> <span data-ttu-id="a81c3-337">A tale scopo, effettuare le seguenti operazioni:</span><span class="sxs-lookup"><span data-stu-id="a81c3-337">To do this:</span></span>
 
-    1.  <span data-ttu-id="9b898-338">Durante l'uso di HoloLens, aprire il **impostazioni**.</span><span class="sxs-lookup"><span data-stu-id="9b898-338">Whilst wearing your HoloLens, open the **Settings**.</span></span>
+    1.  <span data-ttu-id="a81c3-338">Durante l'uso di HoloLens, aprire il **impostazioni**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-338">Whilst wearing your HoloLens, open the **Settings**.</span></span>
 
-    2.  <span data-ttu-id="9b898-339">Passare a **rete e Internet** > **Wi-Fi** > **opzioni avanzate**</span><span class="sxs-lookup"><span data-stu-id="9b898-339">Go to **Network & Internet** > **Wi-Fi** > **Advanced Options**</span></span>
+    2.  <span data-ttu-id="a81c3-339">Passare a **rete e Internet** > **Wi-Fi** > **opzioni avanzate**</span><span class="sxs-lookup"><span data-stu-id="a81c3-339">Go to **Network & Internet** > **Wi-Fi** > **Advanced Options**</span></span>
 
-    3.  <span data-ttu-id="9b898-340">Si noti il **IPv4** indirizzo.</span><span class="sxs-lookup"><span data-stu-id="9b898-340">Note the **IPv4** address.</span></span>
+    3.  <span data-ttu-id="a81c3-340">Si noti il **IPv4** indirizzo.</span><span class="sxs-lookup"><span data-stu-id="a81c3-340">Note the **IPv4** address.</span></span>
 
-    4.  <span data-ttu-id="9b898-341">Successivamente, tornare **le impostazioni**e quindi a **aggiornamento e sicurezza** > **per gli sviluppatori**</span><span class="sxs-lookup"><span data-stu-id="9b898-341">Next, navigate back to **Settings**, and then to **Update & Security** > **For Developers**</span></span>
+    4.  <span data-ttu-id="a81c3-341">Successivamente, tornare **le impostazioni**e quindi a **aggiornamento e sicurezza** > **per gli sviluppatori**</span><span class="sxs-lookup"><span data-stu-id="a81c3-341">Next, navigate back to **Settings**, and then to **Update & Security** > **For Developers**</span></span>
 
-    5.  <span data-ttu-id="9b898-342">Impostare **modalità sviluppatore su**.</span><span class="sxs-lookup"><span data-stu-id="9b898-342">Set **Developer Mode On**.</span></span>
+    5.  <span data-ttu-id="a81c3-342">Impostare **modalità sviluppatore su**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-342">Set **Developer Mode On**.</span></span>
 
-2.  <span data-ttu-id="9b898-343">Passare alla nuova build Unity (le **App** cartella) e aprire il file di soluzione con **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="9b898-343">Navigate to your new Unity build (the **App** folder) and open the solution file with **Visual Studio**.</span></span>
+2.  <span data-ttu-id="a81c3-343">Passare alla nuova build Unity (le **App** cartella) e aprire il file di soluzione con **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-343">Navigate to your new Unity build (the **App** folder) and open the solution file with **Visual Studio**.</span></span>
 
-3.  <span data-ttu-id="9b898-344">Nel **configurazione della soluzione** selezionate **Debug**.</span><span class="sxs-lookup"><span data-stu-id="9b898-344">In the **Solution Configuration** select **Debug**.</span></span>
+3.  <span data-ttu-id="a81c3-344">Nel **configurazione della soluzione** selezionate **Debug**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-344">In the **Solution Configuration** select **Debug**.</span></span>
 
-4.  <span data-ttu-id="9b898-345">Nel **piattaforma soluzione**, selezionare **x86, computer remoto**.</span><span class="sxs-lookup"><span data-stu-id="9b898-345">In the **Solution Platform**, select **x86, Remote Machine**.</span></span> <span data-ttu-id="9b898-346">Verrà richiesto di inserire le **indirizzo IP** di un dispositivo remoto (il HoloLens, in questo caso, che si è preso nota).</span><span class="sxs-lookup"><span data-stu-id="9b898-346">You will be prompted to insert the **IP address** of a remote device (the HoloLens, in this case, which you noted).</span></span>
+4.  <span data-ttu-id="a81c3-345">Nel **piattaforma soluzione**, selezionare **x86, computer remoto**.</span><span class="sxs-lookup"><span data-stu-id="a81c3-345">In the **Solution Platform**, select **x86, Remote Machine**.</span></span> <span data-ttu-id="a81c3-346">Verrà richiesto di inserire le **indirizzo IP** di un dispositivo remoto (il HoloLens, in questo caso, che si è preso nota).</span><span class="sxs-lookup"><span data-stu-id="a81c3-346">You will be prompted to insert the **IP address** of a remote device (the HoloLens, in this case, which you noted).</span></span>
 
     ![](images/AzureLabs-Lab311-34.png)
 
-5.  <span data-ttu-id="9b898-347">Passare a **compilare** dal menu e fare clic su **Distribuisci soluzione** trasferire localmente l'applicazione di HoloLens.</span><span class="sxs-lookup"><span data-stu-id="9b898-347">Go to **Build** menu and click on **Deploy Solution** to sideload the application to your HoloLens.</span></span>
+5.  <span data-ttu-id="a81c3-347">Passare a **compilare** dal menu e fare clic su **Distribuisci soluzione** trasferire localmente l'applicazione di HoloLens.</span><span class="sxs-lookup"><span data-stu-id="a81c3-347">Go to **Build** menu and click on **Deploy Solution** to sideload the application to your HoloLens.</span></span>
 
-6.  <span data-ttu-id="9b898-348">L'app deve vengono ora visualizzati nell'elenco delle App installate su di HoloLens, pronta per essere avviata.</span><span class="sxs-lookup"><span data-stu-id="9b898-348">Your app should now appear in the list of installed apps on your HoloLens, ready to be launched!</span></span>
+6.  <span data-ttu-id="a81c3-348">L'app deve vengono ora visualizzati nell'elenco delle App installate su di HoloLens, pronta per essere avviata.</span><span class="sxs-lookup"><span data-stu-id="a81c3-348">Your app should now appear in the list of installed apps on your HoloLens, ready to be launched!</span></span>
 
-## <a name="your-microsoft-graph-hololens-application"></a><span data-ttu-id="9b898-349">L'applicazione di Microsoft Graph HoloLens</span><span class="sxs-lookup"><span data-stu-id="9b898-349">Your Microsoft Graph HoloLens application</span></span>
+## <a name="your-microsoft-graph-hololens-application"></a><span data-ttu-id="a81c3-349">L'applicazione di Microsoft Graph HoloLens</span><span class="sxs-lookup"><span data-stu-id="a81c3-349">Your Microsoft Graph HoloLens application</span></span>
 
-<span data-ttu-id="9b898-350">Complimenti, è stata compilata un'app per realtà mista che si basa su Microsoft Graph, per leggere e visualizzare i dati del calendario di utente.</span><span class="sxs-lookup"><span data-stu-id="9b898-350">Congratulations, you built a mixed reality app that leverages the Microsoft Graph, to read and display user Calendar data.</span></span>
+<span data-ttu-id="a81c3-350">Complimenti, è stata compilata un'app per realtà mista che si basa su Microsoft Graph, per leggere e visualizzare i dati del calendario di utente.</span><span class="sxs-lookup"><span data-stu-id="a81c3-350">Congratulations, you built a mixed reality app that leverages the Microsoft Graph, to read and display user Calendar data.</span></span>
 
 ![](images/AzureLabs-Lab311-00.png)
 
-## <a name="bonus-exercises"></a><span data-ttu-id="9b898-351">Esercizi bonus</span><span class="sxs-lookup"><span data-stu-id="9b898-351">Bonus exercises</span></span>
+## <a name="bonus-exercises"></a><span data-ttu-id="a81c3-351">Esercizi bonus</span><span class="sxs-lookup"><span data-stu-id="a81c3-351">Bonus exercises</span></span>
 
-### <a name="exercise-1"></a><span data-ttu-id="9b898-352">Esercizio 1</span><span class="sxs-lookup"><span data-stu-id="9b898-352">Exercise 1</span></span>
+### <a name="exercise-1"></a><span data-ttu-id="a81c3-352">Esercizio 1</span><span class="sxs-lookup"><span data-stu-id="a81c3-352">Exercise 1</span></span>
 
-<span data-ttu-id="9b898-353">Usare Microsoft Graph per visualizzare altre informazioni sull'utente</span><span class="sxs-lookup"><span data-stu-id="9b898-353">Use Microsoft Graph to display other information about the user</span></span>
+<span data-ttu-id="a81c3-353">Usare Microsoft Graph per visualizzare altre informazioni sull'utente</span><span class="sxs-lookup"><span data-stu-id="a81c3-353">Use Microsoft Graph to display other information about the user</span></span>
 
--   <span data-ttu-id="9b898-354">Messaggio di posta elettronica utente / numero di telefono / immagine del profilo</span><span class="sxs-lookup"><span data-stu-id="9b898-354">User email / phone number / profile picture</span></span>
+-   <span data-ttu-id="a81c3-354">Messaggio di posta elettronica utente / numero di telefono / immagine del profilo</span><span class="sxs-lookup"><span data-stu-id="a81c3-354">User email / phone number / profile picture</span></span>
 
-### <a name="exercise-1"></a><span data-ttu-id="9b898-355">Esercizio 1</span><span class="sxs-lookup"><span data-stu-id="9b898-355">Exercise 1</span></span>
+### <a name="exercise-1"></a><span data-ttu-id="a81c3-355">Esercizio 1</span><span class="sxs-lookup"><span data-stu-id="a81c3-355">Exercise 1</span></span>
 
-<span data-ttu-id="9b898-356">Implementare il controllo di casella vocale per passare l'interfaccia utente di Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="9b898-356">Implement voice control to navigate the Microsoft Graph UI.</span></span>
+<span data-ttu-id="a81c3-356">Implementare il controllo di casella vocale per passare l'interfaccia utente di Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="a81c3-356">Implement voice control to navigate the Microsoft Graph UI.</span></span>
