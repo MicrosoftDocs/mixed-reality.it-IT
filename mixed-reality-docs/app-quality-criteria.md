@@ -1,11 +1,11 @@
 ---
-title: Criteri di qualità delle App
-description: Questo documento descrive i principali fattori influiscono sulla qualità delle app di realtà mista.
+title: Criteri di qualità delle app
+description: Questo documento descrive i principali fattori che influiscono sulla qualità delle app per realtà mista.
 author: cjdgit
 ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
-keywords: criteri di qualità delle App, realtà mista mista app per realtà
+keywords: criteri di qualità delle app, realtà mista, app per realtà mista
 ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
 ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
@@ -13,21 +13,21 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67024490"
 ---
-# <a name="app-quality-criteria"></a>Criteri di qualità delle App
+# <a name="app-quality-criteria"></a>Criteri di qualità delle app
 
-Questo documento descrive i principali fattori influiscono sulla qualità delle app di realtà mista. Per ogni fattore viene fornite le informazioni seguenti
-* Panoramica: una breve descrizione del fattore di qualità e perché è importante.
-* Impatto sul dispositivo - il tipo di dispositivo di realtà mista di finestra è stato interessato.
-* Criteri di qualità – come valutare il fattore di qualità.
-* Viene descritto come misurare: metodi per misurare il problema (o esperienza).
-* Recommendations di riepilogo degli approcci per offrire una migliore esperienza utente.
-* Risorse: sviluppatore pertinenti e le risorse di progettazione che sono utili per creare esperienze migliori app.
+Questo documento descrive i principali fattori che influiscono sulla qualità delle app per realtà mista. Per ogni fattore vengono fornite le informazioni seguenti
+* Panoramica: breve descrizione del fattore di qualità e dei motivi per cui è importante.
+* Effetto del dispositivo: il tipo di dispositivo di realtà mista della finestra interessato.
+* Criteri di qualità: come valutare il fattore di qualità.
+* Come misurare, ovvero i metodi per misurare o sperimentare il problema.
+* Suggerimenti: riepilogo degli approcci per offrire un'esperienza utente migliore.
+* Risorse: risorse di sviluppo e progettazione pertinenti utili per creare esperienze di app migliori.
 
 ## <a name="frame-rate"></a>Frequenza dei fotogrammi
 
-Frequenza dei fotogrammi è il primo pilastro dello ologrammi stabilità comodità per l'utente. Frequenza dei fotogrammi sotto le destinazioni consigliate può causare vntana visualizzazione instabilità, non hanno conseguenze negative believability dell'esperienza e causando potenzialmente la fatica sotto controllo. La frequenza dei fotogrammi destinazione per la tua esperienza sul auricolari coinvolgenti di realtà mista di Windows sarà 60Hz o 90Hz, a seconda di quale misto realtà compatibile con i PC Windows che si desidera supportare. Per HoloLens la frequenza dei fotogrammi di destinazione è 60Hz.
+La frequenza dei fotogrammi è il primo pilastro della stabilità degli ologrammi e della comodità degli utenti. La frequenza dei fotogrammi al di sotto delle destinazioni consigliate può comportare la distorsione degli ologrammi, con un impatto negativo sulla credibilità dell'esperienza e potenzialmente causare affaticamento degli occhi. La frequenza dei fotogrammi di destinazione per la tua esperienza negli auricolari ad alta realtà mista di Windows è 60Hz o 90Hz, a seconda dei computer compatibili con la realtà Windows che desideri supportare. Per HoloLens la frequenza dei fotogrammi di destinazione è 60Hz.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -37,7 +37,7 @@ Frequenza dei fotogrammi è il primo pilastro dello ologrammi stabilità comodit
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -49,48 +49,48 @@ Frequenza dei fotogrammi è il primo pilastro dello ologrammi stabilità comodit
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-| L'app risponde in modo coerente fotogrammi al secondo obiettivo (FPS) per il dispositivo di destinazione: 60fps su HoloLens; fps 90 nei PC extra; e 60fps nei PC "Mainstream". | L'app ha cadute cornice intermittente non ostacolare l'esperienza di base; oppure FPS è regolarmente inferiori a obiettivo desiderato, ma non impedisca l'esperienza delle app. | L'app sta riscontrando un calo di frequenza dei fotogrammi in Media ogni dieci secondi o meno. |
+| L'app soddisfa costantemente i frame al secondo (FPS) obiettivo del dispositivo di destinazione: 60fps in HoloLens; 90fps su PC ultra; e 60fps nei PC mainstream. | L'app ha un frame intermittente che non ostacola l'esperienza principale; o FPS è costantemente inferiore all'obiettivo desiderato, ma non impedisce l'esperienza dell'app. | L'app sta riscontrando un calo della frequenza dei fotogrammi in media ogni 10 secondi o meno. |
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Un grafico di frequenza fotogrammi in tempo reale, è possibile per il [Windows Device Portal](using-the-windows-device-portal.md#system-performance) sotto "Le prestazioni del sistema".
-* Per il debug, sviluppo aggiungere un contatore di diagnostica di frequenza di frame nell'app. Per un contatore di esempio, vedere le risorse.
-* Frame velocità scende possono presentarsi nelle dispositivo mentre l'app è in esecuzione tramite lo spostamento di head da un lato a altro. Se l'ologrammi Mostra lo spostamento di instabilità imprevisto, quindi a bassa frequenza dei fotogrammi o il piano di stabilità è probabilmente la causa.
+* Un grafico con frequenza dei fotogrammi in tempo reale viene fornito tramite il [portale per dispositivi Windows](using-the-windows-device-portal.md#system-performance) in "prestazioni del sistema".
+* Per il debug dello sviluppo, aggiungere un contatore di diagnostica della frequenza dei fotogrammi nell'app. Vedere risorse per un contatore di esempio.
+* Le gocce di frequenza dei fotogrammi possono essere rilevate nel dispositivo mentre l'app è in esecuzione spostando l'intestazione da un lato all'altro. Se l'ologramma mostra un movimento nervoso imprevisto, è probabile che la frequenza minima dei frame o il piano di stabilità sia la causa.
 
 ### <a name="recommendations"></a>Consigli
 
-* Aggiungere un contatore di frequenza fotogrammi all'inizio del lavoro di sviluppo.
-* Le modifiche che comportano una riduzione della frequenza dei fotogrammi dovrebbero valutare e risolvere in modo appropriato come un bug nelle prestazioni.
+* Aggiungere un contatore della frequenza dei fotogrammi all'inizio del lavoro di sviluppo.
+* Le modifiche che comportano un calo nella frequenza del frame devono essere valutate e risolte in modo appropriato come bug delle prestazioni.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
-* [Ottenere informazioni sulle prestazioni per realtà mista](understanding-performance-for-mixed-reality.md)
-* [Frequenza dei fotogrammi e la stabilità di ologramma](hologram-stability.md#frame-rate)
-* [Budget di prestazioni di asset](asset-creation-process.md)
+* [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
+* [Stabilità e framerate degli ologrammi](hologram-stability.md#frame-rate)
+* [Budget per le prestazioni dell'asset](asset-creation-process.md)
 * [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [MRToolkit, visualizzazione contatore FPS](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
-* [MRToolkit, gli shader](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
+* [MRToolkit, visualizzazione del contatore FPS](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
+* [MRToolkit, shader](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
 
 #### <a name="external-references"></a>Riferimenti esterni
 
 * [Unity, ottimizzazione delle applicazioni per dispositivi mobili](https://www.youtube.com/watch?v=j4YAY36xjwE)
 
-## <a name="hologram-stability"></a>Stabilità ologrammi
+## <a name="hologram-stability"></a>Stabilità olografica
 
-Ologrammi stabile verranno aumentare l'usabilità e believability dell'app e creare un'esperienza di visualizzazione più a proprio agio per l'utente. La qualità della stabilità ologrammi è il risultato dello sviluppo di app valida e la capacità del dispositivo per comprendere (traccia) relativo ambiente. Frequenza dei fotogrammi è il primo pilastro della stabilità, altri fattori possono influire sulle stabilità tra cui:
+Gli ologrammi stabili aumenteranno l'usabilità e la credibilità dell'app e creeranno un'esperienza di visualizzazione più comoda per l'utente. La qualità della stabilità dell'ologramma è il risultato dello sviluppo di App valide e della capacità del dispositivo di comprendere (monitorare) il proprio ambiente. Sebbene la frequenza dei fotogrammi sia il primo pilastro della stabilità, altri fattori possono influiscono sulla stabilità, tra cui:
 
 * Uso del piano di stabilizzazione
-* Distanza agli ancoraggi spaziali
-* Rilevamento
+* Distanza dagli ancoraggi spaziali
+* Tracking
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -100,7 +100,7 @@ Ologrammi stabile verranno aumentare l'usabilità e believability dell'app e cre
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -112,47 +112,47 @@ Ologrammi stabile verranno aumentare l'usabilità e believability dell'app e cre
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Ologrammi continuano ad apparire stabile. | Contenuto secondario presenta lo spostamento imprevisto. o spostamento imprevisto non influire esperienza app complessiva. | Il contenuto principale nel frame presenta movimento imprevisto. |
+|  Gli ologrammi appaiono costantemente stabili. | Il contenuto secondario presenta un movimento imprevisto; o un movimento imprevisto non ostacola l'esperienza complessiva dell'app. | Il contenuto primario nel frame presenta un movimento imprevisto. |
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-Mentre l'usura del dispositivo e l'esperienza di visualizzazione:
+Durante l'uso del dispositivo e la visualizzazione dell'esperienza:
 
-* Spostare l'head da un lato a altro, se il vntana indicano lo spostamento dei imprevisto quindi a bassa frequenza dei fotogrammi o allineamento non corretta del piano di stabilità a piano focale è la causa più probabile.
-* Spostare l'ambiente e vntana, cercare i comportamenti, ad esempio nuoto e jumpiness. Questo tipo di movimento è probabilmente causato dal dispositivo senza il rilevamento dell'ambiente o la distanza in base all'ancoraggio spaziale.
-* Se è grande o più vntana è nel frame, osservare il comportamento di ologramma profondità diverse durante lo spostamento alla posizione di head da un lato a altro, se viene visualizzato bruschi è probabilmente causato dal piano di stabilizzazione.
+* Spostare la testa da un lato all'altro, se gli ologrammi mostrano un movimento imprevisto, la frequenza dei fotogrammi ridotta o l'allineamento non corretto del piano di stabilità al piano focale è la causa probabile.
+* Spostarsi tra gli ologrammi e l'ambiente, cercare comportamenti come Swim e nervosismo. Questo tipo di movimento è probabilmente causato dal fatto che il dispositivo non tiene traccia dell'ambiente o la distanza dall'ancoraggio spaziale.
+* Se nel frame sono presenti ologrammi di grandi dimensioni o più, osservare il comportamento degli ologrammi a diverse profondità spostando la posizione della testa da un lato all'altro, se shakiness è probabilmente causato dal piano di stabilizzazione.
 
-### <a name="recomendations"></a>Consigli sulla
+### <a name="recomendations"></a>Consigli
 
-* Aggiungere un contatore di frequenza fotogrammi all'inizio del lavoro di sviluppo.
+* Aggiungere un contatore della frequenza dei fotogrammi all'inizio del lavoro di sviluppo.
 * Usare il piano di stabilizzazione.
-* Eseguire sempre il rendering vntana ancorata all'interno di 3 misuratori del loro punto di ancoraggio.
-* Assicurarsi che l'ambiente sia configurato per il rilevamento corretto.
-* Progettare l'esperienza per evitare vntana a vari livelli di profondità focale all'interno del frame.
+* Eseguire sempre il rendering degli ologrammi ancorati all'interno di 3 metri dell'ancoraggio.
+* Assicurarsi che l'ambiente sia configurato per il rilevamento appropriato.
+* Progetta la tua esperienza per evitare gli ologrammi a diversi livelli di profondità focale all'interno del frame.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
-* [Frequenza dei fotogrammi e la stabilità di ologramma](hologram-stability.md#frame-rate)
-* [Case study, utilizzando il piano di stabilizzazione](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
-* [Ottenere informazioni sulle prestazioni per realtà mista](understanding-performance-for-mixed-reality.md)
+* [Stabilità e framerate degli ologrammi](hologram-stability.md#frame-rate)
+* [Case Study, uso del piano di stabilizzazione](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
+* [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
 * [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 * [Ancoraggi nello spazio](spatial-anchors.md)
 * [Gestione degli errori di rilevamento](coordinate-systems.md#handling-tracking-errors)
-* [Fotogramma di riferimento fisso](coordinate-systems.md#stationary-frame-of-reference)
+* [Cornice fissa di riferimento](coordinate-systems.md#stationary-frame-of-reference)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [MR Companion Kit, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
+* [Kit MR Companion, Kinect dpi](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
 
-## <a name="holograms-position-on-real-surfaces"></a>Posizione vntana su superfici reali
+## <a name="holograms-position-on-real-surfaces"></a>Posizione degli ologrammi su superfici reali
 
-Disallineamenti di vntana con oggetti fisici (se deve essere posizionato in relazione a altra) è una chiara indicazione dell'unione non-ologrammi e reali. Accuratezza della posizione deve essere relativo alle esigenze dello scenario; ad esempio, posizionamento superficie generale può utilizzare il mapping spaziale, ma il posizionamento più preciso richiederanno utilizzato per scopi di calibrazione e marcatori.
+I disallineamenti degli ologrammi con oggetti fisici (se destinati a essere posizionati in relazione l'uno con l'altro) sono un'indicazione chiara della mancata unione degli ologrammi e del mondo reale. L'accuratezza della selezione host deve essere relativa alle esigenze dello scenario; ad esempio, la selezione della superficie generale può utilizzare la mappa spaziale, ma la selezione host più accurata richiede l'utilizzo di marcatori e di calibrazione.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -162,7 +162,7 @@ Disallineamenti di vntana con oggetti fisici (se deve essere posizionato in rela
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -174,49 +174,49 @@ Disallineamenti di vntana con oggetti fisici (se deve essere posizionato in rela
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-| Ologrammi Allinea all'area di in genere nei centimetri all'intervallo di pollici. Se è necessaria maggiore accuratezza, l'app deve fornire un mezzo efficiente per la collaborazione all'interno di specifica di app desiderata. | N/D | Il vntana vengono visualizzati non allineati con l'oggetto fisico di destinazione al piano della superficie di rilievo o spostata dall'area di visualizzazione. Se la precisione è necessaria, Vntana deve soddisfare le specifiche di prossimità dello scenario. | 
+| Gli ologrammi si allineano alla superficie in genere nell'intervallo di centimetri. Se è necessaria una maggiore accuratezza, l'app deve fornire un modo efficiente per collaborare all'interno della specifica dell'app desiderata. | ND | Gli ologrammi appaiono non allineati con l'oggetto di destinazione fisico suddividendo il piano della superficie o facendo in modo che si trovi in un altro modo. Se è necessaria l'accuratezza, gli ologrammi dovrebbero soddisfare le specifiche di prossimità dello scenario. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Vntana posizionati sulla mappa spaziale non deve essere visualizzati a float notevolmente di sopra o sotto l'area.
-* Ologrammi che richiedono il posizionamento preciso devono avere una forma del marcatore e calibrazione sistema appropriata ai requisiti dello scenario.
+* Gli ologrammi posizionati sulla mappa spaziale non devono essere visualizzati in modo significativo sopra o sotto la superficie.
+* Gli ologrammi che richiedono un posizionamento accurato devono avere una forma di sistema di marcatore e di calibrazione accurato per il requisito dello scenario.
 
 ### <a name="recommendations"></a>Consigli
 
-* Mapping spaziale è utile per l'inserimento di oggetti su superfici quando la precisione non è obbligatoria.
-* Per la precisione migliore, utilizzare gli indicatori o poster per impostare gli ologrammi e un controller Xbox (o un meccanismo di allineamento manuale) per calibrazione finale.
-* È consigliabile suddividere vntana molto grande in parti logiche e allineamento di ogni parte all'area di.
-* In modo non corretto distanza interpupilary set (IPD) può influire inoltre allineamento ologramma. Configurare sempre HoloLens a IPD dell'utente.
+* La mappa spaziale è utile per posizionare oggetti sulle superfici quando la precisione non è necessaria.
+* Per la massima precisione, usare i marcatori o i poster per impostare gli ologrammi e un controller Xbox (o un meccanismo di allineamento manuale) per la calibrazione finale.
+* Prendere in considerazione la possibilità di suddividere ologrammi molto grandi in parti logiche e di allineare ogni parte alla superficie.
+* L'impostazione non corretta della distanza interpupilla (dpi) può influire anche sull'allineamento degli ologrammi. Configurare sempre HoloLens sul DPI dell'utente.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
-* [Posizionamento di mapping spaziale](spatial-mapping.md#placement)
-* [Spazio di processo di digitalizzazione](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Procedure consigliate Anchor spaziali](spatial-anchors.md#best-practices)
+* [Selezione host per mapping spaziale](spatial-mapping.md#placement)
+* [Processo di analisi chat room](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Procedure consigliate per gli ancoraggi spaziali](spatial-anchors.md#best-practices)
 * [Gestione degli errori di rilevamento](coordinate-systems.md#handling-tracking-errors)
 * [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
-* [Panoramica dello sviluppo Vuforia](vuforia-development-overview.md)
+* [Panoramica sullo sviluppo di Vuforia](vuforia-development-overview.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
 * [Spaziale MR 230: Mapping spaziale](holograms-230.md)
-* [MR Toolkit, le librerie di Mapping spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
-* [MR Companion Kit, Poster Calibration Sample](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
-* [MR Companion Kit, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
+* [MR Toolkit, librerie di mapping spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
+* [Kit MR Companion, esempio di calibrazione poster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
+* [Kit MR Companion, Kinect dpi](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
 
 #### <a name="external-references"></a>Riferimenti esterni
 
-* [Lowes Case Study, l'allineamento di precisione](https://www.youtube.com/watch?v=LceMdyKZ4PI)
+* [Case Study di Lowes, allineamento della precisione](https://www.youtube.com/watch?v=LceMdyKZ4PI)
 
-## <a name="viewing-zone-of-comfort"></a>Area di visualizzazione del fattore di comfort
+## <a name="viewing-zone-of-comfort"></a>Visualizzazione della zona di comfort
 
-Controllo App per gli sviluppatori in cui eseguire la convergenza occhi degli utenti inserendo il contenuto e vntana profondità diversi. Gli utenti che portano HoloLens permetteranno sempre a m 2.0 per mantenere un'immagine chiara in quanto consente di visualizzare HoloLens sono fissati a una distanza ottica circa 2.0m lontano dall'utente. Profondità del contenuto non corretto può causare disturbo visual o fatica.
+Gli sviluppatori di app controllano la posizione di convergenza degli occhi degli utenti inserendo contenuto e ologrammi a diverse profondità. Gli utenti che indossano HoloLens saranno sempre a 2,0 m per mantenere un'immagine chiara, perché le visualizzazioni HoloLens sono fisse a distanza ottica circa 2,0 m dall'utente. Una profondità di contenuto impropria può causare disagi visivi o affaticamento.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -226,7 +226,7 @@ Controllo App per gli sviluppatori in cui eseguire la convergenza occhi degli ut
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -240,40 +240,40 @@ Controllo App per gli sviluppatori in cui eseguire la convergenza occhi degli ut
 
 <table>
 <tr>
-<td> Migliore </td><td><ul>
-<li>Collocare il contenuto a 2 minuti.</li><li>Quando non è possibile inserire vntana 2M e non è possibile evitare conflitti tra la convergenza e alloggio, la zona ottima per la selezione host ologrammi è compreso tra m 1,25 e 5 minuti.</li><li>In ogni caso, le finestre di progettazione deve strutturare il contenuto per incoraggiare gli utenti di interagire 1 + metri (ad esempio, regolare le dimensioni del contenuto e i parametri di selezione host predefiniti).</li><li>A meno che specificamente non è necessario per lo scenario, un piano di ritaglio debba essere implementare con fadeout iniziando in corrispondenza di 1 milione.</li><li>Nei casi in cui è necessario più da vicino osservazione di ologramma ovvero, il contenuto non deve essere inferiore a quello di 50cm.</li>
+<td> Consigliate </td><td><ul>
+<li>Inserire il contenuto a 2m.</li><li>Quando gli ologrammi non possono essere posizionati su 2m e i conflitti tra la convergenza e l'alloggio non possono essere evitati, la zona ottimale per la posizione degli ologrammi è compresa tra 1.25 m e 5m.</li><li>In ogni caso, i progettisti devono strutturare il contenuto per incoraggiare gli utenti a interagire tra 1 + m (ad esempio, modificare le dimensioni del contenuto e i parametri di posizionamento predefiniti).</li><li>A meno che non sia specificamente necessario per lo scenario, un piano di ritaglio deve essere implementato con dissolvenza a partire da 1 milione.</li><li>Nei casi in cui è necessaria un'osservazione più stretta di un ologramma senza movimento, il contenuto non deve essere più vicino a 50cm.</li>
 </ul></td>
 </tr><tr>
-<td> Soddisfa</td><td> Il contenuto è entro le indicazioni di visualizzazione e animazione, ma un utilizzo improprio o alcun utilizzo del piano di ritaglio.</td>
+<td> Soddisfi</td><td> Il contenuto si trova all'interno delle linee guida per la visualizzazione e il movimento, ma non è corretto o non utilizza il piano di ritaglio.</td>
 </tr><tr>
-<td> esito negativo </td><td> Il contenuto viene visualizzato troppo vicino (in genere &lt;1.25 m e o &lt;50 cm per vntana fermo che richiedono più da vicino osservazione.)</td>
+<td> Esito negativo </td><td> Il contenuto viene presentato troppo vicino ( &lt;in genere 1.25 m &lt;o 50cm per gli ologrammi stazionari che richiedono un'osservazione più approfondita).</td>
 </tr>
 </table>
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Il contenuto deve in genere essere 2M away, ma non inferiore a quello di 1,25 o oltre 5 minuti.
-* Con poche eccezioni, la distanza di rendering HoloLens ritaglio debba essere impostata su .85CM con fadeout del contenuto, iniziando in corrispondenza di 1 milione. Raggiungono il contenuto e notare l'effetto di piano di ritaglio.
-* Contenuto fisso non deve essere inferiore a quello di 50cm da subito.
+* Il contenuto deve essere in genere 2m, ma non più vicino a 1,25 o più di 5 minuti.
+* Con poche eccezioni, la distanza di rendering del ritaglio HoloLens deve essere impostata su. 85CM con la dissolvenza del contenuto a partire da 1 milione. Approccio al contenuto e annotare l'effetto del piano di ritaglio.
+* Il contenuto fisso non deve essere più vicino a 50cm.
 
 ### <a name="recommendations"></a>Consigli
 
-* Progettare il contenuto per la visualizzazione ottimale distanza di 2 minuti.
-* Impostare la distanza di rendering ritaglio a 85cm con fadeout del contenuto, iniziando in corrispondenza di 1 milione.
-* Per vntana fermo che devono visualizzare più vicino, il piano di ritaglio debba essere non supera i 30cm e fadeout deve iniziare almeno 10cm dal piano di ritaglio.
+* Progettare il contenuto per la distanza di visualizzazione ottimale di 2m.
+* Impostare la distanza di rendering del ritaglio su 85cm con la dissolvenza del contenuto a partire da 1 milione.
+* Per gli ologrammi stazionari che necessitano di una visualizzazione più vicina, il piano di ridimensionamento deve essere non più vicino a 30cm e la dissolvenza dovrebbe iniziare da almeno 10 cm dal piano di ritaglio.
 
 ### <a name="resources"></a>Risorse
 
-* [Eseguire il rendering di distanza](hologram-stability.md#hologram-render-distances)
+* [Distanza di rendering](hologram-stability.md#hologram-render-distances)
 * [Punto focale in Unity](focus-point-in-unity.md)
-* [Esperimenti con scala](scale.md#experimenting-with-scale)
-* [Testo, la dimensione del carattere consigliato](typography.md#recommended-font-size)
+* [Sperimentazione con scalabilità](scale.md#experimenting-with-scale)
+* [Testo, dimensioni del carattere consigliate](typography.md#recommended-font-size)
 
 ## <a name="depth-switching"></a>Cambio di profondità
 
-Indipendentemente dall'area di visualizzazione dei problemi di fattore di comfort, richiede all'utente di cambiare frequentemente o rapidamente tra vicino e lontano focale oggetti (inclusi ologrammi e il contenuto reale) possono causare fatica oculomotor e disturbo generale.
+Indipendentemente dalla visualizzazione della zona di problemi di comfort, l'utente può cambiare spesso o rapidamente tra gli oggetti focali vicini e lontani (inclusi gli ologrammi e il contenuto reale) può causare la fatica oculomotore e il disagio generale.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -283,7 +283,7 @@ Indipendentemente dall'area di visualizzazione dei problemi di fattore di comfor
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -295,28 +295,28 @@ Indipendentemente dall'area di visualizzazione dei problemi di fattore di comfor
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Profondità naturale o limitato cambio che non causa l'utente a e innaturali reimpostare lo stato attivo. | Profondità improvviso si tratta di core e progettata nell'esperienza delle app, profondità improvviso switch o che sia causato dal contenuto del mondo reale imprevisto. | Opzione profondità coerente, o profondità improvviso cambio che non è necessaria o core per l'esperienza delle app. | 
+|  Cambio di profondità naturale o limitato che non determina una riattivazione non naturale dell'utente. | Cambio di profondità improvviso. si tratta di un elemento di base e progettato nell'esperienza dell'app o di un cambio di profondità improvviso causato da contenuto reale imprevisto. | Commutatore di profondità coerente o cambio di profondità improvviso non necessario o di base per l'esperienza dell'app. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Se l'app richiede all'utente in modo coerente e/o in modo anomalo cambiare lo stato attivo di profondità, sussiste profondità cambio problema.
+* Se l'app richiede all'utente di modificare in modo coerente e/o modificare in modo brusco lo stato attivo, si verifica un problema di cambio di profondità.
 
 ### <a name="recommendations"></a>Consigli
 
-* Mantenere il contenuto principale a un piano focale coerente e assicurarsi che il piano di stabilizzazione corrisponda al piano focale. Ciò può ridurre fatica oculomotor e dello spostamento ologrammi imprevisto.
+* Mantieni il contenuto primario in un piano focale coerente e assicurati che il piano di stabilizzazione corrisponda al piano focale. Ciò ridurrà l'affaticamento oculomotore e lo spostamento imprevisto dell'ologramma.
 
 ### <a name="resources"></a>Risorse
 
-* [Eseguire il rendering di distanza](hologram-stability.md#hologram-render-distances)
+* [Distanza di rendering](hologram-stability.md#hologram-render-distances)
 * [Punto focale in Unity](focus-point-in-unity.md)
 
-## <a name="use-of-spatial-sound"></a>Utilizzo dell'audio spaziale
+## <a name="use-of-spatial-sound"></a>Uso del suono spaziale
 
-Nella realtà mista di Windows, il motore di audio fornisce il componente acustico dell'esperienza di realtà mista simulando 3D audio con simulazioni ambientali, distanza e direzione. Utilizzando spaziale audio in un'applicazione consente agli sviluppatori di inserire convincente suoni in uno spazio dimensionale 3 (sfera) per l'utente. Tali suoni risulterà quindi come se provenienti da oggetti fisici reali o vntana la realtà mista nelle vicinanze dell'utente. Spaziale audio è uno strumento potente per full immersion, accessibilità e progettazione dell'esperienza utente nelle applicazioni di realtà mista.
+In realtà mista di Windows, il motore audio fornisce il componente uditivo dell'esperienza di realtà mista simulando il suono 3D usando la direzione, la distanza e le simulazioni ambientali. L'uso di un suono spaziale in un'applicazione consente agli sviluppatori di collocare in modo convincente i suoni in uno spazio tridimensionale (Sphere) intorno all'utente. Questi suoni sembreranno come se provenissero da oggetti fisici reali o dagli ologrammi della realtà mista nell'ambiente dell'utente. Il suono spaziale è uno strumento potente per l'immersione, l'accessibilità e la progettazione dell'esperienza utente nelle applicazioni di realtà mista.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -326,7 +326,7 @@ Nella realtà mista di Windows, il motore di audio fornisce il componente acusti
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -338,23 +338,23 @@ Nella realtà mista di Windows, il motore di audio fornisce il componente acusti
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Audio è logicamente spatialized e l'esperienza utente in modo appropriato Usa suono per assistere con feedback utente e di individuazione oggetti. Audio è naturale e pertinenti agli oggetti e normalizzati tra lo scenario. | Spaziale audio è utilizzata in modo appropriato per believability ma mancante come mezzo per facilitare l'individuazione e commenti degli utenti. | File audio non è spatialized come previsto, e/o mancanza di suono per assistere l'utente entro l'esperienza utente. O audio spaziale non è stato considerato o la progettazione dello scenario. | 
+|  Il suono è con spazialità logica e l'esperienza utente utilizza in modo appropriato il suono per facilitare l'individuazione degli oggetti e il feedback degli utenti. Il suono è naturale e pertinente per gli oggetti e normalizzato in tutto lo scenario. | L'audio spaziale viene utilizzato in modo appropriato per ottenere la credibilità, ma mancante come mezzo per facilitare il feedback degli utenti e l'individuabilità. | Il suono non viene spaziato come previsto e/o non è presente alcun suono per assistere l'utente all'interno dell'esperienza utente. O l'audio spaziale non è stato considerato o usato nella progettazione dello scenario. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* In generale, suoni rilevanti devono creare da vntana destinazione (ad es., suono cortecce provenienti da holographic dog.)
-* Segnali audio devono essere usate in tutta l'esperienza utente per assistere l'utente con commenti e suggerimenti né la conoscenza delle azioni all'esterno della cornice holographic.
+* In generale, i suoni rilevanti devono emettere da ologrammi di destinazione (ad esempio, il suono di corteccia proveniente dal cane olografico).
+* I segnali acustici devono essere usati in tutta l'esperienza utente per aiutare gli utenti a ricevere commenti e suggerimenti o a conoscere le azioni all'esterno del frame olografico.
 
 ### <a name="recommendations"></a>Consigli
 
-* Usare spaziale audio quale supporto per interfacce utente e di individuazione dell'oggetto.
-* Suoni reale funzionano meglio synthesize o file audio non naturale.
-* La maggior parte dei suoni dovrebbero essere spatialized.
-* Evitare di istanze di emissione FixIt invisibile.
-* Evitare di mascheramento spaziale.
-* Normalizza tutti i file audio.
+* Utilizzare l'audio spaziale per supportare l'individuazione oggetti e le interfacce utente.
+* I suoni reali funzionano meglio rispetto alla sintesi o al suono non naturale.
+* La maggior parte dei suoni deve essere spaziali.
+* Evitare gli emettitori invisibile.
+* Evitare la maschera spaziale.
+* Normalizzare tutti i suoni.
 
 ### <a name="resources"></a>Risorse
 
@@ -363,19 +363,19 @@ Nella realtà mista di Windows, il motore di audio fornisce il componente acusti
 * [Audio spaziale](spatial-sound.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)
-* [Case study, spaziali audio per HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Case study, utilizzando spaziale audio in RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
+* [Case Study, audio spaziale per HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Case Study, uso del suono spaziale in RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
 * [Spaziale MR 220: Audio spaziale](holograms-220.md)
-* [MRToolkit, Spatial Audio](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
+* [MRToolkit, audio spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
-## <a name="focus-on-holographic-frame-fov-boundaries"></a>Concentrarsi sui limiti holographic frame (campo di visualizzazione)
+## <a name="focus-on-holographic-frame-fov-boundaries"></a>Concentrarsi sui limiti dei frame olografici (FOV)
 
-Esperienze utente ben progettata possono creare e gestire un contesto utile dell'ambiente virtuale che si estende sugli utenti. Ridurre l'effetto dei limiti del campo di visualizzazione comporta una progettazione attenta della scala del contenuto e contesto, l'uso di spaziale audio, sistemi di informazioni aggiuntive e la posizione dell'utente. Se eseguita correttamente, l'utente si sentirà che minore danneggiare i limiti del campo di visualizzazione mantenendo un'esperienza app familiarità.
+L'esperienza utente ben progettata può creare e gestire un contesto utile dell'ambiente virtuale che si estende intorno agli utenti. Attenuare l'effetto dei limiti di FOV implica una progettazione accurata della scalabilità del contenuto e del contesto, l'utilizzo di audio spaziale, i sistemi di linee guida e la posizione dell'utente. Se questa operazione è stata eseguita correttamente, l'utente risulterà meno disaccoppiato dai limiti di FOV, pur avendo un'esperienza di app comoda.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -385,7 +385,7 @@ Esperienze utente ben progettata possono creare e gestire un contesto utile dell
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -397,41 +397,41 @@ Esperienze utente ben progettata possono creare e gestire un contesto utile dell
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Utente non perde mai contesto e la visualizzazione è comodo. Assistenza rapida è disponibile per gli oggetti di grandi dimensioni. L'individuazione e visualizzazione di indicazioni viene fornito per gli oggetti all'esterno della cornice. In generale, progettazione di movimento e la scala del vntana sono appropriati per una visualizzazione ottimale. | Utente non perde mai il contesto, ma movimento collo aggiuntivo potrebbe essere necessario in casi limitati. In alcune situazioni scalabilità comporta interrompere sia il frame verticale o orizzontale provocando alcuni movimenti collo visualizzare ologrammi vntana. | È necessario visualizzare vntana utente potrebbe causare una perdita di contesto e/o movimento collo coerente. Alcuna indicazione di contesto per gli oggetti grandi holographic, lo spostamento di oggetti facile perdere all'esterno della cornice senza informazioni aggiuntive di individuabilità o vntana altezza non richiede movimento collo regolari da visualizzare. | 
+|  L'utente non perde mai il contesto e la visualizzazione è confortevole. Per gli oggetti di grandi dimensioni viene fornita assistenza del contesto. L'individuabilità e la visualizzazione delle linee guida vengono fornite per gli oggetti esterni al frame. In generale, la progettazione del movimento e la scala degli ologrammi sono appropriate per un'esperienza di visualizzazione confortevole. | L'utente non perde mai il contesto, ma potrebbe essere necessario un movimento del collo aggiuntivo in situazioni limitate. In situazioni limitate la scalabilità induce gli ologrammi a suddividere il frame verticale o orizzontale causando un movimento del collo per visualizzare gli ologrammi. | È necessario che l'utente perda il contesto e/o il movimento del collo coerente per visualizzare gli ologrammi. Nessuna guida al contesto per oggetti olografici di grandi dimensioni, spostamento di oggetti facili da perdere al di fuori del frame senza alcuna indicazione di individuabilità, o ologrammi alti richiede un movimento del collo normale per la visualizzazione. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Contesto per ologramma (grande) viene smarrito o non riconosciuto a causa di verrà ritagliato in base ai bordi.
-* Posizione del vntana sono difficili da individuare a causa della mancanza di casting di attenzione o contenuto che si sposta rapidamente da e verso il frame holographic.
-* Scenario è necessario regolare e ripetitive su e giù head movimento per verificare completamente ologramma conseguente fatica collo.
+* Il contesto di un ologramma (grande) viene perso o non è compreso perché viene troncato ai limiti.
+* La posizione degli ologrammi è difficile da trovare a causa dell'assenza di direttori di attenzione o contenuti che si spostano rapidamente all'interno e all'esterno del frame olografico.
+* Per visualizzare completamente un ologramma, è necessario che lo scenario sia normale e ripetitivo, in modo da ottenere una riduzione del collo.
 
 ### <a name="recommendations"></a>Consigli
 
-* L'esperienza di avvio con oggetti di piccole dimensioni che adatta il campo di visualizzazione, quindi eseguire la transizione con indicatori visivi alle versioni più grande.
-* Usare directors spaziali audio e attenzione per la ricerca di contenuto utente che non è compreso il campo di visualizzazione.
-* Per quanto possibile, evitare vntana che tagliano verticalmente il campo di visualizzazione.
-* Fornire all'utente indicazioni nell'app per la miglior visualizzazione del percorso.
+* Inizia l'esperienza con piccoli oggetti che si adattano a FOV, quindi passa con segnali visivi a versioni più grandi.
+* Usare i direttori audio e di attenzione spaziali per aiutare l'utente a trovare contenuto esterno a FOV.
+* Per quanto possibile, evitare gli ologrammi che ritagliano verticalmente il FOV.
+* Fornire all'utente informazioni aggiuntive in-app per una migliore visualizzazione del percorso.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
 * [Frame olografico](holographic-frame.md)
-* [Case Study, HoloStudio UI e conoscenze di progettazione di interazione](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
-* [Scalabilità degli oggetti e gli ambienti](scale.md)
+* [Case Study, informazioni sulla progettazione dell'interazione e dell'interfaccia utente di HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
+* [Scala di oggetti e ambienti](scale.md)
 * [Cursori, segnali visivi](cursors.md#visual-cues)
 
 #### <a name="external-references"></a>Riferimenti esterni
 
-* [Molto discussi sul campo di visualizzazione](https://www.linkedin.com/pulse/hololens-much-ado-field-of-view-michael-hoffman?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B6iQ%2FbTevLDU93w3I2ewLJw%3D%3D)
+* [Molto ADO sulla FOV](https://www.linkedin.com/pulse/hololens-much-ado-field-of-view-michael-hoffman?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B6iQ%2FbTevLDU93w3I2ewLJw%3D%3D)
 
-## <a name="content-reacts-to-user-position"></a>Contenuto reagisce all'utente di posizionare
+## <a name="content-reacts-to-user-position"></a>Il contenuto reagisce alla posizione dell'utente
 
-Ologrammi devono reagire in all'utente di posizionare in approssimativamente stesso modo in cui si "reali" oggetti. Una considerazione di progettazione rilevanti è elementi dell'interfaccia utente che non sono necessariamente presuppongono che la posizione dell'utente è fermo e adattare al movimento dell'utente. Progettazione di un'app che si adatti correttamente alla posizione utente crea un'esperienza più credibile e rendono più semplice da utilizzare.
+Gli ologrammi dovrebbero rispondere alla posizione dell'utente approssimativamente nello stesso modo in cui fanno gli oggetti "reali". Una considerazione di progettazione notevole è rappresentata dagli elementi dell'interfaccia utente che non possono necessariamente presupporre che la posizione di un utente sia stazionaria e adattata al movimento dell'utente. La progettazione di un'app che si adatta correttamente alla posizione utente creerà un'esperienza più credibile e ne renderà più semplice l'uso.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -441,7 +441,7 @@ Ologrammi devono reagire in all'utente di posizionare in approssimativamente ste
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -455,46 +455,46 @@ Ologrammi devono reagire in all'utente di posizionare in approssimativamente ste
 
 <table>
 <tr>
-<td> Migliore </td><td> Il contenuto e interfaccia utente di adattarsi alle posizioni utente consentendo utente interagiscono in modo naturale con contenuto all'interno dell'ambito dello spostamento previsto per l'utente.</td>
+<td> Consigliate </td><td> Il contenuto e l'interfaccia utente si adattano a posizioni utente che consentono all'utente di interagire naturalmente con il contenuto nell'ambito del movimento utente previsto.</td>
 </tr><tr>
-<td> Soddisfa </td><td> Interfaccia utente adatta per la posizione dell'utente, ma potrebbe impedire la visualizzazione del contenuto della chiave che richiedono all'utente di modificare la loro posizione.</td>
+<td> Soddisfi </td><td> L'interfaccia utente si adatta alla posizione dell'utente, ma può impedire la visualizzazione del contenuto della chiave che richiede all'utente di modificare la posizione.</td>
 </tr><tr>
-<td> esito negativo </td><td><ol>
-<li>Elementi dell'interfaccia utente vengono perse o bloccati durante dell'utente che provocano lo spostamento dei controlli e innaturali tornare al (o trovare).</li><li>Elementi dell'interfaccia utente limitano la visualizzazione del contenuto principale.</li><li>Lo spostamento dell'interfaccia utente non è ottimizzato per la visualizzazione di distanza e in particolare con momentum <a href="billboarding-and-tag-along.md">tag-along</a> elementi dell'interfaccia utente.</li>
+<td> Esito negativo </td><td><ol>
+<li>Gli elementi dell'interfaccia utente vengono persi o bloccati durante lo spostamento, facendo sì che l'utente ritorni in modo non naturale ai controlli (o trova).</li><li>Gli elementi dell'interfaccia utente limitano la visualizzazione del contenuto primario.</li><li>Lo spostamento dell'interfaccia utente non è ottimizzato per la visualizzazione della distanza e del momento in particolare con elementi dell'interfaccia utente con <a href="billboarding-and-tag-along.md">tag lungo</a> .</li>
 </ol></td>
 </tr>
 </table>
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Tutte le misure devono essere eseguite all'interno di un ambito ragionevole dello scenario. Durante lo spostamento di utente variano, non provano a ingannare l'app con spostamento utente estremi.
-* Per gli elementi dell'interfaccia utente, controlli rilevanti devono essere disponibili indipendentemente dal movimento utente. Ad esempio, se l'utente è la visualizzazione e analisi attorno una mappa 3D con zoom, il controllo zoom deve essere immediatamente disponibile per l'utente indipendentemente dalla posizione.
+* Tutte le misurazioni devono essere eseguite in un ambito ragionevole dello scenario. Sebbene lo spostamento dell'utente possa variare, non provare a ingannare l'app con lo spostamento estremo dell'utente.
+* Per gli elementi dell'interfaccia utente, i controlli pertinenti dovrebbero essere disponibili indipendentemente dallo spostamento dell'utente. Se, ad esempio, l'utente Visualizza e aggira una mappa 3D con lo zoom, il controllo zoom dovrebbe essere prontamente disponibile per l'utente indipendentemente dalla posizione.
 
 ### <a name="recommendations"></a>Consigli
 
-* L'utente è la fotocamera e controllano lo spostamento. "Let" tali unità.
-* Prendere in considerazione del billboard per testo e i sistemi consente in caso contrario, potrebbero essere bloccato world o nascosta se un utente sono stati da spostare.
-* Usare tag-along per il contenuto deve seguire l'utente pur senza impedire all'utente di visualizzare gli elementi davanti a essi.
+* L'utente è la fotocamera e controlla lo spostamento. Consentire l'unità.
+* Prendere in considerazione il tabellone per i sistemi di testo e di menu che altrimenti sarebbero bloccati o nascosti se un utente dovesse spostarsi.
+* Usare tag-along per il contenuto che deve seguire l'utente, consentendo allo stesso tempo all'utente di vedere cosa è davanti a essi.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
-* [Progettazione di interazioni](hologram.md)
-* [Colore, chiaro e materiale](color,-light-and-materials.md)
+* [Progettazione interazione](hologram.md)
+* [Colore, luce e materiale](color,-light-and-materials.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Interazioni istintive](interaction-fundamentals.md)
-* [Self-animati e locomotion utente](comfort.md#self-motion-and-user-locomotion)
+* [Auto-Motion e locomozione utente](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
 * [Input MR 210: Sguardo fisso](holograms-210.md)
 
-## <a name="input-interaction-clarity"></a>Maggiore chiarezza l'interazione dell'input
+## <a name="input-interaction-clarity"></a>Chiarezza interazione input
 
-L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'app e include input coerenza, approachability, l'individuabilità dei metodi di interazione. Utente sarà in grado di utilizzare le interazioni comuni a livello di piattaforma senza un apprendimento. Se l'app ha input personalizzato, deve essere chiaramente comunicato e dimostrato.
+La chiarezza dell'interazione di input è essenziale per l'usabilità di un'app e include coerenza di input, accessibilità, individuabilità dei metodi di interazione. L'utente deve essere in grado di usare interazioni comuni a livello di piattaforma senza riapprendere. Se l'app ha un input personalizzato, dovrebbe essere chiaramente comunicata e dimostrata.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -504,7 +504,7 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -516,36 +516,36 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Metodi di interazione di input siano coerenti con realtà mista di Windows fornito [materiale sussidiario](interaction-fundamentals.md). Qualsiasi input personalizzato non deve essere ridondante con input standard (piuttosto utilizzo interazione standard) e deve essere chiaramente comunicato e illustrato all'utente. | Analogamente agli input migliori, ma personalizzato sono ridondanti con metodi di input standard. Utente ancora possibile ottenere l'obiettivo e stato di avanzamento tramite l'esperienza delle app. | Difficile da comprendere il mapping di metodo o il pulsante di input. È altamente personalizzato, non supporta l'input standard, non le istruzioni, di input o può causare problemi di sollecitazioni e fattore di comfort. | 
+|  I metodi di interazione di input sono coerenti con le [linee guida](interaction-fundamentals.md)fornite dalla realtà mista Windows. Qualsiasi input personalizzato non deve essere ridondante con l'input standard (usare invece l'interazione standard) e deve essere chiaramente comunicato e dimostrato all'utente. | Analogamente al migliore, ma gli input personalizzati sono ridondanti con i metodi di input standard. L'utente può comunque raggiungere l'obiettivo e progredire nell'esperienza dell'app. | Difficile comprensione del metodo di input o del mapping dei pulsanti. L'input è molto personalizzato, non supporta l'input standard, nessuna istruzione o probabilmente causa problemi di affaticamento e comfort. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* L'app Usa coerente [metodi di input standard.](interaction-fundamentals.md)
-* Se l'app ha input personalizzati, è chiaramente comunicata tramite:
-* Prima esecuzione
+* L'app usa [metodi di input standard coerenti.](interaction-fundamentals.md)
+* Se l'app ha input personalizzato, viene chiaramente comunicata tramite:
+* Esperienza di prima esecuzione
 * Schermate introduttive
 * Descrizioni comandi
 * Coach mano
 * Sezione della Guida
-* Voce su
+* Voice over
 
 ### <a name="recommendations"></a>Consigli
 
-* Usare i metodi di input standard, laddove possibile.
-* Fornire le dimostrazioni, esercitazioni e le descrizioni comandi per i metodi di input non standard.
-* Usare un modello di interazione coerente in tutta l'app.
+* Usare i metodi di input standard quando possibile.
+* Fornire dimostrazioni, esercitazioni e descrizioni comandi per metodi di input non standard.
+* Usare un modello di interazione coerente nell'app.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
 * [Interazioni istintive](interaction-fundamentals.md)
-* [Oggetti si](interactable-object.md)
+* [Oggetti interagibili](interactable-object.md)
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)
 * [Cursori](cursors.md)
-* [Fattore di comfort e sguardo](comfort.md#gaze-direction)
+* [Comodità e sguardo](comfort.md#gaze-direction)
 * [Movimenti](gestures.md)
 * [Input vocale](voice-input.md)
 * [Esecuzione di comandi vocali](voice-design.md)
@@ -562,19 +562,19 @@ L'interazione di input maggiore chiarezza è fondamentale per l'usabilità dell'
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Case study: L'esercizio di elaborazione più personale](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Eseguire il cast di Studio: Insegnamenti di progettazione HoloStudio UI e l'interazione](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [App di esempio: Tabella periodico degli elementi](periodic-table-of-the-elements.md)
-* [App di esempio: Modulo lunare](lunar-module.md)
+* [Case Study: Ricerca di più personal computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Studio Cast: Apprendimento dell'interfaccia utente e della progettazione dell'interazione HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [App di esempio: Tabella periodica degli elementi](periodic-table-of-the-elements.md)
+* [App di esempio: Modulo Lunar](lunar-module.md)
 * [Input MR 210: Sguardo fisso](holograms-210.md)
-* [Input MR 211: Movimenti](holograms-211.md)
+* [Input MR 211: Gesti](holograms-211.md)
 * [Input MR 212: Voce](holograms-212.md)
 
-## <a name="interactable-objects"></a>Oggetti si
+## <a name="interactable-objects"></a>Oggetti interagibili
 
-Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un evento in tutto il mondo astratto 2D. Nel mondo tridimensionale realtà mista, non dobbiamo riguardare esclusivamente questo mondo di astrazione più. Qualsiasi elemento può essere un oggetto si che attiva un evento. Un oggetto si può essere rappresentato come un elemento da una tazza di caffè sulla tabella in un fumetto mobile in modalità wireless. Indipendentemente dal formato, gli oggetti si devono essere chiaramente riconoscibili dall'utente tramite segnali audio e video.
+Un pulsante è a lungo una metafora usata per attivare un evento nel mondo astratto 2D. Nel mondo della realtà mista tridimensionale, non dobbiamo più limitarci a questo mondo dell'astrazione. Qualsiasi elemento può essere un oggetto interagibile che attiva un evento. Un oggetto interactabile può essere rappresentato da qualsiasi elemento da un caffè della tabella a un pallone in aria. Indipendentemente dal modulo, gli oggetti interagiscono devono essere chiaramente riconoscibili dall'utente tramite segnali visivi e audio.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -584,7 +584,7 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -596,21 +596,21 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Indipendentemente dal form, gli oggetti si sono riconoscibili tramite segnali audio e video in tre stati: inattiva, destinati e selezionato. "A vederla, dice" è chiaro e coerente utilizzato nell'intera esperienza di. Gli oggetti vengono ridimensionati e distribuiti per consentire la destinazione è senza errori. | Utente può riconoscere oggetto come si grazie ai commenti di audio o oggetto visivo e di destinazione e attivare l'oggetto. | Non data segnali visivi o audio, utente in grado di riconoscere un oggetto si. Errore soggetta a causa di scala di oggetto o la distanza tra gli oggetti sono interazioni. | 
+|  Indipendentemente dalla forma, gli oggetti interagibili sono riconoscibili tramite segnali visivi e audio in tre stati: inattivo, di destinazione e selezionato. "Vedilo, supponiamo che" sia chiaro e costantemente usato in tutta l'esperienza. Gli oggetti vengono ridimensionati e distribuiti per consentire la destinazione senza errori. | L'utente può riconoscere l'oggetto come interagisci tramite commenti audio o visivi e può fare riferimento all'oggetto e attivarlo. | Dato che non sono presenti suggerimenti visivi o audio, l'utente non può riconoscere un oggetto interagibile. Le interazioni sono soggette a errori a causa della scala o della distanza degli oggetti tra oggetti. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Gli oggetti si sono riconoscibili come 'si;' tra cui pulsanti, menu e app contenuto specifico. Come regola generale non vi sarà un segnale audio e video quando la destinazione si oggetti.
+* Gli oggetti interagibili sono riconoscibili come ' interactable '; inclusi i pulsanti, i menu e il contenuto specifico dell'app. Come regola empirica, è necessario un segnale visivo e un segnale audio quando la destinazione è costituita da oggetti interagibili.
 
 ### <a name="recommendations"></a>Consigli
 
-* Utilizzare commenti audio e video per le interazioni.
-* Feedback visivo deve essere differenziate per ogni input dello stato (inattivo, destinazione, selezionato)
-* Oggetti si devono essere ridimensionati e posizionati per la destinazione è senza errori.
-* Gli oggetti raggruppati si (ad esempio una barra dei menu o elenco) devono avere spaziatura corretta per specificare come destinazione.
-* I pulsanti e menu che supportano i comandi vocali devono fornire le etichette di testo per la parola chiave di comando ("visualizzarlo, dice")
+* Usare commenti visivi e audio per le interazioni.
+* Il feedback visivo deve essere differenziato per ogni stato di input (inattivo, mirato, selezionato)
+* Gli oggetti interagibili devono essere ridimensionati e posizionati per la destinazione senza errori.
+* Gli oggetti interagiscono raggruppati, ad esempio una barra dei menu o un elenco, devono avere la spaziatura corretta per la destinazione.
+* I pulsanti e i menu che supportano il comando Voice devono fornire etichette di testo per la parola chiave Command ("vedere, Say it")
 
 ### <a name="resources"></a>Risorse
 
@@ -623,13 +623,13 @@ Un pulsante già da tempo, una metafora utilizzata per l'attivazione di un event
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Toolkit di realtà mista - UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
+* [Toolkit per realtà mista-UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
 
-## <a name="room-scanning"></a>Chat room l'analisi
+## <a name="room-scanning"></a>Analisi chat room
 
-Le app che richiedono i dati di mapping spaziale si basano sul dispositivo per raccogliere automaticamente i dati nel tempo e tra le sessioni dell'utente esamina il proprio ambiente con il dispositivo attivo. La completezza e la qualità dei dati dipende da diversi fattori tra cui la quantità di esplorazione che l'utente ha eseguito, quanto tempo è trascorso l'esplorazione e se gli oggetti, ad esempio le porte e mobili hanno spostata dal momento che il dispositivo analizzato l'area. Molte App verranno analizzati i dati di mapping spaziale all'inizio dell'esperienza deve valutare se l'utente deve eseguire passaggi aggiuntivi per migliorare la qualità della mappa spaziale e la completezza. Se l'utente è necessario per analizzare l'ambiente, clear è necessario specificare informazioni aggiuntive durante l'esperienza di analisi.
+Le app che richiedono dati di mapping spaziale si basano sul dispositivo per raccogliere automaticamente questi dati nel tempo e nelle sessioni mentre l'utente Esplora il proprio ambiente con il dispositivo attivo. La completezza e la qualità di questi dati dipendono da diversi fattori, tra cui la quantità di esplorazione eseguita dall'utente, il tempo trascorso dall'esplorazione e l'eventuale spostamento degli oggetti, ad esempio mobili e porte, dal momento in cui il dispositivo ha analizzato l'area. Molte app analizzeranno i dati di mapping spaziali all'inizio dell'esperienza per valutare se l'utente deve eseguire passaggi aggiuntivi per migliorare la completezza e la qualità della mappa spaziale. Se l'utente deve analizzare l'ambiente, è necessario fornire indicazioni chiare durante l'esperienza di analisi.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -639,7 +639,7 @@ Le app che richiedono i dati di mapping spaziale si basano sul dispositivo per r
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -651,40 +651,40 @@ Le app che richiedono i dati di mapping spaziale si basano sul dispositivo per r
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Visualizzazione della trama spaziale indicare agli utenti l'analisi sono in corso. Utente conosca in modo chiaro cosa fare e inizio e la fine dell'analisi. | Visualizzazione della trama spaziale viene fornita, ma l'utente potrebbe non chiaramente sapere cosa fare e viene fornita alcuna informazione di stato di avanzamento. | Nessuna visualizzazione della mesh. Nessuna informazione di materiale sussidiario fornita all'utente sulla posizione in cui cercare oppure quando l'analisi avvia o arresta. |
+|  La visualizzazione della mesh spaziale indica che è in corso l'analisi degli utenti. L'utente sa chiaramente cosa fare e quando l'analisi viene avviata e arrestata. | Viene fornita la visualizzazione della mesh spaziale, ma l'utente potrebbe non sapere chiaramente cosa fare e non viene fornita alcuna informazione sullo stato di avanzamento. | Nessuna visualizzazione della rete mesh. Non sono disponibili informazioni aggiuntive per l'utente in merito alla posizione in cui eseguire l'analisi o all'avvio o all'arresto dell'analisi. |
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Durante un'analisi di spazio necessaria, vengono fornite istruzioni audio e video che indica dove guardare e quando avviare e arrestare l'analisi.
+* Durante un'analisi dello spazio richiesto, viene fornita una guida visiva e audio che indica il punto di ricerca e quando avviare e arrestare l'analisi.
 
 ### <a name="recommendations"></a>Consigli
 
-* Indicare in che misura il volume totale in prossimità degli utenti deve far parte dell'esperienza.
-* Comunicano quando l'analisi viene avviata e si arresta, ad esempio un indicatore di stato.
-* Usare una visualizzazione della trama durante l'analisi.
-* Fornire segnali audio e video per incoraggiare l'utente di eseguire ricerche e spostarsi nella stanza.
-* L'utente che indicano dove è possibile per migliorare i dati. In molti casi, potrebbe essere preferibile informare l'utente ne servano per (ad esempio, esaminare il tetto massimo, cercare dietro mobili), per ottenere la qualità di analisi necessarie.
+* Indicare la quantità di volume totale in prossimità degli utenti che deve far parte dell'esperienza.
+* Comunica quando l'analisi viene avviata e interrotta, ad esempio un indicatore di stato.
+* Usare una visualizzazione della mesh durante l'analisi.
+* Fornire indicazioni visive e audio per invitare l'utente a cercare e spostarsi in una stanza.
+* Informare l'utente della posizione per migliorare i dati. In molti casi, può essere preferibile informare l'utente di cosa è necessario fare (ad esempio, osservare il soffitto, guardare dietro la mobilia), per ottenere la qualità di analisi necessaria.
 
 ### <a name="resources"></a>Risorse
 
 #### <a name="documentation"></a>Documentazione
 
 * [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
-* [Case study: Distribuire le funzionalità di mapping spaziale di HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Case study: Progettazione per HoloTour spaziale](case-study-spatial-sound-design-for-holotour.md)
-* [Case study: Creazione di un'esperienza coinvolgente su in frammenti](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Case Study: Espansione delle funzionalità di mapping spaziale di HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Case Study: Progettazione di suoni spaziali per HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Case Study: Creazione di un'esperienza immersiva nei frammenti](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Toolkit di realtà mista - UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
+* [Toolkit per realtà mista-UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
 
 ## <a name="directional-indicators"></a>Indicatori direzionali
 
-In un'app di realtà mista, il contenuto sia all'esterno del campo di visualizzazione o bloccati dagli oggetti reali. Un'applicazione ben progettata renderà più facile trovare il contenuto non visibili all'utente. Indicatori direzionali avvisano un utente al contenuto importante e forniscono materiale sussidiario per il contenuto relativo alla posizione dell'utente. Materiale sussidiario per il contenuto non visibili può richiedere la forma di istanze di emissione FixIt audio, le frecce direzionali o segnali visivi diretti.
+In un'app di realtà mista, il contenuto può essere esterno al campo di visualizzazione o bloccato da oggetti reali. Un'app ben progettata renderà più semplice per l'utente trovare contenuto non visibile. Gli indicatori direzionali segnalano a un utente un contenuto importante e forniscono indicazioni sul contenuto relativo alla posizione dell'utente. Le linee guida per il contenuto non visibile possono assumere la forma di emettitori di suoni, frecce direzionali o segnali visivi diretti.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -694,7 +694,7 @@ In un'app di realtà mista, il contenuto sia all'esterno del campo di visualizza
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -706,28 +706,28 @@ In un'app di realtà mista, il contenuto sia all'esterno del campo di visualizza
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Segnali audio e video direttamente guidano l'utente per il contenuto pertinente di fuori del campo di visualizzazione. | Una freccia o un indicatore che punta all'utente nella direzione generale del contenuto. | Il contenuto pertinente è di fuori del campo di visualizzazione e scarsa o alcuna indicazione di percorso non viene fornito all'utente. | 
+|  I suggerimenti visivi e audio indirizzano direttamente l'utente al contenuto pertinente al di fuori del campo di visualizzazione. | Una freccia o un indicatore che punta l'utente nella direzione generale del contenuto. | Il contenuto pertinente non è compreso nel campo di visualizzazione e non è stata fornita alcuna indicazione per la posizione dell'utente. | 
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Il contenuto pertinente di fuori del campo utente visivo è individuabile tramite segnali visivi e/o audio.
+* Il contenuto pertinente al di fuori del campo di visualizzazione utente può essere individuato tramite segnali visivi e/o audio.
 
 ### <a name="recommendations"></a>Consigli
 
-* Quando il contenuto pertinente non è compreso il campo di vista dell'utente, usare gli indicatori direzionali e segnali acustici per assistere l'utente al contenuto. In molti casi, una guida visiva diretta è preferibile le frecce direzionali.
-* Gli indicatori direzionali non devono essere creati nel cursore.
+* Quando il contenuto pertinente è esterno al campo di visualizzazione dell'utente, usare indicatori direzionali e segnali audio per guidare l'utente nel contenuto. In molti casi, è preferibile una guida visiva diretta sulle frecce direzionali.
+* Gli indicatori direzionali non devono essere incorporati nel cursore.
 
 ### <a name="resources"></a>Risorse
 
 * [Frame olografico](holographic-frame.md)
 
-## <a name="data-loading"></a>Caricamento dei dati
+## <a name="data-loading"></a>Caricamento dati
 
-Un controllo di stato fornisce all'utente un feedback nel caso in cui sia in corso un'operazione di lunga durata. È possibile che l'utente non è possibile interagire con l'app quando l'indicatore di stato è visibile e può anche indicare quanto tempo il tempo di attesa potrebbe essere.
+Un controllo di stato fornisce all'utente un feedback nel caso in cui sia in corso un'operazione di lunga durata. Questo può significare che l'utente non può interagire con l'app quando l'indicatore di stato è visibile e può anche indicare la durata del tempo di attesa.
 
-### <a name="device-impact"></a>Impatto di dispositivo
+### <a name="device-impact"></a>Effetti sul dispositivo
 
 <table>
     <colgroup>
@@ -737,7 +737,7 @@ Un controllo di stato fornisce all'utente un feedback nel caso in cui sia in cor
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -749,17 +749,17 @@ Un controllo di stato fornisce all'utente un feedback nel caso in cui sia in cor
 
 ### <a name="quality-criteria"></a>Criteri di qualità
 
-|  Migliore  |  Soddisfa |  esito negativo |
+|  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-|  Animata indicatore visivo, sotto forma di un indicatore di stato o un anello, che mostra lo stato di avanzamento durante il caricamento o l'elaborazione dati. L'indicatore visivo fornisce indicazioni su quanto tempo può essere l'attesa. | Utente viene informato che il caricamento dei dati è in corso, ma è presente alcuna indicazione di quanto tempo può essere l'attesa. | Non è il caricamento dei dati o indicatori di processo per l'attività richiede più di 5 secondi. |
+|  Indicatore visivo animato, sotto forma di indicatore di stato o anello, che mostra lo stato di avanzamento durante il caricamento o l'elaborazione dei dati. L'indicatore visivo fornisce indicazioni sulla durata dell'attesa. | L'utente viene informato che è in corso il caricamento dei dati, ma non è presente alcuna indicazione del tempo di attesa. | Nessun indicatore di caricamento o elaborazione dei dati per l'attività richiede più di 5 secondi. |
 
-### <a name="how-to-measure"></a>Consente di misurare
+### <a name="how-to-measure"></a>Come misurare
 
-* Durante il caricamento dei dati non verificare lo stato vuoto per più di 5 secondi.
+* Durante il caricamento dei dati, verificare che non sia presente alcuno stato vuoto per più di 5 secondi.
 
 ### <a name="recommendations"></a>Consigli
 
-* Fornire un animatore durante il caricamento di dati che mostra lo stato di avanzamento in qualsiasi situazione, quando l'utente potrebbe percepire questa app sono bloccati o arrestato in modo anomalo. Una regola generale ragionevole è un'attività 'caricamento in corso' che potrebbe richiedere più di 5 secondi.
+* Fornire un'animazione per il caricamento dei dati che mostra lo stato di avanzamento in qualsiasi situazione in cui l'utente può percepire che l'app è bloccata o arrestata in modo anomalo. Una regola empirica ragionevole è l'attività di caricamento che può richiedere più di 5 secondi.
 
 ### <a name="resources"></a>Risorse
 

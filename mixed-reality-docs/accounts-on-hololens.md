@@ -1,56 +1,56 @@
 ---
 title: Account in HoloLens
-description: Come configurare e gestire gli account utente su HoloLens.
+description: Come configurare e gestire gli account utente in HoloLens.
 author: ''
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, utente, account, aad, ad FS, account microsoft, account del servizio gestito, le credenziali
+keywords: HoloLens, User, account, AAD, ADFS, Microsoft account, MSA, Credentials
 ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599832"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516810"
 ---
 # <a name="accounts-on-hololens"></a>Account in HoloLens
 
-Durante la configurazione iniziale di HoloLens, gli utenti devono accedere con l'account da usare nel dispositivo. Questo account può essere un account Microsoft consumer o un account aziendale che è stato configurato in Azure Active Directory (AAD) o Active Directory Federation Services (ADFS).
+Durante la configurazione iniziale di HoloLens, è necessario che gli utenti accedano con l'account che vogliono usare sul dispositivo. Questo account può essere un account Microsoft utente o un account aziendale che è stato configurato in Azure Active Directory (AAD) o Active Directory Federation Services (ADFS).
 
-Accesso a questo account durante l'installazione crea un profilo utente nel dispositivo che l'utente può usare per accedere, e in cui tutte le app verranno archiviati i dati. Questo stesso account fornisce anche Single Sign-On per le app, ad esempio Microsoft Edge o Skype tramite le API di gestione di Account di Windows.
+L'accesso a questo account durante l'installazione crea un profilo utente sul dispositivo che l'utente può usare per l'accesso e su cui verranno archiviati i dati in tutte le app. Questo stesso account fornisce anche l'accesso Single Sign-on per app quali Edge o Skype tramite le API di gestione account di Windows.
 
-Inoltre, quando si accede a un'organizzazione o account aziendale nel dispositivo, può essere usato anche criteri di gestione dei dispositivi mobili (MDM), se configurate dall'amministratore IT.
+Inoltre, quando si accede a un account aziendale o aziendale sul dispositivo, può anche applicare criteri di gestione dei dispositivi mobili (MDM), se configurati dall'amministratore IT.
 
-Ogni volta che il dispositivo viene riavviato o esce dalla modalità standby, vengono utilizzate le credenziali per questo account per accedere di nuovo. Se l'opzione l'applicazione un accesso aggiuntivo esplicito è abilitata nelle impostazioni, all'utente verrà richiesto di digitare nuovamente le proprie credenziali. Ogni volta che il dispositivo si riavvia dopo la ricezione e l'applicazione di un aggiornamento del sistema operativo, un accesso aggiuntivo esplicito è necessario.
+Ogni volta che il dispositivo viene riavviato o riprende dalla modalità standby, le credenziali per questo account vengono usate per eseguire di nuovo l'accesso. Se l'opzione che impone l'accesso esplicito è abilitata nelle impostazioni, all'utente verrà richiesto di digitare di nuovo le credenziali. Ogni volta che il dispositivo viene riavviato dopo la ricezione e l'applicazione di un aggiornamento del sistema operativo, è necessario un accesso esplicito.
 
-## <a name="multi-user-support"></a>Supporto multiutente
+## <a name="multi-user-support"></a>Supporto per più utenti
 
 >[!NOTE]
->Supporto di più utenti richiede Commercial Suite, poiché si tratta di un [Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) funzionalità.
+>Il supporto per più utenti richiede la suite commerciale, perché si tratta di una funzionalità [di Windows olografica per le aziende](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) .
 
-Inizia con la [Windows 10 April 2018 Update](release-notes-april-2018.md), HoloLens supporta più utenti all'interno dello stesso tenant AAD. Per utilizzare questa opzione è necessario impostare il dispositivo inizialmente con un account che appartiene all'organizzazione. Successivamente, altri utenti dal tenant stesso sarà in grado di accedere al dispositivo dalla schermata di accesso o toccando il riquadro utente nel pannello del menu Start per disconnettere l'utente esistente. 
+A partire dall' [aggiornamento di Windows 10 aprile 2018](release-notes-april-2018.md), HoloLens supporta più utenti all'interno dello stesso tenant di AAD. Per usarlo, è necessario configurare inizialmente il dispositivo con un account appartenente all'organizzazione. Successivamente, altri utenti dello stesso tenant saranno in grado di accedere al dispositivo dalla schermata di accesso o toccando il riquadro utente nel pannello Start per disconnettersi dall'utente esistente. 
 
-Le app installate nel dispositivo saranno disponibili per tutti gli altri utenti, ma ognuna avrà i propri dati dell'app e le preferenze. Rimozione di un'app lo rimuoverà anche tutti gli altri utenti però. 
+Le app installate nel dispositivo saranno disponibili per tutti gli altri utenti, ma ognuna avrà i dati e le preferenze dell'app. Se si rimuove un'app, questa verrà rimossa anche per tutti gli altri utenti. 
 
-È possibile rimuovere gli utenti dei dispositivi dal dispositivo per recuperare spazio passando a Impostazioni > account > ad altri utenti. Verranno anche rimossi tutti i dati degli altri utenti dell'app dal dispositivo. 
+È possibile rimuovere gli utenti del dispositivo dal dispositivo per recuperare spazio passando a Impostazioni > account > altre persone. Vengono rimossi anche tutti i dati dell'app degli altri utenti dal dispositivo. 
 
 ## <a name="linked-accounts"></a>Account collegati
 
-All'interno di un account singolo dispositivo, gli utenti possono collegare le credenziali dell'account web aggiuntivi allo scopo di semplificare l'accesso all'interno delle App (ad esempio, di Store) oppure per combinare l'accesso alle risorse personali e aziendali, analogamente alla versione Desktop di Windows. Accesso a un altro account in questo modo non separa i dati dell'utente creati nel dispositivo, ad esempio immagini o download. Una volta un account è stato connesso a un dispositivo, è possono rendere le app usano di esso con l'autorizzazione per ridurre la necessità di accedere a ogni app singolarmente.
+All'interno di un singolo account del dispositivo, gli utenti possono collegare altre credenziali di account Web allo scopo di semplificare l'accesso all'interno delle app (ad esempio lo Store) o combinare l'accesso a risorse personali e di lavoro, in modo analogo alla versione desktop di Windows. L'accesso a un account aggiuntivo in questo modo non separa i dati utente creati nel dispositivo, ad esempio immagini o download. Una volta che un account è stato connesso a un dispositivo, le app possono usarlo con le autorizzazioni necessarie per ridurre la necessità di accedere singolarmente a ogni app.
 
-## <a name="using-single-sign-on-within-an-app"></a>Utilizza single sign-on all'interno di un'app
+## <a name="using-single-sign-on-within-an-app"></a>Uso di Single Sign-on in un'app
 
-Lo sviluppatore di applicazioni, è possibile sfruttare i vantaggi di ottenere un'identità connessa su HoloLens con il [API di gestione di Account Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), esattamente come si farebbe con gli altri dispositivi Windows. Alcuni esempi di codice per queste API sono disponibili [qui](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+Gli sviluppatori di app possono sfruttare i vantaggi offerti dall'uso di un'identità connessa in HoloLens con le [API di gestione account di Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), proprio come si farebbe per altri dispositivi Windows. Alcuni esempi di codice per queste API sono disponibili [qui](http://go.microsoft.com/fwlink/p/?LinkId=620621).
 
-Fornire il consenso gli interrupt qualsiasi account che possono verificarsi, ad esempio utente richiedente per informazioni sull'account, quando l'app richiede un token di autenticazione è necessario gestire l'autenticazione a due fattori e così via.
+Eventuali interrupt di account che possono verificarsi, ad esempio la richiesta del consenso dell'utente per le informazioni sull'account, l'autenticazione a due fattori e così via, devono essere gestiti quando l'app richiede un token di autenticazione.
 
-Se l'app richiede un tipo di account specifico che non è stato collegato in precedenza, l'app può chiedere il sistema richiede all'utente di aggiungerne uno. Questo attiverà il riquadro Impostazioni account in cui deve essere avviato come finestra figlio modale dell'app. Per le app 2D, verrà eseguito il rendering di questa finestra direttamente tramite il centro della tua app e per le app Unity, viene visualizzata brevemente l'utente dall'app holographic in modo che sia possibile eseguire il rendering di questa finestra figlio. Personalizzare i comandi e le azioni su questo riquadro è descritta [qui](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx).
+Se l'app richiede un tipo di conto specifico che non è stato collegato in precedenza, l'app può chiedere al sistema di richiedere all'utente di aggiungerne una. In questo modo, il riquadro Impostazioni account verrà avviato come un figlio modale dell'app. Per le app 2D, questa finestra eseguirà il rendering direttamente sul centro dell'app e per le app Unity, in modo da estrarre brevemente l'utente dall'app olografica per poter eseguire il rendering della finestra figlio. La personalizzazione dei comandi e delle azioni in questo riquadro è descritta di [seguito](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx).
 
-## <a name="enterprise-and-other-authentication"></a>Enterprise e altro tipo di autenticazione
+## <a name="enterprise-and-other-authentication"></a>Enterprise e altri tipi di autenticazione
 
-Se l'app fa uso di altri tipi di autenticazione, ad esempio NTLM, Basic o Kerberos, è possibile usare [dell'interfaccia utente delle credenziali Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) per raccogliere, elaborare e archiviare le credenziali dell'utente. L'esperienza utente per la raccolta di queste credenziali è molto simile a altri cloud basato su account gli interrupt e verrà visualizzati come un'app figlio all'inizio l'app 2D o sospendere brevemente un'app Unity in modo da visualizzare l'interfaccia utente.
+Se l'app usa altri tipi di autenticazione, ad esempio NTLM, Basic o Kerberos, è possibile usare l' [interfaccia utente delle credenziali di Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) per raccogliere, elaborare e archiviare le credenziali dell'utente. L'esperienza utente per la raccolta di queste credenziali è molto simile ad altri interrupt di account basati sul cloud e verrà visualizzata come un'app figlio sull'app 2D o per sospendere brevemente un'app Unity per visualizzare l'interfaccia utente.
 
 ## <a name="deprecated-apis"></a>API deprecate
 
-Una differenza per lo sviluppo su HoloLens dal Desktop è che [OnlineIDAuthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) API non è completamente supportato. Anche se restituirà che un token se l'account primario si trova in buona-permanente, interrompe, ad esempio quelli descritti in precedenza non verrà visualizzata alcuna interfaccia utente per l'utente e avrà esito negativo autenticare correttamente l'account.
+Una differenza per lo sviluppo su HoloLens dal desktop è che l'API [OnlineIDAuthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) non è completamente supportata. Sebbene restituisca un token se l'account primario è in esecuzione, gli interrupt come quelli descritti in precedenza non visualizzeranno alcuna interfaccia utente per l'utente e non riusciranno a autenticare correttamente l'account.
 

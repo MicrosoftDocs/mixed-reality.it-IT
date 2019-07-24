@@ -1,11 +1,11 @@
 ---
 title: Dettagli sull'hardware HoloLens
-description: Descrizione dei componenti che costituiscono Microsoft HoloLens, prima completamente senza i limiti holographic computer al mondo che esegue Windows.
+description: Un contorno dei componenti che costituiscono Microsoft HoloLens, il primo computer olografico completamente senza tethering che esegue Windows.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, componenti, sensori, technology, tecnologia, eliminazione, disinstallazione,
+keywords: HoloLens, Components, Sensors, Technology, Tech, Tear Down, teardown,
 ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
 ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
@@ -13,87 +13,87 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67326199"
 ---
-# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (dal 1 ° generazione) dettagli sull'hardware
+# <a name="hololens-1st-gen-hardware-details"></a>Dettagli hardware HoloLens (1a generazione)
 
 ![Microsoft HoloLens](images/see-through-400px.jpg)
 
-Microsoft HoloLens è computer di holographic completamente senza i limiti prima del mondo. HoloLens ridefinisce il vostro attraverso holographic esperienze che ti permettono in modi nuovi. HoloLens mescola fibra ottica all'avanguardia e sensori per recapitare vntana 3D aggiunta al mondo reale si.
+Microsoft HoloLens è il primo computer olografico completamente slegato del mondo. HoloLens ridefinisce il personal computing tramite esperienze olografiche per consentire l'uso in modi nuovi. HoloLens unisce ottica e sensori all'avanguardia per offrire ologrammi 3D aggiunti al mondo reale.
 
 ## <a name="how-to-get-microsoft-hololens"></a>Come ottenere Microsoft HoloLens
 
-Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development Edition e aggiunta di una configurazione di Commercial Suite che include una funzionalità di garanzia ed enterprise per la gestione dei dispositivi e sicurezza. Se lavora in America del Nord, è possibile noleggiare HoloLens anche tramite un partner.
+Microsoft HoloLens è disponibile per l'acquisto sia come versione di sviluppo che come una configurazione di suite commerciale che include una garanzia e funzionalità aziendali per la gestione aggiuntiva di dispositivi e sicurezza. Se ci si trova in America del Nord, è anche possibile affittare HoloLens tramite un partner.
 
-[Fare clic qui per ulteriori informazioni sull'acquisto o noleggio Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
+[Fare clic qui per altre informazioni su come acquistare o noleggiare Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
 
 ## <a name="device-specifications"></a>Specifiche del dispositivo
 
-### <a name="optics"></a>Fibra ottica
+### <a name="optics"></a>Ottica
 
-![HoloLens è trasparente holographic lenses](images/displays-400px.jpg)
-* Lenses holographic trasparente (waveguides)
-* 2 HD 16:9 chiari motori
-* Calibrazione distanza pupillary automatica
-* Soluzione holographic: 2.3 milione di punti chiari totale
-* Densità holographic: > 2,5 radiants k (luce punti per ogni in radianti)
+![HoloLens ha le lenti olografiche See-through](images/displays-400px.jpg)
+* Vedere: tramite gli obiettivi olografici (Guide)
+* 2 motori HD 16:9 Light
+* Taratura distanza pupilla automatica
+* Risoluzione olografica: 2,3 milioni di punti luce totali
+* Densità olografica: > 2,5 k radianti (punti luminosi per radianti)
 
 ### <a name="sensors"></a>Sensori
 
-![HoloLens hanno sensori per la comprensione di ambiente e informazioni sulle risorse umane](images/sensor-bar-400px.jpg)
+![HoloLens include sensori per la comprensione dell'ambiente e la comprensione umana](images/sensor-bar-400px.jpg)
 * 1 IMU
-* 4 camere di conoscenza di ambiente
-* fotocamera 1 profondità
-* 1 foto 2MP / HD videocamera
+* 4 ambiente informazioni sulle fotocamere
+* 1 fotocamera con profondità
+* 1 2MP foto/videocamera video HD
 * Acquisizione in realtà mista (MRC, Mixed Reality Capture)
 * 4 microfoni
-* sensore di luce ambientale 1
+* 1 sensore di luminosità ambiente
 
-### <a name="human-understanding"></a>Informazioni sulle risorse umane
+### <a name="human-understanding"></a>Comprensione umana
 * Audio spaziale
-* Estasiati rilevamento
-* Input di movimento
+* Rilevamento degli sguardi
+* Input movimento
 * Supporto vocale
 
-### <a name="input--output--connectivity"></a>Input / Output / connettività
-* Relatori predefinite
-* Jack mm 3,5 audio
+### <a name="input--output--connectivity"></a>Input/output/connettività
+* Altoparlanti predefiniti
+* Jack audio 3.5 mm
 * Volume su/giù
-* Luminosità su/giù
+* Luminosità verso l'alto o verso il basso
 * Pulsante di alimentazione
 * LED di stato della batteria
-* Wi-Fi 802.11ac
-* Micro USB 2.0
-* 4\.1 Bluetooth LE
+* Wi-Fi 802.11 AC
+* Micro USB 2,0
+* Bluetooth 4,1 LE
 
 ### <a name="power"></a>Alimentazione
 * Durata della batteria
 * 2-3 ore di utilizzo attivo
-* Fino a 2 settimane prima della fase di standby
-* Completamente funzionale addebito
-* Passivamente raffreddato (nessun fan)
+* Fino a 2 settimane di tempo di standby
+* Completamente funzionante durante la ricarica
+* Con raffreddamento passivo (senza ventola)
 
 ### <a name="processors"></a>Processori
 
-![La scheda madre per Microsoft HoloLens](images/motherboard-400px.jpg)
-* Architettura Intel a 32 bit con supporto per TPM 2.0
-* Unità di elaborazione olografica Microsoft personalizzate (HPU 1.0)
+![Scheda madre per Microsoft HoloLens](images/motherboard-400px.jpg)
+* Architettura Intel a 32 bit con supporto per TPM 2,0
+* Unità di elaborazione olografica personalizzata Microsoft (HPU 1,0)
 
 ### <a name="weight"></a>Peso
 * 579 g
 
 ### <a name="memory"></a>Memoria
-* 64 GB Flash
+* 64 GB di Flash
 * 2 GB di RAM
 
-### <a name="whats-in-the-box"></a>Che cos'è nella finestra di
+### <a name="whats-in-the-box"></a>Elementi presenti nella finestra
 * HoloLens Development Edition
 * Clicker
-* Custodia
-* Caricabatterie e cavi
-* Microfibra tessuto
-* Riquadri naso
-* Overhead caviglia
+* Caso di trasporto
+* Caricabatterie e cavo
+* Panno in microfibra
+* Rilievi
+* Strap overhead
 
-### <a name="os-and-apps"></a>Le App e del sistema operativo
+### <a name="os-and-apps"></a>Sistema operativo e app
 * Windows 10
 * Windows Store
 * Ologrammi
@@ -102,11 +102,11 @@ Microsoft HoloLens è disponibile per l'acquisto come un entrambi un Development
 * Impostazioni
 * Windows Feedback
 * Calibrazione
-* Scopri i movimenti
+* Informazioni sui movimenti
 
-### <a name="what-you-need-to-develop"></a>Cosa occorre per lo sviluppo
-* [PC Windows 10 in grado di eseguire le ultime versioni compatibili di Visual Studio e Unity](install-the-tools.md)
+### <a name="what-you-need-to-develop"></a>Elementi necessari per lo sviluppo
+* [Windows 10 PC in grado di eseguire le versioni compatibili più recenti di Visual Studio e Unity](install-the-tools.md)
 
-### <a name="safety-eyewear"></a>Sicurezza Eyewear
+### <a name="safety-eyewear"></a>Occhiali di sicurezza
 
-HoloLens è stato testato e conforme ai requisiti di protezione base impatto ANSI Z87.1, CSA Z94.3 e 166 EN
+HoloLens è stato testato e trovato per conformarsi ai requisiti di base per la protezione degli effetti di ANSI Z 87.1, CSA Z 94.3 e EN 166

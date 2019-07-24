@@ -1,37 +1,37 @@
 ---
-title: Sensore di ottimizzazione
-description: Come usare il sensore trovato nelle impostazioni di HoloLens utilità di ottimizzazione.
+title: Ottimizzazione del sensore
+description: Come usare l'utilità di ottimizzazione dei sensori disponibile nelle impostazioni di HoloLens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: sensori, calibrare, calibrazione, ottimizzare, impostazioni, procedure
+keywords: sensori, calibratura, calibrazione, ottimizzazione, impostazioni, procedure
 ms.openlocfilehash: 5d81cbd98809c6cbacdc48d9099168c5bc05a300
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602642"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517061"
 ---
-# <a name="sensor-tuning"></a>Sensore di ottimizzazione
+# <a name="sensor-tuning"></a>Ottimizzazione del sensore
 
 >[!WARNING]
->Questa app non è più disponibile in HoloLens a partire da Windows 10 April 2018 Update. I sensori ora ricalibrare stessi automaticamente. 
+>Questa app non è più disponibile in HoloLens a partire dall'aggiornamento di Windows 10 aprile 2018. I sensori ora vengono ricalibrati automaticamente. 
 
-Sensore di utilità di ottimizzazione consente HoloLens aggiornare le proprie informazioni di calibrazione del sensore. Esecuzione di questa applicazione può migliorare la qualità di ologramma.
+L'utilità di ottimizzazione dei sensori consente a HoloLens di aggiornare le informazioni di calibrazione del sensore. L'esecuzione di questa applicazione può migliorare la qualità degli ologrammi.
 
-1. Apri impostazioni App
+1. Apri app impostazioni
 
-   ![Impostazione app in HoloLens](images/settingssensortuning-500px.png)
+   ![Impostazione dell'app in HoloLens](images/settingssensortuning-500px.png)
   
-2. Selezionare il sistema
+2. Selezione sistema
 
    ![Pagina sistema nell'app impostazioni](images/systemsensortuning-500px.png)
   
 3. Selezionare le utilità
 
-   ![Pagina Utilità nell'app impostazioni](images/utilitiessensortuning-500px.png)
+   ![Pagina utilità nell'app impostazioni](images/utilitiessensortuning-500px.png)
   
-4. Scorrere verso il basso l'ottimizzazione del sensore
+4. Scorri verso il basso fino a ottimizzazione del sensore
 
-   ![Sensore di ottimizzazione nella pagina di utilità](images/sensortuningsettingsapp-500px.png)
+   ![Ottimizzazione del sensore nella pagina delle utilità](images/sensortuningsettingsapp-500px.png)

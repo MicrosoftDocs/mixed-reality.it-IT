@@ -1,6 +1,6 @@
 ---
 title: OpenXR
-description: Provare l'API OpenXR 0,90 provvisorio con l'anteprima per sviluppatori di OpenXR realtà mista.
+description: Provare l'API OpenXR 0,90 provvisoria con la realtà mista OpenXR Developer Preview.
 author: thetuvix
 ms.author: alexturn
 ms.date: 3/18/2019
@@ -15,71 +15,71 @@ ms.locfileid: "66039176"
 ---
 # <a name="openxr"></a>OpenXR
 
-OpenXR è uno standard e gratuita aperto da [Khronos](https://www.khronos.org/) che fornisce l'accesso nativo a un'ampia gamma di dispositivi da molti fornitori che si estendono sulle [spettro di realtà mista](mixed-reality.md).
+OpenXR è uno standard aperto senza diritti d'autore di [Khronos](https://www.khronos.org/) che fornisce l'accesso nativo a un'ampia gamma di dispositivi di molti fornitori che si estendono nello spettro della [realtà mista](mixed-reality.md).
 
-Con OpenXR, è possibile compilare applicazioni destinate sia holographic dispositivi (ad esempio 2 di HoloLens) che consentono di posizionare contenuto digitale nel mondo reale, come se fosse non sono disponibili, nonché dispositivi immersivi (ad esempio le cuffie realtà mista di Windows per PC desktop) che nascondono la mondo fisico e sostituirla con un'esperienza digitale.  OpenXR consente di scrivere codice una volta che viene quindi portabile in un'ampia gamma di piattaforme hardware.
+Con OpenXR, è possibile creare applicazioni destinate a entrambi i dispositivi olografici (ad esempio HoloLens 2) che collocano contenuti digitali nel mondo reale come se fossero effettivamente presenti, nonché dispositivi immersivi, come le cuffie di realtà mista di Windows per PC desktop, che nascondono il mondo fisico e sostituirlo con un'esperienza digitale.  OpenXR consente di scrivere codice una volta trasportabile in un'ampia gamma di piattaforme hardware.
 
-Lo standard OpenXR è attualmente in una fase provvisoria, con una specifica OpenXR 0,90 inizio rilasciata per commenti e suggerimenti.  Per altre informazioni su OpenXR, incluso l'accesso al [provisional spec 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html) e [intestazioni](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr), vedere il [pagina Khronos OpenXR](https://www.khronos.org/openxr/). 
+Lo standard OpenXR si trova attualmente in una fase provvisoria, con una specifica iniziale OpenXR 0,90 rilasciata per il feedback.  Per altre informazioni su OpenXR, incluso l'accesso alla specifica e alle [intestazioni](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)di [0,90 provvisorio](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html) , vedere la [pagina Khronos OpenXR](https://www.khronos.org/openxr/). 
 
-È possibile provare l'API OpenXR 0,90 provvisorio in 2 HoloLens o un PC desktop tramite l'anteprima per sviluppatori di OpenXR realtà mista.  Questo runtime di anteprima consente applicazioni destinate a API di OpenXR 0,90 2 HoloLens o auricolari coinvolgenti di realtà mista di Windows sul desktop di destinazione.
+È possibile provare l'API OpenXR 0,90 provvisoria in un HoloLens 2 o un PC desktop usando la realtà mista OpenXR Developer Preview.  Questo runtime iniziale consente alle applicazioni destinate all'API OpenXR 0,90 di usare gli auricolari HoloLens 2 o Windows a realtà mista sul desktop.
 
-Se non si ha accesso per le cuffie, è possibile utilizzare invece l'emulatore di 2 HoloLens o il simulatore di realtà mista di Windows.
+Se non si ha accesso a una cuffia, è invece possibile usare l'emulatore HoloLens 2 o il simulatore di realtà mista di Windows.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-hololens-2"></a>Imposta l'anteprima per sviluppatori di OpenXR realtà mista per HoloLens 2
+## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-hololens-2"></a>Configurazione della realtà mista OpenXR Developer Preview per HoloLens 2
 
-Per iniziare a usare l'anteprima per sviluppatori di OpenXR realtà mista in 2 HoloLens:
+Per iniziare a usare la realtà mista OpenXR Developer Preview in HoloLens 2:
 
-1. Consente di impostare un 2 HoloLens o seguire le istruzioni per [installare l'emulatore di HoloLens 2](using-the-hololens-emulator.md).
-1. Avviare l'app Store dal dispositivo o emulatore e verificare che tutte le app vengono aggiornate.  Si installerà l'anteprima per sviluppatori di OpenXR realtà mista per l'uso con le App in tale dispositivo.  Se si usa l'emulatore, è opportuno consultare il [emulatore input istruzioni](using-the-hololens-emulator.md#basic-emulator-input) per aiutarti a usare l'app Store all'interno dell'emulatore.
+1. Configurare un HoloLens 2 o seguire le istruzioni per [installare l'emulatore HoloLens 2](using-the-hololens-emulator.md).
+1. Avviare l'App Store dall'interno del dispositivo o dell'emulatore e assicurarsi che tutte le app vengano aggiornate.  Verrà installata la realtà mista OpenXR Developer Preview per l'uso con le app in tale dispositivo.  Se si usa l'emulatore, è consigliabile consultare le [istruzioni di input](using-the-hololens-emulator.md#basic-emulator-input) dell'emulatore per usare l'app dello Store all'interno dell'emulatore.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-immersive-desktop-headsets"></a>Impostare l'anteprima per sviluppatori di OpenXR realtà mista per immersive auricolari desktop
+## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-immersive-desktop-headsets"></a>Configurazione della realtà mista OpenXR Developer Preview per cuffie Desktop immersive
 
-Per iniziare a usare l'anteprima per sviluppatori di OpenXR realtà mista in un PC desktop:
+Per iniziare a usare la realtà mista OpenXR Developer Preview in un computer desktop:
 
-1. Verificare che si esegue Windows 10 ottobre 2018 Update (1809) o Windows 10 può 2019 aggiornare (1903).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di maggio 2019 aggiornamento usando il [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
-1. Consente di impostare un visore VR realtà mista di Windows o per seguire le istruzioni [Abilita il simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md).
-1. Installare il [realtà mista OpenXR Developer Preview app](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  Questa app ti permette di configurare con l'anteprima OpenXR runtime per Windows 10 ottobre 2018 Update (1809) o versione successiva.  Dopo aver installato l'app, il Windows Store consente di mantenere il runtime aggiornato.
-1. Eseguire l'app mista realtà OpenXR Developer Preview dal menu Start e seguire le istruzioni per rendere il runtime attivo.  A breve, questa app sarà possibile esplorare anche altre informazioni di debug OpenXR.
+1. Assicurarsi di eseguire l'aggiornamento di Windows 10 ottobre 2018 (1809) o l'aggiornamento di Windows 10 di maggio 2019 (1903).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento all'aggiornamento di maggio 2019 usando [Windows 10 Update Assistant](https://www.microsoft.com/en-us/software-download/windows10).
+1. Configurare un auricolare di realtà mista di Windows o seguire le istruzioni per [abilitare il simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md).
+1. Installare l' [app OpenXR Developer Preview di realtà mista](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  Questa app viene configurata con l'anteprima di OpenXR Runtime in Windows 10 ottobre 2018 aggiornamento (1809) o versione successiva.  Dopo l'installazione di questa app, Windows Store manterrà aggiornato il Runtime.
+1. Eseguire l'app OpenXR Developer Preview per la realtà mista dal menu Start e seguire le istruzioni per rendere attivo il Runtime.  A breve, questa app consente di esplorare anche altre informazioni di debug di OpenXR.
 
-![Realtà mista OpenXR Developer Preview app](images/mixed-reality-openxr-developer-preview.png)
+![App OpenXR Developer Preview in realtà mista](images/mixed-reality-openxr-developer-preview.png)
 
-### <a name="support-for-windows-10-october-2018-update"></a>Supporto per Windows 10 ottobre 2018 Update
+### <a name="support-for-windows-10-october-2018-update"></a>Supporto per l'aggiornamento di Windows 10 ottobre 2018
 
-Se si esegue Windows 10 maggio 2019 aggiornare (1903) e seguita la procedura descritta sopra, si è pronti a usare l'anteprima per sviluppatori di OpenXR realtà mista.
+Se si esegue l'aggiornamento di Windows 10 May 2019 (1903) e si sono seguiti i passaggi precedenti, è necessario essere pronti per usare la realtà mista OpenXR Developer Preview.
 
-Se non si è pronti a [aggiornare il PC desktop a maggio 2019 Update](https://www.microsoft.com/en-us/software-download/windows10), è possibile procedere in Windows 10 ottobre 2018 aggiornare (1809) seguendo un altro passaggio:
+Se non si è pronti ad [aggiornare il PC desktop all'aggiornamento di maggio 2019](https://www.microsoft.com/en-us/software-download/windows10), è possibile procedere con l'aggiornamento di Windows 10 ottobre 2018 (1809) seguendo un altro passaggio:
 
-1. Seguire i passaggi precedenti per installare l'anteprima per sviluppatori di OpenXR realtà mista.
-1. Per impostare l'anteprima per sviluppatori di OpenXR realtà mista come runtime OpenXR attivo del sistema, installare il [mista realtà OpenXR Developer Preview Compatibility Pack](https://aka.ms/openxr-compat).
+1. Seguire questa procedura per installare la realtà mista OpenXR Developer Preview.
+1. Per impostare la realtà mista OpenXR Developer Preview come il runtime OpenXR attivo del sistema, installare il [pacchetto di compatibilità OpenXR Developer Preview](https://aka.ms/openxr-compat)per la realtà mista.
 
-## <a name="building-a-sample-openxr-app"></a>Creazione di un'app di esempio OpenXR
+## <a name="building-a-sample-openxr-app"></a>Compilazione di un'app OpenXR di esempio
 
-Il [BasicXrApp](https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp) progetto illustra un semplice esempio OpenXR con due file di progetto di Visual Studio, uno per sia un'app desktop Win32 e uno per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto UWP HoloLens, sarà necessario il [carico di lavoro sviluppo per Universal Windows Platform](install-the-tools.md#installation-checklist) installata in Visual Studio completamente aprirlo.
+Il progetto [BasicXrApp](https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp) illustra un semplice esempio di OpenXR con due file di progetto di Visual Studio, uno per un'app desktop Win32 e uno per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto HoloLens UWP, è necessario che il [carico di lavoro di sviluppo piattaforma UWP (Universal Windows Platform)](install-the-tools.md#installation-checklist) installato in Visual Studio per aprirlo completamente.
 
-Si noti che mentre i file di progetto UWP e Win32 sono separati a causa delle differenze nella creazione di pacchetti e distribuzione, il codice dell'app all'interno di ogni progetto è 100% lo stesso.
+Si noti che, mentre i file di progetto Win32 e UWP sono separati a causa delle differenze nella creazione di pacchetti e distribuzione, il codice dell'app all'interno di ogni progetto è uguale al 100%.
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>Commenti e suggerimenti
 
-Per fornire il feedback il [specification OpenXR provvisorie 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html), visitare il [Khronos OpenXR forum](https://community.khronos.org/c/openxr), [canale Slack #openxr](https://khr.io/slack) e il [spec tracker problema](https://github.com/KhronosGroup/OpenXR-Docs/issues).
+Per inviare commenti e suggerimenti sulla [specifica OpenXR 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html), visitare i [Forum di Khronos OpenXR](https://community.khronos.org/c/openxr), [Slack #openxr Channel](https://khr.io/slack) e lo strumento di [rilevamento dei problemi delle specifiche](https://github.com/KhronosGroup/OpenXR-Docs/issues).
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Di seguito sono riportati alcuni suggerimenti sulla risoluzione dei problemi per l'anteprima per sviluppatori di OpenXR realtà mista.  Se si riscontrano altri problemi, visitare il [Khronos OpenXR forum](https://community.khronos.org/c/openxr) oppure [canale Slack #openxr](https://khr.io/slack).
+Ecco alcuni suggerimenti per la risoluzione dei problemi per la realtà mista OpenXR Developer Preview.  Se si verificano altri problemi, visitare il canale [Khronos OpenXR Forums](https://community.khronos.org/c/openxr) o [Slack #openxr Channel](https://khr.io/slack).
 
-### <a name="openxr-app-not-starting-windows-mixed-reality"></a>App OpenXR non avvii per realtà mista di Windows
+### <a name="openxr-app-not-starting-windows-mixed-reality"></a>App OpenXR che non avvia la realtà mista di Windows
 
-Se l'app OpenXR non si avvii la realtà mista di Windows durante l'esecuzione, l'anteprima per sviluppatori di OpenXR realtà mista non può essere impostato come il runtime attivo.  Assicurarsi di eseguire l'app mista realtà OpenXR Developer Preview e seguire le istruzioni per rendere il runtime attivo.
+Se l'app OpenXR non avvia la realtà mista di Windows quando viene eseguita, la realtà mista OpenXR Developer Preview potrebbe non essere impostata come runtime attivo.  Assicurarsi di eseguire l'app OpenXR Developer Preview per la realtà mista e seguire le istruzioni per rendere attiva la fase di esecuzione.
 
-### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>Non è possibile installare app OpenXR Developer Preview di realtà mista 
+### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>Non è possibile installare l'app OpenXR Developer Preview in realtà mista 
 
-Verificare che Windows è in esecuzione almeno il 10 ottobre 2018 Update (1809).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento di maggio 2019 aggiornare (1903) usando il [Assistente aggiornamento di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
+Assicurarsi di eseguire almeno l'aggiornamento di Windows 10 ottobre 2018 (1809).  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento all'aggiornamento 2019 di maggio (1903) con [Windows 10 Update Assistant](https://www.microsoft.com/en-us/software-download/windows10).
 
-Se l'installazione pulsante nell'app mista realtà OpenXR Developer Preview non esegue alcuna operazione in Windows 10 ottobre 2018 Aggiorna, il sistema potrebbe viene memorizzato nella cache i requisiti di sistema non aggiornato per l'app.  È possibile eseguire il comando `wsreset.exe` da un prompt dei comandi per cancellare la cache.
+Se il pulsante Installa nell'app OpenXR Developer Preview per la realtà mista non esegue alcuna operazione nell'aggiornamento di Windows 10 ottobre 2018, il sistema potrebbe avere memorizzato nella cache i requisiti di sistema non aggiornati per l'app.  È possibile eseguire il comando `wsreset.exe` da un prompt dei comandi per cancellare la cache.
 
 ## <a name="see-also"></a>Vedere anche
 
 * [Altre informazioni su OpenXR](https://www.khronos.org/openxr/)
-* [Specifica di OpenXR provvisorie 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)
-* [Riferimento all'API OpenXR provvisorie 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/man/html/)
-* [Intestazioni OpenXR provvisorie 0,90](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)
-* [Guida di riferimento rapido OpenXR provvisorie 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/refguide/OpenXR-0.90-web.pdf)
+* [Specifica OpenXR 0,90 provvisoria](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)
+* [Informazioni di riferimento sull'API Provisional 0,90 di OpenXR](https://www.khronos.org/registry/OpenXR/specs/0.90/man/html/)
+* [OpenXR le intestazioni 0,90 provvisorie](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)
+* [Guida di riferimento rapido a OpenXR Provisional 0,90](https://www.khronos.org/registry/OpenXR/specs/0.90/refguide/OpenXR-0.90-web.pdf)

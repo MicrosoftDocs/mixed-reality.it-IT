@@ -1,11 +1,11 @@
 ---
-title: Nozioni di base di MR 100 - Guida introduttiva a Unity
-description: Informazioni su come creare la prima applicazione "hello world" di base di realtà mista.
+title: Nozioni fondamentali 100-Introduzione a Unity
+description: Informazioni su come creare la prima applicazione "Hello World" di base per la realtà mista.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: mista realtà, realtà mista di Windows, HoloLens, vr immersivi, mr, iniziare a usare, ologrammi, academy, esercitazione
+keywords: realtà mista, realtà mista di Windows, HoloLens, immersiva, VR, Mr, introduzione, ologramma, Accademia, esercitazione
 ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
 ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
@@ -14,212 +14,212 @@ ms.lasthandoff: 05/02/2019
 ms.locfileid: "64993617"
 ---
 >[!NOTE]
->Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br>
 
-# <a name="mr-basics-100-getting-started-with-unity"></a>Nozioni fondamentali di MR 100: Introduzione a Unity
+# <a name="mr-basics-100-getting-started-with-unity"></a>Nozioni fondamentali 100: Introduzione a Unity
 
-Questa esercitazione illustrerà di creazione di un'app di base di realtà mista creata con Unity.
+Questa esercitazione illustra come creare un'app di base per realtà mista compilata con Unity.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
 <tr>
-<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Auricolari coinvolgenti</a></th>
+<th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>Nozioni fondamentali di MR 100: Introduzione a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Nozioni fondamentali 100: Introduzione a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Un PC Windows 10 configurate con i valori corretti [sono installati gli strumenti](install-the-tools.md).
+* Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md).
 
-## <a name="chapter-1---create-a-new-project"></a>Capitolo 1 - creare un nuovo progetto
+## <a name="chapter-1---create-a-new-project"></a>Capitolo 1-creare un nuovo progetto
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Per compilare un'app con Unity, è necessario innanzitutto creare un progetto. Questo progetto è organizzato in alcune cartelle, la più importante dei quali è la cartella Assets. Questa è la cartella che contiene tutti gli asset che si importa da strumenti di creazione di contenuti digitali come Maya, Cinema Max 4D o Photoshop, tutto il codice creare con Visual Studio o l'editor di codice preferito, e un numero qualsiasi di file di contenuto che consente di creare Unity durante la composizione in background , animazioni e altri tipi di asset Unity nell'editor.
+Per compilare un'app con Unity, è prima di tutto necessario creare un progetto. Questo progetto è organizzato in alcune cartelle, il più importante dei quali è la cartella assets. Si tratta della cartella che include tutte le risorse importate da strumenti per la creazione di contenuti digitali, ad esempio Maya, max cinema 4D o Photoshop, tutto il codice creato con Visual Studio o l'editor di codice preferito e un numero qualsiasi di file di contenuto creati da Unity durante la composizione di scene , animazioni e altri tipi di asset Unity nell'editor.
 
-Per compilare e distribuire le app UWP, Unity è possibile esportare il progetto come una soluzione di Visual Studio che conterrà tutte le risorse necessarie e i file di codice.
+Per compilare e distribuire app UWP, Unity può esportare il progetto come una soluzione di Visual Studio che conterrà tutti i file di asset e di codice necessari.
 
-1. Avviare Unity
-2. Selezionare **New**
-3. Immettere un nome di progetto (ad esempio "MixedRealityIntroduction")
+1. Avvia Unity
+2. Seleziona **nuovo**
+3. Immetti un nome di progetto, ad esempio "MixedRealityIntroduction")
 4. Immettere un percorso per salvare il progetto
-5. Verificare che il **3D** attiva/disattiva è selezionata
+5. Verificare che sia selezionato l'interruttore **3D**
 6. Selezionare **Crea progetto**
 
-Complimenti, sono tutte le impostazioni per iniziare subito con le personalizzazioni di realtà mista.
+Il programma di installazione consente di iniziare subito a usare le personalizzazioni della realtà mista.
 
-## <a name="chapter-2---setup-the-camera"></a>Capitolo 2: configurazione della fotocamera
+## <a name="chapter-2---setup-the-camera"></a>Capitolo 2: configurare la fotocamera
 
 >[!VIDEO https://www.youtube.com/embed/eP1ZwB4wSNA]
 
-La fotocamera principale di Unity gestisce l'head di rilevamento e stereoscopico per il rendering. Esistono alcune modifiche apportare a Main Camera per usarlo con realtà mista.
-1. Selezionare File > nuova scena
+La videocamera principale di Unity gestisce il rilevamento Head e il rendering stereoscopico. Ci sono alcune modifiche da apportare alla fotocamera principale per utilizzarlo con realtà mista.
+1. Seleziona file > nuova scena
 
-In primo luogo, sarà più facile preparare l'app se si immagina la posizione iniziale dell'utente come (**X**: 0, **Y**: 0, **Z**: 0). Poiché la fotocamera principale è rilevamento movimento della testina dell'utente, è possibile impostare la posizione iniziale dell'utente, impostare la posizione iniziale della fotocamera principale.
-1. Selezionare **Main Camera** nel **gerarchia** pannello
-2. Nel **Inspector** panel, trovare il **trasformare** componente e modifica i **posizione** da (**X**: 0, **Y**: 1, **Z**: da -10) a (**X**: 0, **Y**: 0, **Z**: 0)
+Per prima cosa, sarà più facile stendere l'app se si immagina la posizione iniziale dell'utente come (**X**: 0, **Y**: 0, **Z**: 0). Poiché la fotocamera principale tiene traccia del movimento della testa dell'utente, è possibile impostare la posizione iniziale dell'utente impostando la posizione iniziale della fotocamera principale.
+1. Selezionare la **fotocamera principale** nel pannello **gerarchia**
+2. Nel pannello **Inspector** trovare il componente **Transform** e modificare la **posizione** da (**X**: 0, **Y**: da 1, **Z**:-10) a (**X**: 0, **Y**: 0, **Z**: 0
 
-In secondo luogo, lo sfondo di fotocamera predefinito richiede molta attenzione.
+In secondo luogo, lo sfondo predefinito della fotocamera richiede un certo pensiero.
 
-**Per le applicazioni di HoloLens**, del mondo reale deve essere visualizzato dietro a tutti gli elementi della fotocamera esegue il rendering, non una trama Skybox.
-1. Con il **Main Camera** ancora selezionato nel **gerarchia** panel, trovare il **fotocamera** componente nel **Inspector** pannello e modificare il **Cancella flag** elenco a discesa dal **Skybox** al **colore a tinta unita**.
-2. Selezionare il **sfondo** selezione dei colori e modifica il **RGBA** valori su (0, 0, 0, 0)
+**Per le applicazioni HoloLens**, il mondo reale dovrebbe comparire dietro tutto il rendering della fotocamera, non una trama skybox.
+1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e modificare l'elenco a discesa **Clear Flags** da **SKYBOX** a **Solid Color**.
+2. Selezionare la selezione dei colori di **sfondo** e modificare i valori di **RGBA** in (0, 0, 0, 0)
 
-**Per le applicazioni di realtà mista destinate a auricolari immersive**, è possibile usare la trama Skybox predefinito che fornisce Unity.
-1. Con il **Main Camera** ancora selezionato nel **gerarchia** panel, trovare il **fotocamera** componente nel **Inspector** pannello e mantenere il **Cancella flag** elenco a discesa per **Skybox**.
+**Per le applicazioni di realtà miste destinate a auricolari immersivi**, è possibile usare la trama SKYBOX predefinita fornita da Unity.
+1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e mantenere l'elenco a discesa **Clear Flags** su **SKYBOX**.
 
-In terzo luogo, invia i tuoi commenti prendere in considerazione il piano di ritaglio quasi in Unity e impedire che gli oggetti venga eseguito il rendering troppo vicino agli utenti gli occhi quando un utente si avvicina a un oggetto o un oggetto sta per raggiungere un utente.
+In terzo luogo, consideriamo il piano di ritaglio vicino in Unity, evitando che gli oggetti vengano visualizzati troppo vicino agli occhi degli utenti quando un utente si avvicina a un oggetto o a un oggetto che si avvicina a un utente.
 
-**Per le applicazioni di HoloLens**, il piano di ritaglio vicino può essere impostato sul [HoloLens consigliato](camera-in-unity.md#clip-planes) 0.85 metri.
-1. Con il **Main Camera** ancora selezionato nel **gerarchia** panel, trovare il **fotocamera** componente nel **Inspector** pannello e modificare il **Quasi il piano di ritaglio** campo il valore predefinito **0.3** a di HoloLens consigliato **0,85**.
+**Per le applicazioni HoloLens**, il piano di ritaglio vicino può essere impostato su HoloLens 0,85 metri [consigliati](camera-in-unity.md#clip-planes) .
+1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e modificare il campo **near clip Plane** dal valore predefinito **0,3** alla HoloLens consigliata **0,85** .
 
-**Per le applicazioni di realtà mista destinate a auricolari immersive**, è possibile usare l'impostazione predefinita che consente di Unity.
-1. Con il **Main Camera** ancora selezionato nel **gerarchia** panel, trovare il **fotocamera** componente nel **Inspector** pannello e mantenere il **Quasi il piano di ritaglio** campo sul valore predefinito **0.3**.
+**Per le applicazioni di realtà miste destinate a auricolari immersivi**, è possibile usare l'impostazione predefinita fornita da Unity.
+1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e mantenere il campo del piano di **ritaglio vicino** al valore predefinito **0,3**.
 
-Infine, invia i tuoi commenti salvare lo stato di avanzamento fino ad ora. Per salvare le modifiche apportate alla scena, selezionare **File > Salva scena con nome**, denominare la scena **Main**e selezionare **Salva**.
+Infine, dobbiamo salvare il nostro progresso fino a questo punto. Per salvare le modifiche apportate alla scena, selezionare **File > Salva scena come**, assegnare un nome alla scena **principale**e selezionare **Salva**.
 
-## <a name="chapter-3---setup-the-project-settings"></a>Capitolo 3 - Configurazione impostazioni del progetto
+## <a name="chapter-3---setup-the-project-settings"></a>Capitolo 3: configurare le impostazioni del progetto
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-In questo capitolo, si imposterà alcune impostazioni del progetto Unity aiutarci a Windows Holographic SDK per lo sviluppo di destinazione. Si imposterà inoltre alcune impostazioni di qualità per la nostra applicazione. Infine, si garantirà che la destinazioni di compilazione siano impostate su Windows Store.
+In questo capitolo vengono impostate alcune impostazioni di progetto Unity che ci aiutano a usare Windows Olografic SDK per lo sviluppo. Vengono inoltre impostate alcune impostazioni di qualità per l'applicazione. Infine, si assicurerà che le destinazioni di compilazione siano impostate su Windows Store.
 
-### <a name="unity-performance-and-quality-settings"></a>Impostazioni di qualità e prestazioni di Unity
+### <a name="unity-performance-and-quality-settings"></a>Impostazioni delle prestazioni e della qualità di Unity
 
-**Impostazioni di qualità di Unity per HoloLens**
+**Impostazioni della qualità di Unity per HoloLens**
 
-![Impostazioni di qualità di Unity per HoloLens](images/qualitysettings.png) 
+![Impostazioni della qualità di Unity per HoloLens](images/qualitysettings.png) 
 
-Poiché la gestione di ad alta frequenza dei fotogrammi in HoloLens è così importante, è opportuno le impostazioni di qualità ottimizzate per prestazioni ottimali. Per altre informazioni sulle prestazioni, [raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md).
-1. Selezionare **Modifica > impostazioni del progetto > qualità**
-2. Selezionare il **elenco a discesa** sotto il **Windows Store** logo e selezionare **molto bassa**. È quindi possibile sapere l'impostazione viene applicata in modo corretto quando la casella nella colonna di Windows Store e **molto bassa** riga è di colore verde.
+Poiché la gestione di un framerate elevato su HoloLens è così importante, è opportuno ottimizzare le impostazioni di qualità per ottenere prestazioni più rapide. Per informazioni più dettagliate sulle prestazioni, [consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md).
+1. Selezionare **modifica > impostazioni progetto > qualità**
+2. Selezionare l' **elenco a discesa** sotto il logo di **Windows Store** e selezionare **molto basso**. Si saprà che l'impostazione viene applicata correttamente quando la casella nella colonna Windows Store e con **una riga molto bassa** è verde.
 
-**Per le applicazioni di realtà mista destinate agli schermi bloccati**, è possibile lasciare le impostazioni di qualità sui valori predefiniti.
+**Per le applicazioni di realtà miste destinate a schermi**bloccati, è possibile lasciare le impostazioni di qualità ai valori predefiniti.
 
-### <a name="target-windows-10-sdk"></a>Target Windows 10 SDK
+### <a name="target-windows-10-sdk"></a>Windows 10 SDK di destinazione
 
-**Destinazione Windows Holographic SDK**
+**SDK Windows olografico di destinazione**
 
-![Destinazione Windows Holographic SDK](images/xrsettings.png) 
+![SDK Windows olografico di destinazione](images/xrsettings.png) 
 
-Dobbiamo informare Unity che deve creare l'app è in corso per esportare un' [vista immersiva](app-views.md) invece di una visualizzazione 2D. Abbiamo tale scopo, abilitare il supporto di realtà virtuale su Unity destinate a Windows 10 SDK.
-1. Passare a **Modifica > impostazioni del progetto > Player**.
-2. Nel **Pannello di controllo** per le impostazioni del giocatore, selezionare la **Windows Store** icona.
-3. Espandere la **XR impostazioni** gruppo.
-4. Nel **Rendering** sezione controllo la **realtà virtuale supportato** casella di controllo per aggiungere un nuovo **gli SDK di realtà virtuale** elenco.
-5. Verificare che **realtà mista di Windows** visualizzato nell'elenco. In caso contrario, selezionare la **+** pulsante nella parte inferiore dell'elenco e scegliere **realtà mista di Windows**.
+È necessario informare Unity che l'app che si sta tentando di esportare deve creare una [visualizzazione immersiva](app-views.md) anziché una visualizzazione 2D. Questa operazione viene eseguita abilitando il supporto della realtà virtuale in Unity per Windows 10 SDK.
+1. Passare a **Edit > Settings Project > Player**.
+2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona di **Windows Store** .
+3. Espandere il gruppo di **Impostazioni XR** .
+4. Nella sezione **rendering** selezionare la casella di controllo **realtà virtuale supportata** per aggiungere un nuovo elenco **SDK di realtà virtuale** .
+5. Verificare che l'opzione **realtà mista di Windows** sia presente nell'elenco. In caso contrario, selezionare **+** il pulsante nella parte inferiore dell'elenco e scegliere **realtà mista di Windows**.
 
 >[!NOTE]
->Se non viene visualizzato il **Windows Store** icona, ricontrollare per verificare che sia selezionato il back-end per la creazione di script di Windows Store .NET prima dell'installazione. In caso contrario, potrebbe essere necessario reinstallare Unity con la corretta installazione di Windows.
+>Se l'icona di **Windows Store** non è visualizzata, verificare di aver selezionato il back-end di scripting .NET di Windows Store prima di procedere all'installazione. In caso contrario, potrebbe essere necessario reinstallare Unity con l'installazione di Windows corretta.
 
-**Verificare la configurazione di .NET**
+**Verificare la configurazione .NET**
 
-![Verificare la configurazione di .NET](images/configoptions-375px.png)
+![Verificare la configurazione .NET](images/configoptions-375px.png)
 
-1. Passare a **Modifica > Impostazioni di progetto > Player** (è ancora possibile avere questo nel passaggio precedente).
-2. Nel **Pannello di controllo** per le impostazioni del giocatore, selezionare la **Windows Store** icona.
-3. Nel **altre impostazioni** Configuration sezione, assicurarsi che **Scripting back-end** è impostato su **.NET**
+1. Passare a **Edit > Settings (Impostazioni progetto) > Player** (è possibile continuare a eseguire questa operazione dal passaggio precedente).
+2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona di **Windows Store** .
+3. Nella sezione **altre impostazioni** di configurazione, assicurarsi che **lo scripting backend** sia impostato su **.NET** .
 
-Processo eccezionale su come ottenere tutte le impostazioni di progetto applicate. Aggiungere quindi invia i tuoi commenti ologramma!
+Un processo straordinario per il recupero di tutte le impostazioni del progetto applicate. Quindi, aggiungiamo un ologramma!
 
-## <a name="chapter-4---create-a-cube"></a>Capitolo 4 - creare un cubo
+## <a name="chapter-4---create-a-cube"></a>Capitolo 4-creazione di un cubo
 
 >[!VIDEO https://www.youtube.com/embed/qKcK1Yuj-HQ]
 
-Creazione di un cubo nel progetto Unity è proprio come la creazione di qualsiasi altro oggetto in Unity. Inserimento di un cubo davanti all'utente è semplice perché viene eseguito il mapping di sistema di coordinate di Unity con il mondo reale, in cui un misuratore in Unity è circa un contatore nel mondo reale.
-1. Nell'angolo superiore sinistro del **gerarchia** pannello, seleziona la **Create** elenco a discesa e scegliere **oggetto 3D > cubo**.
-2. Selezionare quella appena creata **cubo** nel **gerarchia** pannello
-3. Nel **Inspector** trovare il **trasformare** componente e modificare **posizione** a (**X**: 0, **Y**: 0, **Z**: 2). *Si posiziona il cubo 2 metri davanti a posizione iniziale dell'utente.*
-4. Nel **trasformare** componente, change **rotazione** per (**X**: 45, **Y**: 45, **Z**: 45) e cambiare **scalabilità** a (**X**: 0.25, **Y**: 0.25, **Z**: 0.25). *Questa configurazione è possibile il cubo e visualizzare i contatori 0,25.*
+La creazione di un cubo nel progetto Unity è simile alla creazione di qualsiasi altro oggetto in Unity. Posizionare un cubo davanti all'utente è facile perché il sistema di coordinate di Unity è mappato al mondo reale, in cui un contatore in Unity è approssimativamente un contatore nel mondo reale.
+1. Nell'angolo in alto a sinistra del pannello **gerarchia** selezionare l'elenco a discesa **Crea** e scegliere **oggetto 3D > cubo**.
+2. Selezionare il **cubo** appena creato nel pannello **gerarchia**
+3. Nella finestra di **controllo** trovare il componente **Transform** e modificare **position** in (**X**: 0, **Y**: 0, **Z**: 2). *Questa operazione posiziona il cubo 2 metri davanti alla posizione iniziale dell'utente.*
+4. Nel componente **trasformazione** modificare la **rotazione** in (**X**: 45, **Y**: 45, **Z**: 45) e modificare la **scala** in (**X**: 0,25, **Y**: 0,25, **Z**: 0,25). *Questa operazione consente di ridimensionare il cubo a 0,25 metri.*
 5. Per salvare le modifiche apportate alla scena, selezionare **File > Salva scena**.
 
-## <a name="chapter-5---verify-on-device-from-unity-editor"></a>Capitolo 5: verificare sul dispositivo dall'editor di Unity
+## <a name="chapter-5---verify-on-device-from-unity-editor"></a>Capitolo 5-verificare nel dispositivo dall'editor Unity
 
 >[!VIDEO https://www.youtube.com/embed/vmCfiIdRb6Q]
 
-Ora che abbiamo creato il cubo, è possibile eseguire un rapido controllo nel dispositivo. È possibile eseguire questa operazione direttamente dall'editor di Unity.
+A questo punto, dopo aver creato il cubo, è possibile eseguire un controllo rapido nel dispositivo. Questa operazione può essere eseguita direttamente dall'editor di Unity.
 
 ### <a name="initial-setup"></a>Configurazione iniziale
-1. Nel computer, di sviluppo in Unity, aprire **File > Build Settings** finestra.
-2. Change **piattaforma** al **Universal Windows Platform** e fare clic su **commutatore piattaforma in uso**
+1. Nel computer di sviluppo, in Unity, aprire **File > finestra impostazioni di compilazione** .
+2. Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su **Cambia platfrom**
 
 ### <a name="for-hololens-use-unity-remoting"></a>Per HoloLens usare la comunicazione remota di Unity
-1. Nella finestra di HoloLens, installare ed eseguire la [Holographic Remoting Player](holographic-remoting-player.md), disponibile da Store di Windows. Per avviare l'applicazione nel dispositivo, entrare in uno stato di attesa ed mostrano l'indirizzo IP del dispositivo. Annotare l'indirizzo IP.
-2. Aprire **finestra > XR > emulazione Holographic**.
-3. Change **modalità di emulazione** da **None** al **remoto al dispositivo**.
-4. Nelle **computer remoto**, immettere l'indirizzo IP di HoloLens indicato in precedenza.
+1. In HoloLens installare ed eseguire il lettore di [comunicazione remota olografico](holographic-remoting-player.md), disponibile in Windows Store. Avviare l'applicazione nel dispositivo, che entrerà in uno stato di attesa e visualizzerà l'indirizzo IP del dispositivo. Prendere nota dell'indirizzo IP.
+2. Aprire la **finestra > XR > emulazione olografica**.
+3. Modificare la **modalità** di emulazione da **Nessuna** a **remota a dispositivo**.
+4. In **computer remoto**, immettere l'indirizzo IP della HoloLens annotata in precedenza.
 5. Fare clic su **Connetti**.
-6. Verificare che il **lo stato di connessione** assume il colore verde **connesso**.
-7. A questo punto è possibile ora fare clic **riprodurre** nell'editor di Unity.
+6. Verificare che lo **stato della connessione** venga modificato in verde **connesso**.
+7. A questo punto è possibile fare clic su **Play** nell'editor di Unity.
 
-A questo punto sarà possibile visualizzare il cubo nel dispositivo e nell'editor. È possibile sospendere, controllare gli oggetti e il debug proprio come si esegue un'app nell'editor, perché si tratta essenzialmente ciò che accade, ma con video, audio e input dei dispositivi e viceversa trasmessi attraverso la rete tra il computer host e il dispositivo.
+A questo punto sarà possibile visualizzare il cubo nel dispositivo e nell'editor. È possibile sospendere, ispezionare gli oggetti ed eseguire il debug in modo analogo all'esecuzione di un'app nell'editor, perché si tratta essenzialmente di ciò che accade, ma con video, audio e input del dispositivo trasmessi attraverso la rete tra il computer host e il dispositivo.
 
-### <a name="for-other-mixed-reality-supported-headsets"></a>Per altri realtà mista supportati auricolari
+### <a name="for-other-mixed-reality-supported-headsets"></a>Per gli altri tipi di auricolari supportati dalla realtà mista
 
-1. Connettere le cuffie al PC usando il cavo USB e le HDMI di sviluppo o visualizzare il cavo di porta.
-2. Avviare il **portale di realtà mista** e assicurarsi di aver completato la prima esperienza di esecuzione.
-3. Da Unity, è ora possibile premere il pulsante di riproduzione.
+1. Connettere la cuffia al PC di sviluppo usando il cavo USB e il cavo porta HDMI o schermo.
+2. Avviare il **portale di realtà mista** e assicurarsi di avere completato la prima esperienza di esecuzione.
+3. Da Unity è ora possibile premere il pulsante Play.
 
-A questo punto sarà possibile visualizzare il rendering di cubo nel visore VR realtà mista e nell'editor.
+A questo punto, sarà possibile visualizzare il rendering dei cubi nell'auricolare della realtà mista e nell'editor.
 
-## <a name="chapter-6---build-and-deploy-to-device-from-visual-studio"></a>Capitolo 6: creare e distribuire al dispositivo da Visual Studio
+## <a name="chapter-6---build-and-deploy-to-device-from-visual-studio"></a>Capitolo 6: creare e distribuire nel dispositivo da Visual Studio
 
 >[!VIDEO https://www.youtube.com/embed/USSu8yHUdbk]
 
-A questo punto siamo pronti compilare il progetto di Visual Studio e distribuire il dispositivo di destinazione.
+A questo punto è possibile compilare il progetto in Visual Studio e distribuirlo nel dispositivo di destinazione.
 
-### <a name="export-to-the-visual-studio-solution"></a>Esportare in soluzione di Visual Studio
-1.  Aprire **File > Build Settings** finestra.
-2.  Fare clic su **aggiungere scene Open** per aggiungere la scena.
-3.  Change **piattaforma** al **Universal Windows Platform** e fare clic su **commutatore piattaforma**.
-4.  Nelle **Windows Store** assicurarsi che le impostazioni, **SDK** viene **10 universale**.
-5.  Per il dispositivo di destinazione, lasciare **qualsiasi dispositivo** bloccati consente di visualizzare o passa a **HoloLens**.
-6.  **Tipo di compilazione UWP** deve essere **D3D**.
-7.  **UWP SDK** potrebbe essere lasciati **installata più recente**.
-8.  Controllare **Unity C# progetti** nella fase di debug.
+### <a name="export-to-the-visual-studio-solution"></a>Esporta nella soluzione di Visual Studio
+1.  Aprire **File > finestra impostazioni di compilazione** .
+2.  Fare clic su **Aggiungi scene aperte** per aggiungere la scena.
+3.  Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su **Cambia piattaforma**.
+4.  Nelle impostazioni di **Windows Store** assicurarsi che **SDK** sia **universale 10**.
+5.  Per il dispositivo di destinazione, lasciare a **qualsiasi dispositivo** per visualizzare le schermate o passare a **HoloLens**.
+6.  Il **tipo di compilazione UWP** deve essere **D3D**.
+7.  L' **SDK di UWP** potrebbe essere rimasto **installato più di recente**.
+8.  Controllare **i C# progetti Unity** in fase di debug.
 9.  Fai clic su **Compila**.
-10. In Esplora file, fare clic su **nuova cartella** e denominare la cartella **"App"**.
-11. Con il **App** cartella selezionata, fare clic sui **Seleziona cartella** pulsante.
-12. Quando l'operazione Unity viene eseguita la compilazione, verrà visualizzata una finestra di Esplora File di Windows.
-13. Aprire il **App** cartella in Esplora file.
-14. Aprire la soluzione di Visual Studio generata (MixedRealityIntroduction.sln in questo esempio)
+10. In Esplora file fare clic su **nuova cartella** e denominare la cartella **"app"** .
+11. Con la cartella **app** selezionata, fare clic sul pulsante **Seleziona cartella** .
+12. Al termine della compilazione di Unity, viene visualizzata una finestra Esplora file di Windows.
+13. Aprire la cartella dell' **app** in Esplora file.
+14. Aprire la soluzione di Visual Studio generata (MixedRealityIntroduction. sln in questo esempio)
 
 ### <a name="compile-the-visual-studio-solution"></a>Compilare la soluzione di Visual Studio
 
-Infine, si verrà compilare la soluzione di Visual Studio esportata, distribuirlo e provarlo nel dispositivo.
-1. Usando la barra degli strumenti superiore in Visual Studio, modificare la destinazione dal **Debug** a **Release** e da **ARM** a **X86**.
+Infine, la soluzione di Visual Studio esportata verrà compilata, distribuita e provata nel dispositivo.
+1. Usando la barra degli strumenti superiore in Visual Studio, modificare la destinazione da **debug** a **Release** e da **ARM** a **x86**.
 
-Le istruzioni sono diverse per la distribuzione in un dispositivo e l'emulatore. Seguire le istruzioni che soddisfano la configurazione.
+Le istruzioni sono diverse per la distribuzione in un dispositivo rispetto all'emulatore. Seguire le istruzioni corrispondenti alla configurazione.
 
-### <a name="deploy-to-mixed-reality-device-over-wi-fi"></a>Distribuire al dispositivo di realtà mista tramite Wi-Fi
-1. Fare clic sulla freccia accanto al **computer locale** pulsante e modificare la destinazione di distribuzione per **computer remoto**.
-2. Immettere l'indirizzo IP del dispositivo di realtà mista e cambiare **modalità di autenticazione** universale (protocollo non crittografato) per HoloLens e **Windows** per altri dispositivi.
-3. Fare clic su **Debug > Avvia senza eseguire debug**.
+### <a name="deploy-to-mixed-reality-device-over-wi-fi"></a>Eseguire la distribuzione in un dispositivo a realtà mista tramite Wi-Fi
+1. Fare clic sulla freccia accanto al pulsante **locale del computer** e modificare la destinazione di distribuzione in **computer remoto**.
+2. Immettere l'indirizzo IP del dispositivo in realtà mista e modificare la **modalità di autenticazione** in Universal (protocollo non crittografato) per HoloLens e **Windows** per altri dispositivi.
+3. Fare clic su **debug > avvia senza eseguire debug**.
 
-**Per HoloLens**, se questa è la prima volta che si distribuisce nel dispositivo, sarà necessario coppia [con Visual Studio](using-visual-studio.md).
+**Per HoloLens**, se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario eseguire l'associazione [con Visual Studio](using-visual-studio.md).
 
-### <a name="deploy-to-mixed-reality-device-over-usb"></a>Distribuire al dispositivo di realtà mista tramite USB
+### <a name="deploy-to-mixed-reality-device-over-usb"></a>Distribuisci in un dispositivo a realtà mista tramite USB
 
-Assicurarsi che nel dispositivo sia connesso tramite il cavo USB.
-1. **Per HoloLens**, fare clic sulla freccia accanto al **computer locale** pulsante e modificare la destinazione di distribuzione per **dispositivo**.
-2. **Per i dispositivi bloccati collegati al computer di destinazione**, mantenere l'impostazione nel computer locale. Assicurarsi di aver la **portale di realtà mista** in esecuzione.
-3. Fare clic su **Debug > Avvia senza eseguire debug**.
+Verificare che il dispositivo sia collegato tramite il cavo USB.
+1. **Per HoloLens**, fare clic sulla freccia accanto al pulsante **locale del computer** e modificare la destinazione di distribuzione nel **dispositivo**.
+2. **Per individuare i dispositivi bloccati collegati al PC**, impostare il computer locale. Assicurarsi che sia in esecuzione il **portale di realtà mista** .
+3. Fare clic su **debug > avvia senza eseguire debug**.
 
-### <a name="deploy-to-emulator"></a>Distribuzione emulatore
-1. Fare clic sulla freccia accanto al **periferica** pulsante e dall'elenco a discesa selezionare **emulatore HoloLens**.
-2. Fare clic su **Debug > Avvia senza eseguire debug**.
+### <a name="deploy-to-emulator"></a>Distribuisci nell'emulatore
+1. Fare clic sulla freccia accanto al pulsante **Device (dispositivo** ) e nell'elenco a discesa selezionare **HoloLens Emulator**(emulatore).
+2. Fare clic su **debug > avvia senza eseguire debug**.
 
 ### <a name="try-out-your-app"></a>Provare l'app
 
-Ora che l'app viene distribuita, provare a spostare tutto il cubo e osservare che il messaggio rimane nel mondo sempre a disposizione.
+Ora che l'app è stata distribuita, provare a spostarsi in tutto il cubo e osservare che rimane nel mondo davanti all'utente.
 
 ## <a name="see-also"></a>Vedere anche
 * [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 * [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-* [MR Basics 101](holograms-101.md)
-* [Nozioni di base di MR 101E](holograms-101e.md)
+* [Nozioni fondamentali 101](holograms-101.md)
+* [Nozioni di base su 101E](holograms-101e.md)

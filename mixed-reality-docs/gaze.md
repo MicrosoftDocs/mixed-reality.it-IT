@@ -1,11 +1,11 @@
 ---
 title: Sguardo fisso
-description: Sguardo è il primo modulo di input e un modulo primario di destinazione all'interno di realtà mista.
+description: Lo sguardo è la prima forma di input e rappresenta una forma principale di destinazione all'interno della realtà mista.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Misto realtà, sguardo, interazione, progettazione
+keywords: Realtà mista, sguardo, interazione, progettazione
 ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,12 +15,12 @@ ms.locfileid: "67414373"
 ---
 # <a name="gaze"></a>Sguardo fisso
 
-**Estasiati** è il primo modulo di input ed è un modulo primario di destinazione all'interno di realtà mista. Sguardo indica dove l'utente cerca in tutto il mondo e consente di determinare il loro scopo. Nel mondo reale, è in genere verrà esaminato un oggetto che si prevede di interagire con. Questo è lo stesso con sguardo.
+Lo **sguardo** è la prima forma di input e rappresenta una forma principale di destinazione all'interno della realtà mista. Lo sguardo indica il punto in cui l'utente sta cercando nel mondo e consente di determinarne lo scopo. Nel mondo reale, in genere si esamina un oggetto con cui si intende interagire. Questo è lo stesso con lo sguardo.
 
-Realtà mista auricolari usano la posizione e l'orientamento principale dell'utente di per determinare i vettori sguardo head. È possibile considerare questo vettore come un puntatore laser dritto da direttamente tra gli occhi dell'utente. Quando l'utente cerca nella stanza, l'applicazione può intersecarsi questo ray, con i proprio ologrammi e con il [mapping spaziale](spatial-mapping.md) mesh per determinare quale oggetto reale o virtuale, l'utente potrebbe essere opportuno.
+Gli auricolari per la realtà mista usano la posizione e l'orientamento dell'Head dell'utente per determinare il vettore di sguardi a capo. È possibile considerare questo vettore come un puntatore laser direttamente direttamente tra gli occhi dell'utente. Quando l'utente esamina la stanza, l'applicazione può intersecare questo raggio, sia con i propri ologrammi che con la mesh di [mapping spaziale](spatial-mapping.md) , per determinare l'oggetto virtuale o reale che può essere esaminato dall'utente.
 
-Nel 2 HoloLens, le interazioni possono essere destinate dalle sguardo head dell'utente, sguardo sotto controllo tramite quasi o passare a questo momento le interazioni.
-Su HoloLens (dal 1 ° generazione), le interazioni devono derivano in genere la destinazione da sguardo head dell'utente, piuttosto che tentare per eseguire il rendering o interagire direttamente nella posizione dell'icona della mano. Dopo aver avviato un'interazione, relativi movimenti della mano possono essere usata per controllare la [movimento](gestures.md), come con la [manipolazione o la navigazione](gestures.md#composite-gestures) movimento. Con immersive auricolari, è possibile fare riferimento tramite uno sguardo head o che punta in grado di supportare [controller di movimento](motion-controllers.md).
+In HoloLens 2, le interazioni possono essere mirate dallo sguardo a capo dell'utente, dallo sguardo a occhi o dalle interazioni quasi o a lungo.
+In HoloLens (1st Gen), le interazioni dovrebbero in genere derivare il proprio targeting da quello degli utenti, anziché tentare di eseguire il rendering o interagire direttamente nella posizione della mano. Una volta avviata un'interazione, è possibile usare i movimenti relativi della mano per [controllare il movimento](gestures.md), come per il gesto di [manipolazione o spostamento](gestures.md#composite-gestures) . Con le cuffie di tipo immersivo, è possibile usare uno sguardo a capo o [controller di movimento](motion-controllers.md)che supportano la funzionalità di puntamento.
 
 <br>
 
@@ -42,13 +42,13 @@ Su HoloLens (dal 1 ° generazione), le interazioni devono derivano in genere la 
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Head sguardo</td>
+        <td>Sguardo a capo</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Sguardo sotto controllo</td>
+        <td>Occhio</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -56,33 +56,33 @@ Su HoloLens (dal 1 ° generazione), le interazioni devono derivano in genere la 
 </table>
 
 > [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md#news-and-notes)disponibili.
 
 
-## <a name="uses-of-gaze"></a>Utilizzi di sguardo
+## <a name="uses-of-gaze"></a>Usi di sguardi
 
-Qualità di sviluppatore di realtà mista, è possibile eseguire molte con sguardo head o occhio:
-* Le app possono intersecarsi sguardo con vntana nella scena per determinare dove è l'attenzione dell'utente.
-* L'app può essere indirizzato movimenti e basate sguardo dell'utente, consentendo all'utente di selezionare, attivare, recuperare, scorrere o in caso contrario, interagire con loro vntana pressioni di controller.
-* L'app può consentire all'utente di inserire vntana nelle aree del mondo reale, eseguendo che intersecano il ray sguardo con la rete di mapping spaziale.
-* L'app è possibile sapere quando l'utente è *non* alla ricerca nella direzione di un oggetto importante, che può comportare l'app per offrire segnali audio e video per attivare verso tale oggetto.
+In qualità di sviluppatore di realtà mista, è possibile fare molto con la testa o gli sguardi:
+* L'app può intersecare sguardi con gli ologrammi nella scena per determinare il punto in cui l'attenzione dell'utente è.
+* L'app può essere destinata ai movimenti e alle presse del controller in base allo sguardo dell'utente, consentendo all'utente di selezionare, attivare, acquisire, scorrere o interagire in altro modo con i loro ologrammi.
+* L'app può consentire all'utente di posizionare gli ologrammi su superfici reali, intersecando il raggio di sguardi con la mesh di mapping spaziale.
+* L'app può sapere quando l'utente *non* sta osservando la direzione di un oggetto importante, che può portare l'app a fornire suggerimenti visivi e audio per la rotazione verso tale oggetto.
 
 ## <a name="cursor"></a>Cursor
 
-Per sguardo head, è consigliabile usare la maggior parte delle App un' [cursore](cursors.md) (o un'altra indicazione acustica/visual) per fornire la fiducia degli utenti sugli aspetti che stanno per interagire con. È in genere posizionare il cursore in tutto il mondo in cui il raggio sguardo head interseca prima di tutto un oggetto, che potrebbe essere ologramma o un'area del mondo reale.
+Per lo sguardo a capo, la maggior parte delle app deve usare un [cursore](cursors.md) (o altre indicazioni visive/visive) per fornire all'utente la confidenza con cui si sta per interagire. In genere, il cursore viene posizionato in tutto il mondo in cui il raggio di sguardo principale interseca un oggetto, che può essere un ologramma o una superficie reale.
 
-![Un esempio visivo del cursore per mostrare sguardo](images/cursor.jpg)<br>
-*Un esempio visivo del cursore per mostrare sguardo*
+![Un cursore visivo di esempio per mostrare lo sguardo](images/cursor.jpg)<br>
+*Un cursore visivo di esempio per mostrare lo sguardo*
 
-Per sguardo rossi, è consigliabile in genere *non* mostrare un cursore, perché ciò può risultare poco chiara e indesiderate per l'utente. Invece leggermente evidenziare destinazioni visual o utilizzare un cursore molto Rube occhio per avere la certezza sulle novità per interagire con l'utente. Per altre informazioni, vedere la [indicazioni di progettazione per input basato sulle occhio](eye-tracking.md) in 2 HoloLens.
+Per gli occhi, in genere è consigliabile *non* mostrare un cursore, in quanto questa operazione può diventare rapidamente distrazione e fastidioso per l'utente. È invece possibile evidenziare leggermente le destinazioni visive o usare un cursore occhio molto debole per fornire informazioni su ciò che l'utente sta per interagire. Per altre informazioni, vedere le [linee guida di progettazione per l'input basato su occhi](eye-tracking.md) su HoloLens 2.
 
-## <a name="giving-action-to-the-users-gaze"></a>Concessione dell'azione a sguardo dell'utente
+## <a name="giving-action-to-the-users-gaze"></a>Assegnazione di un'azione allo sguardo dell'utente
 
-Dopo avere l'utente è incluso un ologrammi o un oggetto reale con loro sguardo, il passaggio successivo è intervenire su tale oggetto. Sono i metodi principali per un utente intervenire attraverso [movimenti](gestures.md), [movimento controller](motion-controllers.md) e [vocale](voice-input.md).
+Una volta che l'utente ha assegnato un ologramma o un oggetto reale usando il proprio sguardo, il passaggio successivo consiste nell'agire su tale oggetto. Le modalità principali per l'esecuzione di un'azione da parte di un utente sono i [movimenti](gestures.md), i [controller di movimento](motion-controllers.md) e la [voce](voice-input.md).
 
 ## <a name="see-also"></a>Vedere anche
-* [Input MR 210: Head sguardo](holograms-210.md)
+* [Input MR 210: Sguardo a capo](holograms-210.md)
 * [Puntamento con la testa e sguardo fisso in DirectX](gaze-in-directx.md)
-* [Head estasiati Unity](gaze-in-unity.md)
-* [Visiva in HoloLens 2](eye-tracking.md)
-* [Sguardo occhio in Unity usando il Toolkit di realtà mista](https://aka.ms/mrtk-eyes)
+* [Sguardo a testa in Unity](gaze-in-unity.md)
+* [Eye-sguardi su HoloLens 2](eye-tracking.md)
+* [Sguardo in Unity con il Toolkit di realtà misto](https://aka.ms/mrtk-eyes)

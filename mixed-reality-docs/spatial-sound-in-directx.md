@@ -1,66 +1,66 @@
 ---
 title: Audio spaziale in DirectX
-description: Aggiunta alle app di realtà mista di Windows basate su DirectX usando le librerie di audio XAudio2 e xAPO spaziale audio.
+description: Aggiungere un suono spaziale alle app per la realtà mista di Windows in base a DirectX usando le librerie audio XAudio2 e xAPO.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows misti realtà, spaziale audio, le app, XAudio2, basso livello, xAPO, libreria di audio, procedura dettagliata, DirectX
+keywords: Realtà mista di Windows, audio spaziale, app, XAudio2, basso livello, xAPO, libreria audio, procedura dettagliata, DirectX
 ms.openlocfilehash: 04d8c43ab400eed4cec5cbd848af5b888cb66e4b
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605140"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63550439"
 ---
 # <a name="spatial-sound-in-directx"></a>Audio spaziale in DirectX
 
-Aggiungere suoni spaziali per le app di realtà mista di Windows basate su DirectX usando la [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049.aspx) e [xAPO](https://msdn.microsoft.com/library/windows/desktop/ee415735.aspx) librerie audio.
+Aggiungere un suono spaziale alle app per la realtà mista di Windows in base a DirectX usando le librerie audio [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049.aspx) e [xAPO](https://msdn.microsoft.com/library/windows/desktop/ee415735.aspx) .
 
-Questo argomento Usa codice di esempio dal HolographicHRTFAudioSample.
+In questo argomento viene usato il codice di esempio di HolographicHRTFAudioSample.
 
 >[!NOTE]
->I frammenti di codice in questo articolo illustrano attualmente l'utilizzo di C++/CX invece di C + + 17 conformi C++/WinRT usato nel [ C++ modello di progetto holographic](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per un C++progetto /WinRT, anche se è necessario convertire il codice.
+>I frammenti di codice in questo articolo illustrano attualmente l' C++uso di/CX, invece di/WinRT conformi C++a C + 17 come usato nel modello di [ C++ progetto olografico](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per C++un progetto/WinRT, anche se sarà necessario tradurre il codice.
 
-## <a name="overview-of-head-relative-spatial-sound"></a>Panoramica del suono spaziali relativo Head
+## <a name="overview-of-head-relative-spatial-sound"></a>Panoramica dell'audio spaziale relativo alla testa
 
-Spaziale audio viene implementato come un **oggetto elaborazione audio (APO)** che usa un **head correlate (HRTF) la funzione di trasferimento** filtrare in base a *spatialize* un normale flusso audio.
+Il suono spaziale viene implementato come un **oggetto di elaborazione audio (APO)** che utilizza un filtro **HRTF (Head Related Transfer Function)** per *spatialize* un flusso audio normale.
 
-Includere questi file di intestazione in PCH. h per accedere alle API dell'audio:
-* XAudio2.h
-* xapo.h
-* hrtfapoapi.h
+Includere questi file di intestazione in PCH. h per accedere alle API audio:
+* XAudio2. h
+* xAPO. h
+* hrtfapoapi. h
 
-Per impostare il suono spaziale:
-1. Chiamare [CreateHrtfApo](https://msdn.microsoft.com/library/windows/desktop/mt186596.aspx) per inizializzare un nuova APO per l'audio HRTF.
-2. Assegnare il [parametri HRTF](https://msdn.microsoft.com/library/windows/desktop/mt186608.aspx) e [ambiente HRTF](https://msdn.microsoft.com/library/windows/desktop/mt186604.aspx) per definire le caratteristiche acustiche del APO spaziale audio.
+Per configurare il suono spaziale:
+1. Chiamare [CreateHrtfApo](https://msdn.microsoft.com/library/windows/desktop/mt186596.aspx) per inizializzare un nuovo APO per audio HRTF.
+2. Assegnare i [parametri HRTF](https://msdn.microsoft.com/library/windows/desktop/mt186608.aspx) e l' [ambiente HRTF](https://msdn.microsoft.com/library/windows/desktop/mt186604.aspx) per definire le caratteristiche acustiche del sistema audio APO.
 3. Configurare il motore XAudio2 per l'elaborazione HRTF.
-4. Creare un [IXAudio2SourceVoice](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.aspx) oggetto e chiamare [avviare](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx).
+4. Creare un oggetto [IXAudio2SourceVoice](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.aspx) e chiamare [Start](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx).
 
-## <a name="implementing-hrtf-and-spatial-sound-in-your-directx-app"></a>Implementazione HRTF e spaziale audio nell'app DirectX
+## <a name="implementing-hrtf-and-spatial-sound-in-your-directx-app"></a>Implementazione di HRTF e del suono spaziale nell'app DirectX
 
-È possibile ottenere una varietà di effetti configurando il APO HRTF con diversi parametri e ambienti. Usare il codice seguente per esplorare le possibilità. Scaricare l'esempio di codice (Universal Windows Platform) qui: [Esempio Spatial audio](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpatialSound)
+È possibile ottenere un'ampia gamma di effetti configurando HRTF APO con diversi parametri e ambienti. Per esplorare le possibilità, usare il codice seguente. Scaricare l'esempio di codice piattaforma UWP (Universal Windows Platform) da qui: [Esempio di audio spaziale](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpatialSound)
 
-In questi file sono disponibili i tipi di supporto:
-* [AudioFileReader.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/AudioFileReader.cpp): Carica file audio usando Media Foundation e il [IMFSourceReader interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd374655.aspx).
-* [XAudio2Helpers.h](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/XAudio2Helpers.h): Implementa il **SetupXAudio2** funzione per inizializzare XAudio2 per l'elaborazione HRTF.
+I tipi helper sono disponibili in questi file:
+* [AudioFileReader. cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/AudioFileReader.cpp): Carica i file audio usando Media Foundation e l' [interfaccia IMFSourceReader](https://msdn.microsoft.com/library/windows/desktop/dd374655.aspx).
+* [XAudio2Helpers. h](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/XAudio2Helpers.h): Implementa la funzione **SetupXAudio2** per inizializzare XAudio2 per l'elaborazione di HRTF.
 
-### <a name="add-spatial-sound-for-an-omnidirectional-source"></a>Aggiungere suoni spaziali per un'origine omnidirezionale
+### <a name="add-spatial-sound-for-an-omnidirectional-source"></a>Aggiungere un suono spaziale per un'origine omnidirezionale
 
-Alcuni vntana nelle vicinanze dell'utente emette un suono in modo uniforme in tutte le direzioni. Il codice seguente viene illustrato come inizializzare un APO per emettere un suono omnidirezionale. In questo esempio, questo concetto si applica al cubo rotante dal modello di app Windows Holographic. Per il listato di codice completo, vedere [OmnidirectionalSound.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/OmnidirectionalSound.cpp).
+Alcuni ologrammi nell'ambiente dell'utente emettono suoni ugualmente in tutte le direzioni. Il codice seguente illustra come inizializzare un'espressione APO per emettere un suono omnidirezionale. In questo esempio, questo concetto viene applicato al cubo rotante dal modello di app olografico di Windows. Per il listato di codice completo, vedere [OmnidirectionalSound. cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/OmnidirectionalSound.cpp).
 
-**Motore audio spaziale della finestra supporta solo 48 KB samplerate per la riproduzione. La maggior parte dei programmi di middleware, ad esempio Unity, convertirà automaticamente i file audio nel formato desiderato, ma se si avvia manipolare a livelli inferiori nel sistema audio o rendere il proprio, questo è molto importante da ricordare impedire arresti anomali del sistema o comportamenti indesiderati, ad esempio Errore di sistema HRTF.**
+**Il motore audio spaziale della finestra supporta solo il campionamento 48.000 per la riproduzione. Per la maggior parte dei programmi middleware, come Unity, i file audio verranno convertiti automaticamente nel formato desiderato, ma se si inizia a eseguire la correzione a livelli inferiori nel sistema audio o se ne è stato personalizzato, è molto importante ricordarsi di evitare arresti anomali o comportamenti indesiderati come Errore di sistema HRTF.**
 
-In primo luogo, è necessario inizializzare la sospensione. Nell'app di esempio holographic, si sceglie di eseguire questa operazione dopo aver creato il **HolographicSpace**.
+Prima di tutto, è necessario inizializzare APO. Nell'app di esempio olografica è possibile scegliere di eseguire questa operazione una volta **HolographicSpace**.
 
-From *HolographicHrtfAudioSampleMain::SetHolographicSpace()*:
+Da *HolographicHrtfAudioSampleMain:: SetHolographicSpace ()* :
 
 ```
 // Spatial sound
 auto hr = m_omnidirectionalSound.Initialize(L"assets//MonoSound.wav");
 ```
 
-L'implementazione di inizializzazione, dalla *OmnidirectionalSound.cpp*:
+Implementazione di Initialize, da *OmnidirectionalSound. cpp*:
 
 ```
 // Initializes an APO that emits sound equally in all directions.
@@ -113,9 +113,9 @@ HRESULT OmnidirectionalSound::Initialize( LPCWSTR filename )
 }
 ```
 
-Dopo aver configurato il APO per HRTF, si chiama [avviare](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx) nella voce origine da riprodurre l'audio. Nell'app di esempio, si sceglie di inserirlo in un ciclo in modo che è possibile continuare ad ascoltare l'audio proveniente dal cubo.
+Dopo aver configurato APO per HRTF, chiamare [Start](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx) sulla voce di origine per riprodurre l'audio. Nell'app di esempio, si sceglie di inserirla in un ciclo in modo che sia possibile continuare a udire il suono proveniente dal cubo.
 
-From *HolographicHrtfAudioSampleMain::SetHolographicSpace()*:
+Da *HolographicHrtfAudioSampleMain:: SetHolographicSpace ()* :
 
 ```
 if (SUCCEEDED(hr))
@@ -126,7 +126,7 @@ if (SUCCEEDED(hr))
 }
 ```
 
-Dal *OmnidirectionalSound.cpp*:
+Da *OmnidirectionalSound. cpp*:
 
 ```
 HRESULT OmnidirectionalSound::Start()
@@ -136,11 +136,11 @@ HRESULT OmnidirectionalSound::Start()
 }
 ```
 
-A questo punto, ogni volta che viene aggiornato il frame, è necessario aggiornare la posizione del ologrammi rispetto al dispositivo stesso. Questo avviene perché HRTF posizioni sono sempre espresse in relazione head dell'utente, tra cui la posizione head e l'orientamento.
+A questo punto, ogni volta che si aggiorna il frame, è necessario aggiornare la posizione dell'ologramma in relazione al dispositivo stesso. Ciò è dovuto al fatto che le posizioni HRTF sono sempre espresse in relazione all'intestazione dell'utente, incluse la posizione e l'orientamento della testa.
 
-A questo scopo in un HolographicSpace, è necessario costruire una matrice di trasformazione dal nostro sistema di coordinate SpatialStationaryFrameOfReference a un sistema di coordinate che vengono fissata al dispositivo stesso.
+Per eseguire questa operazione in un HolographicSpace, è necessario creare una matrice di trasformazione dal sistema di coordinate SpatialStationaryFrameOfReference a un sistema di coordinate che viene fissato al dispositivo stesso.
 
-From *HolographicHrtfAudioSampleMain::Update()*:
+Da *HolographicHrtfAudioSampleMain:: Update ()* :
 
 ```
 m_spinningCubeRenderer->Update(m_timer);
@@ -213,9 +213,9 @@ if (currentPose != nullptr)
 }
 ```
 
-La posizione HRTF viene applicata direttamente per l'audio APO dalla classe helper OmnidirectionalSound.
+La posizione HRTF viene applicata direttamente al suono APO dalla classe helper OmnidirectionalSound.
 
-Dal *OmnidirectionalSound::OnUpdate*:
+Da *OmnidirectionalSound:: OnUpdate*:
 
 ```
 HRESULT OmnidirectionalSound::OnUpdate(_In_ Numerics::float3 position)
@@ -225,13 +225,13 @@ HRESULT OmnidirectionalSound::OnUpdate(_In_ Numerics::float3 position)
 }
 ```
 
-La procedura è terminata. Continuare a leggere per altre informazioni sulle operazioni eseguibili con HRTF audio e Windows Holographic.
+La procedura è terminata. Continuare a leggere per altre informazioni sulle operazioni che è possibile eseguire con HRTF audio e Windows olografico.
 
-### <a name="initialize-spatial-sound-for-a-directional-source"></a>Inizializzare spaziale audio per un'origine direzionale
+### <a name="initialize-spatial-sound-for-a-directional-source"></a>Inizializzare il suono spaziale per un'origine direzionale
 
-Alcuni vntana nelle vicinanze dell'utente di creare il suono principalmente in una sola direzione. Questo modello audio è denominato *cardioide* perché sembra cuori cartone animato. Il codice seguente viene illustrato come inizializzare un APO per emettere direzionale audio. Per il listato di codice completo, vedere [CardioidSound.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/CardioidSound.cpp) .
+Alcuni ologrammi nell'ambiente dell'utente emettono suoni principalmente in un'unica direzione. Questo modello audio è denominato *cardioide* perché sembra un cuore animato. Nel codice riportato di seguito viene illustrato come inizializzare un'espressione APO per emettere un suono direzionale. Per il listato di codice completo, vedere [CardioidSound. cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/CardioidSound.cpp) .
 
-Dopo aver configurato il APO per HRTF, chiamare [avviare](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx) nella voce origine da riprodurre l'audio.
+Dopo aver configurato APO per HRTF, chiamare [Start](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.ixaudio2sourcevoice.ixaudio2sourcevoice.start.aspx) sulla voce di origine per riprodurre l'audio.
 
 ```
 // Initializes an APO that emits directional sound.
@@ -303,11 +303,11 @@ HRESULT CardioidSound::ConfigureApo( float scaling, float order )
 }
 ```
 
-### <a name="implement-custom-decay"></a>Implementare decay personalizzato
+### <a name="implement-custom-decay"></a>Implementare il decadimento personalizzato
 
-È possibile ignorare la frequenza con cui un suono spaziale diminuisce con distanza e/o a quale distanza tagliata completamente. Per implementare il comportamento di decadimento personalizzato su un suono spaziale, popolare un' [struct HrtfDistanceDecay](https://msdn.microsoft.com/library/windows/desktop/mt186602.aspx) e assegnarla al **distanceDecay** campo un [HrtfApoInit struct](https://msdn.microsoft.com/library/windows/desktop/mt186597.aspx) prima di passarlo per il [CreateHrtfApo](https://msdn.microsoft.com/library/windows/desktop/mt186596.aspx) (funzione).
+È possibile eseguire l'override della frequenza con cui un suono spaziale si interrompe con la distanza e/o la distanza in cui si interrompe completamente. Per implementare un comportamento di decadimento personalizzato su un suono spaziale, popolare uno [struct HrtfDistanceDecay](https://msdn.microsoft.com/library/windows/desktop/mt186602.aspx) e assegnarlo al campo **distanceDecay** in uno [struct HrtfApoInit](https://msdn.microsoft.com/library/windows/desktop/mt186597.aspx) prima di passarlo alla funzione [CreateHrtfApo](https://msdn.microsoft.com/library/windows/desktop/mt186596.aspx) .
 
-Aggiungere il codice seguente per il **inizializzare** metodo illustrato in precedenza per specificare il comportamento di decadimento personalizzato. Per il listato di codice completo, vedere [CustomDecay.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/CustomDecay.cpp).
+Aggiungere il codice seguente al metodo **Initialize** illustrato in precedenza per specificare il comportamento di decadimento personalizzato. Per il listato di codice completo, vedere [CustomDecay. cpp](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpatialSound/cpp/CustomDecay.cpp).
 
 ```
 HRESULT CustomDecaySound::Initialize( LPCWSTR filename )

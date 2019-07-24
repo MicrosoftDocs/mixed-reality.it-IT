@@ -1,90 +1,90 @@
 ---
-title: Note sulla versione - aprile 2018
-description: HoloLens e note sulla versione di realtà mista di Windows per Windows 10 April 2018 Update (noto anche come RS4).
+title: Note sulla versione-2018 aprile
+description: Note sulla versione di HoloLens e Windows Mixed Reality per l'aggiornamento di Windows 10 aprile 2018 (noto anche come RS4).
 author: mattzmsft
 ms.author: mazeller
 ms.date: 05/21/2018
 ms.topic: article
-keywords: release notes, versione, windows 10, build, rs4, sistema operativo
+keywords: Note sulla versione, versione, Windows 10, compilazione, RS4, sistema operativo
 ms.openlocfilehash: 1fc1b43b0581234e835379fd553b78121108086e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600903"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524171"
 ---
-# <a name="release-notes---april-2018"></a>Note sulla versione - aprile 2018
+# <a name="release-notes---april-2018"></a>Note sulla versione-2018 aprile
 
-Il **[Windows 10 April 2018 Update](https://blogs.windows.com/windowsexperience/2018/04/30/whats-new-in-the-windows-10-april-2018-update)** (noto anche come RS4) include nuove funzionalità per HoloLens e realtà mista di Windows auricolari immersive connesso al PC. 
+L' **[aggiornamento di Windows 10 aprile 2018](https://blogs.windows.com/windowsexperience/2018/04/30/whats-new-in-the-windows-10-april-2018-update)** (noto anche come RS4) include nuove funzionalità per gli auricolari HoloLens e Windows misto realtà mista connessi ai PC. 
 
-Per aggiornare la versione più recente per uno dei due tipi di dispositivo, aprire il **le impostazioni** app e passare alla **aggiornamento e sicurezza**, quindi selezionare il **Controlla aggiornamenti** pulsante. In un PC Windows 10, è anche possibile installare manualmente Windows 10 April 2018 Update usando le [strumento di creazione dei supporti Windows](https://www.microsoft.com/software-download/windows10).
+Per eseguire l'aggiornamento alla versione più recente per uno dei due tipi di dispositivo, aprire l'app **Impostazioni** , passare a **Aggiorna & sicurezza**, quindi selezionare il pulsante **Controlla aggiornamenti** . In un PC Windows 10, è anche possibile installare manualmente l'aggiornamento di Windows 10 aprile 2018 usando lo [strumento di creazione di Windows Media](https://www.microsoft.com/software-download/windows10).
 
-**Versione più recente per Desktop:** Windows 10 April 2018 Update (**10.0.17134.1**)<br>
-**Versione più recente per HoloLens:** Windows 10 April 2018 Update (**10.0.17134.80**)<br>
+**Versione più recente per desktop:** Aggiornamento di Windows 10 aprile 2018 (**10.0.17134.1**)<br>
+**Versione più recente per HoloLens:** Aggiornamento di Windows 10 aprile 2018 (**10.0.17134.80**)<br>
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/O-84oWjSbr0]
 
-*Un messaggio da Alex Kipman e una panoramica delle nuove funzionalità di realtà mista di Windows 10 April 2018 Update*
+*Un messaggio di Alex Kipman e una panoramica delle nuove funzionalità di realtà mista nell'aggiornamento di Windows 10 aprile 2018*
 
-## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuove funzionalità per le cuffie coinvolgenti di realtà mista di Windows
+## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuove funzionalità per gli auricolari immersivi a realtà mista di Windows
 
-Windows 10 April 2018 Update include numerosi miglioramenti per l'uso auricolari (VR) coinvolgenti di realtà mista di Windows con il PC desktop, ad esempio: 
+L'aggiornamento di Windows 10 aprile 2018 include numerosi miglioramenti per l'uso di auricolari con la realtà mista (VR) di Windows con il PC desktop, ad esempio: 
 
-* **Nuovi ambienti per la realtà mista domestica** -è ora possibile scegliere tra il Cliff House e il nuovo ambiente Skyloft selezionando **posizioni** nel menu Start. Sono stati anche aggiunti [funzionalità sperimentale](add-custom-home-environments.md) che consentirà di usare gli ambienti personalizzati creati.
-* **Accesso rapido all'acquisizione di realtà mista** -è ora possibile scattare foto realtà mista utilizzando un controller di movimento. Tenere premuto il pulsante Windows e quindi toccare il trigger. Ciò funziona negli ambienti e le app, ma non acquisiscono il contenuto protetto con DRM.
-* **Nuove opzioni per l'avvio e il ridimensionamento contenuto** -App vengono ora inserite automaticamente fronte quando li si avvia dal menu Start. È possibile ridimensionare anche ora 2D App trascinando i bordi e angoli della finestra.
-* **Consente di passare a contenuto con i comandi vocali "teleport"** -è ora possibile rapidamente teleport per stare contenuto nella realtà mista di Windows home gazing al contenuto e che indica che "teleport."
-* **[Nelle schermate di avvio app 3D animate](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#animation-guidelines) e [decorativi oggetti 3D](enable-placement-of-3d-models-in-the-home.md) per la realtà mista home** -è ora possibile aggiungere un'animazione a utilità di avvio app 3D e consentire agli utenti di inserire decorativi modelli 3D da una pagina Web o 2D app nel Realtà mista di Windows home.
-* **[Miglioramenti in Windows Mixed Reality per SteamVR](updating-your-steamvr-application-for-windows-mixed-reality.md)**  -realtà mista di Windows per SteamVR non rientra nel "accesso anticipato" con nuovi aggiornamenti, tra cui: quando si usano controller di movimento, migliorare le prestazioni e affidabilità, del feedback aptico e miglioramenti all'aspetto dei controller di movimento in SteamVR.
-* **Altri miglioramenti** -impostazioni automatica delle prestazioni sono state aggiornate per offrire un'esperienza più ottimizzata (è possibile [eseguire l'override manuale](#visual-quality) questa impostazione). Il programma di installazione fornisce ora che informazioni più dettagliate su problemi comuni di compatibilità con USB 3.0 controller e schede grafiche.
+* **Nuovi ambienti per la Home realtà mista** : è ora possibile scegliere tra The Cliff House e il nuovo ambiente Skyloft selezionando **posizioni** nel menu Start. È stata anche aggiunta [una funzionalità sperimentale](add-custom-home-environments.md) che consente di usare ambienti personalizzati creati.
+* **Accesso rapido all'acquisizione di realtà mista** : è ora possibile eseguire foto di realtà miste usando un controller di movimento. Premere il pulsante Windows e quindi toccare il trigger. Funziona in ambienti e app, ma non acquisisce contenuti protetti con DRM.
+* Le **nuove opzioni per l'avvio e** il ridimensionamento del contenuto-app vengono ora posizionate automaticamente prima di essere avviate dal menu Start. È anche possibile ridimensionare le app 2D trascinando i bordi e gli angoli della finestra.
+* **Passare facilmente al contenuto con il comando Voice "Teleport"** . è ora possibile effettuare rapidamente il Teleport di fronte al contenuto della Home realtà mista di Windows guardando il contenuto e affermando "Teleport".
+* Avvii di  **[app 3D animati](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#animation-guidelines) e [oggetti 3D decorativi](enable-placement-of-3d-models-in-the-home.md) per la Home realtà mista** : è ora possibile aggiungere animazioni ai lanci di app 3D e consentire agli utenti di inserire modelli 3D decorativi da una pagina Web o un'app 2D nella Home realtà mista di Windows.
+* I miglioramenti apportati **[alla realtà mista di Windows per SteamVR](updating-your-steamvr-application-for-windows-mixed-reality.md)** , la realtà mista di Windows per SteamVR, sono fuori "accesso anticipato" con nuovi aggiornamenti, tra cui: feedback tattile quando si usano i controller di movimento, prestazioni e affidabilità migliorate e miglioramenti al aspetto dei controller di movimento in SteamVR.
+* **Altri miglioramenti** : le impostazioni delle prestazioni automatiche sono state aggiornate per offrire un'esperienza più ottimizzata. è possibile [sostituire manualmente](#visual-quality) questa impostazione. Il programma di installazione offre ora informazioni più dettagliate sui problemi di compatibilità comuni con i controller USB 3,0 e le schede grafiche.
 
 ## <a name="new-features-for-hololens"></a>Nuove funzionalità per HoloLens
 
-Windows 10 April 2018 Update è ora disponibile per tutti i clienti di HoloLens. Questo aggiornamento include miglioramenti che sono state introdotte rispetto all'ultima versione principale del software HoloLens [agosto 2016](release-notes-august-2016.md).
+L'aggiornamento di Windows 10 aprile 2018 è arrivato per tutti i clienti di HoloLens. Questo aggiornamento include miglioramenti introdotti dopo l'ultima versione principale di HoloLens software nel [2016 agosto](release-notes-august-2016.md).
 
-### <a name="for-everyone"></a>Per tutti gli utenti
+### <a name="for-everyone"></a>Per tutti
 
 <table>
   <tr>
     <th>Funzionalità</th><th>Dettagli</th><th>Istruzioni</th>
   </tr>
   <tr>
-    <td>Posizionamento automatico del contenuto 2D e 3D all'avvio</td><td>Un'app UWP app 2D 2D o utilità di avvio automatico-posizioni in tutto il mondo con dimensioni ottimali e distanza all'avvio anziché richiedere all'utente di inserirlo. Se un' <a href="app-views.md">app immersive</a> Usa un'utilità di avvio app 2D invece di un <a href="3d-app-launcher-design-guidance.md">utilità di avvio app 3D</a>, l'app immersive avvierà automaticamente dall'utilità di avvio di app 2D uguale come in RS1.<br><br>Un'utilità di avvio app 3D dal menu Start anche auto-luoghi nel mondo. Invece di avvio automatico dell'app, gli utenti possono fare clic su Utilità di avvio per avviare l'app immersiva. Contenuto 3D aperto dall'app ologrammi e dal bordo anche auto-luoghi nel mondo.</td><td>Quando si apre un'app dal menu Start, non verrà richiesto non è più per inserirlo nel mondo.<br><br>Se l'app 2D /<a href="3d-app-launcher-design-guidance.md">utilità di avvio app 3D</a> posizionamento non ottimale, è possibile spostarle facilmente con nuovo manipolazioni app fluida descritte di seguito. Inoltre è possibile posizionare nuovamente il contenuto di utilità di avvio/3D app 2D che informa che "Spostare questa" e utilizzando quindi sguardo per riposizionare il contenuto.</td>
+    <td>Posizionamento automatico del contenuto 2D e 3D all'avvio</td><td>Un utilità di avvio di app 2D o un'app UWP 2D posiziona automaticamente nel mondo a una dimensione e una distanza ottimali quando viene avviata, anziché richiedere all'utente di inserirlo. Se un' <a href="app-views.md">app immersiva</a> usa un utilità di avvio di app 2D invece di un <a href="3d-app-launcher-design-guidance.md">Launcher di app 3D</a>, l'app immersiva verrà avviata automaticamente dall'utilità di avvio di app 2D, come in RS1.<br><br>Un avvio di app 3D dal menu Start si inserisce anche automaticamente nel mondo. Anziché avviare automaticamente l'app, gli utenti possono fare clic sul pulsante di avvio per avviare l'app immersiva. contenuto 3D aperto dall'app olografici e dal bordo automatico anche nel mondo.</td><td>Quando si apre un'app dal menu Start, non verrà più richiesto di inserirla nel mondo.<br><br>Se il posizionamento dell'<a href="3d-app-launcher-design-guidance.md">utilità di avvio</a> dell'app 2D o dell'app 3D non è ottimale, è possibile spostarli facilmente usando le nuove modifiche di app fluide descritte di seguito. È anche possibile riposizionare il contenuto 3D o l'utilità di avvio di app 2D digitando "sposta questo" e quindi usando lo sguardo per riposizionare il contenuto.</td>
   </tr>
   <tr>
-    <td>Modifica app fluide</td><td>Spostare, ridimensionare e ruotare il contenuto 2D e 3D senza dover passare alla modalità "Regolare".</td><td>Per spostare un'app UWP 2D o un'utilità di avvio app 2D, fissare semplicemente la barra dell'app e quindi usare il modello tap + premuto e trascinare movimento. È possibile spostare il contenuto 3D gazing in qualsiasi punto nell'oggetto e quindi usando toccare e tenere premuto + trascinare.<br><br>Per ridimensionare il contenuto 2D, fissare relativo angolo. Il cursore sguardo si trasforma in un cursore di ridimensionamento e quindi è possibile toccare e tenere premuto + trascinare per ridimensionare. È anche possibile rendere 2D contenuto più alto o più ampio alla ricerca nei suoi bordi e trascinando.<br><br>Per ridimensionare il contenuto 3D, sollevare hanno entrambi le mani in frame di movimento, dita nella posizione pronta. Verrà visualizzato il cursore trasforma in uno stato con 2 poco pratico. Eseguire il modello tap e tenere premuto movimento con entrambe le mani. Spostare le mani più vicina o più lontani si modificherà la dimensione dell'oggetto. Spostare le mani avanti e indietro rispetto a altro verrà ruotare l'oggetto. È anche possibile ridimensionare o ruotare il contenuto 2D in questo modo.</td>
+    <td>Manipolazione di app fluide</td><td>Spostare, ridimensionare e ruotare il contenuto 2D e 3D senza dover immettere la modalità "Adjust".</td><td>Per spostare un'app UWP 2D o un utilità di avvio di app 2D, è sufficiente guardare la barra dell'app e quindi usare il movimento Tap + trattieni + trascina. È possibile spostare il contenuto 3D osservando un punto qualsiasi dell'oggetto e quindi usando Tap + trattieni + drag.<br><br>Per ridimensionare il contenuto 2D, guarda l'angolo. Il cursore dello sguardo si trasforma in un cursore di ridimensionamento, quindi è possibile toccare + Mantieni + trascina per ridimensionare. È anche possibile rendere il contenuto 2D più alto o più ampio osservando i relativi bordi e trascinamento.<br><br>Per ridimensionare il contenuto 3D, sollevare entrambe le mani nel frame di movimento, quindi passare alla posizione pronta. Si noterà che il cursore si trasforma in uno stato con due poche mani. Eseguire il tocco e mantenere il gesto con entrambe le mani. Spostando le mani più vicine o più lontane, si modificano le dimensioni dell'oggetto. Se si spostano le mani avanti e indietro rispetto all'altra, l'oggetto viene ruotato. È anche possibile ridimensionare/ruotare il contenuto 2D in questo modo.</td>
   </tr>
   <tr>
-    <td>Ridimensionamento orizzontale di app 2D con adattamento dinamico</td><td>Creare un'app UWP 2D più ampia proporzioni per visualizzare altri contenuti su app. Ad esempio, rendere l'app di posta elettronica sufficientemente ampio per visualizzare il riquadro di anteprima.</td><td>Fissare semplicemente il bordo sinistro o destro dell'app UWP 2D per vedere il cursore di ridimensionamento, quindi usare il modello tap contenere + trascinare movimento da ridimensionare.</td>
+    <td>ridimensionamento orizzontale app 2D con riflusso</td><td>Per visualizzare più contenuto dell'app, è possibile creare un'app UWP 2D più ampia in proporzioni. Ad esempio, rendere l'app di posta elettronica sufficientemente ampia per visualizzare il riquadro di anteprima.</td><td>È sufficiente guardare il bordo sinistro o destro dell'app UWP 2D per visualizzare il cursore di ridimensionamento, quindi usare l'azione Tap + trattieni + trascina per ridimensionare.</td>
   </tr>
   <tr>
-    <td>Supporto dei comandi vocali espanso</td><td>È possibile eseguire più semplice utilizzando la voce dell'utente.</td><td>Provare a eseguire questi comandi vocali:<ul><li>"Andare a Start": consente di visualizzare il menu Start o esce da un' <a href="app-views.md">app immersive</a>.</li><li>"Spostare questa" - consente di spostare un oggetto.</li></ul></td>
+    <td>Supporto del comando Voice espanso</td><td>È possibile fare più semplicemente uso della propria voce.</td><td>Provare questi comandi vocali:<ul><li>"Vai a avvio"-Visualizza il menu Start o esce da un' <a href="app-views.md">app immersiva</a>.</li><li>"Sposta questo": consente di spostare un oggetto.</li></ul></td>
   </tr>
   <tr>
-    <td>App foto e Vntana aggiornamento</td><td>App Vntana aggiornata con nuovi vntana. App foto aggiornato.</td><td>Si noterà un aspetto rinnovato per le app ologrammi e foto. L'app Vntana include diverse nuove Vntana e un produttore di etichetta per la creazione semplificata di testo.</td>
+    <td>App per ologrammi e foto aggiornate</td><td>App ologrammi aggiornata con nuovi ologrammi. App Photos aggiornata.</td><td>Si noterà un aspetto aggiornato delle app per ologrammi e foto. L'app ologrammi include diversi nuovi ologrammi e un produttore di etichette per semplificare la creazione di testo.</td>
   </tr>
   <tr>
-    <td>Migliorata l'acquisizione di realtà mista</td><td>Inizio di scelta rapida di hardware e di fine MRC video.</td><td>Tenere premuto Volume + verso il basso per 3 secondi avviare la registrazione MRC video. Toccare di nuovo entrambi o usare il movimento bloom per terminare.</td>
+    <td>Acquisizione della realtà mista migliorata</td><td>Video di avvio e fine del collegamento hardware.</td><td>Attendere 3 secondi per avviare la registrazione del video MRC. Toccare di nuovo o usare il gesto Bloom per terminare.</td>
   </tr>
   <tr>
-    <td>Spazi consolidati</td><td>Semplificare la gestione dello spazio per vntana in uno spazio singolo.</td><td>HoloLens Trova automaticamente lo spazio e non richiede più è possibile gestire o selezionare gli spazi. Se hai problemi con vntana si, è possibile passare a <b>Impostazioni > sistema > Vntana > rimuovere nelle vicinanze vntana</b>. Se necessario, è anche possibile selezionare <b>rimuovere tutto vntana</b>.</td>
+    <td>Spazi consolidati</td><td>Semplifica la gestione dello spazio per gli ologrammi in uno spazio singolo.</td><td>HoloLens consente di trovare automaticamente lo spazio e non è più necessario gestire o selezionare spazi. In caso di problemi con gli ologrammi, è possibile passare a <b>impostazioni > sistema > ologrammi > rimuovere gli ologrammi vicini</b>. Se necessario, è anche possibile selezionare <b>Rimuovi tutti gli ologrammi</b>.</td>
   </tr>
   <tr>
-    <td>Full immersion audio migliorata</td><td>È possibile ascoltare HoloLens migliori in ambienti rumorosi e un'esperienza più realistica suono da applicazioni come il suono sarà nascosti da walls reale rilevato dal dispositivo.</td><td>Non devi eseguire alcuna operazione per sfruttare il suono spaziale migliorato.</td>
+    <td>Migliore immersione audio</td><td>È ora possibile sentire meglio HoloLens in ambienti rumorosi e sperimentare un suono più realistico dalle applicazioni perché il loro suono sarà oscurato da muri reali rilevati dal dispositivo.</td><td>Non è necessario eseguire alcuna operazione per sfruttare il suono spaziale migliorato.</td>
   </tr>
   <tr>
-    <td>Esplora file</td><td>Spostare ed eliminare file dall'interno di HoloLens.</td><td>È possibile usare la <b>Esplora File</b> app spostare ed eliminare file dall'interno di HoloLens.<br><br><b>Suggerimento:</b> Se non viene visualizzato alcun file, il filtro "Recenti" può essere attivo (icona dell'orologio viene evidenziato nel riquadro a sinistra). Per risolvere il problema, selezionare la <b>questa periferica</b> icona nel riquadro a sinistra (sotto l'icona di orologio), di documento o aprire il menu e selezionare <b>This Device</b>.
+    <td>Esplora file</td><td>Spostare ed eliminare i file dall'interno di HoloLens.</td><td>È possibile usare l'app <b>Esplora file</b> per spostare ed eliminare i file dall'interno di HoloLens.<br><br><b>Punta</b> Se non viene visualizzato alcun file, il filtro "recente" potrebbe essere attivo (l'icona di clock è evidenziata nel riquadro sinistro). Per risolvere il problema, selezionare l'icona del documento del <b>dispositivo</b> nel riquadro sinistro, sotto l'icona di clock, oppure aprire il menu e selezionare il <b>dispositivo</b>.
 </td>
   </tr>
   <tr>
-    <td>Supporto MTP (Media Transfer Protocol)</td><td>Abilita il PC desktop per le librerie (foto, video, documenti) di accesso su HoloLens per trasferimento dati.</td><td>Analogamente ad altri dispositivi mobili, la connessione di HoloLens al computer per visualizzare <b>Esplora File</b> per accedere alle raccolte di HoloLens (foto, video, documenti) per trasferimento dati.<br><br><b>Suggerimenti:</b><ul><li>Se qualsiasi file non sono visibili, verificare che accedere a di HoloLens per abilitare l'accesso ai dati.</li><li>Dal <b>Esplora File</b> in un computer, è possibile selezionare <b>le proprietà del dispositivo</b> per visualizzare il numero di versione del sistema operativo Holographic a Windows (versione firmware) e numero di serie del dispositivo.</li></ul><b>Problema noto:</b> La ridenominazione tramite HoloLens <b>Esplora File</b> sul PC non è abilitato.</td>
+    <td>Supporto per MTP (Media Transfer Protocol)</td><td>Consente al PC desktop di accedere alle librerie (foto, video, documenti) in HoloLens per un trasferimento semplice.</td><td>Analogamente ad altri dispositivi mobili, connettere la HoloLens al PC per visualizzare <b>Esplora file</b> per accedere alle librerie di HoloLens (foto, video, documenti) per un trasferimento semplice.<br><br><b>Consigli</b><ul><li>Se non viene visualizzato alcun file, assicurarsi di accedere a HoloLens per abilitare l'accesso ai dati.</li><li>Da <b>Esplora file</b> nel PC è possibile selezionare le <b>proprietà del dispositivo</b> per visualizzare il numero di versione del sistema operativo Windows (versione del firmware) e il numero di serie del dispositivo.</li></ul><b>Problema noto:</b> La ridenominazione di HoloLens tramite <b>Esplora file</b> nel PC non è abilitata.</td>
   </tr>
   <tr>
-    <td>Supporto di rete del portale captive durante l'installazione</td><td>È ora possibile impostare il HoloLens in una rete guest a hotel, conference Center, negozi al dettaglio o le aziende che usano captive portal.</td><td>Durante l'installazione, selezionare la rete, verificare di connettersi automaticamente se lo si desidera e immettere le informazioni di rete come richiesto.</td>
+    <td>Supporto della rete Captive Portal durante l'installazione</td><td>È ora possibile configurare la HoloLens in una rete Guest in alberghi, centri conferenze, negozi commerciali o aziende che usano Captive Portal.</td><td>Durante l'installazione, selezionare la rete, controllare Connetti automaticamente se lo si desidera e immettere le informazioni di rete come richiesto.</td>
   </tr>
   <tr>
-    <td>Sincronizzazione foto e video tramite l'app OneDrive</td><td>Le tue foto e video da HoloLens verranno ora sincronizzate tramite l'app OneDrive da di Microsoft Store anziché direttamente tramite l'app foto.</td><td>Per impostare questa funzionalità, scaricare e avviare l'app OneDrive dalla Store. Alla prima esecuzione verrà richiesto per caricare automaticamente le foto in OneDrive o è possibile trovare l'opzione nelle impostazioni dell'app.</td>
+    <td>Sincronizzazione di foto e video tramite l'app OneDrive</td><td>Le foto e i video di HoloLens verranno sincronizzati tramite l'app OneDrive dal Microsoft Store invece che direttamente dall'app Photos.</td><td>Per configurare questa impostazione, scaricare e avviare l'app OneDrive dallo Store. Alla prima esecuzione verrà richiesto di caricare automaticamente le foto in OneDrive, oppure è possibile trovare l'opzione nelle impostazioni dell'app.</td>
   </tr>
 </table>
 
@@ -95,21 +95,21 @@ Windows 10 April 2018 Update è ora disponibile per tutti i clienti di HoloLens.
     <th>Funzionalità</th><th>Dettagli</th><th>Istruzioni</th>
   </tr>
   <tr>
-    <td>Miglioramenti di mapping spaziale</td><td>Miglioramenti di qualità, la semplificazione e prestazioni.</td><td>Mesh mapping spaziale apparirà più chiaro: triangoli meno necessari per rappresentare lo stesso livello di dettaglio. È possibile notare le modifiche di densità considerevole triangolo nella scena.</td>
+    <td>Miglioramenti al mapping spaziale</td><td>Miglioramento qualitativo, semplificato e delle prestazioni.</td><td>La mesh di mapping spaziale verrà visualizzata come più pulita: sono necessari meno triangoli per rappresentare lo stesso livello di dettaglio. È possibile notare modifiche nella densità dei triangoli nella scena.</td>
   </tr>
   <tr>
-    <td>Selezione automatica del punto di attivazione basata sul buffer di profondità</td><td>Invio di un buffer di profondità per Windows consente a HoloLens selezionare un punto di stato attivo automaticamente per ottimizzare la stabilità di ologramma.</td><td>In Unity, passare a <b>Modifica > Impostazioni progetto > Player > scheda Universal Windows Platform > Impostazioni XR</b>, espandere il <b>SDK realtà mista di Windows</b> di elemento e assicurarsi che <b>abilitare Buffer profondità Condivisione</b> sia selezionata. Ciò verrà automaticamente verificato per i nuovi progetti.<br><br>Per le app DirectX, verificare che si chiama il <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer">CommitDirect3D11DepthBuffer </a> metodo sul <b>HolographicRenderingParameters</b> ogni fotogramma per fornire il buffer di profondità per Windows.
+    <td>Selezione automatica del punto di interesse in base al buffer di profondità</td><td>L'invio di un buffer di profondità a Windows consente a HoloLens di selezionare automaticamente un punto di attivazione per ottimizzare la stabilità degli ologrammi.</td><td>In Unity passare a <b>Edit > Project settings > Player > piattaforma UWP (Universal Windows Platform) tab > XR Settings</b>, expand the <b>Windows Mixed Reality SDK</b> Item e assicurarsi che <b>Enable depth buffer sharing</b> sia selezionato. Questa operazione verrà verificata automaticamente per i nuovi progetti.<br><br>Per le app DirectX, assicurarsi di chiamare il metodo <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer">CommitDirect3D11DepthBuffer</a> su <b>HolographicRenderingParameters</b> ogni frame per fornire il buffer di profondità a Windows.
 </td>
   </tr>
   <tr>
-    <td>Modalità reprojection holographic</td><td>È ora possibile disabilitare reprojection posizionali in HoloLens per migliorare la stabilità di ologramma del contenuto rigidamente bloccato corpo, ad esempio video a 360 gradi.</td><td>In Unity, impostare <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html">HolographicSettings.ReprojectionMode</a> al <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html">HolographicReprojectionMode.OrientationOnly</a> quando tutto il contenuto nella visualizzazione è rigidamente bloccato corpo.<br><br>Per le app DirectX, impostare <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.reprojectionmode"> HolographicCameraRenderingParameters.ReprojectionMode</a> al <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicreprojectionmode">HolographicReprojectionMode.OrientationOnly</a> quando tutto il contenuto nella visualizzazione è rigidamente bloccato corpo.</td>
+    <td>Modalità di riproiezione olografica</td><td>È ora possibile disabilitare la riproiezione posizionale in HoloLens per migliorare la stabilità dell'ologramma del contenuto rigidamente bloccato del corpo, ad esempio un video di 360 gradi.</td><td>In Unity impostare <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html">HolographicSettings. ReprojectionMode</a> su <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html">HolographicReprojectionMode. OrientationOnly</a> quando tutto il contenuto nella visualizzazione è rigidamente bloccato dal corpo.<br><br>Per le app DirectX, impostare <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.reprojectionmode">HolographicCameraRenderingParameters. ReprojectionMode</a> su <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicreprojectionmode">HolographicReprojectionMode. OrientationOnly</a> quando tutto il contenuto nella visualizzazione è rigidamente bloccato dal corpo.</td>
   </tr>
   <tr>
-    <td>API di personalizzazione di App</td><td>Le API Windows saperne di più su dove l'esecuzione dell'app, ad esempio se display del dispositivo è (visore VR immersivi) opaco o trasparente (HoloLens) e l'eventuale visualizzazione 2D dell'app UWP verrà visualizzati nella shell holographic.</td><td>Unity ha in precedenza manualmente esposti <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html">HolographicSettings.IsDisplayOpaque</a> in modo che ha lavorato anche prima di questa compilazione.<br><br>Per le app DirectX, è ora possibile accedere alle API esistenti, ad esempio <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.isopaque">HolographicDisplay.GetDefault(). IsOpaque</a> e <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview.iscurrentviewpresentedonholographicdisplay">HolographicApplicationPreview.IsCurrentViewPresentedOnHolographicDisplay</a> su HoloLens anche.
+    <td>API di personalizzazione delle app</td><td>Le API di Windows sono in grado di ottenere altre informazioni sulla posizione in cui è in esecuzione l'app, ad esempio se il display del dispositivo è trasparente (HoloLens) o opaco (auricolare immersivo) e se la visualizzazione 2D di un'app UWP è visualizzata nella shell olografica.</td><td>Unity ha precedentemente esposto manualmente <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html">HolographicSettings. IsDisplayOpaque</a> in un modo che funzionava anche prima di questa compilazione.<br><br>Per le app DirectX, ora è possibile accedere ad API esistenti come <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.isopaque">HolographicDisplay. GetDefault (). Sia Opaque</a> che <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview.iscurrentviewpresentedonholographicdisplay">HolographicApplicationPreview. IsCurrentViewPresentedOnHolographicDisplay</a> in HoloLens.
 </td>
   </tr>
   <tr>
-      <td>Modalità di ricerca</td><td>Consente agli sviluppatori di accedere ai sensori HoloLens chiave quando si compilano applicazioni accademiche e industriali per testare nuove idee nei campi di visione artificiale e robotica, tra cui:<ul><li>I quattro ambiente videocamere di rilevamento</li><li>Due versioni dei dati depth mappatura della fotocamera</li><li>Due versioni di un flusso di runtime di integrazione-riflettività</li></ul></td><td><a href="research-mode.md">Documentazione di modalità di ricerca</a><br><a href="https://github.com/Microsoft/HoloLensForCV">App di esempio in modalità di ricerca</a></td>
+      <td>Modalità di ricerca</td><td>Consente agli sviluppatori di accedere ai sensori HoloLens chiave quando si compilano applicazioni accademiche e industriali per testare nuove idee nei campi della visione artificiale e dei robot, tra cui:<ul><li>Le quattro fotocamere di rilevamento dell'ambiente</li><li>Due versioni dei dati della fotocamera con mapping di profondità</li><li>Due versioni di un flusso IR-riflettività</li></ul></td><td><a href="research-mode.md">Documentazione sulla modalità di ricerca</a><br><a href="https://github.com/Microsoft/HoloLensForCV">App di esempio per la modalità di ricerca</a></td>
   </tr>
 </table>
 
@@ -120,16 +120,16 @@ Windows 10 April 2018 Update è ora disponibile per tutti i clienti di HoloLens.
     <th>Funzionalità</th><th>Dettagli</th><th>Istruzioni</th>
   </tr>
   <tr>
-    <td>Usare più account utente di Azure Active Directory in un singolo dispositivo</td><td>Condividere un HoloLens con più utenti di Azure AD, ognuno con le proprie impostazioni utente e dati utente nel dispositivo.</td><td><a href="https://docs.microsoft.com/hololens/hololens-multiple-users">IT Pro Center: HoloLens condivisione con più persone</a></td>
+    <td>Usare più account utente Azure Active Directory in un singolo dispositivo</td><td>Condividere un HoloLens con più utenti Azure AD, ognuno con le proprie impostazioni utente e i dati utente nel dispositivo.</td><td><a href="https://docs.microsoft.com/hololens/hololens-multiple-users">Centro per professionisti IT: Condividi HoloLens con più persone</a></td>
   </tr>
   <tr>
-    <td>Modificare la rete Wi-Fi in fase di accesso</td><td>Modificare la rete Wi-Fi prima dell'accesso per attivare un altro utente di accedere con il proprio account utente di Azure AD per la prima volta, consentendo agli utenti di condividere i dispositivi in diverse posizioni e i siti dei processi.</td><td>Nella schermata di accesso, è possibile usare l'icona di rete sotto il campo della password per connettersi a una rete. Ciò risulta utile quando si tratta la prima volta che accede a un dispositivo.</td>
+    <td>Modificare la rete Wi-Fi all'accesso</td><td>Modificare la rete Wi-Fi prima di accedere per consentire a un altro utente di accedere con il proprio account utente Azure AD per la prima volta, consentendo agli utenti di condividere i dispositivi in diverse posizioni e siti di lavoro.</td><td>Nella schermata di accesso è possibile usare l'icona di rete sotto il campo password per connettersi a una rete. Questa operazione è utile quando è la prima volta che si accede a un dispositivo.</td>
   </tr>
   <tr>
-    <td>Registrazione unificata</td><td>Ora è facile per un utente di HoloLens che ha configurato il dispositivo con un account Microsoft personale per aggiungere un account aziendale (Azure AD) e aggiungere il dispositivo al server MDM.</td><td>È sufficiente accedere con un account Azure AD e la registrazione viene eseguita automaticamente.</td>
+    <td>Registrazione unificata</td><td>È ora facile per un utente HoloLens che configura il dispositivo con un account Microsoft personale per aggiungere un account di lavoro (Azure AD) e aggiungere il dispositivo al server MDM.</td><td>È sufficiente accedere con un account di Azure AD e la registrazione viene eseguita automaticamente.</td>
   </tr>
   <tr>
-    <td>Sincronizzazione di posta elettronica senza la registrazione MDM</td><td>Supporto per la sincronizzazione di posta elettronica di Exchange Active Sync (EAS) senza richiedere la registrazione MDM.</td><td>È ora possibile sincronizzare posta elettronica senza la registrazione in MDM. È possibile configurare il dispositivo con un Account Microsoft, scaricare e installare l'app di posta elettronica e aggiungere un account di posta elettronica aziendale direttamente.</td>
+    <td>Sincronizzazione della posta senza registrazione MDM</td><td>Supporto per la sincronizzazione della posta Exchange Active Sync (EAS) senza richiedere la registrazione MDM.</td><td>È ora possibile sincronizzare la posta elettronica senza registrazione in MDM. È possibile configurare il dispositivo con un account Microsoft, scaricare e installare l'app di posta elettronica e aggiungere direttamente un account di posta elettronica di lavoro.</td>
   </tr>
 </table>
 
@@ -140,124 +140,124 @@ Windows 10 April 2018 Update è ora disponibile per tutti i clienti di HoloLens.
     <th>Funzionalità</th><th>Dettagli</th><th>Istruzioni</th>
   </tr>
   <tr>
-    <td>Nuovo nome di "Windows Holographic for Business" del sistema operativo</td><td>Cancellare l'edizione di denominazione per ridurre la confusione nell'applicazione di licenza di aggiornamento edizione quando vengono abilitate funzionalità Commercial Suite su HoloLens.</td><td>È possibile visualizzare quale edizione di Windows Holographic è nel dispositivo in <b>Impostazioni > sistema > su</b>. "Windows Holographic for Business" verrà visualizzato se è stato applicato un aggiornamento di edizione per abilitare le funzionalità Commercial Suite. Informazioni su come <a href="https://docs.microsoft.com/hololens/hololens-upgrade-enterprise">sbloccare Windows Holographic for Business funzionalità</a>.</td>
+    <td>Nuovo nome del sistema operativo "Windows Olografic for business"</td><td>Cancella la denominazione dell'edizione per ridurre la confusione nell'applicazione di licenza per l'aggiornamento dell'edizione quando le funzionalità della suite commerciale sono abilitate in HoloLens.</td><td>È possibile visualizzare l'edizione di Windows olografica sul dispositivo in <b>impostazioni > sistema > informazioni</b>su. "Windows Olografic for business" verrà visualizzato se è stato applicato un aggiornamento dell'edizione per abilitare le funzionalità della suite commerciale. Informazioni su come <a href="https://docs.microsoft.com/hololens/hololens-upgrade-enterprise">sbloccare le funzionalità di Windows olografico per le aziende</a>.</td>
   </tr>
   <tr>
-  <td>Windows Configuration Designer (WCD)</td><td>Creare e modificare i pacchetti di provisioning per la configurazione con l'app aggiornata WCD HoloLens. Creazione guidata HoloLens semplice per aggiornamento edizione OOBE configurabile, area/fuso orario, il token di Azure AD in blocco, rete e per gli sviluppatori CSP. Editor avanzato filtrati in base a HoloLens supportato opzioni, tra cui accesso assegnato e Account Management CSP.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">IT Pro Center: Configurare HoloLens usando un pacchetto di provisioning</a></td>
+  <td>Progettazione configurazione Windows (WCD)</td><td>Creare e modificare i pacchetti di provisioning per configurare HoloLens tramite l'app WCD aggiornata. Procedura guidata HoloLens semplice per l'aggiornamento dell'edizione, OOBE configurabile, area/fuso orario, token Azure AD Bulk, rete e CSP per sviluppatori. Editor avanzato filtrato per le opzioni supportate da HoloLens, inclusi i CSP di accesso e di gestione degli account assegnati.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">Centro per professionisti IT: Configurare HoloLens usando un pacchetto di provisioning</a></td>
   </tr>
   <tr>
-    <td>Programma di installazione configurabile (OOBE)</td><td>Nascondi calibrazione movimento/sguardo set di training e le schermate di configurazione Wi-Fi durante l'installazione.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning#create-a-provisioning-package-for-hololens-using-the-hololens-wizard">IT Pro Center: Configurare HoloLens usando un pacchetto di provisioning</a></td>
+    <td>Configurazione configurabile (OOBE)</td><td>Nascondi le schermate di calibrazione, movimento/sguardo e configurazione Wi-Fi durante l'installazione.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning#create-a-provisioning-package-for-hololens-using-the-hololens-wizard">Centro per professionisti IT: Configurare HoloLens usando un pacchetto di provisioning</a></td>
   </tr>
   <tr>
-    <td>Supporto del token Azure AD in blocco</td><td>Pre-registrare il dispositivo al tenant di directory di Azure AD per il flusso di programma di installazione utente più veloce.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">IT Pro Center: Configurare HoloLens usando un pacchetto di provisioning</a></td>
+    <td>Supporto per token Azure AD Bulk</td><td>Pre-registrare il dispositivo nel tenant di Azure AD directory per un flusso di installazione utente più rapido.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">Centro per professionisti IT: Configurare HoloLens usando un pacchetto di provisioning</a></td>
   </tr>
   <tr>
-  <td>CSP DeveloperSetup</td><td>Distribuisci profilo per configurare HoloLens in modalità sviluppatore. È utile per lo sviluppo e demo di dispositivi.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">IT Pro Center: Configurare HoloLens usando un pacchetto di provisioning</a></td>
+  <td>CSP DeveloperSetup</td><td>Distribuire il profilo per configurare HoloLens in modalità sviluppatore. Utile per i dispositivi di sviluppo e demo.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">Centro per professionisti IT: Configurare HoloLens usando un pacchetto di provisioning</a></td>
   </tr>
   <tr>
-  <td>CSP AccountManagement</td><td>Condividere un dispositivo HoloLens e rimuovere i dati utente dopo la disconnessione o soglie di inattività/spazio di archiviazione per l'utilizzo temporaneo. Supporta gli account Azure AD.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">IT Pro Center: Configurare HoloLens usando un pacchetto di provisioning</a></td>
+  <td>CSP AccountManagement</td><td>Condividere un dispositivo HoloLens e rimuovere i dati utente dopo la disconnessione o le soglie di inattività/archiviazione per l'utilizzo temporaneo. Supporta gli account Azure AD.</td><td><a href="https://docs.microsoft.com/hololens/hololens-provisioning">Centro per professionisti IT: Configurare HoloLens usando un pacchetto di provisioning</a></td>
   </tr>
   <tr>
-  <td>Accesso assegnato</td><td>Windows assegnato l'accesso per i ruoli di lavoro della prima riga o le demo. Blocco di uno o più app. Non è necessario per gli sviluppatori lo sblocco.</td><td><a href="https://docs.microsoft.com/hololens/hololens-kiosk">IT Pro Center: Configurare HoloLens in modalità tutto schermo</a></td>
+  <td>Accesso assegnato</td><td>Windows ha assegnato l'accesso per i ruoli di lavoro o le demo di prima riga. Blocco single o multiapp. Non è necessario sbloccare lo sviluppatore.</td><td><a href="https://docs.microsoft.com/hololens/hololens-kiosk">Centro per professionisti IT: Configurare HoloLens in modalità tutto schermo</a></td>
   </tr>
   <tr>
-  <td>Accesso guest per i dispositivi chiosco multimediale</td><td>Windows assegnato l'accesso con account guest senza password per le demo. Blocco di uno o più app. Non è necessario per gli sviluppatori lo sblocco.</td><td><a href="https://docs.microsoft.com/hololens/hololens-kiosk#guest">IT Pro Center: Configurare HoloLens in modalità tutto schermo</a></td>
+  <td>Accesso guest per dispositivi Kiosk</td><td>Windows ha assegnato l'accesso con un account Guest senza password per le demo. Blocco single o multiapp. Non è necessario sbloccare lo sviluppatore.</td><td><a href="https://docs.microsoft.com/hololens/hololens-kiosk#guest">Centro per professionisti IT: Configurare HoloLens in modalità tutto schermo</a></td>
   </tr>
   <tr>
-    <td>Configurare la diagnostica (OOBE)</td><td>Ottenere i log di diagnostica da HoloLens in modo che è possibile risolvere gli errori di accesso Azure AD (prima di Hub di commenti e suggerimenti è disponibile all'utente il cui accesso non riuscito).</td><td>Quando il programma di installazione o l'accesso non riesce, scegliere il nuovo <b>raccogliere informazioni</b> opzione per ottenere i log di diagnostica per la risoluzione dei problemi.</td>
+    <td>Diagnostica configurazione (configurazione guidata)</td><td>Ottenere i log di diagnostica da HoloLens per risolvere gli errori di accesso Azure AD (prima che l'hub feedback sia disponibile per l'utente il cui accesso non è riuscito).</td><td>Quando si verifica un errore durante l'installazione o l'accesso, scegliere la nuova opzione <b>Collect info</b> per ottenere i log di diagnostica per la risoluzione dei problemi.</td>
   </tr>
   <tr>
-    <td>Scadenza password indefinito account locale</td><td>Rimuovere un'interruzione del dispositivo reimpostata alla scadenza della password di account locale.</td><td>Durante il provisioning di un account locale, è non è più necessario modificare la password ogni 42 giorni nella <b>impostazioni</b>, come la password dell'account non scada più.</td>
+    <td>Scadenza password indefinita account locale</td><td>Rimuovere l'interferenza della reimpostazione del dispositivo quando la password dell'account locale scade.</td><td>Quando si esegue il provisioning di un account locale, non è più necessario modificare la password ogni 42 giorni in <b>Impostazioni</b>, perché la password dell'account non scade più.</td>
   </tr>
   <tr>
-    <td>I dettagli e lo stato di sincronizzazione MDM</td><td>Funzionalità di Windows standard per comprendere i dettagli all'interno di HoloLens e lo stato di sincronizzazione MDM.</td><td>È possibile controllare lo stato di sincronizzazione MDM di un dispositivo nel <b>Impostazioni > account > accesso azienda o dell'istituto di istruzione > Info</b>. Nel <b>lo stato di sincronizzazione dispositivi<b> sezione, è possibile avviare una sincronizzazione, vedere aree gestite da MDM e creare ed esportare un report di diagnostica avanzata.</td>
+    <td>Stato e dettagli della sincronizzazione MDM</td><td>Funzionalità standard di Windows per comprendere lo stato e i dettagli della sincronizzazione MDM dall'interno di HoloLens.</td><td>È possibile controllare lo stato di sincronizzazione MDM per un dispositivo in <b>impostazioni > account > accedere a informazioni > lavoro o dell'Istituto di istruzione</b>. Nella sezione <b>stato<b> sincronizzazione del dispositivo è possibile avviare una sincronizzazione, vedere aree gestite da MDM e creare ed esportare un report di diagnostica avanzata.</td>
   </tr>
 </table>
 
 ## <a name="known-issues"></a>Problemi noti
 
-Abbiamo lavorato sodo per offrire un'eccezionale esperienza di realtà mista di Windows, ma ancora Microsoft eseguita verificando alcuni problemi noti. Se si trova ad altri utenti, please [commenti e suggerimenti](give-us-feedback.md).
+Abbiamo lavorato duramente per offrire un'eccezionale esperienza di realtà mista di Windows, ma stiamo ancora verificando alcuni problemi noti. Se si trovano altre persone, inviare [commenti e suggerimenti](give-us-feedback.md).
 
 ### <a name="hololens"></a>HoloLens
 
 #### <a name="after-update"></a>Dopo l'aggiornamento
 
-Dopo l'aggiornamento da RS1 a RS4 di HoloLens è possibile notare quanto segue:
-* **Reimposta PIN** -3x3 App aggiunto al menu Start verranno ripristinate le impostazioni predefinite dopo l'aggiornamento. 
-* **Le App e reimpostare vntana posizionato** -App inserite nel tuo mondo verrà rimosso dopo l'aggiornamento e dovranno essere nuovamente inseriti in tutto lo spazio. 
-* **Hub di feedback non viene avviata immediatamente** -immediatamente dopo l'aggiornamento, saranno necessari alcuni minuti prima di poter avviare alcune app di posta in arrivo, ad esempio Hub di commenti e suggerimenti, anche se si aggiornano automaticamente. 
-* **I certificati Wi-Fi aziendali devono essere sincronizzate nuovamente** -stiamo analizzando un problema che richiede di HoloLens essere connessi a una rete diversa in ordine per i certificati aziendali essere nuovamente sincronizzati nel dispositivo prima che sia in grado di riconnettersi a reti aziendali usando i certificati. 
-* **La riproduzione di Video HEVC H.265 non funziona** -applicazioni che tentano di riprodurre video H.265 riceveranno un messaggio di errore. La soluzione alternativa consiste nel [accesso di Windows Device Portal](using-the-windows-device-portal.md), selezionare **Apps** sulla barra di spostamento a sinistra, e **rimuovere** l'applicazione di HEVC. Quindi, installare la versione più recente [estensione Video HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) da di Microsoft Store. Stiamo analizzando il problema. 
+È possibile riscontrare i seguenti problemi dopo l'aggiornamento da RS1 a RS4 in HoloLens:
+* **Pin reimpostazione** : le app 3x3 aggiunte al menu Start verranno reimpostate sui valori predefiniti dopo l'aggiornamento. 
+* Le **app e** gli ologrammi vengono reimpostati. le app inserite nel mondo verranno rimosse dopo l'aggiornamento e dovranno essere riposizionate in tutto lo spazio. 
+* L' **Hub di feedback potrebbe non essere avviato immediatamente** . dopo l'aggiornamento, saranno necessari alcuni minuti prima di poter avviare alcune app della posta in arrivo, ad esempio l'hub di feedback, durante l'aggiornamento. 
+* È **necessario ripetere la sincronizzazione dei certificati Wi-Fi aziendali** . si sta esaminando un problema che richiede che il HoloLens sia connesso a una rete diversa affinché i certificati aziendali vengano nuovamente sincronizzati con il dispositivo prima che sia in grado di riconnettersi all'azienda reti con certificati. 
+* **H. 265 HEVC la riproduzione video non funziona** : le applicazioni che tentano di riprodurre i video h. 265 riceveranno un messaggio di errore. La soluzione alternativa consiste nell' [accedere al portale del dispositivo Windows](using-the-windows-device-portal.md), selezionare **app** sulla barra di spostamento a sinistra e **rimuovere** l'applicazione HEVC. Quindi, installare la versione più recente dell' [estensione video HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) dall'Microsoft Store. Stiamo esaminando il problema. 
 
-#### <a name="for-developers-updating-hololens-apps-for-devices-running-windows-10-april-2018-update"></a>Per gli sviluppatori: l'aggiornamento di HoloLens App per dispositivi che eseguono Windows 10 April 2018 Update
+#### <a name="for-developers-updating-hololens-apps-for-devices-running-windows-10-april-2018-update"></a>Per gli sviluppatori: aggiornamento delle app HoloLens per i dispositivi che eseguono l'aggiornamento di Windows 10 aprile 2018
 
-Insieme a un elenco di eccezionali [nuove funzionalità](#new-features-for-hololens), Windows 10 aprile 2018 Update (RS4) per HoloLens impone alcuni comportamenti di codice che le versioni precedenti non è state eseguite:
-* **Richieste di autorizzazione da usare risorse riservate (fotocamera, microfono e così via)**  -RS4 su HoloLens applicherà le richieste di autorizzazione per le app che si intende accedere alle risorse sensibili, ad esempio la fotocamera o microfono. RS1 su HoloLens non forza queste richieste, pertanto, se l'app presuppone che l'accesso immediato a queste risorse, potrebbe bloccarsi in RS4 (anche se l'utente concede l'autorizzazione per la risorsa richiesta). Leggere il relativo [articolo di dichiarazioni funzionalità app UWP](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) per altre informazioni.
-* **Le chiamate alle App esterno il proprio** -RS4 su HoloLens impone l'utilizzo corretto della [ *Windows.System.Launcher* classe](https://docs.microsoft.com/uwp/api/Windows.System.Launcher) per avviare un'altra app dal proprio. Ad esempio, abbiamo visto i problemi con le app di chiamare *Windows.System.Launcher.LaunchUriForResultsAsync* da un thread non UI ASTA. Questo avverrebbe senza problemi in RS1 su HoloLens, ma RS4 richiede la chiamata a essere eseguita sul thread dell'interfaccia utente.
+Insieme a un ottimo elenco di [nuove funzionalità](#new-features-for-hololens), l'aggiornamento di Windows 10 aprile 2018 (RS4) per HoloLens impone alcuni comportamenti del codice non disponibili nelle versioni precedenti:
+* **Richieste di autorizzazione per l'uso di risorse sensibili (fotocamera, microfono e così via)** -RS4 in HoloLens impone richieste di autorizzazione per le app che tendono ad accedere a risorse sensibili, ad esempio la fotocamera o il microfono. RS1 in HoloLens non ha forzato queste richieste, quindi, se l'app presuppone l'accesso immediato a queste risorse, è possibile che si verifichi un arresto anomalo in RS4 (anche se l'utente concede l'autorizzazione per la risorsa richiesta). Per ulteriori informazioni, leggere l'articolo relativo alle [dichiarazioni sulle funzionalità delle app UWP](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) .
+* Le **chiamate alle app all'esterno del proprio** -RS4 in HoloLens imporrà l'uso corretto della [classe *Windows. System. Launcher* ](https://docs.microsoft.com/uwp/api/Windows.System.Launcher) per avviare un'altra app dal proprio. Ad esempio, sono stati riscontrati problemi con le app che chiamano *Windows. System. Launcher. LaunchUriForResultsAsync* da un thread non asta (UI). Questa operazione avrà esito positivo in RS1 in HoloLens, ma la chiamata deve essere eseguita sul thread dell'interfaccia utente.
 
-### <a name="windows-mixed-reality-on-desktop"></a>Realtà mista di Windows sul Desktop
+### <a name="windows-mixed-reality-on-desktop"></a>Realtà mista di Windows sul desktop
 
 #### <a name="visual-quality"></a>Qualità visiva
 
-* Se si nota dopo Windows 10 April 2018 Update che grafica è più sfocata rispetto a prima oppure che il campo di visualizzazione ricerca inferiore sulle cuffie, l'impostazione automatica delle prestazioni potrebbe essere stato modificato per mantenere una frequenza dei fotogrammi sufficiente su una meno potenti scheda grafica (ad esempio Nvidia 1050). È possibile eseguire manualmente l'override questo (se si sceglie), passare a **Impostazioni > realtà mista > visualizzato visore VR > Opzioni di esperienze > Modifica** e modificare "Automatico" su "90 Hz." È anche possibile provare a modificare **qualità visiva** (nella stessa pagina Impostazioni) su "Alta".
+* Se si nota dopo l'aggiornamento di Windows 10 aprile 2018 che la grafica è più sfocata rispetto a prima o che il campo di visualizzazione risulta più piccolo nell'auricolare, è possibile che l'impostazione delle prestazioni automatica sia stata modificata in modo da mantenere un framerate sufficiente a un livello meno potente scheda grafica (ad esempio NVIDIA 1050). È possibile eseguire manualmente l'override di questa opzione (se si sceglie) passando a **impostazioni > realtà mista > visualizzare > Opzioni di esperienza > modificare** e cambiando "automatico" in "90 Hz". È anche possibile provare a modificare la **qualità visiva** (nella stessa pagina delle impostazioni) in "High".
 
-#### <a name="windows-mixed-reality-setup"></a>Programma di installazione di realtà mista di Windows
+#### <a name="windows-mixed-reality-setup"></a>Configurazione della realtà mista di Windows
 
-* Quando si configura Windows con le cuffie connessa, il monitor del PC diventi vuoto. Disconnettere le cuffie per abilitare l'output per il monitor del PC per completare l'installazione di Windows.
-* Se non hai le cuffie connessi, si potrebbero perdere suggerimenti aggiuntivi quando si visita prima la realtà mista di Windows home.
-* Altri dispositivi Bluetooth possono causare l'interferenza con i controller di movimento. Se i controller di movimento sono presenti problemi di connessione/associazione/rilevamento, assicurarsi che l'opzione Bluetooth (se un adattatore esterno) viene collegati a un percorso senza ostacoli e non immediatamente accanto a un altro adattatore Bluetooth. Provare anche a disconnettendo altre periferiche Bluetooth durante le sessioni di realtà mista di Windows per verificare se è utile.
+* Quando si configura Windows con una cuffia connessa, il monitor del PC potrebbe essere vuoto. Scollegare la cuffia per abilitare l'output del monitor PC per completare l'installazione di Windows.
+* Se non si dispone di cuffie connesse, è possibile che non si verifichino ulteriori suggerimenti quando si visita la Home realtà mista di Windows.
+* Altri dispositivi Bluetooth possono causare interferenze con i controller di movimento. Se i controller di movimento hanno problemi di connessione/associazione/rilevamento, assicurarsi che la radio Bluetooth (se un dongle esterno) sia collegata a una posizione non bloccata e non immediatamente accanto a un altro dongle Bluetooth. Provare anche a spegnere altre periferiche Bluetooth durante le sessioni di realtà mista di Windows per verificare se è utile.
 
-#### <a name="games-and-apps-from-the-microsoft-store"></a>Giochi e App di Microsoft Store
+#### <a name="games-and-apps-from-the-microsoft-store"></a>Giochi e app dal Microsoft Store
 
-* Alcuni giochi a grafica intensiva, ad esempio 7 Motorsport Forza, potrebbero causare problemi di prestazioni nei PC in grado di supportare meno durante la riproduzione in realtà mista di Windows.
+* Alcuni giochi a elevato utilizzo di grafica, come Forza Motorsport 7, possono causare problemi di prestazioni sui PC meno idonei quando vengono riprodotti in realtà mista di Windows.
 
 #### <a name="audio"></a>Audio
 
-* Se si dispone di Cortana abilitata nell'host di PC prima di utilizzare il visore VR realtà mista di Windows, si potrebbe perdere spaziali audio simulazione applicati alle App che utilizzare per racchiudere la realtà mista di Windows home. 
-   * La soluzione alternativa consiste nell'abilitare "Windows Sonic per le cuffie" in tutti i dispositivi audio associati al computer, anche le cuffie audio dispositivo connesso:
-      1. Fare clic sull'icona dell'altoparlante della barra delle applicazioni desktop e selezionare dall'elenco dei dispositivi audio.
-      2. Fare doppio clic sull'icona dell'altoparlante della barra delle applicazioni desktop e selezionare "Windows Sonic per le cuffie" nel menu "L'installazione dell'altoparlante".
+* Se la Cortana è abilitata nel computer host prima di usare l'auricolare con la realtà mista di Windows, è possibile perdere la simulazione del suono spaziale applicata alle app inserite nella Home realtà mista di Windows. 
+   * La soluzione è quella di abilitare "Windows Sonic per le cuffie" in tutti i dispositivi audio collegati al PC, anche il dispositivo audio connesso all'auricolare:
+      1. Fare clic sull'icona dell'altoparlante sulla barra delle applicazioni del desktop e selezionare da un elenco di dispositivi audio.
+      2. Fare clic con il pulsante destro del mouse sull'icona dell'altoparlante sulla barra delle applicazioni del desktop e selezionare "Windows Sonic per le cuffie" nel menu "impostazione del relatore".
       3. Ripetere questi passaggi per tutti i dispositivi audio (endpoint).
-   * Un'altra opzione è disattivare "Cortana ti permettono di rispondere a Ehi Cortana" **le impostazioni** > **Cortana** sul desktop prima dell'avvio di realtà mista di Windows.
-* Quando un altro dispositivo USB multimediale (ad esempio una webcam) condivide lo stesso hub USB (esterno o all'interno del PC) con il visore VR realtà mista di Windows, in casi rari audio jack/cuffie della cuffia potrebbe disporre di un suono apparizione oppure nessun audio affatto. È possibile risolvere il problema per le cuffie in una porta USB che non condividono lo stesso hub come l'altro dispositivo o disconnettere o disabilitare l'altro dispositivo USB multimediale.
-* In rari casi, è possibile notare un picco di rumore dalle cuffie connessa per le cuffie hub USB del computer host non può fornire potenza sufficiente per il visore VR realtà mista di Windows.
+   * Un'altra opzione è la disattivazione di "Let Cortana rispondere a Hey Cortana" in **Settings** > **Cortana** on the desktop prima di avviare la realtà mista di Windows.
+* Quando un altro dispositivo USB multimediale (ad esempio una Web Cam) condivide lo stesso hub USB (esterno o all'interno del PC) con l'auricolare della realtà mista di Windows, in rari casi è possibile che lo spinotto/le cuffie audio dell'auricolare abbia un segnale acustico o nessun audio. È possibile risolvere il problema tramite la cuffia in una porta USB che non condivide lo stesso hub dell'altro dispositivo oppure disconnettere/disabilitare l'altro dispositivo multimediale USB.
+* In rari casi, l'hub USB del PC host non è in grado di fornire una potenza sufficiente per l'auricolare della realtà mista di Windows e potrebbe verificarsi un aumento del rumore dalle cuffie connesse all'auricolare.
 
 #### <a name="holograms"></a>Ologrammi
 
-* Se è stato immesso un numero elevato di vntana nella home di realtà mista di Windows, alcuni possono scomparsa e come Guardatevi intorno. Per evitare questo problema, rimuovere alcuni del vntana in tale area della realtà mista di Windows home.
+* Se è stato inserito un numero elevato di ologrammi nella Home page della realtà mista di Windows, alcuni possono scomparire e riapparire durante l'aspetto. Per evitare questo problema, rimuovere alcuni degli ologrammi in quell'area della Home realtà mista di Windows.
 
 #### <a name="motion-controllers"></a>Controller di movimento
 
-* Se l'input non viene instradato alle cuffie, il controller di movimento brevemente scompare quando viene posizionato accanto il limite di spazio. Premere Windows + Y per assicurarsi che ci sia un banner blu sul monitor Desktop verrà risolvere questo problema. 
-* In alcuni casi, quando fa clic su una pagina web in Microsoft Edge, il contenuto verrà ingrandire anziché fare clic su.
+* Se l'input non viene indirizzato all'auricolare, il controller di movimento scomparirà brevemente quando verrà mantenuto accanto al limite della stanza. Se si preme Win + Y per verificare che sia presente un banner blu attraverso il monitor desktop, questa operazione verrà risolta. 
+* Occasionalmente, quando si fa clic su una pagina Web in Microsoft Edge, il contenuto viene ingrandito anziché fare clic su.
 
-#### <a name="desktop-app-in-the-windows-mixed-reality-home"></a>App desktop in casa la realtà mista di Windows
+#### <a name="desktop-app-in-the-windows-mixed-reality-home"></a>App desktop nella Home realtà mista di Windows
 
-* Strumento di cattura non funziona nelle app Desktop.
-* App desktop non viene mantenuta l'impostazione al riavvio.
-* Se si Usa anteprima del portale di realtà mista sul desktop, quando si apre l'app Desktop in casa la realtà mista di Windows, è possibile notare l'effetto di mirror infinito. 
-* L'esecuzione dell'app Desktop può causare problemi di prestazioni sul non - extra misto realtà i PC Windows; non è consigliabile.  
-* App desktop può avviare automaticamente perché una finestra invisibile nel Desktop ha lo stato attivo. 
-* Controllo dell'Account utente desktop prompt renderà le cuffie, possono visualizzare nero fino a quando non viene completato il prompt dei comandi.
+* Lo strumento di cattura non funziona nell'app desktop.
+* L'app desktop non mantiene l'impostazione al nuovo avvio.
+* Se si usa l'anteprima del portale di realtà mista sul desktop, quando si apre l'app desktop nella Home realtà mista di Windows, è possibile notare l'effetto di mirror infinito. 
+* L'esecuzione dell'applicazione desktop può causare problemi di prestazioni in PC con una realtà mista Windows non ultra-ultra; non è consigliabile.  
+* L'app desktop può essere avviata automaticamente perché una finestra invisibile sul desktop ha lo stato attivo. 
+* La richiesta di controllo dell'account utente desktop renderà la visualizzazione della cuffia nera fino al completamento della richiesta.
 
 #### <a name="windows-mixed-reality-for-steamvr"></a>Realtà mista di Windows per SteamVR
 
-* Potrebbe essere necessario avviare il portale di realtà mista dopo l'aggiornamento per assicurarsi che gli aggiornamenti software necessari per Windows 10 April 2018 Update completati prima di avviare SteamVR. 
-* È necessario essere in una versione recente di realtà mista di Windows per SteamVR continuare a essere compatibile con Windows 10 April 2018 Update. Assicurarsi che gli aggiornamenti automatici sono attivati per realtà mista di Windows per SteamVR, che si trova nella sezione "Software" della libreria nel flusso.  
+* Potrebbe essere necessario avviare il portale di realtà mista dopo l'aggiornamento per assicurarsi che gli aggiornamenti software necessari per l'aggiornamento di Windows 10 aprile 2018 siano stati completati prima di avviare SteamVR. 
+* Per mantenere la compatibilità con l'aggiornamento di Windows 10 aprile 2018, è necessario disporre di una versione recente di Windows Mixed Reality per SteamVR. Assicurarsi che gli aggiornamenti automatici siano attivati per la realtà mista di Windows per SteamVR, che si trova nella sezione "software" della libreria in Steam.  
 
 #### <a name="other-issues"></a>Altri problemi
 
 >[!IMPORTANT]
->Una versione precedente di Windows 10 April 2018 Update per Insider (versione 17134.5) inseriti manca un componente software necessario per l'esecuzione di realtà mista di Windows. È consigliabile evitare questa versione, se si usa la realtà mista di Windows. 
+>Una versione iniziale dell'aggiornamento di Windows 10 aprile 2018 push a Insider (versione 17134,5) mancava un componente software necessario per eseguire la realtà mista di Windows. È consigliabile evitare questa versione se si usa la realtà mista di Windows. 
 
-Abbiamo stabilito una regressione delle prestazioni quando si usa Surface Book 2 nella versione iniziale di questo aggiornamento (10.0.17134.1) che Microsoft sta lavorando per risolvere una patch di aggiornamento futuro. Si consiglia di attendere che tale problema è stato risolto prima di aggiornare manualmente o in attesa per l'aggiornamento a lanciare normalmente.
+È stata identificata una regressione delle prestazioni quando si usa Surface Book 2 nella versione iniziale di questo aggiornamento (10.0.17134.1) che stiamo lavorando per correggere in una patch di aggiornamento imminente. È consigliabile attendere fino a quando il problema non è stato corretto prima di eseguire l'aggiornamento manualmente o in attesa dell'implementazione normale dell'aggiornamento.
 
-## <a name="provide-feedback-and-report-issues"></a>Fornire commenti e suggerimenti e segnalare problemi
+## <a name="provide-feedback-and-report-issues"></a>Inviare commenti e suggerimenti e segnalare problemi
 
-Usare la [app di Hub di commenti e suggerimenti sul PC Windows 10 o HoloLens](give-us-feedback.md) per fornire commenti e suggerimenti e segnalare problemi. Con Hub di Feedback garantisce che tutte le informazioni di diagnostica necessarie sono incluse per consentire ai nostri tecnici rapidamente il debug e risolvere il problema.
+Usare l' [App Hub di feedback in HoloLens o Windows 10 PC](give-us-feedback.md) per inviare commenti e suggerimenti e segnalare problemi. L'uso dell'hub feedback garantisce che tutte le informazioni di diagnostica necessarie siano incluse per aiutare i nostri tecnici a eseguire rapidamente il debug e risolvere il problema.
 
 >[!NOTE]
->Assicurarsi di accettare il prompt che chiede se si vuole che Hub di commenti e suggerimenti per accedere alla cartella documenti (selezionare **Sì** quando richiesto).
+>Assicurarsi di accettare il prompt che chiede se si vuole che l'hub feedback acceda alla cartella documenti (selezionare **Sì** quando richiesto).
 
 ## <a name="prior-release-notes"></a>Note sulla versione precedente
 
@@ -267,8 +267,8 @@ Usare la [app di Hub di commenti e suggerimenti sul PC Windows 10 o HoloLens](gi
 * [Note sulla versione - marzo 2016](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>Vedere anche
-* [Supporto visore VR immersivi (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [Supporto per cuffie immersive (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Supporto di HoloLens (collegamento esterno)](https://support.microsoft.com/products/hololens)
 * [Installare gli strumenti](install-the-tools.md)
-* [Invia commenti e suggerimenti](give-us-feedback.md)
+* [Inviare commenti e suggerimenti](give-us-feedback.md)
 

@@ -1,48 +1,48 @@
 ---
 title: Persistenza in Unity
-description: Persistenza consente agli utenti di aggiungere singoli vntana o un'area di lavoro ovunque desiderino e quindi trovare dove si aspettano su molti in un secondo momento Usa dell'app.
+description: La persistenza consente agli utenti di aggiungere singoli ologrammi o un'area di lavoro ovunque si trovino, quindi trovarli in un secondo momento, in cui si aspettano per molti usi dell'app.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, persistenza, Unity
 ms.openlocfilehash: b6a67e52b3a5ce724a90eb1a479c5eda74b0c4cb
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605079"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524783"
 ---
 # <a name="persistence-in-unity"></a>Persistenza in Unity
 
-**Namespace:** *UnityEngine.XR.WSA.Persistence*<br>
-**Classe:** *WorldAnchorStore*
+**Spazio dei nomi:** *UnityEngine. XR. WSA. persistenza*<br>
+**Classe** *WorldAnchorStore*
 
-Il WorldAnchorStore è la chiave per la creazione di esperienze holographic dove vntana rimangono nelle posizioni reali specifico tra più istanze dell'applicazione. In questo modo gli utenti aggiungono vntana singoli o un'area di lavoro ogni volta che serve e quindi trovare in un secondo momento in cui si aspettano su molti utilizzi delle app.
+WorldAnchorStore è la chiave per la creazione di esperienze olografiche in cui gli ologrammi mantengono posizioni reali specifiche tra le istanze dell'applicazione. In questo modo gli utenti possono aggiungere singoli ologrammi o un'area di lavoro ovunque si trovino, quindi trovarli in un secondo momento, in cui si aspettano molti usi dell'app.
 
-## <a name="how-to-persist-holograms-across-sessions"></a>Come rendere permanente vntana tra le sessioni
+## <a name="how-to-persist-holograms-across-sessions"></a>Come salvare in modo permanente gli ologrammi tra le sessioni
 
-Il WorldAnchorStore consentirà di rendere persistente il percorso del WorldAnchor tra le sessioni. Per rendere effettivamente persistente vntana tra le sessioni, dovrai separatamente tenere traccia del Gameobject che usano un punto di ancoraggio world particolare. È spesso opportuno creare un GameObject radice con un punto di ancoraggio del mondo e avere elementi figlio ancorati vntana dalla funzione con un offset della posizione locale.
+Il WorldAnchorStore consentirà di rendere permanente il percorso di WorldAnchor tra le sessioni. Per rendere effettivamente permanente gli ologrammi tra le sessioni, è necessario tenere traccia separatamente dei GameObject che usano un particolare ancoraggio mondiale. Spesso è opportuno creare una radice GameObject con un ancoraggio globale e avere elementi figlio olografici ancorati con un offset della posizione locale.
 
-Per caricare vntana dalle sessioni precedenti:
+Per caricare gli ologrammi dalle sessioni precedenti:
 1. Ottenere il WorldAnchorStore
-2. Caricare i dati dell'app relativi in base all'ancoraggio mondo che fornisce l'id del punto di ancoraggio il mondo
-3. Caricare un ancoraggio world dal relativo id
+2. Caricare i dati dell'app correlati all'ancoraggio mondiale che fornisce l'ID dell'ancoraggio globale
+3. Caricare un ancoraggio globale dall'ID
 
-Per salvare vntana per le sessioni future:
+Per salvare gli ologrammi per le sessioni future:
 1. Ottenere il WorldAnchorStore
-2. Salvare un ancoraggio world specificando un id
-3. Salvare i dati dell'app relativi in base all'ancoraggio mondiale insieme a un id
+2. Salva un ancoraggio globale specificando un ID
+3. Salva i dati dell'app correlati all'ancoraggio globale insieme a un ID
 
-### <a name="getting-the-worldanchorstore"></a>Introduzione di WorldAnchorStore
+### <a name="getting-the-worldanchorstore"></a>Recupero di WorldAnchorStore
 
-È consigliabile mantenere un riferimento al WorldAnchorStore intorno quindi sappiamo che siamo pronti passare quando si vuole eseguire un'operazione. Poiché si tratta di una chiamata async, potenzialmente appena start, da chiamare
+È opportuno tenere presente un riferimento al WorldAnchorStore in modo che sia possibile procedere quando si desidera eseguire un'operazione. Poiché si tratta di una chiamata asincrona, potenzialmente non appena viene avviata, è necessario chiamare
 
 ```
 WorldAnchorStore.GetAsync(StoreLoaded);
 ```
 
-In questo caso, StoreLoaded è il nostro gestore dopo il WorldAnchorStore ha completato il caricamento:
+StoreLoaded in questo caso è il gestore per il completamento del caricamento di WorldAnchorStore:
 
 ```
 private void StoreLoaded(WorldAnchorStore store)
@@ -51,11 +51,11 @@ private void StoreLoaded(WorldAnchorStore store)
 }
 ```
 
-È ora disponibile un riferimento a WorldAnchorStore che verrà usato per salvare e caricare gli ancoraggi World specifico.
+È ora disponibile un riferimento a WorldAnchorStore che verrà usato per salvare e caricare specifici ancoraggi internazionali.
 
 ### <a name="saving-a-worldanchor"></a>Salvataggio di un WorldAnchor
 
-Per salvare, è sufficiente per assegnare un nome di ciò che si sta salvando e lo associo al WorldAnchor ottenuto prima di quando si desidera salvare. Nota: tentativo di salvare gli due ancoraggi sulla stessa stringa avrà esito negativo (archivio. Salva restituirà false). È necessario eliminare il salvataggio precedente prima di salvare una nuova:
+Per salvare, è sufficiente assegnare un nome a quello che si sta salvando e passarlo nel WorldAnchor ottenuto in precedenza quando si desidera salvare. Nota: il tentativo di salvare due ancoraggi nella stessa stringa avrà esito negativo (Store. Il salvataggio restituirà false. È necessario eliminare il salvataggio precedente prima di salvarne uno nuovo:
 
 ```
 private void SaveGame()
@@ -69,9 +69,9 @@ private void SaveGame()
 }
 ```
 
-### <a name="loading-a-worldanchor"></a>Il caricamento di un WorldAnchor
+### <a name="loading-a-worldanchor"></a>Caricamento di un WorldAnchor
 
-E da caricare:
+E per caricare:
 
 ```
 private void LoadGame()
@@ -85,11 +85,11 @@ private void LoadGame()
 }
 ```
 
-È inoltre possibile usare archivio. Delete () per rimuovere un ancoraggio che viene salvati in precedenza e archivio. Clear () per rimuovere tutti i dati salvati in precedenza.
+È inoltre possibile utilizzare Store. Eliminare () per rimuovere un ancoraggio precedentemente salvato e archiviato. Deselezionare () per rimuovere tutti i dati salvati in precedenza.
 
-### <a name="enumerating-existing-anchors"></a>L'enumerazione dei punti di ancoraggio esistente
+### <a name="enumerating-existing-anchors"></a>Enumerazione degli ancoraggi esistenti
 
-Per individuare gli ancoraggi archiviati in precedenza, chiamare GetAllIds.
+Per individuare gli ancoraggi precedentemente archiviati, chiamare GetAllIds.
 
 ```
 string[] ids = this.store.GetAllIds();
@@ -99,15 +99,15 @@ for (int index = 0; index < ids.Length; index++)
 }
 ```
 
-## <a name="persisting-holograms-for-multiple-devices"></a>Ologrammi persistenza per più dispositivi
+## <a name="persisting-holograms-for-multiple-devices"></a>Mantenimento degli ologrammi per più dispositivi
 
-È possibile usare <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Anchor spaziali Azure</a> per creare un punto di ancoraggio cloud permanenti da un WorldAnchor locale, che l'app consente quindi di individuare in più HoloLens, dispositivi iOS e Android, anche se questi dispositivi non sono presenti contemporaneamente allo stesso ora.  Poiché gli ancoraggi cloud sono persistenti, più dispositivi nel corso del tempo ogni noterà contenuto sottoposto a rendering relativo tale ancoraggio nella stessa posizione fisica.
+È possibile usare gli <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancoraggi spaziali di Azure</a> per creare un ancoraggio cloud durevole da un WorldAnchor locale, che può essere individuato dall'app su più dispositivi HoloLens, iOS e Android, anche se questi dispositivi non sono presenti contemporaneamente.  Poiché gli ancoraggi cloud sono persistenti, più dispositivi nel tempo possono visualizzare il contenuto di cui è stato eseguito il rendering rispetto a tale ancoraggio nella stessa posizione fisica.
 
-Per iniziare a creare esperienze condivise in Unity, provare i 5 minuti <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">guide introduttive di Azure spaziali Anchor Unity</a>.
+Per iniziare a creare esperienze condivise in Unity, provare le <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">guide introduttive Unity Anchors di Azure</a>di 5 minuti.
 
-Quando si è in esecuzione con Azure Anchor spaziale, è possibile quindi <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">creare e individuare gli ancoraggi in Unity</a>.
+Quando si è operativi con i Anchor spaziali di Azure, è possibile <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">creare e individuare ancoraggi in Unity</a>.
 
 ## <a name="see-also"></a>Vedere anche
-* [Persistenza di ancoraggio spaziali](coordinate-systems.md#spatial-anchor-persistence)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Anchor spaziali</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Ancoraggi spaziali Azure SDK per Unity</a>
+* [Persistenza di ancoraggio spaziale](coordinate-systems.md#spatial-anchor-persistence)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>
+* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Azure Spatial Anchors SDK per Unity</a>

@@ -1,50 +1,50 @@
 ---
-title: Trasferimenti di ancoraggio locale in Unity
+title: Trasferimenti di ancoraggio locali in Unity
 description: Trasferire gli ancoraggi tra più dispositivi HoloLens in un'applicazione Unity.
 author: fieldsJacksonG
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Condivisione, ancoraggio, WorldAnchor, MR condivisione 250, WorldAnchorTransferBatch, SpatialPerception, transfer, trasferimento locale di ancoraggio, esportazione di ancoraggio, importazione di ancoraggio
+keywords: Sharing, Anchor, WorldAnchor, MR sharing 250, WorldAnchorTransferBatch, SpatialPerception, Transfer, local Anchor Transfer, Anchor Export, Anchor import
 ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605059"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516133"
 ---
-# <a name="local-anchor-transfers-in-unity"></a>Trasferimenti di ancoraggio locale in Unity
+# <a name="local-anchor-transfers-in-unity"></a>Trasferimenti di ancoraggio locali in Unity
 
-In situazioni in cui non è possibile usare <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Anchor spaziali Azure</a>, trasferimenti di ancoraggio locale abilitare un dispositivo HoloLens esportare un ancoraggio per essere importati da un secondo dispositivo HoloLens.
-
->[!NOTE]
->I trasferimenti di ancoraggio locale forniscono richiamo ancoraggio meno affidabile rispetto <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Anchor spaziali Azure</a>, e dispositivi iOS e Android non sono supportati da questo approccio.
-
-### <a name="setting-the-spatialperception-capability"></a>Impostare la funzionalità SpatialPerception
-
-Affinché un'app di trasferire gli ancoraggi spaziali, il *SpatialPerception* deve essere attivata.
-
-Come abilitare il *SpatialPerception* funzionalità:
-1. Nell'Editor di Unity, aprire il **"Windows Media Player Settings"** riquadro (Modifica > Impostazioni di progetto > Windows Media Player)
-2. Fare clic sui **"Windows Store"** scheda
-3. Espandere **"Impostazioni di pubblicazione"** e selezionare il **"SpatialPerception"** funzionalità nel **"Funzionalità"** elenco
+Nei casi in cui non è possibile usare gli <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancoraggi spaziali di Azure</a>, i trasferimenti di ancoraggio locali consentono a un dispositivo HoloLens di esportare un ancoraggio per l'importazione da parte di un secondo dispositivo HoloLens.
 
 >[!NOTE]
->Se è già stato esportato il progetto di Unity a una soluzione di Visual Studio, è necessario esportare in una nuova cartella o manualmente [impostare questa funzionalità in AppxManifest in Visual Studio](local-anchor-transfers-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+>I trasferimenti di ancoraggio locali forniscono un richiamo di ancoraggio meno affidabile rispetto agli <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancoraggi spaziali di Azure</a>e i dispositivi iOS e Android non sono supportati da questo approccio.
+
+### <a name="setting-the-spatialperception-capability"></a>Impostazione della funzionalità SpatialPerception
+
+Per consentire a un'app di trasferire ancoraggi spaziali, è necessario abilitare la funzionalità *SpatialPerception* .
+
+Come abilitare la funzionalità *SpatialPerception* :
+1. Nell'editor di Unity aprire il riquadro **"Impostazioni lettore"** (modificare > impostazioni progetto > lettore)
+2. Fare clic sulla scheda **"Windows Store"**
+3. Espandere **"impostazioni di pubblicazione"** e selezionare la funzionalità **"SpatialPerception"** nell'elenco **"funzionalità"**
+
+>[!NOTE]
+>Se il progetto Unity è già stato esportato in una soluzione di Visual Studio, sarà necessario eseguire l'esportazione in una nuova cartella o [impostare manualmente questa funzionalità in appxmanifest in Visual Studio](local-anchor-transfers-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
 
 ### <a name="anchor-transfer"></a>Trasferimento di ancoraggio
 
-**Namespace:** *UnityEngine.XR.WSA.Sharing*<br>
+**Namespace** *UnityEngine. XR. WSA. sharing*<br>
 **Tipo**: *WorldAnchorTransferBatch*
 
-Per trasferire una [WorldAnchor](coordinate-systems-in-unity.md), uno deve essere stabilita l'ancoraggio da trasferire. L'utente di uno HoloLens analizza il proprio ambiente e manualmente o a livello di programmazione sceglie un punto nello spazio sia il punto di ancoraggio per condividere esperienze. I dati che rappresenta questo punto possono essere serializzati e trasmessi per gli altri dispositivi che condividono l'esperienza. Ogni dispositivo quindi deserializza i dati di ancoraggio e prova a individuare tale punto nello spazio. In ordine di ancoraggio Transfer a funzionare, ogni dispositivo deve sono analizzati in un numero sufficiente di ambiente in modo che il punto rappresentato dall'ancoraggio può essere identificato.
+Per trasferire un [WorldAnchor](coordinate-systems-in-unity.md), è necessario stabilire l'ancoraggio da trasferire. L'utente di un HoloLens analizza l'ambiente e sceglie manualmente o a livello di codice un punto nello spazio come ancoraggio per l'esperienza condivisa. I dati che rappresentano questo punto possono quindi essere serializzati e trasmessi agli altri dispositivi che condividono nell'esperienza. Ogni dispositivo deserializza quindi i dati di ancoraggio e tenta di individuare il punto nello spazio. Per il corretto funzionamento del trasferimento di ancoraggio, è necessario che ogni dispositivo abbia eseguito una scansione sufficiente dell'ambiente, in modo che sia possibile identificare il punto rappresentato dall'ancoraggio.
 
 ### <a name="setup"></a>Configurazione
 
-Il codice di esempio in questa pagina presenta alcuni campi che dovranno essere inizializzato:
-1. *GameObject rootGameObject* è un *GameObject* in Unity con una *WorldAnchor* componente su di esso. Un utente di condividere esperienze si inseriranno *GameObject* ed esportare i dati ad altri utenti.
-2. *WorldAnchor gameRootAnchor* è il *UnityEngine.XR.WSA.WorldAnchor* che si trova sul *rootGameObject*.
-3. *Byte [] importedData* è una matrice di byte per l'ancoraggio serializzato ogni client sta ricevendo attraverso la rete.
+Il codice di esempio in questa pagina contiene alcuni campi che dovranno essere inizializzati:
+1. *GameObject rootGameObject* è un *GameObject* in Unity in cui è presente un componente *WorldAnchor* . Un utente nell'esperienza condivisa inserisce questo *GameObject* ed Esporta i dati negli altri utenti.
+2. *WorldAnchor gameRootAnchor* è *UnityEngine. XR. WSA. WorldAnchor* che si trova in *rootGameObject*.
+3. *byte [] importedData* è una matrice di byte per l'ancoraggio serializzato che ogni client riceve sulla rete.
 
 ```
 public GameObject rootGameObject;
@@ -61,16 +61,16 @@ void Start ()
 }
 ```
 
-### <a name="exporting"></a>L'esportazione
+### <a name="exporting"></a>Esportazione
 
-Per esportare, è sufficiente una *WorldAnchor* e sapere che cosa verrà denominato in modo che risulti opportuno per l'app ricevente. Un client di condividere esperienze verrà seguire questi passaggi per esportare l'ancoraggio condiviso:
+Per eseguire l'esportazione, è sufficiente un *WorldAnchor* e per sapere cosa verrà chiamato in modo da renderlo utile per l'app ricevente. Un client nell'esperienza condivisa eseguirà questa procedura per esportare l'ancoraggio condiviso:
 1. Creare un *WorldAnchorTransferBatch*
 2. Aggiungere il *WorldAnchors* da trasferire
-3. Avviare l'esportazione
-4. Gestire le *OnExportDataAvailable* evento sotto forma di dati diventa disponibile
-5. Gestire le *OnExportComplete* evento
+3. Inizia l'esportazione
+4. Gestisci l'evento *OnExportDataAvailable* quando i dati diventano disponibili
+5. Gestisci evento *OnExportComplete*
 
-Creiamo un *WorldAnchorTransferBatch* per incapsulare cosa abbiamo verrà trasferimento e quindi esportarle in byte:
+Viene creato un *WorldAnchorTransferBatch* per incapsulare gli elementi che verranno trasferiti e quindi esportati in byte:
 
 ```
 private void ExportGameRootAnchor()
@@ -81,7 +81,7 @@ private void ExportGameRootAnchor()
 }
 ```
 
-Quando i dati diventano disponibili, inviare i byte per il client o il buffer di segmenti di dati è disponibile e trasmissione in qualsiasi modo desiderato:
+Quando i dati diventano disponibili, inviare i byte al client o al buffer perché i segmenti di dati sono disponibili e inviarli con qualsiasi mezzo:
 
 ```
 private void OnExportDataAvailable(byte[] data)
@@ -90,7 +90,7 @@ private void OnExportDataAvailable(byte[] data)
 }
 ```
 
-Al termine dell'esportazione, se è stata stato trasferimento dei dati e serializzazione non è riuscita, indicare al client di rimuovere i dati. Se la serializzazione ha avuto esito positivo, indicare al client che tutti i dati siano stati trasferiti e l'importazione è possibile avviare:
+Al termine dell'esportazione, se i dati sono stati trasferiti e la serializzazione non è riuscita, indicare al client di rimuovere i dati. Se la serializzazione ha avuto esito positivo, indicare al client che tutti i dati sono stati trasferiti e che è possibile avviare l'importazione:
 
 ```
 private void OnExportComplete(SerializationCompletionReason completionReason)
@@ -106,9 +106,9 @@ private void OnExportComplete(SerializationCompletionReason completionReason)
 }
 ```
 
-### <a name="importing"></a>L'importazione
+### <a name="importing"></a>Importazione
 
-Dopo la ricezione di tutti i byte dal mittente, sarà possibile importare i dati in un *WorldAnchorTransferBatch* e bloccare l'oggetto gioco radice nella stessa posizione fisica. Nota: importazione talvolta transiently avrà esito negativo e deve essere riprovata:
+Dopo aver ricevuto tutti i byte dal mittente, è possibile importare di nuovo i dati in un *WorldAnchorTransferBatch* e bloccare l'oggetto del gioco radice nella stessa posizione fisica. Nota: l'importazione a volte avrà esito negativo e deve essere riprovata:
 
 ```
 // This byte array should have been updated over the network from TransferDataToClient
@@ -137,5 +137,5 @@ private void OnImportComplete(SerializationCompletionReason completionReason, Wo
 }
 ```
 
-Dopo una *GameObject* è bloccato tramite il *LockObject* chiamata, avrà un *WorldAnchor* quali verrà mantenuta nella stessa posizione fisica in tutto il mondo, ma potrebbe essere in un spazio rispetto ad altri utenti delle coordinate di posizione diversa all'interno di Unity.
+Dopo che un *GameObject* è stato bloccato tramite la chiamata *lockobject* , avrà un *WorldAnchor* che lo manterrà nella stessa posizione fisica del mondo, ma potrebbe trovarsi in una posizione diversa nello spazio delle coordinate di Unity rispetto ad altri utenti.
 

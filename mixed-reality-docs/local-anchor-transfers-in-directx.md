@@ -1,39 +1,39 @@
 ---
-title: Trasferimenti di ancoraggio locale in DirectX
-description: Viene illustrato come sincronizzare i dispositivi HoloLens due trasferendo gli ancoraggi spaziali.
+title: Trasferimenti di ancoraggio locali in DirectX
+description: Viene illustrato come sincronizzare due dispositivi HoloLens trasferendo ancoraggi spaziali.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, sincronizzare, ancoraggio spaziale, il trasferimento, multiplayer, visualizzare, scenario, procedura dettagliata, codice di esempio, transfer, trasferimento locale di ancoraggio, esportazione di ancoraggio, importazione di ancoraggio
+keywords: HoloLens, Synchronize, ancoraggio spaziale, trasferimento, multiplayer, visualizzazione, scenario, procedura dettagliata, codice di esempio, trasferimento, trasferimento di ancoraggio locale, esportazione di ancoraggio, importazione di ancoraggio
 ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605069"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515477"
 ---
-# <a name="local-anchor-transfers-in-directx"></a>Trasferimenti di ancoraggio locale in DirectX
+# <a name="local-anchor-transfers-in-directx"></a>Trasferimenti di ancoraggio locali in DirectX
 
-In situazioni in cui non è possibile usare <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Anchor spaziali Azure</a>, trasferimenti di ancoraggio locale abilitare un dispositivo HoloLens esportare un ancoraggio per essere importati da un secondo dispositivo HoloLens.
-
->[!NOTE]
->I trasferimenti di ancoraggio locale forniscono richiamo ancoraggio meno affidabile rispetto <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Anchor spaziali Azure</a>, e dispositivi iOS e Android non sono supportati da questo approccio.
+Nei casi in cui non è possibile usare gli <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancoraggi spaziali di Azure</a>, i trasferimenti di ancoraggio locali consentono a un dispositivo HoloLens di esportare un ancoraggio per l'importazione da parte di un secondo dispositivo HoloLens.
 
 >[!NOTE]
->I frammenti di codice in questo articolo illustrano attualmente l'utilizzo di C++/CX invece di C + + 17 conformi C++/WinRT usato nel [ C++ modello di progetto holographic](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per un C++progetto /WinRT, anche se è necessario convertire il codice.
+>I trasferimenti di ancoraggio locali forniscono un richiamo di ancoraggio meno affidabile rispetto agli <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancoraggi spaziali di Azure</a>e i dispositivi iOS e Android non sono supportati da questo approccio.
 
-## <a name="transferring-spatial-anchors"></a>Trasferire gli ancoraggi spaziali
+>[!NOTE]
+>I frammenti di codice in questo articolo illustrano attualmente l' C++uso di/CX, invece di/WinRT conformi C++a C + 17 come usato nel modello di [ C++ progetto olografico](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per C++un progetto/WinRT, anche se sarà necessario tradurre il codice.
 
-È possibile trasferire gli ancoraggi spaziali tra i dispositivi di realtà mista di Windows usando il [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa API consente di raggruppare un ancoraggio con tutti i dati del sensore supporto necessari per trovare la posizione esatta nel mondo e quindi importare tale pacchetto in un altro dispositivo. Una volta l'app nel dispositivo secondo ha importato l'ancoraggio, ogni app è possibile eseguire il rendering di vntana usando che condivisi sistema di coordinate dell'ancoraggio spaziale, che verranno quindi visualizzati nella stessa posizione nel mondo reale.
+## <a name="transferring-spatial-anchors"></a>Trasferimento di ancoraggi spaziali
 
-Si noti che gli ancoraggi spaziali non sono in grado di trasferire tra i diversi tipi di dispositivi, ad esempio un punto di ancoraggio HoloLens spaziale potrebbe non essere individuabili tramite un visore VR immersivi.  Gli ancoraggi trasferiti non sono compatibili con dispositivi iOS o Android.
+È possibile trasferire gli ancoraggi spaziali tra i dispositivi di realtà mista di Windows usando [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa API consente di aggregare un ancoraggio con tutti i dati del sensore di supporto necessari per trovare la posizione esatta del mondo e quindi importare il bundle in un altro dispositivo. Dopo che l'app nel secondo dispositivo ha importato l'ancoraggio, ogni app può eseguire il rendering degli ologrammi usando il sistema di coordinate dell'ancoraggio spaziale condiviso, che verrà quindi visualizzato nella stessa posizione del mondo reale.
 
-## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurare l'app per usare la funzionalità spatialPerception
+Si noti che gli ancoraggi spaziali non sono in grado di trasferire tra tipi di dispositivi diversi, ad esempio un ancoraggio spaziale HoloLens potrebbe non essere locatable usando un auricolare immersivo.  Anche gli ancoraggi trasferiti non sono compatibili con i dispositivi iOS o Android.
 
-L'app deve disporre dell'autorizzazione per usare la funzionalità spatialPerception prima che possa usare la [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Ciò è necessario perché il trasferimento di un punto di ancoraggio spaziale prevede la condivisione di immagini di sensori raccolte nel tempo in prossimità di tale punto di ancoraggio, che può contenere informazioni sensibili.
+## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurare l'app per l'uso della funzionalità spatialPerception
 
-Dichiarare questa funzionalità nel file package. appxmanifest per l'app. Di seguito è riportato un esempio:
+È necessario concedere all'app l'autorizzazione per usare la funzionalità spatialPerception prima di poter usare [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa operazione è necessaria perché il trasferimento di un ancoraggio spaziale comporta la condivisione delle immagini del sensore raccolte nel tempo in prossimità di tale ancoraggio, che potrebbero includere informazioni riservate.
+
+Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ Dichiarare questa funzionalità nel file package. appxmanifest per l'app. Di seg
 </Capabilities>
 ```
 
-La funzionalità proviene il **uap2** dello spazio dei nomi. Per poter accedere a questo spazio dei nomi nel manifesto, includerlo come un *xlmns* attributo il &lt;pacchetto > elemento. Di seguito è riportato un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell' &lt;elemento > del pacchetto. Di seguito è riportato un esempio:
 
 ```
 <Package
@@ -53,11 +53,11 @@ La funzionalità proviene il **uap2** dello spazio dei nomi. Per poter accedere 
     >
 ```
 
-**NOTA:** L'app dovrà richiedere la funzionalità in fase di esecuzione prima di poter accedere SpatialAnchor le API di importazione/esportazione. Visualizzare [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) negli esempi seguenti.
+**NOTA:** L'app dovrà richiedere la funzionalità in fase di esecuzione prima di poter accedere alle API di esportazione/importazione SpatialAnchor. Vedere [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) negli esempi seguenti.
 
-## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializzare i dati di ancoraggio tramite l'esportazione con il SpatialAnchorTransferManager
+## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializzare i dati di ancoraggio esportandoli con SpatialAnchorTransferManager
 
-Una funzione di supporto è incluso nell'esempio di codice da esportare (serializzazione) [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) dati. Questa API esportazione serializza tutti i punti di ancoraggio in una raccolta di coppie chiave-valore, associare gli ancoraggi stringhe.
+Nell'esempio di codice viene inclusa una funzione di supporto per esportare (serializzare) i dati [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) . Questa API di esportazione serializza tutti gli ancoraggi in una raccolta di coppie chiave-valore che associa stringhe a ancoraggi.
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-In primo luogo, è necessario configurare il flusso di dati. Ciò permetterà a 1.) usare TryExportAnchorsAsync per inserire i dati in un buffer di proprietà dell'app e 2). leggere dati dal flusso, che è un flusso di dati WinRT - buffer byte esportato in un buffer di memoria, ovvero un std:: Vector&lt;byte >.
+Prima di tutto, è necessario configurare il flusso di dati. Questa operazione consentirà di eseguire 1. usare TryExportAnchorsAsync per inserire i dati in un buffer di proprietà dell'app e 2. leggere i dati dal flusso del buffer di byte esportato, che è un flusso di dati WinRT, nel buffer di memoria, che è un&lt;byte std:: Vector >.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -81,7 +81,7 @@ InMemoryRandomAccessStream^ stream = ref new InMemoryRandomAccessStream();
 IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 ```
 
-È necessario chiedere l'autorizzazione per accedere ai dati spaziali, inclusi gli ancoraggi esportati dal sistema.
+È necessario richiedere l'autorizzazione per accedere ai dati spaziali, inclusi i Anchor esportati dal sistema.
 
 ```
 // Request access to spatial data.
@@ -104,7 +104,7 @@ auto accessRequestedTask = create_taskSpatialAnchorTransferManager::RequestAcces
 });
 ```
 
-Se viene visualizzata l'autorizzazione e vengono esportati gli ancoraggi, è possibile leggere il flusso di dati. In questo caso, viene anche illustrato come creare il DataReader e InputStream si userà per leggere i dati.
+Se si esportano le autorizzazioni e si esportano ancoraggi, è possibile leggere il flusso di dati. Qui viene illustrato anche come creare DataReader e InputStream da usare per leggere i dati.
 
 ```
 // Get the input stream for the anchor byte stream.
@@ -129,7 +129,7 @@ return accessRequestedTask.then([anchorByteDataOut, stream, reader](bool nchorsE
     }
 ```
 
-Dopo la lettura dal flusso di byte, è possibile salvarli in un buffer di dati come illustrato di seguito.
+Dopo aver letto i byte dal flusso, è possibile salvarli nel proprio buffer di dati, come indicato di seguito.
 
 ```
 }).then([anchorByteDataOut, reader](size_t bytesRead)
@@ -148,9 +148,9 @@ Dopo la lettura dal flusso di byte, è possibile salvarli in un buffer di dati c
 };
 ```
 
-## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Deserializzare i dati di ancoraggio importandolo nel sistema tramite il SpatialAnchorTransferManager
+## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Deserializzare i dati di ancoraggio importandoli nel sistema usando SpatialAnchorTransferManager
 
-Una funzione di supporto è incluso nell'esempio di codice per caricare i dati esportati in precedenza. Questa funzione di deserializzazione fornisce una raccolta di coppie chiave-valore, simile a ciò che fornisce il SpatialAnchorStore - ad eccezione del fatto che abbiamo i dati da un'altra origine, ad esempio un socket di rete. È possibile elaborare e prendere in considerazione i dati prima dell'archiviazione offline, l'uso della memoria, in-app oppure (se applicabile) SpatialAnchorStore dell'app.
+Nell'esempio di codice viene inclusa una funzione di supporto per caricare i dati esportati in precedenza. Questa funzione di deserializzazione fornisce una raccolta di coppie chiave-valore, analogamente a quanto fornito da SpatialAnchorStore, ad eccezione del fatto che sono stati ottenuti questi dati da un'altra origine, ad esempio un socket di rete. È possibile elaborare e ragionare su questi dati prima di archiviarli offline, usando la memoria in-app o (se applicabile) SpatialAnchorStore dell'app.
 
 ```
 // ImportAnchorDataAsync: Imports anchors from a byte buffer that was previously exported.
@@ -166,7 +166,7 @@ task<bool> SpatialAnchorImportExportHelper::ImportAnchorDataAsync(
 {
 ```
 
-In primo luogo, dobbiamo creare gli oggetti di flusso per accedere ai dati di ancoraggio. Si scriverà i dati dal nostro buffer in un buffer del sistema, in modo che si creerà un DataWriter che scrive in un flusso di dati in memoria per poter raggiungere l'obiettivo prefissato di entrare nel sistema come SpatialAnchors Anchor da un buffer di byte.
+Per prima cosa, è necessario creare oggetti flusso per accedere ai dati di ancoraggio. Verranno scritti i dati dal buffer a un buffer di sistema, quindi verrà creato un DataWriter che scrive in un flusso di dati in memoria per raggiungere l'obiettivo di ottenere gli ancoraggi da un buffer di byte nel sistema come SpatialAnchors.
 
 ```
 // Create a random access stream for the anchor data.
@@ -177,7 +177,7 @@ IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 DataWriter^ writer = ref new DataWriter(outputStream);
 ```
 
-Ancora una volta, è necessario assicurarsi che l'app disponga dell'autorizzazione per esportare i dati spaziali di ancoraggio, che potrebbe includere informazioni riservate sull'ambiente dell'utente.
+Ancora una volta, è necessario assicurarsi che l'app disponga dell'autorizzazione per esportare i dati di ancoraggio spaziali, che possono includere informazioni private sull'ambiente dell'utente.
 
 ```
 // Request access to transfer spatial anchors.
@@ -189,7 +189,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
         // Access is allowed.
 ```
 
-Se è consentito l'accesso, è possibile scrivere i byte dal buffer in un flusso di dati di sistema.
+Se l'accesso è consentito, è possibile scrivere byte dal buffer in un flusso di dati di sistema.
 
 ```
 // Write the bytes to the stream.
@@ -206,7 +206,7 @@ Se è consentito l'accesso, è possibile scrivere i byte dal buffer in un flusso
     }
 ```
 
-Se si hanno avuto esito positivo nell'archiviazione dei byte nel flusso di dati, è possibile provare a importare i dati usando il SpatialAnchorTransferManager.
+Se l'archiviazione dei byte nel flusso di dati è riuscita, è possibile provare a importare i dati usando SpatialAnchorTransferManager.
 
 ```
 }).then([writer, stream](unsigned int bytesWritten)
@@ -235,7 +235,7 @@ Se si hanno avuto esito positivo nell'archiviazione dei byte nel flusso di dati,
     }
 ```
 
-Sono possibile importare i dati, si ottiene una visualizzazione mappa di coppie chiave-valore associando le stringhe con punti di ancoraggio. È possibile caricarlo in un insieme di dati in memoria e utilizzare tale raccolta per individuare i punti di ancoraggio che siamo interessati all'uso.
+Se i dati possono essere importati, si ottiene una visualizzazione mappa delle coppie chiave-valore che associa stringhe a ancoraggi. È possibile caricarlo nella raccolta dei dati in memoria e usare tale raccolta per cercare gli ancoraggi che sono interessati a usare.
 
 ```
 }).then([anchorMapOut](task<Windows::Foundation::Collections::IMapView<String^, SpatialAnchor^>^>  previousTask)
@@ -270,33 +270,33 @@ Sono possibile importare i dati, si ottiene una visualizzazione mappa di coppie 
 }
 ```
 
-**NOTA:** Solo perché è possibile importare un ancoraggio, non significa necessariamente che è possibile utilizzare sin da subito. L'ancoraggio potrebbe trovarsi in una stanza diversa o un'altra posizione fisica interamente; il punto di ancoraggio non saranno individuabile fino a quando il dispositivo che lo ha ricevuto ha informazioni sufficienti visual per valutare l'ambiente che è stato creato il punto di ancoraggio, per ripristinare la posizione dell'ancoraggio rispetto all'ambiente corrente noto. L'implementazione client deve provare a individuare il punto di ancoraggio rispetto al sistema di coordinate locale o un frame di riferimento prima di proseguire provare a usarlo per il contenuto in tempo reale. Ad esempio, provare a individuare il punto di ancoraggio rispetto al sistema di coordinate corrente periodicamente fino a quando il punto di ancoraggio inizia a essere individuabili.
+**NOTA:** Solo perché è possibile importare un ancoraggio, non significa necessariamente che sia possibile utilizzarlo immediatamente. L'ancoraggio potrebbe trovarsi in una stanza diversa o in un'altra posizione fisica. l'ancoraggio non verrà locatable fino a quando il dispositivo che lo ha ricevuto dispone di informazioni visive sufficienti sull'ambiente in cui è stato creato l'ancoraggio, per ripristinare la posizione dell'ancoraggio rispetto all'ambiente corrente noto. L'implementazione client dovrebbe provare a individuare l'ancoraggio rispetto al sistema di coordinate locale o al frame di riferimento prima di continuare a usare per il contenuto Live. Ad esempio, provare a individuare periodicamente l'ancoraggio rispetto a un sistema di coordinate corrente fino a quando l'ancoraggio inizia a essere locatable.
 
 ## <a name="special-considerations"></a>Considerazioni speciali
 
-Il [TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) API consente selezioni multiple [SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) possono essere esportate nello stesso blob binari opachi. Tuttavia, vi è una sottile differenza nei quali dati include il blob, a seconda del fatto che un singolo SpatialAnchor o SpatialAnchors più vengono esportati in una singola chiamata.
+L'API [TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) consente l'esportazione di più [SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) nello stesso BLOB binario opaco. Tuttavia, esiste una lieve differenza nei dati che verranno inclusi nel BLOB, a seconda che un singolo SpatialAnchor o più SpatialAnchors vengano esportati in una singola chiamata.
 
 ### <a name="export-of-a-single-spatialanchor"></a>Esportazione di un singolo SpatialAnchor
 
-Il blob contiene una rappresentazione dell'ambiente in prossimità di SpatialAnchor in modo che l'ambiente può essere riconosciuto nel dispositivo, che importa il SpatialAnchor. Al termine dell'importazione, il nuovo SpatialAnchor saranno disponibili per il dispositivo. Supponendo che l'utente è stato recentemente in prossimità dell'ancoraggio, renderlo individuabile e vntana collegati al SpatialAnchor possibile eseguire il rendering. Questi vntana appariranno nella stessa posizione fisica che supportavano nel dispositivo originale che esportato il SpatialAnchor.
+Il BLOB contiene una rappresentazione dell'ambiente nella vicinanza del SpatialAnchor, in modo che l'ambiente possa essere riconosciuto nel dispositivo che importa il SpatialAnchor. Al termine dell'importazione, il nuovo SpatialAnchor sarà disponibile per il dispositivo. Supponendo che l'utente sia stato recentemente in prossimità dell'ancoraggio, sarà locatable ed è possibile eseguire il rendering degli ologrammi collegati al SpatialAnchor. Questi ologrammi verranno visualizzati nella stessa posizione fisica del dispositivo originale che ha esportato il SpatialAnchor.
 
 ![Esportazione di un singolo SpatialAnchor](images/singleanchor.png)
 
 ### <a name="export-of-multiple-spatialanchors"></a>Esportazione di più SpatialAnchors
 
-Ad esempio l'esportazione di un singolo SpatialAnchor, il blob contiene una rappresentazione dell'ambiente in prossimità di tutti i SpatialAnchors specificato. Inoltre, il blob contiene informazioni sulle connessioni tra SpatialAnchors incluso, se si trovano nello stesso spazio fisico. Ciò significa che se si importano due SpatialAnchors nelle vicinanze, quindi ologramma collegato per il *secondo* SpatialAnchor sarebbe individuabili anche se il dispositivo riconosce solo l'ambiente che circonda il *prima* SpatialAnchor, perché i dati sufficienti per calcolare la trasformazione tra i due SpatialAnchors è stata inclusa nel blob. Se i due SpatialAnchors sono state esportate singolarmente (due chiamate separate al TryExportSpatialAnchors), si potrebbe non essere sufficiente dati inclusi nell'oggetto blob per vntana collegati per la seconda SpatialAnchor essere individuabili quando il primo elemento si trova.
+Analogamente all'esportazione di un singolo SpatialAnchor, il BLOB contiene una rappresentazione dell'ambiente in prossimità di tutti i SpatialAnchors specificati. Inoltre, il BLOB contiene informazioni sulle connessioni tra il SpatialAnchors incluso, se si trovano nello stesso spazio fisico. Ciò significa che se vengono importati due SpatialAnchors adiacenti, un ologramma collegato alla *seconda* SpatialAnchor sarà locatable anche se il dispositivo riconosce solo l'ambiente intorno al *primo* SpatialAnchor, perché i dati sono sufficienti per la trasformazione di calcolo tra i due SpatialAnchors è stata inclusa nel BLOB. Se i due SpatialAnchors sono stati esportati singolarmente (due chiamate separate a TryExportSpatialAnchors), potrebbero non essere disponibili dati sufficienti nel BLOB per gli ologrammi collegati al secondo SpatialAnchor per essere locatable quando il primo si trova.
 
-![Più punti di ancoraggio esportati utilizzando una singola chiamata TryExportAnchorsAsync](images/multipleanchors.png) ![Più punti di ancoraggio esportati utilizzando una chiamata TryExportAnchorsAsync separata per ogni ancoraggio](images/separateanchors.png)
+![Più ancoraggi esportati con una singola chiamata TryExportAnchorsAsync](images/multipleanchors.png) ![Più ancoraggi esportati con una chiamata TryExportAnchorsAsync separata per ogni ancoraggio](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Esempio: Inviare dati di ancoraggio con un Windows::Networking::StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Esempio: Inviare dati di ancoraggio usando Windows:: Networking:: StreamSocket
 
-In questo caso, viene fornito un esempio di come usare i dati esportati ancoraggio inviandolo attraverso una rete TCP. Si tratta dal HolographicSpatialAnchorTransferSample.
+In questo esempio viene fornito un esempio di come usare i dati di ancoraggio esportati inviando i dati attraverso una rete TCP. Si tratta di un HolographicSpatialAnchorTransferSample.
 
-La classe WinRT StreamSocket Usa la libreria di attività PPL. Nel caso di errori di rete, viene restituito l'errore all'attività successiva nella catena di utilizzando un'eccezione che viene generata nuovamente. L'eccezione contiene un valore HRESULT che indica lo stato di errore.
+La classe WinRT StreamSocket usa la libreria di attività PPL. In caso di errori di rete, l'errore viene restituito all'attività successiva nella catena usando un'eccezione generata nuovamente. L'eccezione contiene un valore HRESULT che indica lo stato di errore.
 
-### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Usare un Windows::Networking::StreamSocketListener con TCP per inviare i dati esportati ancoraggio
+### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Usare Windows:: Networking:: StreamSocketListener con TCP per inviare dati di ancoraggio esportati
 
-Creare un'istanza del server che è in attesa di una connessione.
+Creare un'istanza del server che sia in ascolto di una connessione.
 
 ```
 void SampleAnchorTcpServer::ListenForConnection()
@@ -326,7 +326,7 @@ void SampleAnchorTcpServer::ListenForConnection()
 }
 ```
 
-Quando viene ricevuta una connessione, usare la connessione di socket client per inviare dati di ancoraggio.
+Quando viene ricevuta una connessione, usare la connessione socket client per inviare i dati di ancoraggio.
 
 ```
 void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener, StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -340,7 +340,7 @@ void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener,
 }
 ```
 
-A questo punto, è possibile iniziare a inviare un flusso di dati che contiene i dati esportati ancoraggio.
+A questo punto, è possibile iniziare a inviare un flusso di dati che contiene i dati di ancoraggio esportati.
 
 ```
 void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ anchorsToSend)
@@ -370,7 +370,7 @@ void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ 
 }
 ```
 
-Prima di inviare il flusso stesso, è prima necessario inviare un pacchetto di intestazione. Questo pacchetto di intestazione deve essere di lunghezza fissa e file deve indicare anche la lunghezza della matrice variabile di byte che rappresenta il flusso di dati di ancoraggio; nel caso di questo esempio è non disponibile alcun altri dati di intestazione da inviare, pertanto, l'intestazione è lungo 4 byte e contiene un intero senza segno a 32 bit.
+Prima di poter inviare il flusso, è necessario prima inviare un pacchetto di intestazione. Questo pacchetto di intestazione deve avere una lunghezza fissa e deve indicare anche la lunghezza della matrice di variabili di byte che rappresenta il flusso di dati di ancoraggio. nel caso di questo esempio non sono disponibili altri dati di intestazione da inviare, quindi l'intestazione ha una lunghezza di 4 byte e contiene un Unsigned Integer a 32 bit.
 
 ```
 Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataLengthMessage(size_t dataStreamLength)
@@ -413,7 +413,7 @@ Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataStreamIMap<String^,
         return task_from_result<bool>(false);
 ```
 
-Dopo che la lunghezza del flusso, in byte, è stata inviata al client, è possibile procedere a scrivere il flusso di dati nel flusso di socket. In questo modo i byte di archivio di ancoraggio di essere inviata al client.
+Una volta che la lunghezza del flusso, in byte, è stata inviata al client, è possibile continuare a scrivere il flusso di dati nel flusso di socket. In questo modo i byte dell'archivio di ancoraggio vengono inviati al client.
 
 ```
 }).then([this](bool dataLengthSent)
@@ -447,7 +447,7 @@ Dopo che la lunghezza del flusso, in byte, è stata inviata al client, è possib
 }
 ```
 
-Come indicato in precedenza in questo argomento, è necessario essere preparati a gestire le eccezioni che contiene i messaggi di stato di errore di rete. Per gli errori non previsti, è possibile scrivere le informazioni sull'eccezione nella console di debug come illustrato di seguito. Ciò fornirà un'indicazione per che cosa è successo se l'esempio di codice è in grado di completare la connessione o se non è in grado di completare l'invio dei dati di ancoraggio.
+Come indicato in precedenza in questo argomento, è necessario essere pronti a gestire le eccezioni contenenti messaggi di stato di errore di rete. Per gli errori non previsti, è possibile scrivere le informazioni sull'eccezione nella console di debug come segue. Ciò consentirà di ottenere informazioni sugli eventi che si sono verificati se l'esempio di codice non è in grado di completare la connessione o se non è in grado di completare l'invio di dati di ancoraggio.
 
 ```
 void SampleAnchorTcpServer::HandleException(Exception^ exception)
@@ -460,9 +460,9 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 }
 ```
 
-### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Usare un Windows::Networking::StreamSocket con TCP per ricevere i dati esportati ancoraggio
+### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Usare Windows:: Networking:: StreamSocket con TCP per ricevere i dati di ancoraggio esportati
 
-In primo luogo, è necessario connettersi al server. Questo esempio di codice viene illustrato come creare e configurare un StreamSocket e creare un oggetto DataReader che è possibile usare per acquisire dati di rete tramite la connessione socket.
+Prima di tutto, è necessario connettersi al server. In questo esempio di codice viene illustrato come creare e configurare un StreamSocket e creare un DataReader che è possibile utilizzare per acquisire i dati di rete tramite la connessione socket.
 
 **NOTA:** Se si esegue questo codice di esempio, assicurarsi di configurare e avviare il server prima di avviare il client.
 
@@ -530,9 +530,9 @@ task<bool> SampleAnchorTcpClient::ConnectToServer()
 }
 ```
 
-Dopo aver ottenuto una connessione, è possibile attendere che il server inviare dati. Facciamo chiamando LoadAsync nel lettore del flusso di dati.
+Quando si dispone di una connessione, è possibile attendere che il server invii i dati. Questa operazione viene eseguita chiamando LoadAsync sul lettore dati del flusso.
 
-Il primo set di byte ricevuti devono essere sempre il pacchetto di intestazione, che indica una che lunghezza in byte del flusso di dati di ancoraggio come descritto nella sezione precedente.
+Il primo set di byte ricevuto deve essere sempre il pacchetto di intestazione, che indica la lunghezza in byte del flusso di dati di ancoraggio, come descritto nella sezione precedente.
 
 ```
 void SampleAnchorTcpClient::WaitForAnchorDataStream()
@@ -581,7 +581,7 @@ task<size_t> SampleAnchorTcpClient::ReceiveAnchorDataLengthMessage()
 }
 ```
 
-Dopo aver ricevuto il pacchetto di intestazione, sappiamo che il numero di byte di dati di ancoraggio è dovrebbero. È possibile procedere con la lettura dei byte dal flusso.
+Dopo aver ricevuto il pacchetto di intestazione, è noto il numero di byte di dati di ancoraggio che ci si aspetta. È possibile procedere con la lettura di tali byte dal flusso.
 
 ```
 }).then([this](size_t dataStreamLength)
@@ -608,9 +608,9 @@ Dopo aver ricevuto il pacchetto di intestazione, sappiamo che il numero di byte 
 }
 ```
 
-Ecco il nostro codice per la ricezione del flusso di dati di ancoraggio. Anche in questo caso, si caricherà prima di tutto i byte dal flusso. Questa operazione potrebbe richiedere alcuni minuti perché il StreamSocket attende la ricezione di tale quantità di byte dalla rete.
+Ecco il nostro codice per la ricezione del flusso di dati di ancoraggio. Prima di tutto, i byte vengono caricati dal flusso. il completamento di questa operazione può richiedere del tempo perché il StreamSocket attende la ricezione della quantità di byte dalla rete.
 
-Una volta completata l'operazione di caricamento, è possibile leggere tale numero di byte. Se si riceve il numero di byte che si prevede che per il flusso di dati di ancoraggio, è possibile procedere e importare i dati di ancoraggio. in caso contrario, deve essere stato una sorta di errore. Questa situazione può verificarsi, ad esempio, quando l'istanza del server termina prima che possa essere completato l'invio del flusso di dati o la rete viene interrotta prima che l'intero flusso di dati può essere ricevuto dal client.
+Al termine dell'operazione di caricamento, è possibile leggere il numero di byte. Se è stato ricevuto il numero di byte previsto per il flusso di dati di ancoraggio, è possibile procedere e importare i dati di ancoraggio. in caso contrario, è necessario che si sia verificato un errore. Questo problema può verificarsi, ad esempio, quando l'istanza del server termina prima che sia possibile completare l'invio del flusso di dati oppure la rete si arresta prima che il client possa ricevere l'intero flusso di dati.
 
 ```
 task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
@@ -660,7 +660,7 @@ task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
 }
 ```
 
-Anche in questo caso, è necessario essere preparati a gestire gli errori di rete sconosciuto.
+Anche in questo caso, è necessario essere pronti a gestire gli errori di rete sconosciuti.
 
 ```
 void SampleAnchorTcpClient::HandleException(Exception^ exception)
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-La procedura è terminata. A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti in rete. Anche in questo caso, si noti che il client deve avere dati sufficienti rilevamento visual per lo spazio individuare correttamente il punto di ancoraggio; Se non funziona sin da subito, provare a operazioni per un periodo di tempo. Se ancora non funziona, che il server invia ulteriori punti di ancoraggio e usare le comunicazioni di rete per concordare uno che funziona per il client. È possibile provare questa procedura scaricando il HolographicSpatialAnchorTransferSample, configurazione dei client e gli IP del server e distribuirlo ai dispositivi HoloLens client e server.
+La procedura è terminata. A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
 
 ## <a name="see-also"></a>Vedere anche
-* [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
-* [Windows.Networking.StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
-* [Windows.Networking.StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)
+* [PPL (Parallel Patterns Library)](https://msdn.microsoft.com/library/dd492418.aspx)
+* [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
+* [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

@@ -1,6 +1,6 @@
 ---
 title: Movimenti
-description: Movimenti della mano consentono agli utenti di eseguire un'azione in realtà mista.
+description: I movimenti della mano consentono agli utenti di agire in realtà mista.
 author: rwinj
 ms.author: cmeekhof
 ms.date: 02/24/2019
@@ -15,7 +15,7 @@ ms.locfileid: "66829768"
 ---
 # <a name="gestures"></a>Movimenti
 
-Movimenti della mano consentono agli utenti intraprendere l'azione nella realtà mista. Interazione si basa **estasiati** di destinazione e **movimento** o **vocale** per agire su qualsiasi elemento sia stato definito. Movimenti della mano non si specifica un percorso preciso in uno spazio, ma la semplicità di inserimento in un HoloLens e immediatamente l'interazione con contenuto consente agli utenti di iniziare a lavorare senza altri accessori.
+I movimenti della mano consentono agli utenti di intervenire in realtà mista. L'interazione si basa su **sguardi** , **movimenti** o **voce** , per agire su qualsiasi elemento di destinazione. I movimenti della mano non forniscono una posizione precisa nello spazio, ma la semplicità di inserimento di un HoloLens e l'interazione immediata con il contenuto consentono agli utenti di lavorare senza altri accessori.
 
 <br>
 
@@ -32,9 +32,9 @@ Movimenti della mano consentono agli utenti intraprendere l'azione nella realtà
     </colgroup>
     <tr>
         <td><strong>Funzionalità</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
         <td>Movimenti</td>
@@ -43,7 +43,7 @@ Movimenti della mano consentono agli utenti intraprendere l'azione nella realtà
         <td>❌</td>
     </tr>
      <tr>
-        <td>Articolati e mani</td>
+        <td>Mano articolata</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -51,79 +51,79 @@ Movimenti della mano consentono agli utenti intraprendere l'azione nella realtà
 </table>
 
 > [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md#news-and-notes).
+> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md#news-and-notes)disponibili.
 
-## <a name="gaze-and-commit"></a>Gaze-and-commit
+## <a name="gaze-and-commit"></a>Sguardo e commit
 
-Per eseguire azioni, di usare i movimenti [sguardo head](gaze.md) come meccanismo di destinazione. La combinazione di **estasiati** e il **indice puntato** movimenti i risultati in un **sguardo e commit** interazione. È un'alternativa al sguardo e commit **punto di commit**, sono abilitate per [movimento controller](motion-controllers.md). App eseguibili su HoloLens sufficiente supportare sguardo e commit poiché HoloLens non supporta i controller di movimento. Le app eseguite su HoloLens e auricolari immersive devono supportare le interazioni basate su sguardo sia basate su sta puntando, per consentire agli utenti che usano il dispositivo di input.
+Per intraprendere azioni, i movimenti della mano usano lo [sguardo a capo](gaze.md) come meccanismo di destinazione. La combinazione di **sguardo** e movimento del **tocco di aria** comporta un'interazione con lo **sguardo e il commit** . Un'alternativa a sguardi e commit è il **punto e il commit**, abilitati dai [controller di movimento](motion-controllers.md). Le app eseguite in HoloLens devono supportare solo lo sguardo e il commit poiché HoloLens non supporta i controller di movimento. Le app in esecuzione su HoloLens e auricolari immersivi devono supportare sia le interazioni basate su sguardi che quelle basate su punti, per offrire agli utenti la possibilità di scegliere il dispositivo di input che usano.
 
-## <a name="the-two-core-gestures-of-hololens"></a>I due principali i movimenti di HoloLens
+## <a name="the-two-core-gestures-of-hololens"></a>I due movimenti principali di HoloLens
 
-HoloLens riconosce attualmente due principali movimenti di componenti - **puntato** e **Bloom**. Tali interazioni di due core sono il livello più basso di dati spaziali di input che uno sviluppatore possa accedere. Formano le basi per un'ampia gamma di possibili azioni dell'utente.
+HoloLens riconosce attualmente due movimenti principali per i componenti, il **tocco aereo** e la **fioritura**. Queste due interazioni principali sono il livello più basso di dati di input spaziali a cui uno sviluppatore può accedere. Costituiscono la base per un'ampia gamma di possibili azioni da parte degli utenti.
 
-### <a name="air-tap"></a>Indice puntato
+### <a name="air-tap"></a>Simulazione del tocco
 
-Indice puntato è un gesto tocco con l'icona della mano mantenuto in verticale, in modo analogo a un clic del mouse o selezionare. Viene utilizzato nella maggior parte delle esperienze di HoloLens per l'equivalente di un "clic" su un elemento dell'interfaccia utente dopo con targeting [estasiati](gaze.md). È un'azione di universal informazioni su una sola volta e applicarne tra tutte le app. Altri modi per eseguire select sono facendo clic sul pulsante singolo un [HoloLens Clicker](hardware-accessories.md#hololens-clicker) o parlando della voce di comando "Select".
+Il rubinetto aereo è un gesto di tocco con la mano verticale, simile a un clic del mouse o a una selezione. Viene usato nella maggior parte delle esperienze HoloLens per l'equivalente di un "clic" su un elemento dell'interfaccia utente dopo che è stato indirizzato con lo [sguardo](gaze.md). Si tratta di un'azione universale che si apprende una volta e quindi si applica a tutte le app. Altri modi per eseguire SELECT sono premere il pulsante singolo in un [clic del mouse HoloLens](hardware-accessories.md#hololens-clicker) o pronunciare il comando vocale "Select".
 
-![Stato pronto per movimenti della mano su HoloLens](images/image9.png)<br>
-*Stato pronto per l'indice puntato in HoloLens.*
+![Stato pronto per i movimenti della mano su HoloLens](images/image9.png)<br>
+*Stato pronto per il rubinetto aria su HoloLens.*
 
-Indice puntato è un movimento discreto. Una selezione viene completata o non è, un'azione è o non viene eseguita all'interno di un'esperienza. È possibile, sebbene non consigliabile senza uno scopo specifico, per creare altri movimenti discreti da combinazioni di componenti principali (ad esempio, un movimento di un doppio tocco per indicare qualcosa di diverso da un singolo tocco).
+Il rubinetto aereo è un gesto discreto. Una selezione è stata completata o non è, un'azione è o non viene rilevata in un'esperienza. È possibile, sebbene non consigliato, senza alcuno scopo specifico, creare altri movimenti discreti dalle combinazioni dei componenti principali, ad esempio un gesto di doppio tocco, per indicare qualcosa di diverso da un singolo tocco.
 
-![Con un dito nella posizione pronta e quindi un movimento toccare o fare clic su](images/readyandpress.jpg)<br>
-*Come eseguire l'indice puntato: Generare il dito indice nella posizione pronti, premere il dito toccare o selezionare e quindi eseguire il backup di rilascio.*
+![Dito nella posizione pronta, quindi toccare o fare clic su movimento](images/readyandpress.jpg)<br>
+*Come eseguire un rubinetto aereo: Aumentare il dito dell'indice nella posizione pronta, premere il dito per toccare o selezionare e quindi eseguire il backup fino al rilascio.*
 
 ### <a name="bloom"></a>Bloom
 
-Bloom è il movimento "home" ed è riservata per questo da solo. È un'azione di sistema speciale che consente di tornare al menu Start. È equivalente alla pressione del tasto Windows sulla tastiera o il tasto Xbox in un controller Xbox. L'utente può usare entrambe le mani.
+Bloom è il movimento "Home" ed è riservato solo a questo. Si tratta di un'azione speciale di sistema che viene utilizzata per tornare al menu Start. Equivale a premere il tasto Windows su una tastiera o il pulsante Xbox in un controller Xbox. L'utente può utilizzare una mano.
 
 ![Movimento Bloom su HoloLens](images/image10-640px.png)
 
-Per eseguire il movimento bloom su HoloLens, riservare la mano, palm, insieme con portata. Aprire quindi la mano. Si noti che è anche sempre possibile tornare a Start pronunciare "Ehi Cortana, Go Home". Le app non è possibile reagire in modo specifico a un'azione home, come vengono gestiti dal sistema.
+Per eseguire il gesto di Bloom su HoloLens, è possibile fare una mano, Palm up, insieme a tutte le dita. Aprire quindi la mano. Si noti anche che è sempre possibile tornare all'inizio dicendo "Hey Cortana, Go Home". Le app non possono rispondere in modo specifico a un'azione Home, perché vengono gestite dal sistema.
 
 ![Movimento Bloom](images/bloom-giphy.gif)<br>
-*Come eseguire il movimento bloom su HoloLens.*
+*Come eseguire il movimento Bloom in HoloLens.*
 
 ## <a name="composite-gestures"></a>Movimenti compositi
 
-Le App in grado di riconoscere le scelte più di solo i singoli. Dalla combinazione scelta, tenere premuto e rilasciare con lo spostamento della mano, movimenti compositi più complessi possono essere eseguiti. Questi gesti compositi o ad alto livello si basano su di basso livello inpui dati spaziali (da indice puntato e Bloom) che gli sviluppatori hanno accesso a.
+Le app sono in grado di riconoscere molto più dei singoli tocchi. Combinando il tocco, la pressione prolungata e il rilascio con il movimento della mano, possono essere eseguiti movimenti compositi più complessi. Questi movimenti compositi o di alto livello si basano sui dati di input spaziali di basso livello (provenienti dalla simulazione del tocco e dall'apertura della mano a fiore) a cui hanno accesso gli sviluppatori.
 
 <table>
 <tr>
-<th> Movimento composito</th><th> Come applicare</th>
+<th> Gesto composito</th><th> Come applicare</th>
 </tr><tr>
-<td>Indice puntato</td><td>Il movimento dell'indice puntato (nonché i movimenti seguenti) reagisce solo a un tocco specifico. Per rilevare altre scelte, ad esempio Menu o. é quindi, l'app deve usare direttamente le interazioni di basso livello descritte due componenti chiave movimenti in precedenza nella sezione.</td>
+<td>Simulazione del tocco</td><td>La simulazione del tocco (come gli altri movimenti descritti di seguito) reagisce solo a un tocco specifico. Per rilevare altri tocchi, come Menu o Afferra, l'app deve usare direttamente le interazioni di livello più basso descritte nella sezione precedente relativa ai due movimenti componente chiave.</td>
 </tr><tr>
-<td>Toccare e tenere premuto</td><td><p>Tenere premuto è mantenere semplicemente la posizione di un dito verso il basso dell'indice puntato. La combinazione di aria toccare e tenere premuto consente un'ampia gamma di più complessa &quot;fare clic e trascinare&quot; interazioni in combinazione con arm lo spostamento dei quali esegue la scelta di un oggetto anziché averlo attivato oppure &quot;mousedown&quot; interazioni secondarie, ad esempio che mostra un menu di scelta rapida.</p><p>Prestare attenzione quando si progetta per questa azione, tuttavia, come gli utenti può essere soggetta a si rilassa loro maneggevolezza manualmente nel corso di un'operazione estesa.</p></td>
+<td>Tocco e pressione prolungata</td><td><p>La pressione prolungata consiste nel mantenere la posizione del dito abbassato della simulazione del tocco. La combinazione di tocco e mantenimento dell'aria consente un'ampia gamma di interazioni &quot;di clic e&quot; di trascinamento più complesse in combinazione con lo spostamento ARM, ad esempio la selezione &quot;di&quot; un oggetto anziché l'attivazione di un oggetto o di un MouseDown interazioni secondarie, ad esempio la visualizzazione di un menu di scelta rapida.</p><p>È tuttavia consigliabile prestare attenzione durante la progettazione di questo movimento perché gli utenti possono avere la tendenza ad allentare la posizione della mano durante l'esecuzione di un movimento esteso.</p></td>
 </tr><tr>
-<td>Manipolazione</td><td><p>I movimenti di manipolazione possono essere utilizzati per spostare, ridimensionare o ruotare ologramma quando si desidera che l'ologrammi reagire 1:1 all'utente&#39;movimenti mano s. Un utilizzo di tali spostamenti di tipo 1:1 consiste nel consentire all'utente di disegnare o disegnare nel mondo.</p><p>La selezione di destinazioni iniziali per un movimento di manipolazione deve essere eseguita da sguardo o fa riferimento. Una volta avviata la toccare e tenere premuto, qualsiasi modifica dell'oggetto viene quindi gestita manualmente gli spostamenti, liberando Guardatevi intorno mentre che modificano, all'utente.</p></td>
+<td>Manipolazione</td><td><p>I movimenti di manipolazione possono essere usati per spostare, ridimensionare o ruotare un ologramma quando si vuole che l'ologramma reagisca 1:1 ai movimenti della mano dell'utente&#39;. Uno degli usi possibili di tali movimenti 1:1 è quello di consentire all'utente di disegnare o dipingere nel mondo.</p><p>La selezione iniziale della destinazione per un movimento di manipolazione dovrebbe avvenire mediante sguardo fisso o puntamento. Quando inizia la sequenza tocco e pressione prolungata, qualunque manipolazione dell'oggetto viene gestita dai movimenti della mano, consentendo all'utente di guardarsi intorno mentre esegue la manipolazione.</p></td>
 </tr><tr>
-<td>Navigazione</td><td><p>Movimenti di esplorazione operano come un joystick virtuale e possono essere utilizzati per spostarsi di widget dell'interfaccia utente, ad esempio menu radiali. Toccare e tenere premuto per avviare il movimento e quindi spostare la mano all'interno di un cubo 3D normalizzato, incentrata sulla stampa iniziale. È possibile spostare la mano lungo l'asse X, Y o Z da un valore pari a -1 a 1, dove 0 è il punto di partenza.</p><p>Navigazione utilizzabile per compilare in base al relativo alla velocità lo scorrimento continuo o i movimenti zoom, simili alla visualizzazione a scorrimento un'interfaccia utente 2D facendo clic sul pulsante centrale del mouse e quindi spostando il puntatore del mouse su e giù.</p><p>Navigazione con rails si riferisce alla capacità di riconoscere gli spostamenti in determinati asse fino al raggiungimento di determinate soglia su quell'asse. Ciò è utile, solo quando lo spostamento in più di un asse è abilitato in un'applicazione dallo sviluppatore, ad esempio, se un'applicazione è configurata per riconoscere i movimenti di navigazione tra asse Y X, ma anche specificata con rails asse X. In questo caso sistema riconoscerà mano gli spostamenti tra asse X fino a quando rimangono all'interno di un immaginario Guide (Guida) dell'asse X se lo spostamento di disponibilità si verifica anche asse Y.</p><p>All'interno delle App 2D, gli utenti possono usare i movimenti di spostamento verticale a scorrere, eseguire lo zoom avanti o trascinare all'interno dell'app. Questo viene inserito virtuale con un dito tocca all'app per simulare i movimenti tocco dello stesso tipo. Gli utenti possono selezionare le azioni avvengono attivando e disattivando tra gli strumenti della barra di sopra dell'app, selezionando il pulsante o che informa che &#39; &lt;trascinamento/Zoom e scorrimento&gt; strumento&#39;.</p></td>
+<td>Navigazione</td><td><p>I movimenti di navigazione funzionano come un joystick virtuale e possono essere usati per spostarsi nei widget dell'interfaccia utente, ad esempio nei menu radiali. Tocca e tieni premuto per avviare il movimento, quindi sposta la mano all'interno di un cubo 3D normalizzato, centrato attorno al punto di pressione iniziale. Puoi spostare la mano lungo l'asse X, Y o Z da un valore -1 a 1, essendo lo 0 il punto di partenza.</p><p>La navigazione può essere usata per creare movimenti continui di scorrimento o zoom basati sulla velocità, analoghi allo scorrimento di un'interfaccia utente 2D mediante il clic sul pulsante centrale del mouse e il successivo spostamento del mouse verso l'alto o il basso.</p><p>Per navigazione con binari si intende la capacità di riconoscere i movimenti su un determinato asse fino al raggiungimento di una certa soglia sullo stesso asse. Ciò è utile quando lo sviluppatore abilita lo spostamento su più di un asse in un'applicazione, ad esempio se l'applicazione è configurata per riconoscere i movimenti di navigazione sugli assi X e Y, ma viene specificato anche l'asse X con binari. In questo caso il sistema riconoscerà i movimenti della mano sull'asse X finché rimangono entro binari (guida) immaginari sull'asse X, se il movimento della mano ha luogo anche sull'asse Y.</p><p>Nelle app 2D gli utenti possono usare movimenti di navigazione verticali per scorrere, eseguire lo zoom o trascinare all'interno dell'app. In questo modo vengono inseriti nell'app tocchi delle dita virtuali per simulare tocchi dello stesso tipo. Gli utenti possono selezionare quali di queste azioni si verificano alternando gli strumenti sulla barra sopra l'app, selezionando il pulsante &#39; &lt;o dicendo lo strumento&#39;di scorrimento/trascinamento dello zoom&gt; .</p></td>
 </tr>
 </table>
 
 
 
-### <a name="gesture-recognizers"></a>Riconoscitori di movimento
+### <a name="gesture-recognizers"></a>Strumenti di riconoscimento dei movimenti
 
-Un vantaggio dell'utilizzo di riconoscimento del movimento è che è possibile configurare un riconoscitore di movimento solo per i movimenti che di destinazione corrente ologrammi possono accettare. La piattaforma verrà eseguita solo la risoluzione dell'ambiguità necessarie per distinguere questi gesti supportati particolari. In questo modo, ologramma che supporta solo l'indice puntato può accettare qualsiasi periodo di tempo tra pressione e rilascio, mentre un ologrammi che supporta sia toccare e tenere premuto possibile alzare di livello il tocco per l'attesa dopo la soglia di tempo di attesa.
+Uno dei vantaggi derivanti dall'uso del riconoscimento dei movimenti è poter configurare uno strumento di riconoscimento solo per i movimenti che l'ologramma attualmente selezionato come destinazione può accettare. La piattaforma eseguirà esclusivamente la disambiguazione necessaria per distinguere i movimenti supportati specifici. In questo modo, un ologramma che supporta solo la simulazione del tocco può accettare che trascorra un intervallo di tempo di qualunque durata tra la pressione e il rilascio, mentre un ologramma che supporta sia il tocco che la pressione prolungata può trasformare il tocco in pressione prolungata dopo il superamento della soglia temporale per la pressione prolungata.
 
-## <a name="hand-recognition"></a>Riconoscimento di mano
+## <a name="hand-recognition"></a>Riconoscimento della mano
 
-HoloLens riconosce i movimenti della mano per rilevare la posizione di una o entrambe le mani visibili al dispositivo. HoloLens vede le mani quando sono in uno il **lo stato di pronto** (parte posteriore l'icona della mano è rivolta con dito indice) o il **premuto stato** (parte posteriore l'icona della mano rivolta verso il basso è il dito indice). Quando sono in altri può causare, di HoloLens tali file verranno ignorati.
+HoloLens riconosce i movimenti della mano tenendo traccia della posizione di una o di entrambe le mani visibili al dispositivo. HoloLens considera le mani quando sono nello **stato pronto** (parte posteriore della mano con indice) o lo **stato premuto** (indietro della mano con il dito indice verso il basso). Quando le mani sono in altre posizioni, vengono ignorate da HoloLens.
 
-Per ogni indicatore rileva tale HoloLens, è possibile accedere alla posizione (senza l'orientamento) e il relativo stato premuto. Quando l'icona della mano si avvicina il bordo della cornice di movimento, ha anche fornito con un vettore di direzione, è possibile mostrare all'utente in modo che sappia come spostare le mani per ottenerlo di nuovo in cui HoloLens può visualizzarlo.
+Per ogni mano rilevata da HoloLens, puoi accedere alla sua posizione (senza orientamento) e allo stato premuto. Non appena la mano si avvicina al bordo della cornice di movimento, viene fornito anche un vettore direzionale che puoi decidere di mostrare all'utente in modo che sappia come muovere la mano per riportarla dove può essere vista da HoloLens.
 
-## <a name="gesture-frame"></a>Frame di movimento
+## <a name="gesture-frame"></a>Cornice di movimento
 
-Per movimenti su HoloLens, l'icona della mano deve essere all'interno di un"movimento", in un intervallo che il rilevamento del movimento fotocamere possono visualizzare in modo appropriato (molto più o meno da naso vita e tra ricade). Gli utenti devono essere sottoposti a training su un'area del riconoscimento per l'esito positivo dell'azione e per i propri comfort (molti utenti inizialmente presupporrà che il frame di movimento deve essere entro la visualizzazione tramite HoloLens e contenere le armi uncomfortably per interagire). Quando si usa il HoloLens Clicker, subito a usare non è necessario essere all'interno della cornice di movimento.
+Per i movimenti in HoloLens, la mano deve trovarsi all'interno di una "cornice di movimento", in un'area che possa essere vista adeguatamente dalle videocamere di rilevamento dei movimenti (approssimativamente un'area che va dal naso alla vita e che si estende tra le spalle). Gli utenti devono essere addestrati a usare quest'area di riconoscimento sia per la corretta esecuzione delle operazioni sia per il loro comfort (molti di essi inizialmente presumeranno che la cornice di movimento debba essere all'interno della visualizzazione attraverso HoloLens e terranno scomodamente le braccia alzate per interagire). Quando usi il dispositivo Clicker HoloLens, non è necessario che le tue mani si trovino all'interno della cornice di movimento.
 
-Nel caso di movimenti continuati, in particolare, vi è alcuni rischi correlati agli utenti lo spostamento le mani fuori dalla cornice movimenti mentre è in movimento a metà (durante lo spostamento di un determinato oggetto holographic, ad esempio) e la perdita di base al risultato desiderato.
+Soprattutto nel caso di movimenti che continuano, vi è il rischio che gli utenti portino le mani al di fuori della cornice di movimento quando l'operazione non è ancora completata (ad esempio, mentre spostano un oggetto olografico), non riuscendo quindi a ottenere il risultato desiderato.
 
-Esistono tre aspetti da considerare:
-* Formazione dell'utente del movimento frame esistenza e limiti approssimativi (tenuto durante l'installazione di HoloLens).
-* Informare gli utenti quando i movimenti sono prossime alla/sostanziale i limiti di intervallo movimento all'interno di un'applicazione, come accade in un movimento perso porterà a risultati indesiderati. Research ha illustrato le qualità di chiave di un sistema di notifica e la shell di HoloLens fornisce un buon esempio di questo tipo di notifica (visual, sul cursore centrale, che indica la direzione nella quale limite attraversamento è in corso).
-* Conseguenze di compromettere il funzionamento i limiti di frame di movimento dovrebbero essere ridotta a icona. In genere, ciò significa che il risultato di un movimento deve essere arrestato in corrispondenza del limite, ma non invertito. Ad esempio, se un utente sta spostando un oggetto holographic attraverso una chat room, lo spostamento deve essere interrotta quando viene superata la cornice di movimento, ma **non** da restituire per il punto di partenza. L'utente potrebbe esperienza alcuni frustrazione, ma può comprendere più rapidamente i limiti e non è necessario riavviare le azioni desiderate complete ogni volta che.
+Sono tre gli aspetti da considerare:
+* Necessità di formare l'utente in merito all'esistenza della cornice di movimento e ai relativi limiti approssimativi (formazione tenuta durante l'installazione di HoloLens).
+* Necessità di notificare agli utenti quando con i loro movimenti si stanno avvicinando o stanno superando i limiti della cornice di movimento all'interno di un'applicazione, in quanto un movimento andato perduto può generare risultati indesiderati. Le ricerche svolte hanno mostrato i principali vantaggi di un tale sistema di notifica e la shell HoloLens ne costituisce un buon esempio (notifica visiva, sul cursore centrale, che indica la direzione in cui si sta oltrepassando il limite).
+* Necessità di ridurre al minimo le conseguenze del superamento dei limiti della cornice di movimento. Questo, in generale, significa che il risultato di un movimento deve arrestarsi in corrispondenza del limite, ma non essere annullato. Se, ad esempio, un utente sposta un oggetto olografico in una stanza, lo spostamento dovrebbe arrestarsi quando viene violato il frame di movimento, ma **non** deve essere restituito al punto iniziale. L'utente può sentirsi frustrato in questo caso, ma può rendersi conto più rapidamente dei limiti senza dover ricominciare ogni volta a eseguire per intero le azioni desiderate.
 
 ## <a name="see-also"></a>Vedere anche
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)

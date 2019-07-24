@@ -1,11 +1,11 @@
 ---
-title: Codice a matrice di rilevamento
-description: Informazioni su come attivare la scansione del codice di rilevamento per le cuffie (VR) coinvolgenti di realtà mista di Windows e implementare la funzionalità nelle app di realtà virtuale.
+title: Rilevamento del codice a matrice
+description: Informazioni su come attivare il rilevamento del codice a matrice per l'auricolare di Windows misto Reality (VR) e implementare la funzionalità nelle app VR.
 author: yoyozilla
 ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
-keywords: realtà virtuale, lbe, intrattenimento basato su posizione, vr arcade, codice a matrice arcade, coinvolgenti, codici a matrice,
+keywords: VR, LBE, location based Entertainment, VR Arcade, Arcade, immersive, QR, QR code
 ms.openlocfilehash: 465056cf645a8b9dc9e0e2d3f9dacf887df67c52
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,12 +13,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829979"
 ---
-# <a name="qr-code-tracking"></a>Codice a matrice di rilevamento
+# <a name="qr-code-tracking"></a>Rilevamento del codice a matrice
 
-Codice a matrice di rilevamento viene implementato nel driver realtà mista di Windows per immersive auricolari (VR). Abilitando il tracker di codice a matrice nel driver le cuffie, le cuffie esegue l'analisi dei codici a matrice e vengono segnalati per le app interessate. Questa funzionalità è disponibile come di solo il [Windows 10 ottobre 2018 Update (noto anche come RS5)](release-notes-october-2018.md).
+Il rilevamento del codice a matrice viene implementato nel driver di realtà mista di Windows per gli auricolari immersivi (VR). Abilitando il tracker del codice a matrice nel driver della cuffia, l'auricolare analizza i codici a matrice e viene segnalato alle app interessate. Questa funzionalità è disponibile solo in [Windows 10 ottobre 2018 aggiornamento (noto anche come RS5)](release-notes-october-2018.md).
 
 >[!NOTE]
->I frammenti di codice in questo articolo illustrano attualmente l'utilizzo di C++/CX invece di C + + 17 conformi C++/WinRT usato nel [ C++ modello di progetto holographic](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per un C++progetto /WinRT, anche se è necessario convertire il codice.
+>I frammenti di codice in questo articolo illustrano attualmente l' C++uso di/CX, invece di/WinRT conformi C++a C + 17 come usato nel modello di [ C++ progetto olografico](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per C++un progetto/WinRT, anche se sarà necessario tradurre il codice.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -31,44 +31,44 @@ Codice a matrice di rilevamento viene implementato nel driver realtà mista di W
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Codice a matrice di rilevamento</td>
+        <td>Rilevamento del codice a matrice</td>
         <td>❌</td>
         <td>✔️</td>
     </tr>
 </table>
 
-## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>Abilitazione e disabilitazione di codici a matrice di rilevamento per le cuffie codice
-Nota: In questa sezione è valida solo per [Windows 10 ottobre 2018 Update (noto anche come RS5)](release-notes-october-2018.md). Dalle build di 19 ore 1 o versione successiva non è necessario eseguire questa operazione.
-Se si sta sviluppando un'app di realtà mista che userà codice a matrice di rilevamento o sei un cliente di una di queste App, è necessario attivare manualmente la scansione del codice di rilevamento nel driver del auricolare.
+## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>Abilitazione e disabilitazione del rilevamento del codice QR per l'auricolare
+Nota: Questa sezione è valida solo per l' [aggiornamento di Windows 10 ottobre 2018 (noto anche come RS5)](release-notes-october-2018.md). A partire dalle build di 19h1, non sarà necessario eseguire questa operazione.
+Che tu stia sviluppando un'app per realtà mista che utilizzerà il rilevamento del codice a matrice o che sei un cliente di una di queste app, dovrai attivare manualmente il rilevamento del codice a matrice nel driver dell'auricolare.
 
-Al fine di **attivare la scansione del codice di rilevamento** per le cuffie (VR) immersive:
+Per **attivare il rilevamento del codice** a matrice per l'auricolare immersiva (VR):
 
-1. Chiudere l'app del portale di realtà mista nel PC.
-2. Scollegare il visore VR dal PC.
-3. Eseguire lo script seguente nel Prompt dei comandi:<br>
+1. Chiudere l'app del portale per la realtà mista nel PC.
+2. Scollegare l'auricolare dal PC.
+3. Eseguire lo script seguente nel prompt dei comandi:<br>
     `reg add "HKLM\SOFTWARE\Microsoft\HoloLensSensors" /v  EnableQRTrackerDefault /t REG_DWORD /d 1 /F`
-4. Riconnettere le cuffie al computer.
+4. Riconnettere l'auricolare al PC.
 
-Al fine di **disattivare la scansione del codice di rilevamento** per le cuffie (VR) immersive:
+Per disattivare il **rilevamento del codice QR** per l'auricolare immersiva (VR):
 
-1. Chiudere l'app del portale di realtà mista nel PC.
-2. Scollegare il visore VR dal PC.
-3. Eseguire lo script seguente nel Prompt dei comandi:<br>
+1. Chiudere l'app del portale per la realtà mista nel PC.
+2. Scollegare l'auricolare dal PC.
+3. Eseguire lo script seguente nel prompt dei comandi:<br>
     `reg add "HKLM\SOFTWARE\Microsoft\HoloLensSensors" /v  EnableQRTrackerDefault /t REG_DWORD /d 0 /F`
-4. Riconnettere le cuffie al computer. In questo modo tutti i codici a matrice individuati "non individuabili."
+4. Riconnettere l'auricolare al PC. In questo modo tutti i codici QR individuati "non locatable".
 
 ## <a name="printing-codes"></a>Codici di stampa
 
-In primo luogo, il [specifiche per i codici a matrice](https://www.qrcode.com/en/howto/code.html) afferma "l'area di simboli di codice a matrice è necessario un margine o una"zona quiet"intorno a esso da utilizzare. Il margine è un'area chiara intorno a un simbolo in cui viene stampato niente. Codice a matrice è necessario un ampio margine di quattro-module in tutti i lati di un simbolo". Questa operazione deve avere una larghezza, in ogni lato di quattro volte le dimensioni di un modulo - un singolo quadrato nero nel codice. La pagina specifica contiene consigli su come stampare i codici a matrice e individuare l'area richiesta per rendere un determinato codice a matrice con dimensione.
+Prima di tutto, la [specifica per i codici](https://www.qrcode.com/en/howto/code.html) a matrice indica che l'area dei simboli del codice a matrice richiede un margine o una "zona non interattiva" per poter essere usata. Il margine è un'area chiara intorno a un simbolo che non viene stampato. Il codice a matrice richiede un margine Wide a quattro moduli a tutti i lati di un simbolo ". Questo deve avere una larghezza, a ogni lato, di quattro volte la dimensione di un modulo, un singolo quadrato nero nel codice. La pagina delle specifiche contiene suggerimenti su come stampare codici QR e individuare l'area necessaria per creare un codice a matrice di dimensioni specifiche.
 
-La qualità del rilevamento di codice a matrice è attualmente soggetta a vari illuminazione e sfondo. Per evitare questo inconveniente, si noti l'illuminazione e stampare il codice appropriato. In una scena con estrema particolarmente luminosità, stampa un codice che è nero su sfondo grigio. In una scena scarsa luminosità nera su bianco works. Analogamente, se lo sfondo per il codice è particolarmente scuro, provare a nero sul codice grigia se la frequenza di rilevamento è bassa. In caso contrario, se lo sfondo più chiaro, un codice regolare dovrebbe funzionare correttamente.
+Attualmente la qualità del rilevamento del codice a matrice è soggetta a variazioni di illuminazione e sfondo. Per contrastare questo problema, prendere nota dell'illuminazione e stampare il codice appropriato. In una scena con illuminazione particolarmente luminosa, stampare un codice nero su uno sfondo grigio. In una scena di scarsa luminosità, il nero sul bianco funziona. Analogamente, se lo sfondo del codice è particolarmente scuro, provare a usare un codice nero in grigio se la frequenza di rilevamento è bassa. In caso contrario, se lo sfondo è più chiaro, un codice normale dovrebbe funzionare correttamente.
 
-## <a name="qrtracking-api"></a>QRTracking API
+## <a name="qrtracking-api"></a>API QRTracking
 
-Il plug-in QRTracking espone le API per il codice a matrice di rilevamento. Per usare il plug-in, è necessario usare i tipi di seguito il *QRCodesTrackerPlugin* dello spazio dei nomi.
+Il plug-in QRTracking espone le API per il rilevamento del codice a matrice. Per usare il plug-in, è necessario usare i tipi seguenti dello spazio dei nomi *QRCodesTrackerPlugin* .
 
 ```cs
  // QRTracker plugin namespace
@@ -179,27 +179,27 @@ Il plug-in QRTracking espone le API per il codice a matrice di rilevamento. Per 
 }
 ```
 
-## <a name="implementing-qr-code-tracking-in-unity"></a>Implementazione di codice a matrice di rilevamento in Unity
+## <a name="implementing-qr-code-tracking-in-unity"></a>Implementazione del rilevamento del codice a matrice in Unity
 
-### <a name="sample-unity-scenes-in-mrtk-mixed-reality-toolkit"></a>In background di Unity di esempio nelle MRTK (Toolkit di realtà mista)
+### <a name="sample-unity-scenes-in-mrtk-mixed-reality-toolkit"></a>Scene Unity di esempio in MRTK (Toolkit realtà mista)
 
-È possibile trovare un esempio di come usare l'API di gestione di codici a matrice nel Toolkit di realtà mista [sito GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker).
+È possibile trovare un esempio di come usare l'API di rilevamento a matrice nel [sito GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker)di Mixed Reality Toolkit.
 
-MRTK ha implementato gli script necessari per simpilify i codici a matrice per tracciare l'utilizzo. Tutte le risorse necessarie per sviluppare a matrice di tenere traccia delle applicazioni si trovano nella cartella "QRTracker". Esistono due scene: il primo è un esempio per visualizzare semplicemente i dettagli dei codici QR quando vengono rilevati e la seconda viene illustrato come utilizzare il sistema di coordinate collegato del codice a matrice per visualizzare vntana.
-È presente un prefab "QRScanner" aggiunto tutti gli script necessari per le scene usare QRCodes. Lo script QRCodeManager è una classe singleton che implementa l'API QRCode. Questa operazione deve essere aggiunto alla scena. Lo script "AttachToQRCode" viene usato per collegare vntana ai sistemi di coordinate del codice a matrice, questo script può essere aggiunto a uno qualsiasi dei vntana. "SpatialGraphCoordinateSystem" viene illustrato come utilizzare il sistema di coordinate QRCode. Questi script possono essere usati come-è nel progetto scene oppure è possibile scrivere il proprio direttamente usando il plug-in come descritto in precedenza.
+MRTK ha implementato gli script necessari per simpilify l'utilizzo del rilevamento a barre. Tutte le risorse necessarie per lo sviluppo di app di rilevamento a barre si trovano nella cartella "QRTracker". Ci sono due scene: il primo è un esempio che mostra semplicemente i dettagli dei codici a matrice quando vengono rilevati e il secondo illustra come usare il sistema di coordinate collegato al codice a matrice per visualizzare gli ologrammi.
+È disponibile un "QRScanner" prefabbricato che ha aggiunto tutti gli script necessari per l'uso di QRCodes. Lo script QRCodeManager è una classe singleton che implementa l'API QRCode. Questa operazione deve essere aggiunta alla scena. Lo script "AttachToQRCode" viene usato per alleghire gli ologrammi ai sistemi di coordinate del codice a matrice. questo script può essere aggiunto a qualsiasi ologramma. In "SpatialGraphCoordinateSystem" viene illustrato come utilizzare il sistema di coordinate QRCode. Questi script possono essere usati così come sono nelle scene del progetto oppure è possibile scrivere direttamente usando il plug-in come descritto in precedenza.
 
-### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementazione di codice a matrice in Unity senza MRTK di rilevamento
+### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementazione del rilevamento del codice a matrice in Unity senza MRTK
 
-È anche possibile usare l'API di gestione di codici a matrice in Unity senza creare una dipendenza da MRTK. Per usare l'API, è necessario preparare il progetto con l'istruzione seguente:
+È anche possibile usare l'API di rilevamento a matrice in Unity senza dipendere da MRTK. Per usare l'API, sarà necessario preparare il progetto con l'istruzione seguente:
 
-1. Creare una nuova cartella nella cartella assets del progetto unity con il nome: "I"plug-in.
-2. Copiare tutti i file richiesti da [in questa cartella](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins) nella cartella "Plug-in" locale appena creato.
-3. È possibile usare i codici a matrice di rilevamento degli script nel [cartella scripts MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Scripts) o scriverne uno proprio.
-Nota: Questi plug-in sono solo per [Windows 10 ottobre 2018 Update (noto anche come RS5)](release-notes-october-2018.md) compilazioni. I plug-in verrà aggiornato con la prossima versione di windows. I plug-in correnti sono sperimentali e non funzioneranno per versioni future di windows. Verranno pubblicati nuovi plug-in che può essere usato dalla prossima versione di windows e non sarà con le versioni precedenti compatibile e non funzionerà con RS5).
+1. Creare una nuova cartella nella cartella assets del progetto Unity con il nome: "Plug-in".
+2. Copiare tutti i file necessari da [questa cartella](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins) nella cartella "plugins" locale appena creata.
+3. È possibile usare gli script di rilevamento a matrice nella [cartella degli script di MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Scripts) o scrivere i propri.
+Nota: Questi plug-in sono solo per le compilazioni di [aggiornamento 2018 di Windows 10 ottobre (noto anche come RS5)](release-notes-october-2018.md) . I plug-in verranno aggiornati con la versione successiva di Windows. I plug-in correnti sono sperimentali e non funzioneranno per la versione futura di Windows. Verranno pubblicati nuovi plug-in che possono essere usati dalla versione successiva di Windows e non saranno compatibili con le versioni precedenti e non funzioneranno con RS5.
 
-## <a name="implementing-qr-code-tracking-in-directx"></a>Implementazione di codice a matrice di rilevamento in DirectX
+## <a name="implementing-qr-code-tracking-in-directx"></a>Implementazione del rilevamento del codice a matrice in DirectX
 
-Per usare il QRTrackingPlugin in Visual Studio, è necessario aggiungere il riferimento del QRTrackingPlugin ai. winmd. È possibile trovare il [i file richiesti per le piattaforme supportate qui](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins/WSA).
+Per usare QRTrackingPlugin in Visual Studio, è necessario aggiungere il riferimento di QRTrackingPlugin a. winmd. Qui è possibile trovare i [file necessari per le piattaforme supportate](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker/Plugins/WSA).
 
 ```cpp
 // MyClass.h
@@ -251,13 +251,13 @@ void MyClass::OnRemovedQRCode(QRCodesTrackerPlugin::QRCodeRemovedEventArgs ^args
 
 ## <a name="getting-a-coordinate-system"></a>Recupero di un sistema di coordinate
 
-Definiamo un sistema di coordinate di destra allineato con il codice a matrice nell'angolo superiore sinistro del quadrato rilevamento rapido in alto a sinistra. Il sistema di coordinate è illustrato di seguito. L'asse z fa riferimento nel documento di (non illustrato), ma in Unity all'asse z è la carta esaurita e battitori.
+Si definisce un sistema di coordinate di destra allineato con il codice a matrice nell'angolo superiore sinistro del quadrato di rilevamento rapido in alto a sinistra. Il sistema di coordinate è illustrato di seguito. L'asse Z punta alla carta (non mostrata), ma in Unity l'asse z è esterno alla carta e a sinistra.
 
-Viene definito un SpatialCoordinateSystem allineata come illustrato. Questo sistema di coordinate può essere ottenuto dalla piattaforma usando l'API *Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode*.
+Viene definito un SpatialCoordinateSystem che è allineato come illustrato. Questo sistema di coordinate può essere ottenuto dalla piattaforma usando le *finestre API::P erception:: Spatial::P Review:: SpatialGraphInteropPreview:: CreateCoordinateSystemForNode*.
 
 ![Sistema di coordinate del codice a matrice](images/Qr-coordinatesystem.png) 
 
-Da QRCode ^ codice oggetto, il codice seguente viene illustrato come creare un rettangolo e inserirlo nel sistema di coordinate di codici a matrice:
+Dall'oggetto di codice QRCode ^, il codice seguente illustra come creare un rettangolo e inserirlo nel sistema di coordinate QR:
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -274,19 +274,19 @@ std::vector<float3> SpatialStageManager::CreateRectangle(float width, float heig
 }
 ```
 
-La dimensione fisica è possibile usare per creare il rettangolo di codici a matrice:
+È possibile utilizzare le dimensioni fisiche per creare il rettangolo QR:
 
 ```cpp
 std::vector<float3> qrVertices = CreateRectangle(Code->PhysicalSizeMeters, Code->PhysicalSizeMeters); 
 ```
 
-Il sistema di coordinate è utilizzabile per disegnare la scansione del codice o collegare vntana nel percorso:
+Il sistema di coordinate può essere usato per creare il codice a matrice o per alleghire gli ologrammi al percorso:
 
 ```cpp
 Windows::Perception::Spatial::SpatialCoordinateSystem^ qrCoordinateSystem = Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(Code->Id);
 ```
 
-Completamente, il *QRCodesTrackerPlugin::QRCodeAddedHandler* potrebbe avere un aspetto simile:
+Il valore di *QRCodesTrackerPlugin:: QRCodeAddedHandler* potrebbe essere simile al seguente:
 
 ```cpp
 void MyClass::OnAddedQRCode(QRCodesTrackerPlugin::QRCodeAddedEventArgs ^args)
@@ -312,22 +312,22 @@ void MyClass::OnAddedQRCode(QRCodesTrackerPlugin::QRCodeAddedEventArgs ^args)
 
 **Risoluzione dei problemi generali**
 
-* Sia i PC che eseguono Windows 10 ottobre 2018 Update?
-* È stata impostata la chiave reg? Riavviare il dispositivo in un secondo momento?
-* È la versione del codice a matrice di una versione supportata? Supporto di API corrente fino a 20 versione di codice a matrice. È consigliabile usare la versione 5 per l'utilizzo generale. 
-* Si abbastanza ravvicinati per la scansione del codice? È vicino alla fotocamera del codice a matrice, maggiore sarà la versione di codice l'API di codici a matrice può supportare.  
+* Il PC esegue l'aggiornamento di Windows 10 ottobre 2018?
+* Si è impostato il tasto reg? Il dispositivo è stato riavviato in seguito?
+* La versione del codice a matrice è supportata? L'API corrente supporta fino a QR Code versione 20. È consigliabile usare la versione 5 per l'utilizzo generale. 
+* Il codice a matrice è sufficientemente vicino? Più si avvicina la fotocamera al codice a matrice, più alta è la versione del codice a matrice che l'API può supportare.  
 
-**La distanza è necessario essere al codice a matrice per individuarlo?**
+**Quanto è necessario essere vicini al codice a matrice per rilevarlo?**
 
-Ciò dipende la dimensione del codice a matrice e inoltre quale versione è. Per un codice a matrice di versione 1 compreso tra i lati cm 5 e i lati 25 cm, la distanza minima di rilevamento compreso tra 0,15 metri e metri 0,5. Il più lontano da subito questi possono essere rilevati da passa da circa 0.3 contatori per le destinazioni di codice a matrice inferiori a 1,4 i contatori per il più grande. Per i codici a matrice più grandi rispetto a quello, è possibile stimare; la distanza di rilevamento per le dimensioni aumenta in modo lineare. La registrazione non funziona con i codici a matrice con i lati inferiori a 5 cm.
+Ciò dipende dalle dimensioni del codice a matrice e dalla versione. Per un codice a matrice di versione 1 che varia da 5 cm a 25 cm, la distanza di rilevamento minima varia da 0,15 metri a 0,5 metri. Il più lontano di questi possono essere rilevati da circa 0,3 metri per le destinazioni di codice a matrice più piccole a 1,4 metri per il più grande. Per i codici QR di dimensioni maggiori, è possibile stimare; la distanza di rilevamento per le dimensioni aumenta in modo lineare. Lo strumento di individuazione non funziona con codici a matrice con lati inferiori a 5 cm.
 
-**Eseguire i codici a matrice con logo lavoro?**
+**I codici QR con logo funzionano?**
 
-I codici a matrice con logo non sono stati testati e sono attualmente supportati.
+I codici QR con logo non sono stati testati e non sono attualmente supportati.
 
-**Come si cancella i codici a matrice dall'app in modo che non vengono mantenute?**
+**Ricerca per categorie cancellare i codici a matrice dall'app, in modo che non vengano mantenuti?**
 
-* I codici a matrice vengono resi persistenti solo nella sessione di avvio. Dopo il riavvio (o riavviare il driver), verranno eseguiti e rilevati come nuovi oggetti successivo.
-* Cronologia del codice a matrice viene salvata a livello di sistema nella sessione di driver, ma è possibile configurare l'app per ignorare i codici a matrice antecedenti a un timestamp specifico, se si desidera. Attualmente l'API supporta cronologia del codice a matrice di cancellazione, come le app più potrebbero essere interessate a dati.
+* I codici a matrice sono conservati solo nella sessione di avvio. Dopo aver riavviato (o riavviato il driver), questi verranno rilevati come nuovi oggetti la prossima volta.
+* La cronologia del codice a matrice viene salvata a livello di sistema nella sessione del driver, ma è possibile configurare l'app in modo da ignorare i codici QR più vecchi di un timestamp specifico, se necessario. Attualmente l'API supporta la cancellazione della cronologia del codice QR, in quanto più app potrebbero essere interessate ai dati.
 
-**I plug-in per RS5 e nelle versioni future non sono compatibile** versione RS5 del plug-in funziona solo per RS5 e non funzioneranno per le versioni future. Il plug-in expermental verrà sostituito con il plug-in reali e deve essere quello che è possibile usare nelle future versioni di windows.
+**I plug-in per RS5 e le versioni future non sono compatibili** La versione del plug-in RS5 funziona solo per RS5 e non funzionerà per le versioni future. Il plug-in expermental verrà sostituito con il plug-in reale e dovrebbe essere quello che è possibile usare nelle versioni future di Windows.

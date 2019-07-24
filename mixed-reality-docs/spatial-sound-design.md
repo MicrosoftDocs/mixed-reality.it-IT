@@ -1,11 +1,11 @@
 ---
-title: Progettazione spaziale
-description: Spaziale audio è uno strumento potente per full immersion, accessibilità e progettazione dell'esperienza utente nelle applicazioni di realtà mista.
+title: Progettazione di suoni spaziali
+description: Il suono spaziale è uno strumento potente per l'immersione, l'accessibilità e la progettazione dell'esperienza utente nelle applicazioni di realtà mista.
 author: joekellyms
 ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realtà mista di Windows, spaziale audio, progettazione, lo stile
+keywords: Realtà mista di Windows, audio spaziale, progettazione, stile
 ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
 ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
@@ -13,11 +13,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66750308"
 ---
-# <a name="spatial-sound-design"></a>Progettazione spaziale
+# <a name="spatial-sound-design"></a>Progettazione di suoni spaziali
 
-Spaziale audio è uno strumento potente per full immersion, accessibilità e progettazione dell'esperienza utente nelle applicazioni di realtà mista.
+Il suono spaziale è uno strumento potente per l'immersione, l'accessibilità e la progettazione dell'esperienza utente nelle applicazioni di realtà mista.
 
-Se hai mai partecipato [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game)), o non è disponibile un utente chiama il telefono per consentire lo trovi, si ha già familiarità con l'importanza del suono spaziale. Utilizziamo segnali audio nella vita quotidiana per individuare gli oggetti, attirare l'attenzione di un utente oppure ottenere una migliore comprensione dell'ambiente. Più da vicino il suono dell'app si comporta come avviene nel mondo reale, la più convincente e accattivanti che è di mondo virtuale.
+Se hai già interpretato [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game))o qualcuno ha chiamato il tuo telefono per aiutarti a individuarlo, hai già familiarità con l'importanza del suono spaziale. Si usano segnali acustici nella nostra vita quotidiana per individuare gli oggetti, ottenere l'attenzione di un utente o ottenere una migliore comprensione dell'ambiente. Maggiore è il comportamento dell'app, come nel mondo reale, più convincente e coinvolgente sarà il mondo virtuale.
 
 <br>
 
@@ -34,77 +34,77 @@ Se hai mai partecipato [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(ga
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Progettazione spaziale</td>
+        <td>Progettazione di suoni spaziali</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
 </table>
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Esegue quattro suono spaziali aspetti fondamentali per lo sviluppo della realtà mista
+## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Quattro elementi chiave del suono spaziale per lo sviluppo di realtà mista
 
-Per impostazione predefinita, suoni vengono riprodotti nel formato stereo. Ciò significa che verrà riprodotto il suono con nessuna posizione spaziale, in modo che l'utente non sa dove proviene l'audio. Suono spaziale esegue quattro aspetti fondamentali per lo sviluppo della realtà mista:
+Per impostazione predefinita, i suoni vengono riprodotti in stereo. Ciò significa che il suono verrà riprodotto senza alcuna posizione spaziale, quindi l'utente non sa da dove proviene il suono. Il suono spaziale esegue quattro operazioni fondamentali per lo sviluppo di realtà miste:
 
-**Messa a terra**
+**Terra**
 
-Senza l'audio, oggetti virtuali in modo efficace cessano di esistere quando si attivano i nostri head lontano da essi. Proprio come oggetti reali, si desidera essere in grado di ascoltare questi oggetti, anche quando non è possibile visualizzarli e si desidera essere in grado di individuarle ovunque si. Proprio come oggetti virtuali devono essere basato sul visivamente per blend con il mondo reale, devono anche essere basato sull'acustico. Suono spaziale mescola facilmente l'ambiente audio del mondo reale con l'ambiente audio digitale.
+Senza suono, gli oggetti virtuali cessano di esistere in modo efficace quando si trasformano i passi da essi. Analogamente agli oggetti reali, si desidera essere in grado di ascoltare questi oggetti anche quando non è possibile visualizzarli e si desidera essere in grado di individuarli ovunque si trovino. Così come gli oggetti virtuali devono essere considerati come oggetti visivi per fondersi con il mondo reale, è anche necessario avere un sistema di base. Il suono spaziale integra in modo semplice l'ambiente audio reale con l'ambiente audio digitale.
 
-**Intervento dell'utente**
+**Attenzione dell'utente**
 
-Nelle esperienze di realtà mista, non è possibile presupporre dove sta guardando l'utente e prevede che possano vedere qualcosa che è inserire visivamente in tutto il mondo. Ma gli utenti possono sempre riprodotto un suono riprodurre anche quando l'oggetto di riproduzione del suono è protetto da essi. Gli utenti consentono di avere la loro attenzione creato in base al suono - saremo instinctually verso un oggetto che abbiamo ricevuto intorno a noi. Quando si desidera indirizzare sguardo dell'utente in una determinata posizione, anziché utilizzare una freccia in modo che puntino a livello visivo, inserendo un suono in percorso rappresenta un modo molto naturale e veloce per le istruzioni.
+In situazioni di realtà mista, non è possibile presupporre il punto in cui l'utente sta cercando e si aspetta che venga visualizzata un'immagine che viene collocata in tutto il mondo. Tuttavia, gli utenti possono sempre ascoltare una riproduzione audio anche quando l'oggetto che riproduce il suono è dietro di essi. Gli utenti vengono usati per attirare l'attenzione su un oggetto che ci siamo avvicinati. Quando si desidera indirizzare l'utente a una posizione specifica, anziché utilizzare una freccia per puntare visivamente, inserire un suono in tale posizione è un modo molto naturale e rapido per guidarli.
 
-**Full immersion**
+**Full immersion per**
 
-Quando gli oggetti spostano o sono in conflitto, pongono in genere tali interazioni tra i materiali. Pertanto, quando gli oggetti non rendono lo stesso fonema che fossero in realtà, un livello di full immersion verrà perso - come guardare un filmato scary con il volume verso il basso. Tutti i file audio nel mondo reale provengono da un particolare punto nello spazio - quando attiviamo nostro testine, abbiamo ricevuto la modifica in tali suoni provenienza rispetto all'orecchio ed è possibile tracciare il percorso di un suono in questo modo. Suoni spatialized costituiscono l'aspetto"" di una posizione oltre ciò che possiamo vedere.
+Quando gli oggetti si spostano o entrano in collisione, in genere si sentono tali interazioni tra i materiali. Quindi, quando gli oggetti non hanno lo stesso suono nel mondo reale, un livello di immersione viene perso, ad esempio guardando un film spaventoso con il volume fino a questo punto. Tutti i suoni nel mondo reale derivano da un particolare punto nello spazio. quando si trasformano le nostre teste, viene rilevata la modifica del modo in cui provengono i suoni rispetto alle orecchie ed è possibile tenere traccia della posizione di qualsiasi suono in questo modo. I suoni spaziali costituiscono la "sensazione" di una posizione superiore a quella che è possibile vedere.
 
-**Progettazione di interazioni**
+**Progettazione interazione**
 
-Nelle esperienze interattive più tradizionali, suoni di interazione, ad esempio effetti sonori dell'interfaccia utente vengono riprodotte in mono standard o stereo. Ma poiché tutto ciò che in realtà mista esiste nello spazio 3D, tra cui l'interfaccia utente - questi oggetti trarre vantaggio da spatialized suoni. Quando si preme un pulsante nel mondo reale, viene fornito il suono che è impostato da tale pulsante. Da spatializing suoni interazione, offriamo anche in questo caso un'esperienza utente più naturale e realistici.
+Nella maggior parte delle esperienze interattive tradizionali, i suoni di interazione come gli effetti audio dell'interfaccia utente vengono riprodotti in mono o stereo standard. Tuttavia, poiché tutto ciò che si trova in realtà mista esiste nello spazio 3D, inclusa l'interfaccia utente, questi oggetti traggono vantaggio dai suoni spaziali. Quando si preme un pulsante nel mondo reale, il suono da ascoltare deriva dal pulsante. Grazie ai suoni di interazione spatializing, viene nuovamente fornita un'esperienza utente più naturale e realistica.
 
-## <a name="best-practices-when-using-spatial-sound"></a>Le procedure consigliate quando si usa spaziale audio
+## <a name="best-practices-when-using-spatial-sound"></a>Procedure consigliate per l'uso di un suono spaziale
 
-**Suoni reale funzionano meglio di suoni sintetizzati o non naturali**
+**I suoni reali funzionano meglio di quelli sintetizzati o non naturali**
 
-Più familiare è l'utente con un tipo di suono, il più reale sentiranno, e più facile saranno in grado di individuarlo nel proprio ambiente. Una voce umana, ad esempio, è un tipo di suono molto comune e gli utenti possano trovarlo altrettanto rapido come una persona reale nella chat room parlare con loro.
+Maggiore è la familiarità dell'utente con un tipo di suono, maggiore sarà il reale aspetto e più facilmente sarà possibile individuarlo nel proprio ambiente. Una voce umana, ad esempio, è un tipo molto comune di suoni e gli utenti la troveranno con la stessa rapidità di una persona reale nella chat room.
 
-**Nella previsione ha la precedenza su simulazione**
+**Simulazione di previsione Trumps**
 
-Se si è abituati a un suono provenienti da una particolare direzione, l'attenzione dell'utente saranno illustrati in questa direzione indipendentemente dalla segnali spaziale. Ad esempio, la maggior parte dei casi che abbiamo ricevuto volatili, sono di sopra di Stati Uniti. La riproduzione del suono di uccelli potrebbe provocare l'utente da cercare, anche se si inserisce il suono di sotto di essi. Si tratta in genere confusione e si consiglia di lavorare con le aspettative, ad esempio questi anziché su di essi per un'esperienza più naturale.
+Se si è abituati a un suono proveniente da una direzione particolare, l'attenzione verrà guidata in tale direzione indipendentemente dalle indicazioni spaziali. Ad esempio, la maggior parte del tempo in cui si sentono gli uccelli, si trovano sopra di noi. La riproduzione del suono di un uccello causa molto probabilmente la ricerca da parte dell'utente, anche se il suono viene inserito sotto di essi. Si tratta in genere di confusione ed è consigliabile lavorare con le aspettative, ad esempio per un'esperienza più naturale.
 
-**La maggior parte dei suoni dovrebbero essere spatialized**
+**La maggior parte dei suoni deve essere spaziali**
 
-Come indicato sopra, tutto ciò che in realtà mista esiste nello spazio 3D, i suoni devono anche. Musica può talvolta essere utile spatialization, in particolare quando quest'ultima è associata a un menu o parte dell'interfaccia utente.
+Come indicato in precedenza, tutto ciò che si verifica in realtà mista esiste nello spazio 3D, anche per i suoni. Anche la musica può talvolta trarre vantaggio dalla spazializzazione, in particolare quando è associata a un menu o a un'altra interfaccia utente.
 
-**Evitare di istanze di emissione FixIt invisibile**
+**Evitare gli emettitori invisibili**
 
-Poiché è stata state condizionate esaminare suoni che abbiamo ricevuto intorno a noi, può essere un'esperienza anche unnerving e complessi per individuare un file audio non viene rappresentato visivamente. Suoni nel mondo reale non provengono da uno spazio vuoto, in modo da assicurarsi che se una funzione di emissione audio viene posizionata all'interno di ambiente immediato dell'utente che può anche essere visualizzato.
+Dato che siamo stati condizionati per esaminare i suoni che ci siamo riusciti, può trattarsi di un'esperienza non naturale e persino snervante per individuare un suono senza presenza visiva. I suoni nel mondo reale non provengono da uno spazio vuoto, quindi è necessario assicurarsi che se un emettitore audio viene inserito nell'ambiente immediato dell'utente, è possibile che possa essere visualizzato.
 
-**Evitare di mascheramento spaziale**
+**Evitare la maschera spaziale**
 
-Suono spaziale si basa su segnali acustici molto complesso che possono essere sovraccaricarsi da altri suoni. Se si dispone di musica stereo o ambiente suoni, assicurarsi che siano sufficientemente basse nella combinazione di spazio per i dettagli dei suoni spatialized che gli utenti possono facilmente individuarli e mantenerli suona realistici e naturale.
+Il suono spaziale si basa su segnali acustici molto sottili che possono essere amplificati da altri suoni. Se si dispone di musica stereo o di ambiente, assicurarsi che siano sufficientemente bassi nella combinazione per dare spazio ai dettagli dei suoni spaziali che consentiranno agli utenti di individuarli con facilità e di mantenerli in modo realistico e naturale.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Concetti generali da tenere presenti quando si usa spaziale audio
+## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Concetti generali da tenere presenti quando si usa il suono spaziale
 
-**Suono spaziale è una simulazione**
+**Il suono spaziale è una simulazione**
 
-L'uso più frequente del suono spaziale è quello di un suono sembrare come se è che derivano da un oggetto reale o virtuale del mondo. Di conseguenza, suoni spatialized potrebbero prevedere la scelta più sensata provenienti da tali oggetti.
+L'uso più frequente del suono spaziale è costituito da un suono come se fosse emanato da un oggetto reale o virtuale nel mondo. Pertanto, i suoni spaziali possono essere più sensati provenienti da tali oggetti.
 
-Si noti che l'accuratezza percepito spaziali audio indica che un suono non deve necessariamente generare dal centro dell'oggetto, come la differenza sarà significativo a seconda delle dimensioni dell'oggetto e la distanza da parte dell'utente. Con oggetti di piccole dimensioni, il punto centrale dell'oggetto è in genere sufficiente. Per gli oggetti più grandi, è possibile un suono emissione o più istanze di emissione FixIt in corrispondenza della posizione specifica all'interno dell'oggetto che dovrà essere che produce l'audio.
+Si noti che la precisione percepita del suono spaziale indica che un suono non deve necessariamente emettere dal centro di un oggetto, in quanto la differenza sarà evidente a seconda delle dimensioni dell'oggetto e della distanza dall'utente. Con piccoli oggetti, il punto centrale dell'oggetto è in genere sufficiente. Per gli oggetti di grandi dimensioni, è possibile che si desideri che un emittente di suoni o più emettitori si trovino in una posizione specifica all'interno dell'oggetto che dovrebbe produrre il suono.
 
-**Normalizza tutti i file audio**
+**Normalizza tutti i suoni**
 
-Attenuazione della distanza avviene rapidamente entro il primo misuratore da parte dell'utente, come avviene nel mondo reale. Tutti i file audio devono essere normalizzati per l'attenuazione della distanza fisicamente accurata e garantisce che può essere ascoltato un suono quando molti contatori di stoccaggio (se applicabile). Il motore di audio spaziale gestisce l'attenuazione necessaria per un suono "percepisca" è una certa distanza (con una combinazione di attenuazione e "segnali distance") e di applicare qualsiasi attenuazione è stato possibile ridurre l'effetto. Di fuori di simulazione di un oggetto reale, iniziale a distanza di decadimento *spaziale audio* suoni saranno probabilmente più che sufficienti per una corretta combinazione di audio.
+L'attenuazione della distanza si verifica rapidamente all'interno del primo contatore dell'utente, come avviene nel mondo reale. Tutti i file audio devono essere normalizzati per garantire un'attenuazione della distanza fisicamente accurata e assicurarsi che un suono possa essere udito quando più metri di distanza (quando applicabile). Il motore audio spaziale gestirà l'attenuazione necessaria affinché un suono possa "ritenersi" come se fosse a una certa distanza (con una combinazione di attenuazione e "indicatori di distanza") e applicando qualsiasi attenuazione in grado di ridurre l'effetto. Al di fuori della simulazione di un oggetto reale, il decadimento iniziale della distanza dei suoni *spaziali* sarà probabilmente più che sufficiente per una combinazione appropriata dell'audio.
 
-**Interfacce utente e di individuazione oggetti**
+**Individuazione oggetti e interfacce utente**
 
-Quando si utilizza segnali acustici per dirigere l'attenzione dell'utente oltre la visualizzazione attuale, deve essere il suono udibile e notificate all'utente nella combinazione, ben oltre qualsiasi audio stereo e altri suoni spatialized che potrebbe essere si distaccherà dal segnale audio direzionale. Per i suoni e musica che sono associati a un elemento dell'interfaccia utente (ad esempio, un menu di scelta), l'emissione audio deve essere collegato a tale oggetto. Stereo e altri non posizionali riproduzione audio può complicare la spatialized elementi agli utenti di individuare (vedere sopra: Evitare di mascheramento spaziale).
+Quando si usano i segnali audio per indirizzare l'attenzione dell'utente oltre la visualizzazione corrente, il suono dovrebbe essere udibile e prominente nella combinazione, oltre ai suoni stereo e a tutti gli altri suoni spaziali che potrebbero distrarre dalla cue audio direzionale. Per i suoni e la musica associati a un elemento dell'interfaccia utente (ad esempio un menu), l'emettitore di suoni dovrebbe essere collegato a tale oggetto. Lo stereo e altre operazioni di riproduzione audio non posizionale possono rendere gli elementi spaziali difficili da individuare (vedere sopra: Evitare la maschera spaziale).
 
-**Usare un suono spaziale tramite standard suono 3D quanto più possibile**
+**Usare il suono spaziale sul suono 3D standard per quanto possibile**
 
-Nella realtà mista, per la migliore esperienza utente, 3D audio deve essere ottenuto tramite spaziale audio anziché legacy tecnologie audio 3D. In generale, il miglioramento spatialization vale la pena piccole della CPU su standard 3D audio. Audio 3D standard è utilizzabile per priorità bassa suoni, suoni spatialized, ma non necessariamente collegati a un oggetto fisico o virtuale e gli oggetti che l'utente mai necessario individuare per interagire con l'app.
+In realtà mista, per la migliore esperienza utente, l'audio 3D dovrebbe essere ottenuta usando un suono spaziale anziché le tecnologie audio 3D legacy. In generale, la spazializzazione migliorata vale la pena del piccolo costo della CPU rispetto al suono 3D standard. L'audio 3D standard può essere usato per i suoni con priorità bassa, i suoni che sono spaziali ma non necessariamente collegati a un oggetto fisico o virtuale e gli oggetti che non sono mai necessari all'utente per interagire con l'app.
 
 ## <a name="see-also"></a>Vedere anche
 * [Audio spaziale](spatial-sound.md)

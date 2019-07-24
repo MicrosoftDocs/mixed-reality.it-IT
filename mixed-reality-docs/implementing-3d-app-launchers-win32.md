@@ -1,54 +1,54 @@
 ---
-title: Implementare nelle schermate di avvio app 3D (app Win32)
-description: Come creare i logo per le app di realtà virtuale Win32 e giochi (distribuite di fuori di Steam) e nelle schermate di avvio app 3D pertanto vengono visualizzati nell'ambiente home page e menu Start realtà mista di Windows.
+title: Implementare i lanci di app 3D (app Win32)
+description: Come creare lanci di app 3D e logo per app e giochi Win32 VR (distribuiti al di fuori di Steam) in modo che vengano visualizzati nel menu Start della realtà mista di Windows e nell'ambiente Home.
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
-keywords: 3D, logo, icona, modellazione, utilità di avvio, 3D dell'utilità di avvio, tile, cubo in tempo reale, win32
+keywords: 3D, logo, icona, modellazione, avvio, avvio 3D, riquadro, cubo attivo, Win32
 ms.openlocfilehash: ac3d5e17614bcd1072f6843a46bf0525f441f130
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600993"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515608"
 ---
-# <a name="implement-3d-app-launchers-win32-apps"></a>Implementare nelle schermate di avvio app 3D (app Win32)
+# <a name="implement-3d-app-launchers-win32-apps"></a>Implementare i lanci di app 3D (app Win32)
 
 > [!NOTE]
-> Questa funzionalità è disponibile solo per i PC che eseguono la versione più recente [Windows Insider](https://insider.windows.com) voli (RS5), la compilazione 17704 e versioni successive.
+> Questa funzionalità è disponibile solo per i PC che eseguono i più recenti voli di [Windows](https://insider.windows.com) Insider (RS5), Build 17704 e versioni successive.
 
-Il [realtà mista di Windows home](navigating-the-windows-mixed-reality-home.md) è il punto iniziale in cui gli utenti ricevuti prima di avviare le applicazioni. Per impostazione predefinita, giochi e App Win32 VR immersivi devono essere avviate all'esterno di visore VR e non sarà più visualizzato nell'elenco "Tutte le app" nel menu Start realtà mista di Windows. Tuttavia, seguendo le istruzioni riportate in questo articolo per implementare un'utilità di avvio app 3D, l'esperienza di Win32 VR immersive può essere avviato da entro il menu Start realtà mista di Windows e l'ambiente domestico.
+La [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) è il punto di partenza in cui gli utenti atterrano prima di avviare le applicazioni. Per impostazione predefinita, i giochi e le app VR Win32 immersive devono essere avviati dall'esterno dell'auricolare e non vengono visualizzati nell'elenco "tutte le app" nel menu Start della realtà mista di Windows. Tuttavia, seguendo le istruzioni riportate in questo articolo per implementare un'utilità di avvio delle app 3D, è possibile avviare l'esperienza immersiva Win32 VR dal menu Start della realtà mista di Windows e dall'ambiente domestico.
 
-Questo vale solo per distributied esperienze di Win32 VR immersivi di fuori di Steam. Per usufruire di VR [distribuiti tramite Steam](updating-your-steamvr-application-for-windows-mixed-reality.md), che abbiamo [aggiornata la realtà mista di Windows per la versione SteamVR Beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) insieme il RS5 Insider di Windows più recenti voli in modo che mostra i titoli SteamVR backup in di Windows Menu Start di realtà misto nell'elenco "Tutte le app" automaticamente usando un'utilità di avvio predefinito. In altre parole, il metodo descritto in questo articolo non è necessario per i titoli SteamVR e la realtà mista di Windows per la funzionalità SteamVR Beta eseguirà l'override.
+Questa operazione è valida solo per le esperienze di Win32 VR immersive distributied al di fuori del vapore. Per le esperienze VR [distribuite tramite Steam](updating-your-steamvr-application-for-windows-mixed-reality.md), abbiamo [aggiornato la realtà mista di Windows per SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) insieme ai più recenti voli RS5 di Windows Insider, in modo che i titoli SteamVR siano visualizzati nel menu Start della realtà mista di Windows nell'elenco "tutte le app" utilizzando automaticamente un'utilità di avvio predefinita. In altre parole, il metodo descritto in questo articolo non è necessario per i titoli SteamVR e verrà sostituito dalla realtà mista di Windows per la funzionalità beta di SteamVR.
 
-## <a name="3d-app-launcher-creation-process"></a>Processo di creazione dell'utilità di avvio app 3D
+## <a name="3d-app-launcher-creation-process"></a>processo di creazione dell'utilità di avvio delle app 3D
 
-Sono previsti 3 passaggi per la creazione di un'utilità di avvio app 3D:
-1. [Progettazione e concepting](3d-app-launcher-design-guidance.md)
-2. [Modellazione e l'esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-3. L'integrazione nell'applicazione (questo articolo)
+Per la creazione di un avvio di app 3D sono necessari tre passaggi:
+1. [Progettazione e concezione](3d-app-launcher-design-guidance.md)
+2. [Modellazione ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+3. Integrazione nell'applicazione (questo articolo)
 
-Gli asset 3D da utilizzare come utilità di avvio per l'applicazione deve essere creato usando il [realtà mista di Windows le linee guida di authoring](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per garantire la compatibilità. Gli asset che non soddisfano questa creazione specifica non vengono visualizzati nella home di realtà mista di Windows.
+gli asset 3D da usare come avvii per l'applicazione devono essere creati usando le [linee guida](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per la creazione di realtà miste di Windows per garantire la compatibilità. Gli asset che non soddisfano questa specifica di authoring non verranno sottoposti a rendering nella Home della realtà mista di Windows.
 
-## <a name="configuring-the-3d-launcher"></a>Configurare l'utilità di avvio 3D
+## <a name="configuring-the-3d-launcher"></a>Configurazione dell'utilità di avvio 3D
 
-Le applicazioni Win32 verranno visualizzata nell'elenco "Tutte le app" nel menu Start realtà mista di Windows se si crea un'utilità di avvio app 3D per loro. A tale scopo, creare un [manifesto Visual elementi](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) file XML che fa riferimento l'utilità di avvio App 3D seguendo questa procedura:
+Le applicazioni Win32 verranno visualizzate nell'elenco "tutte le app" nel menu di avvio della realtà mista di Windows se si crea un Launcher di app 3D. A tale scopo, creare un file XML del [manifesto degli elementi visivi](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) che fa riferimento all'utilità di avvio delle app 3D attenendosi alla procedura seguente:
 
-1. Creare un **file GLB asset di utilità di avvio App 3D** (vedere [modellazioni ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)).
-2. Creare un **[manifesto elementi Visual](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx)** per l'applicazione.
-    1. È possibile iniziare con il [esempio riportato di seguito](#sample-visual-elements-manifest).  Visualizzare la versione completa [manifesto Visual elementi](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) informazioni più dettagliate.
-    2. Update **Square150x150Logo** e **Square70x70Logo** con PNG o JPG o GIF per l'app.
-        * Questi verranno usati per il logo 2D dell'app nell'elenco di App tutti realtà mista Windows e per il Menu Start sul desktop.
-        * Il percorso del file è relativo alla cartella che contiene il manifesto di elementi Visual.
-        * È comunque necessario fornire un desktop sull'icona del Menu Start per l'app tramite i meccanismi standard. Può essere direttamente nel file eseguibile o il collegamento creato (ad esempio, tramite IShellLink::SetIconLocation).
-        * *Facoltativo:* È possibile usare un file resources.pri se si desidera per MRT fornire varie dimensioni di asset per le scale diverse risoluzioni e i temi a contrasto elevato.
-    3. Aggiorna il **MixedRealityModel percorso** in modo che punti la GLB per l'utilità di avvio App 3D
-    4. Salvare il file con lo stesso nome di file eseguibile, con estensione ". VisualElementsManifest.xml"e salvarlo nella stessa directory. Ad esempio, per il file eseguibile "contoso.exe", il file XML denominato "contoso.visualelementsmanifest.xml".
-3. **Aggiungere un collegamento** all'applicazione al Menu Start di Windows desktop. Vedere le [esempio riportato di seguito](#sample-app-launcher-shortcut-creation) per un esempio C++ implementazione. 
-    * Crearlo in %ALLUSERSPROFILE%\Microsoft\Windows\Start %SystemDrive%\programdata\microsoft\windows\start Menu\Programmi. (computer) o %APPDATA%\Microsoft\Windows\Start %SystemDrive%\programdata\microsoft\windows\start Menu\Programmi. (utente)
-    * Se un aggiornamento viene modificato il manifesto di oggetti visivi o gli asset di cui viene fatto riferimenti da esso, l'aggiornamento o il programma di installazione deve aggiornare il collegamento in modo che il manifesto viene nuovamente analizzato e asset memorizzati nella cache vengono aggiornati.
-4. *Facoltativo:* Se il collegamento sul desktop non punta direttamente al file EXE dell'applicazione (ad esempio, se richiama un gestore di protocollo personalizzato, ad esempio "myapp: / /"), nel Menu Start non trovare automaticamente i file VisualElementsManifest.xml dell'app. Per risolvere questo problema, il collegamento deve specificare il percorso del file di manifesto elementi Visual usando System.AppUserModel.VisualElementsManifestHintPath (). Questo può essere impostato il collegamento con le stesse tecniche come System.AppUserModel.ID. Non si deve usare System.AppUserModel.ID ma è possibile eseguire questa operazione se si vuole far corrispondere l'ID modello utente applicazione esplicita dell'applicazione se ne viene usato il collegamento.  Vedere le [creazione del collegamento dell'utilità di avvio app di esempio](#sample-app-launcher-shortcut-creation) sezione di seguito per un C++ esempio.
+1. Creare un **file GLB asset di avvio app 3D** (vedere [modellazione ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)).
+2. Creare un **[manifesto degli elementi visivi](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx)** per l'applicazione.
+    1. È possibile iniziare con l' [esempio riportato di seguito](#sample-visual-elements-manifest).  Per altri dettagli, vedere la documentazione completa del [manifesto degli elementi visivi](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) .
+    2. Aggiornare **Square150x150Logo** e **SQUARE70X70LOGO** con un png/jpg/gif per l'app.
+        * Questi verranno usati per il logo 2D dell'app nell'elenco di tutte le app della realtà mista di Windows e per il menu Start sul desktop.
+        * Il percorso del file è relativo alla cartella che contiene il manifesto degli elementi visivi.
+        * È comunque necessario fornire un'icona del menu Start Desktop per l'app attraverso i meccanismi standard. Questo può essere direttamente nell'eseguibile o nel collegamento creato, ad esempio tramite IShellLink:: SetIconLocation.
+        * *Facoltativo:* È possibile usare un file resources. pri se si vuole che MRT fornisca più dimensioni di asset per diverse scale di risoluzione e temi a contrasto elevato.
+    3. Aggiornare il **percorso di MixedRealityModel** in modo che punti al GLB per l'utilità di avvio dell'app 3D
+    4. Salvare il file con lo stesso nome del file eseguibile, con estensione ". VisualElementsManifest. xml "e salvarlo nella stessa directory. Per il file eseguibile "contoso. exe", ad esempio, il file XML associato è denominato "contoso. visualelementsmanifest. xml".
+3. **Aggiungere un collegamento** all'applicazione nel menu Start di Windows desktop. Per un'implementazione di esempio C++ , vedere l' [esempio seguente](#sample-app-launcher-shortcut-creation) . 
+    * Crearlo in%ALLUSERSPROFILE%\Microsoft\Windows\Start Avvio\programmi (Machine) o%APPDATA%\Microsoft\Windows\Start Avvio\programmi (User)
+    * Se un aggiornamento modifica il manifesto degli elementi visivi o gli asset a cui fa riferimento, il programma di aggiornamento o il programma di installazione dovrebbe aggiornare il collegamento in modo che il manifesto venga analizzato e aggiornato gli asset memorizzati nella cache.
+4. *Facoltativo:* Se il collegamento sul desktop non punta direttamente al file EXE dell'applicazione (ad esempio, se richiama un gestore di protocollo personalizzato come "myapp://"), il menu Start non troverà automaticamente il file VisualElementsManifest. XML dell'app. Per risolvere il problema, è necessario che il collegamento specifichi il percorso del file del manifesto degli elementi visivi utilizzando System. AppUserModel. VisualElementsManifestHintPath (). Questa impostazione può essere configurata nel collegamento utilizzando le stesse tecniche di System.AppUserModel.ID. Non è necessario utilizzare System.AppUserModel.ID, ma è possibile eseguire questa operazione se si desidera che il collegamento corrisponda all'ID del modello utente dell'applicazione esplicita se ne viene utilizzato uno.  Per un C++ esempio, vedere la sezione relativa alla [creazione del collegamento di avvio dell'app di esempio](#sample-app-launcher-shortcut-creation) .
 
 ### <a name="sample-visual-elements-manifest"></a>Manifesto degli elementi visivi di esempio
 
@@ -67,11 +67,11 @@ Le applicazioni Win32 verranno visualizzata nell'elenco "Tutte le app" nel menu 
 </Application>
 ```
 
-### <a name="sample-app-launcher-shortcut-creation"></a>Creazione del collegamento di utilità di avvio app di esempio
+### <a name="sample-app-launcher-shortcut-creation"></a>Creazione di un collegamento dell'utilità di avvio app di esempio
 
-Il codice di esempio seguente viene illustrato come creare un collegamento in C++, incluso il percorso del file XML manifesto Visual di elementi viene sottoposto a override. Si noti che la sostituzione è richiesto solo in casi in cui il collegamento non punta direttamente al file. EXE associato al manifesto (ad es. il collegamento viene utilizzato un gestore di protocollo personalizzato, ad esempio "myapp: / /").
+Il codice di esempio seguente illustra come creare un collegamento in C++, inclusa l'override del percorso del file XML del manifesto degli elementi visivi. Si noti che l'override è necessario solo nei casi in cui il collegamento non punti direttamente al file EXE associato al manifesto (ad esempio, il collegamento usa un gestore di protocollo personalizzato come "myapp://".
 
-#### <a name="sample-lnk-shortcut-creation-c"></a>Esempio di. La creazione di collegamenti LNK (C++)
+#### <a name="sample-lnk-shortcut-creation-c"></a>Esempio. Creazione di collegamenti LNKC++()
 
 ```cpp
 #include <windows.h>
@@ -148,7 +148,7 @@ int wmain()
 }
 ```
 
-#### <a name="sample-url-launcher-shortcut"></a>Esempio di. Collegamento all'URL dell'utilità di avvio 
+#### <a name="sample-url-launcher-shortcut"></a>Esempio. Collegamento all'utilità di avvio URL 
 
 ```
 [{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}]
@@ -167,8 +167,8 @@ IconIndex=0
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Esempio di modello di realtà mista](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenente un'utilità di avvio app 3D.
-* [Linee guida di progettazione di app 3D dell'utilità di avvio](3d-app-launcher-design-guidance.md)
-* [Creazione di modelli 3D per l'uso di casa di realtà mista di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Implementazione di utilità di avvio app 3D (app UWP)](implementing-3d-app-launchers.md)
-* [Esplorazione di realtà mista di Windows home](navigating-the-windows-mixed-reality-home.md)
+* [Esempio di modello di realtà mista](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenente un utilità di avvio delle app 3D.
+* [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)
+* [Creazione di modelli 3D per l'utilizzo nella Home realtà mista di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+* [Implementazione di lanci di app 3D (app UWP)](implementing-3d-app-launchers.md)
+* [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)

@@ -1,11 +1,11 @@
 ---
-title: Modalità HoloLens Research
-description: Usa la modalità di ricerca su HoloLens, un'applicazione può accedere ai flussi di sensore chiave dispositivo (profondità, l'ambiente di rilevamento e runtime di integrazione-riflettività).
+title: Modalità di ricerca HoloLens
+description: Usando la modalità di ricerca su HoloLens, un'applicazione può accedere ai flussi dei sensori del dispositivo chiave (profondità, rilevamento dell'ambiente e riflettanza IR).
 author: davidgedye
 ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
-keywords: modalità di ricerca, convalida incrociata, rs4, visione artificiale, ricerca, HoloLens
+keywords: modalità di ricerca, CV, RS4, visione artificiale, ricerca, HoloLens
 ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,18 +13,18 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829929"
 ---
-# <a name="hololens-research-mode"></a>Modalità HoloLens Research
+# <a name="hololens-research-mode"></a>Modalità di ricerca HoloLens
 
 > [!NOTE]
-> Questa funzionalità è stato aggiunto durante la [Windows 10 April 2018 Update](release-notes-april-2018.md) per HoloLens e non è disponibile nelle versioni precedenti.
+> Questa funzionalità è stata aggiunta come parte dell' [aggiornamento di Windows 10 aprile 2018](release-notes-april-2018.md) per HoloLens e non è disponibile nelle versioni precedenti.
 
-Modalità di ricerca è una nuova funzionalità di HoloLens che fornisce accesso alle applicazioni per i sensori di chiave nel dispositivo. tra cui:
-- I quattro ambiente fotocamere utilizzate dal sistema per la creazione della mappa e rilevamento head di rilevamento.
-- Due versioni dei dati della fotocamera profondità, una per quasi-depth rilevazione (30 FPS) ad alta frequenza, in genere utilizzato a disposizione di rilevamento e l'altro per frequenza inferiore (1 FPS) distante profondità sensibile, è attualmente usano da Mapping spaziale,
-- Due versioni di un flusso di runtime di integrazione-riflettività, usata di HoloLens per calcolare profondità, ma siano utili in sé come queste immagini vengono illuminati di HoloLens e ragionevolmente interessata da luce ambientale.
+La modalità di ricerca è una nuova funzionalità di HoloLens che fornisce l'accesso alle applicazioni ai sensori chiave del dispositivo. Sono inclusi:
+- Le quattro fotocamere di rilevamento dell'ambiente usate dal sistema per la creazione e il rilevamento della mappa.
+- Due versioni dei dati di profondità della fotocamera, una per il rilevamento ad alta frequenza (30 FPS), comunemente usata per il rilevamento manuale e l'altra per il rilevamento di più bassa frequenza (1 FPS), attualmente usata dal mapping spaziale,
+- Due versioni di un flusso IR-riflettività, usate dal HoloLens per calcolare la profondità, ma preziose nel proprio diritto, perché queste immagini sono illuminate dalla HoloLens e ragionevolmente non interessate dalla luce ambientale.
 
-![Schermata di app in modalità di ricerca](images/sensor-stream-viewer.jpg)<br>
-*Un'acquisizione di realtà mista di un'applicazione di test che consente di visualizzare i flussi di otto sensore disponibili in modalità di ricerca*
+![Schermata dell'app modalità di ricerca](images/sensor-stream-viewer.jpg)<br>
+*Acquisizione di realtà mista di un'applicazione di test che visualizza gli otto flussi di sensori disponibili in modalità ricerca*
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -37,7 +37,7 @@ Modalità di ricerca è una nuova funzionalità di HoloLens che fornisce accesso
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
         <td>Modalità di ricerca</td>
@@ -48,38 +48,38 @@ Modalità di ricerca è una nuova funzionalità di HoloLens che fornisce accesso
 
 ## <a name="before-using-research-mode"></a>Prima di usare la modalità di ricerca
 
-Modalità di ricerca viene anche denominata: è destinata a ricercatori accademici e industriali provare nuove idee nei campi di visione artificiale e robotica.  Modalità di ricerca non è per le applicazioni che verranno distribuite in un'organizzazione o resa disponibile in di Microsoft Store. Il motivo è che la modalità di ricerca consente di ridurre la sicurezza del dispositivo e consuma energia della batteria significativamente maggiore rispetto al normale funzionamento. Microsoft non esegue il commit a questa modalità di supporto in qualsiasi dispositivo future. Di conseguenza, è consigliabile che usarlo per sviluppare e testare nuove idee; Tuttavia, non sarà in grado di distribuire ampiamente le applicazioni che usano la modalità di ricerca o qualsiasi garanzia che continuerà a lavorare su hardware future.
+La modalità di ricerca è ben denominata: è destinata ai ricercatori accademici e industriali che provano nuove idee nei campi di Visione artificiale e robotica.  La modalità di ricerca non è destinata alle applicazioni che verranno distribuite in un'organizzazione o rese disponibili nella Microsoft Store. Il motivo è che la modalità di ricerca riduce la sicurezza del dispositivo e utilizza significativamente più energia della batteria rispetto al normale funzionamento. Microsoft non sta eseguendo alcun commit per supportare questa modalità in tutti i dispositivi futuri. Pertanto, è consigliabile utilizzarlo per sviluppare e testare nuove idee; Tuttavia, non sarà possibile distribuire ampiamente le applicazioni che usano la modalità di ricerca o avere garanzie che continueranno a funzionare su hardware futuro.
 
-## <a name="enabling-research-mode"></a>Abilitazione della modalità di ricerca
+## <a name="enabling-research-mode"></a>Abilitazione della modalità ricerca
 
-Modalità di ricerca è una modalità secondaria della modalità sviluppatore. È innanzitutto necessario abilitare la modalità sviluppatore nell'app impostazioni (**Impostazioni > aggiornamento e sicurezza > per gli sviluppatori**):
+La modalità di ricerca è una modalità secondaria della modalità sviluppatore. Per prima cosa è necessario abilitare la modalità sviluppatore nell'app Impostazioni (**impostazioni > aggiornare & > di sicurezza per gli sviluppatori**):
 
-1. Impostare "Usa funzionalità per sviluppatori" su **su**
-2. Impostare "Abilita il portale del dispositivo" su **su**
+1. Imposta "USA funzionalità per sviluppatori" **su on**
+2. Imposta "Abilita il portale del dispositivo" **su on**
 
-Quindi usando un web browser che è connesso alla stessa rete Wi-Fi di HoloLens, passare all'indirizzo IP di HoloLens (ottenuto tramite **Impostazioni > rete e Internet > Wi-Fi > proprietà Hardware**). Questo è il [portale dispositivi](using-the-windows-device-portal.md), sarà presente una pagina di "Modalità di ricerca" nella sezione "Sistema" del portale:
+Usando un Web browser connesso alla stessa rete Wi-Fi della HoloLens, passare all'indirizzo IP della HoloLens (ottenuto tramite **le impostazioni > rete & Internet > Wi-fi > le proprietà hardware**). Si tratta del [portale del dispositivo](using-the-windows-device-portal.md)ed è presente una pagina "modalità di ricerca" nella sezione "sistema" del portale:
 
-![Scheda di modalità di ricerca del portale dei dispositivi HoloLens](images/ResearchModeDevPortal.png)<br>
-*Modalità di ricerca nel portale di dispositivo HoloLens*
+![Scheda modalità ricerca del portale per dispositivi HoloLens](images/ResearchModeDevPortal.png)<br>
+*Modalità di ricerca nel portale per dispositivi HoloLens*
 
-Dopo aver selezionato **consentire l'accesso ai flussi di sensore**, dovrai riavviare HoloLens. È possibile eseguire questa operazione dal portale di dispositivo, sotto la voce di menu "Power" nella parte superiore della pagina.
+Dopo aver selezionato **Consenti accesso ai flussi di sensori**, sarà necessario riavviare HoloLens. Questa operazione può essere eseguita dal portale del dispositivo, sotto la voce di menu "Power" nella parte superiore della pagina.
 
-Dopo aver riavviato il dispositivo, le applicazioni che sono state caricate tramite il portale di dispositivo devono essere in grado di accedere ai flussi di modalità di ricerca.
+Una volta riavviato il dispositivo, le applicazioni che sono state caricate tramite il portale per i dispositivi devono essere in grado di accedere ai flussi della modalità di ricerca.
 
-## <a name="using-sensor-data-in-your-apps"></a>Usando i dati dei sensori nelle tue App
+## <a name="using-sensor-data-in-your-apps"></a>Uso dei dati dei sensori nelle app
 
-Le applicazioni possono accedere i dati del sensore flusso aprendo [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) flussi in esattamente allo stesso modo che accedono al flusso di fotocamera foto/video. 
+Le applicazioni possono accedere ai dati del flusso dei sensori aprendo [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) flussi esattamente allo stesso modo in cui accedono al flusso della fotocamera Photo/video. 
 
-Tutte le API che funzionano per lo sviluppo di HoloLens sono anche disponibili in modalità di ricerca. In particolare, l'applicazione può sapere con precisione dove HoloLens è nello spazio 6DoF al momento dell'acquisizione frame ogni sensore.
+Tutte le API che funzionano per lo sviluppo HoloLens sono disponibili anche in modalità di ricerca. In particolare, l'applicazione è in grado di individuare con esattezza il punto in cui HoloLens si trova nello spazio 6DoF a ogni tempo di acquisizione del frame del sensore
 
-Sono disponibili in applicazioni di esempio che illustra come registrare i flussi, come usare le funzioni intrinseche ed extrinsics e modalità di accesso i vari flussi modalità Research la [repository HoloLensForCV GitHub](https://github.com/Microsoft/HoloLensForCV).
+Applicazioni di esempio che illustrano come accedere ai vari flussi in modalità di ricerca, come usare le funzioni intrinseche ed estrinseche e come registrare i flussi sono disponibili nel [repository GitHub HoloLensForCV](https://github.com/Microsoft/HoloLensForCV).
 
 ## <a name="known-issues"></a>Problemi noti
 
-Vedere le [tracker problema](https://github.com/Microsoft/HololensForCV/issues) nel repository HoloLensForCV.
+Vedere la pagina relativa al [rilevamento dei problemi](https://github.com/Microsoft/HololensForCV/issues) nel repository HoloLensForCV.
 
 ## <a name="see-also"></a>Vedere anche
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
-* [Repository HoloLensForCV GitHub](https://github.com/Microsoft/HoloLensForCV)
+* [Repository GitHub HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)
 * [Avviare il Portale di dispositivi di Windows](using-the-windows-device-portal.md)

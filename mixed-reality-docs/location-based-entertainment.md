@@ -1,36 +1,36 @@
 ---
-title: Intrattenimento basati sulla posizione
-description: Matt scriverà descrizione.
+title: Intrattenimento basato sulla posizione
+description: Matt scriverà la descrizione.
 author: yoyozilla
 ms.author: yoyoz
 ms.date: 10/02/2018
 ms.topic: article
-keywords: Matt riempirà questi
+keywords: Matt li riempie
 ms.openlocfilehash: 0b2e9bfaecf0d881a152ed120dd488da8d4ef096
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601733"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515669"
 ---
-# <a name="location-based-entertainment"></a>Intrattenimento basati sulla posizione
+# <a name="location-based-entertainment"></a>Intrattenimento basato sulla posizione
 
-Viene descritto cosa si tratta e perché è opportuno prendere gli sviluppatori
+Descrivere le informazioni e i motivi per cui gli sviluppatori devono occuparsi
 
-## <a name="section-one---maybe-an-outline"></a>Sezione uno - forse una struttura
+## <a name="section-one---maybe-an-outline"></a>Sezione uno-forse un contorno
 
 Testo segnaposto
 
-## <a name="feature-section"></a>Sezione di funzionalità
+## <a name="feature-section"></a>Sezione funzionalità
 
-### <a name="sub-section"></a>Sottosezione
+### <a name="sub-section"></a>Sezione secondaria
 
-Testo segnaposto sottosezione
+Testo sottosezione segnaposto
 
-### <a name="sub-section"></a>Sottosezione
+### <a name="sub-section"></a>Sezione secondaria
 
-Testo segnaposto sottosezione
+Testo sottosezione segnaposto
 
-## <a name="feature-section"></a>Sezione di funzionalità
+## <a name="feature-section"></a>Sezione funzionalità
 
-Usare questa opzione se si desidera o eliminare.
+Utilizzare questo se si desidera o si elimina.

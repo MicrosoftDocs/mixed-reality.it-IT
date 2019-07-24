@@ -1,6 +1,6 @@
 ---
 title: Raccolta di oggetti
-description: Raccolta di oggetti è un controllo layout che consente di layout di una matrice di oggetti in una forma predefinita tridimensionale.
+description: La raccolta di oggetti è un controllo di layout che consente di disporre una matrice di oggetti in una forma tridimensionale predefinita.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
@@ -15,35 +15,35 @@ ms.locfileid: "66813876"
 ---
 # <a name="object-collection"></a>Raccolta di oggetti
 
-Raccolta di oggetti è un controllo layout che consente di layout di una matrice di oggetti in una forma predefinita tridimensionale. Supporta diversi stili di superficie - **piano, cilindro, sphere** e **radiale**. È possibile regolare il raggio e le dimensioni degli oggetti e lo spazio tra di essi. Raccolta di oggetti supporta qualsiasi oggetto di Unity - sia 2D e 3D. Nel  **[Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , abbiamo creato uno script di Unity e gli esempi che consentono di creano una raccolta di oggetti.
+La raccolta di oggetti è un controllo di layout che consente di disporre una matrice di oggetti in una forma tridimensionale predefinita. Supporta diversi stili di superficie: **piano, cilindro, sfera** e **radiale**. È possibile regolare il raggio e le dimensioni degli oggetti e lo spazio tra di essi. La raccolta di oggetti supporta qualsiasi oggetto da Unity, sia 2D che 3D. Nel **[Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** abbiamo creato script Unity ed esempi che consentiranno di creare una raccolta di oggetti.
 
-![Raccolta di oggetti utilizzato nella tabella periodico dell'app elementi](images/640px-objectcollection-hero-640px.jpg)<br>
-*Esempi di utilizzo di raccolta di oggetti*
+![Raccolta di oggetti usata nella tabella periodica dell'app elementi](images/640px-objectcollection-hero-640px.jpg)<br>
+*Esempi di utilizzo della raccolta di oggetti*
 
 ## <a name="object-collection-examples"></a>Esempi di raccolta di oggetti
 
-[Tabella periodico degli elementi](periodic-table-of-the-elements.md) è un'app di esempio che illustra il funzionamento di raccolta di oggetti. Raccolta di oggetti Usa per definire il layout caselle elemento chimiche 3D in diverse forme.
+[La tabella periodica degli elementi](periodic-table-of-the-elements.md) è un'applicazione di esempio che illustra il funzionamento della raccolta di oggetti. Usa la raccolta di oggetti per disporre le caselle di elementi chimici 3D in forme diverse.
 
-![Esempi di raccolta di oggetti indicati nella tabella periodico dell'app elementi](images/periodictable-collections-1000px.jpg)<br>
-*Esempi di raccolta di oggetti indicati nella tabella periodico dell'app di esempio di elementi*
+![Esempi di raccolta di oggetti illustrati nella tabella periodica dell'app elementi](images/periodictable-collections-1000px.jpg)<br>
+*Esempi di raccolta di oggetti illustrati nella tabella periodica dell'app di esempio Elements*
 
-### <a name="3d-objects"></a>Oggetti 3D
+### <a name="3d-objects"></a>oggetti 3D
 
-È possibile utilizzare raccolta di oggetti per il layout degli oggetti 3D importati. L'esempio seguente viene illustrato un piano e un layout di cilindro di alcuni oggetti chair 3D.
+È possibile usare la raccolta di oggetti per il layout degli oggetti 3D importati. Nell'esempio seguente viene illustrato un piano e un layout cilindrico di alcuni oggetti della poltrona 3D.
 
-![Esempi di piano e cilindrico layout degli oggetti 3D](images/objectcollection-3dobjects-1000px.jpg)<br>
-*Esempi di piano e cilindrico layout degli oggetti 3D*
+![Esempi di layout piano e cilindrico degli oggetti 3D](images/objectcollection-3dobjects-1000px.jpg)<br>
+*Esempi di layout piano e cilindrico degli oggetti 3D*
 
-### <a name="2d-objects"></a>Oggetti 2D
+### <a name="2d-objects"></a>oggetti 2D
 
-È inoltre possibile utilizzare immagini 2D con raccolta di oggetti. Gli esempi seguenti illustrano come 2D immagini possono essere visualizzati in una griglia.
+È anche possibile usare immagini 2D con la raccolta di oggetti. Gli esempi seguenti illustrano in che modo le immagini 2D possono essere visualizzate in una griglia.
 
-![Un esempio di immagini 2D con raccolta di oggetti](images/640px-layout-3dobjects-3.jpg)
+![Esempio di immagini 2D con raccolta di oggetti](images/640px-layout-3dobjects-3.jpg)
 
-![Un esempio di immagini 2D con raccolta di oggetti](images/640px-layout-2dimages.jpg)<br>
-*Esempi di utilizzo dell'insieme di oggetti con immagini 2D*
+![Esempio di immagini 2D con raccolta di oggetti](images/640px-layout-2dimages.jpg)<br>
+*Esempi di utilizzo della raccolta di oggetti con immagini 2D*
 
 ## <a name="see-also"></a>Vedere anche
-* [Gli script e prefabs per la raccolta di oggetti nel Toolkit di realtà mista su GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+* [Script e prefabbricati per la raccolta di oggetti nel Toolkit di realtà mista in GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
 * [Oggetto che supporta interazioni](interactable-object.md)
-* [Rettangolo di selezione](app-bar-and-bounding-box.md)
+* [Rettangolo di delimitazione](app-bar-and-bounding-box.md)

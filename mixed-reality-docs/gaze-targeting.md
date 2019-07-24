@@ -1,11 +1,11 @@
 ---
-title: Sguardo targeting
-description: Tutte le interazioni vengono compilate al momento la possibilità di un utente di destinazione l'elemento a cui che si desidera interagire, indipendentemente dalla modalità di input.
+title: Destinazione dello sguardo
+description: Tutte le interazioni si basano sulla capacità di un utente di selezionare come destinazione l'elemento con cui vuole interagire, indipendentemente dalla modalità di input.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Mista realtà, sguardo, sguardo targeting, interazione, progettazione
+keywords: Realtà mista, sguardo, targeting, interazione, progettazione
 ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,29 +13,29 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829845"
 ---
-# <a name="gaze-and-dwell"></a>Sguardo e permanenza
-Esistono molti modi diversi per verificare un _commit_ quale la combinazione di sguardo con _vocali_ oppure _mano i movimenti_.
-Esistono diversi scenari utente, tuttavia, in cui le mani degli utenti potrebbero essere occupate o non possono essere rilevate (ad esempio, factory gli utenti che svolgono guanti dimensioni eccessive pesante). Input vocale anche potrebbero non essere disponibili a causa delle preferenze utente, contesto basati su social network o ambienti alti.
-Come soluzione di fallback un'altra opzione per eseguire una _commit_ consiste nel mantenere fissare lo un elemento dell'interfaccia utente che costituiscono _permanenza_.
-Oggetto _permanenza_ può essere eseguita con sguardo head o rossi. L'idea è semplice e può essere suddivisa nelle fasi seguenti: 
-1. Si inizia a un pulsante holographic gazing
+# <a name="gaze-and-dwell"></a>Sguardo e dimora
+Ci sono molti modi diversi per confermare un _commit_ , ad esempio la combinazione di sguardi con _movimenti_ _vocali_ o mano.
+Tuttavia, esistono diversi scenari utente, in cui le mani degli utenti possono essere occupate o non possono essere rilevate (ad esempio, gli addetti alla produzione con guanti pesanti a dazio eccessivo). L'input vocale potrebbe non essere disponibile anche a causa di preferenze utente, contesto sociale o ambienti ad alta voce.
+Come soluzione di fallback, un'altra opzione per eseguire un _commit_ consiste semplicemente nell'osservare un elemento dell'interfaccia utente a cui si fa riferimento come _abitazione_.
+È possibile eseguire un' _abitazione_ con lo sguardo a capo o a occhio. L'idea è semplice e può essere suddivisa nelle fasi seguenti: 
+1. L'utente inizia a guardare un pulsante olografico
 
-2. Dopo un ritardo di onset breve (ad esempio, 150 ms) viene avviata l'animazione alcune indicazioni visive. Il ritardo del set viene utilizzato per evitare di sovraccaricare l'utente visualizzando immediatamente commenti e suggerimenti continuamente.
-    - Per la _sguardo occhio_, si consiglia quanto segue per la progettazione dell'oggetto visivo permanenza commenti e suggerimenti:
-      - **Blend**: Blend senza problemi i commenti e suggerimenti da poco visibile nella prima di tutto a completamente opaco. In questo modo i commenti e suggerimenti meno rappresentano una distrazione e overwhleming e perfettamente in linea con la certezza che il sistema è che l'utente desideri interagire con questo pulsante.
-      - **Trascinarlo in**: Creare un feedback visivo che riduce le dimensioni e si sposta verso il centro della destinazione, chiama l'attenzione dell'utente visual. 
+2. Dopo un breve intervallo di tempo di inattività, ad esempio 150 ms, viene avviata un'animazione con commenti visivi. Il ritardo di inizio viene usato per evitare di sovraccaricare l'utente riprendendo immediatamente il feedback.
+    - Per gli _occhi_, è consigliabile quanto segue per la progettazione dei commenti e suggerimenti sugli oggetti visivi:
+      - **Blend it**: Combinare in modo uniforme i commenti e i suggerimenti da poco visibili inizialmente a completamente opachi. In questo modo i commenti e i suggerimenti risultano meno dispersivi e overwhleming e ben allineati con la certezza che il sistema abbia effettivamente la voglia di interagire con questo pulsante.
+      - **Esegui il pull**: Consente di creare un feedback visivo che diminuisce di dimensioni e si sposta verso il centro della destinazione, astraendondo l'attenzione visiva dell'utente. 
 
-3. Dopo avere una durata di permanenza predefiniti (ad esempio, 800 ms), la permanenza completa e si verifica un evento associato.
-    - Fornire alcuni finalizzazione acustica o feedback visivo davvero portare home che l'elemento è stato selezionato ora.
+3. Dopo una durata predefinita dell'abitazione (ad esempio, 800 MS), l'abitazione viene completata e viene attivato un evento associato.
+    - Fornire alcuni commenti o suggerimenti visivi finalizzati per portare a casa che l'elemento è stato selezionato.
 
-![Permanenza stati](images/eyes_dwellstate_recommendation.png)
+![Stati di abitazione](images/eyes_dwellstate_recommendation.png)
 
 
-# <a name="gaze-targeting"></a>Sguardo targeting
+# <a name="gaze-targeting"></a>Destinazione dello sguardo
 
-Tutte le interazioni vengono compilate al momento la possibilità di un utente di destinazione l'elemento a cui che si desidera interagire, indipendentemente dalla modalità di input. Realtà mista di Windows, questa operazione viene in genere eseguita usando sguardo dell'utente.
+Tutte le interazioni si basano sulla capacità di un utente di selezionare come destinazione l'elemento con cui vuole interagire, indipendentemente dalla modalità di input. In Windows Mixed Reality questo avviene in genere mediante lo sguardo dell'utente.
 
-Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione calcolata del sistema della finalità dell'utente e l'intenzione dell'utente effettivo, deve essere allineati quanto più vicina. Al grado che il sistema interpreta le azioni dell'utente desiderato correttamente, le prestazioni e aumenta la soddisfazione migliora.
+Per consentire a un utente di usufruire con successo di un'esperienza, la comprensione dell'intenzione dell'utente calcolata dal sistema e l'effettiva intenzione dell'utente devono essere allineate il più possibile. Più il sistema interpreta correttamente le azioni che l'utente intende compiere, più aumenta la soddisfazione e migliorano le prestazioni.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -48,18 +48,18 @@ Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione
     </colgroup>
     <tr>
         <td><strong>Funzionalità</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (dal 1 ° generazione)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Auricolari coinvolgenti</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Sguardo targeting</td>
+        <td>Destinazione dello sguardo</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Destinazione rossi</td>
+        <td>Targeting degli occhi</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -67,52 +67,52 @@ Per consentire agli utenti un'esperienza di corretto funzionamento, comprensione
 </table>
 
 > [!NOTE]
-> Altre indicazioni specifiche su 2 HoloLens [presto](index.md).
+> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md)disponibili.
 
-## <a name="target-sizing-and-feedback"></a>Commenti e suggerimenti e le dimensioni di destinazione
+## <a name="target-sizing-and-feedback"></a>Dimensioni della destinazione e feedback
 
-Il vettore sguardo è stato dimostrato ripetutamente per poter essere usato per specificare come destinazione bene, ma spesso è adatto per gross targeting (acquisizione leggermente maggiori destinazioni). Le dimensioni di destinazione minimo di 1 a 1.5 gradi devono consentire le azioni dell'utente ha esito positivo nella maggior parte degli scenari, anche se le destinazioni di gradi 3 spesso consentono maggiore velocità. Si noti che le dimensioni che le destinazioni degli utenti in modo efficace è un'area 2D anche per gli elementi 3D, qualunque proiezione è rivolta essi devono essere l'area definibili come destinazione. Fornendo alcune salienti della segnalazione che un elemento è "active" (che l'utente è destinato a si) è molto utile: può trattarsi di trattamenti come effetti visibili "mouse", evidenzia audio o fa clic su, o cancellare l'allineamento di un cursore con un elemento.
+In più occasioni è stato dimostrato come il vettore di sguardo fisso sia utilizzabile per selezionare con precisione la destinazione, ma spesso tale vettore funziona in modo ottimale per selezionare la destinazione con minore precisione, ovvero quando sia necessario acquisire destinazioni di dimensioni più grandi. Dimensioni minime della destinazione da 1 a 1,5 gradi dovrebbero garantire una corretta esecuzione delle azioni dell'utente nella maggior parte degli scenari, benché destinazioni di 3 gradi spesso consentano una velocità superiore. Le dimensioni che l'utente punta come destinazione corrispondono in effetti a un'area 2D persino per gli elementi 3D: qualunque proiezione vi sia di fronte deve essere l'area selezionabile come destinazione. È estremamente utile fornire un segnale che indichi quando un elemento è "attivo", ossia quando l'utente lo sta puntando come destinazione. A tale scopo, possono essere usati effetti visibili "al passaggio del puntatore", clic o evidenziazioni audio oppure il chiaro allineamento di un cursore a un elemento.
 
-![Dimensioni di destinazione ottimale a distanza di 2 metri](images/gazetargeting-size-1000px.jpg)<br>
-*Dimensioni di destinazione ottimale a distanza di 2 metri*
+![Dimensioni ottimali della destinazione a una distanza di 2 metri](images/gazetargeting-size-1000px.jpg)<br>
+*Dimensioni ottimali della destinazione a una distanza di 2 metri*
 
-![Un esempio di evidenziazione di un oggetto di destinazione sguardo](images/gazetargeting-highlighting-640px.jpg)<br>
-*Un esempio di evidenziazione di un oggetto di destinazione sguardo*
+![Esempio di evidenziazione di un oggetto selezionato come destinazione con lo sguardo fisso](images/gazetargeting-highlighting-640px.jpg)<br>
+*Esempio di evidenziazione di un oggetto selezionato come destinazione con lo sguardo fisso*
 
-## <a name="target-placement"></a>Selezione host di destinazione
+## <a name="target-placement"></a>Posizionamento della destinazione
 
-Gli utenti spesso riuscirà a trovare gli elementi dell'interfaccia utente che vengono posizionati in modo molto elevato o molto bassa nel loro campo visivo, concentrandosi la maggior parte dei loro attenzione sulle aree intorno a loro lo stato attivo principale (in genere circa livello rossi). Consente l'inserimento di quasi tutte le destinazioni in alcune fuori banda ragionevole intorno a livello di attenzione. Data la tendenza per gli utenti per concentrarsi su un'area visual relativamente piccola in qualsiasi momento (cono attentional della visione è all'incirca 10 gradi), raggruppare gli elementi dell'interfaccia utente per il livello che sono correlati a livello concettuale possono sfruttare i comportamenti di concatenamento dell'attenzione da elemento a un elemento con un account utente viene spostata loro sguardo all'interno di un'area. Durante la progettazione dell'interfaccia utente, tenere presenti le variazioni di grandi dimensioni potenziali nel campo visivo tra HoloLens e auricolari coinvolgente e concreto.
+Gli utenti spesso non riescono a trovare gli elementi dell'interfaccia utente posizionati molto in alto o molto in basso nel loro campo visivo, in quanto tendono a concentrare l'attenzione sulle aree intorno al punto focale principale, che in genere si trova approssimativamente al livello degli occhi. Può pertanto rivelarsi utile posizionare la maggior parte delle destinazioni in una fascia ragionevole attorno al livello degli occhi. Data la tendenza degli utenti a concentrarsi su un'area visiva relativamente limitata in un determinato momento (il cono attenzionale della visione è all'incirca di 10 gradi), il fatto di raggruppare gli elementi dell'interfaccia utente in base a come sono correlati concettualmente può dare luogo a comportamenti di concatenamento dell'attenzione da un elemento all'altro man mano che l'utente sposta lo sguardo all'interno di un'area. Quando progetti l'interfaccia utente, tieni presente la grande differenza potenziale di campo visivo tra i visori HoloLens e i visori VR immersive.
 
-![Un esempio di elementi dell'interfaccia utente raggruppati per più semplice sguardo targeting in Esplora Galaxy](images/gazetargeting-grouping-1000px.jpg)<br>
-*Un esempio di elementi dell'interfaccia utente raggruppati per più semplice sguardo targeting in Esplora Galaxy*
+![Esempio di elementi dell'interfaccia utente raggruppati per facilitare la selezione della destinazione con lo sguardo fisso in Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
+*Esempio di elementi dell'interfaccia utente raggruppati per facilitare la selezione della destinazione con lo sguardo fisso in Galaxy Explorer*
 
-## <a name="improving-targeting-behaviors"></a>Miglioramento della destinazione dei comportamenti
+## <a name="improving-targeting-behaviors"></a>Miglioramento dei comportamenti di selezione della destinazione
 
-Se l'intenzione dell'utente a un elemento di destinazione può essere determinato o approssimati a stretto contatto, può essere molto utile accettare "near miss" tentativi di interazione come se esse sono destinate in modo corretto. Esistono un numero limitato di metodi corretta che può essere incorporato nelle esperienze di realtà mista:
+Se è possibile determinare (o approssimare con una certa precisione) l'intenzione dell'utente di selezionare un elemento come destinazione, può essere molto utile accettare i tentativi di interazione "quasi riusciti" come se avessero avuto esito positivo. Sono disponibili alcuni metodi validi che possono essere incorporati nelle esperienze di realtà mista:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Stabilizzazione sguardo ("aree di gravità")
+### <a name="gaze-stabilization-gravity-wells"></a>Stabilizzazione di sguardi ("pozzi di gravità")
 
-Questa deve essere attiva per la maggior parte/all del tempo. Questa tecnica consente di rimuovere l'instabilità head/collo naturale che gli utenti possono avere. Anche lo spostamento a causa dei comportamenti di ricerca/parlando.
+Deve essere attivata per tutto o per la maggior parte del tempo. Questa tecnica consente di eliminare i tremolii naturali della testa o del collo che possono avere gli utenti, nonché il movimento che si produce guardando o parlando.
 
 ### <a name="closest-link-algorithms"></a>Algoritmi di collegamento più vicino
 
-Queste funzionano meglio in aree con sparse contenuti interattivi. Se è presente un'elevata probabilità che è possibile determinare quali un utente ha tentato di interagire con, è possibile integrare la capacità targeting semplicemente assumendo un certo livello di intent.
+Funzionano al meglio nelle aree con contenuto interattivo sparso. Se vi è un'alta probabilità di determinare l'elemento con cui un utente stava tentando di interagire, puoi integrare le sue capacità di selezione della destinazione semplicemente presupponendo un certo livello di intenzione.
 
-### <a name="backdatingpostdating-actions"></a>Azioni backdating/postdating
+### <a name="backdatingpostdating-actions"></a>Retrodatazione o postdatazione delle azioni
 
-Questo meccanismo è utile per le attività che richiedono velocità. Quando un utente viene spostato attraverso una serie di targeting/attivazione evasive alla velocità, può essere utile per presuppone alcune finalità e consentire *saltate passaggi* su cui intervenire destinazioni che l'utente ha lo stato attivo leggermente prima o leggermente dopo il (tap 50 ms prima/dopo è rimasto in vigore nel test preliminare).
+Questo meccanismo è utile per le attività che richiedono velocità. Quando un utente si sposta in una serie di manovre di targeting/attivazione alla velocità, può essere utile presupporre un certo scopo e consentire ai *passaggi mancanti* di agire sulle destinazioni di cui l'utente si è concentrato leggermente prima o leggermente dopo il tocco (50 ms prima/dopo was efficace nei test iniziali).
 
-### <a name="smoothing"></a>Anti-aliasing
+### <a name="smoothing"></a>Definizione di movimenti uniformi
 
-Questo meccanismo è utile per gli spostamenti di ricerca del percorso, riducendo l'instabilità/oscillazione leggero a causa di caratteristiche naturale movimento della testina. Quando l'anti-aliasing tramite i movimenti di ricerca del percorso, arrotondare di dimensioni/distanza di spostamenti di tipo invece che nel corso del tempo
+Questo meccanismo è utile per i movimenti che consentono di disegnare un percorso, in quanto riduce il leggero tremolio o la lieve oscillazione dovuta alle naturali caratteristiche del movimento della testa. Quando decidi di rendere uniformi i movimenti che disegnano un percorso, uniformali in base alla loro entità o distanza anziché in base al tempo.
 
-### <a name="magnetism"></a>Campi magnetici
+### <a name="magnetism"></a>Magnetismo
 
-Questo meccanismo può essere considerato come una versione più generale degli algoritmi "Più vicino link" - Creazione di un cursore verso una destinazione o aumentare semplicemente hitboxes (se visibilmente o No) quando gli utenti si avvicinano probabilmente destinazioni, tramite una certa conoscenza del layout interattiva per intenzione dell'utente approccio migliore. Ciò risulta particolarmente utile per le destinazioni di piccole dimensioni.
+Questo meccanismo può essere considerato come una versione più generale degli algoritmi di "collegamento più vicino"; è possibile disegnare un cursore verso una destinazione o semplicemente aumentare le hitbox (in modo visibile o meno) man mano che gli utenti si avvicinano a probabili destinazioni, avvalendosi di una certa conoscenza del layout interattivo per avvicinarsi con maggior accuratezza all'intenzione dell'utente. Questa soluzione può risultare particolarmente efficace per le destinazioni di piccole dimensioni.
 
-### <a name="focus-stickiness"></a>Persistenza dello stato attivo
+### <a name="focus-stickiness"></a>Spostamento dello stato attivo in base all'elemento di interesse corrente
 
-Quando si determina quale vicino agli elementi interattivi per attivare, fornire un valore di bias all'elemento che è attualmente attivo. Ciò consentirà di ridurre lo stato attivo imprevedibile cambio comportamenti quando mobile in un punto intermedio tra due elementi con rumore naturale.
+Quando determini gli elementi interattivi vicini su cui spostare lo stato attivo, prediligi l'elemento su cui è attualmente concentrata l'attenzione. Ciò consentirà di ridurre i passaggi imprevedibili da un'area di interesse all'altra quando ci si trova in un punto intermedio tra due elementi con disturbi naturali.
 
 ## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)

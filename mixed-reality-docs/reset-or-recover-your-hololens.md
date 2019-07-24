@@ -1,85 +1,85 @@
 ---
-title: Reimpostare o il ripristino di HoloLens
-description: Istruzioni di base e avanzate per il riavvio o la reimpostazione di HoloLens.
+title: Reimpostare o ripristinare il HoloLens
+description: Istruzioni di base e avanzate per il riavvio o la reimpostazione del HoloLens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: procedure, riavviare, reimpostare, ripristino, reimpostazione hardware, reimpostare il software, ciclo di alimentazione, HoloLens, arresto
+keywords: procedura, riavvio, reimpostazione, ripristino, ripristino rigido, ripristino soft, ciclo di alimentazione, HoloLens, arresto
 ms.openlocfilehash: abf71a5f122b1c6f800bf970f51da11a34be956b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599882"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524038"
 ---
-# <a name="reset-or-recover-your-hololens"></a>Reimpostare o il ripristino di HoloLens
+# <a name="reset-or-recover-your-hololens"></a>Reimpostare o ripristinare il HoloLens
 
-Se sono stati riscontrati problemi con i HoloLens è possibile provare a riavviare il computer, reimpostare o persino con ripristino di un dispositivo flash nuovamente. Questo documento verrà consentono di eseguire le procedure consigliate in successione.
+Se si verificano problemi con la HoloLens, è possibile provare a riavviare, reimpostare o addirittura rieseguire il ripristino del dispositivo. In questo documento vengono illustrati i passaggi consigliati per la successione.
 
 ## <a name="perform-a-device-reboot"></a>Eseguire un riavvio del dispositivo
 
-Se il HoloLens sta riscontrando problemi o non risponde, innanzitutto provare a riavviare, tramite uno dei metodi seguenti.
+Se il HoloLens sta riscontrando problemi o non risponde, provare prima di tutto a riavviarlo tramite uno dei metodi seguenti.
 
 ### <a name="perform-a-safe-reboot-via-cortana"></a>Eseguire un riavvio sicuro tramite Cortana
 
-Il modo più sicuro il riavvio di HoloLens è tramite Cortana. Ciò è in genere un notevole passo prima quando si verifica un problema con HoloLens:
-1. Inserire nel dispositivo
-2. Assicurarsi che l'accensione e un utente è connesso il dispositivo non è in attesa di una password per sbloccarlo.
-3. Pronunciare "Ehi Cortana, riavviare" o "Ehi Cortana, riavviare."
-4. Quando Anna riconosce Anna verrà chiesto di confermare l'operazione. Attendere un secondo per un suono da riprodurre dopo che Anna ha terminato la domanda, che indica che è in ascolto all'utente e quindi pronunciare "Sì".
-5. Il dispositivo verrà ora riavvio/riavvio.
+Il modo più sicuro per riavviare il HoloLens è tramite Cortana. Si tratta in genere di un ottimo primo passaggio quando si verifica un problema con HoloLens:
+1. Inserire sul dispositivo
+2. Verificare che sia acceso, che l'utente sia connesso e che il dispositivo non sia in attesa di una password per sbloccarlo.
+3. Pronunciare "Hey Cortana, reboot" o "Hey Cortana, restart".
+4. Quando dichiara di confermare la richiesta di conferma. Attendere un secondo per riprodurre un suono dopo che ha terminato la domanda, a indicare che è in ascolto e quindi "Sì".
+5. Il dispositivo verrà ora riavviato o riavviato.
 
-### <a name="perform-a-safe-reboot-via-windows-device-portal"></a>Eseguire un riavvio sicuro tramite Windows Device Portal
+### <a name="perform-a-safe-reboot-via-windows-device-portal"></a>Eseguire un riavvio sicuro tramite il portale del dispositivo Windows
 
-Se il codice precedente non funziona, è possibile provare a riavviare il dispositivo tramite [Windows Device Portal](using-the-windows-device-portal.md). In alto a destra, è disponibile un'opzione di arresto/riavvio del dispositivo.
+Se il precedente non funziona, è possibile provare a riavviare il dispositivo tramite il [portale del dispositivo Windows](using-the-windows-device-portal.md). Nell'angolo superiore destro è disponibile un'opzione per riavviare o arrestare il dispositivo.
 
 ### <a name="perform-a-safe-reboot-via-the-power-button"></a>Eseguire un riavvio sicuro tramite il pulsante di alimentazione
 
-Se è ancora non è possibile riavviare il dispositivo, è possibile provare a eseguire un riavvio tramite il pulsante di alimentazione:
+Se non si riesce ancora a riavviare il dispositivo, è possibile provare a eseguire un riavvio tramite il pulsante di alimentazione:
 1. Premere e tenere premuto il pulsante di alimentazione per 5 secondi
-   1. Dopo 1 secondo, si visualizzeranno tutti illuminano LED 5, quindi lentamente disattivare da destra a sinistra
-   2. Dopo 5 secondi, tutti i LED è disattivata, che indica che il comando di arresto è stato rilasciato correttamente
-   3. Si noti che è importante arrestare premendo il pulsante immediatamente dopo tutti i LED di sono disattivato
-2. Attendere 1 minuto per l'arresto normalmente abbia esito positivo. Si noti che l'arresto potrebbe essere ancora in corso anche se le visualizzazioni sono disattivate
-3. Accendere il dispositivo nuovamente tenendo premuto il pulsante di alimentazione per 1 secondo
+   1. Dopo 1 secondo, si noterà che tutti i 5 LED sono illuminati, quindi si disattiva lentamente da destra a sinistra
+   2. Dopo 5 secondi, tutti i LED saranno spenti, a indicare che il comando Shutdown è stato emesso correttamente
+   3. Si noti che è importante arrestare la pressione del pulsante immediatamente dopo che tutti i LED sono spenti
+2. Attendere 1 minuto per la corretta riuscita dell'arresto. Si noti che l'arresto potrebbe essere ancora in corso anche se gli schermi sono spenti
+3. Accendere di nuovo il dispositivo premendo e tenendo premuto il pulsante di alimentazione per 1 secondo
 
-### <a name="perform-an-unsafe-forced-reboot"></a>Eseguire un riavvio forzato unsafe
+### <a name="perform-an-unsafe-forced-reboot"></a>Eseguire un riavvio forzato non sicuro
 
-Se nessuno dei suddetti metodi sono in grado di riavviare correttamente il dispositivo, è possibile forzare un riavvio. Si noti che questo metodo equivale a eseguire il pull della batteria da di HoloLens e di conseguenza, è un'operazione pericolosa potrebbe lasciare il dispositivo in uno stato danneggiato. 
+Se nessuno dei metodi precedenti riesce a riavviare correttamente il dispositivo, è possibile forzare un riavvio. Si noti che questo metodo equivale a estrarre la batteria dalla HoloLens e, di conseguenza, è un'operazione pericolosa che potrebbe lasciare il dispositivo in uno stato danneggiato. 
 
 >[!WARNING]
->Questo è un metodo potenzialmente dannoso e deve essere usato solo nel caso in cui nessuno dei suddetti metodi di lavoro.
+>Si tratta di un metodo potenzialmente dannoso e deve essere usato solo nel caso in cui nessuno dei metodi precedenti funzioni.
 
 1. Premere e tenere premuto il pulsante di alimentazione per almeno 10 secondi
-   * È possibile tenere premuto il pulsante per più di 10 secondi
-   * È possibile ignorare qualsiasi attività del LED
+   * È bene mantenere il pulsante per più di 10 secondi
+   * È possibile ignorare tutte le attività dei LED
 2. Rilasciare il pulsante e attendere 2-3 secondi
-3. Accendere il dispositivo nuovamente tenendo premuto il pulsante di alimentazione per 1 secondo
+3. Accendere di nuovo il dispositivo premendo e tenendo premuto il pulsante di alimentazione per 1 secondo
 
-## <a name="reset-the-device-to-a-factory-clean-state"></a>Ripristinare uno stato pulito del produttore del dispositivo
+## <a name="reset-the-device-to-a-factory-clean-state"></a>Ripristinare lo stato di pulizia del dispositivo
 
-Se il HoloLens è continuano a verificarsi problemi dopo il riavvio, è possibile ripristinarne lo stato originario factory. Se si reimposta il dispositivo, verranno cancellate tutti i dati personali, App e impostazioni. La reimpostazione verrà installato solo l'ultima versione installata di Windows Holographic e sarà necessario eseguire il rollforward di tutti i passaggi di inizializzazione (calibrare, connettersi al Wi-Fi, creare un account utente, scaricare le App e così via...).
-1. Avviare il **le impostazioni** -> app **Update** -> **reimpostare**
-2. Selezionare il **dispositivo ripristinato alle impostazioni** opzione e la finestra di dialogo di conferma di lettura
-3. Se si accettano i reimpostare il dispositivo, il dispositivo verrà riavviato e di rotazione gears con un indicatore di stato visualizzati
-4. Attendere circa 30 minuti completare questo processo
-5. La reimpostazione verrà completata e il dispositivo verrà riavviato con l'uscita dell'esperienza di finestra
+Se il HoloLens sta ancora riscontrando problemi dopo il riavvio, è possibile provare a reimpostarlo sullo stato Clean Factory. Se si reimposta il dispositivo, verranno cancellati tutti i dati personali, le app e le impostazioni. La reimpostazione installerà solo la versione installata più recente di Windows olografica e sarà necessario ripetere tutti i passaggi di inizializzazione (calibrare, connettersi a Wi-Fi, creare un account utente, scaricare app e così via).
+1. Avviare l'app **Impostazioni** ->**Reimposta** **aggiornamento** -> 
+2. Selezionare l'opzione **Reimposta dispositivo** e leggere la finestra di dialogo di conferma
+3. Se si accetta di reimpostare il dispositivo, il dispositivo viene riavviato e viene visualizzato un set di ingranaggi rotanti con un indicatore di stato
+4. Attendere circa 30 minuti per il completamento del processo
+5. Il ripristino viene completato e il dispositivo si riavvia nell'esperienza predefinita
 
-## <a name="perform-a-full-device-recovery"></a>Eseguire un ripristino del dispositivo completa
+## <a name="perform-a-full-device-recovery"></a>Eseguire un ripristino completo del dispositivo
 
-Se, dopo aver eseguito le opzioni precedenti, la periferica **comunque** bloccata, non risponde o che sta rilevando problemi software o aggiornamenti è possibile ripristinare tramite il Windows Device Recovery Tool. Il ripristino del dispositivo è simile a reimpostarlo nel senso che verranno cancellati tutti i contenuti di utente nel dispositivo, inclusi App, giochi, foto, gli account utente e altro ancora. Se possibile, le informazioni che si desidera mantenere il backup.
+Se, dopo aver eseguito le opzioni precedenti, il dispositivo è **ancora** bloccato, non risponde o si verificano problemi di aggiornamento o software, è possibile ripristinarlo utilizzando lo strumento ripristino dispositivi Windows. Il ripristino del dispositivo è simile alla reimpostazione del dispositivo nel senso che cancellerà tutto il contenuto utente sul dispositivo, tra cui app, giochi, foto, account utente e altro ancora. Se possibile, eseguire il backup di tutte le informazioni che si desidera salvare.
 
-Per un ripristino completo di HoloLens:
-1. Scollegare tutti i telefoni e dispositivi di Windows dal computer
-2. Installare e avviare il [Windows Device Recovery Tool](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) (WDRT) nel PC
-3. Connettere il HoloLens al PC usando il cavo micro-USB fornito con
-   * Si noti che non tutti i cavi USB sono uguali. Anche se è stato usato un altro cavo correttamente, questo flusso esporrà nuovi Stati in cui il cavo potrebbe non essere ottimali. Quello di HoloLens integrava è l'opzione migliore e più ben collaudata
-4. Se lo strumento rileva automaticamente il dispositivo verrà visualizzato un riquadro HoloLens. Clic su di esso e seguire le istruzioni per completare il processo
+Per ripristinare completamente il HoloLens:
+1. Disconnettere tutti i telefoni e i dispositivi Windows dal PC
+2. Installare e avviare lo [strumento di ripristino del dispositivo Windows](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) (WDRT) nel PC
+3. Connettere la HoloLens al PC usando il cavo micro-USB fornito con
+   * Si noti che non tutti i cavi USB vengono creati uguali. Anche se si usa un altro cavo con successo, questo flusso esporrà i nuovi Stati in cui potrebbe non essere possibile eseguire anche il cavo. Quello con cui è stata fornita la HoloLens è l'opzione migliore e più collaudata
+4. Se lo strumento rileva automaticamente il dispositivo, verrà visualizzato un riquadro HoloLens. Fare clic su di esso e seguire le istruzioni per completare il processo
 
 >[!NOTE]
->WDRT potrebbe eseguire il ripristino del dispositivo per una versione precedente di Windows Holographic; potrebbe essere necessario installare gli aggiornamenti dopo il lampeggiamento
+>WDRT può ripristinare il dispositivo a una versione precedente di Windows olografico; potrebbe essere necessario installare gli aggiornamenti dopo il lampeggio
 
-Se lo strumento è in grado di rilevare automaticamente il dispositivo, procedere come segue:
-1. Riavviare il PC e provare di nuovo (questa correzione risolve la maggior parte dei problemi)
-2. Scegliere il **il dispositivo non è stato rilevato sul pulsante**, scegliere **Microsoft HoloLens**e seguire le istruzioni sullo schermo
+Se lo strumento non è in grado di rilevare automaticamente il dispositivo, provare a eseguire le operazioni seguenti:
+1. Riavviare il computer e riprovare (questo risolve la maggior parte dei problemi)
+2. Fare clic sul **pulsante dispositivo non rilevato**, scegliere **Microsoft HoloLens**e seguire le altre istruzioni visualizzate sullo schermo.

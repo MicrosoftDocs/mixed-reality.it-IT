@@ -1,152 +1,152 @@
 ---
-title: Case study - process del AfterNow - processo di concezione, la creazione di prototipi, creazione
-description: Processo del afterNow - immaginare, la creazione di prototipi, creazione
+title: Case Study-provisioning, creazione di prototipi, creazione di un processo di AfterNow
+description: AfterNow, creazione di prototipi, creazione
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realtà mista di Windows, AfterNow, il processo di concezione, la creazione di prototipi, creazione
+keywords: Realtà mista di Windows, AfterNow, provisioning, creazione di prototipi, compilazione
 ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604680"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523473"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Case study - process del AfterNow - processo di concezione, la creazione di prototipi, creazione
+# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Case Study-provisioning, creazione di prototipi, creazione di un processo di AfterNow
 
-Alla [AfterNow](https://www.afternow.io/), collaboriamo con di idee e termini di aspirazioni nei prodotti concreti, completamente operativi ed esperienze pronto per il mercato. Ma prima che si scrive una singola riga di codice, si crea un progetto tramite un processo denominato envisioning.
+In [AfterNow](https://www.afternow.io/)si collaborerà con l'utente per trasformare idee e aspirazioni in prodotti concreti e completamente operativi ed esperienze pronte per il mercato. Prima di scrivere una singola riga di codice, però, creiamo un progetto tramite un processo denominato provisioning.
 
-![Che cos'è il processo di concezione?](images/whatisenvisioning-640px.png)
+![Che cos'è il provisioning?](images/whatisenvisioning-640px.png)
 
-## <a name="what-is-envisioning"></a>Che cos'è concezione?
+## <a name="what-is-envisioning"></a>Che cos'è il provisioning?
 
-Il processo di concezione è un processo di ideazione utilizzato per la progettazione del prodotto. È semplificare un ampio pool di idee in concetti realistici, calcolati: uno o più, per l'esecuzione.
+Il provisioning è un processo di ideazione usato per la progettazione del prodotto. Un ampio pool di idee viene semplificato in uno o più concetti realistici calcolati per l'esecuzione.
 
-Questo processo verrà indirizzati alla luce numerosi problemi e i blocchi che hanno sarebbero avviarsi alla fine all'interno del prodotto. Esito negativo tempestivamente e rapidamente in definitiva un notevole risparmio di tempo e denaro.
+Questo processo comporterà la luce di molti problemi e blocchi che potrebbero essere disponibili nel prodotto. Un errore presto e veloce, infine, consente di risparmiare molto tempo e denaro.
 
-Durante questo processo, si sarà disponibile con le note sull'idee e sui risultati del gruppo. Al termine, si riceverà un documento di script e un video del nostro passaggio "agire", una simulazione del prodotto proposto in azione. Questi sono progetti concreti al tuo prodotto, un framework è possibile mantenere. Idealmente, il passaggio successivo è per noi costruire il prodotto, che consente di testare e verifica la ragione reale.
+Durante questo processo, verranno fornite note sulle idee e sui risultati del gruppo. Al termine, si riceverà un documento di uno script e un video del passaggio "Act it out", una simulazione del prodotto proposto in azione. Si tratta di progetti concreti per il prodotto, ovvero un Framework che è possibile gestire. Idealmente, il passaggio successivo consiste nel creare il prodotto, che ci permette di testare e sperimentare la vera e propria esperienza.
 
-Ecco un play-by-play giornaliero del processo, il tempo necessario ogni passaggio e che sarà necessario nel team.
+Ecco una riproduzione giornaliera del processo, il tempo necessario per ogni passaggio e gli utenti necessari per il team.
 
-![I partecipanti della fase di concezione](images/envisioning-participants-640px.png)
+![Provisioning di partecipanti](images/envisioning-participants-640px.png)
 
-## <a name="envisioning-participants"></a>I partecipanti della fase di concezione
+## <a name="envisioning-participants"></a>Provisioning di partecipanti
 
-È importante selezionare i partecipanti a destra per questo processo. Il numero può variare, ma è consigliabile mantenere la in sette persone a fini di efficienza.
+È importante selezionare i partecipanti appropriati per questo processo. Il numero può variare, ma è consigliabile mantenerlo sotto sette persone per migliorare l'efficienza.
 
-**Decider (critico)**-Decider The è una persona importante avere nel gruppo. Utente sia di quello che verrà prendere la decisione finale o deposito di scalabilità se si verifica un indecision durante il processo (in genere il CEO, fondatore, responsabile del prodotto o head della progettazione). Se non sono possono essere utilizzati per l'intero processo, l'utente autorizza che un utente più adatta ad per assumere il ruolo.
+**Decisioner (critico)** : il decisore è una persona importante nel gruppo. Si tratta di uno dei responsabili della decisione finale o della riduzione della scalabilità in caso di indecisione durante il processo, in genere il CEO, il fondatore, il responsabile del prodotto o la responsabile della progettazione. Se non sono in grado di partecipare all'intero processo, è necessario nominare gli utenti più idonei per il ruolo.
 
-**(Facoltativo) Finance**-un utente che possono spiegare come verrà finanziato una il progetto.
+**Finance (facoltativo)** : qualcuno che può spiegare in che modo il progetto è finanziato.
 
-**(Facoltativo) marketing**-un utente che crea i messaggi della società.
+**Marketing (facoltativo)** : un utente che si occupa dei messaggi della società.
 
-**Customer (importante)**-qualcuno che comunica con i clienti spesso e può essere loro advocate.
+**Cliente (importante)** : un utente che parla spesso con i clienti e può essere il suo sostenitore.
 
-**Tech/logistici (importanti)**-qualcuno in grado di comprendere ciò che la società può creare e distribuire.
+**Tech/Logistic (importante)** : qualcuno che comprende le funzionalità che l'azienda può creare e distribuire.
 
-**Progettazione (importante)**-chi progetta i prodotti dall'azienda.
+**Progettazione (importante)** : un utente che progetta il prodotto prodotto dall'azienda.
 
-## <a name="day-1---map"></a>GIORNO 1 - mappa
+## <a name="day-1---map"></a>1 ° giorno-mappa
 
-**Elenco degli obiettivi e vincoli. impostare un obiettivo a lungo termine - 5 min**
+**Elencare gli obiettivi & vincoli; imposta un obiettivo a lungo termine-5 min**
 
-Se si stavamo viene completamente ottimistico, qual è l'obiettivo a lungo termine? Il motivo per cui si creano questa soluzione in realtà mista e quali problemi si sta tentando di risolvere?
+Se fossimo completamente ottimistici, qual è l'obiettivo a lungo termine? Perché stiamo creando questa soluzione in realtà mista e quali problemi stiamo tentando di risolvere?
 
-**Elenco dello sprint domande - 5 min**
+**Elencare le domande Sprint-5 min**
 
-Formato Get un po' pragmatico ed elencare i timori in questione. Come sarebbe Microsoft non dovesse? Per soddisfare l'obiettivo a lungo termine, ciò che può essere vero? Se il progetto non è riuscita, le possibili cause che?
+Ottenere un po' pragmatico ed elencare le paure in formato domanda. In che modo è possibile avere esito negativo? Per soddisfare l'obiettivo a lungo termine, cosa deve essere vero? Se il progetto non è riuscito, cosa potrebbe avere causato?
 
-**Personalizzare un flusso di mapping - fino a 1 ora**
+**Eseguire una mappa di flusso: fino a un'ora**
 
-Si tratta di una mappa approssimativa e funzionale (non è dettagliata). Si scrive tutti i tipi di utente sulla sinistra e le terminazioni sulla destra. Quindi abbiamo connetterle al centro con parole e le frecce che illustra come gli utenti interagiscono con il prodotto. Questa operazione viene eseguita nei passaggi da 5 a 15.
+Si tratta di una mappa funzionale e approssimativa (non dettagliata). Tutti i tipi di utente vengono scritti a sinistra e le terminazioni a destra. Quindi, ci connettiamo al centro con parole e frecce che mostrano il modo in cui gli utenti interagiscono con il prodotto. Questa operazione viene eseguita in 5-15 passaggi.
 
-**Intervistano esperti & prendere appunti**
+**Intervistare gli esperti & prendere nota**
 
-L'obiettivo di questo esercizio è migliorare la conoscenza collettiva del problema. Qui possiamo aggiungere elementi alla mappa e correggere eventuali errori su di esso. Se parte del flusso può essere espansa in modo più dettagliato, parliamo di esperti.
+L'obiettivo di questo esercizio è quello di migliorare la comprensione collettiva del problema. Qui è possibile aggiungere elementi alla mappa e correggere eventuali errori. Se una parte del flusso può essere espansa in modo più dettagliato, parleremo con l'esperto.
 
-La procedura consigliata per questo processo si verifica quando vengono intraprese singoli erogatori nel modo in cui si potrebbe formato (HMW). HMW è una tecnica sviluppata da P & G nel negli anni 70. È un metodo per gli Appunti sotto forma di una domanda che implica in notes organizzata e in ordine di priorità. Si verrà per annotare un'idea per ogni nota Sticky Note che inizia con la frase "Come potrebbe abbiamo." Ad esempio, modalità potrebbe essere di comunicazione i valori della [società] nella realtà mista?
+La procedura consigliata per questo processo si verifica quando si accettano singole note in come è possibile (HMW) il formato. HMW è una tecnica sviluppata da P & G negli anni '70. Si tratta di un metodo di nota che assume la forma di una domanda che in definitiva genera note organizzate e classificate in ordine di priorità. Viene annotata un'idea per ogni nota appiccicosa che inizia con la frase "come possiamo". Ad esempio, in che modo è possibile comunicare i valori di [azienda] in realtà mista?
 
 ![Organizzare e decidere](images/organize-and-decide-640px.png)<br>
 *Organizzare e decidere*
 
-**Organizzare HMW note**
+**Organizza note HMW**
 
-Si accettano tutte le note "Come potrebbe è" e li attieniti su una parete. Si verrà quindi classificarli all'interno di temi evidenti non appena vengono individuati.
+Tutti gli elementi "come possiamo" noteranno e li attaccheranno su una parete. Verranno quindi categorizzati in temi evidenti man mano che emergono.
 
-**Votare note HMW**
+**Vota le note su HMW**
 
-Dopo che tutte le note sono nelle relative categorie appropriate, si verrà a votare le domande preferite. Tutti gli utenti Ottiene due voti; il Decider Ottiene quattro voti.
+Una volta che tutte le note si trovano nelle rispettive categorie appropriate, verranno votate le domande preferite. Tutti ricevono due voti. il decisore ottiene quattro voti.
 
 **Selezionare una destinazione**
 
-Cerchio il cliente più importante e il momento in un'unica destinazione sulla mappa ed esaminare le domande iniziale per lo sprint. Il Decider ha il compito di eseguire la chiamata.
+Cerchia il cliente più importante e un momento di destinazione sulla mappa ed esamina le domande iniziali per lo sprint. Il decisore ha l'attività di effettuare la chiamata.
 
-## <a name="day-2---sketch"></a>GIORNO 2 - Sketch
+## <a name="day-2---sketch"></a>GIORNO 2-sketch
 
-**Dimostrazioni del prodotto esistente**
+**Demo di prodotti esistenti**
 
-Tutti i membri del gruppo di sprint ricerche prodotti esistenti che desiderano in grado di risolvere problemi simili a quelli che è stiamo devono affrontare. Verranno quindi illustrati i risultati al resto del gruppo. Questo ci offre una buona idea delle funzionalità che sono stati trovati interessanti.
+Tutti gli utenti del gruppo Sprint potranno ricercare i prodotti esistenti desiderati per risolvere problemi simili a quelli che stiamo affrontando. Verranno quindi dimostrate le conclusioni al resto del gruppo. In questo modo è stata rilevata una panoramica delle funzionalità interessanti.
 
 **Note**
 
-Si spende di 20 minuti a invisibile all'utente nella stanza per raccogliere note.
+Per raccogliere note, abbiamo dedicato 20 minuti a visitare la stanza in modo invisibile all'utente.
 
 **Idee**
 
-Si spende di 20 minuti privatamente scrivono rapidamente alcune idee approssimative.
+Ci dedichiamo 20 minuti privatamente annotare alcune idee stravaganti.
 
-**8s pazzesco**
+**8 folli**
 
-Si spende di 8 minuti Creazione otto frame. Si tratta in cui sono tracciate rapidamente una variazione di uno dei nostri idee migliori in ogni frame.
+Ci stiamo impiegando otto minuti per creare otto frame. Qui viene disegnata rapidamente una variante di una delle nostre idee migliori in ogni frame.
 
 **Soluzione**
 
-Si dedicherà 30 minuti a tracciare gli storyboard. Abbiamo prendere le migliori variazioni di idee da 8s pazzesco e creare uno storyboard di tre pannelli di base.
+Si spendono 30 minuti per disegnare gli storyboard. Sono state apportate le varianti migliori delle idee da folli 8S e viene creato uno storyboard a tre pannelli dell'idea.
 
-![Tracciare gli storyboard](images/sketching-storyboards-640px.png)<br>
-*Tracciare gli storyboard*
+![Sketch degli storyboard](images/sketching-storyboards-640px.png)<br>
+*Sketch degli storyboard*
 
-## <a name="day-3---decide"></a>GIORNO 3 - decidere
+## <a name="day-3---decide"></a>GIORNO 3-decisione
 
-Il giorno corrente implica numerosi valutando e dei voti. Ecco i dettagli:
+Questo giorno implica numerose critiche e votazioni. Ecco la suddivisione:
 
-**Valutando non interattiva**
+**Valutazione silenziosa**
 
-Abbiamo soluzioni sulla parete di nastri e richiedere tempo a esaminare tali invisibile all'utente. Dopo che tutti gli utenti è diventato tempo a esaminare tutte le bozze, collettivamente verrà creata una mappa termica. Ogni persona pone segni alle bozze che desiderano. Può trattarsi di un'area di un flusso o l'intero flusso.
+Le soluzioni per nastri vengono registrate in modo invisibile all'utente. Dopo che tutti hanno avuto tempo per esaminare tutti gli sketch, si creerà collettivamente una mappa termica. Ogni persona inserisce segni sugli sketch che desiderano. Può trattarsi dell'intero flusso o di un'area di un flusso.
 
-**Descrizione & spiegazioni**
+**Spiegazioni & di discussione**
 
-Si inizierà a vedere una mappa termica di persone idee trovare interessanti e spendere ogni sketch è stata ricevuta maggiormente l'attenzione di tre minuti. Le persone possono discutere apertamente perché, ad esempio alcune bozze e l'artista può correttamente forniscono le proprie idee quando c'è un malinteso. In alcuni casi, si possono emergere nuove idee.
+Si inizierà a vedere una mappa termica delle idee che gli utenti trovano interessanti e dedicano tre minuti a ogni sketch che ha ottenuto la massima attenzione. Gli utenti possono discutere apertamente del motivo per cui alcuni schizzi e l'artista possono interpretare in modo corretto le idee in caso di problemi. Questa operazione può presentare nuove idee a volte.
 
-In questo passaggio si vuole anche concede agli utenti l'opportunità di spiegare le idee che non hanno ottenuto una particolare attenzione. In alcuni casi sono disponibili che una Gemma gli utenti un'idea capito effettivamente in precedenza.
+In questo passaggio si vuole anche offrire agli utenti la possibilità di spiegare le idee che non hanno avuto molta attenzione. In alcuni casi è possibile trovare un gioiello in un'idea che gli utenti non hanno effettivamente compreso in precedenza.
 
-**Polling riconosciuti & supervote**
+**Polling di paglia & supervoto**
 
-Ogni persona sceglierà automaticamente loro idea preferito e, quando si è pronti, persone inserirà un contrassegno in quello preferito tutti contemporaneamente. Il Decider otterrà quindi tre punti di grandi dimensioni per l'idea che hanno aggiunto mi piace il massimo. Quelli contrassegnati con il Decider sono i concetti che stanno per avere un prototipo.
+Ogni persona sceglierà automaticamente la propria idea preferita e, quando si è pronti, le persone inseriranno un contrassegno sui Preferiti uno alla volta. Il decisore otterrà quindi tre punti di grandi dimensioni per l'idea che mi piace più. Quelle contrassegnate dal decisore sono le idee che verranno sottoposti a prototipi.
 
-## <a name="day-4---prototype"></a>GIORNO 4 - prototipo
+## <a name="day-4---prototype"></a>GIORNO 4-prototipo
 
 **Preparazione**
 
-In preparazione per la fase di creazione di prototipi, si raccoglieranno un'ampia gamma di strumenti fisici, molto simile a un kit di un gioco da ragazzi, per costruire oggetti 3D che rappresenteranno vntana. Abbiamo anche strumenti fisici che rappresentano i dispositivi hardware persone usa per accedere a questi vntana.
+In preparazione per la fase di creazione di prototipi, viene raccolta un'ampia gamma di strumenti fisici, molto simile al kit di riproduzione di un bambino, per costruire oggetti 3D che rappresenteranno ologrammi. Verranno inoltre usati strumenti fisici che rappresentano i dispositivi hardware usati dagli utenti per accedere a questi ologrammi.
 
-***Prototype!***
+***Prototipo!***
 
 **Preparare uno script**
 
-Creare script out del flusso l'intero utente per questo prototipo e stabilire gli attori che saranno essere causati dal skit.
+Inserire nello script l'intero flusso utente per questo prototipo e decidere gli attori che giocheranno una parte della scenetta.
 
-**Lo potete realizzare**
+**Agisci**
 
-Agire fisicamente il flusso utente che include tutte le entità utente nell'ordine in che cui verrà utilizzato. Questo ci offre un quadro di come praticabile in questo prodotto sarà quando si compila una prova. Inoltre offrirà alla luce alcuni principali fosse che si potrà avere trascurata durante in arrivo con l'idea.
+Agire fisicamente sul flusso utente che riguarda tutte le entità utente nell'ordine in cui verranno usate. Si tratta di una valida idea dell'efficacia di questo prodotto durante la compilazione. Verranno inoltre riportate alcune importanti novità che potrebbero essere state trascurate quando si arriva all'idea.
 
 ## <a name="about-the-author"></a>Informazioni sull'autore
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border:0" width="60"><img alt="Rafai Eddy, AfterNow" width="60" height="60" src="images/kurohyo1-60px.png"></td>
-<td style="border:0"><b>Rafai Eddy</b><br>AfterNow</td>
+<td style="border:0"><b>Eddyi Eddy</b><br>AfterNow</td>
 </tr>
 </table>
 

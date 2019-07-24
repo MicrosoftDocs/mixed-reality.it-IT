@@ -1,37 +1,37 @@
 ---
-title: Punto di stato attivo in Unity
-description: La modifica manuale di stabilità ologrammi in Unity, impostare il punto di stato attivo
+title: Punto di messa a fuoco in Unity
+description: Ottimizzazione manuale della stabilità degli ologrammi in Unity impostando il punto di attivazione
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, il punto di stato attivo, piano messa a fuoco, piano di stabilizzazione, punto di stabilizzazione, reprojection, LSR, buffer di profondità
+keywords: Unity, punto focale, piano di messa a fuoco, piano di stabilizzazione, punto di stabilizzazione, riproiezione, LSR, buffer di profondità
 ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604880"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525465"
 ---
-# <a name="focus-point-in-unity"></a>Punto di stato attivo in Unity
+# <a name="focus-point-in-unity"></a>Punto di messa a fuoco in Unity
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
+**Namespace** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-Il [concentrarsi punto](hologram-stability.md#stabilization-plane) insieme per fornire un suggerimento su come eseguire meglio la stabilizzazione nel vntana attualmente HoloLens in corso visualizzabile.
+Il [punto di interesse](hologram-stability.md#stabilization-plane) può essere impostato in modo da fornire a HoloLens un suggerimento su come eseguire al meglio la stabilizzazione sugli ologrammi attualmente in fase di visualizzazione.
 
-Se si desidera impostare il punto di stato attivo in Unity, è necessario impostare ogni tramite cornice *HolographicSettings.SetFocusPointForFrame()*. Se il punto di attivazione non è impostato per un frame, verrà utilizzato il piano di stabilizzazione di default.
+Se si vuole impostare il punto di messa a fuoco in Unity, è necessario impostare ogni fotogramma usando *HolographicSettings. SetFocusPointForFrame ()* . Se il punto di attivazione non è impostato per un frame, verrà utilizzato il piano di stabilizzazione predefinito.
 
 > [!NOTE]
-> Per impostazione predefinita, i nuovi progetti di Unity impostare l'opzione "Abilita condivisione Buffer profondità".  Con questa opzione, un'app Unity in esecuzione su un auricolare desktop coinvolgente e concreto o un HoloLens che eseguono Windows 10 April 2018 Update (RS4) o in un secondo momento nel buffer di profondità di Windows per ottimizzare la stabilità di ologramma automaticamente, senza specificare l'app invia una punto di attivazione:
-> * In un auricolare desktop coinvolgenti, ciò consentirà reprojection basato su profondità per pixel.
-> * In un HoloLens che eseguono Windows 10 April 2018 Update o versione successiva, questo analizzerà il buffer di profondità per scegliere un piano ottimale stabilizzazione automaticamente.
+> Per impostazione predefinita, i nuovi progetti Unity hanno l'opzione "Abilita condivisione buffer di profondità" impostata.  Con questa opzione, un'app Unity in esecuzione in una cuffia desktop immersiva o un HoloLens che esegue l'aggiornamento di Windows 10 aprile 2018 (RS4) o versione successiva invierà il buffer di profondità a Windows per ottimizzare automaticamente la stabilità dell'ologramma, senza che l'app specifichi punto di interesse:
+> * In un auricolare desktop immersivo, verrà abilitata la riproiezione basata sulla profondità per pixel.
+> * In una HoloLens che esegue l'aggiornamento di Windows 10 aprile 2018 o versione successiva, verrà analizzato il buffer di profondità per selezionare automaticamente un piano di stabilizzazione ottimale.
 >
-> Entrambi gli approcci devono fornire anche una migliore qualità dell'immagine senza lavoro esplicito dall'app per selezionare un punto di stato attivo ogni fotogramma.  Si noti che se si fornisce manualmente un punto di stato attivo, che sostituirà il comportamento automatico descritto in precedenza e in genere ridurrà la stabilità di ologramma.  In generale, è necessario specificare solo un punto di attivazione manuale quando l'app è in esecuzione su un HoloLens che non è ancora stato aggiornato a Windows 10 April 2018 Update.
+> Entrambi gli approcci dovrebbero fornire una qualità dell'immagine ancora migliore senza lavoro esplicito da parte dell'app per selezionare un punto di interesse per ogni frame.  Si noti che se si specifica un punto di interesse manualmente, che sostituisce il comportamento automatico descritto in precedenza, e in genere ridurrà la stabilità degli ologrammi.  In genere, è necessario specificare un punto di messa a fuoco manuale solo quando l'app è in esecuzione in un HoloLens che non è ancora stato aggiornato all'aggiornamento di Windows 10 aprile 2018.
 
 ### <a name="example"></a>Esempio
 
-Esistono diversi modi per impostare il punto di stato attivo, come suggerito dall'overload disponibile nel *SetFocusPointForFrame* funzione statica. Riportati di seguito è riportato un esempio semplice per impostare il piano dello stato attivo per l'oggetto fornito ogni frame:
+Esistono diversi modi per impostare il punto di interesse, come suggerito dagli overload disponibili nella funzione statica *SetFocusPointForFrame* . Di seguito è riportato un semplice esempio per impostare il piano di attivazione sull'oggetto fornito per ogni frame:
 
 ```cs
 public GameObject focusedObject;
@@ -48,7 +48,7 @@ void Update()
 }
 ```
 
-Si noti che il semplice codice sopra riportato potrebbe finire la riduzione di stabilità ologrammi se l'oggetto con lo stato attivo finisce dietro l'utente.  Ecco perché è in genere consigliabile impostare "Consenti condivisione Buffer profondità" anziché specificare manualmente un punto di stato attivo.
+Si noti che il codice precedente può finire a ridurre la stabilità dell'ologramma se l'oggetto con stato attivo termina dietro l'utente.  Questo è il motivo per cui in genere è necessario impostare "Abilita condivisione buffer di profondità" anziché specificare manualmente un punto di interesse.
 
 ### <a name="see-also"></a>Vedere anche
 * [Piano di stabilizzazione](hologram-stability.md#stabilization-plane)

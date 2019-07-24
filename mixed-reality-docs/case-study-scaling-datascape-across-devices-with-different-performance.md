@@ -1,55 +1,55 @@
 ---
-title: Case study - ridimensionamento Datascape tra i dispositivi con prestazioni diverse
-description: Questo case study offre informazioni dettagliate su come gli sviluppatori Microsoft ottimizzare l'app Datascape per offrire un'esperienza coinvolgente per più dispositivi con una gamma di funzionalità delle prestazioni.
+title: 'Case Study: ridimensionamento di DataScape tra dispositivi con prestazioni diverse'
+description: Questo case study offre informazioni sul modo in cui gli sviluppatori Microsoft hanno ottimizzato l'app DataScape per offrire un'esperienza accattivante tra i dispositivi con una gamma di funzionalità di prestazioni.
 author: danandersson
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: visore VR immersivi, case study di ottimizzazione, VR, sulle prestazioni
+keywords: auricolare immersivo, ottimizzazione delle prestazioni, VR, case study
 ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604870"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523363"
 ---
-# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Case study - ridimensionamento Datascape tra i dispositivi con prestazioni diverse
+# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Case Study: ridimensionamento di DataScape tra dispositivi con prestazioni diverse
 
-Datascape è un'applicazione di realtà mista di Windows sviluppata internamente presso Microsoft in cui ci siamo concentrati sulla visualizzazione dei dati meteo sui dati di terreno. L'applicazione illustra le informazioni dettagliate esclusive gli utenti di ottenere dall'individuazione dei dati nella realtà mista racchiudendo l'utente con visualizzazione olografica.
+DataScape è un'applicazione di realtà mista di Windows sviluppata internamente in Microsoft, in cui siamo concentrati sulla visualizzazione dei dati meteorologici sui dati del terreno. L'applicazione esamina gli utenti esclusivi di Insights per individuare i dati in realtà mista, circondando l'utente con la visualizzazione dei dati olografici.
 
-Per Datascape volevamo un'ampia gamma di piattaforme di destinazione con un hardware diverso che spaziano da Microsoft HoloLens a auricolari coinvolgenti di realtà mista di Windows e dai meno potenti PC per i PC più recenti con GPU di fascia alta. Il problema principale è costituita dal rendering la scena in pochi visivamente accattivanti nei dispositivi con le funzionalità di grafica diversa durante l'esecuzione di un'elevata frequenza dei fotogrammi.
+Per DataScape si vuole avere come destinazione un'ampia gamma di piattaforme con diverse funzionalità hardware, tra cui Microsoft HoloLens e gli auricolari per la realtà mista di Windows, e dai PC meno potenti ai PC più recenti con GPU di fascia alta. La sfida principale è stata il rendering della nostra scena in una situazione visivamente accattivante sui dispositivi con funzionalità grafiche estremamente diverse durante l'esecuzione con un framerate elevato.
 
-Questo case study in dettaglio il processo e le tecniche usate per creare alcuni dei nostri sistemi più intensivo GPU, che descrive i problemi che si sono verificati e come abbiamo superato.
+In questo case study verranno illustrati il processo e le tecniche utilizzate per creare alcuni dei sistemi più a elevato utilizzo di GPU, che descrivono i problemi riscontrati e come sono stati superati.
 
-## <a name="transparency-and-overdraw"></a>La trasparenza ed estenda
+## <a name="transparency-and-overdraw"></a>Trasparenza e sovraestrazione
 
-La difficoltà principale per il rendering è trattata la trasparenza, poiché la trasparenza può essere costosa su una GPU.
+I nostri principali problemi di rendering sono stati affrontati con la trasparenza, perché la trasparenza può essere costosa su una GPU.
 
-La geometria solida possibile eseguire il rendering da fronte a retro durante la scrittura nel buffer di profondità, arrestare qualsiasi pixel futuri che si trova dietro tale pixel da vengano eliminati. Ciò impedisce l'esecuzione del pixel shader, velocizzando significativamente il processo di pixel nascosto. Se la geometria è ordinata in modo ottimale, ogni pixel sullo schermo verrà disegnata una sola volta.
+È possibile eseguire il rendering della geometria a tinta unita in primo piano durante la scrittura nel buffer di profondità, arrestando eventuali pixel futuri che si trovano dietro il pixel da eliminare. In questo modo si evita che i pixel nascosti eseguano la pixel shader, velocizzando significativamente il processo. Se la geometria è ordinata in modo ottimale, ogni pixel sullo schermo viene disegnato una sola volta.
 
-Esigenze di geometria trasparente da ordinare nuovamente in primo piano e si basa su fusione l'output del pixel shader pixel sullo schermo corrente. Ciò può comportare ogni pixel sullo schermo viene disegnato di più volte per ogni fotogramma, noto come caricamento.
+La geometria trasparente deve essere ordinata di nuovo in primo piano e si basa sulla fusione dell'output del pixel shader al pixel corrente sullo schermo. Questo può comportare la traccia di ogni pixel sullo schermo su più volte per fotogramma, definito sovradisegno.
 
-Per HoloLens e PC "Mainstream", la schermata è possibile compilare solo un numero limitato di volte, rendendo trasparente per il rendering problematico.
+Per i PC HoloLens e mainstream, la schermata può essere compilata solo alcune volte, rendendo problematico il rendering trasparente.
 
-## <a name="introduction-to-datascape-scene-components"></a>Introduzione ai componenti di scena Datascape
+## <a name="introduction-to-datascape-scene-components"></a>Introduzione ai componenti della scena di DataScape
 
-Avevamo tre componenti principali per la scena; **l'interfaccia utente, la mappa**, e **meteo**. Sapevamo sin dall'inizio che l'effetti meteo richiede tutto il tempo GPU è stato possibile ottenere, in modo che è intenzionalmente progettata l'interfaccia utente e un terreno in modo che consentirebbe di ridurre qualsiasi di carica presente.
+Nella nostra scena erano presenti tre componenti principali: **l'interfaccia utente, la mappa**e **il meteo**. Sapevamo che i nostri effetti meteorologici richiedevano tutto il tempo della GPU, quindi abbiamo progettato intenzionalmente l'interfaccia utente e il terreno in modo da ridurre il sovralievo.
 
-L'interfaccia utente viene rielaborata più volte per ridurre al minimo la quantità di caricamento produrrebbe. Abbiamo sbagliato a fianco geometrie più complesse invece di sovrimpressione grafica trasparente uno sopra l'altro per i componenti, ad esempio panoramiche brillante pulsanti e della mappa.
+L'interfaccia utente è stata rielaborata più volte per ridurre al minimo la quantità di sovragenerazione che produce. Ci siamo sbagliati sul lato di una geometria più complessa anziché sovrapporre l'arte trasparente sopra l'altra per componenti come pulsanti luminosi e panoramiche mappa.
 
-Per la mappa, è stato usato uno shader personalizzato che potrebbe eliminare le funzionalità standard di Unity, ad esempio variazioni di luminosità e illuminazione complesse, sostituirli con un modello di illuminazione semplice sun singolo e un calcolo nebbia personalizzato. Questo prodotto un pixel shader semplice e liberare cicli di GPU.
+Per la mappa, abbiamo usato uno shader personalizzato che rimuoverebbe le funzionalità di Unity standard come le ombre e l'illuminazione complessa, sostituendolo con un semplice modello di illuminazione solare singolo e un calcolo di nebbia personalizzato. Ciò ha prodotto una semplice pixel shader e libera i cicli della GPU.
 
-Siamo riusciti a ottenere l'interfaccia utente sia la mappa per il rendering in budget in cui non era necessario qualsiasi di tali modifiche a seconda dell'hardware; Tuttavia, la visualizzazione meteo, in particolare il rendering cloud, ha dimostrato di essere più complesso.
+Abbiamo gestito l'interfaccia utente e la mappa per il rendering in base al budget in cui non sono state necessarie modifiche a seconda dell'hardware; Tuttavia, la visualizzazione Meteo, in particolare il rendering del cloud, si è rivelata una sfida.
 
-## <a name="background-on-cloud-data"></a>Informazioni generali su dati nel cloud
+## <a name="background-on-cloud-data"></a>Informazioni di base sui dati cloud
 
-I dati nel cloud è stati scaricati dai server NOAA (http://nomads.ncep.noaa.gov/) e siamo arrivati in tre livelli 2D distinti, ognuno con l'altezza superiore e inferiore del cloud, nonché la densità del cloud per ogni cella della griglia. I dati è stati elaborati in una trama di informazioni sul cloud in cui ogni componente è stato archiviato nel componente rosso, verde e blu della trama per semplificare l'accesso nella GPU.
+I dati del cloud sono stati scaricati dai server http://nomads.ncep.noaa.gov/) NOAA (e sono Stati Uniti in tre distinti livelli 2D, ognuno con l'altezza superiore e inferiore del cloud, nonché la densità del cloud per ogni cella della griglia. I dati sono stati elaborati in una trama di informazioni cloud in cui ogni componente è stato archiviato nel componente rosso, verde e blu della trama per semplificare l'accesso alla GPU.
 
-## <a name="geometry-clouds"></a>Cloud di geometria
+## <a name="geometry-clouds"></a>Cloud Geometry
 
-Per assicurarsi che i computer con un minore è stato possibile eseguire il rendering nostro cloud abbiamo deciso di iniziare con un approccio che usa la geometria solida per ridurre al minimo estenda.
+Per assicurarsi che i computer meno potenti potessero eseguire il rendering dei cloud, abbiamo deciso di iniziare con un approccio che usa la geometria solida per ridurre al minimo il sovralievo.
 
-Innanzitutto, abbiamo provato producendo cloud tramite la generazione di una rete mesh di heightmap a tinta unita per ogni livello utilizzando il raggio della trama informazioni sul cloud per ogni vertice per generare la forma. Abbiamo utilizzato un geometry shader per produrre i vertici sia nella parte superiore e inferiore del cloud genera forme cloud solida. Viene utilizzato il valore di densità dalla trama per colorare il cloud con i colori più scuri per più cloud ad alta densità.
+Abbiamo prima provato a produrre i cloud generando una mesh heightmap solida per ogni livello usando il raggio della trama delle informazioni sul cloud per ogni vertice per generare la forma. È stato usato un geometry shader per produrre i vertici sia nella parte superiore che nella parte inferiore del cloud che genera forme cloud solide. È stato usato il valore della densità dalla trama per colorare il cloud con colori più scuri per i cloud più densi.
 
 **Shader per la creazione dei vertici:**
 
@@ -98,31 +98,31 @@ fixed4 frag (g2f i) : SV_Target
 }
 ```
 
-È stata introdotta una serie di piccoli disturbi per ottenere altri dettagli su dati reali. Per produrre i bordi arrotondati cloud, viene troncato il pixel nel pixel shader quando il valore del raggio interpolata raggiunge una soglia per rimuovere valori vicino a zero.
+È stato introdotto un piccolo modello di disturbo per ottenere maggiori dettagli sui dati reali. Per produrre i bordi arrotondati del cloud, abbiamo ritagliato i pixel nel pixel shader quando il valore del raggio interpolato raggiunge una soglia per eliminare i valori near zero.
 
-![Cloud di geometria](images/datascape-geometry-clouds-700px.jpg)
+![Cloud Geometry](images/datascape-geometry-clouds-700px.jpg)
 
-Poiché i cloud sono la geometria solida, sia possibile eseguirne il rendering prima del terreno per nascondere tutti i pixel che mappa costose sotto per migliorare ulteriormente la frequenza dei fotogrammi. Questa soluzione è stata eseguita correttamente in tutte le schede di grafica da min-spec alle schede di grafica di alto livello, nonché su HoloLens, a causa dell'approccio di rendering della geometria solida.
+Poiché i cloud sono di tipo geometria uniforme, è possibile eseguirne il rendering prima del terreno per nascondere i pixel di mappa costosi sottostanti per migliorare ulteriormente la frequenza fotogrammi. Questa soluzione è stata eseguita correttamente in tutte le schede grafiche da min-spec a schede grafiche di fascia alta, così come in HoloLens, a causa dell'approccio di rendering a geometria solida.
 
-## <a name="solid-particle-clouds"></a>Cloud particella a tinta unita
+## <a name="solid-particle-clouds"></a>Cloud di particelle solide
 
-Avevamo ora una soluzione di backup che prodotta una ragionevole rappresentazione dei dati cloud, ma è stato un po' lackluster nel fattore di "wow" e non è stato conferiscono il volumetrici si ritiene che volevamo per i computer di fascia alta.
+Ora è disponibile una soluzione di backup che ha prodotto una rappresentazione decente dei dati del cloud, ma è un po' scialbo nel fattore "Wow" e non ha trasmesso l'aspetto volumetrico che volevamo per i nostri computer di fascia alta.
 
-Il passaggio successivo è stato creazione i cloud che essi rappresentano con circa 100.000 particelle per produrre un aspetto più organico e volumetrico.
+Il passaggio successivo consisteva nel creare i cloud, rappresentarli con circa 100.000 particelle per produrre un aspetto più organico e volumetrico.
 
-Se le particelle rimangono solide e ordinare parte anteriore a quella posteriore, è possibile trarre comunque vantaggio dai profondità buffer della faccia posteriore dei pixel dietro le particelle precedentemente sottoposti a rendering, riducendo il caricamento. Inoltre, con una soluzione basata su particella, è possibile modificare la quantità di particelle utilizzato su hardware diverso di destinazione. Tuttavia, tutti i pixel è comunque necessario essere testata profondità, determinando un overhead aggiuntivo.
+Se le particelle vengono mantenute solide e ordinate da front-to-back, è comunque possibile trarre vantaggio dall'abbassamento del buffer di profondità dei pixel dietro le particelle precedentemente sottoposte a rendering, riducendo la sovradisegna Inoltre, con una soluzione basata su particelle, è possibile modificare la quantità di particelle utilizzata per la destinazione di hardware diverso. Tuttavia, tutti i pixel devono comunque essere sottoposti a test di profondità, il che comporta un sovraccarico aggiuntivo.
 
-Sono stati creati dapprima, posizioni delle particelle intorno al punto centrale dell'esperienza all'avvio. Abbiamo distribuito le particelle più efficiente la capacità intorno al centro e meno così la distanza. Tutte le particelle dal centro nella parte posteriore è pre-ordinamento in modo che renda prima di tutto le particelle più vicino.
+In primo luogo, abbiamo creato posizioni particellari intorno al punto centrale dell'esperienza all'avvio. Le particelle sono state distribuite in modo più denso attorno al centro e in meno, a distanza. Sono state pre-ordinate tutte le particelle dal centro verso il retro, in modo da eseguire prima il rendering delle particelle più vicine.
 
-Un compute shader sarebbe campione trama informazioni sul cloud per posizionare ogni particella a un'altezza corretto colore in base la densità.
+Un compute shader campiona la trama delle informazioni sul cloud per posizionare ogni particella a un'altezza corretta e colorarla in base alla densità.
 
-È stato usato *DrawProcedural* per eseguire il rendering di un quadrato per ogni particella consentendone la particella restare sempre aggiornato riguardo la GPU in qualsiasi momento.
+È stato usato *DrawProcedural* per eseguire il rendering di un quad per particella che consente ai dati particellari di rimanere sempre aggiornati sulla GPU.
 
-Ogni particella contenuta sia un'altezza e un raggio. L'altezza è stato in base ai cloud dati campionati dalla trama informazioni sul cloud e il raggio si basava sulla distribuzione iniziale in cui viene calcolato per archiviare la distanza orizzontale per il nodo più vicino. I quadrati utilizzerà questi dati per orientarsi meglio all'interno di se stesso con angolazione dall'altezza, in modo che quando utenti esaminano in senso orizzontale, verranno visualizzato l'altezza e rientrerebbero quando gli utenti preso in esame, dall'alto in basso, l'area compresa tra gli elementi adiacenti.
+Ogni particella contiene un'altezza e un raggio. L'altezza è basata sui dati del cloud campionati dalla trama delle informazioni sul cloud e il raggio è basato sulla distribuzione iniziale, in cui verrebbe calcolato per archiviare la distanza orizzontale rispetto al relativo Neighbor più vicino. I quad useranno questi dati per orientarsi all'angolo in base all'altezza, in modo che, quando gli utenti li esaminano orizzontalmente, l'altezza venga visualizzata e quando gli utenti li esaminano dall'alto verso il basso, viene analizzata l'area tra gli elementi adiacenti.
 
 ![Forma particella](images/particle-shape-700px.png)
 
-**Codice dello shader che illustra la distribuzione:**
+**Codice dello shader che mostra la distribuzione:**
 
 ```
 ComputeBuffer cloudPointBuffer = new ComputeBuffer(6, quadPointsStride);
@@ -160,21 +160,21 @@ v2f vert(uint id : SV_VertexID, uint inst : SV_InstanceID)
 }
 ```
 
-Poiché Ordiniamo le particelle parte anteriore a quella posteriore e viene ancora usato uno shader a tinta unita con stile ai pixel trasparenti clip (blend non), questa tecnica consente di gestire una quantità sorprendente di particelle, evitando costosa disegno eccessivo anche nei computer con un minore.
+Poiché le particelle vengono ordinate in primo piano e si usa ancora uno shader di stile solido per ritagliare i pixel trasparenti (non Blend), questa tecnica gestisce una quantità sorprendente di particelle, evitando un costo eccessivo anche per i computer meno potenti.
 
-## <a name="transparent-particle-clouds"></a>Cloud particella trasparente
+## <a name="transparent-particle-clouds"></a>Cloud di particelle trasparenti
 
-Le particelle solide fornito organica ottimali per la forma dei cloud ma comunque bisogno di qualcosa di vendere fluffiness di cloud. Abbiamo deciso di provare a una soluzione personalizzata per le schede di grafica di alto livello in cui è possibile introdurre la trasparenza.
+Le particelle solide forniscono una buona sensazione organica alla forma dei cloud, ma hanno comunque bisogno di qualcosa per vendere il lanosità di cloud. Si è deciso di provare una soluzione personalizzata per le schede grafiche di fascia alta in cui è possibile introdurre la trasparenza.
 
-A tale scopo è semplicemente passata l'ordinamento iniziale delle particelle e modificare lo shader per utilizzare il canale alfa di trame.
+A tale scopo, è sufficiente passare l'ordinamento iniziale delle particelle e modificare lo shader in modo da usare l'alfa delle trame.
 
-![Fluffy cloud](images/fluffy-clouds-700px.jpg)
+![Cloud soffici](images/fluffy-clouds-700px.jpg)
 
-Che era eccezionale ma si è rivelata troppo pesante per anche le macchine più complesse perché il risultato sarà il rendering di ogni pixel sullo schermo centinaia di volte!
+Ha avuto un aspetto notevole, ma si è dimostrata troppo pesante anche per le macchine più dure, perché comporterebbe il rendering di ogni pixel sullo schermo centinaia di volte.
 
-## <a name="render-off-screen-with-lower-resolution"></a>Eseguire il rendering fuori schermo con risoluzione inferiore
+## <a name="render-off-screen-with-lower-resolution"></a>Rendering fuori schermo con risoluzione inferiore
 
-Per ridurre il numero di pixel sottoposti a rendering per il cloud, abbiamo iniziato a essi per il rendering nel buffer di risoluzione di un trimestre (rispetto alla schermata) e l'adattamento il risultato finale il backup sullo schermo, dopo che tutte le particelle erano state disegnate. Questo ci ha offerto più o meno un aumento della velocità 4 x, ma integrava un paio di aspetti.
+Per ridurre il numero di pixel di cui è stato eseguito il rendering dai cloud, abbiamo iniziato a eseguirne il rendering in un buffer di risoluzione trimestre (rispetto allo schermo) e allungando il risultato finale sullo schermo dopo che sono state disegnate tutte le particelle. In questo modo è stato fornito approssimativamente un aumento di velocità di 4x, ma sono stati introdotti alcuni aspetti.
 
 **Codice per il rendering fuori schermo:**
 
@@ -198,41 +198,41 @@ cloudCamera.targetTexture = null;
 cloudBlendingCommand.Blit(currentCloudTexture, new RenderTargetIdentifier(BuiltinRenderTextureType.CurrentActive), blitMaterial);
 ```
 
-In primo luogo, durante il rendering in un buffer fuori schermo, abbiamo perdita di tutte le informazioni di profondità dal nostro scena principale, conseguente particelle dietro montagne rendering nella parte superiore di mountain.
+Per prima cosa, quando si esegue il rendering in un buffer fuori schermo, abbiamo perso tutte le informazioni di profondità dalla nostra scena principale, ottenendo particelle dietro le montagne che si basano sulla montagna.
 
-In secondo luogo, l'adattamento del buffer sono stati introdotti gli elementi sui bordi dei nostri cloud in cui la modifica di risoluzione è evidente. Due sezioni successive parleremo di come è stato risolto questi problemi.
+In secondo luogo, l'estensione del buffer ha introdotto anche elementi sui bordi dei cloud in cui la modifica della risoluzione era evidente. Nelle due sezioni successive viene illustrato il modo in cui sono stati risolti questi problemi.
 
 ## <a name="particle-depth-buffer"></a>Buffer profondità particella
 
-Per rendere le particelle coesiste con la geometria del mondo in cui un oggetto o mountain può coprire le particelle dietro di essa, viene popolato il buffer fuori schermo con un buffer di profondità contenente la geometria della scena principale. Per generare tale buffer di profondità, abbiamo creato una fotocamera secondo, il rendering solo la geometria solida e profondità della scena.
+Per fare in modo che le particelle coesistano con la geometria globale in cui una montagna o un oggetto può coprire le particelle sottostanti, è stato popolato il buffer fuori schermo con un buffer di profondità contenente la geometria della scena principale. Per produrre tale buffer di profondità, è stata creata una seconda fotocamera, che consente di eseguire il rendering solo della geometria solida e della profondità della scena.
 
-La nuova trama viene quindi utilizzato nel pixel shader dei cloud per nasconde i colori pixel. Abbiamo utilizzato la trama stessa per calcolare la distanza di geometria dietro a un pixel di cloud. Utilizzando tale distanza e applicarlo al valore alfa del pixel, avevamo a questo punto l'effetto dei cloud dissolvenza in uscita mano a mano che vicino al terreno, la rimozione di qualsiasi disco rigidi tagli incontro tra le particelle e terreno.
+È stata quindi usata la nuova trama nel pixel shader dei cloud per occludere pixel. È stata usata la stessa trama per calcolare la distanza alla geometria dietro un pixel del cloud. Usando tale distanza e applicando l'alfa del pixel, ora si è verificato l'effetto dei cloud che si avvicinano al terreno, rimuovendo eventuali tagli rigidi in cui le particelle e il terreno soddisfano.
 
-![Cloud devono essere smussati nel terreno](images/clouds-blended-to-terrain-700px.jpg)
+![Cloud combinati in un terreno](images/clouds-blended-to-terrain-700px.jpg)
 
-## <a name="sharpening-the-edges"></a>Aumento della nitidezza bordi
+## <a name="sharpening-the-edges"></a>Affilatura dei bordi
 
-I cloud esteso-up era quasi identici per i cloud di dimensioni normali il fulcro delle particelle o in cui sono sovrapposte, ma ha illustrato alcuni elementi in corrispondenza dei bordi cloud. In caso contrario bordi sharp apparirebbe sfocati e sono stati introdotti gli effetti di alias quando spostato la fotocamera.
+I cloud estesi sembravano quasi identici ai cloud di dimensioni normali al centro delle particelle o dove si sovrappongono, ma mostravano alcuni artefatti ai bordi del cloud. In caso contrario, i bordi nitidi appaiono sfocati e sono stati introdotti gli effetti degli alias quando la fotocamera si sposta.
 
-Abbiamo risolto questo problema eseguendo un semplice shader nel buffer fuori schermo per determinare dove notevoli modifiche invece si è verificato un (1). Abbiamo inserito i pixel con notevoli modifiche in un nuovo buffer di stencil (2). Successivamente, abbiamo utilizzato il buffer di stencil per nascondere le aree a contrasto elevato quando si applica il buffer fuori schermo nella schermata di conseguente fori e tutto il cloud (3).
+Per risolvere il problema, è possibile eseguire uno shader semplice sul buffer fuori schermo per determinare il punto in cui si è verificata una grande variazione di contrasto (1). Si inseriscono i pixel con grandi modifiche in un nuovo buffer di stencil (2). È stato quindi usato il buffer dello stencil per mascherare queste aree a contrasto elevato quando si applica il buffer fuori schermo allo schermo, ottenendo buchi in e intorno ai cloud (3).
 
-Abbiamo quindi tutte le particelle eseguire nuovamente il rendering in modalità schermo intero, ma questa volta utilizzato il buffer di stencil per nascondere tutti gli elementi, ma i bordi, risultante in un set minimo di pixel tocca (4). Poiché il buffer dei comandi è stata già creato per le particelle, abbiamo dovuto semplicemente eseguirne il rendering nuovamente alla nuova fotocamera.
+È stato quindi eseguito il rendering di tutte le particelle in modalità a schermo intero, ma questa volta usava il buffer dello stencil per mascherare tutti gli elementi, tranne i bordi, ottenendo un set minimo di pixel interessati (4). Poiché il buffer dei comandi era già stato creato per le particelle, era sufficiente eseguirne il rendering nella nuova fotocamera.
 
-![Progressione di rendering cloud bordi](images/cloud-steps-1-4-700px.jpg)
+![Progressione del rendering dei bordi del cloud](images/cloud-steps-1-4-700px.jpg)
 
-Il risultato finale era ben strutturati bordi con sezioni center ed economici del cloud.
+Il risultato finale è costituito da bordi acuti con sezioni del centro a basso costo dei cloud.
 
-Mentre questo era molto più veloce rispetto a rendering tutte le particelle nel schermo intero, esiste comunque un costo associato con il test di un pixel con buffer di stencil, in modo che estenda ancora di una notevole quantità di fornito con un costo.
+Sebbene questa operazione fosse molto più rapida rispetto al rendering di tutte le particelle a schermo intero, c'è ancora un costo associato al test di un pixel sul buffer dello stencil.
 
-## <a name="culling-particles"></a>Le particelle della faccia posteriore
+## <a name="culling-particles"></a>Eliminazione di particelle
 
-L'effetto del vento, viene generato lungo le strisce di triangoli in un compute shader, creazione di valore molti del vento in tutto il mondo. Mentre l'effetto del vento non era impegnativa velocità di riempimento a causa di strisce skinny generato, ha prodotto molte centinaia di migliaia di vertici generino un carico eccessivo per vertex shader.
+Per l'effetto vento, sono state generate strisce di triangolo lungo in un compute shader, creando molti WISP di vento nel mondo. Sebbene l'effetto vento non fosse pesante per la velocità di riempimento dovuta alle strisce skinny generate, ha prodotto molte centinaia di migliaia di vertici, causando un carico elevato per il vertex shader.
 
-È stato introdotto accodare buffer presenti a del compute shader per inserire un sottoinsieme delle strisce wind da disegnare. Con una visualizzazione semplice cono culling logica nel compute shader, è stato possibile determinare se è stata una striscia di fuori di fotocamera ed evitare che venga aggiunto al buffer di push. Ciò ridurrà la quantità di strisce considerevolmente, liberare alcuni cicli necessari nella GPU.
+Sono stati introdotti i buffer di accodamento nel compute shader per inserire un subset di strisce di vento da disegnare. Con una semplice visualizzazione della logica di eliminazione tronco in compute shader, è possibile determinare se una striscia era esterna alla visualizzazione della fotocamera e impedire che venga aggiunta al buffer di push. Ciò ha ridotto significativamente la quantità di strisce, liberando alcuni cicli necessari sulla GPU.
 
 **Codice che illustra un buffer di Accodamento:**
 
-*COMPUTE shader:*
+*Compute Shader:*
 
 ```
 AppendStructuredBuffer<int> culledParticleIdx;
@@ -241,7 +241,7 @@ if (show)
     culledParticleIdx.Append(id.x);
 ```
 
-*C#codice:*
+*C#codice*
 
 ```
 protected void Awake() 
@@ -267,56 +267,56 @@ protected void Update()
 }
 ```
 
-Abbiamo provato a usare la stessa tecnica sulle particelle cloud, in cui si sarebbe li riforma del compute shader e push solo le particelle visibile da sottoporre a rendering. Questa tecnica in realtà non è stato salvato us soffermano molto sulle GPU poiché il collo di bottiglia principale era il pixel quantità sottoposti a rendering sullo schermo e non il costo di calcolo di vertici.
+Si è provato a usare la stessa tecnica sulle particelle cloud, in cui è possibile eliminarle in compute shader e inserire solo le particelle visibili per il rendering. Questa tecnica in realtà non ci ha salvato molto sulla GPU poiché il collo di bottiglia più grande era la quantità di pixel di cui è stato eseguito il rendering sullo schermo e non il costo di calcolo dei vertici.
 
-L'altro problema con questa tecnica è che il buffer append popolato in ordine casuale grazie alla sua natura parallelizzata delle particelle, causando le particelle ordinate sia non ordinata, determinando lo sfarfallio particelle di cloud computing.
+L'altro problema di questa tecnica è che il buffer di accodamento è stato popolato in ordine casuale a causa della natura parallela di calcolo delle particelle, causando la mancata ordinamento delle particelle ordinate, con conseguente sfarfallio delle particelle cloud.
 
-Sono disponibili le tecniche per ordinare il buffer di push, ma la quantità limitata di miglioramento delle prestazioni ottenuto all'esterno della faccia posteriore particelle sarebbe probabilmente essere con offset con un ordinamento aggiuntivo, pertanto abbiamo deciso di non adottare questa ottimizzazione.
+Esistono tecniche per ordinare il buffer di push, ma la quantità limitata di miglioramento delle prestazioni ottenuta dall'abbassamento di livello delle particelle verrebbe probabilmente sfalsata con un ordinamento aggiuntivo, quindi si è deciso di non eseguire questa ottimizzazione.
 
 ## <a name="adaptive-rendering"></a>Rendering adattivo
 
-Per garantire una frequenza dei fotogrammi costante in un'app con diversi per il rendering di condizioni, come un cloud vs una visione chiara, presentammo adattive per il rendering dell'app.
+Per garantire un framerate costante in un'app con diverse condizioni di rendering, ad esempio un Cloudy rispetto a una visualizzazione chiara, abbiamo introdotto il rendering adattivo per l'app.
 
-Il primo passaggio di rendering adattivo è misurare GPU. Abbiamo fatto ciò, inserendo codice personalizzato nel buffer dei comandi GPU all'inizio e alla fine di un frame sottoposto a rendering, acquisizione entrambi sinistra a destra dell'occhio tempo dello schermo.
+Il primo passaggio del rendering adattivo consiste nella misurazione della GPU. Questa operazione è stata apportata inserendo codice personalizzato nel buffer dei comandi della GPU all'inizio e alla fine di un frame di cui è stato eseguito il rendering, acquisendo l'ora dello schermo a sinistra e a destra.
 
-Misurando il tempo impiegato per il rendering e confrontandolo con la frequenza di aggiornamento desiderata che abbiamo un'idea di quanto si avvicina eravamo alla perdita di fotogrammi.
+Misurando il tempo impiegato per il rendering e il confronto con la frequenza di aggiornamento desiderata, è stato rilevato il modo in cui è possibile eliminare i frame.
 
-Quando più vicino di perdita di fotogrammi, abbiamo adattare il rendering per renderlo più rapido. Un modo semplice di adattamento sta cambiando le dimensioni del viewport della schermata, che richiedono meno pixel sottoposti a rendering.
+Quando ci si avvicina alla rimozione di frame, il rendering viene adattato in modo da renderlo più veloce. Un modo semplice per adattarsi è modificare la dimensione del viewport dello schermo, richiedendo meno pixel per il rendering.
 
-Usando *UnityEngine.XR.XRSettings.renderViewportScale* automaticamente estende il risultato al adatta la schermata e si riduce il riquadro di visualizzazione destinazione sistema. Una piccola modifica della scala è poco evidente sulla geometria mondo e un fattore di scala di 0,7 richiede la metà dei pixel da sottoporre a rendering.
+Utilizzando *UnityEngine. XR. XRSettings. renderViewportScale* , il sistema compatta il viewport di destinazione e estende automaticamente il backup del risultato per adattarlo allo schermo. Una piccola modifica apportata alla scalabilità è difficilmente evidente sulla geometria globale e un fattore di scala 0,7 richiede metà della quantità di pixel di cui eseguire il rendering.
 
-![scala il 70%, metà del numero di pixel](images/datascape-scaling-700px.jpg)
+![70% di scala, metà dei pixel](images/datascape-scaling-700px.jpg)
 
-Quando viene rilevato che si sta tentando di eliminare i frame è ridurre la scala per un numero fisso e aumentare nuovamente quando viene eseguito abbastanza velocemente nuovamente.
+Quando si rileva che si sta per eliminare i frame, la scala viene ridotta di un numero fisso e viene rimossa quando viene eseguita di nuovo in modo rapido.
 
-Anche se è stato deciso quale tecnica cloud da usare basate sulle grafica funzionalità dell'hardware all'avvio, è possibile basarla su dati dalla misura GPU per impedire al sistema di rimanere bassa risoluzione per molto tempo, ma si tratta di qualcosa che non è stato ora  per esplorare in Datascape.
+Sebbene sia stata decisa la tecnica cloud da usare in base alle funzionalità grafiche dell'hardware all'avvio, è possibile basarlo sui dati della misurazione GPU per evitare che il sistema si trovi a bassa risoluzione per un lungo periodo di tempo, ma questo è un problema che non abbiamo avuto tempo  per esplorare in DataScape.
 
 ## <a name="final-thoughts"></a>Considerazioni finali
 
-Come destinazione un'ampia gamma di hardware è difficile e richiede una pianificazione.
+La definizione di un'ampia gamma di hardware è impegnativa e richiede una pianificazione.
 
-È consigliabile iniziare con un minore di computer per acquisire familiarità con lo spazio dei problemi e sviluppare una soluzione di backup che verrà eseguito su tutti i computer di destinazione. Progettare una soluzione con velocità di riempimento presente, dal momento che pixel sarà la risorsa più preziosa. Geometria solida di destinazione tramite la trasparenza.
+Si consiglia di iniziare a utilizzare computer con una gestione più bassa per acquisire familiarità con lo spazio del problema e sviluppare una soluzione di backup che viene eseguita su tutti i computer. Progettare la soluzione tenendo presente la velocità di riempimento, dal momento che i pixel saranno la risorsa più preziosa. Specificare come destinazione una geometria solida rispetto alla trasparenza.
 
-Con una soluzione di backup, è possibile quindi avviare dei livelli nella maggiore complessità per i computer di fascia alta o forse semplicemente migliorare la risoluzione della soluzione di backup.
+Con una soluzione di backup, è quindi possibile avviare la sovrapposizione in modo più complesso per i computer di fascia alta o forse semplicemente migliorare la risoluzione della soluzione di backup.
 
-Progettare per gli scenari peggiori e forse provare a usare rendering adattivo per situazioni di intenso.
+Progettare per scenari peggiori e forse prendere in considerazione l'uso del rendering adattivo per situazioni complesse.
 
 ## <a name="about-the-authors"></a>Informazioni sugli autori
 
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Tecnico del software @Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>Software Engineer@Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Tecnico del software @Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Software Engineer@Microsoft</td>
 </tr>
 </table>
 
 
 ## <a name="see-also"></a>Vedere anche
-* [Ottenere informazioni sulle prestazioni per realtà mista](understanding-performance-for-mixed-reality.md)
-* [Raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md)
+* [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
+* [Suggerimenti sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 
  

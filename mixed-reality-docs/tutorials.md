@@ -1,12 +1,12 @@
 ---
 layout: LandingPage
-title: Esercitazioni e le app di esempio
-description: Fornisce esempi di codice ed esercitazioni sullo sviluppo di realtà mista.
+title: Esercitazioni e app di esempio
+description: Fornisce esempi di codice ed esercitazioni sullo sviluppo di realtà miste.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, esercitazione
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione
 ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -14,34 +14,34 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67415398"
 ---
-# <a name="tutorials-and-sample-apps"></a>Esercitazioni e le app di esempio
+# <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
-Attualmente tutte le esercitazioni e le app di esempio sono basati su Unity.  Quando si sviluppa il contenuto per altri motori e piattaforme, si noterà li sotto l'intestazione rilevante nel sommario.
+Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity.  Quando si sviluppano contenuti per altri motori e piattaforme, questi si troveranno sotto l'intestazione pertinente nel sommario.
 
 ## <a name="mr-learning-modules"></a>Moduli di apprendimento sulla realtà mista
 
-I moduli di apprendimento MR sono progettati per consentire agli sviluppatori informazioni su entrambe le tecniche e procedure consigliate per lo sviluppo di applicazioni di realtà mista.  I moduli iniziali per HoloLens 2 che implementano il Toolkit 2.0 realtà mista (MRTK 2.0).
-* Il modulo di base è lo scopo di illustrare agli sviluppatori come configurare il progetto con MRTK, nonché di implementazione dell'interfaccia utente, il Mapping spaziale e interazioni di base e avanzate
+I moduli di formazione di MR sono progettati per aiutare gli sviluppatori a conoscere le tecniche e le procedure consigliate per lo sviluppo di applicazioni di realtà miste.  I moduli iniziali sono per HoloLens 2 e implementano il Toolkit di realtà mista 2,0 (MRTK 2,0).
+* Il modulo di base ha lo scopo di illustrare agli sviluppatori come configurare il progetto con MRTK, oltre a implementare interfaccia utente, mapping spaziale e interazioni di base e avanzate
 
 ## <a name="open-source-sample-apps"></a>App di esempio Open Source
 
-L'app di esempio open source sono applicazioni che sono state create dai nostri team e forniamo il codice sorgente in modo che gli sviluppatori è stato possibile analizzarlo e scopri dai nostri progetti.
+Le app di esempio Open Source sono applicazioni create dai nostri team e abbiamo fornito il codice sorgente in modo che gli sviluppatori possano esaminarlo e apprendere i nostri progetti.
 
-## <a name="mixed-reality-academy-tutorials"></a>Esercitazioni Academy realtà mista
+## <a name="mixed-reality-academy-tutorials"></a>Esercitazioni su realtà mista Academy
 
-Academy la realtà mista è un set di esercitazioni online con i corrispondenti file di progetto: 
-* Le esercitazioni concernono 100, 200 e 300 negli argomenti di livello, in cui: Nozioni di base include 100 a livello di progetto, livello 200 quinte MR costitutivi fondamentali e integrazione del servizio cloud di livello 300 quinte.
-* La maggior parte dei corsi coprono i concetti applicabili di HoloLens e coinvolgenti auricolari (VR). 
-* Ogni esercitazione è organizzato in base capitolo e includere più dimostrazioni video di concetti chiave. 
-* Un PC Windows 10 con il valore corretto [sono installati gli strumenti](install-the-tools.md) è un requisito comune per il completamento di ogni esercitazione.
+Mixed Reality Academy è un set di esercitazioni dettagliate online con i file di progetto corrispondenti: 
+* Le esercitazioni coprono gli argomenti del livello 100, 200 e 300, in cui: il livello 100 copre le nozioni di base del progetto, il livello 200 copre i principali blocchi predefiniti e il livello 300 riguarda l'integrazione del servizio cloud.
+* La maggior parte dei corsi copre i concetti applicabili sia agli auricolari HoloLens che immersivi (VR). 
+* Ogni esercitazione è organizzata per capitolo e la maggior parte include dimostrazioni video dei concetti chiave. 
+* Un PC Windows 10 con gli [strumenti corretti installati](install-the-tools.md) è un prerequisito comune per completare ogni esercitazione.
 
 >[!NOTE]
->Le esercitazioni Academy di realtà mista sono state progettate con HoloLens (dal 1 ° generazione) e mista auricolari Immersive realtà presente.  Siamo di conseguenza, che è importante non cancellare le esercitazioni create per gli sviluppatori che stanno ancora cercando indicazioni per lo sviluppo per tali dispositivi.  Queste esercitazioni verranno **_non_** verrà aggiornata con il set di strumenti o in uso per HoloLens 2 interazioni più recente.  Essi verranno mantenute per continuare a utilizzare i dispositivi supportati. Sarà presente una nuova serie di esercitazioni che verranno pubblicati in futuro che consentiranno di dimostrare come lo sviluppo per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a tali esercitazioni quando vengono registrate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                                    <a href="holograms-100.md" title="Nozioni di base di MR 100" data-linktype="absolute-path">
+                                    <a href="holograms-100.md" title="Nozioni fondamentali 100" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -51,8 +51,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni fondamentali di MR 100: Introduzione a Unity</h3>
-                                                    <p>Creare un'app di realtà mista di base con Unity. Questo progetto può quindi essere usato come modello di partenza per qualsiasi app MR che si potrebbe voler creare in Unity.</p>
+                                                    <h3>Nozioni fondamentali 100: Introduzione a Unity</h3>
+                                                    <p>Creare un'app di base per realtà mista con Unity. Questo progetto può quindi essere usato come modello di partenza per qualsiasi app MR che si vuole creare in Unity.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,7 +60,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                </a>
                             </li>
                             <li>
-                                  <a href="holograms-101.md" title="Nozioni di base di MR 101" data-linktype="absolute-path">
+                                  <a href="holograms-101.md" title="Nozioni fondamentali 101" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -70,8 +70,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni fondamentali di MR 101: Progetto completo con dispositivo</h3>
-                                                    <p>Configurare un progetto completo, Introduzione a core mista funzionalità realtà (sguardo, movimento, vocali, spaziale audio e mapping spaziale) usando un dispositivo HoloLens.</p>
+                                                    <h3>Nozioni fondamentali 101: Completa progetto con dispositivo</h3>
+                                                    <p>Configurare un progetto completo, introducendo funzionalità di base per la realtà mista (sguardi, movimenti, voce, suono spaziale e mapping spaziale) usando un dispositivo HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +79,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                </a>
                             </li>
                             <li>
-                                <a href="holograms-101e.md" title="Nozioni di base di MR 101E" data-linktype="absolute-path">
+                                <a href="holograms-101e.md" title="Nozioni di base su 101E" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -89,8 +89,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Nozioni fondamentali di MR 101E: Progetto completo con emulatore</h3>
-                                                    <p>Configurare un progetto completo, Introduzione a core mista funzionalità realtà (sguardo, movimento, vocali, spaziale audio e mapping spaziale) usando l'emulatore di HoloLens.</p>
+                                                    <h3>Nozioni di base su 101E: Completa progetto con emulatore</h3>
+                                                    <p>Configurare un progetto completo, introducendo funzionalità di base per la realtà mista (sguardi, movimenti, voce, suono spaziale e mapping spaziale) usando l'emulatore di HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,8 +108,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Input di MR 210: Sguardo fisso</h3>
-                                              <p>Sguardo è il primo modulo di input e rivela consapevolezza e finalità dell'utente. Consapevolezza contestuale aggiungerà al cursore e vntana, sfruttando al meglio ciò che l'app conosce sguardo dell'utente.</p>
+                                              <h3>Input MR 210: Sguardo fisso</h3>
+                                              <p>Lo sguardo è la prima forma di input e rivela la finalità e la consapevolezza dell'utente. Si aggiungerà la consapevolezza contestuale al cursore e agli ologrammi, sfruttando appieno i vantaggi offerti dall'app per quanto riguarda lo sguardo dell'utente.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -127,8 +127,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Input di MR 211: Movimento</h3>
-                                              <p>I movimenti trasformano intenzione dell'utente in azione. I movimenti, gli utenti possono interagire con vntana. In questo corso, si apprenderà a tenere traccia delle lancette dell'utente, rispondere all'input dell'utente e fornire commenti e suggerimenti basati su stato di disponibilità e la posizione.</p>
+                                              <h3>Input MR 211: Movimento</h3>
+                                              <p>I movimenti attivano l'azione dell'utente. Con i movimenti, gli utenti possono interagire con gli ologrammi. In questo corso si apprenderà come tenere traccia delle mani dell'utente, rispondere all'input dell'utente e fornire commenti e suggerimenti in base allo stato e alla posizione della mano.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -146,8 +146,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Input di MR 212: Comandi vocali</h3>
-                                              <p>Vocale consente di interagire con i nostri vntana in modo più semplice e naturale. In questo corso, si apprenderà a rendere gli utenti consapevoli di comandi vocali disponibile, inviare commenti e suggerimenti che è stato sentito un comando vocale e usare la dettatura per capire cosa che informa che l'utente.</p>
+                                              <h3>Input MR 212: Comandi vocali</h3>
+                                              <p>Voice ci permette di interagire con gli ologrammi in modo semplice e naturale. In questo corso verrà illustrato come rendere gli utenti consapevoli dei comandi vocali disponibili, fornire commenti e suggerimenti su un comando vocale e utilizzare la dettatura per capire cosa sta dicendo l'utente.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -165,8 +165,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Input di MR 213: Controller di movimento</h3>
-                                              <p>Questo corso verrà illustrati modi di visualizzazione controller di movimento in coinvolgenti auricolari (VR), la gestione degli eventi di input e allegare elementi dell'interfaccia utente personalizzati per i controller.</p>
+                                              <h3>Input MR 213: Controller di movimento</h3>
+                                              <p>Questo corso analizzerà le modalità di visualizzazione dei controller di movimento in auricolari immersivi (VR), la gestione degli eventi di input e il fissaggio degli elementi dell'interfaccia utente personalizzati ai controller.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -185,7 +185,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                           </div>
                                           <div class="cardText">
                                               <h3>MR Spatial 220: Audio spaziale</h3>
-                                              <p>Suono spaziale armonioso suscita vita in ologrammi e offre loro presenza. In questo corso, si apprenderà a usare un suono spaziale a terra vntana nel mondo circostante, inviare commenti e suggerimenti durante le interazioni e utilizzare audio per trovare le vntana.</p>
+                                              <p>Il suono spaziale respira la vita negli ologrammi e offre loro la presenza. In questo corso si apprenderà come usare il suono spaziale per gli ologrammi di base nel mondo circostante, fornire commenti e suggerimenti durante le interazioni e usare l'audio per trovare gli ologrammi.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -204,7 +204,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                           </div>
                                           <div class="cardText">
                                               <h3>MR Spatial 230: Mapping spaziale</h3>
-                                              <p>Mapping spaziale riunisce il mondo reale e il mondo virtuale. Si sarà esplorare gli shader e usarle per visualizzare lo spazio. Quindi imparerai a semplificare la mesh chat room in semplici piani, inviare commenti e suggerimenti sull'inserimento vntana nelle aree del mondo reale ed esplorare gli effetti visivi occlusione.</p>
+                                              <p>Il mapping spaziale porta insieme il mondo reale e il mondo virtuale. Esplorare gli shader e usarli per visualizzare lo spazio. Si apprenderà quindi a semplificare la rete locale in semplici piani, fornire commenti e suggerimenti su come collocare gli ologrammi sulle superfici reali ed esplorare gli effetti visivi di occlusione.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -212,7 +212,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                              </a>
                             </li> 
                                 <li>
-                                <a href="holograms-240.md" title="MR Sharing 240" data-linktype="absolute-path">
+                                <a href="holograms-240.md" title="Condivisione MR 240" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -222,8 +222,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR Sharing 240: Più dispositivi HoloLens</h3>
-                                              <p>Il progetto di //Build 2016! Configurare un progetto completo con i sistemi di coordinate condivisi tra i dispositivi HoloLens, consentendo agli utenti di prendere parte in un mondo holographic condiviso.</p>
+                                              <h3>MR sharing 240: Più dispositivi HoloLens</h3>
+                                              <p>Il nostro progetto Build 2016! Configura un progetto completo con sistemi di coordinate condivisi tra dispositivi HoloLens, consentendo agli utenti di partecipare a un mondo olografico condiviso.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -231,7 +231,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                              </a>
                             </li> 
                                  <li>
-                                   <a href="mixed-reality-250.md" title="MR Sharing 250" data-linktype="absolute-path">
+                                   <a href="mixed-reality-250.md" title="Condivisione MR 250" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -241,8 +241,8 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR Sharing 250: HoloLens e auricolari coinvolgenti</h3>
-                                              <p>Nel progetto di //Build 2017, viene illustrato come creare un'app che sfrutta i punti di forza di HoloLens e coinvolgenti auricolari (VR) all'interno di un'esperienza più dispositivi condivisa.</p>
+                                              <h3>MR sharing 250: HoloLens e auricolari immersivi</h3>
+                                              <p>Nel progetto Build 2017, viene illustrata la creazione di un'app che sfrutta i vantaggi esclusivi degli auricolari HoloLens e immersivi (VR) in un'esperienza condivisa tra dispositivi.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -253,7 +253,7 @@ Academy la realtà mista è un set di esercitazioni online con i corrispondenti 
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Esercitazioni per realtà mista e servizi di Azure
 
-Queste esercitazioni autonome sono estremamente utili per imparare a implementare diversi servizi di Azure nel progetto Unity.  Queste esercitazioni sono tutti basate su entrambi HoloLens (dal 1 ° generazione) o nostro auricolari coinvolgenti, ma le lezioni sull'utilizzo dei servizi devono essere applicabili a qualsiasi dispositivo.
+Queste esercitazioni autonome sono molto interessanti per imparare a implementare diversi servizi di Azure nel progetto Unity.  Queste esercitazioni sono tutte basate su HoloLens (1a generazione) o sugli auricolari immersivi, ma le lezioni sull'uso dei servizi devono essere trasferibili alla maggior parte dei dispositivi.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -268,7 +268,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 301: Traduzioni</h3>
-                                              <p>Usando l'API traduzione testuale di Azure, l'app di realtà mista può traslare vocale in testo in un'altra lingua. Scopri come in questo corso!</p>
+                                              <p>Usando il API Traduzione testuale di Azure, l'app per la realtà mista può tradurre la voce in testo in un altro linguaggio. Scopri come in questo corso.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -287,7 +287,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 302: Visione artificiale</h3>
-                                              <p>Usare API visione artificiale di Azure in un'app di realtà mista per l'elaborazione di immagini e l'analisi, senza eseguire il training di un modello.</p>
+                                              <p>Usa le API Visione artificiale di Azure in un'app di realtà mista per l'elaborazione e l'analisi delle immagini, senza eseguire il training di un modello.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -295,7 +295,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-302b.md" title="MR e 302b Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-302b.md" title="MR e Azure 302B" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -305,8 +305,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e 302b Azure: Servizio visione artificiale personalizzato</h3>
-                                              <p>Informazioni su come eseguire il training di un modello di machine learning e usare il modello con training per l'analisi e l'elaborazione di immagini.</p>
+                                              <h3>MR e Azure 302B: Visione personalizzata</h3>
+                                              <p>Informazioni su come eseguire il training di un modello di apprendimento automatico e usare il modello sottoposto a training per l'elaborazione e l'analisi delle immagini.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -325,7 +325,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 303: Comprensione del linguaggio naturale</h3>
-                                              <p>Questo corso ti spiegherà come usare il servizio Azure LUIS (Language Understanding) per aggiungere comprensione del linguaggio naturale nella tua app di realtà mista.</p>
+                                              <p>Questo corso ti insegnerà come usare il servizio Azure Language Understanding (LUIS) per aggiungere la comprensione del linguaggio naturale all'app per realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -343,8 +343,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 304: Rilevamento viso</h3>
-                                              <p>Informazioni su come usare l'API viso di Azure per eseguire il rilevamento viso e il riconoscimento nell'app per la realtà mista.</p>
+                                              <h3>MR e Azure 304: Riconoscimento viso</h3>
+                                              <p>Informazioni su come usare il API Viso di Azure per eseguire il rilevamento e il riconoscimento dei volti nell'app per realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -363,7 +363,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 305: Funzioni e archiviazione</h3>
-                                              <p>In questo corso si apprenderà come creare e usare funzioni di Azure e archiviare i dati in archiviazione di Azure, all'interno di un'app per realtà mista.</p>
+                                              <p>In questo corso si apprenderà come creare e usare funzioni di Azure e archiviare i dati all'interno di archiviazione di Azure, all'interno di un'app realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -381,8 +381,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 306: Lo streaming di video</h3>
-                                              <p>Informazioni su come usare servizi multimediali di Azure per trasmettere video a 360 gradi all'interno di una realtà mista di Windows esperienza coinvolgente e concreto (VR).</p>
+                                              <h3>MR e Azure 306: Video di streaming</h3>
+                                              <p>Informazioni su come usare servizi multimediali di Azure per trasmettere video di 360 gradi all'interno di un'esperienza di realtà mista (VR) di Windows.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -401,7 +401,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 307: Machine Learning</h3>
-                                              <p>Usare Azure Machine Learning Studio all'interno dell'app di realtà mista per distribuire un numero elevato di algoritmi di machine learning (ML).</p>
+                                              <p>È possibile sfruttare Azure Machine Learning Studio all'interno dell'app per la realtà mista per distribuire un numero elevato di algoritmi di Machine Learning (ML).</p>
                                           </div>
                                       </div>
                                   </div>
@@ -419,8 +419,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 308: Notifiche di più dispositivi</h3>
-                                              <p>In questo corso, si apprenderà come usare diversi servizi di Azure per recapitare le notifiche push e scene viene modificata da un'app per PC a un'app per realtà mista.</p>
+                                              <h3>MR e Azure 308: Notifiche tra dispositivi</h3>
+                                              <p>In questo corso si apprenderà come usare diversi servizi di Azure per inviare notifiche push e modifiche di scena da un'app per PC a un'app per realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -438,8 +438,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 309: Insights dell'applicazione</h3>
-                                              <p>Usare il servizio di Azure Application Insights per raccogliere analitica sul comportamento degli utenti all'interno di un'app per realtà mista.</p>
+                                              <h3>MR e Azure 309: Application Insights</h3>
+                                              <p>Usare il servizio applicazione Azure Insights per raccogliere i dati analitici sul comportamento dell'utente all'interno di un'app realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -457,8 +457,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 310: Rilevamento di oggetti</h3>
-                                              <p>Eseguire il training di un modello di machine learning e usare il modello con training per riconoscere gli oggetti simili e le relative posizioni in tutto il mondo fisico.</p>
+                                              <h3>MR e Azure 310: Rilevamento oggetti</h3>
+                                              <p>Eseguire il training di un modello di apprendimento automatico e usare il modello sottoposto a training per riconoscere oggetti simili e le rispettive posizioni nel mondo fisico.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -466,7 +466,7 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                               </a>
                             </li> 
                                  <li>
-                                   <a href="mr-azure-311.md" title="MR e 311 di Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-311.md" title="MR e Azure 311" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -476,8 +476,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e 311 Azure: Microsoft Graph</h3>
-                                              <p>Informazioni su come connettersi a servizi di Microsoft Graph da un'app per realtà mista.</p>
+                                              <h3>MR e Azure 311: Microsoft Graph</h3>
+                                              <p>Informazioni su come connettersi ai servizi Microsoft Graph dall'interno di un'app di realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -495,8 +495,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 312: Integrazione di BOT</h3>
-                                              <p>Creare e distribuire un bot tramite Microsoft Bot Framework v4 e comunicare con esso in un'app di realtà mista.</p>
+                                              <h3>MR e Azure 312: Integrazione bot</h3>
+                                              <p>Crea e Distribuisci un bot con Microsoft bot Framework V4 e comunica con esso in un'app realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -514,8 +514,8 @@ Queste esercitazioni autonome sono estremamente utili per imparare a implementar
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 313: Servizio Hub IoT</h3>
-                                              <p>Informazioni su come implementare il servizio IoT Hub di Azure in una macchina virtuale e visualizzare i dati su HoloLens.</p>
+                                              <h3>MR e Azure 313: Servizio hub Internet delle cose</h3>
+                                              <p>Informazioni su come implementare il servizio Hub Azure Internet in una macchina virtuale e visualizzare i dati in HoloLens.</p>
                                           </div>
                                       </div>
                                   </div>
