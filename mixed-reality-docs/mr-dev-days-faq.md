@@ -1,67 +1,67 @@
 ---
 layout: LandingPage
-title: Realtà mista Dev giorni domande frequenti
-description: Pagina delle domande frequenti per MR Dev giorni
+title: Domande frequenti sui giorni della realtà mista
+description: Pagina Domande frequenti per i giorni di sviluppo
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
-keywords: Mista realtà la conferenza, summit, sviluppatore, HoloLens, 2 HoloLens, Kinect
+keywords: Realtà mista, conferenza, Summit, sviluppatore, HoloLens, HoloLens 2, Kinect
 ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604809"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526641"
 ---
-# <a name="mixed-reality-dev-days-faq"></a>Realtà mista Dev giorni domande frequenti
+# <a name="mixed-reality-dev-days-faq"></a>Domande frequenti sui giorni della realtà mista
 
-* **Chi deve applicare? Sono presenti criteri?**
+* **Chi deve essere applicato? Sono previsti criteri?**
     
-    Si diverta benvenuto una community di sviluppatori diversi giorni di sviluppo realtà mista. È possibile garantire al contempo che questo evento riunisce tutti gli sviluppatori di grandi dimensioni clienti e partner, studi di grandi dimensioni, studi di piccole dimensioni e singoli sviluppatori.
+    Siamo entusiasti di accogliere una community di sviluppatori diversificata in giorni di sviluppo di realtà mista. Stiamo anche garantendo che questo evento riunisce gli sviluppatori di clienti e partner di grandi dimensioni, studio di grandi dimensioni, piccoli studi e singoli sviluppatori.
 
-    Se sei uno sviluppatore di realtà mista per ottenere formazione sulla piattaforma di sviluppo, strumenti, servizi e dispositivi, si consiglia di aggiungere Stati Uniti in giorni di sviluppo di realtà mista.
+    Se sei uno sviluppatore di realtà mista che desidera ottenere corsi di formazione sulla piattaforma, gli strumenti, i servizi e i dispositivi per sviluppatori, ti invitiamo a unirti ai giorni di sviluppo di realtà mista.
 
-    Il nostro obiettivo consiste nel disporre di un'ampia gamma di sviluppatori di realtà mista e finestre di progettazione in attendance e qualsiasi informazioni è possibile fornire nel [applicazione](https://aka.ms/MRDevDayApplication) ci aiuterà a per assicurarsi che in questo caso.
+    Il nostro obiettivo è avere un'ampia gamma di sviluppatori e progettisti di realtà mista a disposizione e tutte le informazioni che puoi fornire nell' [applicazione](https://aka.ms/MRDevDayApplication) ci aiuteranno a garantire che ciò avvenga.
 
-* **Quando è possibile sapere se è possibile partecipare?**
+* **Quando si può partecipare?**
 
-    [Le applicazioni](https://aka.ms/MRDevDayApplication) sono aperti dopo mezzogiorno PST 5 aprile 2019. A seconda di quando si completa l'applicazione, potrebbe ricevere una notifica del tuo stato appena 5 aprile 2019. Si impegna per garantire a che tutti i richiedenti ricevono una notifica del relativo stato dalla fine della giornata il 10 aprile 2019. Se non si compilano tutte le aree sensibili da questo primo ciclo dei candidati, si potrebbero aprire le applicazioni a un'ondata di secondo.
+    [Le applicazioni](https://aka.ms/MRDevDayApplication) sono aperte fino a mezzogiorno PST del 5 aprile 2019. A seconda del momento in cui si completa l'applicazione, è possibile che venga ricevuta una notifica sullo stato appena il 5 aprile 2019. Ci stiamo impegnando per garantire che tutti i richiedenti ricevano il proprio stato entro la fine del giorno del 10 aprile 2019. Se non si riempiono tutti i punti da questa prima ondata di candidati, è possibile che si aprano applicazioni per una seconda ondata.
 
 * **Perché è necessario applicare?**
 
-    Abbiamo ricevuto molto interessanti in questo caso e hanno una capacità massima per l'evento. Per questo motivo, stiamo chiedendo che tutti gli sviluppatori interessati a completare l'operazione [applicazione](https://aka.ms/MRDevDayApplication) in modo che abbiamo altre informazioni su ciò che si sta lavorando e il motivo per cui si è interessati.
+    Questo evento ha ricevuto un interesse elevato e ha una capacità massima per l'evento. Per questo motivo, si chiede che tutti gli sviluppatori interessati completano questa [applicazione](https://aka.ms/MRDevDayApplication) in modo da ottenere altre informazioni su ciò che si sta lavorando e sul motivo per cui si è interessati.
 
-* **Mi è stato detto che è necessario rispettare.  Come applicare?**
+* **Mi è stato chiesto di partecipare.  Ricerca per categorie applicare?**
 
-    Per completare l'operazione [applicazione](https://aka.ms/MRDevDayApplication) da mezzogiorno fuso orario del Pacifico (PST), 5 aprile 2019.
+    Per completare l' [applicazione](https://aka.ms/MRDevDayApplication) , è necessario mezzogiorno (pst), il 5 aprile 2019.
 
-* **Che cos'è la differenza tra giorni di sviluppo di realtà mista e compilazione?**
+* **Qual è la differenza tra i giorni di sviluppo della realtà mista e la compilazione?**
 
-    È adatta giorni di sviluppo di realtà mista-esperti nella realtà mista e i numerosi aspetti del cloud e la tecnologia di intelligenza artificiale che provengono, visione artificiale per la creazione di ologramma. Se sei uno sviluppatore di realtà mista per ottenere formazione sulla piattaforma di sviluppo, strumenti, servizi e dispositivi, giorni di sviluppo di realtà mista è un candidato ideale. 
+    Sono stati progettati i giorni di sviluppo di realtà mista: esperti di realtà mista e molti aspetti della tecnologia cloud e intelligenza artificiale, dalla visione artificiale alla creazione di ologrammi. Gli sviluppatori di realtà mista che desiderano ottenere corsi di formazione sulla piattaforma, gli strumenti, i servizi e i dispositivi per sviluppatori hanno un ottimo adattamento. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) riunisce gli sviluppatori ed esperti dal team dei prodotti all'interno dell'azienda. Vengono illustrati un'ampia gamma di tecnologie e i modelli di applicazione. Questo evento non sostituisce la compilazione, e se il blocco, si consiglia di eseguire l'operazione troppo! 
+    [Microsoft Build](https://www.microsoft.com/en-us/build) offre agli sviluppatori ed esperti dei team di prodotto nell'intera azienda. Viene analizzata una vasta gamma di tecnologie e modelli di applicazione. Questo evento non sostituisce la compilazione e, se si tratta di una Jam, si consiglia di eseguire questa operazione. 
 
-* **Quanto costa l'evento?**
+* **Qual è il costo dell'evento?**
 
-    Questo evento è gratuito per la partecipazione.
+    Questo evento può essere partecipato gratuitamente.
 
-* **Che cosa ha un costo sono responsabili?**
+* **Quali costi sono responsabili?**
 
-    Si è responsabili delle spese di viaggio (volo, hotel, pasti, trasporti verso e da).
+    L'utente è responsabile delle spese di viaggio (Flight, Hotel, pasti, trasporto da e verso).
 
-* **Che cosa succederà?**
+* **Cosa devo aspettarmi?**
 
-    Giorni di sviluppo di realtà mista è incentrato developer pesanti (circa il 75%) integrato con lo sviluppo di business e informazioni dettagliate strategiche (circa il 25%).  Sarà hanno la possibilità di codice insieme ai nostri sviluppatori, demo per la versione più recente nel nostro portfolio e Scopri la scienza dietro il tech, nonché le procedure consigliate e lezioni che abbiamo imparato negli anni.
+    I giorni di sviluppo di realtà mista hanno uno sviluppo intenso (circa il 75%) integrato dallo sviluppo aziendale e dalle informazioni strategiche (circa il 25%).  Avrai la possibilità di scrivere il codice insieme ai nostri sviluppatori, dimostrando la versione più recente del nostro portfolio e scoprirai la scienza alla base dei nostri tecnici, oltre alle procedure consigliate e alle lezioni acquisite nel corso degli anni.
 
-* **È necessario portare un computer di sviluppo?**
+* **È necessario portare il proprio computer di sviluppo?**
 
-    Sì, ogni partecipante deve portare i propri developer PC installati con il software, strumenti e si usa per l'ambiente IDE.
+    Sì, ogni partecipante deve portare i propri PC per sviluppatori installati con il software, gli strumenti e gli IDE usati per l'ambiente.
 
-* **Dove posso trovare informazioni?**
+* **Dove è possibile ottenere altre informazioni?**
 
-    È possibile trovare altre informazioni sui nostri [pagine di documentazione di realtà mista](mr-dev-days.md), ed è possibile sempre contattare il nostro team di relazioni per gli sviluppatori di realtà mista con domande.
+    È possibile trovare altre informazioni nelle [pagine della documentazione](mr-dev-days.md)per la realtà mista ed è sempre possibile rivolgersi al team di relazioni per gli sviluppatori in realtà mista con domande.
 
-* **Chi devo contattare per altre informazioni?**
+* **A chi rivolgersi per saperne di più?**
 
-    Per altre informazioni, inviare tramite posta elettronica DevEvent@microsoft.com
+    Per ulteriori informazioni, inviare un messaggio di posta elettronicaDevEvent@microsoft.com
