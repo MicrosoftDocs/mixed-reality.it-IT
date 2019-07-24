@@ -1,41 +1,41 @@
 ---
-title: Calendario degli eventi di Service Fabric reattore Academy
-description: Calendario degli eventi per gli sviluppatori di realtà mista in reattore a San Francisco.
+title: Calendario degli eventi di SF Reactor Academy
+description: Calendario degli eventi di sviluppo di realtà mista nel reattore a San Francisco.
 author: danielescudero
 ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
-keywords: Realtà, Show, calendario, academy, pianificazione, Service fabric, san francisco, reattore
-ms.openlocfilehash: 0387f7871361db2eecca9738ac301e6a87b16670
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Reality, show, Calendar, Academy, Schedule, SF, San Francisco, Reactor
+ms.openlocfilehash: 462d4fbb8a6aaf1ee643a6fa1f0f4ed04c0cefed
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602682"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524758"
 ---
-# <a name="the-realities-show"></a>Mostra la realtà
-![Progettazione per realtà mista](images/therealitiesshow.jpg)
+# <a name="the-realities-show"></a>La realtà Mostra
+![Progettazione per la realtà mista](images/therealitiesshow.jpg)
 
-**Mostra la realtà è all'evento sulle tecnologie 2 HoloLens, servizi di realtà mista e MR mensile di 30 minuti. In ogni episodio che verranno esaminate le funzionalità, funzionalità, la tecnologia sottostante, come lo sviluppo per i diversi dispositivi, delle procedure consigliate e ovviamente rispondere alle domande del nostro pubblico. Trasmettere agli sviluppatori in tutto il mondo dal nostro programma di installazione fase a San Francisco reattore come un ambiente domestico (e in alcuni casi da altri siti).**
+**La realtà mostra un valore livestream di 30 minuti su HoloLens 2, servizi di realtà mista e tecnologie MR. In ogni episodio si esamineranno le funzionalità, le funzionalità, la tecnologia sottostante, le modalità di sviluppo per i diversi dispositivi, consigliano le procedure consigliate e naturalmente rispondono alle domande del pubblico. Trasmessi agli sviluppatori in tutto il mondo dalla fase di installazione della fase di reattore San Francisco come ambiente della sala da lavoro e talvolta da altri siti.**
 
-<a name="watch-live-and-past-episodes-herehttpakamstrs"></a>**[Guarda qui gli episodi precedenti e in tempo reale](http://aka.ms/trs)**
+<a name="watch-live-and-past-episodes-herehttpakamstrs"></a>**[Guarda gli episodi Live e precedenti qui](http://aka.ms/trs)**
 ---
 
-## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**Servizi di realtà mista e 2 HoloLens** : 12 marzo 2019, 8 AM (ora del Pacifico)
-L'episodio prima di mostrare la realtà riguarda 2 HoloLens e i servizi di realtà mista. Si esaminano le principali funzionalità, la visione dietro di essa, il nuovo modello di interazione e sofisticate come il cloud!
+## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**HoloLens 2 e servizi di realtà mista** -12 marzo 2019, 8.00 (PDT)
+Il primo episodio della realtà Mostra tutti i servizi HoloLens 2 e realtà mista. Verranno illustrate le funzionalità principali, la visione sottostante, il nuovo modello di interazione e le superpotenze del cloud.
 
 ---
 This episode is all about Human Understanding: 'near interactions, far interactions, eye-tracking and voice.'
 ---
-## <a name="world-understanding---may-10-2019-8-am-pdt"></a>**Understanding World** : 10 maggio 2019, 8 AM (ora del Pacifico)
-Leveredge di dispositivi perimetrali intelligenti come il calcolo del cloud di power per comprendere il mondo. Tra cui HoloLens 2, visione artificiale Computer, il servizio condiviso di ancoraggio, etichettatura semantica e Azure Kinect DK.
+## <a name="world-understanding---coming-soon"></a>**Conoscenza globale** -presto disponibile
+Il modo in cui i dispositivi Edge intelligenti LeverEdge la potenza di calcolo del cloud per comprendere il mondo. Inclusi HoloLens 2, visione artificiale, servizio di ancoraggio condiviso, etichetta semantica e Azure Kinect DK.
 
 ---
-## <a name="mixedrealitytoolkit---may-29-2019-8-am-pdt"></a>**MixedRealityToolkit** - May 29, 2019, 8 AM (PDT)
-Il MixedRealityToolkit (MRTK) fornisce un set di componenti fondamentali e le funzionalità per accelerare lo sviluppo di app MR. L'ultima versione di MRTK-Unity (V2) supporta piattaforme OpenVR 2 HoloLens/HoloLens e realtà mista di Windows. Diamo un'analisi approfondita con il endineers e finestre di progettazione dietro di essa.
+## <a name="mixedrealitytoolkit---coming-soon"></a>**MixedRealityToolkit** -presto disponibile
+MixedRealityToolkit (MRTK) fornisce un set di componenti e funzionalità fondamentali per accelerare lo sviluppo di app. La versione più recente di MRTK-Unity (v2) supporta le piattaforme HoloLens/HoloLens 2, la realtà mista di Windows e OpenVR. Ecco una procedura approfondita con i progettisti e le finestre di progettazione sottostanti.
 
 ---
-## <a name="designing-for-hololens-2---june-17-2019-8-am-pdt"></a>**Progettazione per HoloLens 2** - 17 giugno 2019, 8 AM (ora del Pacifico)
-La maggiore difficoltà nello sviluppo di realtà mista di progettazione per tale. È un nuovo, quindi, schermata senza ed estremamente reale, che progettazione tradizionali non si applicano necessariamente. Diamo un'occhiata a come progettare per HoloLens 2 e scopri gli strumenti di progettazione che di MixedRealityToolkit ci offre.
+## <a name="designing-for-hololens-2---coming-soon"></a>**Progettazione per HoloLens 2** -presto disponibile
+La sfida più importante nello sviluppo di realtà mista è la progettazione. Si tratta di una novità, quindi la progettazione tradizionale non si applica necessariamente. Si esaminerà ora come progettare per HoloLens 2 e controllare gli strumenti di progettazione che MixedRealityToolkit ci offre.
 
 

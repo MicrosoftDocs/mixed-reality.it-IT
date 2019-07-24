@@ -1,113 +1,113 @@
 ---
-title: Note sulla versione - maggio 2016
-description: HoloLens note sulla versione per Windows Holographic può aggiornare 2016.
+title: Note sulla versione-2016 maggio
+description: Note sulla versione di HoloLens per Windows olografico 2016 Update.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, note sulla versione, del sistema operativo, funzionalità, compilazione, piattaforma
+keywords: HoloLens, note sulla versione, sistema operativo, funzionalità, compilazione, piattaforma
 ms.openlocfilehash: bc4e09c36a3ab6643be1144873a624fc5ed66e37
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603795"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524550"
 ---
-# <a name="release-notes---may-2016"></a>Note sulla versione - maggio 2016
+# <a name="release-notes---may-2016"></a>Note sulla versione-2016 maggio
 
-Il team di HoloLens si impegna a fornirti un aggiornamento sul nostro lo sviluppo delle funzionalità più recente e correzioni principali tramite il programma di Insider di Windows. Grazie a tutti i suggerimenti, commenti e suggerimenti viene preso a cuore. Continuare a [commenti e suggerimenti](give-us-feedback.md) tramite l'Hub di commenti e suggerimenti, il [forum per sviluppatori](https://forums.hololens.com) e [Twitter tramite @HoloLens ](https://twitter.com/hololens).
+Il team di HoloLens si impegna a fornire un aggiornamento sullo sviluppo di nuove funzionalità e correzioni principali tramite il programma Windows Insider. Grazie a tutti i tuoi suggerimenti, abbiamo inviato i tuoi commenti a Heart. Continua a [inviare commenti e suggerimenti](give-us-feedback.md) tramite l'hub per i commenti, i [forum per sviluppatori](https://forums.hololens.com) e il [Twitter tramite @HoloLens ](https://twitter.com/hololens).
 
-**Versione di rilascio:** Aggiornamento di Windows Holographic maggio 2016 (**10.0.14342.1016**)
+**Versione di rilascio:** Aggiornamento di Windows olografico 2016 (**10.0.14342.1016**)
 
 >[!VIDEO https://www.youtube.com/embed/XM5OHHrOGqQ]
 
-Per aggiornare alla versione corrente, aprire il *le impostazioni* app e passare alla *aggiornamento e sicurezza*, quindi selezionare il *Controlla aggiornamenti* pulsante.
+Per eseguire l'aggiornamento alla versione corrente, aprire l'app *Impostazioni* , passare a *Aggiorna & sicurezza*, quindi selezionare il pulsante *Controlla aggiornamenti* .
 
 ## <a name="new-features"></a>Nuove funzionalità
 
-* Ora puoi **eseguite contemporaneamente fino a tre App nella visualizzazione 2D**. In questo modo casi d'uso infinite per il multitasking in HoloLens. Avere il nuovo Hub di commenti e suggerimenti con l'elenco di fermarti aperti durante l'esplorazione di nuove funzionalità durante il volo.
+* È ora possibile **eseguire fino a tre app in visualizzazione 2D simultaneamente**. Questo consente casi d'uso infiniti per il multitasking in HoloLens. È possibile usare il nuovo hub di feedback con l'elenco delle missioni aperte, esplorando le nuove funzionalità di questo volo.
 
-  ![HoloLens è possibile eseguire tre App nello stesso momento](images/img-3625-400px.jpg)<br>
-  Eseguire simultaneamente fino a tre App nella visualizzazione 2D
+  ![HoloLens può eseguire tre app nello stesso momento](images/img-3625-400px.jpg)<br>
+  Esegui fino a tre app in visualizzazione 2D simultaneamente
 
-* Sono state aggiunte nuove **comandi vocali**:
-   * Osservare un ologrammi e ruotarlo affermando "affrontano me"
-   * Modifica delle dimensioni affermando "grande" o "minori"
-   * Spostare un'app, pronunciare "Ehi Cortana, spostare *nome app* qui."
-* Sono stati apportati **lo sviluppo su HoloLens più facile**. È ora possibile esplorare, caricare e scaricare file tramite il [Windows Device Portal](using-the-windows-device-portal.md). È possibile accedere la cartella documenti, cartella immagini e l'archiviazione locale per qualsiasi app si caricate in sideload o distribuito tramite Visual Studio.
-* Il **supporta ora emulatore Accedi con un Account Microsoft** esattamente come si farebbe con un reale HoloLens. A tale scopo, dal menu Strumenti aggiuntivi ">>".
-* **App 2D ora nascondono la barra dell'app e cursore durante la riproduzione di video a schermo** evitare distrazioni. Con questa impostazione, l'esperienza guardando video sarà ancora più piacevole su HoloLens.
-* È anche possibile **aggiungere foto senza barra dell'app** in tutto il mondo.
+* Sono stati aggiunti nuovi **comandi vocali**:
+   * Provare a esaminare un ologramma e ruotarlo dicendo "Face me"
+   * Modificare le dimensioni definendo "Bigger" o "minor"
+   * Spostare un'app dicendo "Hey Cortana, Move *app name* here".
+* Lo **sviluppo in HoloLens**è stato semplificato. È ora possibile esplorare, caricare e scaricare i file tramite il [portale del dispositivo Windows](using-the-windows-device-portal.md). È possibile accedere alla cartella documenti, alla cartella immagini e all'archiviazione locale per qualsiasi app caricata o distribuita in Visual Studio.
+* L' **emulatore supporta ora l'accesso con un account Microsoft** esattamente come per un HoloLens reale. È possibile abilitare questa operazione dal menu strumenti aggiuntivi "> >".
+* **le app 2D ora nascondono la barra e il cursore dell'app quando si guarda il video a schermo intero** per evitare la distrazione. In questo modo, l'esperienza di visione del video sarà ancora più gradevole in HoloLens.
+* È anche possibile **aggiungere foto senza la barra dell'app** nel mondo.
 
-  ![Può essere nascosta barra dell'app per le app 2D, ad esempio foto](images/img-3626-400px.jpg)<br>
-  Può essere nascosta barra dell'app per le app con una visualizzazione 2D, ad esempio foto
+  ![La barra dell'app può essere nascosta per le app 2D come le foto](images/img-3626-400px.jpg)<br>
+  La barra dell'app può essere nascosta per le app con una visualizzazione 2D, ad esempio Photos
   
-* **Selezione file** funziona esattamente come previsto in HoloLens.
-* Aggiornata **browser Microsoft Edge** per eseguire il mapping utente unificate esperienza desktop e telefono. Più istanze del browser, personalizzata nuova pagina della scheda HoloLens, peek scheda e open in nuove finestre, oltre ai miglioramenti apportati a prestazioni e power sono abilitate.
-* **Musica per Groove** app è ora in HoloLens. Visita l'archivio per scaricarlo e provare a riprodurre in background.
-* È possibile personalizzare facilmente come le app vengono disposte in tutto il mondo. Provare **ruotando il vntana** in regolare la modalità, è sufficiente fare clic e trascinare sul cerchio nei wireframe verticali al centro. È possibile notare vntana hanno **più forte montato rettangoli** per garantire l'interazione ingrandita. È anche possibile ridimensionare tutte le app flat verticalmente (tranne le foto e ologrammi App).
+* Il selettore **file** funziona come previsto in HoloLens.
+* Aggiornamento del **browser Edge** per il mapping dell'esperienza utente unificata con desktop e telefono. Sono state abilitate più istanze del browser, una nuova scheda HoloLens personalizzata, una nuova scheda e un'apertura in nuove finestre, oltre ai miglioramenti delle prestazioni di Power &.
+* L'app **Groove Music** è ora disponibile in HoloLens. Visita lo Store per scaricarlo e provare a giocare in background.
+* Puoi personalizzare facilmente il modo in cui le app vengono organizzate in tutto il mondo. Provare a **ruotare gli ologrammi** in modalità di regolazione semplicemente facendo clic e trascinando il cerchio nei wireframe centrali verticali. È possibile notare che gli ologrammi dispongono di caselle di delimitazione più **strette** per garantire l'interazione ingrandita. È anche possibile ridimensionare tutte le app Flat verticalmente (eccetto le foto e le app olografiche).
 
-  ![Ologrammi possono essere ruotate dopo averle inserite nel mondo](images/img-3627-400px.jpg)<br>
-  Ruotare vntana dopo averle inserite in tutto il mondo
+  ![Gli ologrammi possono essere ruotati dopo averli posizionati in tutto il mondo](images/img-3627-400px.jpg)<br>
+  Ruotare gli ologrammi dopo averli posizionati nel mondo
 
-* Sono stati apportati numerosi **input di analisi utilizzo software** in questa fase di trasferimento. È possibile connettere un mouse Bluetooth a HoloLens. È stata correttamente il clicker ottimizzata in modo da abilitare il ridimensionamento di spos & tare vntana con un clicker. Tastiera esegue anche ulteriormente migliorato.
-* A questo punto è possibile eseguire **le immagini di realtà mista** premendo semplicemente a discesa il volume di backup + riduzione del volume contemporaneamente. È anche possibile condividere le foto di realtà mista acquisiti e video per Facebook, Twitter e YouTube.
-* La lunghezza massima di registrazione del **video di realtà mista** è stato aumentato a cinque minuti.
-* **App foto** ora trasmette i video da OneDrive senza dover scaricare l'intero video prima della riproduzione.
-* È stato migliorato come le **vntana sarà corretto punto in cui è stata**. Verrà inoltre visualizzata l'opzione per nuovamente la connessione alla rete Wi-Fi e riprova. Se non è possibile rilevare HoloLens si trovino.
-* La tastiera è un' **layout ottimizzato per l'immissione di indirizzo di posta elettronica** con chiavi che consentono di immettere l'indirizzo di posta elettronica più diffuso fare clic su domini con un singolo.
-* Più velocemente **registrazione dell'app** e **auto il rilevamento del fuso orario** durante la configurazione guidata, offrendo il primo utente migliore esperienza.
-* **Sensore memoria** consente di visualizzare lo spazio su disco rimanente e usati dal sistema e le app nell'app impostazioni.
-* È stata convergente all'interno di Hub e App di commenti e suggerimenti in un'unica applicazione **Hub di Feedback** che sarà lo strumento ideale per **averci feedback**, le funzionalità che ami, le funzionalità che è possibile eseguire senza, o quando un elemento potrebbe essere preferibile. Quando si partecipa al programma di Insider, è possibile mantenere sul **ottenere informazioni più recenti di Insider**, **valutare le compilazioni** e andare **fermarti commenti e suggerimenti** dall'Hub di commenti e suggerimenti.
-* Abbiamo inoltre [pubblicato un emulatore HoloLens aggiornato](install-the-tools.md) di compilazione.
-* I video di realtà mista a questo punto essere meglio a causa di automatic **stabilizzazione video**.
+* In questo volo sono stati apportati numerosi **miglioramenti all'input** . È possibile connettere un normale mouse Bluetooth a HoloLens. Il Clicker è stato ottimizzato per consentire il ridimensionamento & lo stato di un clic. Anche la tastiera viene eseguita meglio.
+* A questo punto è possibile eseguire le **Immagini della realtà mista** semplicemente premendo il volume verso l'alto e il volume verso il basso simultaneamente. È anche possibile condividere foto acquisite in realtà mista & video a Facebook, Twitter e YouTube.
+* La lunghezza massima di registrazione dei **video in realtà mista** è stata aumentata a cinque minuti.
+* **App Photos** ora trasmette video da OneDrive anziché scaricare l'intero video prima della riproduzione.
+* È stato migliorato il modo in cui gli ologrammi saranno nel **punto in cui**sono stati lasciati. Verrà inoltre visualizzata l'opzione per riconnettersi al Wi-Fi e riprovare se HoloLens non è in grado di rilevare la posizione.
+* La tastiera ha un **layout migliorato per l'immissione dell'indirizzo di posta elettronica** con chiavi che consentono di immettere i domini di posta elettronica più diffusi con un solo clic.
+* **Registrazione dell'app** più veloce e **rilevamento automatico del fuso orario** durante la configurazione guidata, per offrire la migliore esperienza utente.
+* Il **concetto di archiviazione** consente di visualizzare lo spazio su disco rimanente e utilizzato dal sistema e dalle app nell'app Impostazioni.
+* Sono stati apportati commenti e suggerimenti per l'app e l'hub all'interno di un singolo **Hub di feedback** delle app, che sarà lo strumento ideale per **fornire commenti e suggerimenti**, le funzionalità che è possibile eseguire senza o quando qualcosa potrebbe essere migliore. Quando si partecipa al programma Insider, è possibile continuare a **ricevere le ultime notizie**Insider, **valutare** le compilazioni e passare alle **ricerche di feedback** dall'hub di feedback.
+* È stata anche [pubblicata una build aggiornata dell'emulatore di HoloLens](install-the-tools.md) .
+* I video della realtà mista ora sembrano migliori a causa della stabilizzazione automatica **dei video**.
 
 ## <a name="major-fixes"></a>Correzioni principali
 
-Sono stati corretti i problemi con spazi di ologramma in cui gli spazi potrebbe essere lento o rilevati erroneamente. È stato risolto un problema di arresto che è stato possibile continuare a provare ad avviare la shell durante l'arresto.
+Sono stati corretti i problemi con gli spazi ologrammi in cui gli spazi venivano rilevati in modo lento o errato. È stato risolto un problema di arresto che poteva continuare a provare ad avviare la shell durante l'arresto.
 
 È stato risolto un problema
-* che consente di bloccare la possibilità di riprendere un'applicazione XAML.
-* in cui lascia un arresto anomalo mostrando uno schermo nero e alcune linee irregolari.
-* lo scorrimento viene a volte sono rimaste impresse nella direzione errata quando si usa alcune app.
-* la potenza LED potrebbe indicare uno stato non attivo quando il dispositivo è stato ancora.
-* Wi-Fi è stato possibile ottenere disattivato dopo la riattivazione dalla modalità standby.
-* il provider di identità Xbox offre gamertag il programma di installazione e quindi si blocca durante il ciclo.
-* In alcuni casi la Shell si blocca quando si seleziona un file scaricato nel selettore di File di OneDrive.
-* pressione prolungata su un collegamento a volte sia apre una scheda di nuovo, interrotta e apre un menu di scelta rapida.
-* in cui il portale di dispositivi windows non consente regolazioni IPD da 50 a 80
+* in questo modo si impedisce la possibilità di riprendere un'applicazione XAML.
+* dove un arresto anomalo lascia una schermata nera e alcune linee irregolari.
+* a volte, lo scorrimento si posiziona nella direzione sbagliata quando si usano alcune app.
+* il LED di alimentazione potrebbe indicare uno stato spento quando il dispositivo era ancora acceso.
+* Il Wi-Fi potrebbe essere disattivato dopo la ripresa dalla modalità standby.
+* il provider di identità Xbox offre la configurazione del gamertag e quindi rimane bloccata in un ciclo.
+* la shell occasionalmente si arresta in modo anomalo quando si seleziona un file scaricato nel selettore file di OneDrive.
+* Quando si preme e si mantiene un collegamento a volte, viene aperta una nuova scheda interruppe e viene aperto un menu di scelta rapida.
+* dove il portale per dispositivi Windows non consente le rettifiche DPI da 50 a 80
 
-È stato risolto i problemi con le foto in cui
-* un'immagine visualizzerebbe occasionalmente a causa di ignorare la proprietà orientation EXIF ruotata.
-* potrebbe arrestarsi in modo anomalo durante l'avvio in foto aggiunte.
-* video potrebbero riavviare dopo la sospensione anziché continuare da dove ultima sospensione.
-* riproduzione di un video condivisa potrebbe non essere consentita, se è stato condiviso durante la riproduzione.
-* Le registrazioni di acquisire realtà miste inizierebbe già con 0,5-1 secondo di audio solo del feed.
-* il pulsante di sincronizzazione viene rimosso durante la sincronizzazione iniziale di OneDrive.
+Sono stati risolti i problemi relativi alle foto in cui
+* occasionalmente, un'immagine viene visualizzata ruotata a causa della mancata visualizzazione della proprietà dell'orientamento EXIF.
+* potrebbe arrestarsi in modo anomalo durante l'avvio delle foto aggiunte.
+* i video verranno riavviati dopo la sospensione anziché continuare dall'ultima sospensione.
+* la riproduzione di un video condiviso potrebbe essere impedita se è stata condivisa durante la riproduzione.
+* Le registrazioni di acquisizione di realtà miste iniziano con 0,5-1 secondo di feed solo audio.
+* il pulsante di sincronizzazione scompare durante la sincronizzazione iniziale di OneDrive.
 
-È stato risolto i problemi con le impostazioni in cui
-* Quando viene modificato l'ambiente, era necessario un aggiornamento.
-* 'Immettere' tastiera non si comporteranno come facendo clic su Avanti, in alcune finestre di dialogo.
-* era difficile sapere quando il clicker servizio associazione.
-* può smettere di rispondere con disconnect Wi-Fi e la connessione.
+Sono stati risolti i problemi relativi alle impostazioni in cui
+* è necessario un aggiornamento in caso di modifica dell'ambiente.
+* ' Invio ' sulla tastiera non si comporta come fare clic su avanti in alcune finestre di dialogo.
+* era difficile capire quando l'associazione del clic non è riuscita.
+* potrebbe non rispondere con connessione Wi-Fi e connessione.
 
-È stato risolto i problemi con Cortana dove
-* può rimanere bloccata la visualizzazione dell'interfaccia utente in ascolto.
-* chiedere "Ehi Cortana, ciò che è possibile dire" da una modalità esclusiva app potrebbe rimanere bloccati se forse piuttosto sì/no ha risposto alla richiesta per uscire dall'app.
-* Cortana in ascolto dell'interfaccia utente non viene ripristinato correttamente se si chiede a Cortana per passare alla modalità di sospensione e quindi riprendere.
-* le query "quali rete si è connessi al?" e il "Am connesso?" potrebbe non riuscire quando il primo profilo di rete viene restituita senza connessione.
-* l'interfaccia utente di blocco in "Ascolto", ma all'uscita di un'app viene immediatamente ha iniziato a eseguire nuovamente il riconoscimento vocale.
-* in cui la firma all'esterno dell'app Cortana non sarebbe consentono di sign nuovamente al suo interno è necessario riavviare.
-* potrebbe non avviarsi se realtà mista di acquisizione di interfaccia utente è risultato attivo.
+Sono stati risolti i problemi relativi a Cortana, dove
+* potrebbe essere bloccata la visualizzazione dell'interfaccia utente in ascolto.
+* Chiedere "Hey Cortana, cosa posso dire" da un'app in modalità esclusiva potrebbe rimanere bloccata se si rispondeva a una risposta forse piuttosto Sì/No alla richiesta di uscire dall'app.
+* l'interfaccia utente di ascolto di Cortana non riprende correttamente se si chiede a Cortana di andare in sospensione e quindi riprendere.
+* le query "a quale rete sono connesso?" e "sono connesso?" potrebbe non riuscire quando il primo profilo di rete torna senza connettività.
+* l'interfaccia utente si è bloccata in "ascolto" ma quando si esce da un'app verrà immediatamente riavviato il riconoscimento vocale.
+* Quando la disconnessione dall'app Cortana non consente di accedere al computer finché non viene eseguito il riavvio.
+* non verrà avviato quando era attiva l'interfaccia utente di acquisizione di realtà mista.
 
-È stato risolto i problemi con Visual Studio in cui
-* debug di attività in background non funzionava.
-* analisi dei frame nel debugger della grafica non funzionava.
-* l'emulatore di HoloLens non include l'elenco a discesa per Visual Studio a meno che non TargetPlatformVersion del progetto è stato impostato su 10240.
+Sono stati risolti i problemi con Visual Studio in cui
+* il debug dell'attività in background non funziona.
+* l'analisi dei frame nel debugger della grafica non funziona.
+* l'emulatore di HoloLens non è stato visualizzato nell'elenco a discesa di Visual Studio se il TargetPlatformVersion del progetto non è stato impostato su 10240.
 
-## <a name="changes-from-previous-release"></a>Modifiche dalla versione precedente
-* Il comando di Cortana **Ehi Cortana, riavviare il dispositivo** non funziona. Utente può pronunciare **Ehi Cortana, riavviare** oppure **Ehi Cortana, riavviare il dispositivo**.
-* Modalità tutto schermo è stata rimossa dal prodotto.
+## <a name="changes-from-previous-release"></a>Modifiche rispetto alla versione precedente
+* Il comando Cortana **Hey Cortana, il riavvio del dispositivo** non funziona. L'utente può dire **Hey Cortana, riavviare** o **Hey Cortana riavviare il dispositivo**.
+* La modalità tutto schermo è stata rimossa dal prodotto.
 
 ## <a name="prior-release-notes"></a>Note sulla versione precedente
 * [Note sulla versione - marzo 2016](release-notes-march-2016.md)
@@ -116,9 +116,9 @@ Sono stati corretti i problemi con spazi di ologramma in cui gli spazi potrebbe 
 * [Problemi noti di HoloLens](hololens-known-issues.md)
 * [Installare gli strumenti](install-the-tools.md)
 * [Shell](navigating-the-windows-mixed-reality-home.md)
-* [L'aggiornamento di App UWP 2D per realtà mista](building-2d-apps.md)
+* [Aggiornamento di app UWP 2D per la realtà mista](building-2d-apps.md)
 * [Accessori hardware](hardware-accessories.md)
-* [Acquisizione di realtà mista](mixed-reality-capture.md)
+* [Acquisizione realtà mista](mixed-reality-capture.md)
 * [Input vocale](voice-input.md)
-* [Invio di un'app di Windows Store](submitting-an-app-to-the-microsoft-store.md)
+* [Invio di un'app a Windows Store](submitting-an-app-to-the-microsoft-store.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)

@@ -5,14 +5,13 @@ author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Windows Mixed Reality, progettazione, interazione, comandi vocali
-ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
-ms.translationtype: HT
+ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66402375"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387649"
 ---
 # <a name="voice-commanding"></a>Esecuzione di comandi vocali
 
@@ -22,11 +21,24 @@ Con i comandi vocali, lo sguardo viene in genere usato come meccanismo di selezi
 ## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
-<tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (prima generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
-</tr><tr>
-<td>Esecuzione di comandi vocali</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con il visore VR collegato)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
+    </tr>
+     <tr>
+        <td>Esecuzione di comandi vocali</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con il visore VR collegato)</td>
+    </tr>
 </table>
 
 
@@ -101,6 +113,6 @@ Quando i comandi vocali vengono applicati in modo corretto, l'utente capisce **c
 * Come posso indirizzare un comando vocale a una specifica app o un comando di app?
 * Posso usare i comandi vocali per operazioni all'esterno del fotogramma olografico di HoloLens?
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Movimenti](gestures.md)
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)

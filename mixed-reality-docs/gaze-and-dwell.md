@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: realtà mista, sguardo fisso, attesa, interazione, progettazione
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516011"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387535"
 ---
 # <a name="head-gaze-and-dwell"></a>Puntamento con la testa e attesa
 
@@ -90,7 +89,8 @@ Aggiungi un breve ritardo prima di avviare il feedback visivo per evitare lo sfa
 ## <a name="ui-patterns"></a>Modelli per l'interfaccia utente
 
 ### <a name="high-frequency-buttons"></a>Pulsanti usati frequentemente
-![Pulsante Avanti di Microsoft Dynamics 365 Guides](images/GuideNextButton.png "Pulsante Avanti di Microsoft Dynamics 365 Guides") I pulsanti usati frequentemente sono pulsanti usati comunemente all'interno di un'applicazione. Un buon esempio è rappresentato dai pulsanti Avanti e Indietro in Microsoft Dynamics 365 Guides.
+![Pulsante Avanti per Microsoft Dynamics 365 guide](images/GuideNextButton.png "Pulsante Avanti per Microsoft Dynamics 365 guide")<br>
+*I pulsanti ad alta frequenza sono pulsanti usati comunemente in un'applicazione. Un esempio valido è costituito dai pulsanti avanti e indietro nelle guide di Microsoft Dynamics 365.*
 
 I pulsanti usati frequentemente dovrebbero:
 * essere pulsanti piuttosto grandi, in modo che sia più facile puntarli mediante puntamento con la testa;
@@ -114,7 +114,8 @@ Quando un'azione ha un impatto significativo, ad esempio perché determina un ad
 Per funzionare correttamente, gli interruttori necessitano di una logica più sottile. Quando una persona si sofferma (ovvero resta in attesa) su un interruttore e lo attiva, deve uscire dal pulsante e quindi tornare per riavviare la logica di attesa. È importante che i pulsanti attivabili o disattivabili come interruttori abbiano uno stato attivo chiaramente diverso dallo stato inattivo. 
 
 ### <a name="list-views"></a>Visualizzazioni elenco
-![Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides](images/GuidesListView.png "Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides") Le visualizzazioni elenco presentano una specifica problematica correlata all'input mediante il puntamento con la testa e l'attesa. Gli utenti devono poter analizzare il contenuto senza avere la sensazione di doversi muovere con cautela tra le destinazioni di attesa. 
+![Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides](images/GuidesListView.png "Finestra di dialogo di conferma di Microsoft Dynamics 365 Guides")<br>
+*Le visualizzazioni elenco presentano una particolare sfida per l'input di punta e di residenza. È necessario che gli utenti siano in grado di eseguire la scansione dei contenuti senza sentire la necessità di raggiungere i puntamenti intorno alle destinazioni di residenza.*
 
 Seguono alcuni suggerimenti per progettare le visualizzazioni elenco:
 * Fai in modo che l'intera riga venga evidenziata quando viene puntata con la testa, ma fai iniziare l'attesa solo quando con la testa viene puntata la destinazione di attesa specifica.
@@ -123,7 +124,7 @@ Seguono alcuni suggerimenti per progettare le visualizzazioni elenco:
 * Non mostrare tutte le destinazioni di attesa contemporaneamente, in modo da non fornire un'interfaccia utente ripetitiva.
 * Riutilizza lo stesso modello il più possibile per sviluppare un senso di familiarità con l'esperienza utente.
  
- ## <a name="see-also"></a>Vedi anche
+ ## <a name="see-also"></a>Vedere anche
 * [Manipolazione diretta con le mani](direct-manipulation.md)
 * [Puntamento e commit con le mani](point-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)

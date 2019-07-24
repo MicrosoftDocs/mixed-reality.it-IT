@@ -1,109 +1,108 @@
 ---
-title: Note sulla versione - ottobre 2018
-description: HoloLens e note sulla versione di realtà mista di Windows per Windows 10 ottobre 2018 Update (noto anche come RS5).
+title: Note sulla versione-2018 ottobre
+description: Note sulla versione di HoloLens e Windows Mixed Reality per l'aggiornamento di Windows 10 ottobre 2018 (noto anche come RS5).
 author: mattzmsft
 ms.author: mazeller
 ms.date: 10/02/2018
 ms.topic: article
-keywords: release notes, versione, windows 10, build, rs5, sistema operativo
-ms.openlocfilehash: 9838b4dcbdedc4bf2c94a8e31f3f8eb4c9634d36
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Note sulla versione, versione, Windows 10, Build, RS5, sistema operativo
+ms.openlocfilehash: 794050910be40e7f98d0a1f67c2e1cf6963305dd
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604163"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524245"
 ---
-# <a name="release-notes---october-2018"></a>Note sulla versione - ottobre 2018
+# <a name="release-notes---october-2018"></a>Note sulla versione-2018 ottobre
 
-Il **[Windows 10 ottobre 2018 Update](https://blogs.windows.com/windowsexperience/2018/10/02/find-out-whats-new-in-windows-and-office-in-october/)** (noto anche come RS5) include nuove funzionalità per HoloLens e realtà mista di Windows auricolari immersive connesso al PC. 
+L' **[aggiornamento di Windows 10 ottobre 2018](https://blogs.windows.com/windowsexperience/2018/10/02/find-out-whats-new-in-windows-and-office-in-october/)** (noto anche come RS5) include nuove funzionalità sia per gli auricolari HoloLens che per quelli immersivi con la realtà mista di Windows connessi ai PC. 
 
-Per aggiornare la versione più recente di HoloLens o un PC (per auricolari (VR) coinvolgenti di realtà mista di Windows), aprire il **le impostazioni** app e passare alla **aggiornamento e sicurezza**, quindi selezionare il **cercare gli aggiornamenti** pulsante. In un PC Windows 10, è anche possibile installare manualmente Windows 10 ottobre 2018 Update usando le [strumento di creazione dei supporti Windows](https://www.microsoft.com/software-download/windows10).
+Per eseguire l'aggiornamento alla versione più recente di HoloLens o PC (per auricolari (VR) Windows Mixed Reality (VR), aprire l'app **Impostazioni** , passare a **Aggiorna & sicurezza**, quindi selezionare il pulsante **Controlla aggiornamenti** . In un PC Windows 10, è anche possibile installare manualmente l'aggiornamento di Windows 10 ottobre 2018 usando lo [strumento di creazione di Windows Media](https://www.microsoft.com/software-download/windows10).
 
-**Versione più recente per Desktop:** Windows 10 October 2018 Update (**10.0.17763.107**)<br>
-**Versione più recente per HoloLens:** Windows 10 October 2018 Update (**10.0.17763.134**)<br>
+**Versione più recente per desktop:** Aggiornamento di Windows 10 ottobre 2018 (**10.0.17763.107**)<br>
+**Versione più recente per HoloLens:** Aggiornamento di Windows 10 ottobre 2018 (**10.0.17763.134**)<br>
 
-## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuove funzionalità per le cuffie coinvolgenti di realtà mista di Windows
+## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuove funzionalità per gli auricolari immersivi a realtà mista di Windows
 
-Windows 10 ottobre 2018 Update include numerosi miglioramenti per l'uso auricolari (VR) coinvolgenti di realtà mista di Windows con il PC desktop.
+L'aggiornamento di Windows 10 ottobre 2018 include numerosi miglioramenti per l'uso di auricolari di Windows misto Reality (VR) con il PC desktop.
 
-### <a name="for-everyone"></a>Per tutti gli utenti
+### <a name="for-everyone"></a>Per tutti
 
-* **Torcia realtà mista** : aprire un portale nel mondo reale per individuare la tastiera, vedere qualcuno nelle vicinanze o esaminare l'ambiente circostante senza rimuovere le cuffie! È possibile attivare torcia realtà mista dal menu Start, premere Windows + i quadratini di ridimensionamento sul controller di movimento o pronunciando "Torcia on/off". Scegliere il controller nella direzione di ciò che si desidera visualizzare, come l'uso di un torcia al buio.
+* **Torcia realtà mista** : consente di aprire un portale nel mondo reale per trovare la tastiera, vedere qualcuno vicino o esaminare l'ambiente circostante senza rimuovere l'auricolare. È possibile attivare la torcia a realtà mista dal menu Start, premendo Windows + Acquisisci sul controller di movimento o dicendo "torcia acceso/spento". Puntare il controller nella direzione di ciò che si vuole visualizzare, ad esempio usando una torcia elettrica.
 
-    ![Realtà mista torcia](images/mr-flashlight.png)
+    ![Torcia realtà mista](images/mr-flashlight.png)
 
-* **Nuove app e sui modi per avviare il contenuto di realtà mista home**
-    * Se si usa [realtà mista di Windows per SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality), i titoli SteamVR ora visualizzati nel menu Start e nelle schermate di avvio di app per ognuna può essere inserite in realtà mista home.
+* **Nuove app e modi per avviare il contenuto nella Home realtà mista**
+    * Se si usa la [realtà mista di Windows per SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality), i titoli di SteamVR ora vengono visualizzati nel menu Start e i lanci di app per ognuno di essi possono essere inseriti nella Home realtà mista.
     
-        ![Nelle schermate di avvio app SteamVR](images/steamvr-launchers.png)
+        ![SteamVR di avvio delle app](images/steamvr-launchers.png)
         
-    * Nuove *360 video* app per l'individuazione di una selezione regolarmente curato di video a 360 gradi.
-    * Nuove *WebVR Showcase* esperienze di app per l'individuazione di una selezione di WebVR curato regolarmente.
-    * I clienti di realtà mista di Windows prima volta immettere il Cliff House e trovare che prepopolata con utilità di avvio app 3D per alcuni dei nostri giochi da di Microsoft Store e App immersive preferite.
-    * Windows di Microsoft Edge includono ora un *condivisione* pulsante.
-* **Menu Azioni rapide** -dall'interno di un'app di realtà mista coinvolgenti, è possibile premere il pulsante di Windows per accedere a un nuovo menu Azioni rapide, accesso facile ai *menu SteamVR*, *acquisizione di foto/video*, *torcia*, e *domestica*.
-* **Supporto per i PC zaino** -realtà mista di Windows eseguire immersive auricolari (VR) in zaino PC senza richiedere un emulatore di visualizzazione dopo aver completato il programma di installazione.
-* **Nuove funzionalità audio** -è ora possibile eseguire il mirroring audio da un'esperienza di realtà mista di Windows sia l'audio jack (o le cuffie) nelle cuffie *e* un dispositivo audio connesso al PC (ad esempio altoparlanti esterni). Nella visualizzazione della cuffia, sono stati anche aggiunti un indicatore visivo per il livello di volume.
+    * Nuova app *video di 360* per l'individuazione di una selezione di video di 360 gradi con regolarità.
+    * Nuova app *WebVR Showcase* per l'individuazione di una selezione regolare di esperienze WebVR.
+    * I primi clienti con la realtà mista di Windows entrano a Cliff House e li trovano già popolati con i lanci di app 3D per alcune delle app e dei giochi immersivi Preferiti dal Microsoft Store.
+    * Microsoft Edge Windows include ora un pulsante *Condividi* .
+* **Menu azioni rapide** : dall'interno di un'app immersiva mista, è possibile premere il pulsante Windows per accedere a un nuovo menu azioni rapide, con accesso semplice a *SteamVR menu*, *acquisizione foto/video*, *torcia elettrica*e *Home*.
+* **Supporto per i PC zaino** : gli auricolari a realtà mista (VR) di Windows vengono eseguiti nei PC Backpack senza richiedere un emulatore di visualizzazione una volta completata l'installazione.
+* **Nuove funzionalità audio** : è ora possibile eseguire il mirroring dell'audio da un'esperienza di realtà mista di Windows sia al jack audio (o alle cuffie) nell'auricolare *che* a un dispositivo audio connesso al PC (ad esempio, altoparlanti esterni). È stato inoltre aggiunto un indicatore visivo per il livello di volume nella visualizzazione dell'auricolare.
 * **Altri miglioramenti**
-    * Aggiornamenti del portale di realtà misti vengono ora forniti tramite il Microsoft Store, attivazione più veloce degli aggiornamenti tra versioni principali di Windows. Si noti che questo vale solo per l'app desktop e l'esperienza di visore VR realtà mista di Windows è ancora aggiornato con il sistema operativo. 
-    * Quando auricolari passare alla modalità sospensione, le app di realtà mista di Windows vengono sospesi invece di terminazione (fino a quando non è stato chiuso il portale di realtà mista).
+    * Gli aggiornamenti del portale di realtà mista vengono ora distribuiti attraverso la Microsoft Store, consentendo aggiornamenti più rapidi tra le versioni principali di Windows. Si noti che questo vale solo per l'app desktop e l'esperienza con l'auricolare della realtà mista di Windows continua ad aggiornarsi con il sistema operativo. 
+    * Quando le cuffie passano alla modalità sospensione, le app per la realtà mista di Windows vengono sospese anziché terminate (fino alla chiusura del portale di realtà mista).
     
 ### <a name="for-developers"></a>Per sviluppatori
 
-* **[Codice a matrice di rilevamento](qr-code-tracking.md)**  -eseguire il codice a matrice di abilitare la registrazione nell'app per realtà mista, consentendo auricolari (VR) coinvolgenti di realtà mista di Windows cercare i codici a matrice e li inserisce in App interessate.
-* **Hardware DRM supporto per le app immersive** -gli sviluppatori possono le trame di hardware protetto quaterna richiesta ora se supportata dall'hardware di visualizzazione, che consente alle applicazioni di utilizzare contenuti protetti con RMS hardware da origini, ad esempio PlayReady.
-* **[Integrare realtà mista acquisizione dell'interfaccia utente nelle applicazioni coinvolgenti](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)**  -gli sviluppatori possono integrare l'acquisizione di realtà mista nelle App utilizzando il Windows incorporato [acquisizione con fotocamera UI](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) con solo poche righe di codice.
+* **[Rilevamento del codice](qr-code-tracking.md)** a matrice: è possibile abilitare il rilevamento del codice a matrice nell'app per realtà mista, consentendo l'uso di auricolari di Windows mista (VR) per la ricerca di codici QR e la segnalazione delle app interessate.
+* **Supporto DRM hardware per le app immersive** : gli sviluppatori possono ora richiedere trame con buffer protetti da hardware se supportate dall'hardware di visualizzazione, consentendo alle applicazioni di usare contenuto protetto da hardware da origini come PlayReady.
+* **[Integrare l'interfaccia utente di acquisizione di realtà mista in app immersive](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)** : gli sviluppatori possono integrare l'acquisizione di realtà mista nelle app usando l' [interfaccia utente](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) predefinita di acquisizione della fotocamera Windows con poche righe di codice.
 
 ## <a name="new-features-for-hololens"></a>Nuove funzionalità per HoloLens
 
-Il 10 ottobre 2018 di Windows Update è disponibile pubblicamente per tutti i clienti di HoloLens e include una serie di miglioramenti, ad esempio:
+L'aggiornamento di Windows 10 ottobre 2018 è disponibile pubblicamente per tutti i clienti di HoloLens e include una serie di miglioramenti, ad esempio:
 
-### <a name="for-everyone"></a>Per tutti gli utenti
+### <a name="for-everyone"></a>Per tutti
 
-* **Menu Azioni rapide** -dall'interno di un'app di realtà mista coinvolgenti, è possibile premere il pulsante di Windows per accedere a un nuovo menu Azioni rapide, accesso facile ai *avvia la registrazione di video*, *scattare fotografie*, *Home page di realtà mista*, *modificare il volume*, e *Connect*.
-* **Avvio/arresto acquisizione video dall'inizio o dal menu Azioni rapide** -se si avvia acquisizione video dal menu Start o dal menu Azioni rapide, sarà in grado di arrestare la registrazione dalla stessa posizione. (Non dimenticare, è possibile eseguire sempre questa operazione con i comandi vocali troppo.)
-* **Progetto per un dispositivo abilitato per Miracast** -il contenuto di HoloLens a un dispositivo Surface nelle vicinanze o TV o monitor del progetto se si usa una visualizzazione abilitato per Miracast o una scheda.
-* **Nuove notifiche** -visualizzazione e rispondere alle notifiche su HoloLens, proprio come in un PC.  
-* **Le sovrimpressioni utili nelle app di realtà mista immersive** -si vedrà ora sovrapposizioni, ad esempio la tastiera, le finestre di dialogo, selezione dei file, e così via, quando si usa immersive mista le App per realtà.
-* **Indicatore visivo per la modifica volume** : quando si usa il volume di / sui pulsanti nella finestra di HoloLens, verrà visualizzato un indicatore visivo del livello di volume nelle cuffie.
-* **Nuovi oggetti visivi per l'avvio di dispositivo** -è stato aggiunto un indicatore di caricamento durante il processo di avvio per fornire un feedback visivo che il sistema sta caricando.
-* **Tenerlo a portata di condivisione** -esperienza di Windows nelle vicinanze la condivisione consente di condividere un'acquisizione con un dispositivo nelle vicinanze di Windows.  
-* **Condivisione da Microsoft Edge** -Microsoft Edge include ora una *condivisione* pulsante. 
+* **Menu azioni rapide** : dall'interno di un'app immersiva mista, è possibile premere il pulsante Windows per accedere a un nuovo menu azioni rapide, con facile accesso per *iniziare a registrare video*, *scattare foto*, *Home realtà mista*, *modificare volume*e *Connect*.
+* **Avviare/arrestare l'acquisizione video dal menu azioni rapide o avvio** : se si avvia l'acquisizione video dal menu Start o dal menu azioni rapide, sarà possibile arrestare la registrazione dalla stessa posizione. Non dimenticare che è sempre possibile eseguire questa operazione con i comandi vocali.
+* **Proiettare in un dispositivo abilitato per Miracast** : proiettare il contenuto di HoloLens su un dispositivo Surface o TV/monitor con supporto per Miracast.
+* **Nuove notifiche** : consente di visualizzare e rispondere alle notifiche in HoloLens, proprio come in un PC.  
+* **Sovrapposizioni utili nelle app immersive per realtà mista** : ora è possibile visualizzare sovrapposizioni come tastiera, finestre di dialogo, selezione file e così via quando si usano app di realtà miste immersive.
+* **Indicatore visivo per la modifica del volume** : quando si usano i pulsanti di scorrimento del volume in HoloLens, viene visualizzato un indicatore visivo del livello del volume nell'auricolare.
+* **Nuovi oggetti visivi per l'avvio del dispositivo** : è stato aggiunto un indicatore di caricamento durante il processo di avvio per fornire il feedback visivo che il sistema sta caricando.
+* **Condivisione vicina** : l'esperienza di condivisione vicina a Windows consente di condividere un'acquisizione con un dispositivo Windows più vicino.  
+* **Condividi da Microsoft Edge** : Microsoft Edge include ora un pulsante *Condividi* . 
 
 ### <a name="for-developers"></a>Per sviluppatori
 
-* **[Integrare realtà mista acquisizione dell'interfaccia utente nelle applicazioni coinvolgenti](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)**  -gli sviluppatori possono integrare l'acquisizione di realtà mista nelle App utilizzando il Windows incorporato [acquisizione con fotocamera UI](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) con solo poche righe di codice.
+* **[Integrare l'interfaccia utente di acquisizione di realtà mista in app immersive](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)** : gli sviluppatori possono integrare l'acquisizione di realtà mista nelle app usando l' [interfaccia utente](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) predefinita di acquisizione della fotocamera Windows con poche righe di codice.
 
 ### <a name="for-commercial-customers"></a>Per i clienti commerciali
 
-* **Abilitare il provisioning di post-installazione** -è ora possibile applicare un pacchetto di provisioning in qualsiasi momento usando le impostazioni di runtime.
-* **Assegnato l'accesso con gruppi di Azure AD** -è ora possibile usare gruppi di Azure AD per la configurazione di Windows assegnato l'accesso per impostare la configurazione per chiosco multimediale uno o più app.
-* **AGGIUNGERE sign-nel commutatore profilo dalla schermata di accesso** -PIN-Accedi a questo punto sono disponibile per "Altro utente" nella schermata di accesso. 
-* **Accedere con il Provider di credenziali Web mediante password** -è ora possibile selezionare l'icona del mondo per avviare web Accedi con la password. 
-* **Leggere le informazioni hardware dispositivo tramite MDM** -gli amministratori IT possono vedere e registrare HoloLens in numero di serie di dispositivi nella console MDM.
-* **Impostare il nome di dispositivo HoloLens tramite MDM (Rinomina)** -gli amministratori IT possono vedere e rinominare i dispositivi HoloLens nella console MDM.
+* **Abilitare il provisioning post-installazione** : è ora possibile applicare un pacchetto di provisioning di runtime in qualsiasi momento usando le impostazioni.
+* **Accesso assegnato con gruppi di Azure ad** : è ora possibile usare i gruppi di Azure ad per la configurazione dell'accesso assegnato a Windows per configurare la configurazione del chiosco multimediale a più app o a più app.
+* **Aggiunta dell'accesso all'opzione del profilo dalla schermata di accesso** . l'accesso PIN è ora disponibile per "altro utente" nella schermata di accesso. 
+* **Leggere le informazioni sull'hardware del dispositivo tramite MDM** : gli amministratori IT possono visualizzare e tenere traccia di HoloLens in base al numero di serie del dispositivo nella console MDM.
+* **Impostare il nome del dispositivo HoloLens tramite MDM (Rinomina)** : gli amministratori IT possono visualizzare e rinominare i dispositivi HoloLens nella console MDM.
 
 ### <a name="for-international-customers"></a>Per i clienti internazionali
 
-È ora possibile usare HoloLens con interfaccia utente localizzata per il cinese semplificato o giapponese, tra cui tastiera Pinyin localizzata, dettatura, sintesi vocale e comandi vocali.
+È ora possibile usare HoloLens con l'interfaccia utente localizzata per il cinese semplificato o giapponese, tra cui la tastiera, la dettatura, la sintesi vocale e i comandi vocali.
 
 ## <a name="known-issues"></a>Problemi noti
 
-Abbiamo lavorato sodo per offrire un'eccezionale esperienza di realtà mista di Windows, ma ancora Microsoft eseguita verificando alcuni problemi noti. Se si trova ad altri utenti, please [commenti e suggerimenti](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback).
+Abbiamo lavorato duramente per offrire un'eccezionale esperienza di realtà mista di Windows, ma stiamo ancora verificando alcuni problemi noti. Se si trovano altre persone, inviare [commenti e suggerimenti](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback).
 
 ### <a name="hololens"></a>HoloLens
  
 #### <a name="after-update"></a>Dopo l'aggiornamento
-È possibile notare i seguenti problemi quando con Windows 10 ottobre 2018 Aggiorna nella finestra di HoloLens:
-* **Le app possono finire in accesso ciclico quando sono avviate da una notifica** – alcune App che richiedono accesso possibile fine-up in un accesso ciclo infinito quando avviata da una notifica. Ad esempio, questa situazione può verificarsi dopo aver installato l'app portale aziendale di Microsoft da di Microsoft Store e averlo avviato da una notifica di completamento l'installazione.
-* **App nella pagina di accesso può essere completata con una pagina vuota** : In alcuni casi in cui viene illustrata una richiesta di accesso tramite l'applicazione, al termine, la pagina di accesso non viene chiusa e Mostra una pagina vuota (nera). È possibile chiudere la pagina vuota o spostarlo per individuare l'applicazione sottostante. Ad esempio, questa situazione può verificarsi in fase di accesso durante la registrazione MDM dall'app impostazioni. 
+È possibile che si verifichino i seguenti problemi quando si usa l'aggiornamento di Windows 10 ottobre 2018 in HoloLens:
+* Le **app possono finire nel ciclo di accesso quando vengono avviate da una notifica** . alcune app che richiedono l'accesso possono terminare con un ciclo di accesso infinito quando vengono avviate da una notifica. Questo può verificarsi, ad esempio, dopo l'installazione dell'app Microsoft Portale aziendale dal Microsoft Store e l'avvio dalla notifica di completamento dell'installazione.
+* La **pagina di accesso dell'app può essere completata con una pagina vuota** : in alcuni casi, quando viene visualizzato un messaggio di accesso sull'applicazione, al completamento della pagina di accesso non viene chiusa e viene invece visualizzata una pagina vuota (nero). È possibile chiudere la pagina vuota o spostarla per individuare l'applicazione sottostante. Questo può verificarsi ad esempio durante l'accesso durante la registrazione MDM dall'app Impostazioni. 
 
-## <a name="provide-feedback-and-report-issues"></a>Fornire commenti e suggerimenti e segnalare problemi
+## <a name="provide-feedback-and-report-issues"></a>Inviare commenti e suggerimenti e segnalare problemi
 
-Usare la [app di Hub di commenti e suggerimenti sul PC Windows 10 o HoloLens](give-us-feedback.md) per fornire commenti e suggerimenti e segnalare problemi. Con Hub di Feedback garantisce che tutte le informazioni di diagnostica necessarie sono incluse per consentire ai nostri tecnici rapidamente il debug e risolvere il problema.
+Usare l' [App Hub di feedback in HoloLens o Windows 10 PC](give-us-feedback.md) per inviare commenti e suggerimenti e segnalare problemi. L'uso dell'hub feedback garantisce che tutte le informazioni di diagnostica necessarie siano incluse per aiutare i nostri tecnici a eseguire rapidamente il debug e risolvere il problema.
 
 >[!NOTE]
->Assicurarsi di accettare il prompt che chiede se si vuole che Hub di commenti e suggerimenti per accedere alla cartella documenti (selezionare **Sì** quando richiesto).
+>Assicurarsi di accettare il prompt che chiede se si vuole che l'hub feedback acceda alla cartella documenti (selezionare **Sì** quando richiesto).
 
 ## <a name="prior-release-notes"></a>Note sulla versione precedente
 
@@ -114,8 +113,8 @@ Usare la [app di Hub di commenti e suggerimenti sul PC Windows 10 o HoloLens](gi
 * [Note sulla versione - marzo 2016](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>Vedere anche
-* [Supporto visore VR immersivi (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [Supporto per cuffie immersive (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Supporto di HoloLens (collegamento esterno)](https://support.microsoft.com/products/hololens)
 * [Installare gli strumenti](install-the-tools.md)
-* [Invia commenti e suggerimenti](give-us-feedback.md)
+* [Inviare commenti e suggerimenti](give-us-feedback.md)
 

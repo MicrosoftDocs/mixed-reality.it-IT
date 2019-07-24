@@ -1,164 +1,164 @@
 ---
-title: 'Case study: Building HoloSketch, un layout spaziali e UX sketch di app per HoloLens'
-description: HoloSketch è un layout spaziali sul dispositivo e dell'esperienza utente sketch strumento per HoloLens per la creazione di esperienze holographic.
+title: Case Study-compilazione di HoloSketch, un layout spaziale e un'app per lo sketch di UX per HoloLens
+description: HoloSketch è un layout spaziale su dispositivo e uno strumento di schizzo UX per HoloLens per aiutare a creare esperienze olografiche.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloSketch, HoloLens, realtà mista di Windows, tracciare, app
+keywords: HoloSketch, HoloLens, realtà mista di Windows, sketching, app
 ms.openlocfilehash: d7f94a09bf4a8a16000c2345adf1a046dab4bd15
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600133"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524372"
 ---
-# <a name="case-study---building-holosketch-a-spatial-layout-and-ux-sketching-app-for-hololens"></a>Case study: Building HoloSketch, un layout spaziali e UX sketch di app per HoloLens
+# <a name="case-study---building-holosketch-a-spatial-layout-and-ux-sketching-app-for-hololens"></a>Case Study-compilazione di HoloSketch, un layout spaziale e un'app per lo sketch di UX per HoloLens
 
-HoloSketch è un layout spaziali sul dispositivo e dell'esperienza utente sketch strumento per HoloLens per la creazione di esperienze holographic. HoloSketch funziona con un comandi da tastiera e mouse, nonché gesti e voce Bluetooth abbinata. Lo scopo di HoloSketch è fornire uno strumento di layout dell'esperienza utente semplice per la visualizzazione rapida e di iterazione.
+HoloSketch è un layout spaziale su dispositivo e uno strumento di schizzo UX per HoloLens per aiutare a creare esperienze olografiche. HoloSketch funziona con una tastiera e un mouse Bluetooth abbinati, nonché comandi di movimento e voce. Lo scopo di HoloSketch è fornire un semplice strumento di layout UX per la visualizzazione e l'iterazione rapide.
 
-![HoloSketch: Un layout spaziali e UX sketch di app per HoloLens.](images/holosketch-image-01-640px.png)<br>
-*HoloSketch: layout spaziali e UX sketch di app per HoloLens*
+![HoloSketch: Un layout spaziale e un'app di sketch di UX per HoloLens.](images/holosketch-image-01-640px.png)<br>
+*HoloSketch: layout spaziale e app di sketch di UX per HoloLens*
 
-![Uno strumento di layout dell'esperienza utente semplice per la visualizzazione rapida e di iterazione.](images/holosketch-image-02.png)<br>
-*Uno strumento di layout dell'esperienza utente semplice per la visualizzazione rapida e di iterazione*
+![Semplice strumento di layout UX per la visualizzazione e l'iterazione rapide.](images/holosketch-image-02.png)<br>
+*Semplice strumento di layout UX per la visualizzazione e l'iterazione rapide*
 
 ## <a name="features"></a>Funzionalità
 
-### <a name="primitives-for-quick-studies-and-scale-prototyping"></a>Primitive per study rapido e scalabilità-creazione di prototipi
+### <a name="primitives-for-quick-studies-and-scale-prototyping"></a>Primitive per gli studi rapidi e la creazione di prototipi di scalabilità
 
-![Utilizzo delle forme primitive](images/holosketch-primitives-giphy.gif)
+![Uso di forme primitive](images/holosketch-primitives-giphy.gif)
 
-Usare le forme primitive per study massing rapido e scalabilità-creazione di prototipi.
+Usare forme primitive per gli studi di massa rapida e la creazione di prototipi di scalabilità.
 
-### <a name="import-objects-through-onedrive"></a>Oggetti di importazione tramite OneDrive
+### <a name="import-objects-through-onedrive"></a>Importare oggetti tramite OneDrive
 
 ![importazione di oggetti](images/holosketch-importobjects-giphy.gif)
 
-Importare immagini PNG o JPG o oggetti FBX 3D (richiede la creazione di pacchetti in Unity) nello spazio di realtà mista tramite OneDrive.
+Importa le immagini PNG/JPG o gli oggetti FBX 3D (richiede la creazione di pacchetti in Unity) nello spazio di realtà misto attraverso OneDrive.
 
-### <a name="manipulate-objects"></a>Modificare gli oggetti
+### <a name="manipulate-objects"></a>Modificare oggetti
 
-![la modifica degli oggetti](images/manipulate-objects-640px.jpg)
+![manipolazione di oggetti](images/manipulate-objects-640px.jpg)
 
-Modificare gli oggetti (spostamento/ruotare/scala) con un'interfaccia familiare oggetto 3D.
+Modificare gli oggetti (spostamento/rotazione/ridimensionamento) con una nota interfaccia oggetto 3D.
 
-### <a name="bluetooth-mousekeyboard-gestures-and-voice-commands"></a>Bluetooth, mouse e tastiera, movimenti e i comandi vocali
+### <a name="bluetooth-mousekeyboard-gestures-and-voice-commands"></a>Bluetooth, mouse/tastiera, movimenti e comandi vocali
 
 ![supporta Bluetooth](images/supports-bluetooth-640px.jpg)
 
-HoloSketch supporta mouse e tastiera Bluetooth, movimenti e comandi vocali.
+HoloSketch supporta mouse/tastiera, movimenti e comandi vocali Bluetooth.
 
-## <a name="background"></a>Informazioni
+## <a name="background"></a>Sfondo
 
-### <a name="importance-of-experiencing-your-design-in-the-device"></a>Importanza della verifica della progettazione del dispositivo
+### <a name="importance-of-experiencing-your-design-in-the-device"></a>Importanza dell'esperienza di progettazione nel dispositivo
 
-Quando si progetta qualcosa per HoloLens, è importante sperimentare la progettazione del dispositivo. Una delle principali sfide nella progettazione delle app di realtà mista è che è difficile ottenere il senso di scalabilità, posizione e profondità, in particolare nelle tradizionali schizzi 2D.
+Quando si progetta un elemento per HoloLens, è importante sperimentare la progettazione nel dispositivo. Una delle principali difficoltà nella progettazione di app in realtà mista è che è difficile ottenere la scalabilità, la posizione e la profondità, soprattutto tramite gli schizzi 2D tradizionali.
 
-### <a name="cost-of-2d-based-communication"></a>Comunicazione basato sui costi di 2D
+### <a name="cost-of-2d-based-communication"></a>Costo della comunicazione basata su 2D
 
-Per comunicare in modo efficace i flussi dell'esperienza utente e gli scenari ad altri utenti, una finestra di progettazione potrebbe avere un notevole dispendio di tempo di creazione di asset mediante gli strumenti tradizionali 2D, come Illustrator, Photoshop e PowerPoint. Questi progetti 2D spesso richiedono un impegno aggiuntivo per convertirli in 3D. Alcune informazioni vengono perse in questa conversione da 2D a 3D.
+Per comunicare efficacemente flussi e scenari UX ad altri, una finestra di progettazione può dedicare molto tempo alla creazione di asset usando strumenti 2D tradizionali come Illustrator, Photoshop e PowerPoint. Queste progettazioni 2D richiedono spesso ulteriori sforzi per convertirle in 3D. Alcune idee vengono perse in questa conversione da 2D a 3D.
 
-### <a name="complex-deployment-process"></a>Processo di distribuzione complesse
+### <a name="complex-deployment-process"></a>Processo di distribuzione complesso
 
-Poiché realtà mista è una nuova area di disegno per noi, comporta molti tentativi ed errori e iterazione di progettazione per sua natura. Finestra di progettazione che non hanno familiarità con gli strumenti, ad esempio Unity e Visual Studio, non è facile inserire un elemento tra loro in HoloLens. In genere è necessario seguire la procedura seguente per visualizzare la grafica 2D e 3D nel dispositivo. Si tratta di una barriera di big data per i progettisti rapidamente l'iterazione sugli scenari e le idee.
+Poiché la realtà mista è una nuova area di disegno, comporta una grande quantità di iterazioni di progettazione e di prova ed errori per natura. Per le finestre di progettazione che non hanno familiarità con strumenti quali Unity e Visual Studio, non è facile inserire un elemento in HoloLens. In genere è necessario eseguire il processo seguente per visualizzare le immagini 2D/3D nel dispositivo. Si tratta di un grande ostacolo per i progettisti che scorrono rapidamente idee e scenari.
 
-![Processo di distribuzione complesse](images/holosketch-image-03-1000px.png)<br>
+![Processo di distribuzione complesso](images/holosketch-image-03-1000px.png)<br>
 *Processo di distribuzione*
 
 ### <a name="simplified-process-with-holosketch"></a>Processo semplificato con HoloSketch
 
-Con HoloSketch, volevamo semplificare il processo senza coinvolgere gli strumenti di sviluppo e associazione del portale di dispositivo. Uso di OneDrive, gli utenti possono facilmente attivare gli asset 2D e 3D HoloLens.
+Con HoloSketch è stato voluto semplificare questo processo senza coinvolgere gli strumenti di sviluppo e l'associazione del portale per i dispositivi. Con OneDrive, gli utenti possono inserire facilmente risorse 2D/3D in HoloLens.
 
 ![Processo semplificato con HoloSketch](images/holosketch-image-04-1000px.png)<br>
 *Processo semplificato con HoloSketch*
 
-### <a name="encouraging-three-dimensional-design-thinking-and-solutions"></a>Incoraggiando la mentalità progettazione tridimensionale e soluzioni
+### <a name="encouraging-three-dimensional-design-thinking-and-solutions"></a>Incoraggiare le soluzioni e i Thinking di progettazione tridimensionali
 
-Abbiamo pensato di che questo strumento darebbe finestre di progettazione un'opportunità di Esplora soluzioni in uno spazio tridimensionale realmente e non essere bloccato in 2D. Non dovranno considerare creando un background 3D per l'interfaccia utente, poiché lo sfondo è di mondo reale in caso di Hololens. HoloSketch offre un modo per i progettisti di esplorare facilmente progettazione 3D in Hololens.
+Abbiamo pensato che questo strumento darebbe ai progettisti la possibilità di esplorare le soluzioni in uno spazio effettivamente tridimensionale e di non rimanere bloccati in 2D. Non è necessario considerare la creazione di uno sfondo 3D per la propria interfaccia utente, poiché lo sfondo è il mondo reale nel caso di Hololens. HoloSketch apre una soluzione che consente ai progettisti di esplorare facilmente la progettazione 3D in Hololens.
 
 ## <a name="get-started"></a>Introduzione
 
-### <a name="how-to-import-2d-images-jpgpng-into-holosketch"></a>Come importare immagini 2D JPG/PNG () in HoloSketch
+### <a name="how-to-import-2d-images-jpgpng-into-holosketch"></a>Come importare immagini 2D (JPG/PNG) in HoloSketch
 
-* Caricare immagini JPG/PNG per la cartella di OneDrive ' Documenti/HoloSketch'.
-* Dal menu di OneDrive nel HoloSketch, sarà possibile selezionare e copiare l'immagine nell'ambiente.
+* Caricare le immagini JPG/PNG nella cartella OneDrive "Documents/HoloSketch".
+* Dal menu OneDrive in HoloSketch sarà possibile selezionare e inserire l'immagine nell'ambiente.
 
-![L'importazione di immagini 2D](images/import-2d-images-1000px.jpg)<br>
+![Importazione di immagini 2D](images/import-2d-images-1000px.jpg)<br>
 *Importazione di immagini e oggetti 3D tramite OneDrive*
 
 ### <a name="how-to-import-3d-objects-into-holosketch"></a>Come importare oggetti 3D in HoloSketch
 
-Prima di caricare la cartella di OneDrive, attenersi alla procedura seguente per creare un pacchetto di oggetti 3D in un bundle di asset di Unity. Utilizzo di questo processo è possibile importare i file FBX/OBJ da software 3D come Maya, Cinema 4D e Microsoft Paint 3D.
+Prima di caricare nella cartella OneDrive, attenersi alla procedura seguente per creare un pacchetto degli oggetti 3D in un bundle di asset Unity. Con questo processo è possibile importare i file FBX/OBJ dal software 3D, ad esempio Maya, cinema 4D e Microsoft Paint 3D.
 
 >[!IMPORTANT]
->Attualmente, la creazione di bundle di asset è supportata con Unity versione 5.4.5f1.
+>Attualmente la creazione di bundle di asset è supportata con Unity Version 5.4.5 F1.
 
-1. Scaricare e aprire il progetto di Unity ['AssetBunlder_Unity'](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity). Questo progetto di Unity include lo script per la generazione di asset di bundle.
-2. Creare un GameObject nuovo.
-3. Denominare il GameObject basato sul contenuto.
-4. Nel Pannello di controllo, fare clic su 'Aggiungi componente' e aggiungere 'Casella Collider'. 
+1. Scaricare e aprire il progetto Unity [' AssetBunlder_Unity '](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity). Questo progetto Unity include lo script per la generazione di asset bundle.
+2. Creare un nuovo GameObject.
+3. Denominare il GameObject in base al contenuto.
+4. Nel pannello di controllo fare clic su' Aggiungi componente ' e aggiungere ' box Collider '. 
 
-   ![Nel Pannello di controllo, fare clic su 'Aggiungi componente' e aggiungere 'Casella Collider'](images/holosketch-10a-assetbundles-1000px.png)
+   ![Nel pannello di controllo fare clic su' Aggiungi componente ' e aggiungere ' box Collider '](images/holosketch-10a-assetbundles-1000px.png)
    
-   ![Nel Pannello di controllo, fare clic su 'Aggiungi componente' e aggiungere 'Casella Collider' #2](images/holosketch-10b-assetbundles-1000px.png)
+   ![Nel pannello di controllo fare clic su' Aggiungi componente ' e aggiungere ' box Collider ' #2](images/holosketch-10b-assetbundles-1000px.png)
 
-5. Importare il file FBX 3D trascinandolo nel Pannello di progetto.
-6. Trascinare l'oggetto nel Pannello di gerarchia **sotto il nuovo GameObject**.
+5. Importare il file FBX 3D trascinandolo nel pannello del progetto.
+6. Trascinare l'oggetto nel pannello gerarchia **sotto il nuovo GameObject**.
 
-   ![Trascinare l'oggetto nel Pannello di gerarchia sotto il nuovo GameObject](images/holosketch-12-assetbundles-1000px.png)
+   ![Trascinare l'oggetto nel pannello gerarchia sotto il nuovo GameObject](images/holosketch-12-assetbundles-1000px.png)
 
-7. Regolare la dimensione collider se non corrisponde l'oggetto. Ruotare l'oggetto per affrontare **asse z**.
+7. Modificare la dimensione del Collider se non corrisponde all'oggetto. Ruotare l'oggetto sull' **asse Z**.
 
-   ![Regolare la dimensione collider se non corrisponde l'oggetto.](images/holosketch-13-assetbundles-1000px.png)
+   ![Modificare la dimensione del Collider se non corrisponde all'oggetto.](images/holosketch-13-assetbundles-1000px.png)
 
-8. Trascinare l'oggetto dal Pannello di gerarchia al pannello di progetto per **renderlo prefab**.
-9. Nella parte inferiore del Pannello di controllo, fare clic sul menu a discesa, creare e assegnare un nome univoco. Esempio seguente illustra l'aggiunta e l'assegnazione 'brownchair' per il nome AssetBundle. 
+8. Trascinare l'oggetto dal pannello gerarchia al pannello del progetto per **renderlo**prefabbricato.
+9. Nella parte inferiore del pannello Inspector fare clic sull'elenco a discesa, creare e assegnare un nuovo nome univoco. Nell'esempio seguente viene illustrato come aggiungere e assegnare "brownchair" per il nome AssetBundle. 
 
-   ![Nella parte inferiore del Pannello di controllo, fare clic sul menu a discesa e assegnare un nuovo nome univoco.](images/holosketch-14-assetbundles-1000px.png)
+   ![Nella parte inferiore del pannello Inspector fare clic sull'elenco a discesa e assegnare un nuovo nome univoco.](images/holosketch-14-assetbundles-1000px.png)
 
 10. Preparare un'immagine di anteprima per l'oggetto modello. 
-   ![Trascinare un'immagine nel Pannello di progetto e assegnare il nome utilizzato per l'oggetto.](images/holosketch-15-assetbundles-1000px.png)
+   ![Trascinare un'immagine nel pannello del progetto e assegnare il nome usato per l'oggetto.](images/holosketch-15-assetbundles-1000px.png)
 
-11. Creare una cartella denominata 'Assetbundles' nella cartella 'Asset' del progetto Unity.
+11. Creare una cartella denominata "Assetbundles" nella cartella "asset" del progetto Unity.
 
-12. Nel menu di asset, selezionare 'Build AssetBundles' per generare file. 
-   ![Nel menu di asset, selezionare 'Build AssetBundles' per generare file.](images/holosketch-15a-assetbundles.png)
+12. Dal menu Asset selezionare ' compila AssetBundles ' per generare il file. 
+   ![Dal menu Asset selezionare ' compila AssetBundles ' per generare il file.](images/holosketch-15a-assetbundles.png)
 
 
-13. **Caricare il file generato nella cartella /Files/Documents/HoloSketch in OneDrive.** Caricare il file asset_unique_name solo. Non si dovranno caricare file AssetBundles o i file manifesto. <br>
-![Aggiungere file al file/documenti/HoloSketch/cartella](images/holosketch-onedriveupload-1000px.png)
-![verrà visualizzato un oggetto 3D aggiunto nel menu di OneDrive del HoloSketch](images/holosketch-14-onedriveexample-1000px.jpg)
+13. **Caricare il file generato nella cartella/Files/Documents/HoloSketch in OneDrive.** Caricare solo il file asset_unique_name. Non è necessario caricare file manifesto o file AssetBundles. <br>
+![Aggiungere file a file/documenti/HoloSketch/cartella](images/holosketch-onedriveupload-1000px.png)
+![. viene visualizzato un oggetto 3D aggiunto nel menu OneDrive di HoloSketch](images/holosketch-14-onedriveexample-1000px.jpg)
 
 ## <a name="how-to-manipulate-the-objects"></a>Come modificare gli oggetti
 
-HoloSketch supporta l'interfaccia tradizionali che è ampiamente usato in 3D software. È possibile utilizzare per spostare, ruotare, ridimensionare gli oggetti con i movimenti e un mouse. È possibile passare rapidamente tra modalità diverse con vocali o della tastiera.
+HoloSketch supporta l'interfaccia tradizionale ampiamente utilizzata nel software 3D. È possibile utilizzare Sposta, ruota, ridimensionare gli oggetti con movimenti e mouse. È possibile passare rapidamente da una modalità all'altra con la voce o la tastiera.
 
-### <a name="object-manipulation-modes"></a>Modalità di manipolazione di oggetti
+### <a name="object-manipulation-modes"></a>Modalità di manipolazione degli oggetti
 
 ![Come modificare gli oggetti](images/holosketch-image-06-1000px.png)<br>
 *Come modificare gli oggetti*
 
-### <a name="contextual-and-tool-belt-menus"></a>Menu contestuali e Tool Belt
+### <a name="contextual-and-tool-belt-menus"></a>Menu contestuale e barra degli strumenti
 
-**Tramite il menu di scelta rapida**
+**Uso del menu contestuale**
 
-Indice puntato Double per aprire il menu di scelta rapida. 
+Toccare aria doppia per aprire il menu contestuale. 
 
 Voci di menu:
-* **Nell'area di layout:** Questo è un sistema di griglie 3D in cui è possibile modificare il layout più oggetti e gestirli come gruppo. Double-indice puntato nell'area di Layout per aggiungervi gli oggetti.
-* **Primitive:** Usare i cubi, sfere, cilindri e coni per massing studi.
-* **OneDrive:** Aprire il menu di OneDrive per importare gli oggetti.
-* **aiuto:** Visualizza la Guida dello schermo.
+* **Superficie layout:** Si tratta di un sistema Grid 3D in cui è possibile disporre più oggetti e gestirli come un gruppo. Toccare aria doppia sull'area del layout per aggiungere oggetti.
+* **Primitives** Usare cubi, sfere, cilindri e coni per gli studi di massa.
+* **OneDrive** Aprire il menu OneDrive per importare gli oggetti.
+* **Guida:** Visualizza la schermata della guida.
 
-![Menu di scelta rapida](images/holosketch-image-07.png)<br>
-*Menu di scelta rapida*
+![Menu contestuale](images/holosketch-image-07.png)<br>
+*Menu contestuale*
 
-**Usando il Menu di Tool Belt**
+**Uso del menu della barra degli strumenti**
 
-Spostare, ruota, scalabilità, salvataggio e caricamento scena sono disponibili dal Menu Tool Belt. 
+Spostare, ruotare, ridimensionare, salvare e caricare la scena sono disponibili dal menu della barra degli strumenti. 
 
-## <a name="using-keyboard-gestures-and-voice-commands"></a>Usando la tastiera, movimenti e comandi vocali
+## <a name="using-keyboard-gestures-and-voice-commands"></a>Uso di tasti di scelta rapida, movimenti e comandi vocali
 
 ![Tastiera, movimenti e comandi vocali](images/holosketch-image-08-1000px.png)<br>
 *Tastiera, movimenti e comandi vocali*
@@ -169,31 +169,31 @@ Spostare, ruota, scalabilità, salvataggio e caricamento scena sono disponibili 
 <tr>
 <td style="border-style: none" width="60px"><img alt="HoloSketch app icon" width="60" height="60" src="images/holosketch-app-icon.png">
 </td>
-<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">Scaricare e installare l'app HoloSketch gratuitamente da di Microsoft Store</a>
+<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">Scaricare e installare gratuitamente l'app HoloSketch dalla Microsoft Store</a>
 </td>
 </tr>
 </table>
 
 ## <a name="known-issues"></a>Problemi noti
-* Attualmente è supportata la creazione di bundle di asset con **5.4.5f1 versione di Unity.**
-* A seconda della quantità di dati in OneDrive, l'app potrebbe essere visualizzato come se è stato arrestato durante il caricamento del contenuto di OneDrive
-* Attualmente, salvare e caricare oggetti primitivi supporta solo funzionalità
-* Menu di testo, audio, Video e foto sono disabilitati nel menu di scelta rapida
-* Il pulsante Play del menu Tool Belt Cancella il gizmo manipulation
+* La creazione del bundle di asset è attualmente supportata con **Unity Version 5.4.5 F1.**
+* A seconda della quantità di dati nel OneDrive, l'app potrebbe apparire come se fosse stata arrestata durante il caricamento del contenuto di OneDrive
+* Attualmente, la funzionalità Salva e carica supporta solo oggetti primitivi
+* Menu di testo, audio, video e foto sono disabilitati nel menu contestuale
+* Il pulsante Riproduci nel menu della barra degli strumenti Cancella i gizmo di manipolazione
 
-## <a name="sharing-your-sketches"></a>Le bozze di condivisione
+## <a name="sharing-your-sketches"></a>Condivisione degli sketch
 
-È possibile usare la funzionalità di registrazione video in HoloLens, pronunciare "Ehi Cortana, la registrazione di Start/Stop '. Premere il volume su/giù chiave insieme a scattare una foto dello sketch.
+È possibile usare la funzionalità di registrazione video in HoloLens dicendo ' Hey Cortana, Start/Stop Registration '. Premere il tasto di scorrimento/discesa del volume per scattare un'immagine dello schizzo.
 
 ## <a name="about-the-authors"></a>Informazioni sugli autori
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong Yoon Park</b><br>UX Designer @Microsoft</td>
+<td style="border-style: none"><b>Dong Yoon Park</b><br>Progettazione UX@Microsoft</td>
 </tr>
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Patrick Sebring" width="60" height="60" src="images/paseb-60px.jpg"></td>
-<td style="border-style: none"><b>Patrick Sebring</b><br>Per gli sviluppatori @Microsoft</td>
+<td style="border-style: none"><b>Patrick Sebring</b><br>Sviluppatore@Microsoft</td>
 </tr>
 </table> 

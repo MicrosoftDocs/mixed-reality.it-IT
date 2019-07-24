@@ -1,65 +1,65 @@
 ---
-title: Linee guida di progettazione di app 3D dell'utilità di avvio
-description: Un'utilità di avvio app 3D è un oggetto "physical" in casa di realtà mista dell'utente che è possibile scegliere di avviare un'app.
+title: Guida alla progettazione dell'utilità di avvio delle app 3D
+description: Un avvio di app 3D è un oggetto "fisico" nella casa della realtà mista dell'utente che può selezionare per avviare un'app.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realtà mista di Windows, progettazione, utilità di avvio app 3D, visore VR immersivi, il cubo in tempo reale
+keywords: Realtà mista di Windows, progettazione, avvio di app 3D, auricolare immersivo, cubo attivo
 ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598552"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517654"
 ---
-# <a name="3d-app-launcher-design-guidance"></a>Linee guida di progettazione di app 3D dell'utilità di avvio
+# <a name="3d-app-launcher-design-guidance"></a>Guida alla progettazione dell'utilità di avvio delle app 3D
 
-Quando si inserisce in un auricolare (VR) coinvolgente di realtà mista di Windows, si immette la realtà mista di Windows home, visualizzato come una casa in un precipizio racchiuso tra le montagne e acqua (anche se è possibile [scegliere altri ambienti e persino crearne di propri](add-custom-home-environments.md)). Nello spazio di questo home, un utente è libero di gestire e organizzare gli oggetti 3D e le app che si preoccupi di qualsiasi modalità che preferiscono. Oggetto **utilità di avvio app 3D** è casa realtà che è possibile scegliere di avviare un'app mista di un oggetto "physical" dell'utente.
+Quando si usa un headset di Windows misto Reality (VR), si immette la Home realtà mista di Windows, viene visualizzata come una casa in una rupe circondata da montagne e acqua (anche se è possibile [scegliere altri ambienti e persino crearne di personalizzati](add-custom-home-environments.md)). All'interno dello spazio di questa casa, un utente può organizzare e organizzare gli oggetti e le app 3D a cui si è interessati. Un **avvio di app 3D** è un oggetto "fisico" nella casa della realtà mista dell'utente che può selezionare per avviare un'app.
 
-![Esempio: Utilità di avvio di Mobile Bird app 3D](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
-*Esempio di utilità di avvio di Mobile Bird app 3D (fittizia app)*
+![Esempio: Utilità di avvio di app 3D Floaty Bird](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+*Esempio di utilità di avvio di app 3D Floaty Bird (app fittizia)*
 
-## <a name="3d-app-launcher-creation-process"></a>Processo di creazione dell'utilità di avvio app 3D
+## <a name="3d-app-launcher-creation-process"></a>processo di creazione dell'utilità di avvio delle app 3D
 
-Sono previsti 3 passaggi per la creazione di un'utilità di avvio app 3D:
-1. Progettazione e concepting (questo articolo)
-2. [Modellazione e l'esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-3. L'integrazione nell'applicazione:
+Per la creazione di un avvio di app 3D sono necessari tre passaggi:
+1. Progettazione e concezione (questo articolo)
+2. [Modellazione ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+3. Per integrarlo nell'applicazione:
     * [App UWP](implementing-3d-app-launchers.md)
     * [App Win32](implementing-3d-app-launchers-win32.md)
 
-## <a name="design-concepts"></a>Concetti relativi alla progettazione
+## <a name="design-concepts"></a>Concetti di progettazione
 
-### <a name="fantastic-yet-familiar"></a>Fantastico ancora familiare
+### <a name="fantastic-yet-familiar"></a>Fantastico ma familiare
 
-L'ambiente di realtà mista di Windows in che si trova l'icona di avvio delle app è parte familiare, parte eroi sempre/sci-fi. L'utilità di avvio migliore seguono le regole di questo mondo. Pensare a come è possibile accettare un oggetto familiare e rappresentativo dall'app, ma piegare alcune delle regole di realtà effettivo. Magic verrà generato.
+L'ambiente di realtà mista di Windows in cui si trova l'utilità di avvio delle app è familiare, parte fantastica/sci-fi. I migliori lanci seguono le regole di questo mondo. Si pensi a come sia possibile prendere un oggetto familiare, rappresentativo, dall'app, ma è necessario piegare alcune delle regole della realtà reale. Si otterrà un risultato magico.
 
-### <a name="intuitive"></a>intuitivo
+### <a name="intuitive"></a>Intuitivo
 
-Quando si esamina l'utilità di avvio di app, lo scopo - per avviare l'app - dovrebbe essere evidente e non dovrebbe causare confusione. Assicurarsi, ad esempio, che l'utilità di avvio è un ovvio sufficientemente rappresentativo dell'app che non verranno confusi per un dato decor in House di Cliff. L'utilità di avvio di app deve invitare persone a tocco/select si.
+Quando si esamina l'utilità di avvio delle app, il suo scopo è quello di avviare l'app, che dovrebbe essere ovvia e non dovrebbe causare confusione. Assicurarsi, ad esempio, che l'utilità di avvio sia un rappresentante abbastanza ovvio dell'app che non verrà confusa per un pezzo di arredamento in Cliff House. L'utilità di avvio delle app dovrebbe invitare gli utenti a toccarlo/selezionarlo.
 
-![Esempio: Nuova utilità di avvio nota app 3D](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
-*Nuova nota 3D app dell'utilità di avvio di esempio (fittizio app)*
+![Esempio: Schermata di avvio delle app 3D aggiornata](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
+*Esempio di avvio dell'app 3D (app fittizia)*
 
-### <a name="home-scale"></a>Scalabilità home
+### <a name="home-scale"></a>Scalabilità domestica
 
-Nelle schermate di avvio app 3D in tempo reale in House di Cliff e le dimensioni predefinite devono essere usati con gli altri oggetti "physical" nello spazio. Se si inseriscono le utilità di avvio-beside, ad esempio, un impianto di casa o alcuni mobili, dovrebbe risultare a casa, size-wise. Un buon punto di partenza consiste nel verificarne l'aspetto in centimetri cubiche 30, tenere presente che gli utenti possono scalare verso l'alto o verso il basso se desiderano.
+i lanci di app 3D risiedono nella casa di Cliff e le dimensioni predefinite dovrebbero avere senso con gli altri oggetti "fisici" nello spazio. Se l'utilità di avvio viene posizionata accanto a un impianto di casa o a una parte di mobili, si dovrebbe sentire a casa, ridimensionare. Un valido punto di partenza consiste nel vedere il modo in cui esamina 30 centimetri cubici, ma tenere presente che gli utenti possono aumentare o ridurre le prestazioni se lo desiderano.
 
-### <a name="own-able"></a>Il proprietario da dispositivo
+### <a name="own-able"></a>Proprietario
 
-L'icona di avvio dovrebbe risultare simile a un oggetto persona sarebbe entusiasti di avere nel proprio spazio. Si sarà essere praticamente circostante autonomamente con queste cose, in modo che l'utilità di avvio dovrebbe risultare simile al pensiero di utente è stata abbastanza utile cercare e mantenere vicini.
+L'utilità di avvio delle app dovrebbe essere simile a un oggetto che una persona sarebbe entusiasta di avere nello spazio. Si tratteranno praticamente di questi elementi, quindi l'utilità di avvio dovrebbe avere un aspetto simile a quello auspicabile dall'utente per cercarla e mantenerla vicina.
 
-![Esempio: Utilità di avvio app 3D atomi Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
-*Esempio di utilità di avvio app 3D atomi Warp (fittizia app)*
+![Esempio: Utilità di avvio app 3D Astro Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+*Esempio di avvio di app 3D di Astro Warp (app fittizia)*
 
 ### <a name="recognizable"></a>Riconoscibile
 
-L'utilità di avvio app 3D debba esprimere istantaneamente "marchio dell'app" a chi visualizzarlo. Se si dispone di un carattere a stella o a un oggetto soprattutto personali nell'app, è consigliabile usarlo come gran parte della progettazione. In un mondo di realtà mista, un oggetto verrà suscitare l'interesse più utenti rispetto a semplicemente un logo da solo. Oggetti riconoscibili comunicano marchio semplice e rapido.
+L'utilità di avvio delle app 3D dovrebbe immediatamente esprimere "il marchio dell'app" agli utenti che lo visualizzano. Se è presente un carattere a stella o un oggetto particolarmente identificabile nell'app, è consigliabile usarlo come parte importante della progettazione. In un mondo di realtà mista, un oggetto trarrà maggiore interesse dagli utenti rispetto solo a un logo. Gli oggetti riconoscibili comunicano il marchio in modo rapido e chiaro.
 
 ### <a name="volumetric"></a>Volumetrici
 
-L'applicazione merita i più della semplice inserendo il logo personalizzato su un piano flat e la chiamata a tutto il giorno. L'utilità di avvio dovrebbe risultare, ad esempio un oggetto interessante, 3D, fisico nello spazio dell'utente. Un buon approccio è immaginare che l'app stava per avere una bolla nel giorno del ringraziamento YCbCr di Macy. Chiedersi che cosa sarebbe stupire persone come proviene strada? Aspetto eccezionale da tutti gli angoli di visualizzazione?
+L'app merita di più di inserire il logo su un piano semplice e chiamarlo un giorno. L'utilità di avvio dovrebbe sembrare un oggetto fisico eccitante, 3D, nello spazio dell'utente. Un approccio efficace consiste nell'immaginare che l'app avrebbe avuto un pallone nella sfilata del giorno del ringraziamento del Macy. Se ci si chiede, cosa si può veramente stupire con la strada? Cosa può sembrare interessante da tutti gli angoli di visualizzazione?
 
 
 :::row:::
@@ -86,36 +86,36 @@ L'applicazione merita i più della semplice inserendo il logo personalizzato su 
 :::row-end:::
 
 
-## <a name="tips-for-good-3d-models"></a>Suggerimenti per la buona modelli 3D
+## <a name="tips-for-good-3d-models"></a>Suggerimenti per modelli 3D efficaci
 
 ### <a name="best-practices"></a>Procedure consigliate
-* Quando si pianificano le quote dell'utilità di avvio di app, riprese per circa un cubo 30cm. Pertanto, un valore 1: proporzioni 1:1.
-* I modelli devono essere meno di 10.000 poligoni. [Altre informazioni sui livelli dei dettagli (LOD) e i conteggi di triangolo](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
-* Test su un visore VR immersivi quando possibile.
-* Dettagli di compilazione nella geometria del modello dove possibile, non si basano su trame per informazioni dettagliate.
-* Compilare la geometria "acqua stretta" chiusa. Nessun buchi che non sono modellate in.
-* Utilizzare materiali naturale nell'oggetto. Si supponga alla creazione nel mondo reale.
-* Assicurarsi che il modello legge correttamente alle dimensioni e le distanze diverse.
-* Quando il modello è pronto per iniziare, leggere il [esportazione di linee guida per gli asset](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview).
+* Quando si pianificano le dimensioni per l'utilità di avvio delle app, si scatta approssimativamente un cubo di 30cm. Quindi, un rapporto di dimensioni 1:1:1.
+* I modelli devono essere sotto 10.000 poligoni. [Altre informazioni sui conteggi dei triangoli e sui livelli di dettaglio (LODs)](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
+* Testare su un auricolare immersivo quando possibile.
+* Consente di compilare i dettagli nella geometria del modello, laddove possibile, non basarsi sulle trame per i dettagli.
+* Compila la geometria chiusa "acqua stretta". Non ci sono buchi che non sono modellati in.
+* Usare materiali naturali nell'oggetto. Immagina di crearlo nel mondo reale.
+* Verificare che il modello sia ben letto a distanza e dimensioni diverse.
+* Quando il modello è pronto per l'uso, leggere le [linee guida](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview)per l'esportazione degli asset.
 
-![Modello con dettagli nella trama](images/20171013-143334-mixedreality-640px.jpg)<br>
-*Modello con dettagli nella trama*
+![Modello con dettagli sottili nella trama](images/20171013-143334-mixedreality-640px.jpg)<br>
+*Modello con dettagli sottili nella trama*
 
 ### <a name="what-to-avoid"></a>Cosa evitare
-* Non usare i dettagli a contrasto elevato o modelli di piccole dimensioni, occupati e trame.
-* Non usare geometry thin: non funzionare bene a una distanza, alias in modo errato.
-* Non lasciare che le parti del modello di estendere troppo oltre il 1: proporzioni 1:1. Problemi di scalabilità verrà creato.
+* Non usare dettagli a contrasto elevato o modelli e trame di dimensioni ridotte e occupate.
+* Non usare la geometria sottile: non funziona bene a una distanza e l'alias non è corretto.
+* Non lasciare che le parti del modello si estendano troppo oltre il rapporto dimensioni 1:1:1. Si creeranno problemi di scalabilità.
 
-![Evitare i modelli di occupato a contrasto elevato di piccole dimensioni](images/20171013-143603-mixedreality-640px.jpg)<br>
-*Evitare i modelli a contrasto elevato, piccoli, occupati*
+![Evitare i modelli a contrasto elevato, piccoli modelli di occupato](images/20171013-143603-mixedreality-640px.jpg)<br>
+*Evitare i modelli a contrasto elevato, piccoli e occupati*
 
-## <a name="how-to-handle-type"></a>Come tipo di handle
+## <a name="how-to-handle-type"></a>Come gestire il tipo
 
 ### <a name="best-practices"></a>Procedure consigliate
-* È consigliabile il tipo è costituito da circa 1/3 di utilità di avvio di app (o più). Il tipo è la cosa principale che offre agli utenti un'idea che è l'utilità di avvio, infatti, un'utilità di avvio in modo che se non si verificano se è piuttosto notevole.
-* Evitare l'esecuzione di tipo wide super: provare per contenerlo entro i confini dell'utilità di avvio di app le quote di core (più o meno).
-* Tipo flat può funzionare, ma tenere presente che può essere difficile da visualizzare da alcuni punti di vista e in alcuni ambienti. È possibile applicarlo a un oggetto solid o dello sfondo dietro di essa per facilitare questa operazione.
-* Dimensione aggiunta al tipo ritiene interessante in 3D. Ombreggiatura i lati del tipo di un colore diverso e più scuro utili per migliorare la leggibilità.
+* È consigliabile che il tipo sia costituito da circa 1/3 dell'utilità di avvio dell'app (o più). Il tipo è l'elemento principale che offre agli utenti un'idea del fatto che l'utilità di avvio è, di fatto, un'utilità di avvio, quindi è interessante se è piuttosto sostanziale.
+* Evitare di rendere il tipo Super Wide: provare a mantenerlo entro i limiti delle dimensioni di base dei lanci di app (più o meno).
+* Il tipo flat può funzionare, ma tenere presente che può essere difficile da visualizzare da determinati angoli e da determinati ambienti. È possibile considerare di inserirlo in un oggetto solido o in uno sfondo per facilitare questa operazione.
+* L'aggiunta di una dimensione al tipo è gradevole in 3D. L'ombreggiatura dei lati del tipo un colore più scuro può essere utile per migliorare la leggibilità.
 
 
 :::row:::
@@ -134,60 +134,60 @@ L'applicazione merita i più della semplice inserendo il logo personalizzato su 
 :::row-end:::
 
 
-**Colori di tipo che funzionano**
+**Colori del tipo che funzionano**
 * Bianco
 * Nero
-* Brillante semi-saturazione colore
+* Colore luminoso semi-saturato
 
 ![Digitare i colori che funzionano.](images/20171016-112111-mixedreality-640px.jpg)<br>
-*Colori di tipo che funzionano*
+*Colori del tipo che funzionano*
 
 ### <a name="what-to-avoid"></a>Cosa evitare
 
-**Colori di tipo che causano problemi**
-* Tonalità medie
+**Tipi di colori che provocano problemi**
+* Frequenze medie
 * Grigio
-* Overcommit saturazione dei colori o colori desaturati
+* Colori eccessivamente saturi o colori desaturi
 
-![Digitare i colori che causano problemi.](images/20171016-112246-mixedreality-640px.jpg)<br>
-*Colori di tipo che causano problemi*
+![Tipi di colori che provocano problemi.](images/20171016-112246-mixedreality-640px.jpg)<br>
+*Tipi di colori che provocano problemi*
 
 ## <a name="lighting"></a>Luce
 
-L'illuminazione per l'utilità di avvio app provenienti dall'ambiente Cliff House. Assicurarsi di testare l'utilità di avvio in diverse posizioni in tutta la casa, in modo esito positivo in chiaro e ombreggiature. La buona notizia è, se sono stati eseguiti altri linee guida di progettazione in questo documento, l'utilità di avvio deve essere abbastanza corrette per la maggior parte delle illuminazione in House di Cliff.
+L'illuminazione per l'utilità di avvio dell'app deriva dall'ambiente Cliff House. Assicurarsi di testare l'utilità di avvio in diversi punti della casa, in modo da ottenere un aspetto positivo sia in chiaro che in ombreggiatura. La buona notizia è che, se sono state seguite le altre linee guida di progettazione di questo documento, l'utilità di avvio dovrebbe avere una forma abbastanza buona per la maggior parte dell'illuminazione della casa Cliff.
 
-Ottimo strumento per testare come l'utilità di avvio appare in varie luci nell'ambiente è di Studio, chat Room Media, in qualsiasi punto esterno e terrazzo indietro (l'area concreto con le Prato). Un altro, è possibile inserirlo nella metà e ombre metà e vedere l'effetto.
+Un posto ideale per testare il modo in cui l'utilità di avvio Guarda le varie luci nell'ambiente è lo studio, la media room, in qualsiasi punto all'esterno e sul patio (l'area concreta con il prato). Un altro test efficace consiste nell'inserirlo a metà luce e metà ombreggiatura per vedere come appare.
 
-![Assicurarsi che l'utilità di avvio sono corrette in chiaro e ombreggiature.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
-*Assicurarsi che l'utilità di avvio sono corrette in chiaro e ombreggiature*
+![Assicurarsi che l'utilità di avvio sia corretta sia in chiaro che in ombreggiatura.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
+*Assicurarsi che l'utilità di avvio sia corretta in chiaro e in ombra*
 
-## <a name="texturing"></a>La trama
+## <a name="texturing"></a>Texturing
 
-### <a name="authoring-your-textures"></a>Le trame di creazione
+### <a name="authoring-your-textures"></a>Creazione di trame
 
-Il formato finale dell'utilità di avvio app 3D sarà un file .glb, che viene eseguito tramite la pipeline PBR (Rendering fisicamente base). Può trattarsi di un processo difficile, ora è un buon momento per impiegare un artista tecnico se già stato fatto. Se si ha un coraggioso fai da te-UT, avere inviato [ricerche e informazioni sulla terminologia PBR](http://wiki.polycount.com/wiki/PBR) e ciò che accade dietro le quinte prima di iniziare per evitare gli errori più comuni. 
+Il formato finale dell'utilità di avvio delle app 3D sarà un file con estensione GLB, che viene creato usando la pipeline di PBR (rendering fisico). Questo può essere un processo complesso, ora è il momento giusto per impiegare un artista tecnico, se non è già stato fatto. Se si è bravi fai da te, il tempo necessario per la [ricerca e l'apprendimento](http://wiki.polycount.com/wiki/PBR) della terminologia di PBR e cosa accade dietro le quinte prima di iniziare ti aiuterà a evitare errori comuni. 
 
-![Esempio: App nuova nota](images/pbr-freshnote1-640px-500px.png)<br>
-*Nuova nota 3D app dell'utilità di avvio di esempio (fittizio app)*
+![Esempio: App nota aggiornata](images/pbr-freshnote1-640px-500px.png)<br>
+*Esempio di avvio dell'app 3D (app fittizia)*
 
-**Strumento di creazione e modifica consigliato**
+**Strumento di creazione consigliato**
 
-È consigliabile usare [sostanza pittore](https://www.allegorithmic.com/products/substance-painter) da Allegorithmic per creare il file finale. Se non si ha familiarità con la creazione di shader PBR in sostanza, del pittore una [esercitazione](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials).
+Per creare il file finale, è consigliabile usare il [pittore di sostanze](https://www.allegorithmic.com/products/substance-painter) Allegorithmic. Se non si ha familiarità con la creazione di shader PBR in sostanza Painter, ecco un' [esercitazione](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials).
 
-(In alternativa [3D Coat](https://3dcoat.com/home/), [Suite Quixel 2](https://quixel.se/suite2/), o [Marmoset Toolbag](https://www.marmoset.co/toolbag/) funzionerebbe anche se non ha maggiore familiarità con uno di questi.)
+(In alternativa [, il](https://3dcoat.com/home/) [Quixel Suite 2](https://quixel.se/suite2/)o [uistitì toolbag](https://www.marmoset.co/toolbag/) funziona anche se si ha familiarità con uno di questi).
 
 ### <a name="best-practices"></a>Procedure consigliate
 
-* Se l'oggetto dell'utilità di avvio di app è stata creata per PBR, dovrebbe essere piuttosto semplice per convertirlo per l'ambiente di Cliff House.
-* Il shader si aspetta un flusso di lavoro Metal/asperità: The PBR Unreal shader è un facsimile chiude.
-* Quando l'esportazione le trame di mantenere la [consiglia le dimensioni della trama](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) presente.
-* Assicurarsi di compilare gli oggetti per l'illuminazione in tempo reale: ciò significa che:
-    * Evitare virtuali create con bake shadows – o ombreggiature disegnate
-    * Evitare di illuminazione virtuali create con bake nelle trame
-    * Usare uno dei materiali PBR creazione di pacchetti per le mappe a destra generate per il shader
+* Se l'oggetto dell'utilità di avvio delle app è stato creato per PBR, dovrebbe essere piuttosto semplice convertirlo per l'ambiente Cliff House.
+* Lo shader sta aspettando un flusso di lavoro di metallo/rugosità: lo shader Unreal PBR è un facsimile di chiusura.
+* Quando si esportano le trame, tenere presenti le [dimensioni consigliate](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) .
+* Assicurarsi di compilare gli oggetti per l'illuminazione in tempo reale, ovvero:
+    * Evitare le ombre cotte o disegnare le ombre
+    * Evitare l'illuminazione al forno nelle trame
+    * Usare uno dei pacchetti di creazione materiali di PBR per ottenere le mappe corrette generate per lo shader
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Creare modelli 3D per l'utilizzo in realtà mista home](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Implementare nelle schermate di avvio app 3D (app UWP)](implementing-3d-app-launchers.md)
-* [Implementare nelle schermate di avvio app 3D (app Win32)](implementing-3d-app-launchers-win32.md)
+* [Creare modelli 3D da usare nella Home realtà mista](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+* [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)
+* [Implementare utilità di avvio per app 3D (app Win32)](implementing-3d-app-launchers-win32.md)
