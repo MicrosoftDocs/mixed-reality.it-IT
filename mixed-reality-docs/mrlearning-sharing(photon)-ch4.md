@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293688"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460325"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Condivisione di movimenti di oggetti con più utenti
 
@@ -50,7 +50,7 @@ Obiettivi
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Nella visualizzazione del progetto passare a assets-> Resources-> prefabbricates. Prima di tutto, trascinare e rilasciare la tabella prefabbricata nello slot Tableprefab della classe PhotonRoom. Trascinare quindi la prefabbricazione LunarModule nello slot prefabbricato del modulo nella classe PhotonRoom.
+7. Nella visualizzazione del progetto passare a assets-> Resources-> prefabbricates. Prima di tutto, trascinare e rilasciare la tabella prefabbricata nello slot Tableprefab della classe PhotonRoom. Trascinare quindi il RocketLauncherCompleteVariantprefab nello slot prefabbricato del modulo nella classe PhotonRoom.
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ Obiettivi
 10. Con il nuovo oggetto selezionato nella gerarchia, modificare il nome dell'oggetto in TableAnchor nel pannello Inspector. Inoltre, fare clic su Aggiungi componente e cercare il componente TableAnchor. Selezionarlo e aggiungerlo all'oggetto. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> Nota: Impostare il posizionamento su x = 1, y =-0,55 e z = 2. Inoltre, impostare la rotazione su y = 90. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. A questo punto, dal pannello del progetto nella cartella prefabbricates trascinare la tabella prefabbricata nell'oggetto figlio "TableAnchor" appena creato.
 
