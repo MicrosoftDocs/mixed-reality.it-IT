@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387698"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485697"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interazione con oggetti 3D
 
@@ -202,8 +202,8 @@ In questo esempio riprodurremo un effetto sonoro quando si tocca un oggetto con 
 
 ![Immagine lezione 4 capitolo 4 passaggi 3-5 nota](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
-### <a name="congratulations"></a>Lezione completata 
+## <a name="congratulations"></a>Lezione completata 
 In questa esercitazione si è appreso come organizzare gli oggetti 3D in una raccolta di griglie e come modificare gli oggetti 3D (ridimensionamento, rotazione e movimento) usando near Interaction (cattura diretta con le mani rilevate) e un'interazione di gran lunga (usando raggi di sguardi o raggi mano). Si è inoltre appreso come inserire le caselle di delimitazione intorno agli oggetti 3D e come usare e personalizzare i gizmo nei rettangoli di delimitazione. Hai infine appreso come attivare eventi nel momento in cui viene toccato un oggetto.
 
-[Lezione successiva: Input avanzati](mrlearning-base-ch5.md)
+[Lezione successiva: 6. Esplorazione delle opzioni di input avanzate](mrlearning-base-ch5.md)
 

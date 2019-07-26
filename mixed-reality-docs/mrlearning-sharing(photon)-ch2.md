@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Preparazione di Unity per lo sviluppo 
+# <a name="2-getting-unity-ready-for-development"></a>2. Preparazione di Unity per lo sviluppo 
 
 
 Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo di applicazioni, tra cui l'importazione del Toolkit di realtà mista, la configurazione delle impostazioni di compilazione e la preparazione della scena.
@@ -11,7 +11,7 @@ Obiettivi
 
 - Preparare la scena del progetto
 
-### <a name="instructions"></a>Istruzioni
+## <a name="instructions"></a>Istruzioni
 
 1. Scaricare e salvare il pacchetto di Unity del Toolkit di realtà misto facendo clic [qui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@ Obiettivi
 
 Il progetto Unity è ora pronto per Photon. Nelle esercitazioni riportate di seguito verrà creata questa scena e il progetto Unity per un'esperienza condivisa completa.
 
-[Esercitazione successiva: Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
+[Esercitazione successiva: 3. Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
 

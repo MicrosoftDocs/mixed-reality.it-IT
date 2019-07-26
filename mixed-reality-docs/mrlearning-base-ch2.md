@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 5275e862d2dec78c98510f754162961c80e9e4b8
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387721"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485751"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Creazione dell'interfaccia utente e configurazione del Toolkit per realtà mista 
 
@@ -167,8 +167,8 @@ In questa sezione apprenderai come aggiungere e modificare il testo nelle esperi
 
 ![Lezione 2 capitolo 4 passaggio 5](images/Lesson2_Chapter4_Step5.JPG)
 
-### <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Lezione completata
 In questa lezione hai appreso come copiare, personalizzare e configurare un'impostazione del profilo di MRTK, ad esempio la visibilità della mesh di consapevolezza spaziale. Hai inoltre appreso come interagire con un pulsante per attivare gli eventi usando le mani tracciate sul dispositivo HoloLens 2 e, infine, come creare una semplice interfaccia utente tramite TextMeshPro di Unity e la raccolta di oggetti griglia di MRTK.
 
-[Lezione successiva: Posizionamento dinamico del contenuto e risolutori](mrlearning-base-ch3.md)
+[Lezione successiva: 4. Inserimento di contenuto dinamico e uso dei risolutori](mrlearning-base-ch3.md)
 

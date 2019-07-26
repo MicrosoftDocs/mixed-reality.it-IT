@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387789"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485725"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inizializzazione del progetto e della prima applicazione
 
@@ -112,4 +112,4 @@ A questo punto è stata distribuita la prima applicazione HoloLens 2. Quando si 
 
 >Nota: nella [lezione 5](mrlearning-base-ch5.md) imparerai come attivare o disattivare il contatore della frequenza dei fotogrammi usando un comando vocale.
 
-[Lezione successiva: Interfaccia utente, tracciamento delle mani e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
+[Lezione successiva: 3. Creazione dell'interfaccia utente e configurazione del Toolkit per realtà mista](mrlearning-base-ch2.md)

@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293648"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485646"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Configurazione della rete di Photon Unity
+#  <a name="1-setting-up-photon-unity-networking"></a>1. Configurazione della rete di Photon Unity
 
 Questa esercitazione illustra come prepararsi per la creazione di un'esperienza condivisa importando la rete di Photon Unity (PUN) nel progetto Unity. Photon è una delle diverse opzioni di rete disponibili agli sviluppatori di realtà mista per creare esperienze condivise. Si apprenderà come creare un account Photon, importare un fotone e creare un server locale facoltativo
 
-Obiettivi
+## <a name="objectives"></a>Obiettivi
 
 * Informazioni su come creare un account Photon
 
@@ -27,7 +27,7 @@ Obiettivi
 
   
 
-### <a name="setting-up-photon"></a>Configurazione di Photon
+## <a name="setting-up-photon"></a>Configurazione di Photon
 
 1. Configurare un account [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Passare alla pagina di iscrizione a Photon facendo clic su [questo collegamento](https://dashboard.photonengine.com/en-US/Account/SignUp). Seguire le istruzioni nella pagina di iscrizione per creare l'account. 
    
@@ -69,5 +69,5 @@ Obiettivi
 
 È stato creato un account Photon, configurato un server Photon locale e il PUN è stato importato in Unity. Il passaggio successivo consiste nell'impostare il progetto e quindi consentire le connessioni con altri utenti in modo che più utenti possano visualizzare il lavoro. 
 
-[Esercitazione successiva: Preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
+[Esercitazione successiva: 2. Preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
 

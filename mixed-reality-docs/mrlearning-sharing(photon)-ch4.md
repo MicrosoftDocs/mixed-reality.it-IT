@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460325"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485668"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Condivisione di movimenti di oggetti con più utenti
 
@@ -23,7 +23,7 @@ Obiettivi
 - Configurare il progetto in modo da condividere i movimenti del modello 3D.
 - Informazioni su come creare un'applicazione di collaborazione multiutente di base
 
-### <a name="instructions"></a>Istruzioni
+## <a name="instructions"></a>Istruzioni
 
 
 1. Salvare la scena dalla lezione precedente (CTRL + S). È possibile denominarlo, HLSharedProjectMainPart4. Unity, in modo che sia più facile da trovare quando è necessario.
@@ -85,5 +85,5 @@ Anche se tutti gli utenti sono connessi come parte di un'esperienza condivisa e 
 
 Prima di procedere alla lezione successiva, è necessario completare il modulo di apprendimento ASA che copre le nozioni di base di ASA, la creazione di account e risorse di Azure e altri blocchi fondamentali per gli edifici necessari prima che sia possibile integrarli nell'esperienza condivisa.
 
-[Lezione successiva: Lezione 5 della condivisione (Photon)](mrlearning-sharing(photon)-ch5.md)
+[Lezione successiva: 5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch5.md)
 

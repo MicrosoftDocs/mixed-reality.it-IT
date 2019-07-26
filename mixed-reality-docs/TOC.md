@@ -207,7 +207,7 @@
 ##### Esercitazioni su Ancoraggi nello spazio di Azure
 ###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
 ###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
-###### [3. Visualizzazione dei commenti e suggerimenti su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
+###### [3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
 ##### Esercitazioni sui servizi Voce di Azure
 ###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 ###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)

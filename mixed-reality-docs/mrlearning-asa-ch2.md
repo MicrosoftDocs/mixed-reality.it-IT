@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293793"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485739"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
 
@@ -81,5 +81,5 @@ Viene illustrato come implementare gli ancoraggi spaziali di Azure come parte di
 
 Nella lezione successiva verrà illustrato come fornire agli utenti il feedback in tempo reale. Questo feedback includerà informazioni sulla creazione di ancoraggi, sulla qualità della comprensione dell'ambiente e sullo stato della sessione di Azure. Senza commenti, gli utenti potrebbero non sapere se un ancoraggio è stato caricato correttamente in Azure, se la qualità dell'ambiente è sufficiente per la creazione dell'ancoraggio o lo stato corrente.
 
-[Lezione successiva: Esercitazione ASA 3](mrlearning-asa-ch3.md)
+[Lezione successiva: 3. Visualizzazione del feedback di ancoraggio spaziale di Azure](mrlearning-asa-ch3.md)
 

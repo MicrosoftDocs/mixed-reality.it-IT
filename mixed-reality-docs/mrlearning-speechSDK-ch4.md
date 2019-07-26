@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 0cffb9ac8f61f77b77fc5925264b95ba57d94ece
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b434b9c79a702067a9c3db6fb25b0f75cdc6030d
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460340"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485782"
 ---
-# <a name="speech-sdk-learning-module---intent-and-natural-language-understanding"></a>Modulo di apprendimento per Speech SDK: finalità e Language Understanding naturali
+# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configurazione della finalità e della comprensione del linguaggio naturale
 
 In questa lezione verrà illustrata la funzionalità finalità del servizio riconoscimento vocale di Azure. La funzionalità Intent consente di dotare l'applicazione di comandi vocali basati su intelligenza artificiale, in cui gli utenti possono pronunciare comandi vocali non specifici e hanno comunque lo scopo di comprendere il sistema. Durante questa lezione verrà configurato il portale di Azure LUIS, verranno configurate le finalità, le entità e le espressioni, verranno pubblicate le risorse Intent, verrà configurata l'app Unity per la risorsa Intent e si effettuerà la prima chiamata API per finalità.
 

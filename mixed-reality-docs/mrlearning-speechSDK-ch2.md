@@ -6,16 +6,18 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: e8dc5da5a089079ba38a26969df6070af8bc6200
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460309"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485598"
 ---
 # <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Aggiunta di una modalità offline per la traduzione vocale locale
 
 In questa esercitazione verrà aggiunta una modalità offline che consente di eseguire la traduzione vocale locale quando non è possibile connettersi al servizio di Azure. Si *simula* anche uno stato disconnesso.
+
+## <a name="instructions"></a>Istruzioni
 
 1. Selezionare l'oggetto Lunarcom_Base nella gerarchia e fare clic su Aggiungi componente nel pannello di controllo. Cercare e selezionare il riconoscimento Lunarcom offline.
 

@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realtà mista, mani, controlli di movimento, interazione, progettazione
-ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: b6efb0a9651cad8eee9b80bb130aa1a85b9a9941
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039170"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507866"
 ---
 # <a name="hands-and-motion-controllers"></a>Controller di movimento e Hands
 ## <a name="scenarios"></a>Scenari
@@ -32,9 +32,11 @@ Si tratta di una modalità sfruttando la potenza di Hands, con cui gli utenti so
 Questa modalità consente agli utenti di interagire con gli ologrammi a distanza. Consente agli utenti di sfruttare al meglio i dintorni. Gli utenti possono posizionare gli ologrammi ovunque e possono comunque accedervi da qualsiasi distanza. I modelli e i movimenti mentali per controllare e modificare gli ologrammi 2D e 3D sono sincronizzati con quelli di manipolazione diretta.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Controller del movimento](motion-controllers.md)
-I controller di movimento sono strumenti che estendono le funzionalità fisiche degli utenti fornendo interazioni precise in un'ampia gamma di distanze, usando una o entrambe le mani. Questi accessori hardware forniscono collegamenti a molte interazioni di uso comune e forniscono surefooted, il feedback tattile per diverse azioni. Attualmente, i controller di movimento sono disponibili solo per gli scenari WMR. 
+I controller di movimento sono strumenti che estendono le funzionalità fisiche dell'utente fornendo interazioni precise in un'ampia gamma di distanze durante l'uso di una o entrambe le mani. Questi accessori hardware forniscono collegamenti a molte interazioni di uso comune e forniscono surefooted e commenti tattili per diverse azioni. Attualmente, i controller di movimento sono disponibili solo per gli scenari di realtà mista di Windows (WMR). 
 
-![](images/Hands-and-controllers-720px.jpg)<br>
+![Confronto tra le modalità di controllo della mano e del movimento](images/Hands-and-controllers-720px.jpg)<br>
+
+*Confronto tra le modalità di controllo della mano e del movimento*
 
 ## <a name="see-also"></a>Vedere anche
 * [Puntamento con la testa e commit](gaze-and-commit.md)

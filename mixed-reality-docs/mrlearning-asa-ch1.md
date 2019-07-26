@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293812"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485767"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introduzione agli ancoraggi spaziali di Azure
 
@@ -199,5 +199,5 @@ Nelle sezioni precedenti sono state apprese le nozioni di base degli ancoraggi s
 ## <a name="congratulations"></a>Lezione completata
 In questa esercitazione sono state apprese le nozioni di base degli ancoraggi spaziali di Azure. Questo it ha fornito diversi pulsanti che consentono di esaminare i diversi passaggi necessari per avviare e arrestare una sessione di Azure e creare, caricare e scaricare gli ancoraggi di Azure in un singolo dispositivo. Nella lezione successiva verrà illustrato come salvare gli ID di ancoraggio di Azure in HoloLens 2 per il recupero, anche dopo il riavvio dell'applicazione. Durante la serie, si apprenderà anche come trasferire gli ID di ancoraggio tra più dispositivi per ottenere l'allineamento spaziale e acquisire informazioni sulle sessioni condivise multiutente, come parte dell'esercitazione relativa alla condivisione.
 
-[Lezione successiva: Lezione 2 di ASA](mrlearning-asa-ch2.md)
+[Lezione successiva: 2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
 

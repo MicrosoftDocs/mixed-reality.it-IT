@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, test
-ms.openlocfilehash: 35e8eff230cdcd719952ad2633ec610c9a9a26a0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63549042"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507903"
 ---
 # <a name="testing-your-app-on-hololens"></a>Test dell'app in HoloLens
 
@@ -67,11 +67,15 @@ Gli utenti possono interagire con l'app tramite le [periferiche](hardware-access
 1. **Convalidare le interazioni personalizzate.** Elementi come i tasti di scelta rapida personalizzati per l'app.
 2. **Convalida i tipi di input di cambio.** Tentativo di utilizzare più metodi di input per completare un'attività, ad esempio voce, movimento, mouse e tastiera, nello stesso scenario.
 
-## <a name="system-integration"></a>Integrazione di sistema
+## <a name="system-integration"></a>Integrazione del sistema
 
 ### <a name="battery"></a>Batteria
 
-Testare l'applicazione senza una fonte di alimentazione connessa per comprendere la velocità con cui svuota la batteria. Uno può facilmente comprendere lo stato della batteria esaminando le letture dei LED di alimentazione. ![Stati del LED che indicano la potenza della batteria](images/batterypowerledindication-500px.png)
+Testare l'applicazione senza una fonte di alimentazione connessa per comprendere la velocità con cui svuota la batteria. Uno può facilmente comprendere lo stato della batteria esaminando le letture dei LED di alimentazione. 
+
+![Stati del LED che indicano la potenza della batteria](images/batterypowerledindication-500px.png)<br>
+
+*Stati del LED che indicano la potenza della batteria*
 
 ### <a name="power-state-transitions"></a>Transizioni di stato di alimentazione
 

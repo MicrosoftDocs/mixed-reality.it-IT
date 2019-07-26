@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: f9da038fe917e9e45b386de54049d6aa312ecfba
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387782"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485716"
 ---
-# <a name="6exploring-advanced-input-options"></a>6. esplorazione delle opzioni di input avanzate
+# <a name="6-exploring-advanced-input-options"></a>6. Esplorazione delle opzioni di input avanzate
 
 In questa esercitazione vengono esaminate diverse opzioni di input avanzate per HoloLens 2, tra cui l'uso di comandi vocali, movimenti di panoramica e rilevamento degli occhi. 
 
@@ -198,8 +198,9 @@ Nel campo appena creato aggiungere l'oggetto gioco corrente al campo vuoto e sel
 6. Verifica che le funzionalità di tracciamento oculare siano configurate correttamente prima di compilarle in HoloLens 2. Al momento della stesura di questo articolo, Unity non è ancora in grado di impostare l'input dello sguardo per le funzionalità di rilevamento degli occhi. L'impostazione di questa funzionalità è necessaria per il funzionamento della verifica degli occhi in HoloLens 2. Per abilitare la funzionalità di input dello sguardo fisso, segui queste istruzioni nella documentazione di Mixed Reality Toolkit: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
 
 
-### <a name="congratulations"></a>La procedura è stata completata. 
+## <a name="congratulations"></a>Lezione completata
+
 Sono state aggiunte le funzionalità di base per la registrazione degli occhi all'applicazione. Queste azioni sono solo l'inizio del vasto mondo di possibilità offerte dal tracciamento oculare. Questo capitolo conclude inoltre la lezione 5, in cui sono state illustrate le funzionalità di input avanzate, ad esempio i comandi vocali, i movimenti di panoramica e il rilevamento degli occhi. 
 
-[Lezione successiva: Esperienza di esempio di assemblaggio di un modulo lunare](mrlearning-base-ch6.md)
+[Lezione successiva: 7. Creazione dell'applicazione di esempio Lunar Module](mrlearning-base-ch6.md)
 
