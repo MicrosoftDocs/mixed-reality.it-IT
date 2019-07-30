@@ -3,7 +3,7 @@
 
 Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo di applicazioni, tra cui l'importazione del Toolkit di realtà mista, la configurazione delle impostazioni di compilazione e la preparazione della scena.
 
-Obiettivi
+## <a name="objectives"></a>Obiettivi
 
 - Configurare Unity per lo sviluppo di applicazioni
 

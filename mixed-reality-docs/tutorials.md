@@ -4,28 +4,36 @@ title: Esercitazioni e app di esempio
 description: Fornisce esempi di codice ed esercitazioni sullo sviluppo di realtà miste.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 03/26/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione
-ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415398"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601617"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
 Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity.  Quando si sviluppano contenuti per altri motori e piattaforme, questi si troveranno sotto l'intestazione pertinente nel sommario.
 
-## <a name="mr-learning-modules"></a>Moduli di apprendimento sulla realtà mista
+## <a name="hololens-2-tutorials"></a>Esercitazioni su HoloLens 2
 
-I moduli di formazione di MR sono progettati per aiutare gli sviluppatori a conoscere le tecniche e le procedure consigliate per lo sviluppo di applicazioni di realtà miste.  I moduli iniziali sono per HoloLens 2 e implementano il Toolkit di realtà mista 2,0 (MRTK 2,0).
-* Il modulo di base ha lo scopo di illustrare agli sviluppatori come configurare il progetto con MRTK, oltre a implementare interfaccia utente, mapping spaziale e interazioni di base e avanzate
+Le esercitazioni di HoloLens 2 sono progettate per aiutare gli sviluppatori a conoscere le tecniche e le procedure consigliate per lo sviluppo di applicazioni di realtà miste.  Le esercitazioni sono basate sul [Toolkit di realtà misto 2,0 (MRTK 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
-## <a name="open-source-sample-apps"></a>App di esempio Open Source
+* Esercitazioni introduttive- [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
+* Esercitazioni sull'ancoraggio spaziale [di Azure-1 di 3 Introduzione agli ancoraggi spaziali di Azure](mrlearning-asa-ch1.md)
+* Esercitazioni su servizi vocali di Azure- [1 di 4 integrazione e uso del riconoscimento vocale e](mrlearning-speechSDK-ch1.md) della trascrizione
+* Esercitazioni sulle funzionalità multiutente: [1 di 5 configurazione della rete di Photon Unity](mrlearning-sharing(photon)-ch1.md)
+
+## <a name="open-source-sample-apps"></a>App di esempio open source
 
 Le app di esempio Open Source sono applicazioni create dai nostri team e abbiamo fornito il codice sorgente in modo che gli sviluppatori possano esaminarlo e apprendere i nostri progetti.
+
+* [Periodic Table of the Elements](periodic-table-of-the-elements.md)
+* [Lunar Module](lunar-module.md)
+* [Galaxy Explorer](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Esercitazioni su realtà mista Academy
 
