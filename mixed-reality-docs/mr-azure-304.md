@@ -152,7 +152,7 @@ Questa applicazione usa le librerie *Microsoft. ProjectOxford. Face* che consent
 >
 > - Creare un *gruppo*di persone, ovvero un gruppo composto da più persone a cui si desidera associarlo. Con l'account Azure è possibile ospitare più gruppi di persone.
 >
-> - Creare una *persona*, che è un membro di un gruppo di persone. Ogni persona ha un certo numero  di immagini facciali associate.
+> - Creare una *persona*, che è un membro di un gruppo di persone. Ogni persona ha un certo numero di immagini facciali associate.
 >
 > -  Assegnare le *Immagini facciali* a una *persona*per consentire al servizio API viso di Azure di riconoscere una *persona* con la *faccia*corrispondente.
 >

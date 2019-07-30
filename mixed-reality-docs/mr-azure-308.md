@@ -24,11 +24,11 @@ ms.locfileid: "67694608"
 
 In questo corso verrà illustrato come aggiungere funzionalità di hub di notifica a un'applicazione di realtà mista usando hub di notifica di Azure, tabelle di Azure e funzioni di Azure.
 
-**Hub di notifica di Azure** è un servizio Microsoft che consente agli sviluppatori di inviare notifiche push mirate e personalizzate a qualsiasi piattaforma, tutto alimentato all'interno del cloud. Ciò consente agli sviluppatori di comunicare con gli utenti finali o persino di comunicare tra le varie applicazioni, a seconda dello scenario. Per altre informazioni, visitare la  [pagina](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)Hub di notifica di Azure.
+**Hub di notifica di Azure** è un servizio Microsoft che consente agli sviluppatori di inviare notifiche push mirate e personalizzate a qualsiasi piattaforma, tutto alimentato all'interno del cloud. Ciò consente agli sviluppatori di comunicare con gli utenti finali o persino di comunicare tra le varie applicazioni, a seconda dello scenario. Per altre informazioni, visitare la [pagina](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)Hub di notifica di Azure.
 
-**Funzioni di Azure** è un servizio Microsoft che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. **Funzioni di Azure** supporta diversi linguaggi di sviluppo,\#tra cui\#C, F, node. js, Java e php. Per altre informazioni, visitare la  [pagina](https://docs.microsoft.com/azure/azure-functions/functions-overview)funzioni di Azure.
+**Funzioni di Azure** è un servizio Microsoft che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. **Funzioni di Azure** supporta diversi linguaggi di sviluppo,\#tra cui\#C, F, node. js, Java e php. Per altre informazioni, visitare la [pagina](https://docs.microsoft.com/azure/azure-functions/functions-overview)funzioni di Azure.
 
-**Tabelle di Azure** è un servizio cloud Microsoft che consente agli sviluppatori di archiviare dati non SQL strutturati nel cloud, rendendoli facilmente accessibili ovunque. Il servizio è caratterizzato da una progettazione non schema, che consente l'evoluzione delle tabelle in base alle esigenze e pertanto è molto flessibile. Per altre informazioni, visita la  [pagina](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) delle tabelle di Azure
+**Tabelle di Azure** è un servizio cloud Microsoft che consente agli sviluppatori di archiviare dati non SQL strutturati nel cloud, rendendoli facilmente accessibili ovunque. Il servizio è caratterizzato da una progettazione non schema, che consente l'evoluzione delle tabelle in base alle esigenze e pertanto è molto flessibile. Per altre informazioni, visita la [pagina](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) delle tabelle di Azure
 
 Dopo aver completato questo corso, si disporrà di un'applicazione per le cuffie immersive a realtà mista e di un'applicazione per PC desktop, che sarà in grado di eseguire le operazioni seguenti:
 
@@ -204,7 +204,7 @@ Dopo aver creato l'istanza del servizio Hub di notifica, tornare al portale di A
 
     6.  Per **prestazioni**, fare clic su **standard**.
 
-    7.  Nella sezione **trasferimento sicuro obbligatorio** selezionare disabilitato .
+    7.  Nella sezione **trasferimento sicuro obbligatorio** selezionare disabilitato.
 
     8.  Dal menu a discesa **sottoscrizione** selezionare una sottoscrizione appropriata.
 
@@ -824,7 +824,7 @@ Per creare questa classe:
     ```
     
     > [!NOTE] 
-    > Sostituire il  valore AccountName con il nome del servizio di archiviazione di Azure e il valore **AccountKey** con il valore di chiave trovato nel servizio di archiviazione di Azure, nel portale di Azure (vedere l'immagine seguente). 
+    > Sostituire il valore AccountName con il nome del servizio di archiviazione di Azure e il valore **AccountKey** con il valore di chiave trovato nel servizio di archiviazione di Azure, nel portale di Azure (vedere l'immagine seguente). 
     >
     > ![Recupera chiave dell'account](images/AzureLabs-Lab8-70.png)
 
@@ -1146,7 +1146,7 @@ Tutti gli elementi necessari per la sezione Unity di questo progetto sono ora co
 
     ![nuova cartella per la compilazione](images/AzureLabs-Lab8-77.png)
 
-    1.  Aprire la nuova  cartella compilazioni e creare un'altra cartella (usando una **nuova cartella** ancora una volta) e denominarla **\_NH Desktop\_app**.
+    1.  Aprire la nuova cartella compilazioni e creare un'altra cartella (usando una **nuova cartella** ancora una volta) e denominarla **\_NH Desktop\_app**.
 
         ![nome cartella NH_Desktop_App](images/AzureLabs-Lab8-78.png)
 
@@ -1495,7 +1495,7 @@ Questo capitolo è identico al processo di compilazione per il progetto preceden
 
     ![Crea cartella compilazioni](images/AzureLabs-Lab8-100.png)
 
-    1.  Aprire la nuova  cartella compilazioni e creare un'altra cartella (usando una **nuova cartella** ancora una volta) e denominarla **\_NH Mr\_app**.
+    1.  Aprire la nuova cartella compilazioni e creare un'altra cartella (usando una **nuova cartella** ancora una volta) e denominarla **\_NH Mr\_app**.
 
         ![Crea cartella NH_MR_Apps](images/AzureLabs-Lab8-101.png)
 

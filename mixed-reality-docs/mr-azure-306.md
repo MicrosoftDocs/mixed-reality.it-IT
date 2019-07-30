@@ -241,7 +241,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
 
     ![Portale di Azure](images/AzureLabs-Lab6-24.png)
 
-23. Verrà richiesto di impostare un localizzatore , ovvero il punto di ingresso, per file/s negli asset. Per lo scenario, impostare le proprietà seguenti:
+23. Verrà richiesto di impostare un localizzatore, ovvero il punto di ingresso, per file/s negli asset. Per lo scenario, impostare le proprietà seguenti:
 
     1.  **Tipo di localizzatore** **progressive.**  > 
 
@@ -261,7 +261,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
     ![Portale di Azure](images/AzureLabs-Lab6-27.png)
 
     > [!NOTE] 
-    > È anche possibile premere il  pulsante Riproduci per riprodurre il video e testarlo.
+    > È anche possibile premere il pulsante Riproduci per riprodurre il video e testarlo.
 
 26. È ora necessario caricare il secondo video che verrà usato in questo Lab. Seguire i passaggi precedenti, ripetendo lo stesso processo per il secondo video. Assicurarsi di copiare anche il secondo **endpoint** . Usare il [collegamento seguente per scaricare un secondo video](https://vimeo.com/214402865).
 
@@ -358,7 +358,7 @@ Procedura: importare il **file unitypackage Tools**:
 
     2.  All'interno della cartella Materials ( **materiali** ) troverete il materiale **InsideOutSpheres** *lambert1*, insieme a un materiale denominato *ButtonMaterial*, che viene usato da GazeButton, che verrà visualizzato a breve.
 
-    3.  La  cartella prefabbricates contiene la prefabbricazione **InsideOutSphere** che contiene il *modello* **InsideOutSphere** e *GazeButton*.
+    3.  La cartella prefabbricates contiene la prefabbricazione **InsideOutSphere** che contiene il *modello* **InsideOutSphere** e *GazeButton*.
 
     4.  **Non è incluso alcun codice**, il codice verrà scritto seguendo questo corso.
 
@@ -381,7 +381,7 @@ Procedura: importare il **file unitypackage Tools**:
 
             ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-38.png)
 
-5.  Passare alla cartella  prefabbricata, quindi trascinare la prefabbricata **InsideOutSphere** nel pannello **gerarchia** .
+5.  Passare alla cartella prefabbricata, quindi trascinare la prefabbricata **InsideOutSphere** nel pannello **gerarchia** .
 
     ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-39.png)
 
@@ -748,7 +748,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 5.  Tornare in Unity, aprire la cartella **Scenes** e fare clic sul file **VideoScene1** . Utilizzare la tastiera e premere **CTRL + D** per duplicare la scena
 
     > [!TIP]
-    > Il  comando duplicato può essere eseguito anche passando a **Modifica > duplicato**.
+    > Il comando duplicato può essere eseguito anche passando a **Modifica > duplicato**.
 
 6.  Unity incrementerà automaticamente il numero di nomi di scena, ma ne verificherà comunque il numero per assicurarsi che corrisponda al codice inserito in precedenza.
 
@@ -785,7 +785,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
     ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-52.png)
 
-12. Il **Filtro Mesh** verrà aggiornato ed è ora costituito da un **cubo**. A questo punto,  fare clic sull'icona a forma di ingranaggio accanto a **Sphere Collider** , quindi fare clic su **Rimuovi componente**per eliminare il Collider da questo oggetto.
+12. Il **Filtro Mesh** verrà aggiornato ed è ora costituito da un **cubo**. A questo punto, fare clic sull'icona a forma di ingranaggio accanto a **Sphere Collider** , quindi fare clic su **Rimuovi componente**per eliminare il Collider da questo oggetto.
 
     ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-53.png)
 
@@ -795,7 +795,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
 14. Il **GazeButton** è stato aggiornato parzialmente, per un aspetto diverso, tuttavia, verrà creato un nuovo **materiale**, in modo che appaia completamente diverso ed è più facile da riconoscere come oggetto diverso rispetto all'oggetto nella prima scena.
 
-15. Passare alla cartella **Materials** , all'interno del **Pannello Project**. Duplicare il materiale **ButtonMaterial** (premere **CTRL** + **D** sulla tastiera o fare clic con il pulsante destro del mouse sul **materiale**, quindi scegliere duplicato dall' opzione di menu **modifica** file).
+15. Passare alla cartella **Materials** , all'interno del **Pannello Project**. Duplicare il materiale **ButtonMaterial** (premere **CTRL** + **D** sulla tastiera o fare clic con il pulsante destro del mouse sul **materiale**, quindi scegliere duplicato dall'opzione di menu **modifica** file).
 
     ![Capitolo 7: configurare le due scene](images/AzureLabs-Lab6-55.png)
     ![Unity capitolo 7--configurare le due scene Unity](images/AzureLabs-Lab6-56.png)
@@ -810,7 +810,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
 18. A questo punto è possibile testare il progetto nell'editor prima di compilare il progetto UWP.
 
-    -  Premere il  pulsante Riproduci nell' **Editor** e utilizzare l'auricolare.
+    -  Premere il pulsante Riproduci nell' **Editor** e utilizzare l'auricolare.
 
         ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-59.png)
 
@@ -830,7 +830,7 @@ Per compilare:
 
 4.  Verrà richiesto di selezionare la cartella in cui si vuole buildthe la soluzione.
 
-5.  Creare una  cartella compilazioni e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
+5.  Creare una cartella compilazioni e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
 
 6.  Fare clic sulla nuova cartella e quindi fare clic su **Seleziona cartella**, quindi scegliere la cartella per iniziare la compilazione in quel percorso.
 
