@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, realtà mista OpenXR portale per sviluppatori, DirectX, nativo, motore personalizzato app native, middleware
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601602"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671952"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ L'API OpenXR 1,0 principale fornisce le funzionalità di base necessarie per cre
 * Input e haptics
 * API grafica + integrazione della piattaforma
 
-Per informazioni sull'API OpenXR, vedere la [specifica OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) e le informazioni di [riferimento sulle API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Per ulteriori informazioni, vedere la [pagina Khronos OpenXR](https://www.khronos.org/openxr/).
+Per informazioni sull'API OpenXR, vedere la [specifica OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) e le informazioni di [riferimento sulle API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html).  Per ulteriori informazioni, vedere la [pagina Khronos OpenXR](https://www.khronos.org/openxr/).
 
 Per avere come destinazione il set completo di funzionalità di HoloLens 2, si useranno anche estensioni OpenXR specifiche del fornitore e dei fornitori che consentono funzionalità aggiuntive oltre al core OpenXR 1,0, ad esempio il rilevamento a mano articolato, il monitoraggio degli occhi, il mapping spaziale e i ancoraggi spaziali.  Vedere la sezione della Guida di [orientamento](openxr.md#roadmap) riportata di seguito per altre informazioni sulle estensioni riportate più avanti in questo anno.
 
@@ -117,5 +117,5 @@ Se il pulsante Installa nell'app del portale per sviluppatori della realtà mist
 
 * [Altre informazioni su OpenXR](https://www.khronos.org/openxr/)
 * [Specifica OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [Informazioni di riferimento sull'API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Informazioni di riferimento sull'API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [Guida di riferimento rapido per OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
