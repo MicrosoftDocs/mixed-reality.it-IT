@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, directx
-ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65974815"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414435"
 ---
 # <a name="development-launchpad"></a>Finestra di avvio per lo sviluppo
 
@@ -114,7 +114,7 @@ ms.locfileid: "65974815"
                             <a href="directx-development-overview.md">Motore personalizzato (DirectX)</a>
                         </p>
                         <p>
-Unreal - presto disponibile
+                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
                         </p>                
                     </div>
                 </div>
@@ -175,7 +175,7 @@ Unreal - presto disponibile
 
 ## <a name="overview"></a>Panoramica
 
-Le app di realtà mista vengono create con la piattaforma UWP ([Universal Windows Platform](https://dev.windows.com/getstarted)). Tutte le app di realtà mista sono app di Windows universale e possono quindi essere eseguite su dispositivi Windows Mixed Reality. Con Windows 10 e una buona familiarità con gli strumenti middleware, come Unity, puoi iniziare a creare esperienze di realtà mista oggi stesso.
+Le applicazioni di realtà mista vengono create con la piattaforma UWP ([Universal Windows Platform](https://dev.windows.com/getstarted)). Tutte le applicazioni di realtà mista sono applicazioni UWP. Tutte le applicazioni UWP possono essere rese eseguibili in dispositivi di Windows Mixed Reality. Con Windows 10 e una buona familiarità con gli strumenti middleware, come Unity, puoi creare esperienze di realtà mista oggi stesso.
 
 <br>
 
@@ -219,17 +219,17 @@ Ecco i componenti di base per lo sviluppo della realtà mista:
 
 Il modello di interazione di base per [HoloLens](hololens-hardware-details.md) è costituito dalla [direzione dello sguardo](gaze.md), dai [movimenti](gestures.md) e dai [comandi vocali](voice-input.md) ed è talvolta identificato dall'acronimo *GGV (Gaze, Gesture, Voice)* . Anche i [visori VR immersive di Windows Mixed Reality](immersive-headset-hardware-details.md) usano lo sguardo e la voce, ma sostituiscono ai movimenti i [controller del movimento](motion-controllers.md).
 
-Tutti i dispositivi di realtà mista sfruttano i vantaggi dall'ecosistema di input disponibile per Windows, come mouse, tastiera, game pad e altro ancora. Con HoloLens, gli [accessori hardware](hardware-accessories.md) sono connessi tramite Bluetooth. Con i visori VR immersive, gli accessori si connettono al PC host tramite Bluetooth, USB e altri protocolli supportati.
+Tutti i dispositivi di realtà mista sfruttano i vantaggi dall'ecosistema di input disponibile in Windows, come mouse, tastiera, game pad e altro ancora. Con HoloLens, gli [accessori hardware](hardware-accessories.md) sono connessi tramite Bluetooth. Con i visori VR immersive, gli accessori si connettono al PC host tramite Bluetooth, USB e altri protocolli supportati.
 
-Le funzionalità per la conoscenza ambientale, come le [coordinate](coordinate-systems.md), l'[audio spaziale](spatial-sound.md) e il [mapping spaziale](spatial-mapping.md) offrono strumenti indispensabili per la realtà mista. Il mapping spaziale è una funzionalità esclusiva di HoloLens e consente agli ologrammi di interagire con l'utente e il mondo fisico circostante. I sistemi di coordinate consentono ai movimenti dell'utente di influire sui movimenti nel mondo digitale.
+Le funzionalità per il riconoscimento ambientale, come le [coordinate](coordinate-systems.md), l'[audio spaziale](spatial-sound.md) e il [mapping spaziale](spatial-mapping.md), offrono gli strumenti indispensabili per la realtà mista. Il mapping spaziale è una funzionalità esclusiva di HoloLens e consente agli ologrammi di interagire con l'utente e il mondo fisico circostante. I sistemi di coordinate consentono ai movimenti dell'utente di influire sui movimenti nel mondo digitale.
 
-Gli ologrammi sono costituiti da luce e suono, che sono basati sul [rendering](rendering.md). La comprensione dell'esperienza di posizionamento e persistenza, come illustrata nello [spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md), talvolta definito "shell", offre un ottimo modo per basare lo sviluppo di app sull'esperienza dell'utente.
+Gli ologrammi sono costituiti da luce e suono, che sono basati sul [rendering](rendering.md). È importante capire l'esperienza di posizionamento e persistenza, come illustrato nello [spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md), talvolta definito "shell", per basare lo sviluppo di app sull'esperienza dell'utente.
 
-## <a name="tools-for-developing-for-mixed-reality"></a>Strumenti di sviluppo per la realtà mista
+## <a name="tools-for-developing-mixed-reality"></a>Strumenti per lo sviluppo di realtà mista
 
 Gli strumenti da usare dipendono dallo [stile dell'app](app-views.md) che vuoi creare.
-* Le [app con visualizzazione 2D](building-2d-apps.md) sfruttano gli strumenti per la creazione di app Universal Windows Platform, adatte per ambienti come Windows Phone, PC e tablet. Queste app vengono vissute come proiezioni 2D inserite nello spazio iniziale di Windows Mixed Reality e possono funzionare su più tipi di dispositivi, inclusi PC e smartphone.
-* Le app coinvolgenti e olografiche richiedono strumenti progettati in modo da sfruttare le API di Windows Mixed Reality. Per creare app di realtà mista ti [consigliamo di usare Unity](unity-development-overview.md). Gli sviluppatori interessati a creare un motore personalizzato possono [usare DirectX e altre API Windows](directx-development-overview.md).
+* Le [app con visualizzazione 2D](building-2d-apps.md) sfruttano gli strumenti per la creazione di app UWP, adatte per ambienti come Windows Phone, PC e tablet. Queste applicazioni vengono vissute come proiezioni 2D inserite nello spazio iniziale di Windows Mixed Reality e possono funzionare in più tipi di dispositivi, inclusi PC e smartphone.
+* Le applicazioni immersive e olografiche richiedono strumenti progettati per sfruttare le API di Windows Mixed Reality. Per creare applicazioni di realtà mista, ti [consigliamo di usare Unity](unity-development-overview.md). Gli sviluppatori interessati a creare un motore personalizzato possono [usare DirectX e altre API Windows](directx-development-overview.md).
 
 Indipendentemente dal tipo di app che stai creando, questi strumenti faciliteranno la tua esperienza di sviluppo:
 * [Visual Studio e Windows SDK](using-visual-studio.md)
