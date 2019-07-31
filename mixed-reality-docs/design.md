@@ -8,18 +8,20 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, progettazione, interazione, stile, colore, modelli di app, controlli, app di esempio, Mixed Reality Toolkit, MRTK
-ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66039205"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326193"
 ---
 # <a name="design-for-mixed-reality"></a>Progettazione per la realtà mista
 
 ![Progettazione per la realtà mista](images/Bicycle-Leschi10.gif)
 
-Queste linee guida sono state create da progettisti, sviluppatori, program manager e ricercatori Microsoft impegnati nella realizzazione di dispositivi olografici (come HoloLens) e dispositivi di tipo immersive (come i visori VR di Windows Mixed Reality Acer e HP). Si tratta di un set di argomenti utili per la progettazione di app Windows per caschi con visore.
+
+Queste linee guida sono state create da progettisti, sviluppatori, program manager e ricercatori Microsoft impegnati nella realizzazione di dispositivi olografici, come HoloLens, e dispositivi di tipo immersive, come i visori VR per Windows Mixed Reality di Acer e HP. Si tratta quindi di una serie di argomenti utili per la progettazione di app Windows per caschi con visore.
+
 
 ## <a name="article-categories"></a>Categorie di articoli
 
@@ -166,7 +168,7 @@ Queste linee guida sono state create da progettisti, sviluppatori, program manag
                             <a href="progress.md">Visualizzazione dello stato</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barra dell'app e cubo di delimitazione</a>
+                            <a href="app-bar-and-bounding-box.md">Cubo di delimitazione e barra dell'app</a>
                         </p>
                     </div>
                 </div>
@@ -213,7 +215,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
                         </div>
                         <div class="cardText">
                             <h3>Modulo lunare</h3>
-                            <p>Informazioni su come estendere i movimenti di base di HoloLens con tracciamento a due mani e input del controller Xbox.</p>
+                            <p>Informazioni su come estendere i movimenti di base di HoloLens con tracciamento a due mani e input del controller. Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -232,7 +234,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
                         </div>
                         <div class="cardText">
                             <h3>Galaxy Explorer</h3>
-                            <p>Il progetto Galaxy Explorer è pronto. Hai condiviso le tue idee con la community, hai scelto un'app, hai osservato un team durante la fase di sviluppo e ora puoi avere il codice sorgente.</p>
+                            <p>Il progetto Galaxy Explorer è pronto. Hai condiviso le tue idee con la community, hai scelto un'applicazione, hai osservato un team durante la fase di sviluppo e ora puoi avere il codice sorgente.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
+    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -284,26 +286,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
             </div>
         </div>
       </a>  
-    </li>   
-        <li>
-    <a href="case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md" title="HoloSketch" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloSketch.png" alt="HoloSketch">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>HoloSketch</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
+    </li>       
             <li>
     <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
         <div class="cardSize">
@@ -368,7 +351,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Progettazione di app UWP (Universal Windows Platform)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Progettazione di applicazioni UWP (Universal Windows Platform)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +361,7 @@ Crea esperienze di alto livello a partire dagli esempi progettati e creati dal n
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Progettazione di app UWP (Universal Windows Platform)</h3>
+                        <h3>Progettazione di applicazioni UWP (Universal Windows Platform)</h3>
                         <p> </p>
                     </div>
                 </div>
