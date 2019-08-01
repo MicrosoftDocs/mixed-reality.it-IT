@@ -22,7 +22,6 @@
 #### [Reimpostare o ripristinare HoloLens](reset-or-recover-your-hololens.md)
 #### [Salvataggio e ricerca dei file](saving-and-finding-your-files.md)
 #### [Vedere le foto](see-your-photos.md)
-#### [Regolazione dei sensori](sensor-tuning.md)
 #### [Aggiornamento di HoloLens](updating-hololens.md)
 #### [Condivisione dei dispositivi](device-sharing.md)
 #### [Guida per indossare e pulire un dispositivo dimostrativo HoloLens](hololens-demo-guide.md)

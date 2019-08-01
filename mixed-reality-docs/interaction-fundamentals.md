@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, sguardo fisso, selezione della destinazione con lo sguardo fisso, interazione, progettazione, HoloLens, MMR, multimodale
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415247"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507902"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione alle interazioni istintive
 
@@ -115,7 +115,7 @@ Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogn
     <tr>
         <td><a href="hands-and-tools.md">Mani e controller del movimento</a></td>
         <td>Si vede una mesh mano, un invito punta del dito o raggi della mano/controller.</td>
-        <td>Si vedono handle afferrabili o un riquadro di delimitazione quando si avvicina la mano.</td>
+        <td>Si vedono punti di controllo afferrabili o un riquadro delimitatore quando si avvicina la mano a un oggetto.</td>
         <td>Si sentono toni udibili e si vedono animazioni al momento di afferrare e rilasciare oggetti.</td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogn
     <tr>
         <td><a href="hands-free.md">Mani libere (esecuzione di comandi vocali)</a></td>
         <td>Si vedono un indicatore di ascolto e sottotitoli che mostrano quello che il sistema ha sentito.</td>
-        <td>Si ricevono messaggi vocali e suggerimenti. Se si pronuncia una frase del tipo: "Cosa posso dire?", viene visualizzato un messaggio di feedback.</td>
+        <td>Si ricevono messaggi vocali e suggerimenti. Quando si dice: "Cosa posso dire?" viene visualizzato un messaggio di feedback.</td>
         <td>Si vedono o si sentono conferme visive o udibili quando si dà un comando o quando si ottiene una disambiguazione dell'esperienza utente, se necessario.</a></td>
     </tr>
 </table>
