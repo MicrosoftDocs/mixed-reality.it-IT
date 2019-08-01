@@ -1,19 +1,19 @@
 ---
-title: Modulo MR Learning sharing per HoloLens 2
+title: Esercitazioni sulle funzionalità multiutente-5. Integrazione di ancoraggi spaziali di Azure in un'esperienza condivisa
 description: Completare questo corso per apprendere come implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 1ae880208e79e2e045bd5e7298db260b7f0b2232
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293630"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701867"
 ---
-# <a name="azure-spatial-anchors-and-shared-experiences"></a>Ancoraggi spaziali e esperienze condivise di Azure
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integrazione di ancoraggi spaziali di Azure in un'esperienza condivisa
 
 In questa lezione viene illustrato come integrare Azure Spatial Anchors (ASA) nell'esperienza condivisa. ASA consente a più dispositivi con percorso condiviso di avere un riferimento comune se l'ambiente fisico prevede l'ancoraggio di esperienze virtuali in modo che tutti i partecipanti vedano gli oggetti nella stessa posizione fisica.
 

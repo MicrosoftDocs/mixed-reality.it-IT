@@ -1,17 +1,17 @@
 ---
-title: Modulo di apprendimento di base sulla realtà mista - Interfaccia utente, tracciamento delle mani e configurazione di Mixed Reality Toolkit
+title: Esercitazioni introduttive-3. Creazione dell'interfaccia utente e configurazione del Toolkit per realtà mista
 description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485751"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702041"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Creazione dell'interfaccia utente e configurazione del Toolkit per realtà mista 
 

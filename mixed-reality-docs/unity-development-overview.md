@@ -6,17 +6,16 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realtà mista, sviluppo, Guida introduttiva, nuovo progetto, porting, funzionalità, fotocamera, simulazione, emulazione, documentazione
-ms.openlocfilehash: 24217b4c61bf2d438ebc1c4114bc9dc20dc62f64
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414517"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701787"
 ---
 # <a name="unity-development-overview"></a>Panoramica sullo sviluppo Unity
 
 Il percorso più veloce per la creazione di un' [app per realtà mista](app-views.md) è con [Unity](http://aka.ms/HoloLensUnity). Si consiglia di prendere tempo per esplorare le esercitazioni su [Unity](https://unity3d.com/learn/tutorials). Se sono necessarie risorse, Unity dispone di un [Archivio asset](https://www.assetstore.unity3d.com/)completo. Una volta creata una conoscenza di base di Unity, è possibile visitare le [esercitazioni](tutorials.md) per apprendere le specifiche dello sviluppo di realtà miste con Unity. Visitare i [forum in realtà mista](http://forum.unity3d.com/forums/hololens.102/) di Unity per coinvolgere il resto della community sulla creazione di app per realtà mista in Unity e trovare soluzioni ai problemi che potrebbero verificarsi.
-
 
 Per iniziare a creare app per realtà miste con Unity, [installare prima gli strumenti](install-the-tools.md). 
 
@@ -40,7 +39,7 @@ L'aggiunta del supporto per le funzionalità di realtà mista di Windows, ad ese
 
 Esaminare prima di tutto le [scale di esperienza](coordinate-systems.md) che possono essere destinate alla Applicatioin:
 * Se si sta cercando di creare un' **esperienza**di **solo orientamento** o di scalabilità verticale, è necessario impostare il tipo di spazio di rilevamento di Unity su [stazionari](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
-* Se si sta cercando di creare un'  esperienza di scalabilità o scalabilità, è necessario assicurarsi che il tipo di spazio di rilevamento di Unity sia impostato correttamente su [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
+* Se si sta cercando di creare un' esperienza di scalabilitào scalabilità, è necessario assicurarsi che il tipo di spazio di rilevamento di Unity sia impostato correttamente su [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se si vuole creare un'esperienza **globale** su HoloLens che consente agli utenti di spostarsi oltre 5 metri, è necessario usare il componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .
 
 Tutti i componenti di base per le applicazioni di realtà miste sono esposti in modo coerente con altre API Unity. Sono disponibili anche tramite il Toolkit di realtà mista.
@@ -71,7 +70,7 @@ Con questa soluzione di Visual Studio, è possibile eseguire l'applicazione in u
 
 ## <a name="unity-documentation"></a>Documentazione di Unity
 
-Oltre a questa documentazione disponibile in Windows Dev Center, Unity installa la documentazione per la funzionalità di realtà mista di Windows insieme all'editor di Unity. La documentazione fornita da Unity include due sezioni separate:
+Oltre a questa documentazione disponibile in docs.microsoft.com, Unity installa la documentazione per la funzionalità di realtà mista di Windows insieme all'editor di Unity. La documentazione fornita da Unity include due sezioni separate:
 1. **Informazioni di riferimento sullo scripting Unity**
     * Questa sezione della documentazione contiene i dettagli dell'API di scripting fornita da Unity.
     * Accessibile dall'editor di Unity tramite **guida > riferimento di script**

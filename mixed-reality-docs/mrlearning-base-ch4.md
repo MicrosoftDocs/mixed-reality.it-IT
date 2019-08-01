@@ -1,17 +1,17 @@
 ---
-title: Modulo di apprendimento di base sulla realtà mista - Interazione con oggetti 3D
+title: Esercitazioni introduttive-5. Interazione con oggetti 3D
 description: ''
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 29a31f794cbcda4f0c77b4e6e2d0e3c2c91dcb8c
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485697"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702018"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interazione con oggetti 3D
 

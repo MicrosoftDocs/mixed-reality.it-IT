@@ -1,19 +1,19 @@
 ---
-title: Modulo SpeechSDK di MR Learning-riconoscimento vocale e trascrizione
+title: Esercitazioni su servizi vocali di Azure-3. Aggiunta del componente traduzione vocale di servizi cognitivi di Azure
 description: Completare questo corso per apprendere come implementare Azure Speech SDK in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 7fe3c96cf7b888a4a91960147270be81a0973980
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485762"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701830"
 ---
-# <a name="3----adding-the-azure-cognitive-services-speech-translation-component"></a>3.    Aggiunta del componente traduzione vocale di servizi cognitivi di Azure
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Aggiunta del componente traduzione vocale di servizi cognitivi di Azure
 
 Questa esercitazione illustra come aabout il componente traduzione vocale dei servizi cognitivi di Azure nel progetto e come tradurre in tre lingue diverse. 
 

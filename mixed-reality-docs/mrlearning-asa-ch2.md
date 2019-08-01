@@ -1,17 +1,17 @@
 ---
-title: Modulo MR Learning ASA-Azure Spatial Anchor su HoloLens 2
+title: Esercitazioni sugli ancoraggi spaziali di Azure-2. Salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
 description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485739"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702052"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
 
@@ -81,5 +81,5 @@ Viene illustrato come implementare gli ancoraggi spaziali di Azure come parte di
 
 Nella lezione successiva verrà illustrato come fornire agli utenti il feedback in tempo reale. Questo feedback includerà informazioni sulla creazione di ancoraggi, sulla qualità della comprensione dell'ambiente e sullo stato della sessione di Azure. Senza commenti, gli utenti potrebbero non sapere se un ancoraggio è stato caricato correttamente in Azure, se la qualità dell'ambiente è sufficiente per la creazione dell'ancoraggio o lo stato corrente.
 
-[Lezione successiva: 3. Visualizzazione del feedback di ancoraggio spaziale di Azure](mrlearning-asa-ch3.md)
+[Lezione successiva: 3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
 

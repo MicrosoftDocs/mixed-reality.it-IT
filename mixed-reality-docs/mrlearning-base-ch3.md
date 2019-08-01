@@ -1,17 +1,17 @@
 ---
-title: Modulo di apprendimento di base sulla realtà mista - Posizionamento dinamico del contenuto e risolutori
-description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+title: Esercitazione introduttiva-4. Inserimento di contenuto dinamico e utilizzo di risolutori
+description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: a73be40180e582058ae3e9bbaeffebe462042fbb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485693"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701995"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Inserimento di contenuto dinamico e utilizzo di risolutori
 

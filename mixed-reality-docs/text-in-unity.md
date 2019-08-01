@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, controlli, carattere, tipografia, interfaccia utente, UX
-ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415437"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701910"
 ---
 # <a name="text-in-unity"></a>Testo in Unity
 
@@ -20,7 +20,7 @@ Il testo è uno dei componenti più importanti nelle app olografiche. Per visual
 ![Come ottenere testo nitido e bello](images/hug-text-02-640px.png)<br>
 *Testo predefinito sfuocato in Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Uso del testo 3D di Unity (mesh di testo) e del testo dell'interfaccia utente
+## <a name="working-with-unitys-3d-text-text-mesh-and-ui-text"></a>Uso del testo 3D di Unity (mesh di testo) e del testo dell'interfaccia utente
 
 Unity presuppone che tutti i nuovi elementi aggiunti a una scena siano pari a 1 unità di unità, o al 100% di trasformazione, che si traduce in circa 1 misuratore su HoloLens. Nel caso dei tipi di carattere, il rettangolo di delimitazione di un TextMesh 3D viene visualizzato per impostazione predefinita a circa 1 metro in altezza.
 
@@ -32,6 +32,8 @@ La maggior parte delle finestre di progettazione visiva utilizza punti per defin
 
 ![Mesh di testo 3D Unity con dimensioni del carattere diverse](images/Text_In_Unity_Measurements1.png)<br>
 *Ridimensionamento dei valori per il testo 3D Unity e il testo dell'interfaccia utente*
+
+<br>
 
 ![Mesh di testo 3D Unity con dimensioni del carattere diverse](images/hug-text-05-1000px.png)<br>
 *Mesh di testo 3D Unity con valori ottimizzati*
@@ -49,7 +51,7 @@ Quando si aggiunge un'interfaccia utente o un elemento di testo basato su Canvas
 
 ## <a name="working-with-text-mesh-pro"></a>Uso di Text mesh Pro
 
-Con la funzionalità text mesh di Unity Pro, è possibile proteggere la qualità del rendering del testo. Supporta la struttura del testo croccante indipendentemente dalla distanza utilizzando la tecnica [SDF (campo di distanza con segno)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Utilizzando lo stesso metodo di calcolo utilizzato in precedenza per la mesh di testo 3D e il testo dell'interfaccia utente, è possibile trovare i valori di ridimensionamento appropriati per utilizzare il punto tipografico convenzionale. Poiché il tipo di carattere 3D di mesh Pro predefinito con dimensioni pari a 36 Mostra la delimitazione di 2,5 Unity Unit (2,5 m), è possibile usare il valore di ridimensionamento 0,005 per usare le dimensioni del punto. Il testo Pro mesh in menu dell'interfaccia utente ha le dimensioni di delimitazione predefinite di 25 unità Unity (25m). In questo modo si ottiene 0,0005 per il valore di scalabilità.
+Con la funzionalità text mesh di Unity Pro, è possibile proteggere la qualità del rendering del testo. Supporta la delineatura di testo croccante indipendentemente dalla distanza utilizzando la tecnica [SDF (signed distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando lo stesso metodo di calcolo usato in precedenza per la mesh di testo 3D e il testo dell'interfaccia utente, è possibile trovare i valori di ridimensionamento appropriati da usare con i punti tipografici convenzionali. Poiché il tipo di carattere 3D di mesh Pro predefinito con dimensioni pari a 36 ha una dimensione di delimitazione di 2,5 unità Unity (2,5 m), è possibile usare il valore di ridimensionamento 0,005 per ottenere la dimensione del punto. Il testo Pro mesh nel menu dell'interfaccia utente ha le dimensioni di delimitazione predefinite di 25 unità Unity (25m). In questo modo si ottiene 0,0005 per il valore di scalabilità.
 
 ![Mesh di testo 3D Unity con dimensioni del carattere diverse](images/Text_In_Unity_Measurements2.png)<br>
 *Ridimensionamento dei valori per il testo 3D Unity e il testo dell'interfaccia utente*
@@ -63,14 +65,14 @@ Per l'interazione near a 0,45 m (45 cm), l'angolo di visualizzazione del tipo di
 di interazione near-and-distante*nell'intervallo di interazione near and lontano*
 
 ### <a name="the-minimum-legible-font-size"></a>Dimensioni minime del carattere leggibili
-| distanza | Angolo di visualizzazione | Altezza testo | Dimensione carattere |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensione carattere |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0.4 °-0,5 ° | 3.14 – 3,9 mm | 8,9 – 11.13 PT |
 | 2m | 0,35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Dimensioni del carattere facilmente leggibili
-| distanza | Angolo di visualizzazione | Altezza testo | Dimensione carattere |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensione carattere |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0,65 °-0,8 ° | 5.1-6,3 mm | 14.47-17,8 PT |
 | 2m | 0.6 °-0,75 ° | 20,9-26.2 mm | 59.4-74.2 PT |

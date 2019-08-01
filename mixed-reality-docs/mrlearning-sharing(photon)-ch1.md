@@ -1,17 +1,17 @@
 ---
-title: Modulo MR Learning sharing per HoloLens 2
+title: Esercitazioni sulle funzionalità multiutente-1. Configurazione della rete di Photon Unity
 description: Completare questo corso per apprendere come implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: acb6966ace81180e95e6a0fe447d350572f7c0dd
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485646"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701965"
 ---
 #  <a name="1-setting-up-photon-unity-networking"></a>1. Configurazione della rete di Photon Unity
 
