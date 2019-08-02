@@ -134,8 +134,6 @@
 ## [Finestra di avvio per lo sviluppo](development.md)
 ## Servizi cloud di realtà mista
 ### [Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors)
-### [Holographic Remoting Player](holographic-remoting-player.md)
-### [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 ### Attività iniziali
@@ -188,7 +186,6 @@
 #### [Input da tastiera, mouse e controller in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Argomenti avanzati
 #### [Uso di XAML con app DirectX olografiche](using-xaml-with-holographic-directx-apps.md)
-#### [Aggiungere Holographic Remoting](add-holographic-remoting.md)
 ### [OpenXR](openxr.md)
 ## WebVR
 ### [Uso di WebVR in Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
@@ -289,7 +286,16 @@
 ## Strumenti di ricerca e remoti
 ### [Avviare il Portale di dispositivi di Windows](using-the-windows-device-portal.md)
 ### [Informazioni di riferimento sulle API di Portale di dispositivi](device-portal-api-reference.md)
+## Holographic Remoting
 ### [Holographic Remoting Player](holographic-remoting-player.md)
+### [Scrivere un'app per host Holographic Remoting](holographic-remoting-create-host.md)
+### [Scrivere un lettore Holographic Remoting personalizzato](holographic-remoting-create-player.md)
+### [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
+### [Proteggere la connessione con Holographic Remoting](holographic-remoting-secure-connection.md)
+### [Risoluzione dei problemi e limitazioni](holographic-remoting-troubleshooting.md)
+### [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+### Holographic Remoting per HoloLens 1
+#### [Aggiungere Holographic Remoting](add-holographic-remoting.md)
 ## Altro
 ### [Rilevamento di codici a matrice](qr-code-tracking.md)
 ### [Esperienze condivise nella realtà mista](shared-experiences-in-mixed-reality.md)
