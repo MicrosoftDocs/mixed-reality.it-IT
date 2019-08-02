@@ -6,21 +6,25 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, comunicazione remota olografica, rendering remoto, rendering di rete, HoloLens, ologrammi remoti
-ms.openlocfilehash: 8d645f634ff0fc820893f5554fd602aa3a2f38e3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
+ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829625"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712424"
 ---
-# <a name="add-holographic-remoting"></a>Aggiungere la comunicazione remota olografica
+# <a name="add-holographic-remoting-hololens-1"></a>Aggiungere la comunicazione remota olografica (HoloLens 1)
+
+>[!IMPORTANT]
+>Questo documento descrive la creazione di un'applicazione host per HoloLens 1. L'applicazione host per **HoloLens 1** deve usare il pacchetto NuGet versione **1. x. x**. Ciò implica che le applicazioni host scritte per HoloLens 1 non sono compatibili con HoloLens 2 e viceversa.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md#news-and-notes)disponibili.
+Gli sviluppatori HoloLens che usano la comunicazione remota olografica dovranno aggiornare le proprie app per renderle compatibili con HoloLens 2. Questa operazione richiede una nuova versione del pacchetto NuGet di comunicazione remota olografica. Se un'applicazione che usa il pacchetto NuGet di comunicazione remota olografica con un numero di versione inferiore a 2.0.0.0 tenta di connettersi al lettore di comunicazione remota olografica in HoloLens 2, la connessione avrà esito negativo.
 
-Gli sviluppatori HoloLens che usano la comunicazione remota olografica dovranno aggiornare le proprie app per renderle compatibili con HoloLens 2.  Questa operazione richiederà una nuova versione del pacchetto NuGet per la comunicazione remota olografica, che non è ancora disponibile pubblicamente.  Se un'applicazione che usa il pacchetto NuGet HoloLens tenta di connettersi al lettore di comunicazione remota olografica in HoloLens 2, la connessione avrà esito negativo.  Guardare questa pagina per gli aggiornamenti dopo che è disponibile il pacchetto NuGet HoloLens 2.
+>[!NOTE]
+>Le linee guida specifiche per HoloLens 2 sono disponibili [qui](holographic-remoting-create-host.md).
+
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Aggiungere la comunicazione remota olografica all'app desktop o UWP
 
@@ -47,7 +51,7 @@ Seguire questa procedura per ottenere il pacchetto NuGet per la comunicazione re
 
 In primo luogo, è necessaria un'istanza di HolographicStreamerHelpers. Aggiungere questo oggetto alla classe che gestirà la comunicazione remota.
 
-```
+```cpp
 #include <HolographicStreamerHelpers.h>
 
    private:
@@ -56,7 +60,7 @@ In primo luogo, è necessaria un'istanza di HolographicStreamerHelpers. Aggiunge
 
 Sarà inoltre necessario tenere traccia dello stato della connessione. Se si desidera eseguire il rendering dell'anteprima, è necessario disporre di una trama in cui copiarla. Sono necessari anche alcuni elementi, ad esempio un blocco dello stato della connessione, un modo per archiviare l'indirizzo IP di HoloLens e così via.
 
-```
+```cpp
 private:
        Microsoft::Holographic::HolographicStreamerHelpers^ m_streamerHelpers;
 
@@ -75,7 +79,7 @@ private:
 
 Per connettersi a un dispositivo HoloLens, creare un'istanza di HolographicStreamerHelpers e connettersi all'indirizzo IP di destinazione. È necessario impostare la dimensione del fotogramma video in modo che corrisponda alla larghezza e all'altezza di visualizzazione HoloLens, perché la libreria remota olografica prevede che le risoluzioni del codificatore e del decodificatore corrispondano esattamente.
 
-```
+```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
        m_streamerHelpers->CreateStreamer(m_d3dDevice);
 
@@ -98,7 +102,7 @@ La connessione del dispositivo è asincrona. L'app deve fornire gestori eventi p
 
 L'evento OnConnected può aggiornare l'interfaccia utente, avviare il rendering e così via. Nell'esempio di codice desktop, viene aggiornato il titolo della finestra con un messaggio "Connected".
 
-```
+```cpp
 m_streamerHelpers->OnConnected += ref new ConnectedEvent(
            [this]()
            {
@@ -108,7 +112,7 @@ m_streamerHelpers->OnConnected += ref new ConnectedEvent(
 
 L'evento disconnected può gestire la riconnessione, gli aggiornamenti dell'interfaccia utente e così via. In questo esempio viene riconnessa se si verifica un errore temporaneo.
 
-```
+```cpp
 Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_streamerHelpers);
        m_streamerHelpers->OnDisconnected += ref new DisconnectedEvent(
            [this, streamerHelpersWeakRef](_In_ HolographicStreamerConnectionFailureReason failureReason)
@@ -148,7 +152,7 @@ Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_strea
 
 Quando il componente remoto è pronto per l'invio di un frame, l'app ha la possibilità di crearne una copia nella SendFrameEvent. Qui viene copiato il frame in una catena di scambio in modo che sia possibile visualizzarlo in una finestra di anteprima.
 
-```
+```cpp
 m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
            [this](_In_ const ComPtr<ID3D11Texture2D>& spTexture, _In_ FrameMetadata metadata)
            {
@@ -180,13 +184,13 @@ Per eseguire il rendering del contenuto usando la comunicazione remota, è neces
 
 Invece di crearli autonomamente, i componenti di spazio olografico e vocale provengono dalla classe HolographicRemotingHelpers:
 
-```
+```cpp
 m_appView->Initialize(m_streamerHelpers->HolographicSpace, m_streamerHelpers->RemoteSpeech);
 ```
 
 Anziché usare un ciclo di aggiornamento all'interno di un metodo Run, è necessario fornire gli aggiornamenti del ciclo principale dell'app desktop o UWP. Ciò consente all'app desktop o UWP di rimanere in controllo dell'elaborazione dei messaggi.
 
-```
+```cpp
 void DesktopWindow::Tick()
    {
        auto lock = m_deviceLock.Lock();
@@ -198,7 +202,7 @@ void DesktopWindow::Tick()
 
 Il metodo di sequenza () del segno di visualizzazione dell'app olografica completa un'iterazione del ciclo di aggiornamento, di estrazione e di presentazione.
 
-```
+```cpp
 void AppView::Tick()
    {
        if (m_main)
@@ -222,7 +226,7 @@ Il ciclo di aggiornamento, rendering e presenza dell'app olografica è identico 
 
 Per disconnettersi, ad esempio, quando l'utente fa clic su un pulsante dell'interfaccia utente per disconnettere-chiamare Disconnect () in HolographicStreamerHelpers e quindi rilasciare l'oggetto.
 
-```
+```cpp
 void DesktopWindow::DisconnectFromRemoteDevice()
    {
        // Disconnecting from the remote device can change the connection state.
@@ -246,7 +250,7 @@ Il lettore di comunicazione remota olografica di Windows è disponibile nell'App
 
 La visualizzazione dell'app olografica richiede un modo per fornire all'app il dispositivo Direct3D, che deve essere usato per inizializzare lo spazio olografico. L'app deve usare questo dispositivo Direct3D per copiare e visualizzare il frame di anteprima.
 
-```
+```cpp
 internal:
        const std::shared_ptr<DX::DeviceResources>& GetDeviceResources()
        {
