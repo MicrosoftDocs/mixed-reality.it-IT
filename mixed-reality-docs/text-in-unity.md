@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, controlli, carattere, tipografia, interfaccia utente, UX
-ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
+ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701910"
+ms.lasthandoff: 08/04/2019
+ms.locfileid: "68776397"
 ---
 # <a name="text-in-unity"></a>Testo in Unity
 
@@ -51,7 +51,7 @@ Quando si aggiunge un'interfaccia utente o un elemento di testo basato su Canvas
 
 ## <a name="working-with-text-mesh-pro"></a>Uso di Text mesh Pro
 
-Con la funzionalità text mesh di Unity Pro, è possibile proteggere la qualità del rendering del testo. Supporta la delineatura di testo croccante indipendentemente dalla distanza utilizzando la tecnica [SDF (signed distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando lo stesso metodo di calcolo usato in precedenza per la mesh di testo 3D e il testo dell'interfaccia utente, è possibile trovare i valori di ridimensionamento appropriati da usare con i punti tipografici convenzionali. Poiché il tipo di carattere 3D di mesh Pro predefinito con dimensioni pari a 36 ha una dimensione di delimitazione di 2,5 unità Unity (2,5 m), è possibile usare il valore di ridimensionamento 0,005 per ottenere la dimensione del punto. Il testo Pro mesh nel menu dell'interfaccia utente ha le dimensioni di delimitazione predefinite di 25 unità Unity (25m). In questo modo si ottiene 0,0005 per il valore di scalabilità.
+Con la funzionalità text mesh di Unity Pro, è possibile proteggere la qualità del rendering del testo. Supporta la delineatura di testo croccante indipendentemente dalla distanza utilizzando la tecnica [SDF (signed distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Usando lo stesso metodo di calcolo usato in precedenza per la mesh di testo 3D e il testo dell'interfaccia utente, è possibile trovare i valori di ridimensionamento appropriati da usare con i punti tipografici convenzionali. Poiché il tipo di carattere 3D di mesh Pro predefinito con dimensioni pari a 36 ha una dimensione di delimitazione di 2,5 unità Unity (2,5 m), è possibile usare il valore di scala 0,005 per ottenere la dimensione del punto. Il testo Pro mesh nel menu dell'interfaccia utente ha le dimensioni di delimitazione predefinite di 25 unità Unity (25m). In questo modo si ottiene 0,0005 per il valore di scalabilità.
 
 ![Mesh di testo 3D Unity con dimensioni del carattere diverse](images/Text_In_Unity_Measurements2.png)<br>
 *Ridimensionamento dei valori per il testo 3D Unity e il testo dell'interfaccia utente*
