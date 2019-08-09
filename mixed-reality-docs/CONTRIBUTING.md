@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516161"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861712"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contributo alla documentazione per gli sviluppatori di Microsoft Mixed Reality
 
@@ -57,6 +57,28 @@ Usare il flusso di lavoro seguente per apportare aggiornamenti a *un articolo es
 5. Una volta completate le modifiche apportate all'articolo, scorrere verso il basso e fare clic sul pulsante **Proponi modifica file** .
 6. Nella pagina successiva fare clic su **Crea richiesta pull** per unire il ramo creato automaticamente in ' Master '.
 7. Ripetere i passaggi precedenti per il prossimo articolo che si desidera modificare.
+
+## <a name="renaming-or-deleting-an-existing-article"></a>Ridenominazione o eliminazione di un articolo esistente
+
+Se la modifica Rinomina o Elimina un articolo esistente, assicurarsi di aggiungere un reindirizzamento. In questo modo, tutti gli utenti con un collegamento all'articolo esistente continueranno a trovarsi nel posto giusto. I reindirizzamenti vengono gestiti dal file. openpublishing. redirector. JSON nella radice del repository.
+
+Per aggiungere un reindirizzamento a. openpublishing. redirector. JSON, aggiungere una voce alla `redirections` matrice:
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- `source_path` È il percorso del repository relativo all'articolo precedente che si sta rimuovendo. Verificare che il percorso inizi con `mixed-reality-docs` e termini con `.md`.
+- `redirect_url` È l'URL pubblico relativo dall'articolo precedente al nuovo articolo. Assicurarsi che l'URL non contenga `mixed-reality-docs` o `.md`, perché si riferisce all'URL pubblico e non al percorso del repository. Il collegamento a una sezione all'interno del nuovo articolo `#section` con è consentito. Se necessario, è anche possibile usare un percorso assoluto di un altro sito.
+- `redirect_document_id`indica se si desidera memorizzare l'ID del documento del file precedente. Il valore predefinito è `false`. Usare `true` se si vuole mantenere il `ms.documentid` valore dell'attributo dall'articolo reindirizzato. Se si mantiene l'ID del documento, i dati, ad esempio le visualizzazioni di pagina e le classificazioni, verranno trasferiti all'articolo di destinazione. Eseguire questa operazione se il reindirizzamento è principalmente una ridenominazione e non un puntatore a un articolo diverso che copre solo parte dello stesso contenuto.
+
+Se si aggiunge un reindirizzamento, assicurarsi di eliminare anche il vecchio file.
 
 ## <a name="creating-a-new-article"></a>Creazione di un nuovo articolo
 

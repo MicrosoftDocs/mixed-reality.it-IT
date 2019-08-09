@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: fotocamera, hololens, fotocamera a colori, anteriore, hololens 2, CV, visione artificiale, fiduciale, marcatori, codice a matrice, QR, foto, video
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694533"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861727"
 ---
 # <a name="locatable-camera"></a>Fotocamera locatable
 
@@ -84,11 +84,13 @@ Per passare da "CameraIntrinsics" e "CameraCoordinateSystem" al sistema di coord
 
 [Fotocamera locatable in Unity](locatable-camera-in-unity.md): CameraToWorldMatrix viene fornito automaticamente dalla classe PhotoCaptureFrame (pertanto non è necessario preoccuparsi delle trasformazioni CameraCoordinateSystem).
 
-[Locatable fotocamera in DirectX](locatable-camera-in-directx.md): Mostra il modo piuttosto semplice per eseguire query per la trasformazione tra il sistema di coordinate della fotocamera e i sistemi di coordinate dell'applicazione.
+[Locatable fotocamera in DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): L'esempio di rilevamento del volto olografico illustra il modo piuttosto semplice per eseguire query per la trasformazione tra il sistema di coordinate della fotocamera e i sistemi di coordinate dell'applicazione.
 
 ### <a name="distortion-error"></a>Errore di distorsione
 
-In HoloLens il video e i flussi di immagini ancora non sono distorti nella pipeline di elaborazione delle immagini del sistema prima che i frame siano resi disponibili per l'applicazione (il flusso di anteprima contiene i frame distorti originali). Poiché vengono resi disponibili solo i CameraIntrinsics, le applicazioni devono presupporre che i fotogrammi delle immagini rappresentino una fotocamera pinhole perfetta, tuttavia la funzione di disdistorsione nel processore di immagini può comunque lasciare un errore di un massimo di 10 pixel in HoloLens (prima generazione) Quando si usa CameraIntrinsics nei metadati del frame. In molti casi d'uso, questo errore non è rilevante, ma se si allineano gli ologrammi a manifesti/marcatori reali, ad esempio, si nota un < offset 10px (approssimativamente 11mm per gli ologrammi posizionati a 2 metri), questo errore di distorsione potrebbe essere la ragione. 
+In HoloLens il video e i flussi di immagini ancora non sono distorti nella pipeline di elaborazione delle immagini del sistema prima che i frame siano resi disponibili per l'applicazione (il flusso di anteprima contiene i frame distorti originali). Poiché vengono resi disponibili solo i CameraIntrinsics, le applicazioni devono presupporre che i fotogrammi immagine rappresentino una fotocamera pinhole perfetta.
+
+In HoloLens (prima generazione) la funzione di disdistorsione nel processore di immagini può comunque lasciare un errore fino a 10 pixel quando si usa il CameraIntrinsics nei metadati del frame. In molti casi d'uso, questo errore non è rilevante, ma se si allineano gli ologrammi a manifesti/marcatori reali, ad esempio, si nota un < offset 10px (approssimativamente 11mm per gli ologrammi posizionati a 2 metri), questo errore di distorsione potrebbe essere la ragione. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Scenari di utilizzo della fotocamera locatable
 
@@ -170,7 +172,7 @@ Esempi:
 * Identificare e riconoscere persone nella stanza (ad esempio, inserire schede di contatto olografiche sui visi)
 
 ## <a name="see-also"></a>Vedere anche
-* [Fotocamera individuabile in DirectX](locatable-camera-in-directx.md)
+* [Esempio di fotocamera locatable](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Fotocamera individuabile in Unity](locatable-camera-in-unity.md)
 * [Acquisizione realtà mista](mixed-reality-capture.md)
 * [Acquisizione realtà mista per sviluppatori](mixed-reality-capture-for-developers.md)
