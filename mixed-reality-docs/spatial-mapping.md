@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mapping spaziale, HoloLens, realtà mista, ricostruzione di superficie, mesh, SR
-ms.openlocfilehash: 31abeca624512f1d5e721dbe879ca2243cf41345
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550493"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937066"
 ---
 # <a name="spatial-mapping"></a>Mapping spaziale
 
@@ -164,7 +164,7 @@ Di seguito è riportato un esempio di strategia di Caching mesh, che usa l'ister
 * Poiché anche una superficie spaziale può scomparire temporaneamente a causa di una perdita di rilevamento, l'applicazione rinvia anche le aree spaziali rimosse durante la perdita del rilevamento.
 * In generale, un'applicazione deve valutare il compromesso tra l'elaborazione degli aggiornamenti ridotta e un maggiore utilizzo della memoria per determinare la strategia di memorizzazione nella cache ideale.
 
-## <a name="rendering"></a>rendering
+## <a name="rendering"></a>Rendering
 
 Esistono tre modi principali in cui i mesh di mapping spaziale tendono a essere usati per il rendering:
 * Per la visualizzazione della superficie
@@ -220,4 +220,5 @@ Tuttavia, tenere presente che ogni Raycast può avere un elevato costo computazi
 * [Mapping spaziale in DirectX](spatial-mapping-in-directx.md)
 * [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
 * [Progettazione del mapping spaziale](spatial-mapping-design.md)
+* [Comprensione della scena](scene-understanding.md)
 * [Case study - Guardare attraverso fori nella realtà](case-study-looking-through-holes-in-your-reality.md)
