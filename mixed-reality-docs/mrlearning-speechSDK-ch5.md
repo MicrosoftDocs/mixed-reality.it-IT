@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: fc65dccfcbc181af0c0b321374c721797e120e5d
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 43a6f02eaf09fcf43775374fae4fbe2d0bc8c346
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460330"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977983"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Modulo di apprendimento vocale SDK-controllo lanciarazzi con comandi vocali
 
@@ -23,17 +23,17 @@ In questa lezione verrà usata la funzionalità finalità del servizio riconosci
 - Informazioni su come usare i comandi vocali per finalità vocali come comandi di input di controllo Rocket.
 
 ## <a name="instructions"></a>Istruzioni
-1. In questa esercitazione verrà usato un asset "BaseModule" per integrare Rocket Launcher con i comandi vocali. A tale proposito, è necessario importare l'asset nel progetto. È possibile scaricare l'asset "lanciarazzi" usando questo collegamento (collegamento al collegamento). 
+1. In questa esercitazione verrà usato un asset "BaseModule" per integrare Rocket Launcher con i comandi vocali. A tale proposito, è necessario importare l'asset nel progetto. È possibile scaricare l'asset "lanciarazzi" con questo [collegamento](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2). 
 
 2. Per importare l'asset, passare a Asset-> Importa pacchetto-> pacchetto personalizzato-> passare al file scaricato e fare clic su Importa.
 
 ![module4chapter5step1](images/module4chapter5step1.PNG)
 
-3. Dopo aver importato l'asset di "lanciarazzi", spostarsi all'interno della cartella "Rocket Launcher"-> prefabbricates-> selezionare "Rocket Launcher_Complete", quindi trascinarlo e rilasciarlo nella gerarchia della scena esistente.
+3. Dopo aver importato l'asset "asset modulo di base", spostarsi all'interno della cartella "asset modulo di base"-> prefabbricati-> selezionare "Rocket Launcher_Complete", quindi trascinarlo nella gerarchia della scena esistente.
 
 ![module4chapter5step2](images/module4chapter5step2.PNG)
 
-4. A questo punto è necessario integrare il "lanciarazzi lanciarazzi" con il progetto LUIS che abbiamo lavorato nella lezione precedente (collegamento per lesson4). A tale proposito, espandere il prefabbricato "Rocket Launcher_Complete" nella gerarchia e trovare i pulsanti "LaunchRoundButton", "ResetRoundButton" e "Placement Hints".
+4. A questo punto è necessario integrare "Rocket Launcher" con il progetto LUIS che abbiamo lavorato nella [lezione](mrlearning-speechSDK-ch4.md)precedente. A tale proposito, espandere il prefabbricato "Rocket Launcher_Complete" nella gerarchia e trovare i pulsanti "LaunchRoundButton", "ResetRoundButton" e "Placement Hints".
 
 ![module4chapter5step3](images/module4chapter5step3.PNG)
 

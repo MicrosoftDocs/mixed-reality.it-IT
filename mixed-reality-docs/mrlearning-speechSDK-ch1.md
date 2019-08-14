@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701955"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977987"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrazione e utilizzo di riconoscimento vocale e trascrizione
 
@@ -133,18 +133,19 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 ![Dalla lezione 1 Chapter5 Step1](images/Lesson1Chapter5Step1.JPG)
 
 2. Assicurati che la scena che vuoi provare sia nell'elenco "Scenes in Build" (Scene nella compilazione) facendo clic sul pulsante "Add Open Scenes" (Aggiungi scene aperte).
-
-3. Scegli il pulsante Build (Compila) per avviare il processo di compilazione.
+3. Premere il pulsante Impostazioni lettore e passare a impostazioni di pubblicazione. In funzionalità abilitare: Internet, server client Internet, server client di rete privata, microfono e percezione spaziale.
+4. Nelle stesse impostazioni del lettore passare a XR Settings e selezionare la realtà virtuale supportata su ON.
+5. Scegli il pulsante Build (Compila) per avviare il processo di compilazione.
 
 ![Dalla lezione 1 Chapter5 passaggio 3](images/Lesson1Chapter5Step3.JPG)
 
-4. Crea una nuova cartella per l'applicazione e assegna un nome alla cartella creata. Nell'immagine seguente è stata creata una cartella con il nome "App" per contenere l'applicazione. Fai clic su "Select Folder" (Seleziona cartella) per iniziare la compilazione nella cartella appena creata. Al termine della compilazione, puoi chiudere la finestra "Build Settings" (Impostazioni di compilazione) in Unity. 
+6. Crea una nuova cartella per l'applicazione e assegna un nome alla cartella creata. Nell'immagine seguente è stata creata una cartella con il nome "App" per contenere l'applicazione. Fai clic su "Select Folder" (Seleziona cartella) per iniziare la compilazione nella cartella appena creata. Al termine della compilazione, puoi chiudere la finestra "Build Settings" (Impostazioni di compilazione) in Unity. 
 
 ![Dalla lezione 1 Chapter5 passo 4](images/Lesson1Chapter5Step4.JPG)
 
 > NOTA: se la compilazione ha esito negativo, prova a ripeterla o a riavviare Unity e a ripetere la compilazione. Se visualizzi un errore simile al seguente: "Errore CS0246 = Non è possibile trovare il tipo o il nome dello spazio dei nomi "XX" (direttiva using o riferimento ad assembly mancante?)" può essere necessario installare [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
 
-5. Al termine della compilazione, apri la nuova cartella creata che contiene i file dell'applicazione appena compilata. Fare doppio clic sul file di soluzione ". sln" per aprire il file della soluzione in Visual Studio.
+7. Al termine della compilazione, apri la nuova cartella creata che contiene i file dell'applicazione appena compilata. Fare doppio clic sul file di soluzione ". sln" per aprire il file della soluzione in Visual Studio.
 
 > Nota: assicurati di aprire la cartella appena creata (ad esempio la cartella "App", se hai seguito le convenzioni di denominazione dei passaggi precedenti) perché un file con estensione sln denominato in modo analogo sarà presente al di fuori di tale cartella e non devi confonderlo con il file con estensione sln all'interno della cartella di compilazione. 
 
@@ -152,15 +153,14 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 > Nota: se Visual Studio richiede di installare nuovi componenti, dedica qualche minuto per verificare che tutti i componenti prerequisiti siano installati come specificato nella pagina ["Installare gli strumenti"](install-the-tools.md)
 
-6. Collega HoloLens 2 al PC con il cavo USB. Anche se le istruzioni in questa lezione presuppongono che distribuirai un test con un dispositivo HoloLens 2, puoi anche scegliere di distribuire nell'[emulatore HoloLens 2](using-the-hololens-emulator.md) oppure di creare un [pacchetto dell'app per il trasferimento locale](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+8. Collega HoloLens 2 al PC con il cavo USB. Anche se le istruzioni in questa lezione presuppongono che distribuirai un test con un dispositivo HoloLens 2, puoi anche scegliere di distribuire nell'[emulatore HoloLens 2](using-the-hololens-emulator.md) oppure di creare un [pacchetto dell'app per il trasferimento locale](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+9. Prima della compilazione, assicurati che il dispositivo sia in modalità sviluppatore. Se questa è la prima volta che esegui la distribuzione nel dispositivo HoloLens 2, Visual Studio può richiedere di associare HoloLens 2 a un PIN. Segui [queste istruzioni](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se devi abilitare la modalità sviluppatore o eseguire l'associazione con Visual Studio.
 
-7. Prima della compilazione, assicurati che il dispositivo sia in modalità sviluppatore. Se questa è la prima volta che esegui la distribuzione nel dispositivo HoloLens 2, Visual Studio può richiedere di associare HoloLens 2 a un PIN. Segui [queste istruzioni](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se devi abilitare la modalità sviluppatore o eseguire l'associazione con Visual Studio.
-
-8. Configura Visual Studio per la compilazione nel dispositivo HoloLens 2 selezionando la configurazione "Release" e l'architettura "ARM".
+10. Configura Visual Studio per la compilazione nel dispositivo HoloLens 2 selezionando la configurazione "Release" e l'architettura "ARM".
 
 ![Dalla lezione 1 Chapter5 Step8](images/Lesson1Chapter5Step8.JPG)
 
-9. Il passaggio finale consiste nella compilazione nel dispositivo selezionando Debug>Avvia senza eseguire debug. Se selezioni "Avvia senza eseguire debug", l'applicazione viene avviata immediatamente nel dispositivo al termine della compilazione, ma senza che in Visual Studio vengano visualizzate le informazioni di debug. Questo significa anche che, mentre l'applicazione è in esecuzione sul dispositivo HoloLens 2, puoi disconnettere il cavo USB senza arrestare l'applicazione. Puoi anche selezionare Compila>Distribuisci soluzione per distribuire l'applicazione nel dispositivo senza che venga avviata automaticamente.
+11. Il passaggio finale consiste nella compilazione nel dispositivo selezionando Debug>Avvia senza eseguire debug. Se selezioni "Avvia senza eseguire debug", l'applicazione viene avviata immediatamente nel dispositivo al termine della compilazione, ma senza che in Visual Studio vengano visualizzate le informazioni di debug. Questo significa anche che, mentre l'applicazione è in esecuzione sul dispositivo HoloLens 2, puoi disconnettere il cavo USB senza arrestare l'applicazione. Puoi anche selezionare Compila>Distribuisci soluzione per distribuire l'applicazione nel dispositivo senza che venga avviata automaticamente.
 
 ![Dalla lezione 1 Chapter5 Step9](images/Lesson1Chapter5Step9.JPG)
 

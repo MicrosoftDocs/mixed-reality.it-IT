@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: c7cbdca3c22253042a9be44a194fca8925f0f446
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701830"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977956"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Aggiunta del componente traduzione vocale di servizi cognitivi di Azure
 
-Questa esercitazione illustra come aabout il componente traduzione vocale dei servizi cognitivi di Azure nel progetto e come tradurre in tre lingue diverse. 
+In questa esercitazione vengono fornite informazioni sul componente traduzione vocale dei servizi cognitivi di Azure nel progetto, oltre a tradurre in tre lingue diverse. 
 
 ## <a name="instructions"></a>Istruzioni
 
@@ -45,5 +45,5 @@ Di seguito è riportato un esempio di come dovrebbe apparire la scena:
 
 Il progetto può ora tradurre le parole che si parlano in diversi linguaggi. È possibile provare a usare le lingue e testare l'accuratezza della traduzione. 
 
-[Esercitazione successiva: 4.  Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
+[Esercitazione successiva: 4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
 

@@ -728,7 +728,7 @@ Per importare l'SDK nel progetto, assicurarsi di aver scaricato la versione più
 
 1.  Aggiungere il **file unitypackage Tools** a Unity usando l'opzione di menu  **\> asset \> Import Package Custom Package** .
 
-2.  Nella casella **Importa pacchetto Unity** visualizzata è possibile selezionare tutti gli elementi sotto * **plugin* \> * storage * * *.  Deselezionare tutti gli altri elementi, perché non sono necessari per questo corso.
+2.  Nella casella **Importa pacchetto Unity** visualizzata è possibile selezionare tutti gli elementi sotto **plugin**\> **storage**.  Deselezionare tutti gli altri elementi, perché non sono necessari per questo corso.
 
     ![Importa nel pacchetto](images/AzureLabs-Lab8-61.png)
 
