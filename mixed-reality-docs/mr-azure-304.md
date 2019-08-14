@@ -112,7 +112,7 @@ Per usare il servizio *API viso* in Azure, sarà necessario configurare un'istan
 
     6. Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    7. Selezionare **Crea *.**
+    7. Selezionare **Crea***
 
         ![Crea servizio API viso](images/AzureLabs-Lab4-03.png)
 
