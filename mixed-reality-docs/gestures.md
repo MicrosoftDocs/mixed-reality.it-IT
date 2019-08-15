@@ -6,16 +6,16 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 70b03c6fa327bd987a681bba59abb725c3ddc6b4
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829768"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020217"
 ---
 # <a name="gestures"></a>Movimenti
 
-I movimenti della mano consentono agli utenti di intervenire in realtà mista. L'interazione si basa su **sguardi** , **movimenti** o **voce** , per agire su qualsiasi elemento di destinazione. I movimenti della mano non forniscono una posizione precisa nello spazio, ma la semplicità di inserimento di un HoloLens e l'interazione immediata con il contenuto consentono agli utenti di lavorare senza altri accessori.
+I movimenti della mano consentono agli utenti di agire in realtà mista. L'interazione si basa su **sguardi** , **movimenti** o **voce** , per agire su qualsiasi elemento di destinazione. I movimenti della mano non forniscono una posizione precisa nello spazio, ma la semplicità di inserimento di un HoloLens e l'interazione immediata con il contenuto consentono agli utenti di lavorare senza altri accessori.
 
 <br>
 

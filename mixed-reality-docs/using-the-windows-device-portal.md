@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale per dispositivi Windows, HoloLens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694588"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020224"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portale per dispositivi Windows
 
@@ -52,7 +52,7 @@ Questa documentazione è specifica del portale per dispositivi Windows per HoloL
 
 1. [Installare gli strumenti](install-the-tools.md) per assicurarsi di avere installato Visual Studio Update 1 con gli strumenti di sviluppo di Windows 10 installati nel PC. In questo modo, viene abilitata la connettività USB.
 2. Collega HoloLens al PC usando un cavo USB micro.
-3. Da un Web browser nel PC passa a http://127.0.0.1:10080
+3. Da un Web browser sul PC, passare a [http://127.0.0.1:10080](http://127.0.0.1:10080).
 
 ## <a name="connecting-to-an-emulator"></a>Connessione a un emulatore
 
@@ -84,7 +84,7 @@ Ogni dispositivo HoloLens genera un certificato autofirmato univoco per la conne
 3. Installare il certificato nell'archivio "autorità di certificazione radice attendibili" nel PC.
    * Dal menu Windows digitare: Gestire i certificati del computer e avviare l'applet.
    * Espandere la cartella **autorità di certificazione radice attendibile** .
-   * Fare clic sulla  cartella Certificates.
+   * Fare clic sulla cartella Certificates.
    * Dal menu azione selezionare: Tutte le attività > importazione...
    * Completa l'Importazione guidata certificati usando il file di certificato che hai scaricato da Device Portal.
 4. Riavvia il browser.
@@ -269,8 +269,8 @@ Ad esempio, è possibile specificare i criteri *(il nome dell'attività contiene
 *Pagina simulazione nel portale per dispositivi Windows in Microsoft HoloLens*
 
 Ti permette di registrare e riprodurre dati di input per il testing.
-* **Spazio di acquisizione**: Usato per scaricare un file di chat room simulato che contiene la mesh di mapping spaziale per l'ambiente dell'utente. Assegnare un nome alla stanza e  quindi fare clic su Acquisisci per salvare i dati come file con estensione XEF nel PC. Questo file può essere caricato nell'emulatore di HoloLens.
-* **Registrazione**: Controllare i flussi da registrare, denominare la registrazione e toccare o fare clic su **record** per avviare la ricodifica. Eseguire azioni con la HoloLens, quindi fare  clic su Interrompi per salvare i dati come file con estensione XEF nel PC. Questo file può essere caricato nell'emulatore di HoloLens o nel dispositivo stesso.
+* **Spazio di acquisizione**: Usato per scaricare un file di chat room simulato che contiene la mesh di mapping spaziale per l'ambiente dell'utente. Assegnare un nome alla stanza e quindi fare clic su Acquisisci per salvare i dati come file con estensione XEF nel PC. Questo file può essere caricato nell'emulatore di HoloLens.
+* **Registrazione**: Controllare i flussi da registrare, denominare la registrazione e toccare o fare clic su **record** per avviare la ricodifica. Eseguire azioni con la HoloLens, quindi fare clic su Interrompi per salvare i dati come file con estensione XEF nel PC. Questo file può essere caricato nell'emulatore di HoloLens o nel dispositivo stesso.
 * **Riproduzione**: Toccare o fare clic su **carica registrazione** per selezionare un file XEF dal PC e inviare i dati al HoloLens.
 * **Modalità di controllo**: Selezionare **predefinito** o **simulazione** dall'elenco a discesa e fare clic o toccare il pulsante **imposta** per selezionare la modalità in HoloLens. Scegliendo "Simulation" vengono disabilitati i sensori reali in HoloLens e al loro posto vengono usati i dati di simulazione caricati. Se passi a "Simulation", HoloLens non risponde all'utente reale fino a quando non torni a "Default".
 
