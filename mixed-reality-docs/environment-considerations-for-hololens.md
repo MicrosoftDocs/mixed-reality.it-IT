@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: frame olografico, campo di visualizzazione, FOV, calibrazione, spazi, ambiente, procedure
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670175"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565991"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considerazioni sull'ambiente per HoloLens
 
@@ -21,7 +21,7 @@ Gli ologrammi immessi resteranno nella posizione in cui sono stati inseriti, anc
 
 ## <a name="setting-up-an-environment"></a>Configurazione di un ambiente
 
-I dispositivi HoloLens sanno come collocare ologrammi stabili e accurati *monitorando* gli utenti in uno spazio. Senza un rilevamento appropriato, il dispositivo non riconosce l'ambiente o l'utente al suo interno. in questo modo gli ologrammi possono apparire in posizioni errate, non vengono visualizzati nello stesso punto ogni volta o non vengono visualizzati.
+I dispositivi HoloLens sanno come collocare ologrammi stabili e accurati *monitorando* gli utenti in uno spazio. Senza un rilevamento appropriato, il dispositivo non riconosce l'ambiente o l'utente al suo interno. in questo modo gli ologrammi possono apparire in posizioni errate, non vengono visualizzati nello stesso punto ogni volta o non vengono visualizzati. I dati utilizzati per tenere traccia degli utenti sono rappresentati nella *mappa spaziale*. 
 
 Il monitoraggio delle prestazioni è fortemente influenzato dall'ambiente in cui si trova l'utente e l'ottimizzazione di un ambiente per indurre un rilevamento stabile e coerente è un'arte piuttosto che una scienza. Molti fattori ambientali diversi sono Uniti per consentire il rilevamento, ma come sviluppatore di realtà mista, esistono diversi fattori che è possibile tenere presente per ottimizzare uno spazio per una migliore verifica.
  
@@ -51,14 +51,16 @@ Inoltre, utilizzare funzionalità esclusive nello stesso spazio. Lo stesso poste
 Una domanda da porsi è: se si è visto solo una piccola parte della scena, è possibile individuarla in modo univoco nello spazio? In caso contrario, è probabile che si verifichino problemi di rilevamento del dispositivo.
 
 #### <a name="wormholes"></a>Wormholes
-Se sono presenti due aree o aree con aspetto identico, lo strumento di rilevamento potrebbe pensare che siano uguali. In questo modo, il dispositivo si ingannerà a pensare che sia altrove. Questi tipi di aree temporali vengono denominati. 
+Se sono presenti due aree o aree con aspetto identico, lo strumento di rilevamento potrebbe pensare che siano uguali. In questo modo, il dispositivo si ingannerà a pensare che sia altrove. Questi tipi di aree temporali vengonodenominati. 
 
 Per evitare i wormhole, provare a impedire aree identiche nello stesso spazio. Le aree identiche possono talvolta includere stazioni Factory, Windows in una compilazione, rack server o stazioni di lavoro. L'assegnazione di etichette alle aree o l'aggiunta di funzionalità univoche a ogni area simile può contribuire a mitigare i tunnel.
  
-### <a name="temporal-stability-of-a-space"></a>Stabilità temporale di uno spazio
+### <a name="movement-in-a-space"></a>Spostamento in uno spazio
 Se l'ambiente viene costantemente spostato e modificato, il dispositivo non dispone di funzionalità stabili da individuare. 
 
 Maggiore è il numero di oggetti che si trovano in uno spazio, incluse le persone, più semplice è la perdita del rilevamento. Il trasferimento di nastri trasportatori, elementi in diversi Stati di costruzione e molte persone in uno spazio è stato noto a causare problemi di rilevamento.
+
+Il HoloLens può adattarsi rapidamente a queste modifiche, ma solo quando quest'area è chiaramente visibile al dispositivo. Le aree che non vengono visualizzate con frequenza possono ritardare la realtà, che può causare errori nella mappa spaziale. Un utente, ad esempio, analizza un amico e quindi si sposta mentre l'amico lascia la stanza. Una rappresentazione ' fantasma ' dell'elemento Friend verrà mantenute nei dati di mapping spaziale fino a quando l'utente non esegue nuovamente l'analisi dello spazio vuoto.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>Prossimità dell'utente agli elementi nello spazio
 Analogamente al modo in cui gli utenti non possono concentrarsi bene sugli oggetti vicini agli occhi, HoloLens lotte quando gli oggetti sono vicini alle fotocamere. Se un oggetto è troppo vicino per essere visualizzato con entrambe le fotocamere o se un oggetto blocca una fotocamera, il dispositivo presenta molti più problemi di rilevamento per l'oggetto. 
@@ -76,11 +78,7 @@ Se il Wi-Fi è abilitato, i dati della mappa saranno correlati con un'impronta d
 L'identificazione di rete (ad esempio, SSID, indirizzo MAC) non viene inviata a Microsoft e tutti i riferimenti Wi-Fi vengono mantenuti locali nella HoloLens.
 
 ## <a name="mapping-new-spaces"></a>Mapping di nuovi spazi
-Quando si immette un nuovo spazio (o se ne carica uno esistente), viene visualizzata una grafica mesh che si estende sullo spazio. Ciò significa che il dispositivo sta [eseguendo il mapping dell'ambiente](spatial-mapping-design.md). 
-
-Se si verificano problemi nel posizionamento degli ologrammi, provare a aggirare lo spazio in modo che HoloLens possa eseguirne il mapping più completamente. 
-
-Se il HoloLens non è in grado di eseguire il mapping dello spazio o non è disponibile, è possibile attivare la modalità Limited. In modalità limitata, non sarà possibile posizionare gli ologrammi nell'ambiente in uso.
+Quando si immette un nuovo spazio (o se ne carica uno esistente), viene visualizzata una grafica mesh che si estende sullo spazio. Ciò significa che il dispositivo sta eseguendo il mapping dell'ambiente. Mentre un HoloLens apprenderà uno spazio nel tempo, sono disponibili [suggerimenti e consigli per eseguire il mapping di spazi](use-hololens-in-new-spaces.md). 
 
 ## <a name="environment-management"></a>Gestione dell'ambiente
 Sono disponibili due impostazioni che consentono agli utenti di "pulire" gli ologrammi e causare a HoloLens di "dimenticare" uno spazio.  Sono presenti in "ologrammi e ambienti" nell'app Impostazioni, con la seconda impostazione visualizzata anche in "privacy" nell'app Impostazioni.
@@ -89,20 +87,14 @@ Sono disponibili due impostazioni che consentono agli utenti di "pulire" gli olo
 
 2.  Elimina tutti gli ologrammi: se si seleziona questa impostazione, HoloLens cancellerà tutti i dati della mappa e gli ologrammi ancorati nell'intero database di spazi.  Nessun ologramma verrà riindividuato ed è necessario posizionare di nuovo gli ologrammi per archiviare di nuovo le sezioni della mappa nel database.
 
-### <a name="managing-your-spaces"></a>Gestione degli spazi
-
-Le sezioni della mappa e gli spazi diversi sono stati compressi in un singolo database, archiviati localmente nel dispositivo HoloLens. Il database della mappa viene archiviato in modo sicuro, con accesso solo al sistema interno e mai a un utente del dispositivo, anche se collegato a un PC e/o usando l'app Esplora file. Quando BitLocker è abilitato, anche i dati della mappa archiviati vengono crittografati.
-
-Quando gli ologrammi vengono posizionati in posizioni diverse senza un percorso connettivo tra le posizioni o gli ologrammi, esistono più componenti della mappa.  Gli ologrammi ancorati all'interno della stessa sezione della mappa sono considerati "adiacenti" nello spazio corrente.
-
-È disponibile un'API per sviluppatori per esportare un piccolo subset dello "spazio corrente" (parte del componente mappa attualmente riconosciuto) per abilitare gli scenari con ologrammi condivisi.  Attualmente non è disponibile alcun meccanismo per scaricare l'intero database di tutti gli spazi di cui è stato eseguito il mapping.
-
 
 ## <a name="hologram-quality"></a>Qualità ologramma
 
 Gli ologrammi possono essere posizionati in tutto l'ambiente, ad alta, bassa e tutti gli elementi, ma sono visibili tramite un [frame olografico](holographic-frame.md) che si trova davanti agli occhi. Per ottenere la visualizzazione migliore, assicurarsi di modificare il dispositivo in modo che sia possibile visualizzare l'intero frame. E non esitare a esplorare l'ambiente ed esplorare.
 
 Affinché gli [ologrammi](hologram.md) risultino nitide, chiare e stabili, la HoloLens deve essere calibrata solo per l'utente. Quando si configura il HoloLens per la prima volta, verrà illustrato questo processo. In un secondo momento, se gli ologrammi non sembrano corretti o se vengono visualizzati numerosi errori, è possibile apportare modifiche.
+
+Se si verificano problemi durante il mapping degli spazi, provare a eliminare gli ologrammi vicini e a rimappare lo spazio.
 
 ### <a name="calibration"></a>Calibrazione
 
@@ -118,3 +110,4 @@ Se un altro utente sta usando il HoloLens, deve eseguire prima l'app di calibraz
 * [Progettazione del mapping spaziale](spatial-mapping-design.md)
 * [Ologrammi](hologram.md)
 * [Calibrazione](calibration.md)
+* [Usare Hololens in nuovi spazi](use-hololens-in-new-spaces.md)

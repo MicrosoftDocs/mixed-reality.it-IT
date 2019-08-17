@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione, gesto
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522467"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559882"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -120,6 +120,9 @@ Se si esegue la distribuzione in un auricolare immersivo:
 
 * Sottoscrivere gli eventi di rilevamento manuale.
 * Usare il feedback del cursore per visualizzare gli utenti quando viene tenuta traccia di una mano.
+
+>[!NOTE]
+>In HoloLens 2 sono state rilevate attivazioni ogni volta che le mani sono visibili, non solo quando un dito punta verso l'alto.
 
 ### <a name="instructions"></a>Istruzioni
 
@@ -316,7 +319,7 @@ Si noterà che gli altri eventi di navigazione sono già stati compilati con alc
 1. Nel pannello **gerarchia** selezionare l'oggetto **CursorWithFeedback** .
 2. Nel pannello **Inspector** fare clic sul pulsante **Add Component** .
 3. Nel menu digitare le **istruzioni**della casella di ricerca. Selezionare il risultato della ricerca.
-4. Nella cartella olografici  del pannello del **progetto** individuare l'asset **HandGuidanceFeedback** .
+4. Nella cartella olografici del pannello del **progetto** individuare l'asset **HandGuidanceFeedback** .
 5. Trascinare e rilasciare l'asset **HandGuidanceFeedback** sulla proprietà **indicatore della mano guida** nel pannello **Inspector** .
 
 ### <a name="build-and-deploy"></a>Compilazione e distribuzione
@@ -353,7 +356,7 @@ Ma veniamo al dunque.
 
 Verranno ora aggiunti i comandi vocali necessari per controllare lo stato di interazione dell'astronauta.
 
-1. Espandere la  sezione Keywords nel **controllo**.
+1. Espandere la sezione Keywords nel **controllo**.
 2. **+** Fare clic sul lato destro per aggiungere una nuova parola chiave.
 3. Digitare la parola chiave come **Move Astronaut**. Se lo si desidera, è possibile aggiungere un tasto di scelta rapida.
 4. **+** Fare clic sul lato destro per aggiungere una nuova parola chiave.
@@ -364,7 +367,7 @@ Verranno ora aggiunti i comandi vocali necessari per controllare lo stato di int
 
 Successivamente, verrà configurato il feedback di manipolazione sul cursore.
 
-1. Nella cartella olografici  del pannello del **progetto** individuare l'asset **PathingFeedback** .
+1. Nella cartella olografici del pannello del **progetto** individuare l'asset **PathingFeedback** .
 2. Trascinare e rilasciare la prefabbricazione **PathingFeedback** nell'oggetto **CursorWithFeedback** della **gerarchia**.
 3. Nel pannello **gerarchia** fare clic su **CursorWithFeedback**.
 4. Trascinare e rilasciare l'oggetto **PathingFeedback** dalla **gerarchia** alla proprietà dell' **oggetto del gioco rilevato nel percorso** nel componente **feedback del cursore** del **controllo**.
@@ -512,7 +515,7 @@ In questa sezione vengono eseguite le attività seguenti:
 
 A tale scopo, aggiungere altre due parole chiave all'origine di input vocale del capitolo precedente. Verrà inoltre illustrato un altro modo per gestire gli eventi di riconoscimento.
 
-1. Fare clic su Back on **AstronautManager** nel **controllo** ed espandere  la sezione Keywords nel **controllo**.
+1. Fare clic su Back on **AstronautManager** nel **controllo** ed espandere la sezione Keywords nel **controllo**.
 2. **+** Fare clic sul lato destro per aggiungere una nuova parola chiave.
 3. Digitare la parola chiave come **Espandi modello**. Se lo si desidera, è possibile aggiungere un tasto di scelta rapida.
 4. **+** Fare clic sul lato destro per aggiungere una nuova parola chiave.
@@ -521,10 +524,10 @@ A tale scopo, aggiungere altre due parole chiave all'origine di input vocale del
 7. Nel menu digitare il **gestore di input vocale**della casella di ricerca. Selezionare il risultato della ricerca.
 8. Il controllo **è un listener globale**, perché si vuole che questi comandi funzionino indipendentemente dal GameObject che si sta concentrando.
 9. Fare clic **+** sul pulsante e selezionare **Espandi modello** dall'elenco a discesa parola chiave.
-10. Fare clic su    in risposta e trascinare AstronautManager dalla gerarchia nel campo None **+** (Object).
+10. Fare clic su in risposta e trascinare AstronautManager dalla gerarchia nel campo None **+** (Object).
 11. A questo punto, fare clic sull'elenco a discesa **Nessuna funzione** , selezionare **AstronautManager**, quindi **ExpandModelCommand**.
 12. Fare clic sul pulsante del gestore **+** di input vocale e selezionare **Reimposta modello** dall'elenco a discesa parola chiave.
-13. Fare clic su    in risposta e trascinare AstronautManager dalla gerarchia nel campo None **+** (Object).
+13. Fare clic su in risposta e trascinare AstronautManager dalla gerarchia nel campo None **+** (Object).
 14. A questo punto, fare clic sull'elenco a discesa **Nessuna funzione** , selezionare **AstronautManager**, quindi **ResetModelCommand**.
 
 ![Come configurare l'origine e il gestore di input vocale per il capitolo 5](images/holograms211-speechhandler.png)

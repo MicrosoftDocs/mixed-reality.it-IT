@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: f45aa7e2f07a8a67cd56f0aae140de3a68afc918
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701986"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559895"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Creazione di un'applicazione di esempio del modulo Lunar
 
@@ -51,7 +51,7 @@ Se si espande l'oggetto gioco Rocket Launcher_Tutorial nella gerarchia e si espa
 
 > Nota: I nomi degli oggetti del gioco visualizzati nella gerarchia della scena di base non corrispondono ai nomi degli oggetti nella scena.
 
-Passaggio 2: aggiungi un'origine audio al modulo lunare. Verificare che il modulo Lunar sia selezionato nella gerarchia della scena di base e fare clic su Add Component. Cercare l'origine audio e aggiungerla all'oggetto. Per il momento lasciala vuota, verrà usata in un secondo momento per riprodurre il suono del lancio.
+Passaggio 2: aggiungi un'origine audio al modulo lunare. Verificare che il modulo Lunar sia selezionato nella gerarchia della scena di base e fare clic su Add Component. Cercare l'origine audio e aggiungerla all'oggetto. Lasciare vuoto il campo per il momento, ma assicurarsi di fare clic sulla casella di controllo "Spatialize" per abilitare l'audio spaziale. verrà usata in un secondo momento per riprodurre il suono del lancio.
 
  ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG)  
 Passaggio 3: Aggiungere lo script, impostare gli hint di selezione host. Fare clic su Aggiungi componente e cercare gli hint di selezione host. Si tratta di uno script personalizzato che consente di attivare e disattivare gli hint di traslucidi (oggetti con il materiale x-ray) indicati in precedenza.  
