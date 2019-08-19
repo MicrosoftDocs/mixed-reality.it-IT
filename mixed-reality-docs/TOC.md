@@ -22,6 +22,7 @@
 #### [Salvataggio e ricerca dei file](saving-and-finding-your-files.md)
 #### [Vedere le foto](see-your-photos.md)
 #### [Aggiornamento di HoloLens](updating-hololens.md)
+#### [Usare HoloLens in nuovi spazi](use-hololens-in-new-spaces.md)
 #### [Condivisione dei dispositivi](device-sharing.md)
 #### [Guida per indossare e pulire un dispositivo dimostrativo HoloLens](hololens-demo-guide.md)
 ### Visori VR immersive
