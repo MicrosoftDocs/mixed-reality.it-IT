@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: risoluzione dei problemi, problema noto, guida
-ms.openlocfilehash: 1ef9e9f411e16d2f604930f3146ede1d03d7c0f6
-ms.sourcegitcommit: c36b8c8573f51afa79504c4a17084e4f55d2f664
+ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
+ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67789483"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887262"
 ---
 # <a name="hololens-known-issues"></a>Problemi noti di HoloLens
 
@@ -20,11 +20,11 @@ Si tratta dell'elenco corrente di problemi noti relativi a HoloLens che interess
 ## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Non è possibile connettersi e distribuire in HoloLens tramite Visual Studio
 
 >[!NOTE]
->Ultimo aggiornamento: 7/8 @ 7:25PM-il team ha identificato la causa principale e sta attualmente lavorando alla correzione. Soluzione alternativa disponibile di seguito. 
+>Ultimo aggiornamento: 8/8 @ 5:23.00-Visual Studio ha rilasciato VS 2019 versione 16,2, che include una correzione per questo problema. Per evitare di riscontrare questo errore, è consigliabile eseguire l'aggiornamento alla versione più recente.
 
-È stato possibile identificare la causa principale di questo problema. Gli utenti che hanno usato Visual Studio 2015 o le versioni precedenti di Visual Studio 2017 per distribuire ed eseguire il debug delle applicazioni nella HoloLens e successivamente hanno usato le versioni più recenti di Visual Studio 2017 o Visual Studio 2019 con lo stesso HoloLens saranno interessati. 
+Visual Studio ha rilasciato VS 2019 versione 16,2, che include una correzione per questo problema. Per evitare di riscontrare questo errore, è consigliabile eseguire l'aggiornamento alla versione più recente.
 
-Le versioni più recenti di Visual Studio distribuiscono una nuova versione di un componente, ma i file della versione precedente vengono lasciati nel dispositivo, causando la mancata riuscita della versione più recente.  Viene generato il messaggio di errore seguente: DEP0100: Assicurarsi che la modalità sviluppatore del dispositivo di destinazione sia abilitata. Non è stato possibile ottenere una licenza <ip> per sviluppatori a causa dell'errore 80004005.
+Causa radice del problema: Gli utenti che hanno usato Visual Studio 2015 o le versioni precedenti di Visual Studio 2017 per distribuire ed eseguire il debug delle applicazioni nella HoloLens e successivamente hanno usato le versioni più recenti di Visual Studio 2017 o Visual Studio 2019 con lo stesso HoloLens saranno interessati. Le versioni più recenti di Visual Studio distribuiscono una nuova versione di un componente, ma i file della versione precedente vengono lasciati nel dispositivo, causando la mancata riuscita della versione più recente.  Viene generato il messaggio di errore seguente: DEP0100: Assicurarsi che la modalità sviluppatore del dispositivo di destinazione sia abilitata. Non è stato possibile ottenere una licenza <ip> per sviluppatori a causa dell'errore 80004005.
  
 **Soluzione temporanea**: 
 
@@ -153,6 +153,6 @@ Si consiglia di usare una tastiera Bluetooth per l'immissione di password lunghe
 * Se l'applicazione imposta il [punto di messa a fuoco](focus-point-in-unity.md) dietro l'utente o il normale alla fotocamera. in futuro, gli ologrammi non verranno visualizzati in foto o video di acquisizione realtà mista. Fino a quando questo bug non viene risolto in Windows, se le applicazioni attivano attivamente il [punto di messa a fuoco](focus-point-in-unity.md) , è necessario assicurarsi che la normale del piano sia impostata in modo opposto rispetto alla fotocamera, ad esempio Normal =-camera. Inoltr.
 
 ## <a name="xbox-wireless-controller"></a>Controller wireless Xbox
-* È necessario aggiornare i controller wireless Xbox prima di poterli usare con HoloLens. Assicurarsi [di essere aggiornati](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) prima di tentare di associare il controller a un HoloLens.
+* È necessario aggiornare i controller wireless Xbox prima di poterli usare con HoloLens. Assicurarsi di essere [aggiornati](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) prima di tentare di associare il controller a un HoloLens.
 * Se si riavvia il HoloLens mentre il controller wireless Xbox è connesso, il controller non si riconnetterà automaticamente a HoloLens. La luce del pulsante della guida lampeggerà lentamente fino a quando il controller non si spegne dopo 3 minuti. Per riconnettere immediatamente il controller, spegnere il controller tenendo premuto il pulsante della guida fino a quando la luce non si spegne. Quando si accende nuovamente il controller, questo si riconnetterà a HoloLens.
 * Se il HoloLens entra in standby mentre il controller wireless Xbox è connesso, qualsiasi input sul controller riattiverà il HoloLens. È possibile evitare questo problema spegnendo il controller al termine dell'uso.
