@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
+ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702041"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629178"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Creazione dell'interfaccia utente e configurazione del Toolkit per realtà mista 
 
@@ -34,7 +34,7 @@ In questa sezione si apprenderà come personalizzare e configurare i profili MRT
 
 >Nota: per impostazione predefinita, i profili di MRTK non sono modificabili. Si tratta di modelli di profilo predefiniti che è possibile copiare e personalizzare. Sono disponibili diversi livelli di personalizzazione e profili. È quindi consigliabile copiare e personalizzare diversi profili quando si configurano una o più impostazioni.
 >
->Per altre informazioni sui profili MRTK e la relativa architettura, vedere la [documentazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
+>Per altre informazioni sui profili MRTK e la relativa architettura, vedere la [documentazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
 2. Crea una copia del profilo predefinito per personalizzarlo. Per copiare un profilo predefinito, fare clic su copia & Personalizza (vedere l'immagine). In questo modo viene creata una copia del profilo di MRTK. Con la tua copia del profilo di MRTK, puoi ora personalizzare le impostazioni del profilo. Sarà inoltre necessario ripetere il passaggio copia e personalizzazione per tutti i profili aggiuntivi nidificati sotto questo profilo, come descritto nei passaggi successivi.
 
