@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: risoluzione dei problemi, problema noto, guida
-ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
-ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
+ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896540"
 ---
 # <a name="hololens-known-issues"></a>Problemi noti di HoloLens
 
@@ -127,6 +127,9 @@ Ci rendiamo conto della pazienza del processo di risoluzione di questo problema 
 Durante le impostazioni di & OOBE, il timeout delle credenziali è di 2 minuti. Il nome utente e la password devono essere immessi entro 2 minuti, altrimenti il campo nome utente verrà cancellato automaticamente.
 
 Si consiglia di usare una tastiera Bluetooth per l'immissione di password lunghe.
+
+>[!NOTE]
+> Se durante la configurazione guidata viene selezionata la rete errata, il dispositivo dovrà essere reimpostato completamente. Le istruzioni sono disponibili [qui.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>Aggiornamento del dispositivo
 * 30 secondi dopo un nuovo aggiornamento, la shell può scomparire una sola volta. Per riprendere la sessione, eseguire il movimento **Bloom** .

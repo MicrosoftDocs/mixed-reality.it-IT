@@ -1,17 +1,17 @@
 ---
 title: 'Case Study: ricerca di più personal computing'
 description: Le opportunità di domani sono ora disponibili per la creazione di prodotti. Le soluzioni fornite da questi prodotti rivelano ciò che è necessario per far progredire il futuro.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, case study, visione, scenari
-ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896528"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Case Study: ricerca di più personal computing
 

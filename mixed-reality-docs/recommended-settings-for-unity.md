@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 395363cb99fd7e9e61adbea8ebc341aab50755e0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896531"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -25,7 +25,7 @@ Unity offre un set di opzioni predefinite che in genere corrispondono al caso me
 
 In Unity 2018 LTS +, il livello di qualità del progetto può essere impostato:
 
-In **modifica** >  **Impostazioni**   progetto qualità > impostare il valore predefinito facendo clic sulla freccia verso il basso fino al livello di qualità molto basso. > 
+In **modifica** >  **Impostazioni** progetto qualità > impostare il valore predefinito facendo clic sulla freccia verso il basso fino al livello di qualità molto basso. > 
 
 ### <a name="lighting-settings"></a>Impostazioni di illuminazione
 
@@ -67,12 +67,12 @@ Si consiglia inoltre di selezionare la **profondità a 16 bit** nell'impostazion
 
 Per ottimizzare la stabilità dell'ologramma, la piattaforma per la realtà mista di Windows si basa sul buffer di profondità, che corrisponde a tutti gli ologrammi sottoposti a rendering sullo schermo. Quindi, con la condivisione del buffer di profondità in, è importante quando si esegue il rendering del colore, anche per il rendering della profondità. In Unity, la maggior parte dei materiali opachi o TransparentCutout eseguirà il rendering per impostazione predefinita, ma gli oggetti trasparenti e di testo non eseguiranno in genere il rendering della profondità anche se si tratta di uno shader dipendente 
 
-Se si usa il Toolkit di realtà misto standard shader, per eseguire il rendering della profondità per gli oggetti trasparenti:
+Se si usa il [Toolkit di realtà misto standard shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), per eseguire il rendering della profondità per gli oggetti trasparenti:
 1) Selezionare il materiale tranparent che usa lo shader standard MRTK e aprire la finestra Editor di controllo
-2) Impostare **la modalità di rendering** su **personalizzato** , quindi impostare la **modalità** su **trasparente** e infine impostare **profondità scrittura** **su su**
+2) Selezionare il pulsante **Correggi ora** nell'avviso di condivisione del buffer di profondità. Questa operazione può essere eseguita anche manualmente impostando **la modalità di rendering** su **personalizzata** e impostando la **modalità** su **trasparente** e infine impostando **Depth Write** **su on**
 
 >[!NOTE]
-> Gli sviluppatori devono prestare attenzione alla lotta Z quando cambiano questi valori insieme alle impostazioni del piano vicino/lontano della fotocamera. Il combattimento Z si verifica quando due GameObject tentano di eseguire il rendering nello stesso pixel e a causa delle limitazioni della fedeltà del buffer di profondità (ovvero z depth), Unity non è in grado di distinguere l'oggetto che è davanti all'altro. Gli sviluppatori noteranno uno sfarfallio tra due oggetti del gioco  mentre combattono per lo stesso valore di profondità z. Questo problema può essere risolto passando a un formato di profondità a 24 bit, perché sarà disponibile un intervallo più ampio di valori per ogni oggetto da calcolare per la profondità z dalla fotocamera.
+> Gli sviluppatori devono prestare attenzione alla lotta Z quando cambiano questi valori insieme alle impostazioni del piano vicino/lontano della fotocamera. Il combattimento Z si verifica quando due GameObject tentano di eseguire il rendering nello stesso pixel e a causa delle limitazioni della fedeltà del buffer di profondità (ovvero z depth), Unity non è in grado di distinguere l'oggetto che è davanti all'altro. Gli sviluppatori noteranno uno sfarfallio tra due oggetti del gioco mentre combattono per lo stesso valore di profondità z. Questo problema può essere risolto passando a un formato di profondità a 24 bit, perché sarà disponibile un intervallo più ampio di valori per ogni oggetto da calcolare per la profondità z dalla fotocamera.
 >
 > Tuttavia, è consigliabile, in particolare per lo sviluppo di Hololens, modificare invece i piani vicini e lontani della fotocamera in un intervallo più piccolo e mantenere il formato di profondità a 16 bit. La profondità z è mappata in modo non lineare all'intervallo di valori lungo i piani della fotocamera vicini e lontani. Questo può essere modificato selezionando la *fotocamera principale* nella scena e sotto **controllo**, modificare i valori del piano di **ritaglio vicino & lontano** per ridurne l'intervallo (ad esempio da 1.000 a 100 milioni o altro valore x e così via)
 
@@ -150,7 +150,7 @@ Per fare in modo che un'app sfrutti i vantaggi di determinate funzionalità, dev
 Le funzionalità applicabili per l'abilitazione delle API di uso comune per le app olografiche sono:
 <br>
 
-|  Capability  |  API che richiedono funzionalità |
+|  Capacità  |  API che richiedono funzionalità |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver | 
 |  WebCam  |  Acquisizione e VideoCapture | 

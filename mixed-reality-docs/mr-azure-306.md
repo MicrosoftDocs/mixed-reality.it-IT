@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, servizi multimediali, streaming video, 360, immersiva, VR
-ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896579"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -148,7 +148,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
 
     6.  Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    7.  Fare clic su **Crea**.
+    7.  Fare clic su **Create**(Crea).
 
         ![Portale di Azure](images/AzureLabs-Lab6-08.png)
 
@@ -226,7 +226,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
 
     ![Portale di Azure](images/AzureLabs-Lab6-21.png)
 
-20. Si noterà un video insieme a un altro, che è impostato su **Asset di tipo *a più Bitrate MP4***.
+20. Il video verrà visualizzato insieme a un altro, che è di **tipo asset con _MP4 a bitrate multipli_** .
 
     ![Portale di Azure](images/AzureLabs-Lab6-22.png)
 
@@ -625,9 +625,9 @@ Per creare questa classe:
 
 1.  Passare alla cartella **Scripts** creata in precedenza.
 
-2.  Fare doppio clic nella **Project** Pannello di **creare* *C\# Script**. Denominare **lo script.**
+2.  Fare doppio clic nella **Project** Pannello di **creare* *C\# Script**. Denominarelo script.
 
-3.  Fare doppio clic ***sul nuovo script*** per aprirlo con **Visual Studio 2017.**
+3.  Fare doppio clic sul nuovo script per aprirlo con **Visual Studio 2017.**
 
 4.  Verificare che lo spazio dei nomi seguente si trovi nella parte superiore dello script e rimuovere gli altri:
 

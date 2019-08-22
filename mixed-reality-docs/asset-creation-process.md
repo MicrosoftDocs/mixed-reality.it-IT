@@ -1,17 +1,17 @@
 ---
 title: Processo di creazione dell'asset
 description: Linee guida per la creazione di asset per esperienze di realtà miste.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Asset, creazione, processo, Budget, poligoni, trame, shader, prestazioni
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692295"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896500"
 ---
 # <a name="asset-creation-process"></a>Processo di creazione dell'asset
 
@@ -60,7 +60,7 @@ Di seguito è riportato un budget di esempio per la propria esperienza. Le prest
 
 **Complessità degli asset**
 * Quanti triangoli/poligoni?
-* Quanto è complesso lo shader?
+* Quanto è complesso lo shader? Quando si usa il Toolkit per la realtà mista, è consigliabile usare lo [shader standard del Toolkit di realtà misto](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) per ridurre la complessità dello shader.
 
 Gli sviluppatori e gli artisti devono prendere in considerazione le funzionalità del dispositivo e del motore di grafica. Microsoft HoloLens ha tutto il calcolo e la grafica integrati nel dispositivo. Condivide le funzionalità che gli sviluppatori troveranno in una piattaforma mobile.
 

@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, colore, luce, materiali
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526494"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896513"
 ---
 # <a name="color-light-and-materials"></a>Colore, luce e materiali
 
@@ -28,7 +28,7 @@ Per testare le esperienze olografiche in un auricolare olografico, è necessario
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Nozioni fondamentali sul rendering nei dispositivi olografici
 * I **dispositivi olografici hanno visualizzazioni additive** : gli ologrammi vengono creati aggiungendo luce alla luce dal mondo reale. il bianco verrà visualizzato con luminosità, mentre il nero verrà visualizzato come trasparente.
 * **L'impatto sui colori varia a seconda dell'ambiente dell'utente. le** varie condizioni di illuminazione sono disponibili nella stanza di un utente. Consente di creare contenuti con livelli di contrasto appropriati per una maggiore chiarezza.
-* **Evitare l'illuminazione dinamica** : gli ologrammi illuminati in modo uniforme nelle esperienze olografiche sono i più efficienti. L'uso di un'illuminazione dinamica avanzata può probabilmente superare le funzionalità degli shader per dispositivi mobili.
+* **Evitare l'illuminazione dinamica** : gli ologrammi illuminati in modo uniforme nelle esperienze olografiche sono i più efficienti. L'uso di un'illuminazione dinamica avanzata può probabilmente superare le funzionalità dei dispositivi mobili. Quando è richiesta l'illuminazione dinamica, è consigliabile usare lo [shader di Mixed Reality Toolkit standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
 
 ## <a name="designing-with-color"></a>Progettazione con colore
 
