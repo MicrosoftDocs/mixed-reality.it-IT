@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, visione artificiale, hololens, immersiva, VR, Microsoft bot Framework V4, bot per app Web, bot Framework, Microsoft bot
-ms.openlocfilehash: b828aa4415103d280459bd2c666004c994b3e59d
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 481693b5af8c946e1cb45dda5144e78a175fa771
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63542859"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047235"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -66,7 +66,7 @@ Per questo corso è consigliabile usare i componenti hardware e software seguent
 2.  Configurare e testare il HoloLens. Se è necessario supporto per la configurazione di HoloLens, [vedere l'articolo relativo alla configurazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la taratura e l'ottimizzazione dei sensori, a volte può essere utile per eseguire queste attività per ogni utente. 
 
-Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens).
+Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens-2).
 
 Per informazioni sull'ottimizzazione dei sensori, seguire questo [collegamento all'articolo relativo all'ottimizzazione del sensore HoloLens](sensor-tuning.md).
 
@@ -374,7 +374,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
         
             ![Configurare il progetto Unity](images/AzureLabs-Lab312-24.png)
 
-        2. Creare una nuova cartella per questo e per eventuali scenari futuri, quindi selezionare il pulsante **nuova cartella** per creare una nuova cartella **, assegnarle**un nome.
+        2. Creare una nuova cartella per questo e per eventuali scenari futuri, quindi selezionare il pulsante **nuova cartella** per creare una nuova cartella, assegnarle un nome.
 
              ![Configurare il progetto Unity](images/AzureLabs-Lab312-25.png)
 
@@ -417,7 +417,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 ## <a name="chapter-5--camera-setup"></a>Capitolo 5-configurazione della fotocamera
 
 > [!IMPORTANT]
-> Se si vuole ignorare il componente di *configurazione* di Unity di questo corso e continuare direttamente con il codice, è possibile scaricare questo [Azure-Mr-312-Package. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), importarlo nel progetto come [**pacchetto personalizzato**](https://docs.unity3d.com/Manual/AssetPackages.html)e continuare da [ Capitolo 7](#chapter-7-–-create-the-botobjects-class).
+> Se si vuole ignorare il componente di *configurazione* di Unity di questo corso e continuare direttamente con il codice, è possibile scaricare questo [Azure-Mr-312-Package. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), importarlo nel progetto come [**pacchetto personalizzato**](https://docs.unity3d.com/Manual/AssetPackages.html)e continuare da [ Capitolo 7](#chapter-8--create-the-botobjects-class).
 
 1.  Nel *Pannello gerarchia*selezionare la **fotocamera principale**. 
 2.  Una volta selezionato, sarà possibile visualizzare tutti i componenti della **fotocamera principale** nel *Pannello di controllo*.
@@ -1229,7 +1229,7 @@ Per creare questa classe:
 Per eseguire un test completo dell'applicazione, è necessario sideload nel HoloLens.
 Prima di procedere, verificare quanto segue:
 
--   Tutte le impostazioni indicate nel [**capitolo 4**](#Chapter-4-–-Set-up-the-unity-project) sono impostate correttamente. 
+-   Tutte le impostazioni indicate nel [**capitolo 4**](#chapter-4--set-up-the-unity-project) sono impostate correttamente. 
 -   Lo script **SceneOrganiser** è associato all'oggetto **principale della fotocamera** . 
 -   Nella classe **bot** verificare di aver inserito la **chiave privata bot** nella variabile **botSecret** .
 

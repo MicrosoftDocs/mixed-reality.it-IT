@@ -6,15 +6,15 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibrazione, comodità, oggetti visivi, qualità, dpi
-ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979486"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047050"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Migliorare la qualità visiva e la comodità
-Gli auricolari HoloLens, HoloLens 2 e Windows Mixed Reality immersive offrono diversi modi per migliorare la qualità dell'esperienza visiva. 
+HoloLens, HoloLens 2 e gli auricolari a realtà mista di Windows offrono diversi modi per migliorare la qualità dell'esperienza visiva. 
 
 ## <a name="hololens-2"></a>Hololens 2
 
@@ -52,12 +52,12 @@ Se sono state seguite tutte le linee guida e la taratura è ancora in errore, è
 3. **Impostazioni**di avvio.
 4. Passare alla calibrazione**degli occhi** di**calibrazione** > del **sistema** > e selezionare **Esegui calibrazione occhio**.
 
-### <a name="calibration-when-sharing-a-device--session"></a>Calibrazione durante la condivisione di un dispositivo/sessione
+### <a name="calibration-when-sharing-a-devicesession"></a>Calibrazione durante la condivisione di un dispositivo/sessione
 
 Hololens 2 può essere condiviso tra le persone, senza dover eseguire l'installazione del dispositivo. Hololens 2 richiede all'utente di calibrare gli oggetti visivi quando il dispositivo viene messo in testa se l'utente è nuovo del dispositivo. Se l'utente ha precedentemente calibrato gli oggetti visivi nel dispositivo, la visualizzazione verrà regolata facilmente per la qualità e un'esperienza di visualizzazione comoda quando l'utente inserisce il dispositivo in testa. 
 
 
-## <a name="hololens"></a>Hololens
+## <a name="hololens-v1"></a>Hololens (V1)
 
 La calibratura del dpi (interpupillare distance) può migliorare la qualità degli oggetti visivi.
 

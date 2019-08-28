@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, visione personalizzata, hololens, immersiva, VR
-ms.openlocfilehash: e6e9782a8d559af660dc4765556f1e926c5360b1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63553909"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047214"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -72,7 +72,7 @@ Per questo corso è consigliabile usare i componenti hardware e software seguent
 2.  Configurare e testare il HoloLens. Se è necessario supporto per la configurazione di HoloLens, [vedere l'articolo relativo alla configurazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la taratura e l'ottimizzazione dei sensori, a volte può essere utile per eseguire queste attività per ogni utente. 
 
-Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens).
+Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens-2).
 
 Per informazioni sull'ottimizzazione dei sensori, seguire questo [collegamento all'articolo relativo all'ottimizzazione del sensore HoloLens](sensor-tuning.md).
 
@@ -93,7 +93,7 @@ Per usare il *servizio visione artificiale personalizzato* in Azure, sarà neces
     > [!NOTE]
     > Se non si dispone già di un account Azure, sarà necessario crearne uno. Se si segue questa esercitazione in una classe o in una situazione di laboratorio, rivolgersi all'insegnante o a uno dei Proctor per ottenere assistenza nella configurazione del nuovo account.
 
-4.  Una volta effettuato l'accesso per la prima volta, verrà visualizzato il pannello *condizioni del servizio* . Fare clic sulla casella di controllo per accettare le condizioni. Quindi **, fare**clic su Accetto.
+4.  Una volta effettuato l'accesso per la prima volta, verrà visualizzato il pannello *condizioni del servizio* . Fare clic sulla casella di controllo per accettare le condizioni. Quindi, fareclic su Accetto.
 
     ![](images/AzureLabs-Lab302b-03.png)
 
@@ -165,13 +165,13 @@ Per eseguire il training del progetto Servizio visione artificiale personalizzat
     ![](images/AzureLabs-Lab302b-13.png)
 
     > [!NOTE] 
-    > L'URL dell'endpoint fornito da questo oggetto è impostato su qualsiasi *iterazione* contrassegnata come predefinita. Di conseguenza, se in un secondo momento si  crea una nuova iterazione e la si aggiorna come predefinita, non sarà necessario modificare il codice.
+    > L'URL dell'endpoint fornito da questo oggetto è impostato su qualsiasi *iterazione* contrassegnata come predefinita. Di conseguenza, se in un secondo momento si crea una nuova iterazione e la si aggiorna come predefinita, non sarà necessario modificare il codice.
 
 11. Una volta fatto clic su *URL stima*, aprire *blocco note*e copiare e incollare l' **URL** e la chiave di **stima**, in modo da poterlo recuperare quando necessario in un secondo momento nel codice.
 
     ![](images/AzureLabs-Lab302b-14.png)
 
-12. Fare clic sull'  ingranaggio nella parte superiore destra della schermata.
+12. Fare clic sull' ingranaggio nella parte superiore destra della schermata.
 
     ![](images/AzureLabs-Lab302b-15.png)
 
@@ -219,7 +219,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 
             ![](images/AzureLabs-Lab302b-21.png)
 
-        2. Creare una nuova cartella per questo e per eventuali scenari futuri, quindi selezionare il pulsante **nuova cartella** per creare una nuova cartella **, assegnarle**un nome.
+        2. Creare una nuova cartella per questo e per eventuali scenari futuri, quindi selezionare il pulsante **nuova cartella** per creare una nuova cartella, assegnarle un nome.
 
             ![](images/AzureLabs-Lab302b-22.png)
 
@@ -227,7 +227,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 
             ![](images/AzureLabs-Lab302b-23.png)
 
-            > Tenere presente che è necessario salvare le scene Unity all'  interno della cartella assets, in quanto devono essere associate al progetto Unity. La creazione della cartella scenes (e di altre cartelle simili) è un modo tipico per strutturare un progetto Unity.
+            > Tenere presente che è necessario salvare le scene Unity all' interno della cartella assets, in quanto devono essere associate al progetto Unity. La creazione della cartella scenes (e di altre cartelle simili) è un modo tipico per strutturare un progetto Unity.
             
     7.  Le impostazioni rimanenti, nelle *impostazioni di compilazione*, devono essere lasciate come predefinite per il momento.
 
@@ -296,7 +296,7 @@ Per importare la libreria Newtonsoft nel progetto, usare il pacchetto Unity forn
     > Contrassegnando questi plug-in, questi vengono configurati per essere usati solo nell'editor di Unity. Nella cartella WSA è presente un set diverso che verrà usato dopo l'esportazione del progetto da Unity.
 
 6.  Successivamente, è necessario aprire la cartella **WSA** , all'interno della cartella **Newtonsoft** . Viene visualizzata una copia dello stesso file appena configurato. Selezionare il file e quindi nel controllo verificare che
-    -   **Qualsiasi piattaforma** è  deselezionata 
+    -   **Qualsiasi piattaforma** è deselezionata 
     -   **solo** **WSAPlayer** è **selezionato**
     -   Il **processo** non è **selezionato**
 
@@ -473,7 +473,7 @@ Questo script contiene una serie di oggetti utilizzati da altre classi per seria
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *CustomVisionObjects*.
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *CustomVisionObjects*.
 
 2.  Fare doppio clic sul nuovo script **CustomVisionObjects** per aprirlo con **Visual Studio**.
 
@@ -610,7 +610,7 @@ Questa classe riconoscerà l'input vocale dall'utente.
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *VoiceRecognizer*.
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *VoiceRecognizer*.
 
 2.  Fare doppio clic sul nuovo script **VoiceRecognizer** per aprirlo con **Visual Studio**.
 
@@ -718,7 +718,7 @@ Questa classe condurrà una serie di chiamate web per il training del *servizio 
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *CustomVisionTrainer*.
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script *CustomVisionTrainer*.
 
 2.  Fare doppio clic sul nuovo script *CustomVisionTrainer* per aprirlo con **Visual Studio**.
 
@@ -781,7 +781,7 @@ Per creare questa classe:
     ```
 
     > [!IMPORTANT]
-    > Assicurarsi di aggiungere il valore della **chiave del servizio** (chiave di training) e il valore dell' **ID progetto** , annotato in precedenza; Questi sono i valori [raccolti dal portale in precedenza nel corso (capitolo 2, passaggio 10 e versioni successive)](#chapter-2---training-your-custom-vision-oroject).
+    > Assicurarsi di aggiungere il valore della **chiave del servizio** (chiave di training) e il valore dell' **ID progetto** , annotato in precedenza; Questi sono i valori [raccolti dal portale in precedenza nel corso (capitolo 2, passaggio 10 e versioni successive)](#chapter-2---training-your-custom-vision-project).
 
 5.  Aggiungere i seguenti metodi **Start ()** e **sveglie ()** . Questi metodi vengono chiamati all'inizializzazione e contengono la chiamata per configurare l'interfaccia utente:
 
@@ -905,7 +905,7 @@ Per creare questa classe:
         }
     ```
 
-10. Aggiungere il metodo **TrainCustomVisionProject ()** . Una volta che l'immagine è stata inviata e contrassegnata, questo metodo verrà chiamato. Verrà creata una nuova iterazione che verrà sottoposta a training con tutte le immagini precedenti inviate al servizio più l'immagine appena caricata. Una volta completato il training, questo metodo chiamerà un metodo per impostare l'iterazione appena creata  come **predefinita**, in modo che l'endpoint usato per l'analisi sia l'iterazione con training più recente.
+10. Aggiungere il metodo **TrainCustomVisionProject ()** . Una volta che l'immagine è stata inviata e contrassegnata, questo metodo verrà chiamato. Verrà creata una nuova iterazione che verrà sottoposta a training con tutte le immagini precedenti inviate al servizio più l'immagine appena caricata. Una volta completato il training, questo metodo chiamerà un metodo per impostare l'iterazione appena creata come **predefinita**, in modo che l'endpoint usato per l'analisi sia l'iterazione con training più recente.
 
     ```csharp
         /// <summary>
@@ -1079,7 +1079,7 @@ Questa classe:
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Denominare lo script *SceneOrganiser*.
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Denominare lo script *SceneOrganiser*.
 
 2.  Fare doppio clic sul nuovo script *SceneOrganiser* per aprirlo con **Visual Studio**.
 

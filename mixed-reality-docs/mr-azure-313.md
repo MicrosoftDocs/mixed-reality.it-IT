@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realtà mista, Academy, Edge, Internet delle cose, esercitazione, API, notifiche, funzioni, tabelle, hololens, immersive, VR, Internet delle cose, macchina virtuale, Ubuntu, Python
-ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694593"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047246"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -82,9 +82,9 @@ Sono necessari i componenti hardware e software seguenti:
 ### <a name="before-you-start"></a>Prima di iniziare
 
 1. Configurare e testare il HoloLens. Se è necessario supporto per la configurazione di HoloLens, [vedere l'articolo relativo alla configurazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup).
-2. Quando si inizia a sviluppare una nuova  app HoloLens, è consigliabile eseguire la taratura e l' **ottimizzazione dei sensori** , a volte può essere utile per eseguire queste attività per ogni utente.
+2. Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la taratura e l' **ottimizzazione dei sensori** , a volte può essere utile per eseguire queste attività per ogni utente.
 
-Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens).
+Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens-2).
 
 Per informazioni sull'ottimizzazione dei sensori, seguire questo [collegamento all'articolo relativo all'ottimizzazione del sensore HoloLens](sensor-tuning.md).
 
@@ -776,7 +776,7 @@ Si creerà quindi la cartella *images* usata dallo script Python per verificare 
 
 9. Per visualizzare i messaggi inviati dal dispositivo all'hub Internet, fare di nuovo clic con il pulsante destro del mouse sul nome del dispositivo nella sezione **dispositivi dell'hub Azure** Internet Explorer, nel pannello di **esplorazione** e fare clic su Avvia il **monitoraggio del messaggio D2C**. I messaggi inviati dal dispositivo verranno visualizzati nel terminale di Visual Studio. Essere paziente, perché questa operazione potrebbe richiedere del tempo. Vedere il capitolo successivo per il debug e verificare se la distribuzione è stata completata correttamente.
 
-Questo modulo consente ora di eseguire un'iterazione tra  le immagini nella cartella images e di analizzarle, con ogni iterazione. Questo è ovviamente solo una dimostrazione di come ottenere il modello di apprendimento automatico di base per il funzionamento in un ambiente IoT Edge dispositivo. 
+Questo modulo consente ora di eseguire un'iterazione tra le immagini nella cartella images e di analizzarle, con ogni iterazione. Questo è ovviamente solo una dimostrazione di come ottenere il modello di apprendimento automatico di base per il funzionamento in un ambiente IoT Edge dispositivo. 
 
 Per espandere la funzionalità di questo esempio, è possibile procedere in diversi modi. Un modo potrebbe includere il codice nel contenitore, che acquisisce le foto da una webcam connessa al dispositivo e salva le immagini nella cartella immagini. 
 
@@ -874,7 +874,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
     10. Lasciare le **reti virtuali** **disabilitate**, se questa è un'opzione.
 
-    11. Fare clic su **Crea**.
+    11. Fare clic su **Create**(Crea).
 
         ![specificare i dettagli di archiviazione](images/AzureLabs-Lab313-37.png)
 
@@ -890,7 +890,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
 9. Nella pagina Panoramica fare clic su **tabelle**sul lato destro.
     
-    ![Tabelle](images/AzureLabs-Lab313-40.png)
+    ![tabelle](images/AzureLabs-Lab313-40.png)
 
 10. Il pannello a destra cambierà in modo da visualizzare le informazioni sul **servizio tabelle** , in cui è necessario aggiungere una nuova tabella. A tale scopo, fare clic sul pulsante **+ tabella** nell'angolo superiore sinistro.
 
@@ -1023,7 +1023,7 @@ In primo luogo, è necessario creare un file che consentirà alla funzione di Az
 
     9. Non sarà necessario *Application Insights* in questa app, quindi è possibile lasciarla disattivata.
 
-    10. Fare clic su **Crea**.
+    10. Fare clic su **Create**(Crea).
 
         ![Crea nuova istanza](images/AzureLabs-Lab313-55.png)
 

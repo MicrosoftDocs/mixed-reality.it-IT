@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 keywords: Rilevamento degli occhi, realtà mista, input, sguardo oculare, sguardi occhi
-ms.openlocfilehash: c847f7de2cf4492c89225a88aeaf189f51cfbc40
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 6c51e1cdc2057142f47b6f96e8a1f1aec0bbcc17
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387601"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047100"
 ---
 # <a name="eye-gaze-on-hololens-2"></a>Eye-sguardi su HoloLens 2
 HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative agli utenti che stanno esaminando. Questa pagina indica agli sviluppatori come possono trarre vantaggio dal monitoraggio degli sguardi per diversi casi d'uso, nonché da cosa cercare quando si progettano interfacce utente basate sull'occhio. 
@@ -47,14 +47,14 @@ Tenere presente che il Toolkit per la [realtà mista](https://microsoft.github.i
 ### <a name="user-intent"></a>Intenzione dell'utente    
 Le informazioni su dove e cosa esamina un utente forniscono un **contesto potente per altri input**, ad esempio Voice, Hands e Controllers.
 Tali informazioni possono essere usate per diverse attività.
-Questo, ad esempio, può variare da un punto di  vista rapido e semplice a quello della scena, semplicemente esaminando un ologramma e affermando "Select" (vedere anche lo [sguardo e il commit](gaze-and-commit.md)) o dicendo "put this...", quindi esaminando il percorso in cui l'utente desidera inserire l'ologramma e pronunciare "... ". Per alcuni esempi, vedi [Mixed Reality Toolkit - Selezione della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Mixed Reality Toolkit - Posizionamento della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Questo, ad esempio, può variare da un punto di vista rapido e semplice a quello della scena, semplicemente esaminando un ologramma e affermando "Select" (vedere anche lo [sguardo e il commit](gaze-and-commit.md)) o dicendo "put this...", quindi esaminando il percorso in cui l'utente desidera inserire l'ologramma e pronunciare "... ". Per alcuni esempi, vedi [Mixed Reality Toolkit - Selezione della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Mixed Reality Toolkit - Posizionamento della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
 Inoltre, un esempio per finalità utente potrebbe includere l'uso di informazioni sugli elementi esaminati dagli utenti per migliorare l'engagement con agenti virtuali incorporati e ologrammi interattivi. Ad esempio, gli agenti virtuali potrebbero adattare le opzioni disponibili e il relativo comportamento in base al contenuto attualmente visualizzato. 
 
 ### <a name="implicit-actions"></a>Azioni implicite
 La categoria delle azioni implicite è strettamente correlata all'intenzione dell'utente.
-L'idea è che gli ologrammi o gli elementi dell'interfaccia utente reagiscono in modo alquanto istintivo che potrebbe non sembrare che l'utente interagisca con il sistema, ma piuttosto che il sistema e l'utente siano sincronizzati. Un esempio è lo **scorrimento automatico basato sull'occhio** , in cui l'utente legge il testo mentre il testo continua a scorrere o a fluire sincronizzato con con lo sguardo dell'utente. Un aspetto fondamentale è che la velocità di scorrimento si adatta alla velocità di lettura dell'utente.
-Un altro esempio è **lo zoom e la panoramica supportati dagli occhi,** in cui l'utente può apparire esattamente come se fosse concentrato o meno. L'attivazione dello zoom e il controllo della velocità di zoom possono essere controllati da input voce o mano, che è importante per fornire all'utente la sensazione di controllo, evitando così la sovraccarica. Di seguito vengono descritte in dettaglio le linee guida di progettazione. Una volta eseguito lo zoom avanti, l'utente può seguire in modo semplice, ad esempio, il corso di una strada per esplorare il suo quartiere utilizzando semplicemente il proprio sguardo.
+L'idea è che gli ologrammi o gli elementi dell'interfaccia utente reagiscono in modo alquanto istintivo che potrebbe non sembrare che l'utente interagisca con il sistema, ma piuttosto che il sistema e l'utente siano sincronizzati. Un esempio è lo **scorrimento automatico basato sull'occhio** , in cui l'utente legge il testo mentre il testo continua a scorrere o a scorrere sincronizzato con lo sguardo dell'utente. Un aspetto fondamentale è che la velocità di scorrimento si adatta alla velocità di lettura dell'utente.
+Un altro esempio è **lo zoom e la panoramica supportati dagli occhi,** in cui l'utente può avere la tendenza a concentrarsi esattamente su quello che si sta concentrando. L'attivazione dello zoom e il controllo della velocità di zoom possono essere controllati da input voce o mano, che è importante per fornire all'utente la sensazione di controllo, evitando così la sovraccarica. Di seguito vengono descritte in dettaglio le linee guida di progettazione. Una volta eseguito lo zoom avanti, l'utente può seguire in modo semplice, ad esempio, il corso di una strada per esplorare il suo quartiere utilizzando semplicemente il proprio sguardo.
 Alcune demo di esempio per questi tipi di interazioni sono disponibili in [Mixed Reality Toolkit - Navigazione con gli occhi](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
 Altri casi d'uso per le _azioni implicite_ possono includere:
@@ -73,13 +73,13 @@ Altre applicazioni in quest'area possono includere:
 ### <a name="additional-use-cases"></a>Altri casi di utilizzo
 - **Giochi:** hai mai sognato di avere dei superpoteri? Ora hai questa opportunità. È possibile levitare gli ologrammi guardandoli. lanciare raggi laser dagli occhi, Trasformare i nemici in pietra o bloccarli. oppure usare la tua vista a raggi x per esplorare l'interno degli edifici. Insomma, con la tua immaginazione potrai superare ogni ostacolo.  
 
-- **Avatar espressivi:** Il rilevamento degli occhi negli Avatar 3D più espressivi usa la data di rilevamento Live per animare gli occhi dell'avatar che indicano l'aspetto dell'utente. Consente inoltre di aggiungere maggiore espressività mediante strizzate d'occhio e ammiccamenti. 
+- **Avatar espressivi:** Il rilevamento degli occhi negli Avatar 3D più espressivi usa i dati di tracking degli occhi dinamici per animare gli occhi dell'avatar che indicano l'aspetto dell'utente. Aggiunge anche una maggiore espressività aggiungendo i lampeggi. 
 
 - **Immissione di testo:** Il rilevamento degli occhi può essere usato come alternativa per la voce di testo a basso sforzo, soprattutto quando il discorso o le mani non sono convenienti da usare. 
 
 
 ## <a name="eye-tracking-api"></a>API di tracciamento oculare
-Prima di approfondire le linee guida di progettazione specifiche per l'interazione con gli occhi, è opportuno evidenziare brevemente le funzionalità offerte dall'API HoloLens 2 eye tracker per gli sviluppatori. Fornisce una singola occhiata, che indica l'origine e la direzione, fornendo dati a circa _30 fps_. 
+Prima di approfondire le linee guida di progettazione specifiche per l'interazione con gli occhi, è opportuno evidenziare brevemente le funzionalità offerte dall'API HoloLens 2 eye tracker per gli sviluppatori. Fornisce una singola occhiata, che indica l'origine e la direzione, fornendo dati a circa _30 Hz_. 
 
 Lo sguardo stimato si trova all'interno della CA. 1,0-1,5 gradi nell'angolo visivo intorno alla destinazione effettiva. Poiché sono prevedibili lievi imprecisioni, effettua la pianificazione in modo da lasciare un po' di margine per questo valore limite minimo. Più avanti verranno forniti altri dettagli in merito. Per un accurato funzionamento del tracciamento oculare, ogni utente deve essere sottoposto a un'apposita calibrazione. 
 
@@ -89,11 +89,14 @@ Lo sguardo stimato si trova all'interno della CA. 1,0-1,5 gradi nell'angolo visi
 <br>
 L' [API di rilevamento degli occhi](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) è accessibile tramite:' Windows. Perception. people. EyesPose '. 
 
+## <a name="calibration"></a>Calibrazione 
+Per un accurato funzionamento del tracciamento oculare, ogni utente deve essere sottoposto a un'apposita calibrazione. In HoloLens 2 all'utente viene richiesto di calibrare gli oggetti visivi durante la configurazione del dispositivo, esaminando il set di destinazioni di fissaggio. In questo modo, il dispositivo può modificare il dispositivo per un'esperienza di visualizzazione confortevole e qualitativa per l'utente e assicurare un rilevamento accurato degli occhi allo stesso tempo.  La calibrazione dovrebbe funzionare per la maggior parte degli utenti, ma in alcuni casi l'utente potrebbe non essere in grado di calibrare correttamente.  Per ulteriori informazioni sulla calibrazione, controllare la [calibrazione](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration).
+
 ## <a name="eye-gaze-design-guidelines"></a>Linee guida per la progettazione degli sguardi
-Può essere difficile creare un'interazione che tragga vantaggio dalla possibilità di selezionare rapidamente la destinazione mediante lo sguardo fisso. In questa sezione vengono riepilogati i principali vantaggi e problemi da tenere in considerazione durante la progettazione dell'applicazione. 
+La creazione di un'interazione che sfrutta la scelta rapida per gli occhi in rapida evoluzione può risultare complessa. In questa sezione vengono riepilogati i vantaggi e le questioni principali da considerare durante la progettazione dell'applicazione. 
 
 ### <a name="benefits-of-eye-gaze-input"></a>Vantaggi dell'input con sguardo a occhio
-- **Puntamento ad alta velocità.** Il muscolo dell'occhio è il muscolo del nostro corpo che reagisce con maggiore rapidità. 
+- **Puntamento ad alta velocità.** Il muscolo occhi è il muscolo più veloce nel corpo umano. 
 
 - **Sforzo limitato.** Non sono quasi necessari movimenti fisici. 
 
@@ -108,32 +111,32 @@ In breve, l'uso di Eye-sguardi come input offre un segnale contestuale rapido e 
 
 ### <a name="challenges-of-eye-gaze-as-an-input"></a>Problemi di Eye-sguardi come input
 Grazie a un elevato consumo di energia, è molto responsabile.
-Sebbene possa essere usato per creare esperienze utente soddisfacenti, è anche importante sapere che cosa non è adatto a tenere in considerazione questo aspetto per quanto riguarda questo aspetto. Di seguito sono illustrate alcune delle *problemi* da tenere in considerazione e come risolverle quando si lavora con l'input Eye-sguardi: 
+Sebbene possa essere usato per creare esperienze utente soddisfacenti, in modo da essere un supereroe, è anche importante sapere cosa non è utile per tenere conto di questo aspetto. Di seguito sono illustrate alcune delle *questioni* da prendere in considerazione e il modo in cui risolverle quando si lavora con l'input Eye-sguardi: 
 
 - **Il controllo degli sguardi è "always on"** Nel momento in cui si aprono i coperchi degli occhi, gli occhi iniziano a fissando su elementi nell'ambiente. Reagire a ogni aspetto effettuato e rilasciare accidentalmente le azioni perché si è verificato un problema per troppo tempo, si otterrebbe un'esperienza insoddisfacente.
-Questo è il motivo per cui è consigliabile combinare gli occhi con un *comando vocale*, un *gesto della mano*, un *clic del pulsante* o un'abitazione estesa per attivare la selezione di una destinazione.
-Questa soluzione consente anche una modalità in cui l'utente può esaminarsi liberamente senza essere sopraffatto dall'attivazione involontaria di qualcosa. È opportuno tenere conto di tale problematica anche per progettare feedback visivi e audio qualora si guardi semplicemente una destinazione.
+È quindi consigliabile combinare gli occhi con un *comando vocale*, un *gesto della mano*, un *clic del pulsante* o un'abitazione estesa per attivare la selezione di una destinazione.
+Questa soluzione consente anche una modalità in cui l'utente può esaminarsi liberamente senza essere sopraffatto dall'attivazione involontaria di qualcosa. Questo problema deve anche essere preso in considerazione quando si progettano commenti visivi e uditivi quando si esamina semplicemente una destinazione.
 Non bombardare l'utente con effetti immediati e improvvisi o suoni al passaggio del puntatore. La sottigliezza è Key. Nella sezione relativa ai suggerimenti per la progettazione verranno illustrate alcune procedure consigliate su questo argomento.
 
 - **Confronto tra osservazione e controllo** Si supponga di voler raddrizzare con precisione una fotografia sulla parete. Guardi pertanto i bordi e l'area circostante per verificare che l'immagine sia allineata correttamente. A questo punto, si supponga di voler usare il proprio sguardo come input per spostare l'immagine. L'esecuzione diventa veramente difficoltosa. Viene descritto il doppio ruolo di occhio quando è necessario sia per l'input che per il controllo. 
 
 - **Uscita prima del clic:** Per le selezioni di destinazione rapide, la ricerca ha dimostrato che lo sguardo d'occhio di un utente può andare avanti prima di concludere un clic manuale (ad esempio, AirTap). Di conseguenza, è necessario prestare particolare attenzione alla sincronizzazione del segnale di sguardo rapido con un input di controllo più lento (ad esempio, Voice, Hands, controller).
 
-- **Destinazioni di piccole dimensioni:** Si conosce la sensazione quando si tenta di leggere il testo che è troppo piccolo per leggere bene? Questa sensazione di limitazione degli sguardi può causare la disattivazione e la disattivazione, perché si tenta di riadattare gli occhi per concentrarsi meglio.
+- **Destinazioni di piccole dimensioni:** Si conosce la sensazione quando si tenta di leggere il testo che è troppo piccolo per leggere comodamente? Questa sensazione di limitazione degli sguardi può causare la disattivazione e la disattivazione, perché si tenta di riadattare gli occhi per concentrarsi meglio.
 Si tratta di un sentimento che è possibile richiamare negli utenti quando si impone loro di selezionare destinazioni troppo piccole nell'applicazione usando la destinazione degli occhi.
 Durante la progettazione, per creare un'esperienza piacevole e confortevole per gli utenti, è consigliabile definire destinazioni con un angolo visivo di almeno 2 gradi.
 
 - **Spostamenti occhi** incompleti Gli occhi eseguono movimenti rapidi dalla fissa alla fissa. Se guardi i percorsi di analisi dei movimenti oculari registrati, noterai che risultano irregolari. Gli occhi si muovono velocemente e con salti spontanei rispetto al *puntamento con la testa* o ai *movimenti delle mani*.  
 
 - **Affidabilità del tracciamento:** il tracciamento oculare può diventare leggermente meno affidabile con il mutare della luce, in quanto gli occhi devono adattarsi alle nuove condizioni di illuminazione.
-Sebbene questo non abbia necessariamente effetto sulla progettazione dell'applicazione, in quanto l'accuratezza dovrebbe essere compresa nel limite di 2 °, potrebbe essere necessario che l'utente esegua un'altra taratura. 
+Sebbene questo non abbia necessariamente effetto sulla progettazione dell'applicazione, in quanto l'accuratezza dovrebbe essere compresa nel limite di 2 °, potrebbe essere necessario che l'utente esegua di nuovo la calibrazione. 
 
 
 ## <a name="design-recommendations"></a>Suggerimenti per la progettazione
 Di seguito è riportato un elenco di raccomandazioni di progettazione specifiche in base ai vantaggi e alle problemi descritti per l'input degli sguardi:
 
-1. **Eye-sguardi! = Head-sguardi:**
-    - **Considerare se i movimenti dell'occhio, rapidi ma non uniformi, sono adatti per l'attività di input da svolgere:** Anche se i nostri movimenti rapidi e incompleti sono molto veloci quando si selezionano rapidamente le destinazioni nel nostro campo di visualizzazione (FoV), è meno applicabile per le attività che richiedono traiettorie di input uniformi, ad esempio la creazione o l'inclusione di annotazioni. In questo caso, è preferibile usare il puntamento con la mano o con la testa.
+1. **Il controllo degli sguardi non è uguale a quello della testa:**
+    - **Considerare se i movimenti dell'occhio, rapidi ma non uniformi, sono adatti per l'attività di input da svolgere:** Sebbene i nostri spostamenti rapidi e incompleti siano ottimi per selezionare rapidamente le destinazioni nel campo di visualizzazione, è meno applicabile per le attività che richiedono traiettorie di input uniformi, ad esempio la creazione o l'inclusione di annotazioni. In questo caso, è preferibile usare il puntamento con la mano o con la testa.
   
     - **Evitare di allungare direttamente gli sguardi degli utenti (ad esempio, un dispositivo di scorrimento o un cursore).**
 Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a causa di lievi offset nel segnale oculare proiettato. Nel caso di un dispositivo di scorrimento, può entrare in conflitto con il doppio ruolo del controllo del dispositivo di scorrimento con gli occhi, ma anche per verificare se l'oggetto si trova nella posizione corretta. In breve, gli utenti possono diventare sopraffatti e distratti, soprattutto se il segnale è impreciso per tale utente. 
@@ -142,11 +145,11 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
     - **Possibilità di consentire la libera osservazione:** Dato che il ruolo principale degli occhi è osservare l'ambiente, è importante che gli utenti siano in grado di spostarsi senza attivare commenti o azioni (visivi, uditivi e così via). 
     La combinazione di rilevamento degli occhi con un altro controllo di input consente una transizione uniforme tra le modalità di osservazione e controllo di input.
   
-    - **Potente provider di contesto:** L'uso di informazioni su dove e cosa sta cercando l'utente durante l'esecuzione di un comando vocale o l'esecuzione di un gesto manuale consente di canalizzare senza interruzioni l'input nel campo della visualizzazione. Ad esempio:  "Metti questo là" per selezionare e posizionare in modo rapido e fluido un ologramma all'interno della scena semplicemente guardando una destinazione e il punto in cui si vuole collocarlo. 
+    - **Potente provider di contesto:** L'uso di informazioni su dove e cosa sta cercando l'utente durante l'esecuzione di un comando vocale o l'esecuzione di un gesto manuale consente di canalizzare senza interruzioni l'input nel campo della visualizzazione. Esempio: "Metti questo là" per selezionare e posizionare in modo rapido e fluido un ologramma all'interno della scena semplicemente guardando una destinazione e il punto in cui si vuole collocarlo. 
 
-    - **Necessità di sincronizzare input multimodali (problematica della sezione "Uscita prima del clic"):** La combinazione di movimenti di occhi rapidi con input aggiuntivi più complessi, ad esempio comandi di tipo Long Voice o movimenti della mano, presenta il rischio di continuare a osservare gli sguardi prima di terminare il comando di input aggiuntivo. Pertanto, se crei personalmente i controlli di input (ad esempio, movimenti della mano personalizzati), fai in modo di registrare l'inizio di tale input o la durata approssimativa in modo da poterlo mettere in correlazione con cosa aveva fissato in precedenza l'utente.
+    - **Necessità di sincronizzare input multimodali (problematica della sezione "Uscita prima del clic"):** La combinazione di movimenti di occhi rapidi con input aggiuntivi più complessi, ad esempio comandi di tipo Long Voice o movimenti della mano, presenta il rischio di continuare a osservare gli sguardi prima di terminare il comando di input aggiuntivo. Di conseguenza, se si creano controlli di input personalizzati (ad esempio, movimenti della mano personalizzati), assicurarsi di registrare l'inizio di questo input o la durata approssimativa per correlarla a ciò che un utente ha guardato in passato.
     
-3. **Fornire feedback non invasivo per l'input mediante tracciamento oculare:** È utile per fornire commenti e suggerimenti quando viene esaminata una destinazione per indicare che il sistema funziona come previsto, ma deve essere mantenuto sottile. Questo può includere la fusione lenta, in e out, le evidenziazioni visive o eseguire altri comportamenti sottili della destinazione, ad esempio movimenti lenti, ad esempio un lieve aumento della destinazione, per indicare che il sistema ha rilevato correttamente che l'utente sta esaminando una destinazione senza interruzione inutilmente del flusso di lavoro corrente dell'utente. 
+3. **Fornire feedback non invasivo per l'input mediante tracciamento oculare:** È utile per fornire commenti e suggerimenti quando viene esaminata una destinazione per indicare che il sistema funziona come previsto, ma deve essere mantenuto sottile. Questo può includere la fusione lenta, in e out, le evidenziazioni visive o eseguire altri comportamenti sottili della destinazione, ad esempio movimenti lenti, ad esempio un lieve aumento delle dimensioni di destinazione, per indicare che il sistema ha rilevato correttamente che l'utente sta esaminando una destinazione senza interruzione inutilmente del flusso di lavoro corrente dell'utente. 
 
 4. **Evitare di applicare movimenti degli occhi innaturali come input:** Non forzare gli utenti a eseguire movimenti oculari specifici (movimenti sguardi) per attivare azioni nell'applicazione.
 
@@ -158,6 +161,7 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
 * [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Sguardo in DirectX](gaze-in-directx.md)
 * [Eye-sguardi in Unity (Toolkit realtà mista)](https://aka.ms/mrtk-eyes)
+* [Calibrazione](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration)
 * [Movimenti della mano](gestures.md)
 * [Input vocale](voice-design.md)
 * [Controller del movimento](motion-controllers.md)

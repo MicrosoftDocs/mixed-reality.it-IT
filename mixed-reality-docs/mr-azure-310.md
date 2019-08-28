@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, visione personalizzata, rilevamento di oggetti, realtà mista, Accademia, Unity, esercitazione, API, hololens
-ms.openlocfilehash: 89ee79943a88de8a34c679ae33621db5770908b0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 71370db84a9b90b017e8d5fac0799a862883d046
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63544413"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047223"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -31,7 +31,7 @@ Questo servizio consentirà di eseguire il training di un modello di apprendimen
 
 Al termine di questo corso, sarà disponibile un'applicazione di realtà mista che sarà in grado di eseguire le operazioni seguenti:
 
-1. L'utente sarà in grado di *osservare un* oggetto, di cui è stato eseguito il training tramite il servizio visione artificiale personalizzato di Azure e il rilevamento degli oggetti. 
+1. L'utente sarà in grado di osservare un oggetto, di cui è stato eseguito il training tramite il servizio visione artificiale personalizzato di Azure e il rilevamento degli oggetti. 
 2. L'utente userà il gesto *Tap* per acquisire un'immagine di ciò che sta esaminando.
 3. L'app invierà l'immagine alla Servizio visione artificiale personalizzato di Azure.
 4. Verrà restituita una risposta dal servizio che visualizzerà il risultato del riconoscimento come testo dello spazio globale. Questa operazione viene eseguita tramite l'uso del rilevamento spaziale di Microsoft HoloLens, per comprendere la posizione globale dell'oggetto riconosciuto e quindi usare il *tag* associato a quello rilevato nell'immagine, per fornire il testo dell'etichetta.
@@ -75,7 +75,7 @@ Per questo corso è consigliabile usare i componenti hardware e software seguent
 2.  Configurare e testare il HoloLens. Se è necessario supporto per la configurazione di HoloLens, [vedere l'articolo relativo alla configurazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la taratura e l'ottimizzazione dei sensori, a volte può essere utile per eseguire queste attività per ogni utente. 
 
-Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens).
+Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens-2).
 
 Per informazioni sull'ottimizzazione dei sensori, seguire questo [collegamento all'articolo relativo all'ottimizzazione del sensore HoloLens](sensor-tuning.md).
 
@@ -95,7 +95,7 @@ Per usare il **servizio visione artificiale personalizzato di Azure**, è necess
 
 4.  Se non si dispone già di un account Azure, sarà necessario crearne uno. Se si segue questa esercitazione in una classe o in una situazione di laboratorio, rivolgersi all'insegnante o a uno dei Proctor per ottenere assistenza nella configurazione del nuovo account.
 
-5.  Una volta effettuato l'accesso per la prima volta, verrà visualizzato il pannello *condizioni del servizio* . Fare clic sulla casella di controllo per *accettare le condizioni*. Quindi fare **clic**su Accetto.
+5.  Una volta effettuato l'accesso per la prima volta, verrà visualizzato il pannello *condizioni del servizio* . Fare clic sulla casella di controllo per *accettare le condizioni*. Quindi fareclic su Accetto.
 
     ![](images/AzureLabs-Lab310-03.png)
 
@@ -190,7 +190,7 @@ Per eseguire il training del progetto Visione personalizzata:
     ![](images/AzureLabs-Lab310-19.png)
 
     > [!NOTE] 
-    > L'endpoint fornito da questo oggetto è impostato su qualsiasi iterazione  contrassegnata come predefinita. Di conseguenza, se in un secondo momento si  crea una nuova iterazione e la si aggiorna come predefinita, non sarà necessario modificare il codice.
+    > L'endpoint fornito da questo oggetto è impostato su qualsiasi iterazione contrassegnata come predefinita. Di conseguenza, se in un secondo momento si crea una nuova iterazione e la si aggiorna come predefinita, non sarà necessario modificare il codice.
 
 14. Dopo aver fatto clic su **URL di stima**, aprire il *blocco note*e copiare e incollare l' **URL** (detto anche endpoint di **stima**) e la chiave di **stima del servizio**, in modo da poterlo recuperare quando necessario in un secondo momento nel codice.
 
@@ -287,15 +287,15 @@ Per questo corso viene fornito un pacchetto di asset Unity denominato **Azure-Mr
 
     ![](images/AzureLabs-Lab310-34.png)
 
-3.  Una volta completata l'importazione, si noterà che le cartelle del pacchetto sono state aggiunte alla cartella assets  . Questo tipo di struttura di cartelle è tipico per un progetto Unity.
+3.  Una volta completata l'importazione, si noterà che le cartelle del pacchetto sono state aggiunte alla cartella assets . Questo tipo di struttura di cartelle è tipico per un progetto Unity.
 
     ![](images/AzureLabs-Lab310-35.png)
 
-    1.  La  cartella Materials contiene il materiale utilizzato dal **cursore sguardo**. 
+    1.  La cartella Materials contiene il materiale utilizzato dal **cursore sguardo**. 
 
-    2.  La  cartella plugins contiene la dll Newtonsoft usata dal codice per deserializzare la risposta Web del servizio. Le due (2) versioni diverse contenute nella cartella e nella sottocartella sono necessarie per consentire l'uso e la compilazione della libreria sia dall'editor di Unity che dalla compilazione UWP. 
+    2.  La cartella plugins contiene la dll Newtonsoft usata dal codice per deserializzare la risposta Web del servizio. Le due (2) versioni diverse contenute nella cartella e nella sottocartella sono necessarie per consentire l'uso e la compilazione della libreria sia dall'editor di Unity che dalla compilazione UWP. 
 
-    3.  La  cartella prefabbricates contiene le prefabbricati contenute nella scena. Sono:
+    3.  La cartella prefabbricates contiene le prefabbricati contenute nella scena. Sono:
 
         1.  **GazeCursor**, il cursore utilizzato nell'applicazione. Collaborerà con la prefabbricata SpatialMapping per poter essere posizionata nella scena sopra gli oggetti fisici.
         2.  **Etichetta**, ovvero l'oggetto dell'interfaccia utente usato per visualizzare il tag oggetto nella scena quando richiesto.
@@ -468,7 +468,7 @@ Questo script contiene una serie di oggetti utilizzati da altre classi per seria
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **CustomVisionObjects.**
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **CustomVisionObjects.**
 
 2.  Fare doppio clic sul nuovo script **CustomVisionObjects** per aprirlo con **Visual Studio.**
 
@@ -624,7 +624,7 @@ Questa classe imposterà il **conflitto di mapping spaziale** nella scena in mod
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **SpatialMapping.**
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **SpatialMapping.**
 
 2.  Fare doppio clic sul nuovo script **SpatialMapping** per aprirlo con **Visual Studio.**
 
@@ -701,7 +701,7 @@ Questa classe è responsabile della configurazione del cursore nella posizione c
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **GazeCursor**
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Chiamare lo script **GazeCursor**
 
 2.  Fare doppio clic sul nuovo script **GazeCursor** per aprirlo con **Visual Studio.**
 
@@ -785,7 +785,7 @@ Questa classe:
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante  destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Denominare lo script **SceneOrganiser**.
+1.  Fare clic con il pulsante destro del mouse nella cartella Scripts, quindi scegliere **Crea** > **script C\#** . Denominare lo script **SceneOrganiser**.
 
 2.  Fare doppio clic sul nuovo script **SceneOrganiser** per aprirlo con **Visual Studio.**
 
@@ -906,8 +906,8 @@ Per creare questa classe:
 8.  Aggiungere il metodo **FinaliseLabel ()** . È responsabile di:
 
     *   Impostazione del testo dell' *etichetta* con il *tag* della stima con la massima confidenza.
-    *   Chiamata del calcolo del rettangolo  di delimitazione dell'oggetto Quad, posizionato in precedenza e posizionamento dell'etichetta nella scena.
-    *   Regolazione della profondità dell'etichetta usando un Raycast verso il rettangolo di delimitazione, che deve essere in conflitto con l'oggetto nel mondo reale.
+    *   Chiamata del calcolo del rettangolo di delimitazione dell'oggetto Quad, posizionato in precedenza e posizionamento dell'etichetta nella scena.
+    *   Regolazione della profondità dell'etichetta usando un Raycast verso ilrettangolo di delimitazione, che deve essere in conflitto con l'oggetto nel mondo reale.
     * Reimpostazione del processo di acquisizione per consentire all'utente di acquisire un'altra immagine.
 
     ```csharp
@@ -959,7 +959,7 @@ Per creare questa classe:
         }
     ```
 
-9.  Aggiungere il metodo **CalculateBoundingBoxPosition ()** che ospita una serie di calcoli necessari per tradurre le coordinate  del rettangolo di delimitazione recuperate dal servizio e ricrearle proporzionalmente sul quad.
+9.  Aggiungere il metodo **CalculateBoundingBoxPosition ()** che ospita una serie di calcoli necessari per tradurre le coordinate del rettangolo di delimitazione recuperate dal servizio e ricrearle proporzionalmente sul quad.
 
     ```csharp
         /// <summary>
@@ -1237,7 +1237,7 @@ Ora che è stato scritto tutto il codice necessario per questo progetto, è il m
 
     ![](images/AzureLabs-Lab310-38.png)
 
-3.  Nel **Pannello del progetto**aprire la cartella prefabbricati, trascinare l' **etichetta** prefabbricato nell'area di input di destinazione di riferimento vuota dell' *etichetta* , nello script **SceneOrganiser** appena aggiunto alla *fotocamera principale*, come illustrato in  l'immagine seguente:
+3.  Nel **Pannello del progetto**aprire la cartella prefabbricati, trascinare l' **etichetta** prefabbricato nell'area di input di destinazione di riferimento vuota dell' *etichetta* , nello script **SceneOrganiser** appena aggiunto alla *fotocamera principale*, come illustrato in l'immagine seguente:
 
     ![](images/AzureLabs-Lab310-39.png)
 
@@ -1331,7 +1331,7 @@ Congratulazioni, è stata creata un'app per realtà mista che sfrutta il Visione
 
 ### <a name="exercise-1"></a>Esercizio 1
 
-Aggiungendo all'etichetta di testo, utilizzare un cubo semi-trasparente per eseguire il wrapping dell'oggetto reale in un rettangolo di delimitazione 3D.
+Aggiungendo all'etichetta di testo, utilizzare un cubo semi-trasparente per eseguire il wrapping dell'oggetto reale inun rettangolo di delimitazione 3D.
 
 ### <a name="exercise-2"></a>Esercizio 2
 

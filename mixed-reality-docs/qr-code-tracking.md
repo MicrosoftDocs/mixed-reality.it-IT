@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, location based Entertainment, VR Arcade, Arcade, immersive, QR, QR code, hololens2
-ms.openlocfilehash: d51da88aa7bff1dc5c6d3068cb31793891c71e61
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: 736ab265db2145dd784c435e525059ed3a2fcbbb
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565996"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047162"
 ---
 # <a name="qr-code-tracking"></a>Rilevamento del codice a matrice
 
@@ -248,6 +248,9 @@ I codici QR con logo non sono stati testati e non sono attualmente supportati.
 I dispositivi di realtà mista Windows rilevano codici QR a livello di sistema nel driver. Quando il dispositivo viene riavviato, i codici QR rilevati vengono eliminati e verranno rilevati nuovamente come nuovi oggetti la volta successiva.
 
 Si consiglia di configurare l'app in modo da ignorare i codici QR precedenti a un timestamp specifico. Attualmente, l'API non supporta la cancellazione della cronologia del codice QR.
+
+### <a name="qr-code-placement-in-a-space"></a>Posizionamento del codice a matrice in uno spazio
+Per consigli su dove e come collocare i codici QR, vedere Considerazioni sull' [ambiente per HoloLens](environment-considerations-for-hololens.md).
 
 ## <a name="qr-api-reference"></a>Riferimento all'API QR
 

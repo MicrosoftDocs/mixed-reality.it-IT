@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: frame olografico, campo di visualizzazione, FOV, calibrazione, spazi, ambiente, procedure
-ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: cc856c42aaf4ddfca8365f63ab0c7df1a1a3b248
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565991"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047082"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considerazioni sull'ambiente per HoloLens
 
@@ -37,7 +37,7 @@ Se si dispone di un luxmetro, una soluzione stabile 500-1000 Lux è un punto di 
 #### <a name="types-of-lighting"></a>Tipi di illuminazione
 I diversi tipi di luce in uno spazio possono influenzare anche il rilevamento. Pulse lampadina con l'elettricità AC che esegue l'it: se la frequenza AC è 50Hz, gli impulsi luce a 50Hz. Per un uomo, questo pulsante non viene notato. Tuttavia, la videocamera HoloLens ' 30fps vede queste modifiche. alcuni frame saranno ben illuminati, alcuni saranno poco illuminati e alcuni verranno sovraesposti perché la fotocamera tenta di compensare gli impulsi luminosi.
 
-Negli Stati Uniti, la frequenza di energia elettrica standard è 60Hz, quindi gli impulsi a forma di lampadina sono armonizzati con HoloLens ' framerate-60Hz impulsi allineati con Hololens '30 FPS framerate. Tuttavia, molti paesi hanno un standard di frequenza AC di 50Hz, il che significa che alcuni frame Hololens verranno presi durante gli impulsi e altri no. In particolare, l'illuminazione fluorescente in Europa è nota per causare problemi. 
+Negli Stati Uniti, la frequenza di energia elettrica standard è 60Hz, quindi gli impulsi a forma di lampadina sono armonizzati con HoloLens ' framerate-60Hz impulsi allineati con HoloLens '30 FPS framerate. Tuttavia, molti paesi hanno un standard di frequenza AC di 50Hz, il che significa che alcuni frame HoloLens verranno presi durante gli impulsi e altri no. In particolare, l'illuminazione fluorescente in Europa è nota per causare problemi. 
 
 Ci sono alcuni elementi che è possibile provare a risolvere i problemi di sfarfallio. La temperatura, la durata del bulbo e i cicli di riscaldamento sono cause comuni di sfarfallio fluorescente e la sostituzione delle lampadine può essere utile. È anche possibile ridurre le lampadine e verificare che le estrazioni correnti siano costanti. 
 
@@ -46,7 +46,7 @@ HoloLens usa i punti di interesse ambientali univoci, noti anche come *funzional
 
 Un dispositivo non è quasi mai in grado di tenere traccia di un'area priva di funzionalità, in quanto il dispositivo non ha modo di sapere dove si trova nello spazio. L'aggiunta di funzionalità alle pareti di uno spazio è in genere un metodo efficace per migliorare il rilevamento. Poster, simboli registrati su un muro, piante, oggetti univoci o altri elementi simili. Una scrivania complessa è un valido esempio di un ambiente che conduce a una buona traccia, in un'unica area sono disponibili numerose funzionalità diverse. 
 
-Inoltre, utilizzare funzionalità esclusive nello stesso spazio. Lo stesso poster ripetuto più volte su una parete, ad esempio, causerebbe confusione del dispositivo perché il HoloLens non saprà quale dei poster ripetitivi sta esaminando. Un modo comune per aggiungere funzionalità esclusive consiste nell'usare le linee del nastro di mascheramento per creare modelli univoci, nonrepetitve lungo i muri e il piano di uno spazio. 
+Inoltre, utilizzare funzionalità esclusive nello stesso spazio. Lo stesso poster ripetuto più volte su una parete, ad esempio, causerebbe confusione del dispositivo perché il HoloLens non saprà quale dei poster ripetitivi sta esaminando. Un modo comune per aggiungere funzionalità esclusive consiste nell'usare le linee del nastro di mascheramento per creare modelli univoci e non ripetitivi lungo le pareti e il piano di uno spazio. 
 
 Una domanda da porsi è: se si è visto solo una piccola parte della scena, è possibile individuarla in modo univoco nello spazio? In caso contrario, è probabile che si verifichino problemi di rilevamento del dispositivo.
 
@@ -54,6 +54,15 @@ Una domanda da porsi è: se si è visto solo una piccola parte della scena, è p
 Se sono presenti due aree o aree con aspetto identico, lo strumento di rilevamento potrebbe pensare che siano uguali. In questo modo, il dispositivo si ingannerà a pensare che sia altrove. Questi tipi di aree temporali vengonodenominati. 
 
 Per evitare i wormhole, provare a impedire aree identiche nello stesso spazio. Le aree identiche possono talvolta includere stazioni Factory, Windows in una compilazione, rack server o stazioni di lavoro. L'assegnazione di etichette alle aree o l'aggiunta di funzionalità univoche a ogni area simile può contribuire a mitigare i tunnel.
+
+### <a name="qr-codes-in-environments"></a>Codici QR negli ambienti.
+HoloLens può utilizzare [codici](qr-code-tracking.md) a matrice per diversi motivi, ad esempio per etichettare oggetti o per fornire contesto aggiuntivo agli ambienti, ma possono essere utilizzati anche per migliorare la qualità del rilevamento. HoloLens utilizzerà automaticamente i codici a matrice per facilitare la compilazione di una mappa, anche se non si utilizzano i dati incorporati nei codici.
+
+Se si utilizzano codici a matrice per facilitare il rilevamento, sarà necessario disporre di due o tre codici in qualsiasi campo di visualizzazione. Per molti scenari, questo si traduce nell'inserimento di un codice a matrice ogni 2-3 metri o 6-9 metri.
+
+Assicurarsi che i codici a matrice siano bidimensionali e collegati a muri o ad altre superfici.
+
+Le procedure consigliate per la generazione e la stampa di codici a matrice sono disponibili in [procedure consigliate per il rilevamento del codice](qr-code-tracking.md#best-practices-for-qr-code-detection)a matrice.
  
 ### <a name="movement-in-a-space"></a>Spostamento in uno spazio
 Se l'ambiente viene costantemente spostato e modificato, il dispositivo non dispone di funzionalità stabili da individuare. 
@@ -110,4 +119,4 @@ Se un altro utente sta usando il HoloLens, deve eseguire prima l'app di calibraz
 * [Progettazione del mapping spaziale](spatial-mapping-design.md)
 * [Ologrammi](hologram.md)
 * [Calibrazione](calibration.md)
-* [Usare Hololens in nuovi spazi](use-hololens-in-new-spaces.md)
+* [Usare HoloLens in nuovi spazi](use-hololens-in-new-spaces.md)

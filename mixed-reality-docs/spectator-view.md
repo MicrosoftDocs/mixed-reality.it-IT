@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Visualizzazione Spectator, iPhone, iOS, iPad, OpenCV, fotocamera, ARKit, HoloLens, realtà mista, MixedRealityToolkit, demo, record
-ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387671"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047168"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Visualizzazione spectator per HoloLens e HoloLens 2
 
@@ -25,10 +25,8 @@ La visualizzazione spectator offre un approccio rapido e conveniente per la regi
 ## <a name="key-resources"></a>Risorse chiave
 
 * [**Visualizzazione spectator su GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**Architettura**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
-* [**Campioni**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
-* [**Istruzioni per la configurazione di dispositivi mobili**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Istruzioni di configurazione della fotocamera video**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
+* [**Visualizzazione della documentazione di Spectator**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Esempi di viste Spectator**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Casi d'uso
 * È possibile registrare un'esperienza di realtà mista usando un dispositivo iPhone o Android. Registra in Full HD e applica l'anti-aliasing a ologrammi e anche ombre. Si tratta di un modo economico e rapido per acquisire video di ologrammi.
