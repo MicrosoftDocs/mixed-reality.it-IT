@@ -104,8 +104,7 @@
 #### [Esecuzione di comandi vocali](Voice-design.md)
 #### [Puntamento con la testa e attesa](Gaze-and-dwell.md)
 ### [Puntamento con la testa e commit](gaze-and-commit.md)
-### Interazioni supplementari
-#### [Sguardo fisso](eye-tracking.md)
+### [Sguardo fisso](eye-tracking.md)
 ## Stile
 ### [Colore, luce e materiali](color,-light-and-materials.md)
 ### [Progettazione dell'audio spaziale](spatial-sound-design.md)
@@ -296,7 +295,7 @@
 ### [Proteggere la connessione con Holographic Remoting](holographic-remoting-secure-connection.md)
 ### [Risoluzione dei problemi e limitazioni](holographic-remoting-troubleshooting.md)
 ### [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-### Holographic Remoting per HoloLens 1
+### Holographic Remoting per HoloLens (prima generazione)
 #### [Aggiungere Holographic Remoting](add-holographic-remoting.md)
 ## Altro
 ### [Rilevamento di codici a matrice](qr-code-tracking.md)
