@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: risoluzione dei problemi, problema noto, guida
-ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896540"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122127"
 ---
 # <a name="hololens-known-issues"></a>Problemi noti di HoloLens
 
@@ -28,7 +28,7 @@ Causa radice del problema: Gli utenti che hanno usato Visual Studio 2015 o le ve
  
 **Soluzione temporanea**: 
 
-Il nostro team sta attualmente lavorando a una correzione. Nel frattempo, è possibile utilizzare la procedura seguente per risolvere il problema e contribuire a sbloccare la distribuzione e il debug:  
+Anche se questo problema è stato risolto in Visual Studio 2019 16,2, gli sviluppatori che scelgono di rimanere nelle versioni precedenti di Visual Studio possono usare i passaggi seguenti per risolvere il problema e contribuire a sbloccare la distribuzione e il debug:  
 1. Aprire Visual Studio
 2. Nuovo progetto > di > file
 3. Visual C# -> Windows Desktop-App console > (.NET Framework)
@@ -74,7 +74,6 @@ Il nostro team sta attualmente lavorando a una correzione. Nel frattempo, è pos
  
 15. Una volta che lo strumento è stato terminato senza messaggi (l'operazione dovrebbe richiedere solo alcuni secondi), ora sarà possibile distribuire ed eseguire il debug da Visual Studio 2017 o versione successiva.  L'uso continuo dello strumento non è necessario.
 
-Verranno forniti altri aggiornamenti man mano che diventano disponibili.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemi di avvio del Microsoft Store e delle app in HoloLens
 

@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
-keywords: Rilevamento degli occhi, realtà mista, input, sguardo oculare, sguardi occhi
-ms.openlocfilehash: 6c51e1cdc2057142f47b6f96e8a1f1aec0bbcc17
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+keywords: Rilevamento degli occhi, realtà mista, input, sguardi occhi
+ms.openlocfilehash: 51779b7b210522aa4d19b5a32d7df6ccb2cb3a35
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047100"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122069"
 ---
 # <a name="eye-gaze-on-hololens-2"></a>Eye-sguardi su HoloLens 2
 HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative agli utenti che stanno esaminando. Questa pagina indica agli sviluppatori come possono trarre vantaggio dal monitoraggio degli sguardi per diversi casi d'uso, nonché da cosa cercare quando si progettano interfacce utente basate sull'occhio. 
@@ -47,13 +47,14 @@ Tenere presente che il Toolkit per la [realtà mista](https://microsoft.github.i
 ### <a name="user-intent"></a>Intenzione dell'utente    
 Le informazioni su dove e cosa esamina un utente forniscono un **contesto potente per altri input**, ad esempio Voice, Hands e Controllers.
 Tali informazioni possono essere usate per diverse attività.
-Questo, ad esempio, può variare da un punto di vista rapido e semplice a quello della scena, semplicemente esaminando un ologramma e affermando "Select" (vedere anche lo [sguardo e il commit](gaze-and-commit.md)) o dicendo "put this...", quindi esaminando il percorso in cui l'utente desidera inserire l'ologramma e pronunciare "... ". Per alcuni esempi, vedi [Mixed Reality Toolkit - Selezione della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Mixed Reality Toolkit - Posizionamento della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Questo, ad esempio, può variare da un punto di vista rapido e semplice a quello della scena semplicemente esaminando un ologramma e affermando "Select" (vedere anche lo [sguardo e il commit](gaze-and-commit.md)) o dicendo *"put this..."* , quindi esaminando il percorso in cui l'utente desidera inserire l'ologramma e pronunciare *"... "* . Per alcuni esempi, vedi [Mixed Reality Toolkit - Selezione della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) e [Mixed Reality Toolkit - Posizionamento della destinazione con lo sguardo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
 Inoltre, un esempio per finalità utente potrebbe includere l'uso di informazioni sugli elementi esaminati dagli utenti per migliorare l'engagement con agenti virtuali incorporati e ologrammi interattivi. Ad esempio, gli agenti virtuali potrebbero adattare le opzioni disponibili e il relativo comportamento in base al contenuto attualmente visualizzato. 
 
 ### <a name="implicit-actions"></a>Azioni implicite
 La categoria delle azioni implicite è strettamente correlata all'intenzione dell'utente.
-L'idea è che gli ologrammi o gli elementi dell'interfaccia utente reagiscono in modo alquanto istintivo che potrebbe non sembrare che l'utente interagisca con il sistema, ma piuttosto che il sistema e l'utente siano sincronizzati. Un esempio è lo **scorrimento automatico basato sull'occhio** , in cui l'utente legge il testo mentre il testo continua a scorrere o a scorrere sincronizzato con lo sguardo dell'utente. Un aspetto fondamentale è che la velocità di scorrimento si adatta alla velocità di lettura dell'utente.
+L'idea è che gli ologrammi o gli elementi dell'interfaccia utente reagiscono in modo alquanto istintivo che potrebbe non sembrare che l'utente interagisca con il sistema, ma piuttosto che il sistema e l'utente siano sincronizzati. Un esempio è lo **scorrimento automatico basato sull'occhio** , in cui l'utente può leggere un testo lungo che inizia automaticamente a scorrere dopo che l'utente si trova nella parte inferiore della casella di testo per impedire all'utente di leggere il flusso senza sollevare il dito.  
+Un aspetto fondamentale è che la velocità di scorrimento si adatta alla velocità di lettura dell'utente.
 Un altro esempio è **lo zoom e la panoramica supportati dagli occhi,** in cui l'utente può avere la tendenza a concentrarsi esattamente su quello che si sta concentrando. L'attivazione dello zoom e il controllo della velocità di zoom possono essere controllati da input voce o mano, che è importante per fornire all'utente la sensazione di controllo, evitando così la sovraccarica. Di seguito vengono descritte in dettaglio le linee guida di progettazione. Una volta eseguito lo zoom avanti, l'utente può seguire in modo semplice, ad esempio, il corso di una strada per esplorare il suo quartiere utilizzando semplicemente il proprio sguardo.
 Alcune demo di esempio per questi tipi di interazioni sono disponibili in [Mixed Reality Toolkit - Navigazione con gli occhi](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
@@ -73,26 +74,25 @@ Altre applicazioni in quest'area possono includere:
 ### <a name="additional-use-cases"></a>Altri casi di utilizzo
 - **Giochi:** hai mai sognato di avere dei superpoteri? Ora hai questa opportunità. È possibile levitare gli ologrammi guardandoli. lanciare raggi laser dagli occhi, Trasformare i nemici in pietra o bloccarli. oppure usare la tua vista a raggi x per esplorare l'interno degli edifici. Insomma, con la tua immaginazione potrai superare ogni ostacolo.  
 
-- **Avatar espressivi:** Il rilevamento degli occhi negli Avatar 3D più espressivi usa i dati di tracking degli occhi dinamici per animare gli occhi dell'avatar che indicano l'aspetto dell'utente. Aggiunge anche una maggiore espressività aggiungendo i lampeggi. 
+- **Avatar espressivi:** Il rilevamento degli occhi negli Avatar 3D più espressivi usa i dati di tracking degli occhi dinamici per animare gli occhi dell'avatar che indicano l'aspetto dell'utente. 
 
 - **Immissione di testo:** Il rilevamento degli occhi può essere usato come alternativa per la voce di testo a basso sforzo, soprattutto quando il discorso o le mani non sono convenienti da usare. 
 
 
-## <a name="eye-tracking-api"></a>API di tracciamento oculare
-Prima di approfondire le linee guida di progettazione specifiche per l'interazione con gli occhi, è opportuno evidenziare brevemente le funzionalità offerte dall'API HoloLens 2 eye tracker per gli sviluppatori. Fornisce una singola occhiata, che indica l'origine e la direzione, fornendo dati a circa _30 Hz_. 
+## <a name="available-eye-tracking-data"></a>Dati di rilevamento degli occhi disponibili
+Prima di approfondire le linee guida di progettazione specifiche per l'interazione con gli occhi, è opportuno evidenziare brevemente le funzionalità fornite dall'API di [rilevamento](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) HoloLens 2. Gli sviluppatori possono accedere a un singolo raggio d'occhio (origine e direzione dello sguardo) a circa _30 fps (60 Hz)_ .
+Per informazioni più dettagliate su come accedere ai dati di rilevamento degli occhi, fare riferimento alle guide per gli sviluppatori sull'uso [degli sguardi in DirectX](gaze-in-directx.md) e sugli [sguardi in Unity](https://aka.ms/mrtk-eyes).
 
-Lo sguardo stimato si trova all'interno della CA. 1,0-1,5 gradi nell'angolo visivo intorno alla destinazione effettiva. Poiché sono prevedibili lievi imprecisioni, effettua la pianificazione in modo da lasciare un po' di margine per questo valore limite minimo. Più avanti verranno forniti altri dettagli in merito. Per un accurato funzionamento del tracciamento oculare, ogni utente deve essere sottoposto a un'apposita calibrazione. 
+Lo sguardo stimato è approssimativamente entro 1,5 gradi nell'angolo visivo intorno alla destinazione effettiva (vedere la figura seguente). Poiché si prevede una lieve imprecisione, gli sviluppatori devono pianificare un margine attorno a questo valore associato inferiore (ad esempio, 2.0-3.0 gradi possono comportare un'esperienza molto più comoda). Di seguito viene illustrato come gestire la selezione di destinazioni di piccole dimensioni in modo più dettagliato. Per un accurato funzionamento del tracciamento oculare, ogni utente deve essere sottoposto a un'apposita calibrazione. 
 
 ![Dimensioni ottimali della destinazione a una distanza di 2 metri](images/gazetargeting-size-1000px.jpg)<br>
 *Dimensioni di destinazione ottimali a distanza di 2 metri*
-<br>
-<br>
-L' [API di rilevamento degli occhi](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) è accessibile tramite:' Windows. Perception. people. EyesPose '. 
 
 ## <a name="calibration"></a>Calibrazione 
-Per un accurato funzionamento del tracciamento oculare, ogni utente deve essere sottoposto a un'apposita calibrazione. In HoloLens 2 all'utente viene richiesto di calibrare gli oggetti visivi durante la configurazione del dispositivo, esaminando il set di destinazioni di fissaggio. In questo modo, il dispositivo può modificare il dispositivo per un'esperienza di visualizzazione confortevole e qualitativa per l'utente e assicurare un rilevamento accurato degli occhi allo stesso tempo.  La calibrazione dovrebbe funzionare per la maggior parte degli utenti, ma in alcuni casi l'utente potrebbe non essere in grado di calibrare correttamente.  Per ulteriori informazioni sulla calibrazione, controllare la [calibrazione](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration).
+Per il corretto funzionamento degli occhi, è necessario che ogni utente esamini la [calibrazione degli utenti](calibration.md) per cui l'utente deve esaminare un set di destinazioni olografiche. In questo modo, il dispositivo può modificare il sistema per un'esperienza di visualizzazione più comoda e di qualità superiore per l'utente e garantire il rilevamento accurato degli occhi allo stesso tempo. Il rilevamento degli occhi dovrebbe funzionare per la maggior parte degli utenti, ma in alcuni casi un utente potrebbe non essere in grado di calibrare correttamente.
+Per ulteriori informazioni sulla calibrazione, controllare la [calibrazione](calibration.md).
 
-## <a name="eye-gaze-design-guidelines"></a>Linee guida per la progettazione degli sguardi
+## <a name="eye-gaze-input-design-guidelines"></a>Linee guida per la progettazione di input con sguardo attento
 La creazione di un'interazione che sfrutta la scelta rapida per gli occhi in rapida evoluzione può risultare complessa. In questa sezione vengono riepilogati i vantaggi e le questioni principali da considerare durante la progettazione dell'applicazione. 
 
 ### <a name="benefits-of-eye-gaze-input"></a>Vantaggi dell'input con sguardo a occhio
@@ -126,7 +126,7 @@ Non bombardare l'utente con effetti immediati e improvvisi o suoni al passaggio 
 Si tratta di un sentimento che è possibile richiamare negli utenti quando si impone loro di selezionare destinazioni troppo piccole nell'applicazione usando la destinazione degli occhi.
 Durante la progettazione, per creare un'esperienza piacevole e confortevole per gli utenti, è consigliabile definire destinazioni con un angolo visivo di almeno 2 gradi.
 
-- **Spostamenti occhi** incompleti Gli occhi eseguono movimenti rapidi dalla fissa alla fissa. Se guardi i percorsi di analisi dei movimenti oculari registrati, noterai che risultano irregolari. Gli occhi si muovono velocemente e con salti spontanei rispetto al *puntamento con la testa* o ai *movimenti delle mani*.  
+- **Spostamenti occhi** incompleti Gli occhi eseguono movimenti rapidi dalla fissa alla fissa. Se guardi i percorsi di analisi dei movimenti oculari registrati, noterai che risultano irregolari. Gli occhi si spostano rapidamente e in salti spontanei rispetto ai movimenti a *capo* o a *mano*.  
 
 - **Affidabilità del tracciamento:** il tracciamento oculare può diventare leggermente meno affidabile con il mutare della luce, in quanto gli occhi devono adattarsi alle nuove condizioni di illuminazione.
 Sebbene questo non abbia necessariamente effetto sulla progettazione dell'applicazione, in quanto l'accuratezza dovrebbe essere compresa nel limite di 2 °, potrebbe essere necessario che l'utente esegua di nuovo la calibrazione. 
@@ -147,7 +147,7 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
   
     - **Potente provider di contesto:** L'uso di informazioni su dove e cosa sta cercando l'utente durante l'esecuzione di un comando vocale o l'esecuzione di un gesto manuale consente di canalizzare senza interruzioni l'input nel campo della visualizzazione. Esempio: "Metti questo là" per selezionare e posizionare in modo rapido e fluido un ologramma all'interno della scena semplicemente guardando una destinazione e il punto in cui si vuole collocarlo. 
 
-    - **Necessità di sincronizzare input multimodali (problematica della sezione "Uscita prima del clic"):** La combinazione di movimenti di occhi rapidi con input aggiuntivi più complessi, ad esempio comandi di tipo Long Voice o movimenti della mano, presenta il rischio di continuare a osservare gli sguardi prima di terminare il comando di input aggiuntivo. Di conseguenza, se si creano controlli di input personalizzati (ad esempio, movimenti della mano personalizzati), assicurarsi di registrare l'inizio di questo input o la durata approssimativa per correlarla a ciò che un utente ha guardato in passato.
+    - **Necessità di sincronizzare input multimodali (problematica della sezione "Uscita prima del clic"):** La combinazione di movimenti di occhi rapidi con input aggiuntivi più complessi, ad esempio comandi di tipo Long Voice o movimenti della mano, presenta il rischio di continuare a osservare gli sguardi prima di terminare il comando di input aggiuntivo. Di conseguenza, se si creano controlli di input personalizzati (ad esempio, movimenti della mano personalizzati), assicurarsi di registrare l'inizio di questo input o la durata approssimativa per correlarla a ciò che un utente ha esaminato in passato.
     
 3. **Fornire feedback non invasivo per l'input mediante tracciamento oculare:** È utile per fornire commenti e suggerimenti quando viene esaminata una destinazione per indicare che il sistema funziona come previsto, ma deve essere mantenuto sottile. Questo può includere la fusione lenta, in e out, le evidenziazioni visive o eseguire altri comportamenti sottili della destinazione, ad esempio movimenti lenti, ad esempio un lieve aumento delle dimensioni di destinazione, per indicare che il sistema ha rilevato correttamente che l'utente sta esaminando una destinazione senza interruzione inutilmente del flusso di lavoro corrente dell'utente. 
 
@@ -155,13 +155,44 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
 
 5. **Tenere conto delle imprecisioni:** Vengono distinti due tipi di imprecisioni che sono evidenti per gli utenti: offset e jitter. Il modo più semplice per risolvere un offset consiste nel fornire destinazioni sufficientemente grandi per interagire con. Si consiglia di usare un angolo visivo maggiore di 2 ° come riferimento. Ad esempio, l'anteprima è di circa 2 ° nell'angolo visivo quando si allunga il ARM. Segui pertanto le indicazioni seguenti:
     - Non forzare gli utenti a selezionare destinazioni minuscole. La ricerca ha dimostrato che se le destinazioni sono sufficientemente grandi e che il sistema è progettato correttamente, gli utenti ne descrivono le interazioni come semplice e magico. Se le destinazioni diventano troppo piccole, gli utenti descrivono l'esperienza come stancante e frustrante.
-   
+  
+## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Linee guida per lo sviluppo: Cosa accade se la verifica degli occhi non è disponibile?
+Potrebbero verificarsi situazioni in cui l'app non riceverà dati di rilevamento degli occhi a causa di vari motivi, tra cui:
+* L'utente ha ignorato la calibrazione del rilevamento degli occhi.
+* L'utente è stato calibrato, ma ha deciso di non concedere all'app l'autorizzazione per l'uso dei dati di rilevamento degli occhi.
+* L'utente ha occhiali univoci o una condizione oculare che il sistema non supporta ancora.
+* Fattori esterni che inibiscono il monitoraggio degli occhi affidabili, ad esempio le sbavature sulla visiera HoloLens o sugli occhiali, il sole intenso diretto e le occlusioni a causa dei capelli davanti agli occhi.
+
+Per gli sviluppatori di app, questo significa che è necessario tenere conto di come supportare gli utenti per i quali i dati di rilevamento degli occhi potrebbero non essere disponibili. Di seguito viene illustrato prima di tutto come rilevare se il rilevamento degli occhi è disponibile e come risolverlo quando non è disponibile per applicazioni diverse.
+
+### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. Come rilevare che il rilevamento degli occhi è disponibile
+Sono disponibili alcuni controlli per determinare se i dati di rilevamento degli occhi sono disponibili. Controllare se...
+* ... il sistema supporta il rilevamento degli sguardi. Chiamare il *Metodo*seguente: [Windows. Perception. people. EyesPose. supporto ()](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+
+* ... l'utente è calibrato. Chiamare la *Proprietà*seguente: [Windows. Perception. people. EyesPose. IsCalibrationValid](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
+
+* ... l'utente ha concesso all'app l'autorizzazione per usare i dati di rilevamento degli occhi: Recuperare il _' GazeInputAccessStatus '_ corrente. Un esempio di come eseguire questa operazione è illustrato nella pagina relativa alla [richiesta di accesso a sguardi input](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
+
+Inoltre, è possibile verificare che i dati di rilevamento degli occhi non siano obsoleti aggiungendo un timeout tra gli aggiornamenti dei dati di rilevamento degli occhi ricevuti e altrimenti il fallback a Head-sguardi come descritto di seguito. 
+
+Come descritto in precedenza, esistono diversi motivi per cui i dati di rilevamento degli occhi potrebbero non essere disponibili. Anche se alcuni utenti hanno deciso consapevolmente di revocare l'accesso ai dati di rilevamento degli occhi e sono OK con il compromesso di un'esperienza utente inferiore alla privacy di non fornire l'accesso ai dati di rilevamento degli occhi, in alcuni casi potrebbe non essere intenzionale. Di conseguenza, se l'app usa la funzionalità di rilevamento degli occhi e si tratta di una parte importante dell'esperienza, è consigliabile comunicarla chiaramente all'utente. Si consiglia di informare l'utente sul motivo per cui la verifica degli occhi è cruciale per l'applicazione (forse anche elencando alcune funzionalità avanzate) per sperimentare il potenziale completo dell'applicazione può aiutare gli utenti a comprendere meglio ciò che stanno rinunciando. Consentire all'utente di identificare il motivo per cui la verifica degli occhi potrebbe non funzionare (in base ai controlli precedenti) e offre alcuni suggerimenti per risolvere rapidamente i potenziali problemi. Se, ad esempio, è possibile rilevare che il sistema supporta la verifica degli occhi, l'utente viene calibrato e persino ha dato le autorizzazioni necessarie, ma non vengono ricevuti dati di rilevamento degli occhi, questo può puntare ad altri problemi, ad esempio le sbavature o gli occhi che vengono bloccati. Si noti tuttavia che ci sono casi rari di utenti per i quali la verifica degli occhi potrebbe non funzionare semplicemente. Quindi, è opportuno rispettarlo consentendo di ignorare o addirittura disabilitare i promemoria per abilitare il rilevamento degli occhi nell'app.
+
+### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. Fallback per le app che usano Eye-sguardi come puntatore di input primario
+Se l'app usa Eye-sguardi come input del puntatore per selezionare rapidamente gli ologrammi nella scena, ma i dati di rilevamento degli occhi non sono disponibili, è consigliabile eseguire il fallback a Head-sguardi e iniziare a visualizzare il cursore Head-sguardi. È consigliabile usare un timeout (ad esempio, da 500 a 1500 ms) per determinare se passare o meno. In questo modo si impedisce la comparsa di un cursore ogni volta che il sistema può perdere brevemente il rilevamento a causa di movimenti rapidi degli occhi o occhiolini. Per gli sviluppatori di Unity, il fallback automatico a Head-sguardi è già gestito nel Toolkit per la realtà mista. Se si è uno sviluppatore di DirectX, è necessario gestire manualmente questo switch.
+
+### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. Fallback per altre applicazioni specifiche per il rilevamento degli occhi
+L'app può usare gli sguardi in modo univoco in modo specifico per gli occhi, ad esempio per animare gli occhi di un avatar o per attirare l'attenzione su Heatmaps, che si basano su informazioni precise sull'attenzione visiva. In questo caso, non esiste alcun fallback chiaro. Se il rilevamento degli occhi non è disponibile, è possibile che sia sufficiente disabilitare queste funzionalità. 
+
+<br>
+
+In questa pagina è stata auspicata una panoramica approfondita per iniziare a comprendere il ruolo del rilevamento degli occhi e l'input degli sguardi per HoloLens 2. Per iniziare a sviluppare, vedere le nostre informazioni sugli sguardi [in Unity](https://aka.ms/mrtk-eyes) e sugli [sguardi in DirectX](gaze-in-directx.md).
+
 
 ## <a name="see-also"></a>Vedere anche
-* [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Sguardo in DirectX](gaze-in-directx.md)
+* [Eye-sguardi in DirectX](gaze-in-directx.md)
 * [Eye-sguardi in Unity (Toolkit realtà mista)](https://aka.ms/mrtk-eyes)
-* [Calibrazione](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration)
+* [Calibrazione](calibration.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Movimenti della mano](gestures.md)
 * [Input vocale](voice-design.md)
 * [Controller del movimento](motion-controllers.md)

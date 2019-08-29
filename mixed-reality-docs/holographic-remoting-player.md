@@ -6,17 +6,17 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712668"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122072"
 ---
 # <a name="holographic-remoting-player"></a>Lettore di comunicazione remota olografica
 
 >[!IMPORTANT]
->La comunicazione remota olografica per HoloLens 2 è una modifica di versione principale. [Le applicazioni host per **HoloLens 1** ](add-holographic-remoting.md) devono usare il pacchetto NuGet versione **1. x.** x e [le applicazioni host per **HoloLens 2** ](holographic-remoting-create-host.md) devono usare **2. x.x. x**. Ciò implica che le applicazioni host scritte per HoloLens 2 non sono compatibili con HoloLens 1 e viceversa.
+>La comunicazione remota olografica per HoloLens 2 è una modifica di versione principale. [Le applicazioni host per **HoloLens (1st Gen)** ](add-holographic-remoting.md) devono usare il pacchetto NuGet versione **1. x.** x e [le applicazioni host per **HoloLens 2** ](holographic-remoting-create-host.md) devono usare **2. x.x. x**. Ciò implica che le applicazioni host scritte per HoloLens 2 non sono compatibili con HoloLens 1 e viceversa.
 
 Il lettore di comunicazione remota olografico è un'app complementare che si connette a app e giochi per PC che supportano la comunicazione remota olografica. La comunicazione remota olografica trasmette contenuto olografico da un PC a Microsoft HoloLens in tempo reale, usando una connessione Wi-Fi.
 
@@ -43,7 +43,7 @@ La qualità e le prestazioni dell'esperienza variano in base a tre fattori:
 
 ## <a name="diagnostics"></a>Diagnostica
 
-Per misurare la qualità della connessione, pronunciare **"Abilita diagnostica"** mentre è presente nella schermata principale del lettore di comunicazione remota olografica. Quando la diagnostica è abilitata, in **HoloLens 1** l'app visualizzerà:
+Per misurare la qualità della connessione, pronunciare **"Abilita diagnostica"** mentre è presente nella schermata principale del lettore di comunicazione remota olografica. Quando la diagnostica è abilitata, in **HoloLens (1st Gen)** l'app visualizzerà:
 
 * **Fps** : numero medio di frame di cui è stato eseguito il rendering il lettore remoto riceve e il rendering al secondo. La soluzione ideale è 60 FPS.
 * **Latenza** : la quantità media di tempo necessaria per il passaggio di un frame dal PC alla HoloLens. Più basso è il migliore. Questo dipende in gran parte dalla rete Wi-Fi.
@@ -76,7 +76,7 @@ Nella schermata principale è possibile **disabilitare** la diagnostica per disa
 * Si consiglia di connettere il PC alla rete tramite Ethernet per ridurre il numero di hop wireless.
 
 ## <a name="see-also"></a>Vedere anche
-* [HoloLens 1: Aggiungere la comunicazione remota olografica](add-holographic-remoting.md)
+* [HoloLens (1a generazione): Aggiungere la comunicazione remota olografica](add-holographic-remoting.md)
 * [HoloLens 2: Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
-* [Condizioni di licenza software per la comunicazione remota olografica](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
