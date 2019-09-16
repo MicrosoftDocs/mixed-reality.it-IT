@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, mapping spaziale, HoloLens, ricostruzione della superficie, mesh
-ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 02e64727f9a23bea28e018d7c4e5a8b89c152447
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829964"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566012"
 ---
 # <a name="spatial-mapping-design"></a>Progettazione di mapping spaziale
 
@@ -45,49 +45,9 @@ Visualizza le superfici quando si posizionano o spostano gli ologrammi (usare un
 
 ## <a name="what-influences-spatial-mapping-quality"></a>Che influenza la qualità del mapping spaziale?
 
-Per garantire la migliore esperienza utente, è importante comprendere i fattori che influiscono sulla qualità dei dati di mapping spaziale raccolti da HoloLens.
-
-Gli errori nei dati di mapping spaziale rientrano in una delle tre categorie seguenti:
-* **Buchi**: Nei dati di mapping spaziale mancano le superfici reali.
-* **Allucinazioni**: Le superfici sono presenti nei dati di mapping spaziali che non esistono nel mondo reale.
-* **Distorsione**: Le superfici nei dati di mapping spaziale sono allineate in modo non perfetto con le superfici reali, spostate o estratte.
-
-Molti fattori possono influire sulla frequenza e la gravità degli errori seguenti:
-
-* **Movimento dell'utente**
-   * Il modo in cui l'utente passa attraverso il proprio ambiente determina l'accuratezza dell'analisi dell'ambiente, in modo che l'utente possa richiedere informazioni aggiuntive per ottenere una buona analisi.
-   * La fotocamera usata per l'analisi fornisce dati all'interno di un cono di 70 gradi, da un minimo di 0,8 metri a un massimo di 3,1 metri di distanza dalla fotocamera. Le aree reali verranno analizzate solo all'interno di questo campo di visualizzazione. Si noti che questi valori sono soggetti a modifiche nelle versioni future.
-   * Se l'utente non raggiunge mai entro 3,1 metri di un oggetto, non verrà analizzato.
-   * Se l'utente visualizza solo un oggetto da una distanza inferiore a 0,8 metri, non verrà analizzato (in questo modo si evita di analizzare le mani dell'utente).
-   * Se l'utente non guarda mai verso l'alto (che è abbastanza normale), probabilmente il limite non verrà analizzato.
-   * Se un utente non si trova mai dietro la mobilia o un muro, gli oggetti bloccati da essi non verranno analizzati.
-   * Le superfici tendono a essere analizzate con una qualità più elevata quando vengono visualizzate in testa, anziché in un angolo superficiale.
-   * Se il sistema di rilevamento Head di HoloLens ha esito negativo (il che può verificarsi a causa del rapido movimento dell'utente, della scarsa illuminazione, dei muri privi di funzionalità o delle fotocamere che vengono analizzate), questo può comportare errori nei dati di mapping spaziali. Eventuali errori di questo tipo verranno corretti nel corso del tempo quando l'utente continua a spostarsi ed eseguire l'analisi dell'ambiente.
-
-* **Materiali di superficie**
-   * I materiali presenti nelle superfici reali variano significativamente. Questi influiscono sulla qualità dei dati di mapping spaziali, perché influiscono sulla modalità di riflesso della luce a infrarossi.
-   * Le superfici scure potrebbero non essere analizzate fino a quando non si avvicinano alla fotocamera, perché riflettono una minore luminosità.
-   * Alcune superfici possono essere così scure che riflettono una luce troppo piccola per essere analizzate da qualsiasi distanza, in modo da introdurre errori di foratura nella posizione della superficie e talvolta anche dietro la superficie.
-   * In particolare, le superfici lucide possono essere analizzate solo quando vengono visualizzate dall'inizio e non quando vengono visualizzate da un angolo superficiale.
-   * I mirror, perché creano riflessi illusori di spazi e superfici reali, possono causare errori di Hole e allucinazioni.
-
-* **Movimento della scena**
-   * Il mapping spaziale si adatta rapidamente alle modifiche nell'ambiente, ad esempio il trasferimento di persone o l'apertura e la chiusura delle porte.
-   * Tuttavia, il mapping spaziale può adattarsi solo alle modifiche in un'area quando tale area è chiaramente visibile alla fotocamera usata per l'analisi.
-   * Per questo motivo, è possibile che questo adattamento ritardi la realtà, che può causare errori di Hole o allucinazione.
-   * Ad esempio, un utente analizza un amico e quindi si sposta mentre l'amico lascia la stanza. Una rappresentazione ' fantasma ' dell'elemento Friend (un errore di allucinazione) rimarrà permanente nei dati del mapping spaziale, fino a quando l'utente non si riattiva e non esegue nuovamente l'analisi dello spazio in cui si trovava l'amico.
-
-* **Interferenze di illuminazione**
-   * La luce infrarossa ambientale nella scena potrebbe interferire con l'analisi, ad esempio la luce solare forte in arrivo attraverso una finestra.
-   * In particolare, le superfici lucide possono interferire con l'analisi delle superfici adiacenti, la luce che provoca errori di distorsione.
-   * Le superfici lucide che riflettono la luce direttamente nella fotocamera possono interferire con lo spazio vicino, causando allucinazioni mobili a mezz'aria o ritardando l'adattamento al movimento della scena.
-   * Due dispositivi HoloLens nella stessa stanza non devono interferire tra loro, ma la presenza di più di cinque dispositivi HoloLens può causare un'interferenza.
-
-Potrebbe essere possibile evitare o correggere alcuni di questi errori. Tuttavia, è consigliabile progettare l'applicazione in modo che l'utente sia in grado di raggiungere gli obiettivi anche in presenza di errori nei dati di mapping spaziali.
+Diversi fattori, [descritti in dettaglio](environment-considerations-for-hololens.md), possono influenzare la frequenza e la gravità di questi errori.  Tuttavia, è consigliabile progettare l'applicazione in modo che l'utente sia in grado di raggiungere gli obiettivi anche in presenza di errori nei dati di mapping spaziali.
 
 ## <a name="the-environment-scanning-experience"></a>Esperienza di analisi dell'ambiente
-
-HoloLens apprende le superfici nell'ambiente in cui vengono esaminate dall'utente. Nel corso del tempo, il HoloLens crea un'analisi di tutte le parti dell'ambiente che sono state osservate. Aggiorna inoltre l'analisi quando vengono osservate le modifiche nell'ambiente. Questa analisi verrà mantenute automaticamente tra i lanci dell'app.
 
 Ogni applicazione che usa il mapping spaziale deve considerare la possibilità di fornire un'esperienza di analisi. processo attraverso il quale l'applicazione guida l'utente per l'analisi delle superfici necessarie per il corretto funzionamento dell'applicazione.
 
@@ -104,7 +64,7 @@ Per semplificare la progettazione dell'esperienza di analisi corretta, considera
 
 * **Nessuna esperienza di analisi**
    * Un'applicazione può funzionare perfettamente senza alcuna esperienza di analisi guidata; verranno fornite informazioni sulle superfici osservate nel corso del movimento naturale dell'utente.
-   * Ad esempio, un'applicazione che consente all'utente di creare superfici con spray olografico richiede solo le informazioni sulle superfici attualmente visibili all'utente.
+   * Ad esempio, un'applicazione che consente all'utente di disegnare sulle superfici con la vernice spray olografica richiede solo le informazioni sulle superfici attualmente visibili all'utente.
    * È possibile che l'ambiente sia già stato analizzato completamente se ne è uno in cui l'utente ha già impiegato molto tempo a usare HoloLens.
    * Tenere presente, tuttavia, che la fotocamera usata dal mapping spaziale può visualizzare solo 3.1 m davanti all'utente, quindi il mapping spaziale non saprà altre superfici distanti, a meno che l'utente non abbia osservato da una distanza più vicina in passato.
    * Quindi, l'utente riconosce quali superfici sono state analizzate, l'applicazione deve fornire un feedback visivo a questo effetto, ad esempio il cast di ombre virtuali su superfici analizzate può aiutare l'utente a collocare gli ologrammi su tali superfici.
