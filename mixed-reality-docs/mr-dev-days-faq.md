@@ -7,12 +7,12 @@ ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
 keywords: Realtà mista, conferenza, Summit, sviluppatore, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f9f68962229bfc66bf07040b79ea07345dfd5378
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526641"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438425"
 ---
 # <a name="mixed-reality-dev-days-faq"></a>Domande frequenti sui giorni della realtà mista
 
@@ -40,7 +40,7 @@ ms.locfileid: "63526641"
 
     Sono stati progettati i giorni di sviluppo di realtà mista: esperti di realtà mista e molti aspetti della tecnologia cloud e intelligenza artificiale, dalla visione artificiale alla creazione di ologrammi. Gli sviluppatori di realtà mista che desiderano ottenere corsi di formazione sulla piattaforma, gli strumenti, i servizi e i dispositivi per sviluppatori hanno un ottimo adattamento. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) offre agli sviluppatori ed esperti dei team di prodotto nell'intera azienda. Viene analizzata una vasta gamma di tecnologie e modelli di applicazione. Questo evento non sostituisce la compilazione e, se si tratta di una Jam, si consiglia di eseguire questa operazione. 
+    [Microsoft Build](https://www.microsoft.com//build) offre agli sviluppatori ed esperti dei team di prodotto nell'intera azienda. Viene analizzata una vasta gamma di tecnologie e modelli di applicazione. Questo evento non sostituisce la compilazione e, se si tratta di una Jam, si consiglia di eseguire questa operazione. 
 
 * **Qual è il costo dell'evento?**
 
@@ -60,8 +60,8 @@ ms.locfileid: "63526641"
 
 * **Dove è possibile ottenere altre informazioni?**
 
-    È possibile trovare altre informazioni nelle [pagine della documentazione](mr-dev-days.md)per la realtà mista ed è sempre possibile rivolgersi al team di relazioni per gli sviluppatori in realtà mista con domande.
+    È possibile trovare altre informazioni nelle [pagine della documentazione per la realtà mista](mr-dev-days.md)ed è sempre possibile rivolgersi al team di relazioni per gli sviluppatori in realtà mista con domande.
 
 * **A chi rivolgersi per saperne di più?**
 
-    Per ulteriori informazioni, inviare un messaggio di posta elettronicaDevEvent@microsoft.com
+    Per ulteriori informazioni, inviare un messaggio di posta elettronica DevEvent@microsoft.com
