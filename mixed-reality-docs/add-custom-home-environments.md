@@ -1,24 +1,24 @@
 ---
-title: Aggiungere ambienti Home personalizzati
+title: Progettare ambienti immersivi personalizzati
 description: Oltre agli ambienti domestici per la realtà mista di Windows, è possibile sperimentare la creazione e l'uso dei propri.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Realtà mista di Windows, realtà mista, realtà virtuale, VR, MR, Home, ambienti personalizzati, luoghi, Cliff House, Skyloft, utente, creazione
-ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e133e1438410540592a51f54ed136aecd04c6244
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024536"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437076"
 ---
-# <a name="add-custom-home-environments"></a>Aggiungere ambienti Home personalizzati
+# <a name="design-your-own-immersive-environments"></a>Progettare ambienti immersivi personalizzati
 
 >[!NOTE]
 >Si tratta di una funzionalità sperimentale. È possibile provarlo e divertirlo, ma non stupirsi se tutto funziona come previsto. Microsoft sta valutando la redditività di questa funzionalità e ne è interessato l'uso. per informazioni sull'esperienza e sui bug trovati, vedere i [forum per sviluppatori](https://forums.hololens.com/categories/custom-home-environments).
 
-A partire dall' [aggiornamento di Windows 10 aprile 2018](#release-notes-april-2018.md), è stata abilitata una funzionalità sperimentale che consente di aggiungere ambienti personalizzati alla selezione posizioni (dal menu Start) da usare come [Home realtà mista di Windows](#navigating-the-windows-mixed-reality-home.md). La realtà mista di Windows presenta due ambienti predefiniti, Cliff House e Skyloft, che è possibile scegliere come Home. La creazione di ambienti personalizzati consente di espandere l'elenco con le proprie creazioni. Questa funzionalità è disponibile in uno stato preliminare per valutare l'interesse degli autori e degli sviluppatori, vedere quali tipi di mondi creare e comprendere come usare diversi strumenti di creazione.
+A partire dall' [aggiornamento di Windows 10 aprile 2018](release-notes-april-2018.md), è stata abilitata una funzionalità sperimentale che consente di aggiungere ambienti personalizzati alla selezione posizioni (dal menu Start) da usare come [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md). La realtà mista di Windows presenta due ambienti predefiniti, Cliff House e Skyloft, che è possibile scegliere come Home. La creazione di ambienti personalizzati consente di espandere l'elenco con le proprie creazioni. Questa funzionalità è disponibile in uno stato preliminare per valutare l'interesse degli autori e degli sviluppatori, vedere quali tipi di mondi creare e comprendere come usare diversi strumenti di creazione.
 
 Quando si usa un ambiente personalizzato si noterà che il Teleporting, l'interazione con le app e il posizionamento degli ologrammi funzionano esattamente come avviene in Cliff House e Skyloft. È possibile esplorare il Web in un panorama Fantasy o riempire una città futuristica con ologrammi. le possibilità sono infinite.
 
@@ -45,9 +45,9 @@ Quando si usa un ambiente personalizzato si noterà che il Teleporting, l'intera
 ## <a name="trying-a-sample-environment"></a>Tentativo di un ambiente di esempio
 
 È stato creato un ambiente di esempio che illustra alcune delle possibilità creative degli ambienti domestici personalizzati. Per provarlo, attenersi alla procedura seguente:
-1. [Scarica l'ambiente Fantasy Island di esempio](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (punti di collegamento all'eseguibile autoestraente).
+1. [Scaricare l'ambiente Fantasy Island di esempio](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (punti di collegamento all'eseguibile autoestraente).
 
-    ![Ambiente di esempio Fantasy Island](images/FantasyLand.jpg)<br>
+    ambiente di esempio ![Fantasy Island](images/FantasyLand.jpg)<br>
     *Ambiente di esempio Fantasy Island*<br>
 
 2. Eseguire il file **Fantasy_Island. exe** appena scaricato.
@@ -111,7 +111,7 @@ WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1
 
 Dopo aver creato l'ambiente finale con estensione GLB, è possibile eseguirne il test nell'auricolare. Iniziare dal passaggio 2 della sezione ["tentativo di un ambiente di esempio"](#trying-a-sample-environment) per usare l'ambiente personalizzato come Home realtà mista. 
 
-## <a name="feedback"></a>Commenti e suggerimenti
+## <a name="feedback"></a>Feedback
 
 Mentre stiamo valutando questa funzionalità sperimentale, siamo interessati a scoprire come stai usando gli ambienti personalizzati, eventuali bug che potresti incontrare e come preferisci la funzionalità. Condividere tutti i commenti e suggerimenti per la creazione e l'uso di ambienti Home personalizzati nei [forum per sviluppatori](https://forums.hololens.com/categories/custom-home-environments).
 
@@ -149,6 +149,6 @@ Il percorso di generazione predefinito si trova a 0, 0, 0 nell'ambiente. Attualm
 
 Quando si crea l'ambiente personalizzato, verrà usata una simulazione di rendering acustico che non corrisponde allo spazio fisico creato. Il suono può provenire dalle direzioni errate e può sembrare ovattato. 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Microsoft Mixed Reality asset Converter (su GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

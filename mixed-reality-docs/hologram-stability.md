@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: ologrammi, stabilità, hololens
-ms.openlocfilehash: b35b904e3c662c5ebd0670a98044706fe208e348
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: b299df42bf02b837cb45faf5acb7a11b61f2e587
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974931"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435064"
 ---
 # <a name="hologram-stability"></a>Stabilità olografica
 
@@ -22,12 +22,12 @@ Per ottenere ologrammi stabili, HoloLens dispone di una pipeline di stabilizzazi
 La qualità degli ologrammi è il risultato di un ambiente efficace e uno sviluppo efficace di app. App che hanno raggiunto una costante 60 di frame al secondo in un ambiente in cui HoloLens può tenere traccia degli ambienti, assicurerà che l'ologramma e il sistema di coordinate corrispondente siano sincronizzati. Dal punto di vista di un utente, gli ologrammi che devono essere stazionari non verranno spostati in relazione all'ambiente.
 
 Quando si verificano problemi di ambiente, velocità di rendering incoerenti o basse o altri problemi dell'app, la terminologia seguente è utile per identificare il problema.
-* **Precisione.** Una volta che l'ologramma è stato bloccato in tutto il mondo e si trova nel mondo reale, deve rimanere nella posizione in cui è stato collocato, in relazione all'ambiente circostante, indipendentemente dalle modifiche apportate all'ambiente di piccole e sparse. Se un ologramma viene visualizzato in un percorso imprevisto, si  tratta di un problema di accuratezza. Questi scenari possono verificarsi se due stanze distinte sembrano identiche.
+* **Precisione.** Una volta che l'ologramma è stato bloccato in tutto il mondo e si trova nel mondo reale, deve rimanere nella posizione in cui è stato collocato, in relazione all'ambiente circostante, indipendentemente dalle modifiche apportate all'ambiente di piccole e sparse. Se un ologramma viene visualizzato in un percorso imprevisto, si tratta di un problema di *accuratezza* . Questi scenari possono verificarsi se due stanze distinte sembrano identiche.
 * **Jitter.** Gli utenti osservano questa operazione come agitazione ad alta frequenza di un ologramma. Questo problema può verificarsi quando si verifica un peggioramento dell'ambiente. Per gli utenti, la soluzione esegue l' [ottimizzazione del sensore](sensor-tuning.md).
 * **Judder.** Le frequenze di rendering basse generano immagini di movimento e doppie non uniformi degli ologrammi. Questo è particolarmente evidente negli ologrammi con movimento. Gli sviluppatori devono mantenere una [costante 60 fps](hologram-stability.md#frame-rate).
 * **Deriva.** Gli utenti visualizzano questo aspetto perché l'ologramma sembra allontanarsi dalla posizione in cui è stata originariamente posizionata. Ciò si verifica quando gli ologrammi vengono posizionati lontano dagli [ancoraggi spaziali](spatial-anchors.md), in particolare in parti dell'ambiente che non sono state mappate completamente. La creazione di ologrammi vicini a ancoraggi spaziali riduce la probabilità di Drift.
 * **Nervosismo.** Quando un ologramma "estrae" o "salta" fuori dalla posizione, occasionalmente. Questo problema può verificarsi quando il rilevamento regola gli ologrammi in modo che corrispondano alla conoscenza aggiornata dell'ambiente.
-* **Nuotare.** Quando un ologramma sembra ondeggiare corrispondente al movimento della testa dell'utente. Questo errore si verifica quando gli ologrammi non si trovano sul [piano](hologram-stability.md#stabilization-plane)di stabilizzazione e se HoloLens non è [calibrato](calibration.md) per l'utente corrente. Per risolvere il problema, l'utente può eseguire nuovamente l'applicazione di [calibrazione](calibration.md) . Gli sviluppatori possono aggiornare il piano di stabilizzazione per migliorare ulteriormente la stabilità.
+* **Nuotare.** Quando un ologramma sembra ondeggiare corrispondente al movimento della testa dell'utente. Questo errore si verifica quando l'applicazione non ha implementato completamente la [riproiezione](hologram-stability.md#reprojection)e se HoloLens non è [calibrato](calibration.md) per l'utente corrente. Per risolvere il problema, l'utente può eseguire nuovamente l'applicazione di [calibrazione](calibration.md) . Gli sviluppatori possono aggiornare il piano di stabilizzazione per migliorare ulteriormente la stabilità.
 * **Separazione dei colori.** Le visualizzazioni in HoloLens sono una visualizzazione sequenziale dei colori, che indica i canali di colore flash di colore rosso-verde-blu-verde a 60Hz (i singoli campi colore sono visualizzati in 240Hz frequenza). Ogni volta che un utente tiene traccia di un ologramma in evoluzione con i suoi occhi, i bordi iniziali e finali di un ologramma si separano nei colori costitutivi, producendo un effetto arcobaleno. Il grado di separazione dipende dalla velocità dell'ologramma. In alcuni casi più rari, lo stato di un ologramma di uno stabile può comportare un effetto arcobaleno. Questa operazione viene definita *[separazione dei colori](hologram-stability.md#color-separation)* .
 
 ## <a name="frame-rate"></a>Frequenza dei fotogrammi
@@ -72,15 +72,44 @@ L'inserimento di contenuto a 2,0 m è vantaggioso anche perché i due schermi so
 
 **Procedure consigliate** Quando gli ologrammi non possono essere posizionati su 2m e i conflitti tra la convergenza e l'alloggio non possono essere evitati, la zona ottimale per la posizione degli ologrammi è compresa tra 1.25 m e 5m. In ogni caso, i progettisti devono strutturare il contenuto per incoraggiare gli utenti a interagire tra 1 + m (ad esempio, modificare le dimensioni del contenuto e i parametri di posizionamento predefiniti).
 
-## <a name="stabilization-plane"></a>Piano di stabilizzazione
+## <a name="reprojection"></a>Riproiezione
+HoloLens esegue una sofisticata tecnica di stabilizzazione olografica assistita da hardware, nota come riproiezione. In questo modo viene preso in considerazione il movimento e la modifica del punto di vista (CameraPose) durante l'animazione della scena e l'utente sposta la testa.  Le applicazioni devono eseguire azioni specifiche per l'uso ottimale della riproiezione.
+
+
+Sono disponibili quattro tipi principali di riproiezione
+* **Riproiezione profondità:**  Ciò consente di ottenere risultati ottimali con il minor numero di sforzi dell'applicazione.  Tutte le parti della scena sottoposta a rendering sono stabilizzate in modo indipendente in base alla distanza dall'utente.  Alcuni artefatti di rendering possono essere visibili in presenza di modifiche acute in profondità.  Questa opzione è disponibile solo in HoloLens 2 e negli auricolari immersivi.
+* **Riproiezione planare:**  Questo consente all'applicazione di controllare in modo preciso la stabilizzazione.  Un piano viene impostato dall'applicazione e tutto ciò che si trova sul piano sarà la parte più stabile della scena.  Più un ologramma è lontano dal piano, minore sarà la stabilità.  Questa opzione è disponibile in tutte le piattaforme Windows.
+* **Riproiezione piana automatica:**  Il sistema imposta un piano di stabilizzazione usando le informazioni nel buffer di profondità.  Questa opzione è disponibile in HoloLens generazione 1 e HoloLens 2.
+* **Nessuno:** Se l'applicazione non esegue alcuna operazione, la riproiezione piana viene utilizzata con il piano di stabilizzazione fisso a 2 metri nella direzione dello sguardo a capo dell'utente.  Questo genererà risultati sottostandard.
+
+Le applicazioni devono eseguire azioni specifiche per abilitare i diversi tipi di riproiezione
+* **Riproiezione profondità:** L'applicazione invia il buffer di profondità al sistema per ogni frame sottoposto a rendering.  In Unity questa operazione viene eseguita con l'opzione "Abilita condivisione buffer di profondità" nel riquadro Impostazioni lettore.  Le app DirectX chiamano CommitDirect3D11DepthBuffer.  L'applicazione non deve chiamare SetFocusPoint.
+* **Riproiezione planare:** In ogni frame, le applicazioni indicano al sistema la posizione di un piano da stabilizzare.  Le applicazioni Unity chiamano SetFocusPointForFrame e dovrebbero essere disabilitate "Abilita condivisione buffer di profondità".  Le app DirectX chiamano SetFocusPoint e non devono chiamare CommitDirect3D11DepthBuffer.
+* **Riproiezione piana automatica:** Per abilitare questa operazione, l'applicazione deve inviare il buffer di profondità al sistema come per la riproiezione approfondita.  In HoloLens 2 l'applicazione deve quindi SetFocusPoint con un punto di 0, 0 per ogni fotogramma.  Per HoloLens generazione 1, l'applicazione non deve chiamare SetFocusPoint.
+
+### <a name="choosing-reprojection-technique"></a>Scelta della tecnica di riproiezione
+
+Tipo di stabilizzazione |    Auricolari immersivi |    HoloLens generazione 1 | HoloLens 2
+--- | --- | --- | ---
+Riproiezione profondità |    Consigliato |   N/D |   Consigliato<br/><br/>Le applicazioni Unity devono usare Unity 2018.4.12 o versione successiva o Unity 2019,3 o versione successiva. In caso contrario, usare la riproiezione piana automatica.
+Riproiezione piana automatica | N/D |   Impostazione predefinita consigliata |   Consigliato se la riproiezione di profondità non fornisce i risultati migliori<br/><br/>Le applicazioni Unity sono consigliate per usare Unity 2018.4.12 o versione successiva o Unity 2019,3 o versione successiva.  Le versioni precedenti di Unity funzioneranno con risultati di riproiezione leggermente ridotti.
+Riproiezione planare |   Non consigliato |   Consigliato se il Planar automatico non fornisce i risultati migliori |    Usare se nessuna delle opzioni di profondità fornisce i risultati desiderati    
+
+### <a name="verifying-depth-is-set-correctly"></a>La verifica della profondità è stata impostata correttamente
+            
+Quando un metodo di riproiezione usa il buffer di profondità, è importante verificare che il contenuto del buffer di profondità rappresenti la scena di rendering dell'applicazione.  Una serie di fattori può causare problemi.  Se è presente una seconda fotocamera usata per eseguire il rendering, ad affermare, le sovrapposizioni dell'interfaccia utente, è probabile che sovrascriva tutte le informazioni di profondità dalla vista effettiva.  Gli oggetti trasparenti spesso non impostano la profondità.  Per impostazione predefinita, per il rendering del testo non viene impostata la profondità.  Quando la profondità non corrisponde agli ologrammi sottoposti a rendering, nel rendering saranno presenti anomalie visibili.
+            
+HoloLens 2 ha un visualizzatore che mostra dove la profondità è e non viene impostata.  Abilitare questa operazione dal portale del dispositivo.  Nella scheda **viste** > **stabilità ologramma** Selezionare la **Visualizzazione profondità della visualizzazione nella casella di controllo auricolare** .  Le aree con una profondità impostata correttamente saranno blu.  Il rendering di elementi che non hanno un set di profondità sarà rosso e pertanto dovrà essere corretto.  Si noti che la visualizzazione della profondità non viene visualizzata nell'acquisizione di realtà mista.  È visibile solo tramite il dispositivo.
+            
+Alcuni strumenti di visualizzazione GPU consentiranno la visualizzazione del buffer di profondità.  Gli sviluppatori di applicazioni possono utilizzare questi strumenti per assicurarsi che la profondità venga impostata correttamente.  Consultare la documentazione per gli strumenti dell'applicazione.
+
+### <a name="using-planar-reprojection"></a>Uso della riproiezione planare
 > [!NOTE]
 > Per gli auricolari desktop immersivi, l'impostazione di un piano di stabilizzazione è in genere controproducente, in quanto offre una minore qualità visiva rispetto alla fornitura del buffer di profondità dell'app al sistema per abilitare la riproiezione basata sulla profondità per pixel. A meno che non sia in esecuzione in un HoloLens, è in genere consigliabile evitare di impostare il piano di stabilizzazione.
 
-HoloLens esegue una tecnica sofisticata di stabilizzazione olografica assistita da hardware. Questa operazione è in gran parte automatica ed è necessario procedere con il movimento e la modifica del punto di vista (CameraPose) quando la scena viene animata e l'utente sposta l'intestazione. Per ottimizzare questa stabilizzazione, viene scelto un singolo piano, denominato piano di stabilizzazione. Sebbene tutti gli ologrammi nella scena ricevano una certa stabilizzazione, gli ologrammi nel piano di stabilizzazione ricevono la massima stabilizzazione hardware.
-
 ![Piano di stabilizzazione per oggetti 3D](images/stab-plane-500px.jpg)
 
-Il dispositivo tenterà automaticamente di scegliere questo piano, ma l'applicazione può supportare questo processo selezionando il punto di interesse nella scena. Le app Unity in esecuzione in un HoloLens devono scegliere il punto focale migliore in base alla scena e passarle a [SetFocusPoint ()](focus-point-in-unity.md). Un esempio di impostazione del punto di stato attivo in DirectX è incluso nel modello di cubo rotante predefinito.
+Il dispositivo tenterà automaticamente di scegliere questo piano, ma l'applicazione deve supportare questo processo selezionando il punto di interesse nella scena. Le app Unity in esecuzione in un HoloLens devono scegliere il punto focale migliore in base alla scena e passarle a [SetFocusPoint ()](focus-point-in-unity.md). Un esempio di impostazione del punto di stato attivo in DirectX è incluso nel modello di cubo rotante predefinito.
 
 Si noti che quando l'app Unity viene eseguita su un headset immersivo connesso a un PC desktop, Unity invierà il buffer di profondità a Windows per abilitare la riproiezione per pixel, che in genere garantisce una qualità dell'immagine ancora migliore senza lavoro esplicito da parte dell'app. Se si fornisce un punto di interesse che sostituisce la riproiezione per pixel, è consigliabile eseguire questa operazione solo quando l'app è in esecuzione in un HoloLens.
 
@@ -133,7 +162,7 @@ Sebbene sia difficile evitare completamente la separazione dei colori, sono disp
 
 **La separazione dei colori può essere visualizzata in:**
 * Oggetti spostati rapidamente, inclusi oggetti con blocco Head, ad esempio il [cursore](cursors.md).
-* Oggetti che sono sostanzialmente lontani dal [piano](hologram-stability.md#stabilization-plane)di stabilizzazione.
+* Oggetti che sono sostanzialmente lontani dal [piano di stabilizzazione](hologram-stability.md#reprojection).
 
 **Per attenuare gli effetti della separazione dei colori:**
 * Fare in modo che l'oggetto ritardi lo sguardo dell'utente. Dovrebbe apparire come se avesse una certa inerzia ed è associato allo sguardo "on Springs". Questo rallenta il cursore (riducendo la distanza di separazione) e lo inserisce dietro il punto di sguardo probabile dell'utente. Fino a quel momento, quando l'utente smette di spostare il proprio sguardo, si sente piuttosto naturale.
@@ -145,7 +174,8 @@ Sebbene sia difficile evitare completamente la separazione dei colori, sono disp
 
 Come in precedenza, il rendering a 60 FPS e l'impostazione del piano di stabilizzazione sono le tecniche più importanti per la stabilità degli ologrammi. Se si verifica la separazione dei colori evidente, verificare innanzitutto che la frequenza dei fotogrammi soddisfi le aspettative.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
 * [Colore, luce e materiali](color,-light-and-materials.md)
 * [Interazioni istintive](interaction-fundamentals.md)
+* [Stabilizzazione ologramma MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html)

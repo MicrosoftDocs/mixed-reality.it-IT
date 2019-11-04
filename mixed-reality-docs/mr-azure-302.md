@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, visione artificiale, hololens, immersiva, VR
-ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: d6f792a67adfd1038ca4cdbc44b2ef1bf12a1173
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047189"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437949"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br>
 
-# <a name="mr-and-azure-302-computer-vision"></a>MR e Azure 302: Visione artificiale
+# <a name="mr-and-azure-302-computer-vision"></a>MR e Azure 302: visione artificiale
 
 In questo corso si apprenderà come riconoscere il contenuto visivo in un'immagine fornita, usando le funzionalità di Visione artificiale di Azure in un'applicazione di realtà mista.
 
@@ -42,7 +42,7 @@ Nell'applicazione, spetta all'utente come integrare i risultati con la progettaz
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> MR e Azure 302: Visione artificiale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR e Azure 302: visione artificiale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -361,7 +361,7 @@ Per creare questa classe:
 7.  Nell'editor di *Unity*fare clic e trascinare la classe *ResultsLabel* dalla cartella **Scripts** all'oggetto **principale della fotocamera** nel *Pannello gerarchia*.
 8.  Fare clic sulla **fotocamera principale** ed esaminare il *pannello Inspector*.
 
-Si noterà che dallo script appena trascinato nella fotocamera sono presenti due campi: **Prefabbricato** **Cursor** e Label.
+Si noterà che dallo script appena trascinato nella fotocamera sono presenti due campi: **cursore** ed **etichetta prefabbricata**.
 
 9.  Trascinare l'oggetto denominato **cursore** dal *Pannello gerarchia* nello slot denominato **Cursor**, come illustrato nell'immagine seguente.
 10. Trascinare l'oggetto denominato **LabelText** dalla *cartella assets* nel *Pannello Project* allo slot denominato **Label prefabric**, come illustrato nell'immagine seguente. 
@@ -413,7 +413,7 @@ Nella variabile **tapsCount** viene archiviato il numero di movimenti Tap acquis
 
         void Start()
         {
-            // subscribing to the Hololens API gesture recognizer to track user gestures
+            // subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -586,9 +586,9 @@ Per creare questa classe:
 
     > [!WARNING] 
     > La variabile **visionAnalysisEndpoint** potrebbe essere diversa da quella specificata in questo esempio. Gli **Stati Uniti occidentali** si riferiscono esclusivamente alle istanze del servizio create per l'area Stati Uniti occidentali. Aggiornarlo con l' [URL dell'endpoint](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa). di seguito sono riportati alcuni esempi di ciò che potrebbe essere simile al seguente:
-    > - Europa occidentale:`https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Asia sudorientale:`https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Australia orientale:`https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Europa occidentale: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Asia sudorientale: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Australia orientale: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
 
 7.  È necessario aggiungere il codice per l'ora di riattivazione. 
 
@@ -693,7 +693,7 @@ Prima di procedere, verificare quanto segue:
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>Capitolo 9: compilare la soluzione UWP e sideload l'applicazione
 Tutti gli elementi necessari per la sezione Unity di questo progetto sono stati completati, quindi è giunto il momento di compilarli da Unity.
 
-1.  Passare al file *delle impostazioni* - di compilazione **> impostazioni di compilazione...**
+1.  Passare a *Impostazioni compilazione* - **file > impostazioni di compilazione...**
 2.  Nella finestra *impostazioni di compilazione* fare clic su **Compila**.
 
     ![Compilazione dell'app da Unity](images/AzureLabs-Lab2-26.png)
@@ -707,7 +707,7 @@ Tutti gli elementi necessari per la sezione Unity di questo progetto sono stati 
 
 Per eseguire la distribuzione in HoloLens:
 
-1.  È necessario l'indirizzo IP del HoloLens (per la distribuzione remota) e per assicurarsi che il HoloLens sia in **modalità sviluppatore**. A tale scopo, effettuare le seguenti operazioni:
+1.  È necessario l'indirizzo IP del HoloLens (per la distribuzione remota) e per assicurarsi che il HoloLens sia in **modalità sviluppatore**. A tale scopo, effettua le seguenti operazioni:
 
     1. Quando si indossa il HoloLens, aprire le **Impostazioni**.
     2. Passare a **rete & Internet > opzioni avanzate Wi-Fi >**

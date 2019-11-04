@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, simulazione, test
-ms.openlocfilehash: 8152181bdbe8c83d2b706b34f1f2fb5d51f4c880
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 503533bc5a2e9307b7c5217632d42670285aac0a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414536"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437542"
 ---
 # <a name="perception-simulation"></a>Simulazione della percezione
 
@@ -24,21 +24,21 @@ Per iniziare a usare la simulazione nel codice, iniziare creando un oggetto IPer
 ## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>Configurazione di un progetto di Visual Studio per la simulazione della percezione
 1. [Installare l'emulatore di HoloLens](install-the-tools.md) nel PC di sviluppo. L'emulatore include le librerie che si utilizzeranno per la simulazione della percezione.
 2. Creare un nuovo progetto desktop C# di Visual Studio (un progetto console è molto interessante per iniziare).
-3. Aggiungere i file binari seguenti al progetto come riferimenti (informazioni di riferimento sul > di aggiunta di Project->...). È possibile trovarli in% ProgramFiles (x86)% \ Microsoft XDE\\(Version), ad esempio **% ProgramFiles (x86)% \ Microsoft XDE\\10.0.18362.0** per l'emulatore HoloLens 2.  Nota: anche se i file binari fanno parte dell'emulatore HoloLens 2, funzionano anche per la realtà mista di Windows sul desktop. un. Wrapper gestito C# da PerceptionSimulationManager. Interop. dll per la simulazione della percezione.
+3. Aggiungere i file binari seguenti al progetto come riferimenti (informazioni di riferimento sul > di aggiunta di Project->...). È possibile trovarli in% ProgramFiles (x86)% \ Microsoft XDE\\(versione), ad esempio **% ProgramFiles (x86)% \ Microsoft XDE\\10.0.18362.0** per l'emulatore HoloLens 2.  Nota: anche se i file binari fanno parte dell'emulatore HoloLens 2, funzionano anche per la realtà mista di Windows sul desktop. un. Wrapper gestito C# da PerceptionSimulationManager. Interop. dll per la simulazione della percezione.
     b. PerceptionSimulationRest. dll-libreria per la configurazione di un canale di comunicazione del socket Web per HoloLens o emulatore.
     c. SimulationStream. Interop. dll: tipi condivisi per la simulazione.
-4. Aggiungere il file binario di implementazione PerceptionSimulationManager. dll al progetto a. Per prima cosa, aggiungere il file come binario al progetto (> elemento esistente del > di progetto...). Salvarlo come collegamento in modo che non venga copiato nella cartella di origine del progetto. ![Aggiungere PerceptionSimulationManager. dll al progetto come collegamento](images/saveaslink.png) b. Assicurarsi quindi che venga copiato nella cartella di output durante la compilazione. Si trova nella finestra delle proprietà per il file binario. ![Contrassegnare PerceptionSimulationManager. dll per la copia nella directory di output](images/copyalways.png)
+4. Aggiungere il file binario di implementazione PerceptionSimulationManager. dll al progetto a. Per prima cosa, aggiungere il file come binario al progetto (> elemento esistente del > di progetto...). Salvarlo come collegamento in modo che non venga copiato nella cartella di origine del progetto. ![aggiungere PerceptionSimulationManager. dll al progetto come collegamento](images/saveaslink.png) b. Assicurarsi quindi che venga copiato nella cartella di output durante la compilazione. Si trova nella finestra delle proprietà per il file binario. ![contrassegnare PerceptionSimulationManager. dll per la copia nella directory di output](images/copyalways.png)
 5. Impostare la piattaforma della soluzione attiva su x64.  Usare il Configuration Manager per creare una voce della piattaforma per x64, se non ne esiste già una.
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>Creazione di un oggetto IPerceptionSimulation Manager
 
 Per controllare la simulazione, è possibile eseguire aggiornamenti agli oggetti recuperati da un oggetto IPerceptionSimulationManager. Il primo passaggio consiste nell'ottenere l'oggetto e connetterlo al dispositivo o all'emulatore di destinazione. È possibile ottenere l'indirizzo IP dell'emulatore facendo clic sul pulsante portale del dispositivo sulla [barra degli strumenti](using-the-hololens-emulator.md) .
 
-![Aprire l'icona](images/emulator-deviceportal.png) del portale del dispositivo **aprire il portale del dispositivo**: apre il Portale di dispositivi di Windows per il sistema operativo di HoloLens nell'emulatore.  Per la realtà mista di Windows, questo può essere recuperato nell'app impostazioni in "Aggiorna & sicurezza", quindi "per sviluppatori" nella sezione "Connetti tramite:" in "abilitare il portale del dispositivo".  Assicurarsi di annotare l'indirizzo IP e la porta.
+![icona Apri portale del dispositivo](images/emulator-deviceportal.png) **Apri portale**del dispositivo: aprire il portale del dispositivo Windows per il sistema operativo HoloLens nell'emulatore.  Per la realtà mista di Windows, questo può essere recuperato nell'app impostazioni in "Aggiorna & sicurezza", quindi "per sviluppatori" nella sezione "Connetti tramite:" in "abilitare il portale del dispositivo".  Assicurarsi di annotare l'indirizzo IP e la porta.
 
 In primo luogo, si chiamerà RestSimulationStreamSink. create per ottenere un oggetto RestSimulationStreamSink. Si tratta del dispositivo o dell'emulatore di destinazione che si controllerà su una connessione HTTP. I comandi verranno passati e gestiti dal [portale del dispositivo Windows](using-the-windows-device-portal.md) in esecuzione nel dispositivo o nell'emulatore. I quattro parametri necessari per creare un oggetto sono:
-* Uri URI-indirizzo IP del dispositivo di destinazione (ad esempio, "http://123.123.123.123" o "http://123.123.123.123:50080")
-* System .NET. NetworkCredential credentials: nome utente/password per la connessione al [portale per dispositivi Windows](using-the-windows-device-portal.md) sul dispositivo o sull'emulatore di destinazione. Se ci si connette all'emulatore tramite l'indirizzo locale (ad esempio,*168.* . *) nello stesso computer verranno accettate le credenziali.
+* Uri URI-indirizzo IP del dispositivo di destinazione (ad esempio, "https://123.123.123.123" o "https://123.123.123.123:50080")
+* System .NET. NetworkCredential credentials: nome utente/password per la connessione al [portale per dispositivi Windows](using-the-windows-device-portal.md) sul dispositivo o sull'emulatore di destinazione. Se ci si connette all'emulatore tramite l'indirizzo locale (ad esempio,*168...* *) nello stesso computer verranno accettate le credenziali.
 * bool Normal-true per la priorità normale, false per priorità bassa. In genere è consigliabile impostare questo valore su *true* per gli scenari di test, che consente al test di assumere il controllo.  L'emulatore e la simulazione di realtà mista di Windows usano connessioni con priorità bassa.  Se il test USA anche una connessione con priorità bassa, la connessione stabilita più di recente sarà controllata.
 * System. Threading. CancellationToken token-token per annullare l'operazione asincrona.
 
@@ -78,7 +78,7 @@ namespace ConsoleApplication1
                 {
                     sink = await RestSimulationStreamSink.Create(
                         // use the IP address for your device/emulator
-                        new Uri("http://169.254.227.115"),
+                        new Uri("https://169.254.227.115"),
                         // no credentials are needed for the emulator
                         new System.Net.NetworkCredential("", ""),
                         // normal priorty
@@ -134,7 +134,7 @@ namespace ConsoleApplication1
                 {
                     sink = await RestSimulationStreamSink.Create(
                         // use the IP address for your device/emulator
-                        new Uri("http://169.254.227.115"),
+                        new Uri("https://169.254.227.115"),
                         // no credentials are needed for the emulator
                         new System.Net.NetworkCredential("", ""),
                         // normal priorty
@@ -226,7 +226,7 @@ Nell'aggiornamento di Windows 10 ottobre 2018 e versioni precedenti, è necessar
     PerceptionSimulationDevice.exe <action> 6dof <instance>
 ```
 
-Esempio:
+Per esempio
 
 ```
     PerceptionSimulationDevice.exe i 6dof 1
@@ -428,7 +428,7 @@ La calibrazione degli occhi non è disponibile.
 
 **Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. Ready**
 
-Gli occhi sono stati calibrati.  Rappresenta il valore predefinito.
+Gli occhi sono stati calibrati.  Questo è il valore predefinito.
 
 **Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. Configuring**
 

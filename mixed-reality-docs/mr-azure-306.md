@@ -6,22 +6,22 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, servizi multimediali, streaming video, 360, immersiva, VR
-ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896579"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438568"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br> 
 
-# <a name="mr-and-azure-306-streaming-video"></a>MR e Azure 306: Video di streaming
+# <a name="mr-and-azure-306-streaming-video"></a>MR e Azure 306: video di streaming
 
-![prodotto finale-](images/AzureLabs-Lab6-00.png)
-![avvio prodotto finale](images/AzureLabs-Lab6-01.png)
+![prodotto finale](images/AzureLabs-Lab6-00.png)
+![inizio](images/AzureLabs-Lab6-01.png)
 
 In questo corso si apprenderà come connettere i servizi multimediali di Azure a un'esperienza di VR per la realtà mista di Windows per consentire la riproduzione video in streaming di 360 gradi su cuffie immersive. 
 
@@ -43,7 +43,7 @@ Nell'applicazione, spetta all'utente come integrare i risultati con la progettaz
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> MR e Azure 306: Video di streaming</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
+<td> MR e Azure 306: video di streaming</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -59,7 +59,7 @@ Per questo corso è consigliabile usare i componenti hardware e software seguent
 - [Windows 10 SDK più recente](install-the-tools.md#installation-checklist)
 - [Unity 2017,4](install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](install-the-tools.md#installation-checklist)
-- Cuffia A [realtà mista (VR) di Windows](immersive-headset-hardware-details.md)
+- [Cuffia A realtà mista (VR) di Windows](immersive-headset-hardware-details.md)
 - Accesso a Internet per l'installazione di Azure e il recupero dei dati
 - Video di 2 360 gradi in formato MP4 (è possibile trovare alcuni video senza diritti d'autore [in questa pagina di download](https://www.mettle.com/360vr-master-series-free-360-downloads-page))
 
@@ -69,13 +69,13 @@ Per questo corso è consigliabile usare i componenti hardware e software seguent
 2.  Configurare e testare l'auricolare immersiva della realtà mista.
 
     > [!NOTE]
-    > **Non** sarà necessario alcun controller di movimento per questo corso. Se è necessario supportare la configurazione dell'auricolare immersivo, fare clic [sul collegamento per configurare la realtà mista di Windows](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+    > **Non** sarà necessario alcun controller di movimento per questo corso. Se è necessario supportare la configurazione dell'auricolare immersivo, fare clic [sul collegamento per configurare la realtà mista di Windows](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
 ## <a name="chapter-1---the-azure-portal-creating-the-azure-storage-account"></a>Capitolo 1-portale di Azure: creazione dell'account di archiviazione di Azure
 
 Per usare il **servizio di archiviazione di Azure**, è necessario creare e configurare un **account di archiviazione** nell'portale di Azure.
 
-1.  Accedere al [portale di Azure](https://portal.azure.com).
+1.  Accedere al portale di [Azure](https://portal.azure.com).
 
     > [!NOTE]
     > Se non si dispone già di un account Azure, sarà necessario crearne uno. Se si segue questa esercitazione in una classe o in una situazione di laboratorio, rivolgersi all'insegnante o a uno dei Proctor per ottenere assistenza nella configurazione del nuovo account.
@@ -96,7 +96,7 @@ Per usare il **servizio di archiviazione di Azure**, è necessario creare e conf
 
     3.  Per **tipo di account**selezionare **archiviazione (utilizzo generico V1)** .
 
-    4.  Per la **Performance**, selezionare **Standard*.**
+    4.  Per **prestazioni**, selezionare **standard *.**
 
     5.  Per la **replica** selezionare **archiviazione con ridondanza locale (con ridondanza locale)** .
 
@@ -148,7 +148,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
 
     6.  Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    7.  Fare clic su **Create**(Crea).
+    7.  Fai clic su **Crea**.
 
         ![Portale di Azure](images/AzureLabs-Lab6-08.png)
 
@@ -241,9 +241,9 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
 
     ![Portale di Azure](images/AzureLabs-Lab6-24.png)
 
-23. Verrà richiesto di impostare un localizzatore, ovvero il punto di ingresso, per file/s negli asset. Per lo scenario, impostare le proprietà seguenti:
+23. Verrà richiesto di impostare un **localizzatore**, ovvero il punto di ingresso, per file/s negli asset. Per lo scenario, impostare le proprietà seguenti:
 
-    1.  **Tipo di localizzatore** **progressive.**  > 
+    1.  **Tipo di localizzatore** > **progressive**.
 
     2.  La **Data** e l' **ora** verranno impostate per l'utente, dalla data corrente, a un'ora futura (100 anni in questo caso). Lasciarlo invariato o modificarlo in base alle esigenze.
 
@@ -261,7 +261,7 @@ Per usare il servizio multimediale di Azure, è necessario configurare un'istanz
     ![Portale di Azure](images/AzureLabs-Lab6-27.png)
 
     > [!NOTE] 
-    > È anche possibile premere il pulsante Riproduci per riprodurre il video e testarlo.
+    > È anche possibile premere il pulsante **Riproduci** per riprodurre il video e testarlo.
 
 26. È ora necessario caricare il secondo video che verrà usato in questo Lab. Seguire i passaggi precedenti, ripetendo lo stesso processo per il secondo video. Assicurarsi di copiare anche il secondo **endpoint** . Usare il [collegamento seguente per scaricare un secondo video](https://vimeo.com/214402865).
 
@@ -275,7 +275,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con la realtà
 
     ![Portale di Azure](images/AzureLabs-Lab6-28.png)
 
-2.  A questo punto sarà necessario specificare un nome di progetto Unity, inserire **\_Mr 360VideoStreaming.** Verificare che il tipo di progetto sia impostato su **3D**. Impostare il percorso su un punto appropriato (ricordare che più vicino alle directory radice è migliore). Fare quindi clic su **Crea progetto**.
+2.  A questo punto sarà necessario specificare un nome di progetto Unity, inserire **MR\_360VideoStreaming.** Verificare che il tipo di progetto sia impostato su **3D**. Impostare il percorso su un punto appropriato (ricordare che più vicino alle directory radice è migliore). Fare quindi clic su **Crea progetto**.
 
     ![Portale di Azure](images/AzureLabs-Lab6-29.png)
 
@@ -309,9 +309,9 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con la realtà
 
     1.  Nella scheda **altre impostazioni** :
 
-        1.  Creazione di **script** La **versione di runtime** deve essere **stabile** (equivalente a .NET 3,5).
+        1.  La **versione di runtime** di **Scripting** deve essere **stabile** (equivalente a .NET 3,5).
 
-        2. Il **back-end** di scripting deve essere **.NET.**
+        2. Il **back-end di scripting** deve essere **.NET.**
 
         3. Il **livello di compatibilità API** deve essere **.NET 4,6.**
 
@@ -329,14 +329,14 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con la realtà
 
 8.  Dopo aver apportato queste modifiche, chiudere la finestra **impostazioni di compilazione** .
 
-9.  Salvare il progetto **File* *Salva progetto**.
+9.  Salvare il progetto **file* * Salva progetto * *.
 
 
 
 ## <a name="chapter-4---importing-the-insideoutsphere-unity-package"></a>Capitolo 4-importazione del pacchetto InsideOutSphere Unity
 
 > [!IMPORTANT]
-> Se si desidera ignorare il componente *di configurazione* di Unity di questo corso e continuare direttamente con il codice, è possibile scaricarlo [. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/Azure-MR-306.unitypackage), importarlo nel progetto come [**pacchetto personalizzato**](https://docs.unity3d.com/Manual/AssetPackages.html)e continuare dal **capitolo 5**. Sarà comunque necessario creare un progetto Unity.
+> Se si desidera ignorare il componente di *configurazione di Unity* di questo corso e continuare direttamente con il codice, è possibile scaricarlo [. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/Azure-MR-306.unitypackage), importarlo nel progetto come [**pacchetto personalizzato**](https://docs.unity3d.com/Manual/AssetPackages.html)e continuare dal **capitolo 5**. Sarà comunque necessario creare un progetto Unity.
 
 Per questo corso sarà necessario scaricare un pacchetto di asset Unity denominato [**InsideOutSphere. file unitypackage Tools**](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/InsideOutSphere.unitypackage).
 
@@ -350,15 +350,15 @@ Procedura: importare il **file unitypackage Tools**:
 
     ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-36.png)
 
-3.  Una volta completata l'importazione, si noterà che nella cartella **assets** sono state aggiunte tre nuove cartelle, **materiali**, **modelli**e prefabbricati. Questo tipo di struttura di cartelle è tipico per un progetto Unity.
+3.  Una volta completata l'importazione, si noterà che nella cartella **assets** sono state aggiunte tre nuove cartelle, **materiali**, **modelli**e **prefabbricati**. Questo tipo di struttura di cartelle è tipico per un progetto Unity.
 
     ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-37.png)
 
-    1.  Aprire la cartella Models ( **modelli** ). si noterà che il modello **InsideOutSphere** è stato importato.
+    1.  Aprire la cartella **Models (modelli** ). si noterà che il modello **InsideOutSphere** è stato importato.
 
-    2.  All'interno della cartella Materials ( **materiali** ) troverete il materiale **InsideOutSpheres** *lambert1*, insieme a un materiale denominato *ButtonMaterial*, che viene usato da GazeButton, che verrà visualizzato a breve.
+    2.  All'interno della cartella **Materials (materiali** ) troverete il materiale **InsideOutSpheres** *lambert1*, insieme a un materiale denominato *ButtonMaterial*, che viene usato da GazeButton, che verrà visualizzato a breve.
 
-    3.  La cartella prefabbricates contiene la prefabbricazione **InsideOutSphere** che contiene il *modello* **InsideOutSphere** e *GazeButton*.
+    3.  La cartella **Prefabbricates** contiene la prefabbricazione **InsideOutSphere** che contiene il *modello* **InsideOutSphere** e *GazeButton*.
 
     4.  **Non è incluso alcun codice**, il codice verrà scritto seguendo questo corso.
 
@@ -367,21 +367,21 @@ Procedura: importare il **file unitypackage Tools**:
 
     1.  **Trasformazione**
 
-        1.  Posizione = **X**: 0, **Y**: 0, **Z**: 0.
+        1.  Position = **X**: 0, **Y**: 0, **Z**: 0.
 
-        2. Rotazione = **X**: 0, **Y**: 0, **Z**: 0.
+        2. Rotation = **X**: 0, **Y**: 0, **Z**: 0.
 
         3. Scala **X**: 1, **Y**: 1, **Z**: 1.
 
     2.  **Fotocamera**
 
-        1. **Cancella flag**: Colore a tinta unita.
+        1. **Cancella flag**: colore a tinta unita.
 
-        2.  **Piani**di ritaglio: Quasi 0,1, lontano: 6.
+        2.  **Piani di ritaglio**: Near: 0,1, lontano: 6.
 
             ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-38.png)
 
-5.  Passare alla cartella prefabbricata, quindi trascinare la prefabbricata **InsideOutSphere** nel pannello **gerarchia** .
+5.  Passare alla cartella **prefabbricata** , quindi trascinare la prefabbricata **InsideOutSphere** nel pannello **gerarchia** .
 
     ![Importazione del pacchetto InsideOutSphere Unity](images/AzureLabs-Lab6-39.png)
 
@@ -436,7 +436,7 @@ Per creare questa classe:
 
 2.  Fare doppio clic sulla cartella **script** per aprirla.
 
-3.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi fare clic su **Crea > script C\#** . Denominare lo script **VideoController**.
+3.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi fare clic su **crea > C\# script**. Denominare lo script **VideoController**.
 
     ![Creazione della classe VideoController](images/AzureLabs-Lab6-45.png)
 
@@ -604,18 +604,18 @@ Per creare questa classe:
     ```
 
     > [!TIP] 
-    > Il metodo **ChangeScene ()** usa una funzionalità C\# utile chiamata *operatore condizionale*. In questo modo è possibile controllare le condizioni e i valori restituiti in base al risultato del controllo, il tutto all'interno di un'unica istruzione. Seguire questo [collegamento per altre informazioni sull'operatore condizionale](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator).
+    > Il metodo **ChangeScene ()** usa una funzionalità di\# C utile chiamata *operatore condizionale*. In questo modo è possibile controllare le condizioni e i valori restituiti in base al risultato del controllo, il tutto all'interno di un'unica istruzione. Seguire questo [collegamento per altre informazioni sull'operatore condizionale](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator).
 
 11. Salvare le modifiche in Visual Studio prima di tornare a Unity.
 
-12. Nell'editor di Unity fare clic e trascinare la classe **VideoController** [from] {. Underline} la cartella **Scripts** nell'oggetto principale della **fotocamera** nel pannello **gerarchia** .
+12. Nell'editor di Unity fare clic e trascinare la classe **VideoController** [from] {. Underline} la cartella **Scripts** nell'oggetto **principale della fotocamera** nel pannello **gerarchia** .
 
 13. Fare clic sulla **fotocamera principale** ed esaminare il **pannello Inspector**. Si noterà che all'interno del componente script appena aggiunto è presente un campo con un valore vuoto. Si tratta di un campo di riferimento, che ha come destinazione le variabili pubbliche all'interno del codice.
 
 14. Trascinare l'oggetto **InsideOutSphere** dal **Pannello gerarchia** allo slot **Sphere** , come illustrato nell'immagine seguente.
 
-    ![Creare la classe](images/AzureLabs-Lab6-47.png)
-    ![VideoController creare la classe VideoController](images/AzureLabs-Lab6-48.png)
+    ![creare la classe VideoController](images/AzureLabs-Lab6-47.png)
+    ![creare la classe VideoController](images/AzureLabs-Lab6-48.png)
 
 ## <a name="chapter-6---create-the-gaze-class"></a>Capitolo 6: creare la classe sguardi
 
@@ -625,9 +625,9 @@ Per creare questa classe:
 
 1.  Passare alla cartella **Scripts** creata in precedenza.
 
-2.  Fare doppio clic nella **Project** Pannello di **creare* *C\# Script**. Denominarelo script.
+2.  Fare clic con il pulsante destro del mouse nel pannello del **progetto** , **crea* * C\# script * *. Denominare **lo script.**
 
-3.  Fare doppio clic sul nuovo script per aprirlo con **Visual Studio 2017.**
+3.  Fare doppio clic ***sul nuovo script*** per aprirlo con **Visual Studio 2017.**
 
 4.  Verificare che lo spazio dei nomi seguente si trovi nella parte superiore dello script e rimuovere gli altri:
 
@@ -748,7 +748,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 5.  Tornare in Unity, aprire la cartella **Scenes** e fare clic sul file **VideoScene1** . Utilizzare la tastiera e premere **CTRL + D** per duplicare la scena
 
     > [!TIP]
-    > Il comando duplicato può essere eseguito anche passando a **Modifica > duplicato**.
+    > Il comando **duplicato** può essere eseguito anche passando a **Modifica > duplicato**.
 
 6.  Unity incrementerà automaticamente il numero di nomi di scena, ma ne verificherà comunque il numero per assicurarsi che corrisponda al codice inserito in precedenza.
 
@@ -785,7 +785,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
     ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-52.png)
 
-12. Il **Filtro Mesh** verrà aggiornato ed è ora costituito da un **cubo**. A questo punto, fare clic sull'icona a forma di ingranaggio accanto a **Sphere Collider** , quindi fare clic su **Rimuovi componente**per eliminare il Collider da questo oggetto.
+12. Il **Filtro Mesh** verrà aggiornato ed è ora costituito da un **cubo**. A questo punto, fare clic sull'icona a forma di **ingranaggio** accanto a **Sphere Collider** , quindi fare clic su **Rimuovi componente**per eliminare il Collider da questo oggetto.
 
     ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-53.png)
 
@@ -795,10 +795,10 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
 14. Il **GazeButton** è stato aggiornato parzialmente, per un aspetto diverso, tuttavia, verrà creato un nuovo **materiale**, in modo che appaia completamente diverso ed è più facile da riconoscere come oggetto diverso rispetto all'oggetto nella prima scena.
 
-15. Passare alla cartella **Materials** , all'interno del **Pannello Project**. Duplicare il materiale **ButtonMaterial** (premere **CTRL** + **D** sulla tastiera o fare clic con il pulsante destro del mouse sul **materiale**, quindi scegliere duplicato dall'opzione di menu **modifica** file).
+15. Passare alla cartella **Materials** , all'interno del **Pannello Project**. Duplicare il materiale **ButtonMaterial** (premere **CTRL** + **D** sulla tastiera o fare clic con il pulsante destro del mouse sul **materiale**, quindi scegliere **duplicato**dall'opzione di menu **modifica** file).
 
-    ![Capitolo 7: configurare le due scene](images/AzureLabs-Lab6-55.png)
-    ![Unity capitolo 7--configurare le due scene Unity](images/AzureLabs-Lab6-56.png)
+    ![capitolo 7--configurare le due scene Unity](images/AzureLabs-Lab6-55.png)
+    ![capitolo 7--configurare le due scene Unity](images/AzureLabs-Lab6-56.png)
 
 16. Selezionare il nuovo materiale **ButtonMaterial** (qui denominato **ButtonMaterial 1**) e, all'interno del **controllo**, fare clic sulla finestra del colore **albedo** . Verrà visualizzata una finestra popup in cui è possibile selezionare un altro colore (scegliere il tipo desiderato), quindi chiudere il popup. Il materiale sarà una propria istanza e diverso dall'originale.
 
@@ -810,7 +810,7 @@ Lo scopo di questo capitolo è quello di configurare le due scene, ciascuna dell
 
 18. A questo punto è possibile testare il progetto nell'editor prima di compilare il progetto UWP.
 
-    -  Premere il pulsante Riproduci nell' **Editor** e utilizzare l'auricolare.
+    -  Premere il pulsante **Riproduci** nell' **Editor** e utilizzare l'auricolare.
 
         ![Capitolo 7: configurare le due scene Unity](images/AzureLabs-Lab6-59.png)
 
@@ -824,18 +824,18 @@ Per compilare:
 
 1.  Salvare la scena corrente facendo clic su **File > Salva**.
 
-2.  Selezionare la casella denominata **progetti Unity C\#**  (questo aspetto è importante perché consente di modificare le classi al termine della compilazione).
+2.  Selezionare la casella denominata **Unity C\# Projects** (questo è importante perché consente di modificare le classi al termine della compilazione).
 
 3.  Passare a **File > impostazioni di compilazione**, fare clic su **Compila**.
 
 4.  Verrà richiesto di selezionare la cartella in cui si vuole buildthe la soluzione.
 
-5.  Creare una cartella compilazioni e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
+5.  Creare una cartella **compilazioni** e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
 
 6.  Fare clic sulla nuova cartella e quindi fare clic su **Seleziona cartella**, quindi scegliere la cartella per iniziare la compilazione in quel percorso.
 
-    ![Capitolo 8: compilare il capitolo 8 della](images/AzureLabs-Lab6-60.png)
-    soluzione![UWP. compilare la soluzione UWP](images/AzureLabs-Lab6-61.png)
+    ![capitolo 8: compilare la soluzione UWP](images/AzureLabs-Lab6-60.png)
+    ![capitolo 8: compilare la soluzione UWP](images/AzureLabs-Lab6-61.png)
 
 7.  Una volta completata la compilazione di Unity (potrebbe richiedere del tempo), verrà aperta una finestra **Esplora file** nel percorso della compilazione.
 

@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, mapping spaziale, renderer, Collider, mesh, analisi, componente
-ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 452e629a877df585ffbc0a6466ffeb2588b66ecf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148644"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438040"
 ---
 # <a name="spatial-mapping-in-unity"></a>Mapping spaziale in Unity
 
@@ -22,6 +22,29 @@ Unity include il supporto completo per il mapping spaziale, esposto agli svilupp
 2. API di mapping spaziale di basso livello, che offrono il controllo completo e consentono una personalizzazione più sofisticata dell'applicazione
 
 Per usare il mapping spaziale nell'app, è necessario impostare la funzionalità spatialPerception in AppxManifest.
+
+## <a name="device-support"></a>Supporto di dispositivi
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funzionalità</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
+    </tr>
+     <tr>
+        <td>Mapping spaziale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="setting-the-spatialperception-capability"></a>Impostazione della funzionalità SpatialPerception
 
@@ -61,9 +84,9 @@ Il mapping spaziale Collider consente l'interazione di contenuto (o carattere) o
 
 Per usare questi due componenti nell'app Unity:
 1. Selezionare un GameObject al centro dell'area in cui si desidera rilevare le mesh della superficie spaziale.
-2. Nella finestra di controllo **aggiungere Component** >  > **XR Spatial mapping Spatial** orendererdimapping spaziale.
+2. Nella finestra di controllo **aggiungere Component** > **XR** > **Spatial mapping Collider** o il renderer di **mapping spaziale**.
 
-Per altre informazioni su come usare questi componenti, vedere il sito della <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentazione</a>di Unity.
+Per altre informazioni su come usare questi componenti, vedere il sito della <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentazione di Unity</a>.
 
 ### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Superamento dei componenti predefiniti di mapping spaziale
 
@@ -239,7 +262,7 @@ Internamente, il Raycast viene calcolato rispetto alla rappresentazione voxel de
 
 Nell'esempio Unity il cursore esegue il cast di un raggio per ogni fotogramma. In primo luogo, rispetto ai Collider di Unity. In secondo luogo, sulla rappresentazione mondiale del modulo di informazioni. Infine, di nuovo gli elementi dell'interfaccia utente. In questa applicazione, l'interfaccia utente ottiene la priorità, successivamente il risultato della comprensione e infine i Collider di Unity. SurfaceType viene segnalato come testo accanto al cursore.
 
-![Il tipo di superficie è contrassegnato accanto al cursore](images/su-raycastresults-300px.jpg)<br>
+![tipo di superficie è etichettato accanto al cursore](images/su-raycastresults-300px.jpg)<br>
 *Il tipo di superficie è contrassegnato accanto al cursore*
 
 ### <a name="topology-queries"></a>Query sulla topologia
@@ -324,7 +347,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 Le funzioni wrapper sono disponibili nel modulo Unity per semplificare la creazione di definizioni di forme personalizzate. L'elenco completo dei vincoli relativi a componenti e forme si trova in "SpatialUnderstandingDll.cs" all'interno delle strutture "ShapeComponentConstraint" e "ShapeConstraint".
 
-![Forma rettangolo individuata in questa superficie](images/su-shapequery-300px.jpg)<br>
+![forma rettangolo presente in questa area](images/su-shapequery-300px.jpg)<br>
 *Forma rettangolo individuata in questa superficie*
 
 ### <a name="object-placement-solver"></a>Risolutore posizionamento oggetti
@@ -395,8 +418,8 @@ Solver_PlaceObject(
 
 In caso di esito positivo, viene restituita una struttura "ObjectPlacementResult" che contiene la posizione, le dimensioni e l'orientamento del posizionamento. Inoltre, la selezione host viene aggiunta all'elenco interno della dll degli oggetti inseriti. Questo oggetto verrà preso in considerazione dalle query di posizionamento successive. Il file "LevelSolver.cs" nell'esempio Unity contiene altre query di esempio.
 
-![Risultati del posizionamento degli oggetti](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: Le caselle blu come il risultato di tre posizioni nelle query sul pavimento con le regole di posizione della fotocamera*
+![risultati del posizionamento degli oggetti](images/su-objectplacement-1000px.jpg)<br>
+*Figura 3: le caselle blu come il risultato di tre posizioni nelle query sul pavimento con le regole di posizione della fotocamera*
 
 Quando si risolve la posizione di selezione host di più oggetti richiesti per uno scenario di livello o di applicazione, risolvere prima di tutto gli oggetti indispensabili e di grandi dimensioni per ottimizzare la probabilità che uno spazio venga trovato. L'ordine di posizionamento è importante. Se non è possibile trovare le posizioni degli oggetti, provare a eseguire meno configurazioni vincolate. Avere un set di configurazioni di fallback è fondamentale per supportare le funzionalità in molte configurazioni di chat room.
 
@@ -444,7 +467,7 @@ Il flusso di analisi, determinato dal comportamento "SpatialUnderstanding", chia
 
 La dll informazioni archivia internamente il playspace come griglia di cubi voxel di dimensioni 8 cm. Durante la fase iniziale di analisi, viene completata un'analisi del componente principale per determinare gli assi della stanza. Internamente, archivia lo spazio voxel allineato a questi assi. Una mesh viene generata approssimativamente ogni secondo estraendo oggetto isosurface dal volume voxel. 
 
-![Mesh generata prodotta dal volume voxel](images/su-custommesh.jpg)<br>
+![mesh generata dal volume voxel](images/su-custommesh.jpg)<br>
 *Mesh generata prodotta dal volume voxel*
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
@@ -454,11 +477,11 @@ La dll informazioni archivia internamente il playspace come griglia di cubi voxe
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Mapping spaziale nel Toolkit per realtà mista
 Per altre informazioni sull'uso del mapping spaziale con Mixed Reality toolkit V2, vedere la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sezione relativa alla conoscenza spaziale</a> della documentazione di MRTK.
 
-## <a name="see-also"></a>Vedere anche
-* [Spaziale MR 230: Mapping spaziale](holograms-230.md)
+## <a name="see-also"></a>Vedi anche
+* [MR Spatial 230: mapping spaziale](holograms-230.md)
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Sistemi di coordinate in Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>

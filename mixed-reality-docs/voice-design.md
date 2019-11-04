@@ -1,17 +1,17 @@
 ---
 title: Esecuzione di comandi vocali
 description: La direzione dello sguardo, i movimenti e i comandi vocali (GGV, Gaze, Gesture and Voice) sono un mezzo di interazione fondamentale in HoloLens. Questo articolo fornisce indicazioni precise sulla progettazione dei comandi vocali.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, progettazione, interazione, comandi vocali
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387649"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437220"
 ---
 # <a name="voice-commanding"></a>Esecuzione di comandi vocali
 
@@ -30,7 +30,7 @@ Con i comandi vocali, lo sguardo viene in genere usato come meccanismo di selezi
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
@@ -50,10 +50,10 @@ Valuta l'opportunità di aggiungere comandi vocali a un'esperienza che stai crea
 ### <a name="best-practices"></a>Procedure consigliate
 
 Di seguito vengono illustrate alcune procedure che semplificheranno il riconoscimento vocale.
-* **Usa comandi concisi**. Quando possibile, scegli parole chiave di due o più sillabe. Le parole di una sillaba tendono a usare suoni di vocali differenti se pronunciate da persone con accenti diversi. Esempio: "Riproduci il video" è preferibile rispetto a "Riproduci il video attualmente selezionato".
-* **Usa un vocabolario semplice**. Esempio: "Mostra nota" è preferibile rispetto a "Mostra cartello".
+* **Usa comandi concisi**. Quando possibile, scegli parole chiave di due o più sillabe. Le parole di una sillaba tendono a usare suoni di vocali differenti se pronunciate da persone con accenti diversi. Esempio: "riprodurre video" è migliore di "riprodurre il video attualmente selezionato"
+* **Usare un vocabolario semplice** , ad esempio: "show note" è migliore di "Show manifest"
 * **Assicurati che i comandi non siano distruttivi**. Verifica che tutte le azioni eseguibili con un comando vocale siano di tipo non distruttivo e possano essere annullate facilmente qualora un'altra persona che parla vicino all'utente attivi accidentalmente un comando.
-* **Evita comandi con suoni simili**. Non registrare più comandi vocali con suoni molto simili. Esempio: "Mostra altro" e "Mostra in alto" possono avere un suono molto simile.
+* **Evita comandi con suoni simili**. Non registrare più comandi vocali con suoni molto simili. Esempio: "Mostra più" e "Mostra archivio" può essere un suono molto simile.
 * **Annulla la registrazione dell'app quando non è in uso**. Quando l'app non è in uno stato in cui sia valido un comando vocale specifico, è consigliabile annullarne la registrazione in modo da evitare confusione tra i comandi.
 * **Esegui test con accenti diversi**. Testa l'app con utenti con accenti diversi.
 * **Mantieni la coerenza dei comandi vocali**. Se "Indietro" porta alla pagina precedente, mantieni questo comportamento nelle applicazioni.
@@ -65,7 +65,7 @@ Di seguito vengono illustrate alcune procedure che semplificheranno il riconosci
 
 Pronunciare "seleziona" in qualsiasi momento attiva la destinazione a cui punta il cursore sguardo fisso. 
 
->Nota: in HoloLens 2 è necessario richiamare prima il cursore sguardo fisso pronunciando la parola "seleziona". Pronuncia di nuovo "seleziona" per l'attivazione. Per nascondere il cursore sguardo fisso, usa le mani: simula il tocco o tocca un oggetto. 
+>Nota: in HoloLens 2, il cursore dello sguardo deve prima essere richiamato dicendo la parola "Select". Pronuncia di nuovo "seleziona" per l'attivazione. Per nascondere il cursore sguardo fisso, usa le mani: simula il tocco o tocca un oggetto. 
 
 ### <a name="see-it-say-it"></a>Guarda, parla
 
@@ -113,6 +113,6 @@ Quando i comandi vocali vengono applicati in modo corretto, l'utente capisce **c
 * Come posso indirizzare un comando vocale a una specifica app o un comando di app?
 * Posso usare i comandi vocali per operazioni all'esterno del fotogramma olografico di HoloLens?
 
-## <a name="see-also"></a>Vedere anche
-* [Movimenti](gestures.md)
+## <a name="see-also"></a>Vedi anche
+* [Movimenti](gaze-and-commit.md#composite-gestures)
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)

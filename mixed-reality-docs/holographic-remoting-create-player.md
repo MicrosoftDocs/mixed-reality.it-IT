@@ -3,15 +3,15 @@ title: Scrittura di un lettore di comunicazione remota olografica personalizzata
 description: Grazie alla creazione di un'app lettore di comunicazione remota olografica personalizzata è possibile creare un'applicazione personalizzata in grado di visualizzare il contenuto di cui è stato eseguito il rendering in un computer remoto in HoloLens 2. Questo articolo descrive il modo in cui è possibile ottenere questo risultato.
 author: NPohl-MSFT
 ms.author: nopohl
-ms.date: 08/01/2019
+ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: fdc3d3bbd72d0812377d6a70c975f2111e1a2224
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 982a3f42014d8f5eb9ba181247fee9825fb78371
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718095"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434317"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Scrittura di un'app lettore di comunicazione remota olografica personalizzata
 
@@ -27,7 +27,7 @@ Un lettore di comunicazione remota olografica consente all'app di visualizzare i
 Un punto di partenza valido è un'app UWP basata su DirectX funzionante che ha già come destinazione l'API di realtà mista di Windows. Per informazioni dettagliate, vedere [Cenni preliminari sullo sviluppo DirectX](directx-development-overview.md). Se non si dispone di un'app esistente e si desidera iniziare da zero, il [ C++ modello di progetto olografico](creating-a-holographic-directx-project.md) è un punto di partenza valido.
 
 >[!IMPORTANT]
->Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com/en-us/windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Appartamento a thread singolo](https://docs.microsoft.com/en-us/windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si C++USA/WinRT [WinRT:: init_apartment](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/get-started) , un apartment multithread è il valore predefinito.
+>Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Appartamento a thread singolo](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si C++USA/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) , un apartment multithread è il valore predefinito.
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Ottenere il pacchetto NuGet per la comunicazione remota olografica
 
@@ -40,7 +40,7 @@ I passaggi seguenti sono necessari per aggiungere il pacchetto NuGet a un proget
 6. La finestra di dialogo successiva visualizzata è il contratto di licenza. Fare clic su **Accetto** per accettare il contratto di licenza.
 
 >[!IMPORTANT]
-><a name="idl"></a>Il ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` contenuto del pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
+><a name="idl"></a>Il ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` nel pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
 
 ## <a name="modify-the-packageappxmanifest-of-the-application"></a>Modificare il pacchetto. appxmanifest dell'applicazione
 
@@ -92,9 +92,9 @@ m_playerContext = winrt::Microsoft::Holographic::AppRemoting::PlayerContext::Cre
 ```
 
 >[!WARNING]
->La comunicazione remota olografica funziona sostituendo il runtime della realtà mista di Windows che fa parte di Windows con un runtime specifico di .NET Remoting. Questa operazione viene eseguita durante la creazione del contesto del lettore. Per questo motivo qualsiasi chiamata a qualsiasi API di realtà mista di Windows prima di creare il contesto del lettore può causare un comportamento imprevisto. L'approccio consigliato consiste nel creare il contesto del lettore il prima possibile prima di interagire con qualsiasi API di realtà mista. Non combinare mai oggetti creati o recuperati tramite qualsiasi API di realtà mista di ```PlayerContext::Create()``` Windows prima della chiamata a con gli oggetti creati o recuperati in seguito.
+>La comunicazione remota olografica funziona sostituendo il runtime della realtà mista di Windows che fa parte di Windows con un runtime specifico di .NET Remoting. Questa operazione viene eseguita durante la creazione del contesto del lettore. Per questo motivo qualsiasi chiamata a qualsiasi API di realtà mista di Windows prima di creare il contesto del lettore può causare un comportamento imprevisto. L'approccio consigliato consiste nel creare il contesto del lettore il prima possibile prima di interagire con qualsiasi API di realtà mista. Non combinare mai oggetti creati o recuperati tramite qualsiasi API di realtà mista di Windows prima della chiamata a ```PlayerContext::Create()``` con gli oggetti creati o recuperati in seguito.
 
-Successivamente, è possibile creare HolographicSpace, chiamando [HolographicSpace. CreateForCoreWindow](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow).
+Successivamente, è possibile creare HolographicSpace, chiamando [HolographicSpace. CreateForCoreWindow](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow).
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(window);
@@ -104,11 +104,11 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 
 Quando l'App Player è pronta per il rendering del contenuto, è possibile stabilire una connessione all'host.
 
-La connessione può essere stabilita in uno dei modi follwing:
+La connessione può essere stabilita in uno dei modi seguenti:
 1) L'App Player in esecuzione su HoloLens 2 si connette all'app host.
 2) L'app host si connette all'App Player in esecuzione su HoloLens 2.
 
-Per connettersi dall'App Player all'host, chiamare il ```Connect``` metodo sul contesto del lettore specificando il nome host e la porta. La porta predefinita è **8265**.
+Per connettersi dall'App Player all'host, chiamare il metodo ```Connect``` nel contesto del lettore specificando il nome host e la porta. La porta predefinita è **8265**.
 
 ```cpp
 try
@@ -122,9 +122,9 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Come per qualsiasi C++API ```Connect``` /WinRT, può generare un WinRT:: hresult_error che deve essere gestito.
+>Come per qualsiasi C++API/WinRT ```Connect``` possibile generare un WinRT:: hresult_error che deve essere gestito.
 
-L'ascolto delle connessioni in ingresso nell'App Player può essere eseguito chiamando il ```Listen``` metodo. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati il numero di porta **8265** e **8266** .
+L'ascolto delle connessioni in ingresso nell'App Player può essere eseguito chiamando il metodo ```Listen```. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati il numero di porta **8265** e **8266** .
 
 ```cpp
 try
@@ -140,15 +140,15 @@ catch(winrt::hresult_error& e)
 
 ## <a name="handling-connection-related-events"></a>Gestione degli eventi correlati alla connessione
 
-```PlayerContext``` Espone tre eventi per monitorare lo stato della connessione.
-1) OnConnected: Attivato quando una connessione all'host viene stabilita correttamente.
+Il ```PlayerContext``` espone tre eventi per monitorare lo stato della connessione
+1) OnConnected: attivato quando una connessione all'host è stata stabilita correttamente.
 ```cpp
 m_onConnectedEventToken = m_playerContext.OnConnected([]() 
 {
     // Handle connection successfully established
 });
 ```
-2) Disconnected: Attivato se una connessione stabilita viene terminata o non è stato possibile stabilire una connessione.
+2) Disconnected: attivato se una connessione stabilita viene terminata o non è stato possibile stabilire una connessione.
 ```cpp
 m_onDisconnectedEventToken = m_playerContext.OnDisconnected([](ConnectionFailureReason failureReason)
 {
@@ -160,9 +160,9 @@ m_onDisconnectedEventToken = m_playerContext.OnDisconnected([](ConnectionFailure
 }
 ```
 >[!NOTE]
->I ```ConnectionFailureReason``` valori possibili sono documentati ```Microsoft.Holographic.AppRemoting.idl``` nel [file](#idl).
+>I valori ```ConnectionFailureReason``` possibili sono documentati nel [file](#idl)di ```Microsoft.Holographic.AppRemoting.idl```.
 
-3) Onlistening: In attesa dell'avvio delle connessioni in ingresso.
+3) Onlistening: durante l'ascolto delle connessioni in ingresso viene avviato.
 ```cpp
 m_onListeningEventToken = m_playerContext.OnListening([]()
 {
@@ -170,18 +170,18 @@ m_onListeningEventToken = m_playerContext.OnListening([]()
 });
 ```
 
-Inoltre, è possibile eseguire query sullo stato della connessione ```ConnectionState``` utilizzando la proprietà nel contesto del lettore.
+Inoltre, è possibile eseguire query sullo stato della connessione utilizzando la proprietà ```ConnectionState``` nel contesto del lettore.
 ```cpp
 winrt::Microsoft::Holographic::AppRemoting::ConnectionState state = m_playerContext.ConnectionState();
 ```
 
 ## <a name="display-the-remotely-rendered-frame"></a>Visualizzare il frame sottoposto a rendering remoto
 
-Per visualizzare il contenuto di cui è stato eseguito ```PlayerContext::BlitRemoteFrame()``` il rendering in remoto, chiamare durante il rendering di un [HolographicFrame](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe). 
+Per visualizzare il contenuto di cui è stato eseguito il rendering in remoto, chiamare ```PlayerContext::BlitRemoteFrame()``` durante il rendering di un [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe). 
 
-```BlitRemoteFrame()```richiede che il buffer nascosto per la HolographicFrame corrente sia associato come destinazione di rendering. Il buffer nascosto può essere ricevuto da [HolographicCameraRenderingParameters](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) tramite la proprietà [Direct3D11BackBuffer](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) .
+```BlitRemoteFrame()``` richiede che il buffer nascosto per la HolographicFrame corrente sia associato come destinazione di rendering. Il buffer nascosto può essere ricevuto da [HolographicCameraRenderingParameters](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) tramite la proprietà [Direct3D11BackBuffer](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) .
 
-Quando viene chiamato ```BlitRemoteFrame()``` , copia l'ultimo frame ricevuto dall'applicazione host nel buffer di HolographicFrame. Inoltre, il set di punti di interesse è impostato, se l'applicazione remota ha specificato un punto di attivazione durante il rendering del frame remoto.
+Quando viene chiamato, ```BlitRemoteFrame()``` copia l'ultimo frame ricevuto dall'applicazione host nel buffer di HolographicFrame. Inoltre, il set di punti di interesse è impostato, se l'applicazione remota ha specificato un punto di attivazione durante il rendering del frame remoto.
 
 ```cpp
 // Blit the remote frame into the backbuffer for the HolographicFrame.
@@ -189,33 +189,51 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 ```
 
 >[!NOTE]
->```PlayerContext::BlitRemoteFrame()```potenzialmente sovrascrive il punto di messa a fuoco per il frame corrente. 
->- Per specificare un punto di attivazione di fallback, chiamare [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) prima ```PlayerContext::BlitRemoteFrame()```di. 
->- Per overrwrite il punto di attivazione remota, chiamare [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) dopo ```PlayerContext::BlitRemoteFrame()```.
+>```PlayerContext::BlitRemoteFrame()``` potenzialmente sovrascrive il punto di messa a fuoco per il frame corrente. 
+>- Per specificare un punto di attivazione di fallback, chiamare [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) prima di ```PlayerContext::BlitRemoteFrame()```. 
+>- Per sovrascrivere il punto di attivazione remota, chiamare [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) dopo ```PlayerContext::BlitRemoteFrame()```.
 
-Se l'operazione ```BlitRemoteFrame()``` riesce ```BlitResult::Success_Color```, restituisce. In caso contrario, restituisce il motivo dell'errore:
-- ```BlitResult::Failed_NoRemoteFrameAvailable```: Operazione non riuscita perché non è disponibile un frame remoto.
-- ```BlitResult::Failed_NoCamera```: Operazione non riuscita perché non è presente alcuna fotocamera.
+In seguito all'esito positivo, ```BlitRemoteFrame()``` restituisce ```BlitResult::Success_Color```. In caso contrario, restituisce il motivo dell'errore:
+- ```BlitResult::Failed_NoRemoteFrameAvailable```: operazione non riuscita perché non è disponibile un frame remoto.
+- ```BlitResult::Failed_NoCamera```: operazione non riuscita perché non è presente alcuna fotocamera.
+- ```BlitResult::Failed_RemoteFrameTooOld```: operazione non riuscita perché il frame remoto è troppo vecchio (vedere la proprietà PlayerContext:: BlitRemoteFrameTimeout).
 
-## <a name="optional-get-statistics-about-the-last-remote-frame"></a>Facoltativo: Ottenere le statistiche sull'ultimo frame remoto
+## Facoltativo: set BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
+>[!IMPORTANT]
+> ```PlayerContext::BlitRemoteFrameTimout``` è supportato a partire dalla versione [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
 
-Per diagnosticare problemi di prestazioni o di rete, è possibile recuperare le statistiche sull'ultimo frame remoto ```PlayerContext::LastFrameStatistics``` tramite la proprietà. Le statistiche vengono aggiornate durante la chiamata a [HolographicFrame::P resentusingcurrentprediction](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction).
+La proprietà ```PlayerContext::BlitRemoteFrameTimeout``` specifica l'intervallo di tempo in cui un frame remoto viene riutilizzato se non viene ricevuto alcun nuovo frame remoto. 
+
+Un caso d'uso comune è quello di abilitare il timeout BlitRemoteFrame per visualizzare una schermata vuota se non vengono ricevuti nuovi frame per un determinato periodo di tempo. Quando è abilitata, è possibile usare il tipo restituito del metodo ```BlitRemoteFrame``` anche per passare a un contenuto di fallback sottoposto a rendering in locale. 
+
+Per abilitare il timeout, impostare il valore della proprietà su una durata uguale o maggiore di 100 ms. Per disabilitare il timeout, impostare la proprietà su zero Duration. Se il timeout è abilitato e non viene ricevuto un frame remoto per la durata impostata, BlitRemoteFrame avrà esito negativo e restituirà ```Failed_RemoteFrameTooOld``` fino a quando non viene ricevuto un nuovo frame remoto.
+
+```cpp
+using namespace std::chrono_literals;
+
+// Set the BlitRemoteFrame timeout to 0.5s
+m_playerContext.BlitRemoteFrameTimeout(500ms);
+```
+
+## <a name="optional-get-statistics-about-the-last-remote-frame"></a>Facoltativo: ottenere le statistiche sull'ultimo frame remoto
+
+Per diagnosticare problemi di prestazioni o di rete, è possibile recuperare le statistiche sull'ultimo frame remoto tramite la proprietà ```PlayerContext::LastFrameStatistics```. Le statistiche vengono aggiornate durante la chiamata a [HolographicFrame::P resentusingcurrentprediction](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction).
 
 ```cpp
 // Get statistics for the last presented frame.
 winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m_playerContext.LastFrameStatistics();
 ```
 
-Per ulteriori informazioni, vedere la ```PlayerFrameStatistics``` documentazione ```Microsoft.Holographic.AppRemoting.idl``` nel [file](#idl).
+Per ulteriori informazioni, vedere la documentazione ```PlayerFrameStatistics``` nel [file](#idl)di ```Microsoft.Holographic.AppRemoting.idl```.
 
-## <a name="optional-custom-data-channels"></a>Facoltativo: Canali di dati personalizzati
+## <a name="optional-custom-data-channels"></a>Facoltativo: canali di dati personalizzati
 
 I canali di dati personalizzati possono essere utilizzati per inviare dati utente tramite la connessione remota già stabilita. Per ulteriori informazioni, vedere [canali di dati personalizzati](holographic-remoting-custom-data-channels.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
-* [Canali di dati di comunicazione remota olografica personalizzati](holographic-remoting-custom-data-channels.md)
+* [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
 * [Stabilire una connessione sicura con la comunicazione remota olografica](holographic-remoting-secure-connection.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)
-* [Condizioni di licenza software per la comunicazione remota olografica](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

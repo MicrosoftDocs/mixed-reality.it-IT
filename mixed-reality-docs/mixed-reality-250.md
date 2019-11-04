@@ -3,18 +3,18 @@ title: MR sharing 250-HoloLens e auricolari immersivi
 description: Seguire questa procedura dettagliata di codifica usando Unity, Visual Studio, HoloLens e gli auricolari per la realtà mista di Windows per apprendere i dettagli della condivisione degli ologrammi tra i dispositivi a realtà mista.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, immersive, Motion controller, condivisione, Xbox Controller, rete, dispositivo incrociato
-ms.openlocfilehash: 9e1cb0d168b8bf830b4477190516cd19caef7972
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: c8d341f75424887ca1b0994c8a4d16a0bded671e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63506110"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437870"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
 
 <br>
 
@@ -69,6 +69,7 @@ Assicurarsi che l'ambiente di sviluppo sia pronto per l'uso con un progetto semp
 Un'applicazione che mostra un ologramma in HoloLens o in un headset a realtà mista di Windows.
 
 ### <a name="steps"></a>Passaggi
+
 * Aprire Unity.
     * Selezionare **Apri**.
     * Passare alla posizione in cui sono stati estratti i file di progetto.
@@ -83,7 +84,7 @@ Un'applicazione che mostra un ologramma in HoloLens o in un headset a realtà mi
     * *La realtà mista di Windows dovrebbe essere Virtual Reality SDK.*
 * Creare una scena.
     * Nella **gerarchia** fare clic su **fotocamera principale** Selezionare **Elimina**.
-    * Da **HoloToolkit > Input >** i prefabbricati trascinano **MixedRealityCameraParent** nella **gerarchia**.
+    * Da **HoloToolkit > Input > i prefabbricati** trascinano **MixedRealityCameraParent** nella **gerarchia**.
 * Aggiungere ologrammi alla scena
     * Da **AppPrefabs** trascinare **SKYBOX** nella **visualizzazione scena**.
     * Da **AppPrefabs** trascinare i **Manager** alla **gerarchia**.
@@ -112,7 +113,7 @@ Un'applicazione che mostra un ologramma in HoloLens o in un headset a realtà mi
 
 Nel pannello del progetto passare a **Assets\HoloToolkit\Input\Scripts\Utilities** e fare doppio clic su **MixedRealityCameraManager.cs** per aprirlo.
 
-**Panoramica** MixedRealityCameraManager.cs è un semplice script che regola il livello di qualità e le impostazioni di sfondo in base al dispositivo. La chiave è HolographicSettings. IsDisplayOpaque, che consente a uno script di rilevare se il dispositivo è un HoloLens (IsDisplayOpaque restituisce false) o un auricolare immersivo (IsDisplayOpaque restituisce true).
+**Panoramica:** MixedRealityCameraManager.cs è un semplice script che regola il livello di qualità e le impostazioni di sfondo in base al dispositivo. La chiave è HolographicSettings. IsDisplayOpaque, che consente a uno script di rilevare se il dispositivo è un HoloLens (IsDisplayOpaque restituisce false) o un auricolare immersivo (IsDisplayOpaque restituisce true).
 
 ### <a name="enjoy-your-progress"></a>Scopri lo stato di avanzamento
 
@@ -130,14 +131,15 @@ Mostra come gestire l'input per un'applicazione di realtà mista di Windows.
 
 Basandosi sull'applicazione del capitolo 1, si aggiungeranno funzionalità per consentire all'utente di prelevare l'ologramma e posizionarlo in una superficie reale in HoloLens o in una tabella virtuale in un auricolare immersivo.
 
-**Aggiornamento dell'input:** In HoloLens il gesto di selezione è il **tocco d'aria**. Negli auricolari immersivi viene usato il pulsante **a** del controller Xbox. Per ulteriori informazioni sull'input, [iniziare da qui](gestures.md).
+**Aggiornamento dell'input:** In HoloLens il gesto di selezione è il **tocco d'aria**. Negli auricolari immersivi viene usato il pulsante **a** del controller Xbox. Per altre informazioni, vedere [Panoramica del modello di interazione](interaction-fundamentals.md).
 
 ### <a name="steps"></a>Passaggi
+
 * Aggiunta di gestione input
-    * Da **HoloToolkit > Input >** i prefabbricati trascinano **InputManager** nella **gerarchia** come figlio dei **responsabili**.
+    * Da **HoloToolkit > Input > i prefabbricati** trascinano **InputManager** nella **gerarchia** come figlio dei **responsabili**.
     * Da **HoloToolkit > Input > Prefabbricati >** cursore **di** trascinamento cursore alla **gerarchia**.
 * Aggiungi mapping spaziale
-    * Da **HoloToolkit > SpatialMapping >** i prefabbricati trascinano **SpatialMapping** nella **gerarchia**.
+    * Da **HoloToolkit > SpatialMapping > i prefabbricati** trascinano **SpatialMapping** nella **gerarchia**.
 * Aggiungi playspace virtuale
     * In **gerarchia** Espandi **MixedRealityCameraParent** Selezionare **limite**
     * Nel pannello **Inspector** selezionare la casella per abilitare il **limite**
@@ -193,6 +195,7 @@ Verificare che la rete sia configurata correttamente e detaili la modalità di c
 Il progetto viene convertito in un progetto multiplayer. Si aggiungeranno l'interfaccia utente e la logica alle sessioni host o join. Gli utenti di HoloLens si vedranno reciprocamente nella sessione con i cloud sulle rispettive e gli utenti di auricolari immersivi hanno un cloud vicino a quello in cui si trova l'ancoraggio. Gli utenti degli auricolari immersivi vedranno gli utenti di HoloLens relativi all'origine della scena. Gli utenti di HoloLens vedranno l'ologramma dell'isola nella stessa posizione. Si noti che gli utenti negli auricolari immersivi non si troveranno nell'isola durante questo capitolo, ma si comporteranno in modo molto simile a HoloLens, con una vista degli uccelli dell'isola.
 
 ### <a name="steps"></a>Passaggi
+
 * Rimuovi isola e VRRoom
     * In **gerarchia** fare clic con il pulsante destro del mouse su **isola** Selezionare **Elimina**
     * In **gerarchia** fare clic con il pulsante destro del mouse su **VRRoom** Selezionare **Elimina**
@@ -250,10 +253,12 @@ Adatta l'esperienza a ogni tipo di dispositivo di realtà mista.
 L'applicazione viene aggiornata in modo da inserire utenti di auricolari immersivi nell'isola con una visualizzazione immersiva. Gli utenti di HoloLens avranno ancora la vista d'occhio dell'isola. Gli utenti di ogni tipo di dispositivo possono visualizzare altri utenti così come appaiono nel mondo. Ad esempio, gli utenti con auricolari immersivi possono visualizzare gli altri avatar su altri percorsi nell'isola e vedono gli utenti di HoloLens come cloud giganti sopra l'isola. Gli utenti di auricolari immersivi vedranno anche il cursore del raggio di sguardi dell'utente HoloLens se l'utente HoloLens sta esaminando l'isola. Gli utenti di HoloLens visualizzeranno un avatar nell'isola per rappresentare ogni utente di un headset immersivo.
 
 **Input aggiornato per il dispositivo immersivo:**
+
 * I pulsanti sinistro e destro del mouse sul controller Xbox ruotano il lettore
 * Se si tiene premuto il pulsante Y sul controller Xbox, viene abilitato un cursore [Teleport](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Se il cursore ha un indicatore della freccia rotante quando si rilascia il pulsante Y, verrà avviata la teleportazione nella posizione del cursore.
 
 ### <a name="steps"></a>Passaggi
+
 * Aggiungere MixedRealityTeleport a MixedRealityCameraParent
     * In **gerarchia**selezionare **usland**.
     * In **Inspector**, abilitare il **controllo del livello**.
@@ -265,7 +270,7 @@ L'applicazione viene aggiornata in modo da inserire utenti di auricolari immersi
 
 Gli utenti con auricolari immersivi saranno collegati ai PC con un cavo, ma l'isola è più grande del cavo. Per compensare, è necessario avere la possibilità di spostare la fotocamera in modo indipendente dal movimento dell'utente. Per altre informazioni sulla progettazione di un'applicazione di realtà mista (in particolare movimento autonomo e locomozione), vedere la pagina relativa alla [comodità](comfort.md) .
 
-Per descrivere questo processo, sarà utile definire due termini. Per prima  cosa, Dolly sarà l'oggetto che sposta la fotocamera in modo indipendente dall'utente. Un oggetto gioco figlio della **bambola** sarà la **fotocamera principale**. La videocamera principale è collegata alla testa dell'utente.
+Per descrivere questo processo, sarà utile definire due termini. Per prima cosa, **Dolly** sarà l'oggetto che sposta la fotocamera in modo indipendente dall'utente. Un oggetto gioco figlio della **bambola** sarà la **fotocamera principale**. La videocamera principale è collegata alla testa dell'utente.
 
 Nel pannello del progetto passare a **Assets\AppPrefabs\Support\Scripts\GameLogic** e fare doppio clic su **MixedRealityTeleport.cs**.
 
@@ -288,6 +293,7 @@ Questa volta è necessario trovare un amico.
 Ancora una volta, un utente con il HoloLens ospiterà una sessione. Altri utenti faranno parte della sessione. L'applicazione inserisce i primi tre utenti in join da un auricolare immersivo in uno dei tre percorsi dell'isola. È possibile esplorare l'isola in questa sezione.
 
 Dettagli da notare:
+
 1. È possibile visualizzare i visi nei cloud, che consentono a un utente immerso di vedere quale direzione sta cercando un utente HoloLens.
 2. Gli avatar nell'isola hanno colli che ruotano. Non seguiranno le operazioni che l'utente sta eseguendo è la realtà reale (queste informazioni non sono disponibili), ma è un'esperienza interessante.
 3. Se l'utente HoloLens sta esaminando l'isola, gli utenti immersi possono visualizzarne il cursore.
@@ -306,8 +312,9 @@ Creare un'esperienza interattiva collaborativa tra i due tipi di dispositivi.
 Basandosi sul capitolo 4, quando un utente con una cuffia coinvolgente si avvicina a un rompicapo nell'isola, gli utenti di HoloLens otterranno una descrizione comando con un indizio sul puzzle. Una volta che tutti gli utenti di auricolari immersivi hanno superato i loro rompicapo e il "pad pronto" nella sala Rocket, il Rocket si avvierà.
 
 ### <a name="steps"></a>Passaggi
+
 * In **gerarchia**selezionare **usland**.
-* In controllo, in **controllo livello**, selezionare **Abilita collaborazione**.
+* Incontrollo, in **controllo livello**, selezionare **Abilita collaborazione**.
 
 ### <a name="digging-into-the-code"></a>Ricerche nel codice
 
@@ -323,20 +330,20 @@ CheckGoal esegue alcuni calcoli matematici per verificare se il pad è più o me
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
-       {
-           levelState.SetGoalIndex(GoalIndex);
-       }
+{
+    levelState.SetGoalIndex(GoalIndex);
+}
 ```
 
 ```cs
 public void SendAtGoal(int GoalIndex)
-       {
-           if (isLocalPlayer)
-           {
-               Debug.Log("sending at goal " + GoalIndex);
-               CmdSendAtGoal(GoalIndex);
-           }
-       }
+{
+    if (isLocalPlayer)
+    {
+        Debug.Log("sending at goal " + GoalIndex);
+        CmdSendAtGoal(GoalIndex);
+    }
+}
 ```
 
 Si noti che SendAtGoalMessage chiama CmdSendAtGoal, che chiama levelState. SetGoalIndex, che è di nuovo in LevelControl.cs. A prima vista, sembra strano. Perché non è sufficiente chiamare SetGoalIndex anziché questo strano routing tramite il controller del lettore? Il motivo è che è conforme al modello di dati usato da UNET per la sincronizzazione dei dati. Per evitare frodi e thrashing, UNET richiede che ogni oggetto disponga di un utente con l'autorità di modificare le variabili sincronizzate. Inoltre, solo l'host (l'utente che ha avviato la sessione) può modificare direttamente i dati. Gli utenti che non sono host, ma hanno l'autorità necessaria per inviare un "comando" all'host che modificherà la variabile. Per impostazione predefinita, l'host dispone di autorità su tutti gli oggetti, ad eccezione dell'oggetto generato per rappresentare l'utente. In questo caso l'oggetto ha lo script PlayerController. Esiste un modo per richiedere un'autorità per un oggetto e quindi apportare le modifiche, ma si sceglie di sfruttare il fatto che il controller del lettore dispone di autoauthority e indirizzare i comandi attraverso il controller del lettore.
@@ -349,5 +356,6 @@ Tornando a LevelControl.cs, vedere SetGoalIndex. Qui viene impostato il valore d
 
 Per la compilazione nel capitolo precedente, la sessione viene avviata come prima. Questa volta, quando gli utenti nell'auricolare immersiva entrano nello "sportello" sul percorso, viene visualizzata una descrizione comando che solo gli utenti HoloLens possono vedere. Gli utenti di HoloLens sono responsabili della comunicazione di questo indizio agli utenti nell'auricolare immersiva. Il Rocket si avvierà allo spazio quando ogni avatar ha risalendo al Pad marrone corrispondente all'interno del vulcano. La scena viene reimpostata dopo 60 secondi, quindi è possibile eseguirla di nuovo.
 
-## <a name="see-also"></a>Vedere anche
-* [Input MR 213: Controller del movimento](mixed-reality-213.md)
+## <a name="see-also"></a>Vedi anche
+
+* [Input MR 213: controller di movimento](mixed-reality-213.md)

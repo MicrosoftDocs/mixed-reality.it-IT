@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, Machine Learning, ml, Machine Learning Studio, hololens, immersive, VR
-ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694547"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437930"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -24,7 +24,7 @@ ms.locfileid: "67694547"
 
 In questo corso si apprenderà come aggiungere le funzionalità di Machine Learning (ML) a un'applicazione di realtà mista usando Azure Machine Learning Studio.
 
-*Azure Machine Learning Studio* è un servizio Microsoft, che fornisce agli sviluppatori un numero elevato di algoritmi di Machine Learning, che possono essere utili per l'input, l'output, la preparazione e la visualizzazione dei dati. Da questi componenti è quindi possibile sviluppare un esperimento di analisi predittiva, eseguirne l'iterazione e usarlo per il training del modello. Seguendo il training, è possibile rendere operativo il modello all'interno del cloud di Azure, in modo da poter assegnare un punteggio ai nuovi dati. Per ulteriori informazioni, visitare la [pagina Azure Machine Learning Studio](https://azure.microsoft.com/en-au/services/machine-learning-studio/).
+*Azure Machine Learning Studio* è un servizio Microsoft, che fornisce agli sviluppatori un numero elevato di algoritmi di Machine Learning, che possono essere utili per l'input, l'output, la preparazione e la visualizzazione dei dati. Da questi componenti è quindi possibile sviluppare un esperimento di analisi predittiva, eseguirne l'iterazione e usarlo per il training del modello. Seguendo il training, è possibile rendere operativo il modello all'interno del cloud di Azure, in modo da poter assegnare un punteggio ai nuovi dati. Per ulteriori informazioni, visitare la [pagina Azure Machine Learning Studio](https://azure.microsoft.com/services/machine-learning-studio/).
 
 Dopo aver completato questo corso, si disporrà di un'applicazione con cuffie immersive di realtà mista e si avrà appreso come eseguire le operazioni seguenti:
 
@@ -144,7 +144,7 @@ Per usare la *Azure Machine Learning*, è necessario configurare un'istanza del 
 
     9.  Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    10. Fare clic su **Crea**.
+    10. Fai clic su **Crea**.
 
         ![Azure Machine Learning Studio](images/AzureLabs-Lab7-6.png)
 
@@ -169,7 +169,7 @@ Per usare la *Azure Machine Learning*, è necessario configurare un'istanza del 
     ![Azure Machine Learning Studio](images/AzureLabs-Lab7-10.png)
 
 
-## <a name="chapter-3---the-machine-learning-studio-dataset-setup"></a>Capitolo 3-i Machine Learning Studio: Impostazione set di dati
+## <a name="chapter-3---the-machine-learning-studio-dataset-setup"></a>Capitolo 3-la Machine Learning Studio: impostazione del set di dati
 
 Uno dei modi in cui Machine Learning gli algoritmi è l'analisi dei dati esistenti e quindi il tentativo di stimare i risultati futuri in base al set di dati esistente. Ciò significa in genere che i dati più esistenti si presentano, migliore sarà l'algoritmo per la stima dei risultati futuri.
 
@@ -180,7 +180,7 @@ Viene fornita una tabella di esempio per questo corso, denominata ProductsTableC
 
 Questo set di dati di esempio contiene un record degli oggetti più venduti ogni ora di ogni giorno dell'anno 2017.
         
-![Il Machine Learning Studio: Impostazione set di dati](images/AzureLabs-Lab7-11.png)
+![Il Machine Learning Studio: impostazione del set di dati](images/AzureLabs-Lab7-11.png)
 
 Ad esempio, il giorno 1 di 2017, alle 13.00 (ora 13), l'elemento più venduto era Salt e Pepper.
 
@@ -188,17 +188,17 @@ Questa tabella di esempio contiene 9998 voci.
 
 1.  Tornare al portale di **Machine Learning Studio** e aggiungere questa tabella come **set di dati** per ml. A tale scopo, fare clic sul pulsante **+ nuovo** nell'angolo in basso a sinistra della schermata.
 
-    ![Il Machine Learning Studio: Impostazione set di dati](images/AzureLabs-Lab7-12.png)
+    ![Il Machine Learning Studio: impostazione del set di dati](images/AzureLabs-Lab7-12.png)
 
 2.  Viene rilevata una sezione dalla parte inferiore e all'interno del pannello di navigazione a sinistra. Fare clic su **set di dati**, quindi a destra di tale, **da file locale**.
 
-    ![Il Machine Learning Studio: Impostazione set di dati](images/AzureLabs-Lab7-13.png)
+    ![Il Machine Learning Studio: impostazione del set di dati](images/AzureLabs-Lab7-13.png)
 
 3.  Caricare il nuovo **set di dati** attenendosi alla procedura seguente:
 
     1. Verrà visualizzata la finestra carica, in cui è possibile **esplorare** il disco rigido per il nuovo set di dati.
 
-        ![Il Machine Learning Studio: Impostazione set di dati](images/AzureLabs-Lab7-14.png)
+        ![Il Machine Learning Studio: impostazione del set di dati](images/AzureLabs-Lab7-14.png)
 
     2.  Una volta selezionato e nuovamente nella finestra di caricamento, lasciare la casella di controllo non selezionata.
 
@@ -208,55 +208,55 @@ Questa tabella di esempio contiene 9998 voci.
 
     5.  Premere il segno di selezione nella parte inferiore destra della finestra di caricamento e il **set di dati** verrà caricato.
 
-## <a name="chapter-4---the-machine-learning-studio-the-experiment"></a>Capitolo 4-i Machine Learning Studio: Esperimento
+## <a name="chapter-4---the-machine-learning-studio-the-experiment"></a>Capitolo 4-il Machine Learning Studio: esperimento
 
 Prima di poter compilare il sistema di Machine Learning, è necessario creare un esperimento per convalidare la teoria sui dati. Con i risultati, sarà possibile sapere se sono necessari più dati o se non esiste alcuna correlazione tra i dati e un possibile risultato.
 
 Per iniziare a creare un esperimento:
 
-1.  Fare di nuovo clic sul pulsante **+ nuovo** nella parte inferiore sinistra della pagina, quindi fare clic **su** > esperimento**vuoto**esperimento.
+1.  Fare di nuovo clic sul pulsante **+ nuovo** nella parte inferiore sinistra della pagina, quindi fare clic su **esperimento** > **esperimento vuoto**.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-15.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-15.png)
 
 2.  Verrà visualizzata una nuova pagina con un esperimento vuoto:
 
-3.  Dal pannello a sinistra espandere set di **Impostazioni DataSet** > salvati**e trascinare** il **ProductsTableCSV** nell'area di **disegno dell'esperimento**.
+3.  Dal pannello a sinistra espandere set di **impostazioni salvati** > **My Datasets** e trascinare **ProductsTableCSV** sull'area di disegno dell' **esperimento**.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-16.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-16.png)
 
 4.  Nel pannello a sinistra espandere **Data Transformation** > **Sample e Split**. Trascinare quindi l'elemento **Split data** nell'area di **disegno dell'esperimento**. L'elemento Split data suddividerà il set di dati in due parti. Una parte che si userà per il training dell'algoritmo di machine learning. La seconda parte verrà utilizzata per valutare l'accuratezza dell'algoritmo generato.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-17.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-17.png)
 
 5.  Nel pannello destro (mentre l'elemento Split data nell'area di disegno è selezionato) modificare la **frazione di righe nel primo set** di dati di output in **0,7**. I dati verranno suddivisi in due parti, la prima parte sarà pari al 70% dei dati e la seconda parte sarà il 30% rimanente. Per assicurarsi che i dati vengano suddivisi in modo casuale, verificare che la casella di controllo **suddivisione casuale** rimanga selezionata.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-18.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-18.png)
 
 6.  Trascinare una connessione dalla base dell'elemento **ProductsTableCSV** nell'area di disegno all'inizio dell'elemento di dati divisi. In questo modo si connetteranno gli elementi e si invierà l'output del set di dati **ProductsTableCSV** (i dati) all'input dei dati suddivisi.  
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-19.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-19.png)
 
 7.  Nel pannello **esperimenti** sul lato sinistro espandere **Machine Learning** > **Train**. Trascinare l'elemento **Train Model** nell'area di disegno dell'esperimento. L'area di disegno dovrebbe avere un aspetto analogo a quello riportato di seguito.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-20.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-20.png)
 
 8.  Dalla parte ***inferiore sinistra*** dell'elemento **Split data** trascinare una connessione all' **angolo superiore destro** dell'elemento **Train Model** . La prima divisione del 70% dal set di dati verrà utilizzata dal modello Train per eseguire il training dell'algoritmo.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-21.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-21.png)
 
 9.  Selezionare l'elemento **Train Model** nell'area di disegno e nel pannello **Proprietà** (sul lato destro della finestra del browser) fare clic sul pulsante **Launch Column Selector** .
 
 10. Nella casella di testo digitare **Product** , quindi premere **invio**. il *prodotto* verrà impostato come colonna per eseguire il training delle stime. A questo punto, fare clic sul **segno** di selezione nell'angolo in basso a destra per chiudere la finestra di dialogo di selezione.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-22.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-22.png)
 
 11. Si intende eseguire il training di un algoritmo di **regressione logistica multiclasse** per stimare il **prodotto** più venduto in base all'ora del giorno e alla data. Esula dall'ambito di questo documento per spiegare i dettagli dei diversi algoritmi forniti da Azure Machine Learning Studio, tuttavia, è possibile ottenere altre informazioni dal foglio informativo sugli [algoritmi di Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. Dal pannello degli elementi dell'esperimento a sinistra espandere **Machine Learning** > inizializzare la**classificazione**del**modello** > e trascinare l'elemento regressione **logistica multiclasse** nell'area di disegno dell'esperimento.
+12. Dal pannello degli elementi dell'esperimento a sinistra espandere **Machine Learning** > **inizializzare il modello** > **classificazione**e trascinare l'elemento **regressione logistica multiclasse** nell'area di disegno dell'esperimento.
 
 13. Connettere l'output, dalla parte inferiore della **regressione logistica multiclasse**, all'input in alto a sinistra dell'elemento del **modello Train** .
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-23.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-23.png)
 
 14. Nell'elenco degli elementi dell'esperimento nel pannello a sinistra espandere **Machine Learning** > **Score**e trascinare l'elemento **Score Model** nell'area di disegno.
 
@@ -264,64 +264,64 @@ Per iniziare a creare un esperimento:
 
 16. Connettere l'output inferiore destro da **Split data**all'input superiore destro dell'elemento **Score Model** .
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-24.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-24.png)
 
-17. Nell'elenco degli elementi dell' **esperimento** nel pannello a sinistra espandere **Machine Learning** > **valutare**e trascinare l'elemento **Evaluate Model** nell'area di disegno.
+17. Nell'elenco degli elementi dell' **esperimento** nel pannello a sinistra espandere **Machine Learning** > **Evaluate**e trascinare l'elemento **Evaluate Model** nell'area di disegno.
 
 18. Connettere l'output dal **modello di Punteggio** all'input superiore sinistro del **modello Evaluate**.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-25.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-25.png)
 
 19. Il primo esperimento Machine Learning è stato creato. È ora possibile salvare ed eseguire l'esperimento. Nel menu nella parte inferiore della pagina fare clic sul pulsante Save ( **Salva** ) per salvare l'esperimento e quindi fare clic su **Run (Esegui** ) per avviare l'esperimento.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-26.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-26.png)
 
 20. È possibile visualizzare lo **stato** dell'esperimento nella parte superiore destra dell'area di disegno. Attendere alcuni istanti per il completamento dell'esperimento.
 
     > Se si dispone di un set di dati di grandi dimensioni (reale), è probabile che l'esecuzione dell'esperimento possa richiedere alcune ore.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-27.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-27.png)
 
-21. Fare clic con il pulsante destro del mouse sull'elemento **Evaluate Model** nell'area di disegno e dal menu di scelta rapida posizionare il mouse sui **Risultati della valutazione**, quindi selezionare Visualize ( **Visualizza**).
+21. Fare clic con il pulsante destro del mouse sull'elemento **Evaluate Model** nell'area di disegno e dal menu di scelta rapida posizionare il mouse sui **Risultati della valutazione**, quindi selezionare **Visualize (Visualizza**).
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-28.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-28.png)
 
 22. I risultati della valutazione verranno visualizzati mostrando i risultati stimati rispetto ai risultati effettivi. Viene utilizzato il 30% del set di dati originale, diviso in precedenza, per la valutazione del modello. È possibile osservare che i risultati non sono ottimali, idealmente il numero più alto in ogni riga è costituito dall'elemento evidenziato nelle colonne.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-29.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-29.png)
 
 23. Chiudere i **risultati**.
 
 24. Per usare il modello di Machine Learning appena sottoposto a training, è necessario esporlo come **servizio Web**. A tale scopo, fare clic sulla voce di menu **Configura servizio Web** nel menu nella parte inferiore della pagina e fare clic su **servizio Web predittivo**.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-30.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-30.png)
 
 25. Viene creata una nuova scheda e il modello di training viene unito per creare il nuovo servizio Web. 
 
 26. Nel menu nella parte inferiore della pagina fare clic su **Salva**, quindi su **Esegui**. Viene visualizzato lo stato aggiornato nell'angolo superiore destro dell'area di disegno dell'esperimento.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-31.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-31.png)
 
 27. Al termine dell'esecuzione, verrà visualizzato un pulsante **Distribuisci servizio Web** nella parte inferiore della pagina. Si è pronti per distribuire il servizio Web. Fare clic su **Distribuisci servizio Web** (classico) nel menu nella parte inferiore della pagina.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-32.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-32.png)
 
     > Il browser potrebbe richiedere di consentire un popup, che dovrebbe essere **consentito**, ma potrebbe essere necessario premere di nuovo **Distribuisci servizio Web** , se la pagina Distribuisci non viene visualizzata. 
 
 28. Una volta creato l'esperimento, si verrà reindirizzati a una pagina del **Dashboard** in cui verrà visualizzata la **chiave API** . Per il momento, copiarlo in un blocco note, sarà necessario nel codice molto presto. Dopo aver annotato la chiave API, fare clic sul pulsante **richiesta/risposta** nella sezione **endpoint predefinito** sotto la chiave.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-33.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
     > Se si fa clic su test in questa pagina, sarà possibile immettere i dati di input e visualizzare l'output. Immettere il **giorno** e l' **ora**. Lasciare vuota la voce relativa al **prodotto** . Fare quindi clic sul pulsante **Confirm (conferma** ). L'output nella parte inferiore della pagina visualizzerà il codice JSON che rappresenta la probabilità che ogni prodotto sia la scelta.
 
 29. Viene visualizzata una nuova pagina Web che mostra le istruzioni e alcuni esempi sulla struttura di richiesta richiesta dal Machine Learning Studio. Copiare l' **URI della richiesta** visualizzato in questa pagina nel blocco note.
 
-    ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-34.png)
+    ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-34.png)
 
 A questo punto è stato creato un sistema di Machine Learning che fornisce il prodotto più probabile da vendere in base ai dati di acquisto cronologici, correlati all'ora del giorno e al giorno dell'anno.
 
-Per chiamare il servizio Web, è necessario l'URL per l'endpoint del servizio e una chiave API per il servizio. Fare clic sulla  scheda consume nel menu in alto.
+Per chiamare il servizio Web, è necessario l'URL per l'endpoint del servizio e una chiave API per il servizio. Fare clic sulla scheda **consume** nel menu in alto.
 
 Nella pagina informazioni sul **consumo** vengono visualizzate le informazioni necessarie per chiamare il servizio Web dal codice. Eseguire una copia della **chiave primaria** e dell'URL di **richiesta-risposta** . Questi sono necessari nel capitolo successivo.
 
@@ -330,13 +330,13 @@ Nella pagina informazioni sul **consumo** vengono visualizzate le informazioni n
 Configurare e testare l'auricolare immersiva della realtà mista.
 
 > [!NOTE]
->  **Non** sarà necessario alcun controller di movimento per questo corso. Per supportare la configurazione dell'auricolare immersiva, fare clic [qui](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+>  **Non** sarà necessario alcun controller di movimento per questo corso. Per supportare la configurazione dell'auricolare immersiva, fare clic [qui](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
-1.  Aprire **Unity** e creare un nuovo progetto Unity denominato **\_Mr MachineLearning.** Verificare che il tipo di progetto sia impostato su **3D**.
+1.  Aprire **Unity** e creare un nuovo progetto Unity denominato **Mr\_MachineLearning.** Verificare che il tipo di progetto sia impostato su **3D**.
 
-2.  Con Unity aperto, vale la pena controllare che l' **editor di script** predefinito sia impostato su **Visual Studio**. Passare a **modifica** > **Preferenze** e quindi dalla nuova finestra passare a **strumenti esterni**. Modificare l' **editor di script esterno** in **Visual Studio 2017**. Chiudere la finestra delle **Preferenze** .
+2.  Con Unity aperto, vale la pena controllare che l' **editor di script** predefinito sia impostato su **Visual Studio**. Passare a **modifica** **Preferenze** > e quindi dalla nuova finestra passare a **strumenti esterni**. Modificare l' **editor di script esterno** in **Visual Studio 2017**. Chiudere la finestra delle **Preferenze** .
 
-3.  Passare quindi a**impostazioni di compilazione** **file** > e passare alla piattaforma **piattaforma UWP (Universal Windows Platform)** , facendo clic sul pulsante ***Switch Platform*** .
+3.  Passare quindi a **File** > **impostazioni di compilazione** e impostare la piattaforma su **piattaforma UWP (Universal Windows Platform)** , facendo clic sul pulsante ***Switch Platform*** .
 
 4.  Assicurarsi inoltre che:
 
@@ -364,9 +364,9 @@ Configurare e testare l'auricolare immersiva della realtà mista.
 
     1.  Nella scheda **altre impostazioni** :
 
-        1.  Creazione di **script** La **versione di runtime** deve essere **sperimentale** (equivalente a .NET 4,6)
+        1.  La **versione di runtime** di **Scripting** deve essere **sperimentale** (equivalente a .NET 4,6)
 
-        2. Il **back-end** di scripting deve essere ***.NET***
+        2. Il **back-end di scripting** deve essere ***.NET***
 
         3. Il **livello di compatibilità API** deve essere **.NET 4,6**
 
@@ -410,7 +410,7 @@ Per importare il pacchetto:
 
     ![Importazione del pacchetto MLProducts Unity](images/AzureLabs-Lab7-41.png)
 
-5.  All'interno della cartella del **Pannello del progetto** , fare clic sulla cartella **Scenes** e fare doppio clic sulla scena all'interno di (denominata **MR_MachineLearningScene**). La scena si aprirà (vedere l'immagine seguente). Se i diamanti rossi sono mancanti, è sufficiente fare clic sul pulsante gizmos ( **Gizmo** ) in alto a destra nel **Pannello del gioco**.
+5.  All'interno della cartella del **Pannello del progetto** , fare clic sulla cartella **Scenes** e fare doppio clic sulla scena all'interno di (denominata **MR_MachineLearningScene**). La scena si aprirà (vedere l'immagine seguente). Se i diamanti rossi sono mancanti, è sufficiente fare clic sul pulsante **gizmos (Gizmo** ) in alto a destra nel **Pannello del gioco**.
 
     ![Importazione del pacchetto MLProducts Unity](images/AzureLabs-Lab7-44.png)
 
@@ -505,7 +505,7 @@ Come parte del pacchetto importato, si riceverà questa classe, sebbene sia inco
     > 1.  Per aprire la matrice di **punti di spawn** nello script del componente **ShelfKeeper** , fare clic su di essa. Verrà visualizzata una sottosezione denominata **size**, che indica le dimensioni della matrice. Digitare **3** nella casella di testo accanto a **size** e premere **invio**. verranno creati tre slot sotto.
     > 2. All'interno della **gerarchia** espandere l'oggetto **visualizzazione dell'ora** (facendo clic con il pulsante sinistro del mouse sulla freccia accanto). Fare quindi clic sulla ***videocamera principale*** dalla **gerarchia**, in modo che il **controllo** visualizzi le informazioni.
     > 3. Selezionare la **fotocamera principale** nel **Pannello gerarchia**. Trascinare gli oggetti **Data** e **ora** dal **Pannello gerarchia** agli slot di testo **Data** e **ora** nel **controllo** della **fotocamera principale** del componente **ShelfKeeper** .
-    > 4. Trascinare i **punti di spawn** dal **Pannello gerarchia** (sotto l'  oggetto scaffale) alle destinazioni di riferimento a **3** **elementi** sotto la matrice del **punto di spawn** , come illustrato nell'immagine.
+    > 4. Trascinare i **punti di spawn** dal **Pannello gerarchia** (sotto l'oggetto *scaffale* ) alle destinazioni di riferimento a **3** **elementi** sotto la matrice del **punto di spawn** , come illustrato nell'immagine.
     > 
     >     ![Creazione della classe ShelfKeeper](images/AzureLabs-Lab7-52.png)
 
@@ -527,7 +527,7 @@ Per creare questa classe:
 
 1.  Passare alla cartella **Scripts** nel **Pannello Project**.
 
-2.  Fare clic con il pulsante destro del mouse all'interno della cartella **Crea**  >   **C# script**. Chiamare lo script **ProductPrediction**.
+2.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi **creare** >  **C# script**. Chiamare lo script **ProductPrediction**.
 
 3.  Fare doppio clic sul nuovo script **ProductPrediction** per aprirlo con **Visual Studio 2017**.
 
@@ -648,9 +648,9 @@ Per creare questa classe:
     > [!IMPORTANT]
     > Assicurarsi di inserire la **chiave primaria** e l' **endpoint richiesta-risposta**dal portale di machine learning nelle variabili qui. Le immagini seguenti mostrano dove è stata eseguita la chiave e l'endpoint da. 
     >  
-    > ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-53-1.png)
+    > ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-53-1.png)
     >
-    > ![Il Machine Learning Studio: Esperimento](images/AzureLabs-Lab7-53-2.png)
+    > ![Machine Learning Studio: esperimento](images/AzureLabs-Lab7-53-2.png)
 
 8.  Inserire questo codice all'interno del metodo **Start ()** . Il metodo **Start ()** viene chiamato quando la classe inizializza:
 
@@ -811,7 +811,7 @@ Per creare questa classe:
 
 14. Trascinare lo script della classe **ProductPrediction** dalla cartella **script** nell'oggetto della **fotocamera principale** .
 
-15. Salva la scena e il progetto Salva **file** > di**scena/**  > **Salva**file.
+15. Salvare la scena e il **file** di progetto > **Salva scena/file** > **Salva progetto**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Capitolo 10: compilare la soluzione UWP
 
@@ -819,9 +819,9 @@ A questo punto è necessario compilare il progetto come soluzione UWP, in modo c
 
 Per compilare:
 
-1.  Salvare la scena corrente facendo clic su **file** > **Salva scene**.
+1.  Salvare la scena corrente facendo clic su **File** > **Salva scene**.
 
-2.  Vai a**impostazioni di compilazione** **file** > 
+2.  Vai a **File** > **impostazioni di compilazione**
 
 3.  Selezionare la casella denominata **progetti C# Unity** (questo aspetto è importante perché consente di modificare le classi al termine della compilazione).
 
@@ -833,7 +833,7 @@ Per compilare:
 
 6.  Verrà richiesto di selezionare la cartella in cui si vuole compilare la soluzione.
 
-7.  Creare una  cartella compilazioni e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
+7.  Creare una cartella **compilazioni** e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
 
 8.  Fare clic sulla nuova cartella e quindi fare clic su **Seleziona cartella**per iniziare la compilazione in quel percorso.
 
@@ -851,7 +851,7 @@ Per distribuire l'applicazione:
 
 2.  Con Visual Studio aperto è necessario ripristinare i pacchetti NuGet. a tale scopo, è possibile fare clic con il pulsante destro del mouse sulla soluzione MachineLearningLab_Build, dall'Esplora soluzioni (disponibile a destra di Visual Studio) e quindi scegliere Ripristina pacchetti NuGet:
 
-    ![Aggiungere i pacchetti NuGet](images/AzureLabs-Lab7-57.png)
+    ![Aggiungere pacchetti NuGet](images/AzureLabs-Lab7-57.png)
 
 3.  Nella configurazione della soluzione selezionare **debug**.
 
@@ -861,7 +861,7 @@ Per distribuire l'applicazione:
     > - Conosce l' **indirizzo IP** del HoloLens, disponibile all'interno delle *impostazioni > rete & Internet > Wi-Fi > Opzioni avanzate*; IPv4 è l'indirizzo da usare. 
     > - Verificare che la **modalità sviluppatore** sia **attiva**; disponibile in *impostazioni > aggiorna & > di sicurezza per gli sviluppatori*.
 
-    ![Aggiungere i pacchetti NuGet](images/AzureLabs-Lab7-58.png)
+    ![Aggiungere pacchetti NuGet](images/AzureLabs-Lab7-58.png)
 
 5.  Passare al **menu Compila** e fare clic su **Distribuisci soluzione** per SIDELOAD l'applicazione al PC.
 
@@ -874,7 +874,7 @@ Quando si esegue l'applicazione di realtà mista, viene visualizzato il banco co
  
 Congratulazioni, è stata creata un'app per realtà mista che sfrutta le Azure Machine Learning per eseguire stime dei dati e visualizzarle nella scena.
 
-![Aggiungere i pacchetti NuGet](images/AzureLabs-Lab7-0.png)
+![Aggiungere pacchetti NuGet](images/AzureLabs-Lab7-0.png)
 
 ## <a name="exercise"></a>Esercizio
 

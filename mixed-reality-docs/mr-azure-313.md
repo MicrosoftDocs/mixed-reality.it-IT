@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realtà mista, Academy, Edge, Internet delle cose, esercitazione, API, notifiche, funzioni, tabelle, hololens, immersive, VR, Internet delle cose, macchina virtuale, Ubuntu, Python
-ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047246"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437970"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
-# <a name="mr-and-azure-313-iot-hub-service"></a>MR e Azure 313: Servizio hub Internet delle cose
+# <a name="mr-and-azure-313-iot-hub-service"></a>MR e Azure 313: servizio hub Internet
 
 ![risultato del corso](images/AzureLabs-Lab313-00.png)
 
@@ -35,13 +35,13 @@ Completando questo corso, si apprenderà come:
 
 I servizi che si utilizzeranno includono:
 
-- **Hub di Azure** è un servizio di Microsoft Azure che consente agli sviluppatori di connettersi, monitorare e gestire le risorse del tutto. Per altre informazioni, visita la [pagina del **servizio Hub Azure** ](https://azure.microsoft.com/en-au/services/iot-hub/).
+- **Hub di Azure** è un servizio di Microsoft Azure che consente agli sviluppatori di connettersi, monitorare e gestire le risorse del tutto. Per altre informazioni, visita la [pagina del **servizio Hub Azure** ](https://azure.microsoft.com/services/iot-hub/).
 
-- **Azure container Registry** è un servizio di Microsoft Azure che consente agli sviluppatori di archiviare le immagini del contenitore per diversi tipi di contenitori. Per altre informazioni, visitare la [pagina del **servizio container Registry di Azure** ](https://azure.microsoft.com/en-au/services/container-registry/).
+- **Azure container Registry** è un servizio di Microsoft Azure che consente agli sviluppatori di archiviare le immagini del contenitore per diversi tipi di contenitori. Per altre informazioni, visitare la [pagina del **servizio container Registry di Azure** ](https://azure.microsoft.com/services/container-registry/).
 
-- **Azure app per le funzioni** è un servizio Microsoft Azure, che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. **Funzioni di Azure** supporta diversi linguaggi di sviluppo,\#tra cui\#C, F, node. js, Java e php. Per altre informazioni, visitare la [pagina **funzioni di Azure** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+- **Azure app per le funzioni** è un servizio Microsoft Azure, che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. **Funzioni di Azure** supporta diversi linguaggi di sviluppo, tra cui C\#, F\#, node. js, Java e php. Per altre informazioni, visitare la [pagina **funzioni di Azure** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
-- **Archiviazione di Azure: Tables** è un servizio Microsoft Azure, che consente agli sviluppatori di archiviare dati strutturati e non SQL nel cloud, rendendoli facilmente accessibili ovunque. Il servizio presenta una progettazione senza schema, che consente l'evoluzione delle tabelle in base alle esigenze e pertanto è molto flessibile. Per altre informazioni, visita la [pagina delle **tabelle di Azure**](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- **Archiviazione di Azure: tabelle** è un servizio Microsoft Azure, che consente agli sviluppatori di archiviare dati strutturati e non SQL nel cloud, rendendoli facilmente accessibili ovunque. Il servizio presenta una progettazione senza schema, che consente l'evoluzione delle tabelle in base alle esigenze e pertanto è molto flessibile. Per altre informazioni, visita la [pagina delle **tabelle di Azure**](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 
 Questo corso ti insegnerà come configurare e usare il servizio hub Internet delle cose e quindi visualizzare una risposta fornita da un dispositivo. Sarà quindi necessario applicare questi concetti a una configurazione del servizio Hub delle cose personalizzate, che può essere compilata.
 
@@ -51,7 +51,7 @@ Questo corso ti insegnerà come configurare e usare il servizio hub Internet del
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> MR e Azure 313: Servizio hub Internet delle cose</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR e Azure 313: servizio hub Internet</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -72,7 +72,7 @@ Sono necessari i componenti hardware e software seguenti:
 - Windows 10 SDK (versione più recente)
 - HoloLens, **modalità sviluppatore abilitata**
 - Visual Studio 2017.15.4 (usato solo per accedere al Cloud Explorer di Azure)
-- Accesso a Internet per Azure e per il servizio hub Internet. Per altre informazioni, seguire questo [collegamento alla pagina del servizio Hub](https://azure.microsoft.com/en-au/services/iot-hub/) Internet.
+- Accesso a Internet per Azure e per il servizio hub Internet. Per altre informazioni, seguire questo [collegamento alla pagina del servizio Hub](https://azure.microsoft.com/services/iot-hub/) Internet.
 - Un modello di machine learning. Se non si dispone di un modello pronto per l'utilizzo, [è possibile utilizzare il modello fornito con questo corso](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip).
 - Software **Hyper-V** abilitato nel computer di sviluppo Windows 10.
 - Una macchina virtuale che esegue Ubuntu (16,4 o 18,4), in esecuzione nel computer di sviluppo o in alternativa, è possibile usare un computer separato che esegue Linux (Ubuntu 16,4 o 18,4). Per ulteriori informazioni su come creare una macchina virtuale in Windows utilizzando Hyper-V, vedere il [capitolo "prima di iniziare"](#before-you-start). (https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine).  
@@ -82,14 +82,14 @@ Sono necessari i componenti hardware e software seguenti:
 ### <a name="before-you-start"></a>Prima di iniziare
 
 1. Configurare e testare il HoloLens. Se è necessario supporto per la configurazione di HoloLens, [vedere l'articolo relativo alla configurazione di HoloLens](https://docs.microsoft.com/hololens/hololens-setup).
-2. Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la taratura e l' **ottimizzazione dei sensori** , a volte può essere utile per eseguire queste attività per ogni utente.
+2. Quando si inizia a sviluppare una nuova app HoloLens, è consigliabile eseguire la **taratura** e l' **ottimizzazione dei sensori** , a volte può essere utile per eseguire queste attività per ogni utente.
 
 Per informazioni sulla calibrazione, seguire questo [collegamento all'articolo relativo alla calibrazione di HoloLens](calibration.md#hololens-2).
 
 Per informazioni sull'ottimizzazione dei sensori, seguire questo [collegamento all'articolo relativo all'ottimizzazione del sensore HoloLens](sensor-tuning.md).
 
 3. Configurare la **macchina virtuale Ubuntu** con **Hyper-V**. Le risorse seguenti consentiranno di semplificare il processo.
-    1.  Per prima cosa, seguire questo collegamento per [scaricare l'immagine ISO 16.04.4 LTS (xenial Xerus) di Ubuntu](http://au.releases.ubuntu.com/16.04/). Selezionare l' **immagine del desktop di 64 bit per PC (amd64)** .
+    1.  Per prima cosa, seguire questo collegamento per [scaricare l'immagine ISO 16.04.4 LTS (xenial Xerus) di Ubuntu](https://au.releases.ubuntu.com/16.04/). Selezionare l' **immagine del desktop di 64 bit per PC (amd64)** .
     2.  Verificare che **Hyper-V** sia abilitato nel computer Windows 10. È possibile seguire questo collegamento per istruzioni sull' [installazione e l'abilitazione di Hyper-V in Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
     3.  Avviare Hyper-V e creare una nuova macchina virtuale Ubuntu. È possibile seguire questo collegamento per una [Guida dettagliata su come creare una macchina virtuale con Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Quando viene richiesto di **installare un sistema operativo da un file di immagine di avvio**, selezionare l'immagine ISO di **Ubuntu** scaricata in precedenza.
 
@@ -193,11 +193,11 @@ A questo punto si inizierà la creazione e la configurazione del **servizio Hub*
 
     3. Inserire il **nome** desiderato per l'istanza del servizio.    
 
-5.  Nella parte inferiore della pagina fare clic su **avanti: Ridimensionamento e**scalabilità.
+5.  Nella parte inferiore della pagina fare clic su **Next: size and scale**.
 
     ![Crea istanza di archiviazione](images/AzureLabs-Lab313-12.png)
 
-6.  In questa pagina selezionare il piano **tariffario e il livello** di scalabilità (se si tratta della prima istanza del servizio hub Internet, sarà disponibile un livello gratuito).  
+6.  In questa pagina selezionare il piano **tariffario e il livello di scalabilità** (se si tratta della prima istanza del servizio hub Internet, sarà disponibile un livello gratuito).  
 
 7.  Fare clic su **Verifica + crea**.
 
@@ -217,7 +217,7 @@ A questo punto si inizierà la creazione e la configurazione del **servizio Hub*
 
 11. Nella finestra visualizzata a destra fare clic su **aggiungi IOT Edge dispositivo**. Verrà visualizzato un pannello a destra.
 
-12. Nel pannello fornire al nuovo dispositivo un **ID dispositivo** , ovvero un nome di propria scelta. Quindi, fare clic su **Salva**. Le *chiavi* *primarie* e secondarie vengono generate automaticamente se è stato **generato automaticamente** il segno di generazione.
+12. Nel pannello fornire al nuovo dispositivo un **ID dispositivo** , ovvero un nome di propria scelta. Quindi, fare clic su **Salva**. Le chiavi *primarie* e *secondarie* vengono generate automaticamente se è stato **generato automaticamente** il segno di generazione.
 
     ![Crea istanza di archiviazione](images/AzureLabs-Lab313-17.png)
 
@@ -243,10 +243,10 @@ Per creare e distribuire i moduli per il *perimetro dell'hub*Internet delle cose
 
 1.  [Docker per Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows), verrà richiesto di creare un account per poterlo scaricare. 
 
-    [![Scarica Docker per Windows](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+    [scaricare ![Docker per Windows](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
     > [!IMPORTANT]
-    > Docker richiede *Windows 10 Pro*, *Enterprise 14393*o *Windows Server 2016 RTM*per l'esecuzione. Se si eseguono altre versioni di Windows 10, è possibile provare a installare Docker usando la [casella degli strumenti](https://docs.docker.com/toolbox/toolbox_install_windows/)di Docker.
+    > Docker richiede *Windows 10 Pro*, *Enterprise 14393*o *Windows Server 2016 RTM*per l'esecuzione. Se si eseguono altre versioni di Windows 10, è possibile provare a installare Docker usando la [casella degli strumenti di Docker](https://docs.docker.com/toolbox/toolbox_install_windows/).
 
 2.  [Python 3,6](https://www.python.org/downloads/).
 
@@ -254,7 +254,7 @@ Per creare e distribuire i moduli per il *perimetro dell'hub*Internet delle cose
 
 3.  [Visual Studio Code (noto anche come vs code)](https://code.visualstudio.com/download).
 
-    [![Scarica VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
+    [Download ![VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
 
 Dopo aver installato il software menzionato in precedenza, sarà necessario riavviare il computer.
 
@@ -271,7 +271,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
 1.  Aprire il **terminale Ubuntu**e usare il comando seguente per installare **PIP**:
 
-    > [! HINT] è possibile aprire molto facilmente il *terminale* usando il tasto di scelta rapida: **CTRL + ALT + T**.
+    > [! HINT] è possibile aprire facilmente il *terminale* usando i tasti di scelta rapida: **CTRL + ALT + T**.
 
     ```bash
         sudo apt-get install python-pip
@@ -320,7 +320,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
     1.  Usare i tasti di direzione sulla tastiera per scorrere verso il basso (sarà necessario scorrere verso il basso), per raggiungere la riga contenente ":
 
-        "AGGIUNGERE LA STRINGA DI CONNESSIONE DEL**DISPOSITIVOQUI>"\<** .
+        " **\<aggiungere la stringa di connessione del dispositivo qui >** ".
 
     2. Sostituire la riga, **incluse le parentesi**, con la **stringa di connessione del dispositivo** annotata in precedenza.
 
@@ -370,7 +370,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
 4. Una volta installate le estensioni, chiuderlo e riaprirlo VS Code.
 
-5. Con vs code Apri ancora una volta, passare a **Visualizza** > **terminale integrato**.
+5. Con VS Code Apri ancora una volta, passare a **visualizza** > **terminale integrato**.
 
 6. Si installerà ora **tagliatore**. Nel terminale eseguire il comando bash seguente:
 
@@ -381,7 +381,7 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
     > [! HINT] Se si riscontrano problemi con questo comando: 
     >1. Riavviare VS Code e/o il computer.
     >2. Potrebbe essere necessario passare il **terminale vs code** a quello usato per installare Python, ad esempio **PowerShell** (soprattutto se l'ambiente Python è già installato nel computer). Con il terminale aperto è possibile trovare il menu a discesa sul lato destro del terminale.
-     ![Creare il contenitore](images/AzureLabs-Lab313-24b.png) 
+     ![creare il contenitore](images/AzureLabs-Lab313-24b.png) 
     >3. Verificare che il percorso di installazione di **Python** venga aggiunto come **variabile di ambiente** nel computer. Tagliatore deve far parte dello stesso percorso. [Per ulteriori informazioni sulle variabili di ambiente](https://msdn.microsoft.com/library/windows/desktop/ms682653(v=vs.85).aspx), seguire questo collegamento. 
 
 7. Al termine dell'installazione di **tagliatore** , è necessario riavviare il computer, in modo che **tagliatore** venga riconosciuto come comando nell'ambiente del sistema.
@@ -390,9 +390,9 @@ A questo punto è possibile passare alla configurazione del dispositivo **che es
 
 A questo punto, è necessario creare il contenitore, con il modulo, per eseguire il push nel *container Registry*. Dopo aver eseguito il push del contenitore, si userà il servizio *Edge Hub* Internet per distribuirlo nel dispositivo, che esegue il runtime di *IOT Edge*.
 
-1. In vs code fare clic su **Visualizza** > **riquadro comandi**.
+1. In VS Code fare clic su **visualizza** > **tavolozza comandi**.
 
-2. Nella tavolozza, cercare ed eseguire **Azure IOT Edge: Nuova soluzione**Edge per Internet.
+2. Nella tavolozza, cercare ed eseguire **Azure IOT Edge: nuova soluzione Edge**.
 
 3. Individuare un percorso in cui si desidera creare la soluzione. Premere il tasto **invio** per accettare il percorso.
 
@@ -744,7 +744,7 @@ Si creerà quindi la cartella *images* usata dallo script Python per verificare 
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capitolo 9: creare un pacchetto della soluzione come contenitore
 
-1.  A questo punto è possibile creare il pacchetto dei file come contenitore ed eseguirne il push nel **container Registry di Azure**. All'interno vs code aprire il *terminale integrato* (**Visualizza** > **terminale integrato** o **CTRL**+ **\`** ) e usare la riga seguente per accedere a **Docker** (sostituire i valori del con le credenziali del Container Registry di **Azure (ACR)** ):
+1.  A questo punto è possibile creare il pacchetto dei file come contenitore ed eseguirne il push nel **container Registry di Azure**. All'interno VS Code aprire il *terminale integrato* (**visualizzare** > **terminale integrato** o **CTRL**+ **\`** ) e usare la riga seguente per accedere a **Docker** (sostituire i valori del comando con le credenziali del **container Registry di Azure (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -754,7 +754,7 @@ Si creerà quindi la cartella *images* usata dallo script Python per verificare 
 
     ![Crea distribuzione](images/AzureLabs-Lab313-30.png)
 
-3. Aprire di **nuovo il **riquadro comandi** e cercare Azure:** Accedi. Seguire le istruzioni usando le credenziali dell'account Azure. VS Code fornirà un'opzione per la *copia e l'apertura*, che consente di copiare il codice del dispositivo che sarà presto necessario e di aprire il Web browser predefinito. Quando viene richiesto, incollare il codice del dispositivo per autenticare il computer.
+3. Aprire di nuovo il **riquadro comandi** e cercare **Azure: Sign in (accedi**). Seguire le istruzioni usando le credenziali dell'account Azure. VS Code fornirà un'opzione per la *copia e l'apertura*, che consente di copiare il codice del dispositivo che sarà presto necessario e di aprire il Web browser predefinito. Quando viene richiesto, incollare il codice del dispositivo per autenticare il computer.
 
     ![copia e Apri](images/AzureLabs-Lab313-31.png)
 
@@ -776,7 +776,7 @@ Si creerà quindi la cartella *images* usata dallo script Python per verificare 
 
 9. Per visualizzare i messaggi inviati dal dispositivo all'hub Internet, fare di nuovo clic con il pulsante destro del mouse sul nome del dispositivo nella sezione **dispositivi dell'hub Azure** Internet Explorer, nel pannello di **esplorazione** e fare clic su Avvia il **monitoraggio del messaggio D2C**. I messaggi inviati dal dispositivo verranno visualizzati nel terminale di Visual Studio. Essere paziente, perché questa operazione potrebbe richiedere del tempo. Vedere il capitolo successivo per il debug e verificare se la distribuzione è stata completata correttamente.
 
-Questo modulo consente ora di eseguire un'iterazione tra le immagini nella cartella images e di analizzarle, con ogni iterazione. Questo è ovviamente solo una dimostrazione di come ottenere il modello di apprendimento automatico di base per il funzionamento in un ambiente IoT Edge dispositivo. 
+Questo modulo consente ora di eseguire un'iterazione tra le immagini nella cartella **images** e di analizzarle, con ogni iterazione. Questo è ovviamente solo una dimostrazione di come ottenere il modello di apprendimento automatico di base per il funzionamento in un ambiente IoT Edge dispositivo. 
 
 Per espandere la funzionalità di questo esempio, è possibile procedere in diversi modi. Un modo potrebbe includere il codice nel contenitore, che acquisisce le foto da una webcam connessa al dispositivo e salva le immagini nella cartella immagini. 
 
@@ -860,7 +860,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
     4. Fare clic su un **percorso**appropriato.
     
-    5. Per il menu a discesa **replica** , fare clic su archiviazione con ridondanza geografica e **accesso in lettura (RA-GRS)** .
+    5. Per il menu a discesa **replica** , fare clic su **archiviazione con ridondanza geografica e accesso in lettura (RA-GRS)** .
 
     6. Per **prestazioni**, fare clic su **standard**.
 
@@ -874,7 +874,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
     10. Lasciare le **reti virtuali** **disabilitate**, se questa è un'opzione.
 
-    11. Fare clic su **Create**(Crea).
+    11. Fai clic su **Crea**.
 
         ![specificare i dettagli di archiviazione](images/AzureLabs-Lab313-37.png)
 
@@ -890,7 +890,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
 9. Nella pagina Panoramica fare clic su **tabelle**sul lato destro.
     
-    ![tabelle](images/AzureLabs-Lab313-40.png)
+    ![Tabelle](images/AzureLabs-Lab313-40.png)
 
 10. Il pannello a destra cambierà in modo da visualizzare le informazioni sul **servizio tabelle** , in cui è necessario aggiungere una nuova tabella. A tale scopo, fare clic sul pulsante **+ tabella** nell'angolo superiore sinistro.
 
@@ -916,7 +916,7 @@ Ora che l'account di archiviazione del **servizio tabelle** è stato configurato
 
 1. Aprire **Visual Studio** (**non** Visual Studio Code).
 
-2. Dal menu fare clic su **Visualizza** > **Cloud Explorer**.
+2. Dal menu fare clic su **visualizza** > **Cloud Explorer**.
 
     ![Aprire Cloud Explorer](images/AzureLabs-Lab313-45.png)
 
@@ -935,7 +935,7 @@ Ora che l'account di archiviazione del **servizio tabelle** è stato configurato
 
 5. Una volta espansa, l' **account di archiviazione** appena creato dovrebbe essere disponibile. Fare clic sulla freccia a sinistra della risorsa di archiviazione, quindi, una volta espansa, trovare le **tabelle** e fare clic sulla freccia accanto a questa, per visualizzare la **tabella** creata nell'ultimo capitolo. Fare doppio clic sulla **tabella**.
 
-6. La tabella verrà aperta al centro della finestra di Visual Studio. Fare clic sull'icona della tabella **+** con il segno (più).
+6. La tabella verrà aperta al centro della finestra di Visual Studio. Fare clic sull'icona della tabella con il **+** (Plus).
 
     ![Aggiungi nuova tabella](images/AzureLabs-Lab313-48.png)
 
@@ -991,7 +991,7 @@ In primo luogo, è necessario creare un file che consentirà alla funzione di Az
     }
     ```
 
-3.  Accedere al [portale di Azure](https://portal.azure.com).
+3.  Accedere al portale di [Azure](https://portal.azure.com).
 
 4.  Una volta effettuato l'accesso, fare clic su **Crea una risorsa** nell'angolo in alto a sinistra e cercare **app per le funzioni**e premere il tasto **invio** per eseguire la ricerca. Fare clic su *app per le funzioni* nei risultati per aprire un nuovo pannello.
 
@@ -1021,9 +1021,9 @@ In primo luogo, è necessario creare un file che consentirà alla funzione di Az
 
     8. Per la sezione **archiviazione** **è necessario selezionare il servizio di archiviazione creato nel passaggio precedente**.
 
-    9. Non sarà necessario *Application Insights* in questa app, quindi è possibile lasciarla disattivata.
+    9. Non sarà necessario *Application Insights* in questa app, quindi è possibile lasciarla **disattivata**.
 
-    10. Fare clic su **Create**(Crea).
+    10. Fai clic su **Crea**.
 
         ![Crea nuova istanza](images/AzureLabs-Lab313-55.png)
 
@@ -1039,7 +1039,7 @@ In primo luogo, è necessario creare un file che consentirà alla funzione di Az
 
     ![Vai alla risorsa](images/AzureLabs-Lab313-57.png)
 
-11. Sul lato sinistro del nuovo pannello, fare clic **+** sull'icona (segno più) accanto a *funzioni*per creare una nuova funzione.
+11. Sul lato sinistro del nuovo pannello fare clic sull'icona **+** (più) accanto a *funzioni*per creare una nuova funzione.
 
     ![Aggiungi nuova funzione](images/AzureLabs-Lab313-58.png)
 
@@ -1143,7 +1143,7 @@ In primo luogo, è necessario creare un file che consentirà alla funzione di Az
 
 20. Con il codice sul posto, fare clic su **Salva**.
 
-21. Fare quindi clic **\<** sull'icona (freccia) sul lato destro della pagina.
+21. Fare quindi clic sull'icona **\<** (freccia), sul lato destro della pagina.
 
     ![funzione personalizzata](images/AzureLabs-Lab313-66.png)
 

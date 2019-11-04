@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: problemi, bug, risoluzione dei problemi, correzione, guida, supporto tecnico, HoloLens
-ms.openlocfilehash: 7b7a32a9a358ff75b2675d265445d9ef1acc1b9e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 855bb0cafb0d3fba0d8d97c93d9415b51bcc2fb3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550889"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438275"
 ---
 # <a name="hololens-troubleshooting"></a>Risoluzione dei problemi di HoloLens
 
@@ -33,12 +33,12 @@ Se gli ologrammi sono instabili, saltellanti o non sembrano corretti, provare un
 * Pulire la visiera del dispositivo e verificare che non siano ostruiti i sensori.
 * Assicurarsi che sia presente una quantità di luce sufficiente per la stanza.
 * Provare a esaminare gli ambienti circostanti, in modo che HoloLens possa analizzarli più completamente.
-* Provare a eseguire l'app Calibration. Consente di calibrare i HoloLens in modo che funzionino meglio per gli occhi. Passare a **Impostazioni** > **utilità**di**sistema** > . In calibrazione selezionare **Apri calibrazione**.
-* Se si verificano ancora problemi dopo l'esecuzione dell'app di calibrazione, usare l'app per la regolazione dei sensori per ottimizzare i sensori del dispositivo. Passare a **Impostazioni** > **utilità**di**sistema** > . In ottimizzazione del sensore selezionare **Apri ottimizzazione del sensore**.
+* Provare a eseguire l'app Calibration. Consente di calibrare i HoloLens in modo che funzionino meglio per gli occhi. Passare a **impostazioni** > **utilità**di > di **sistema** . In calibrazione selezionare **Apri calibrazione**.
+* Se si verificano ancora problemi dopo l'esecuzione dell'app di calibrazione, usare l'app per la regolazione dei sensori per ottimizzare i sensori del dispositivo. Passare a **impostazioni** > **utilità**di > di **sistema** . In ottimizzazione del sensore selezionare **Apri ottimizzazione del sensore**.
 
 ## <a name="hololens-doesnt-respond-to-my-gestures"></a>HoloLens non risponde ai movimenti personali.
 
-Per assicurarsi che HoloLens possa visualizzare i movimenti, è possibile usare il frame di movimento, che estende un paio di metri su entrambi i lati. Quando HoloLens può visualizzare la mano, il cursore passa da un punto a un anello. Altre informazioni sull'uso dei [movimenti](gestures.md).
+Per assicurarsi che HoloLens possa visualizzare i movimenti, è possibile usare il frame di movimento, che estende un paio di metri su entrambi i lati. Quando HoloLens può visualizzare la mano, il cursore passa da un punto a un anello. Altre informazioni sull'uso dei [movimenti](gaze-and-commit.md#composite-gestures).
 
 Se l'ambiente è troppo scuro, HoloLens potrebbe non visualizzare la mano, quindi assicurarsi che sia disponibile una quantità di luce sufficiente.
 
@@ -54,7 +54,7 @@ Se HoloLens non è in grado di eseguire il mapping o caricare lo spazio, entrer�
 * Assicurarsi che l'ambiente sia sufficientemente chiaro, in modo che HoloLens possa visualizzare ed eseguire il mapping dello spazio.
 * Assicurarsi di essere connessi a una rete Wi-Fi. Se non si è connessi al Wi-Fi, HoloLens non è in grado di identificare e caricare uno spazio noto.
 * Se è necessario creare un nuovo spazio, connettersi a Wi-Fi, quindi riavviare il HoloLens.
-* Per verificare se lo spazio corretto è attivo o caricare manualmente uno spazio, passare a **Impostazioni** > **spazi**di**sistema** > .
+* Per verificare se lo spazio corretto è attivo o caricare manualmente uno spazio, passare a **impostazioni** > **sistema** > **spazi**.
 * Se viene caricato lo spazio corretto e si verificano ancora problemi, lo spazio potrebbe essere danneggiato. Per risolvere il problema, selezionare lo spazio, quindi selezionare Rimuovi. Una volta rimosso lo spazio, HoloLens inizierà a eseguire il mapping dell'ambiente e creerà un nuovo spazio.
 
 ## <a name="my-hololens-frequently-enters-limited-mode-or-shows-a-tracking-lost-message"></a>Il HoloLens di frequente entra in modalità limitata o Visualizza un messaggio di "rilevamento perso".
@@ -63,12 +63,12 @@ Se il dispositivo visualizza spesso un messaggio "modalità limitata" o "rilevam
 
 ## <a name="my-hololens-cant-tell-what-space-im-in"></a>HoloLens non è in grado di indicare lo spazio disponibile.
 
-Se il HoloLens non è in grado di identificare e caricare automaticamente lo spazio in cui ci si trova, assicurarsi di essere connessi al Wi-Fi, che ci sia molto chiaro nella stanza e che non siano state apportate modifiche sostanziali agli ambienti. È anche possibile caricare uno spazio manualmente o gestire gli spazi passando a **Impostazioni** > **spazi**di**sistema** > .
+Se il HoloLens non è in grado di identificare e caricare automaticamente lo spazio in cui ci si trova, assicurarsi di essere connessi al Wi-Fi, che ci sia molto chiaro nella stanza e che non siano state apportate modifiche sostanziali agli ambienti. È anche possibile caricare uno spazio manualmente o gestire gli spazi passando a **impostazioni** > **sistema** > **spazi**.
 
 ## <a name="im-getting-a-low-disk-space-error"></a>Si verifica un errore di spazio su disco insufficiente.
 
 Per liberare spazio di archiviazione, è necessario eseguire una o più delle operazioni seguenti:
-* Eliminare alcuni spazi inutilizzati. Passare a **Impostazioni** > **spazi**di**sistema** > , selezionare uno spazio non più necessario, quindi selezionare **Rimuovi**.
+* Eliminare alcuni spazi inutilizzati. Passare a **impostazioni** > **sistema** > **spazi**, selezionare uno spazio non più necessario, quindi selezionare **Rimuovi**.
 * Rimuovere alcuni degli ologrammi posizionati.
 * Eliminare alcune immagini e video nell'app Photos.
 * Disinstallare alcune app dal HoloLens. Nell'elenco tutte le app toccare e mantenere l'app che si vuole disinstallare e quindi selezionare **Disinstalla**.

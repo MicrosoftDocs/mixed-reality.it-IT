@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, RoboRaid, suono spaziale
-ms.openlocfilehash: 4bb050b4a4051c121c488ea38e150a8973bd7c04
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524169"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436494"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Case Study-uso di un suono spaziale in RoboRaid
 
-Charles Sinex, l'audio Lead del team di Microsoft HoloLens Experience, illustra le uniche questioni che ha riscontrato durante la creazione di audio per [RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j), una realtà mista sparatutto per la prima persona.
+Charles Sinex, l'audio Lead del team di Microsoft HoloLens Experience, illustra le uniche questioni che ha riscontrato durante la creazione di audio per [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), una realtà mista sparatutto per la prima persona.
 
 ## <a name="the-tech"></a>Il Tech
 
@@ -35,9 +35,9 @@ Il suono spaziale può richiedere la CPU. Per un'esperienza frenetica come RoboR
 
 Il meccanico che si sta evitando è uno degli aspetti più importanti del gioco in RoboRaid e anche un elemento che abbiamo ritenuto realmente univoco per l'esperienza HoloLens. Di conseguenza, volevamo che le Dodge fossero molto gratificanti per il lettore. È stato ottenuto il "mago" di Doppler per sembrare piuttosto tempestivo in fase di sviluppo. Inizialmente, il mio piano consisteva nell'usare un ciclo e modificarlo in tempo reale usando volume, pitch e Filter. L'implementazione di questa operazione è stata molto elaborata, pertanto prima di eseguire il commit delle risorse per compilarlo, abbiamo creato un prototipo a basso costo usando un asset con l'effetto Doppler preparato in solo per scoprire come si riteneva *. Il nostro sviluppo di talento lo ha fatto in modo che questo asset venga riprodotto esattamente 0,7 secondi prima che il proiettile fosse passato dall'orecchio del giocatore e i risultati fossero davvero straordinari. Inutile dirlo, abbiamo abbandonato la soluzione più complessa e implementato il prototipo.
 
-\* * (Per altre informazioni sulla creazione di un asset audio con l'effetto Doppler incorporato, vedere l'articolo relativo a sound designer Charles deenan chiamato [100 Whooshes in 2 minuti](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)). *
+\* * (Per altre informazioni sulla creazione di un asset audio con l'effetto Doppler incorporato, vedere l'articolo relativo a sound designer Charles deenan chiamato [100 Whooshes in 2 minuti](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)). *
 <br>
-![Il tentativo di schivare il proiettile del nemico premia il lettore con un suono che soddisfa le esigenze.](images/successful-dodge-roboraid-500px.jpg)
+![riuscito a schivare il proiettile di un nemico premia il lettore con un suono che soddisfi le proprie esigenze.](images/successful-dodge-roboraid-500px.jpg)
 
 ### <a name="ditching-ineffective-sounds"></a>Ammaraggio di suoni inefficaci
 
@@ -49,7 +49,7 @@ Si è verificato un problema interessante, che è stato ritenuto univoco per l'e
 
 Ovviamente, i giocatori non hanno alcuna sensazione quando vengono colpiti, quindi è necessario trovare un modo per convincere il giocatore che ha avuto happed. Nei giochi convenzionali è possibile che venga visualizzata un'animazione che consente di conoscere il carattere che ha raggiunto un riscontro. in alternativa, è possibile che la schermata sia Flash rossa e che il carattere possa grugnire un po'. Poiché questi tipi di indicazioni non funzionano in un'esperienza di realtà mista, abbiamo deciso di combinare il segnale visivo con un suono effettivamente esagerato che indica che hai causato danni. Ho creato una grande sonorità e ho reso questo aspetto molto importante nella combinazione di tutti gli elementi. Quindi, per fare in modo che risulti ancora più, abbiamo aggiunto un breve messaggio di avviso come se fosse stato effettuato il sink di un sommergibile nucleare. 
 <br>
-![Quando un giocatore si trova in RoboRaid, viene visualizzato un segnale visivo, ma anche un segnale audio esagerato che indica che hanno causato danni.](images/player-hit-roboraid-500px.jpg)
+![quando viene raggiunto un giocatore in RoboRaid, viene visualizzato un segnale visivo, ma viene anche visualizzato un segnale audio esagerato che indica che hanno causato danni.](images/player-hit-roboraid-500px.jpg)
 
 ### <a name="getting-big-sound-from-small-speakers"></a>Ottenere un grande suono da piccoli speaker
 
@@ -88,10 +88,10 @@ Un trucco che ho scoperto per far sembrare "più grande" alcuni eventi, ad esemp
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>Ingegnere audio@Microsoft</td>
+<td style="border-style: none"><b>Charles Sinex</b><br>@Microsoft tecnico audio</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Audio spaziale](spatial-sound.md)
-* [RoboRaid per Microsoft HoloLens](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)
+* [RoboRaid per Microsoft HoloLens](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)

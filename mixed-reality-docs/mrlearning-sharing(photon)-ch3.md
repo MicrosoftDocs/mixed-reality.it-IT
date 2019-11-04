@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: d3068a1ebbbc2b6db8b563be8bf8c6e488e9491a
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: a6d1a269f45b4aaf7cbd8fea948ddcbdf0bf18e2
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701935"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437740"
 ---
-# <a name="3-connecting-multiple-users"></a>3. Connessione di più utenti
+# <a name="3-connecting-multiple-users"></a>3. connessione di più utenti
 
-In questa lezione verrà illustrato come connettere più utenti nell'ambito di un'esperienza condivisa Live. Al termine di questa lezione sarà possibile aprire l'applicazione su più dispositivi e visualizzare avatar, rappresentati da una sfera, rappresentazioni di ogni persona che si unisce. 
+In questa lezione verrà illustrato come connettere più utenti nell'ambito di un'esperienza condivisa Live. Al termine di questa lezione sarà possibile aprire l'applicazione su più dispositivi e visualizzare l'avatar, rappresentato da una sfera per ogni persona che si unisce. 
 
 Obiettivi
 
@@ -25,7 +25,7 @@ Obiettivi
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Nella cartella Asset-> Resources-> prefabbricates nel pannello del progetto, trascinare il prefabbricato NetworkLobby nella gerarchia, come illustrato nell'immagine seguente.
+1. Nella cartella Asset-> Resources-> prefabbricates del pannello del progetto trascinare il NetworkLobby prefabbricato nella gerarchia, come illustrato nell'immagine seguente.
 
 ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
@@ -49,7 +49,7 @@ Obiettivi
 
 ![module3chapter3updateStep6im. png](images/module3chapter3updateStep6im.png) 
 
-7. Si creeranno quindi le sfere per rappresentare ogni persona che partecipa a un'esperienza condivisa. Fare clic con il pulsante destro del mouse sull'oggetto PhotonUser appena creato e ScrollDown su "oggetto 3D e scegliere Sphere. Verrà creato un oggetto gioco Sphere come figlio dell'oggetto PhotonUser.
+7. Si creeranno quindi le sfere per rappresentare ogni persona che partecipa a un'esperienza condivisa. Fare clic con il pulsante destro del mouse sull'oggetto PhotonUser appena creato, scorrere fino a "oggetto 3D e fare clic su sfera. Verrà creato un oggetto gioco Sphere come figlio dell'oggetto PhotonUser.
 
 ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
@@ -63,14 +63,14 @@ Obiettivi
 
 > Nota: assicurarsi che l'oggetto Game sia stato copiato correttamente nella cartella prefabbricates prima di eliminarlo dalla gerarchia.
 
-10. Creare un nuovo oggetto nella gerarchia seguendo le istruzioni riportate nel passaggio 3 e denominarlo SharedPlayground. Quindi, fare clic su Aggiungi componente e cercare gestore reti generico e fare clic su di esso per aggiungere il componente generico di gestione reti. Modificare la posizione dell'oggetto in x = 0, y = 0 e z = 0.
+10. Creare un nuovo oggetto nella gerarchia seguendo le istruzioni nel passaggio 3 e denominarlo SharedPlayground. Quindi, fare clic su Aggiungi componente e cercare gestore reti generico.  Fare di nuovo clic su di esso per aggiungere il componente generico di gestione reti. Modificare la posizione dell'oggetto in x = 0, y = 0 e z = 0.
 
 ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 
 
 ## <a name="congratulations"></a>Lezione completata
 
-Una volta completati tutti i passaggi precedenti e il processo di compilazione è stato completato, premere il pulsante Play (Riproduci) e connettere HoloLens 2. Quando si sposta la testa, verrà visualizzata una sfera. Verrà visualizzato per tutti gli utenti che partecipano al progetto Unity.
+Al termine di tutti i passaggi precedenti e del processo di compilazione, premere il pulsante Play (Riproduci) e connettere HoloLens 2. Quando si sposta la testa, verrà visualizzata una sfera. Verrà visualizzato per tutti gli utenti che partecipano al progetto Unity.
 
-[Lezione successiva: 4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
+[Lezione successiva: 4. condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
 

@@ -1,29 +1,28 @@
 ---
-title: Aggiornamento dell'applicazione SteamVR per la realtà mista di Windows
+title: Aggiornamento dell'applicazione SteamVR
 description: Procedure consigliate per l'aggiornamento dell'applicazione SteamVR per ottimizzare compatibilità con le cuffie di realtà mista di Windows.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: SteamVR, compatibilità
-ms.openlocfilehash: db21651df8e586edf500f0d05def4b1ea5474284
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6479130b14b8b50828ebecd3a648fd8a425aec15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548672"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438211"
 ---
-# <a name="updating-your-steamvr-application-for-windows-mixed-reality"></a>Aggiornamento dell'applicazione SteamVR per la realtà mista di Windows
-
+# <a name="updating-your-steamvr-application"></a>Aggiornamento dell'applicazione SteamVR
 Invitiamo gli sviluppatori a testare e ottimizzare le proprie esperienze di SteamVR per l'esecuzione su cuffie di realtà miste Windows. Questa documentazione illustra i miglioramenti più comuni che gli sviluppatori possono fare per garantire che la loro esperienza sia ottimale in realtà mista di Windows.
 
 ## <a name="initial-setup-instructions"></a>Istruzioni per la configurazione iniziale
 
-Per iniziare a testare il gioco o l'app in realtà mista di Windows, assicurarsi di seguire prima la [Guida introduttiva.](http://aka.ms/WindowsMixedRealitySteamVR)
+Per iniziare a testare il gioco o l'app in realtà mista di Windows, assicurarsi di seguire prima la [Guida introduttiva.](https://aka.ms/WindowsMixedRealitySteamVR)
 
 ## <a name="controller-models"></a>Modelli di controller
 1. Se l'app esegue il rendering dei modelli di controller:
-    * Usare i [modelli di controller di movimento](motion-controllers.md#rendering-the-motion-controller-model) per la realtà mista di Windows
+    * Usare i [modelli di controller di movimento per la realtà mista di Windows](motion-controllers.md#rendering-the-motion-controller-model)
     * Usare IVRRenderModel:: GetComponentState per ottenere le trasformazioni locali per le parti del componente, ad esempio Pose del puntatore)
 2. Le esperienze con una nozione di manualità dovrebbero ricevere suggerimenti dalle API di input per distinguere i controller [(esempio di Unity)](gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table)
 
@@ -49,7 +48,7 @@ I controller di movimento per la realtà mista di Windows usano un motore haptic
 
 ## <a name="launching-steamvr-apps-from-windows-mixed-reality-start-menu"></a>Avvio di app SteamVR dal menu Start della realtà mista di Windows
 
-Per le esperienze VR distribuite tramite Steam, abbiamo [aggiornato la realtà mista di Windows per SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) insieme ai più recenti voli RS5 di [Windows](https://insider.windows.com) Insider, in modo che i titoli di SteamVR ora vengano visualizzati nel menu Start della realtà mista di Windows in "tutte le app" elenco automatico. Con queste versioni del software installate, i clienti possono ora avviare i titoli SteamVR direttamente dall'interno della Home realtà mista di Windows senza rimuovere gli auricolari.
+Per le esperienze VR distribuite tramite Steam, abbiamo [aggiornato la realtà mista di Windows per SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) insieme ai più recenti voli RS5 di [Windows Insider](https://insider.windows.com) , in modo che i titoli di SteamVR ora vengano visualizzati nel menu Start della realtà mista di Windows in "tutte le app" elenco automatico. Con queste versioni del software installate, i clienti possono ora avviare i titoli SteamVR direttamente dall'interno della Home realtà mista di Windows senza rimuovere gli auricolari.
 
 ## <a name="windows-mixed-reality-logo"></a>Logo della realtà mista di Windows
 
@@ -59,13 +58,13 @@ Per visualizzare il supporto della realtà mista di Windows per il titolo, andar
 
 I commenti e i suggerimenti sono utili per migliorare l'esperienza di SteamVR di realtà mista di Windows. Inviare tutti i commenti e i bug tramite l' [Hub feedback di Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/filing-feedback). Ecco alcuni [suggerimenti su come fare in modo che il feedback di SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality#sharing-feedback-on-steamvr)sia il più utile possibile.
 
-In caso di domande o commenti da condividere, è anche possibile contattarci nel forum di [Steam](http://steamcommunity.com/app/719950/discussions/).
+In caso di domande o commenti da condividere, è anche possibile contattarci nel forum di [Steam](https://steamcommunity.com/app/719950/discussions/).
 
 ## <a name="faqs-and-troubleshooting"></a>Domande frequenti e risoluzione dei problemi
 
 Se si verificano problemi generali durante l'impostazione o la riproduzione dell'esperienza, [vedere le procedure di risoluzione dei problemi più recenti](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#steamvr).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Installare gli strumenti](install-the-tools.md)
 * [Cronologia driver per cuffie e controller di movimento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 * [Linee guida per la compatibilità hardware con la realtà mista di Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)

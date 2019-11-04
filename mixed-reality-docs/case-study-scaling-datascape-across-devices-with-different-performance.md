@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: auricolare immersivo, ottimizzazione delle prestazioni, VR, case study
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523363"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436510"
 ---
 # <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Case Study: ridimensionamento di DataScape tra dispositivi con prestazioni diverse
 
@@ -43,7 +43,7 @@ Abbiamo gestito l'interfaccia utente e la mappa per il rendering in base al budg
 
 ## <a name="background-on-cloud-data"></a>Informazioni di base sui dati cloud
 
-I dati del cloud sono stati scaricati dai server http://nomads.ncep.noaa.gov/) NOAA (e sono Stati Uniti in tre distinti livelli 2D, ognuno con l'altezza superiore e inferiore del cloud, nonché la densità del cloud per ogni cella della griglia. I dati sono stati elaborati in una trama di informazioni cloud in cui ogni componente è stato archiviato nel componente rosso, verde e blu della trama per semplificare l'accesso alla GPU.
+I dati del cloud sono stati scaricati dai server NOAA (https://nomads.ncep.noaa.gov/) e sono stati riuniti in tre diversi livelli 2D, ognuno con l'altezza superiore e inferiore del cloud, nonché la densità del cloud per ogni cella della griglia. I dati sono stati elaborati in una trama di informazioni cloud in cui ogni componente è stato archiviato nel componente rosso, verde e blu della trama per semplificare l'accesso alla GPU.
 
 ## <a name="geometry-clouds"></a>Cloud Geometry
 
@@ -306,16 +306,16 @@ Progettare per scenari peggiori e forse prendere in considerazione l'uso del ren
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Software Engineer@Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>Software Engineer @Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Software Engineer@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Software Engineer @Microsoft</td>
 </tr>
 </table>
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
 * [Suggerimenti sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 

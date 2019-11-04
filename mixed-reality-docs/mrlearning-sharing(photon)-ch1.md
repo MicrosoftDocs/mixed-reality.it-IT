@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: acb6966ace81180e95e6a0fe447d350572f7c0dd
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: c6a2bea3d50669000e81cad7c83ae6a69b8a847f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701965"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437743"
 ---
-#  <a name="1-setting-up-photon-unity-networking"></a>1. Configurazione della rete di Photon Unity
+#  <a name="1-setting-up-photon-unity-networking"></a>1. configurazione della rete di Photon Unity
 
-Questa esercitazione illustra come prepararsi per la creazione di un'esperienza condivisa importando la rete di Photon Unity (PUN) nel progetto Unity. Photon è una delle diverse opzioni di rete disponibili agli sviluppatori di realtà mista per creare esperienze condivise. Si apprenderà come creare un account Photon, importare un fotone e creare un server locale facoltativo
+In questa esercitazione si apprenderà come preparare la creazione di un'esperienza condivisa importando la rete di Photon Unity (PUN) nel progetto Unity. Photon è una delle diverse opzioni di rete disponibili agli sviluppatori di realtà mista per creare esperienze condivise. Si apprenderà come creare un account Photon, importare un fotone e creare un server locale facoltativo
 
 ## <a name="objectives"></a>Obiettivi
 
@@ -29,7 +29,7 @@ Questa esercitazione illustra come prepararsi per la creazione di un'esperienza 
 
 ## <a name="setting-up-photon"></a>Configurazione di Photon
 
-1. Configurare un account [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Passare alla pagina di iscrizione a Photon facendo clic su [questo collegamento](https://dashboard.photonengine.com/en-US/Account/SignUp). Seguire le istruzioni nella pagina di iscrizione per creare l'account. 
+1. Configurare un account [Photon](https://dashboard.photonengine.com//Account/SignUp) . Passare alla pagina di iscrizione a Photon facendo clic su [questo collegamento](https://dashboard.photonengine.com//Account/SignUp). Seguire le istruzioni nella pagina di iscrizione per creare l'account. 
    
 
 ![Module3Chapter1step1im](images/module3chapter1step1im.PNG)
@@ -44,11 +44,11 @@ Questa esercitazione illustra come prepararsi per la creazione di un'esperienza 
 
 ![Module3Chapter1step7bim](images/module3chapter1step7bim.PNG)
 
-4. Al termine, tornare alla pagina delle applicazioni. verrà visualizzata una schermata simile all'immagine seguente. Fare clic sull'ID applicazione e copiarlo. Incollarlo in un'altra posizione a cui è possibile accedere facilmente.  
+4. Tornare alla pagina delle applicazioni. verrà visualizzata una schermata simile all'immagine seguente. Fare clic sull'ID applicazione e copiarlo. Incollarlo in un'altra posizione a cui è possibile accedere facilmente.  
 
 ![Module3Chapter1step8im](images/module3chapter1step8im.PNG)
 
-5. Creare un nuovo progetto Unity e denominarlo HLSharingProject. Per istruzioni su come creare un nuovo progetto Unity, vedere [la sezione "creare un progetto Unity" del modulo di base](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
+5. Creare un nuovo progetto Unity e denominarlo HLSharingProject. Per istruzioni su come creare un nuovo progetto Unity, vedere [la sezione "creare un progetto Unity" del modulo di base](https://docs.microsoft.com//windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
 
 6. Una volta caricato il progetto, fare clic sulla scheda Archivio risorse, come illustrato nell'immagine seguente. Quindi, nella casella di ricerca evidenziata nell'immagine riportata di seguito, digitare PUN e selezionare l'asset Photon PUN 2-FREE "dai risultati della ricerca. 
 
@@ -58,7 +58,7 @@ Questa esercitazione illustra come prepararsi per la creazione di un'esperienza 
 
 ![Module3Chapter1step11im](images/module3chapter1step11im.PNG)
 
-8. Dopo che il fotone ha completato il processo di importazione, viene visualizzata la procedura guidata di pun. Prendere l'ID applicazione, che dovrebbe trovarsi negli Appunti, dal passaggio 4 e incollarlo nella casella AppID e premere il pulsante Imposta progetto. 
+8. Dopo che il fotone ha completato il processo di importazione, viene visualizzata la procedura guidata di pun. Prendere l'ID applicazione, che dovrebbe trovarsi negli Appunti, dal passaggio 4, incollarlo nella casella AppID e premere il pulsante Imposta progetto. 
 ![module3chapter1step12im](images/module3chapter1step12im.PNG)
 
 9. Dopo aver aggiunto l'AppID, passare a Photon-> PhotonUnityNetworking-> Resources-> PhotonServerSettings in assets. Selezionare l'opzione Usa il server dei nomi e impostare l'area fissa su US o l'area del servizio Photon.
@@ -67,7 +67,7 @@ Questa esercitazione illustra come prepararsi per la creazione di un'esperienza 
 
 ## <a name="congratulations"></a>Lezione completata
 
-È stato creato un account Photon, configurato un server Photon locale e il PUN è stato importato in Unity. Il passaggio successivo consiste nell'impostare il progetto e quindi consentire le connessioni con altri utenti in modo che più utenti possano visualizzare il lavoro. 
+È stato creato un account Photon, configurato un server Photon locale e il PUN è stato importato in Unity. Il passaggio successivo consiste nell'impostare il progetto e consentire le connessioni con altri utenti in modo che più utenti possano visualizzare il lavoro. 
 
-[Esercitazione successiva: 2. Preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
+[Esercitazione successiva: 2. preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
 

@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701983"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438386"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. Preparazione di Unity per lo sviluppo 
+# <a name="2-getting-unity-ready-for-development"></a>2. recupero di Unity pronto per lo sviluppo 
 
 
-Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo di applicazioni, tra cui l'importazione del Toolkit di realtà mista, la configurazione delle impostazioni di compilazione e la preparazione della scena.
+In questa esercitazione si apprenderà come preparare e configurare Unity per lo sviluppo di applicazioni, tra cui importare il Toolkit di realtà mista, configurare le impostazioni di compilazione e preparare la scena.
 
 ## <a name="objectives"></a>Obiettivi
 
@@ -34,13 +34,13 @@ Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo
 
 ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. Selezionare il pacchetto Unity appena scaricato dal collegamento fornito nel passaggio 1. Una volta visualizzata la finestra popup importa in Unity, fare clic sul pulsante Import (importa) per avviare l'importazione. L'importazione del MRTK può richiedere alcuni minuti.
+3. Selezionare il pacchetto Unity appena scaricato dal collegamento fornito nel passaggio 1. Una volta visualizzata la finestra popup importa in Unity, fare clic sul pulsante Import (importa) per avviare l'importazione del MRTK. L'operazione potrebbe richiedere alcuni minuti.
 
 ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> Nota: Il pacchetto scaricato si trova nella cartella locale in cui è stato salvato il file. L'immagine precedente non rappresenta la posizione in cui si troverà il pacchetto.
+> Nota: il pacchetto scaricato si trova nella cartella locale in cui è stato salvato il file. L'immagine precedente non rappresenta la posizione in cui si troverà il pacchetto.
 
-4. Creare una nuova scena. A tale scopo, fare clic su file e selezionare nuova scena. Salvare la scena come HLSharedProjectMain.
+4. Creare una nuova scena. Questa operazione può essere eseguita facendo clic su file e selezionando nuova scena. Salvarlo come HLSharedProjectMain.
 
 > Nota: è possibile che venga visualizzato un popup simile all'immagine seguente. Per il momento, fare clic su No.
 >
@@ -58,7 +58,7 @@ Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-7. Scorrere verso il basso e deselezionare Abilita sistema di diagnostica se si desidera nascondere la finestra di diagnostica. È consigliabile mantenere la finestra di diagnostica abilitata durante lo sviluppo di applicazioni per monitorare le prestazioni e disabilitarla durante le dimostrazioni di produzione o di applicazioni. 
+7. Scorrere verso il basso e deselezionare Abilita sistema di diagnostica se si desidera nascondere la finestra di diagnostica. È consigliabile mantenere la finestra di diagnostica abilitata durante lo sviluppo di applicazioni per monitorare le prestazioni e quindi disabilitarla durante le dimostrazioni di produzione o di applicazioni. 
 
 ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
@@ -66,7 +66,7 @@ Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo
 
 ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. Al termine, fare clic sulla casella di testo Aggiungi scene aperte. Passare ora al pannello Inspector e verificare che la casella di controllo a destra della realtà virtuale supportata (come illustrato nell'immagine seguente) sia selezionata. Assicurarsi inoltre che anche la casella di controllo accanto a Scenes/HLSharedProjectMain sia selezionata, come illustrato nell'immagine seguente.
+9. Al termine, fare clic sulla casella denominata Aggiungi scene aperte. Passare ora al pannello Inspector e verificare che la casella di controllo a destra della realtà virtuale supportata (come illustrato nell'immagine seguente) sia selezionata. Assicurarsi inoltre che sia selezionata anche la casella di controllo accanto a Scenes/HLSharedProjectMain, come illustrato nell'immagine seguente.
 
 ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
@@ -74,15 +74,15 @@ Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importare il pacchetto personalizzato denominato SharingAssetCollection che può essere scaricato [qui.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. Importare il pacchetto personalizzato denominato SharingAssetCollection, che può essere scaricato [qui.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
-12. Nel pannello progetto passare alla cartella prefabbricates. Nei passaggi successivi vengono implementati alcuni prefabbricati nella scena. Nella cartella prefabbricati, fare clic e trascinare la finestra prefabbricata, debug nella gerarchia. Al termine, salvare il progetto facendo clic su file, quindi su Salva o premere CTRL + S.
+12. Nel pannello progetto passare alla cartella prefabbricates. Nei passaggi seguenti vengono implementati alcuni prefabbricati nella scena. Nella cartella prefabbricati, fare clic e trascinare la finestra prefabbricata, debug nella gerarchia. Al termine, salvare il progetto facendo clic su file, quindi su Salva o premere CTRL + S.
 
 ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > Nota: È possibile che venga visualizzato un messaggio popup quando si fa clic sul prefabbricato, che richiede informazioni su TMP Essentials. Fare clic su Importa TMP Essentials in base alle esigenze. Se viene visualizzato questo popup, potrebbe essere necessario eliminare il prefabbricato dalla gerarchia e trascinarlo nella gerarchia per evitare potenziali errori correlati al testo.
+   > Nota: è possibile che venga visualizzato un popup quando si fa clic sulla prefabbricata, in cui viene chiesto di installare TMP Essentials. Fare clic su Importa TMP Essentials in base alle esigenze. Se viene visualizzato questo popup, potrebbe essere necessario eliminare il prefabbricato dalla gerarchia e trascinarlo nella gerarchia per evitare potenziali errori correlati al testo.
    >
 >![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
@@ -91,5 +91,5 @@ Questa esercitazione illustra come preparare e configurare Unity per lo sviluppo
 
 Il progetto Unity è ora pronto per Photon. Nelle esercitazioni riportate di seguito verrà creata questa scena e il progetto Unity per un'esperienza condivisa completa.
 
-[Esercitazione successiva: 3. Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
+[Esercitazione successiva: 3. connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
 

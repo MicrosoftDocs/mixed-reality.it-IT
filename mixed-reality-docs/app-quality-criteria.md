@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criteri di qualità delle app, realtà mista, app per realtà mista
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024490"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437044"
 ---
 # <a name="app-quality-criteria"></a>Criteri di qualità delle app
 
@@ -176,7 +176,7 @@ I disallineamenti degli ologrammi con oggetti fisici (se destinati a essere posi
 
 |  Consigliate  |  Soddisfi |  Esito negativo |
 --- | --- | ---
-| Gli ologrammi si allineano alla superficie in genere nell'intervallo di centimetri. Se è necessaria una maggiore accuratezza, l'app deve fornire un modo efficiente per collaborare all'interno della specifica dell'app desiderata. | ND | Gli ologrammi appaiono non allineati con l'oggetto di destinazione fisico suddividendo il piano della superficie o facendo in modo che si trovi in un altro modo. Se è necessaria l'accuratezza, gli ologrammi dovrebbero soddisfare le specifiche di prossimità dello scenario. | 
+| Gli ologrammi si allineano alla superficie in genere nell'intervallo di centimetri. Se è necessaria una maggiore accuratezza, l'app deve fornire un modo efficiente per collaborare all'interno della specifica dell'app desiderata. | N/D | Gli ologrammi appaiono non allineati con l'oggetto di destinazione fisico suddividendo il piano della superficie o facendo in modo che si trovi in un altro modo. Se è necessaria l'accuratezza, gli ologrammi dovrebbero soddisfare le specifiche di prossimità dello scenario. | 
 
 ### <a name="how-to-measure"></a>Come misurare
 
@@ -203,7 +203,7 @@ I disallineamenti degli ologrammi con oggetti fisici (se destinati a essere posi
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Spaziale MR 230: Mapping spaziale](holograms-230.md)
+* [MR Spatial 230: mapping spaziale](holograms-230.md)
 * [MR Toolkit, librerie di mapping spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Kit MR Companion, esempio di calibrazione poster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Kit MR Companion, Kinect dpi](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -246,7 +246,7 @@ Gli sviluppatori di app controllano la posizione di convergenza degli occhi degl
 </tr><tr>
 <td> Soddisfi</td><td> Il contenuto si trova all'interno delle linee guida per la visualizzazione e il movimento, ma non è corretto o non utilizza il piano di ritaglio.</td>
 </tr><tr>
-<td> Esito negativo </td><td> Il contenuto viene presentato troppo vicino ( &lt;in genere 1.25 m &lt;o 50cm per gli ologrammi stazionari che richiedono un'osservazione più approfondita).</td>
+<td> Esito negativo </td><td> Il contenuto viene presentato troppo vicino (in genere &lt;1.25 m o &lt;50cm per gli ologrammi stazionari che richiedono un'osservazione più approfondita).</td>
 </tr>
 </table>
 
@@ -368,7 +368,7 @@ In realtà mista di Windows, il motore audio fornisce il componente uditivo dell
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Spaziale MR 220: Audio spaziale](holograms-220.md)
+* [MR Spatial 220: audio spaziale](holograms-220.md)
 * [MRToolkit, audio spaziale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Concentrarsi sui limiti dei frame olografici (FOV)
@@ -488,7 +488,7 @@ Gli ologrammi dovrebbero rispondere alla posizione dell'utente approssimativamen
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Input MR 210: Sguardo fisso](holograms-210.md)
+* [Input MR 210: sguardo](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Chiarezza interazione input
 
@@ -546,9 +546,7 @@ La chiarezza dell'interazione di input è essenziale per l'usabilità di un'app 
 * [Puntamento con la testa e attesa](gaze-and-dwell.md)
 * [Cursori](cursors.md)
 * [Comodità e sguardo](comfort.md#gaze-direction)
-* [Movimenti](gestures.md)
 * [Input vocale](voice-input.md)
-* [Esecuzione di comandi vocali](voice-design.md)
 * [Controller del movimento](motion-controllers.md)
 * [Guida alla conversione dell'input per Unity](input-porting-guide-for-unity.md)
 * [Input da tastiera in Unity](keyboard-input-in-unity.md)
@@ -562,13 +560,13 @@ La chiarezza dell'interazione di input è essenziale per l'usabilità di un'app 
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
-* [Case Study: Ricerca di più personal computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Studio Cast: Apprendimento dell'interfaccia utente e della progettazione dell'interazione HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [App di esempio: Tabella periodica degli elementi](periodic-table-of-the-elements.md)
-* [App di esempio: Modulo Lunar](lunar-module.md)
-* [Input MR 210: Sguardo fisso](holograms-210.md)
-* [Input MR 211: Gesti](holograms-211.md)
-* [Input MR 212: Voce](holograms-212.md)
+* [Case Study: ricerca di più personal computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Cast Study: apprendimento dell'interfaccia utente e della progettazione dell'interazione HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [App di esempio: tabella periodica degli elementi](periodic-table-of-the-elements.md)
+* [App di esempio: modulo Lunar](lunar-module.md)
+* [Input MR 210: sguardo](holograms-210.md)
+* [Input MR 211: movimenti](holograms-211.md)
+* [Input di MR 212: Voice](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Oggetti interagibili
 
@@ -619,7 +617,7 @@ Un pulsante è a lungo una metafora usata per attivare un evento nel mondo astra
 * [Oggetto che supporta interazioni](interactable-object.md)
 * [Testo in Unity](text-in-unity.md)
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
-* [Esecuzione di comandi vocali](voice-design.md)
+* [Input vocale](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 
@@ -672,9 +670,9 @@ Le app che richiedono dati di mapping spaziale si basano sul dispositivo per rac
 #### <a name="documentation"></a>Documentazione
 
 * [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
-* [Case Study: Espansione delle funzionalità di mapping spaziale di HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Case Study: Progettazione di suoni spaziali per HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Case Study: Creazione di un'esperienza immersiva nei frammenti](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Case Study: espansione delle funzionalità di mapping spaziale di HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Case Study: progettazione di suoni spaziali per HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Case Study: creazione di un'esperienza immersiva nei frammenti](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Strumenti ed esercitazioni
 

@@ -1,17 +1,17 @@
 ---
 title: Modulo MR Learning ASA-Azure Spatial Anchor su HoloLens 2
-description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b29f27284c352d27fb1d4d4de701a1ebc2a7cd1c
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 141aa90f2bf5d90527a0fe1e6a812c1ce56bd0eb
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326932"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437797"
 ---
 # <a name="photon-correct-me-if-im-wrong"></a>Photon (Correggi se sbaglio)
 
@@ -29,7 +29,7 @@ Obiettivi
 
 ### <a name="setting-up-photon"></a>Configurazione di Photon
 
-1. Configurare un account [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Questa operazione consiste nell'imputare il messaggio di posta elettronica e nell'eseguire alcuni passaggi di verifica.
+1. Configurare un account [Photon](https://dashboard.photonengine.com//Account/SignUp) . Questa operazione consiste nell'imputare il messaggio di posta elettronica e nell'eseguire alcuni passaggi di verifica.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
@@ -62,7 +62,7 @@ Obiettivi
 
 ![Module2Chapter4step4im](images/Module2chapter4step5im.png)
 
-> Nota: In caso di domande relative all'indirizzo IP o ad altre domande simili, è possibile trovare la maggior parte delle informazioni sulla barra degli strumenti, come illustrato nell'immagine seguente.
+> Nota: in caso di domande relative all'indirizzo IP o ad altre domande simili, è possibile trovare la maggior parte delle informazioni sulla barra degli strumenti, come illustrato nell'immagine seguente.
 >
 > ![Module2Chapter4step4im](images/Module2chapter4noteim.png)
 
@@ -86,7 +86,7 @@ Obiettivi
 
 9. Creare un nuovo progetto Unity. Aprire Hub Unity e fare clic su "nuovo". Denominarlo "HLSharingProject". Quindi fare clic su Crea. 
 
-   > Si noti Il caricamento di questa operazione può richiedere fino a 2 minuti, in base alla velocità del computer.
+   > Nota: il caricamento può richiedere fino a 2 minuti, in base alla velocità del computer.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
@@ -140,7 +140,7 @@ Obiettivi
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> Si noti Assicurarsi inoltre che sia selezionata anche la casella di controllo accanto a "Scenes/HLSharedProjectMain".
+> Nota: Assicurarsi inoltre che sia selezionata anche la casella di controllo accanto a "Scenes/HLSharedProjectMain".
 
 20. In "impostazioni di pubblicazione" nel pannello Inspector scorrere verso il basso fino a "funzionalità" e verificare che siano contrassegnate solo le caselle di controllo seguenti:
 
@@ -148,7 +148,7 @@ Obiettivi
 - Server client Internet
 - Server client di rete privata
 - fotocamera/webcam
-- Microfono
+- microfono
 
 21. Analogamente al passaggio 12, il passaggio successivo consiste nell'importare un altro pacchetto personalizzato denominato "della lezione 2" che è possibile scaricare [qui.] [collegamento della lezione 2. file unitypackage Tools Importare il pacchetto.
 
@@ -158,7 +158,7 @@ Obiettivi
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> Si noti È possibile che venga visualizzato un messaggio popup quando si fa clic sul prefabbricato, che richiede informazioni su TMP Essentials. Fare clic su "Importa TMP Essentials" perché saranno necessari.
+> Nota: è possibile che venga visualizzato un popup quando si fa clic sulla prefabbricata, in cui viene chiesto di installare TMP Essentials. Fare clic su "Importa TMP Essentials" perché saranno necessari.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 

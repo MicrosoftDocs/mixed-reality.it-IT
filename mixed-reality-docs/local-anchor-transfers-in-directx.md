@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Synchronize, ancoraggio spaziale, trasferimento, multiplayer, visualizzazione, scenario, procedura dettagliata, codice di esempio, trasferimento, trasferimento di ancoraggio locale, esportazione di ancoraggio, importazione di ancoraggio
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515477"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437960"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Trasferimenti di ancoraggio locali in DirectX
 
@@ -33,7 +33,7 @@ Si noti che gli ancoraggi spaziali non sono in grado di trasferire tra tipi di d
 
 È necessario concedere all'app l'autorizzazione per usare la funzionalità spatialPerception prima di poter usare [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa operazione è necessaria perché il trasferimento di un ancoraggio spaziale comporta la condivisione delle immagini del sensore raccolte nel tempo in prossimità di tale ancoraggio, che potrebbero includere informazioni riservate.
 
-Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
+Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco un esempio:
 
 ```
 <Capabilities>
@@ -41,19 +41,19 @@ Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seg
 </Capabilities>
 ```
 
-La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell' &lt;elemento > del pacchetto. Di seguito è riportato un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Ecco un esempio:
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
 
-**NOTA:** L'app dovrà richiedere la funzionalità in fase di esecuzione prima di poter accedere alle API di esportazione/importazione SpatialAnchor. Vedere [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) negli esempi seguenti.
+**Nota:** L'app dovrà richiedere la funzionalità in fase di esecuzione prima di poter accedere alle API di esportazione/importazione SpatialAnchor. Vedere [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) negli esempi seguenti.
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializzare i dati di ancoraggio esportandoli con SpatialAnchorTransferManager
 
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-Prima di tutto, è necessario configurare il flusso di dati. Questa operazione consentirà di eseguire 1. usare TryExportAnchorsAsync per inserire i dati in un buffer di proprietà dell'app e 2. leggere i dati dal flusso del buffer di byte esportato, che è un flusso di dati WinRT, nel buffer di memoria, che è un&lt;byte std:: Vector >.
+Prima di tutto, è necessario configurare il flusso di dati. Questa operazione consentirà di eseguire 1. usare TryExportAnchorsAsync per inserire i dati in un buffer di proprietà dell'app e 2. leggere i dati dal flusso del buffer di byte esportato, che è un flusso di dati di WinRT, nel proprio buffer di memoria, che è un > std:: Vector&lt;byte.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -270,7 +270,7 @@ Se i dati possono essere importati, si ottiene una visualizzazione mappa delle c
 }
 ```
 
-**NOTA:** Solo perché è possibile importare un ancoraggio, non significa necessariamente che sia possibile utilizzarlo immediatamente. L'ancoraggio potrebbe trovarsi in una stanza diversa o in un'altra posizione fisica. l'ancoraggio non verrà locatable fino a quando il dispositivo che lo ha ricevuto dispone di informazioni visive sufficienti sull'ambiente in cui è stato creato l'ancoraggio, per ripristinare la posizione dell'ancoraggio rispetto all'ambiente corrente noto. L'implementazione client dovrebbe provare a individuare l'ancoraggio rispetto al sistema di coordinate locale o al frame di riferimento prima di continuare a usare per il contenuto Live. Ad esempio, provare a individuare periodicamente l'ancoraggio rispetto a un sistema di coordinate corrente fino a quando l'ancoraggio inizia a essere locatable.
+**Nota:** Solo perché è possibile importare un ancoraggio, non significa necessariamente che sia possibile utilizzarlo immediatamente. L'ancoraggio potrebbe trovarsi in una stanza diversa o in un'altra posizione fisica. l'ancoraggio non verrà locatable fino a quando il dispositivo che lo ha ricevuto dispone di informazioni visive sufficienti sull'ambiente in cui è stato creato l'ancoraggio, per ripristinare la posizione dell'ancoraggio rispetto all'ambiente corrente noto. L'implementazione client dovrebbe provare a individuare l'ancoraggio rispetto al sistema di coordinate locale o al frame di riferimento prima di continuare a usare per il contenuto Live. Ad esempio, provare a individuare periodicamente l'ancoraggio rispetto a un sistema di coordinate corrente fino a quando l'ancoraggio inizia a essere locatable.
 
 ## <a name="special-considerations"></a>Considerazioni speciali
 
@@ -288,7 +288,7 @@ Analogamente all'esportazione di un singolo SpatialAnchor, il BLOB contiene una 
 
 ![Più ancoraggi esportati con una singola chiamata TryExportAnchorsAsync](images/multipleanchors.png) ![Più ancoraggi esportati con una chiamata TryExportAnchorsAsync separata per ogni ancoraggio](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Esempio: Inviare dati di ancoraggio usando Windows:: Networking:: StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Esempio: inviare dati di ancoraggio usando Windows:: Networking:: StreamSocket
 
 In questo esempio viene fornito un esempio di come usare i dati di ancoraggio esportati inviando i dati attraverso una rete TCP. Si tratta di un HolographicSpatialAnchorTransferSample.
 
@@ -464,7 +464,7 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 
 Prima di tutto, è necessario connettersi al server. In questo esempio di codice viene illustrato come creare e configurare un StreamSocket e creare un DataReader che è possibile utilizzare per acquisire i dati di rete tramite la connessione socket.
 
-**NOTA:** Se si esegue questo codice di esempio, assicurarsi di configurare e avviare il server prima di avviare il client.
+**Nota:** Se si esegue questo codice di esempio, assicurarsi di configurare e avviare il server prima di avviare il client.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-La procedura è terminata. A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
+Ecco fatto! A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [PPL (Parallel Patterns Library)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

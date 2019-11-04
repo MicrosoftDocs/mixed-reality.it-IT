@@ -6,20 +6,20 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate spaziali, solo orientamento, scalabilità verticale, scalabilità, scalabilità, scalabilità globale, 360 gradi, seduto, in piedi, stanza, mondo, scala, posizione, orientamento, fermo, allegato, fase, ancoraggio, ancoraggio spaziale, blocco globale, blocco globale, con blocco del corpo, blocco del corpo, limiti, persistenza, condivisione, perdita di rilevamento, ancoraggio spaziale cloud
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829866"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436150"
 ---
 # <a name="coordinate-systems"></a>Sistemi di coordinate
 
-Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md) nel mondo che sembrano e suonino come oggetti reali. Questo implica il posizionamento e l'orientamento accurati degli ologrammi in luoghi del mondo che sono significativi per l'utente, indipendentemente dal fatto che il mondo sia la stanza fisica o un'area di autenticazione virtuale creata. Quando ragionano sulla posizione e sull'orientamento degli ologrammi o su qualsiasi altra geometria, ad esempio il raggio di [sguardi](gaze.md) o le [posizioni della mano](gestures.md), Windows fornisce vari sistemi di coordinate reali in cui è possibile esprimere la geometria, nota come  **sistemi di coordinate spaziali**.
+Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md) nel mondo che sembrano e suonino come oggetti reali. Questo implica il posizionamento e l'orientamento accurati degli ologrammi in luoghi del mondo che sono significativi per l'utente, indipendentemente dal fatto che il mondo sia la stanza fisica o un'area di autenticazione virtuale creata. Quando ragionano sulla posizione e sull'orientamento degli ologrammi o su qualsiasi altra geometria, ad esempio il raggio di [sguardi](gaze-and-commit.md) o le [posizioni della mano](hands-and-tools.md), Windows fornisce vari sistemi di coordinate reali in cui è possibile esprimere la geometria, nota come  **sistemi di coordinate spaziali**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -33,7 +33,7 @@ Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md)
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
@@ -66,6 +66,12 @@ Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md)
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">Informazioni sulle scene</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Scalabilità dell'esperienza di realtà mista
@@ -75,7 +81,7 @@ Le app di realtà mista possono progettare per un'ampia gamma di esperienze uten
 
 | Scalabilità dell'esperienza | Requisiti | Esperienza di esempio | 
 |----------|----------|----------|
-|  **Solo orientamento** |  **Orientamento auricolare** (gravità allineata) |  360 ° Visualizzatore video | 
+|  **Solo orientamento** |  **Orientamento auricolare** (gravità-allineato) |  360 ° Visualizzatore video | 
 |  **Con scalabilità verticale** |  Sopra, più la **posizione dell'auricolare** rispetto alla posizione zero |  Gioco da corsa o simulatore di spazio | 
 |  **Scalabilità permanente** |  Sopra, più **stage floor Origin** |  Gioco di azione in cui si Duck and Dodge sul posto  | 
 |  **Scalabilità locale** |  Sopra, più **poligoni dei limiti della fase** |  Gioco rompicapo in cui è possibile aggirare il puzzle | 
@@ -93,7 +99,7 @@ Queste scale di esperienza seguono un modello di "nidificazione di bambole". Il 
 |  **Sì** |  **Sì** |  **Sì** |  **Sì** |  No |  **Camera** | 
 |  **Sì** |  **Sì** |  **Sì** |  **Sì** |  **Sì** |  **Mondo** | 
 
-Si noti che il frame della fase di riferimento non è ancora supportato in HoloLens. Un'app scalabile in HoloLens attualmente deve usare il [mapping spaziale](spatial-mapping.md) per individuare il piano e i muri dell'utente.
+Si noti che il frame della fase di riferimento non è ancora supportato in HoloLens. Un'app scalabile in HoloLens attualmente deve usare il [mapping spaziale](spatial-mapping.md) o la [comprensione della scena](scene-understanding.md) per individuare il piano e le pareti dell'utente.
 
 ## <a name="spatial-coordinate-systems"></a>Sistemi di coordinate spaziali
 
@@ -133,7 +139,7 @@ Quando la cuffia non riesce a capire dove si trova nel mondo, un frame di riferi
 
 Per andare oltre la scalabilità verticale su un headset immersivo e creare un' **esperienza di scalabilità permanente**, è possibile usare il **frame della fase di riferimento**.
 
-Per offrire un' **esperienza**di scalabilità in una stanza, consentire agli utenti di aggirare i limiti di 5 metri predefiniti, è possibile controllare anche i **limiti di fase** .
+Per offrire un' **esperienza di scalabilità**in una stanza, consentire agli utenti di aggirare i limiti di 5 metri predefiniti, è possibile controllare anche i **limiti di fase** .
 
 ### <a name="stage-frame-of-reference"></a>Cornice della fase di riferimento
 
@@ -195,7 +201,7 @@ Usando gli <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" t
 
 Si sconsiglia vivamente il rendering del contenuto con blocco Head, che rimane in un punto fisso dello schermo, ad esempio un HUD. In generale, il contenuto con blocco Head è scomodo per gli utenti e non sembra una parte naturale del loro mondo.
 
-Il contenuto con blocco Head deve essere in genere sostituito con gli ologrammi collegati all'utente o inseriti nel mondo stesso. I [cursori](cursors.md), ad esempio, devono essere in genere inseriti nel mondo, scalabilità naturale per riflettere la posizione e la distanza dell'oggetto sotto lo sguardo dell'utente.
+Il contenuto con blocco Head deve essere in genere sostituito con gli ologrammi collegati all'utente o inseriti nel mondo stesso. I [cursori](cursors.md) , ad esempio, devono essere in genere inseriti nel mondo, scalabilità naturale per riflettere la posizione e la distanza dell'oggetto sotto lo sguardo dell'utente.
 
 ## <a name="handling-tracking-errors"></a>Gestione degli errori di rilevamento
 
@@ -221,7 +227,7 @@ In alcuni casi, quando si inizia a usare una cuffia in un ambiente in cui sono s
 
 In alcuni casi, una casa o un altro spazio può avere due aree identiche. Ad esempio, due sale riunioni identiche, due aree d'angolo identiche, due manifesti identici di grandi dimensioni che coprono il campo di visualizzazione del dispositivo. In questi scenari, il dispositivo può, a volte, essere confuso tra le parti identiche e contrassegnarle come la stessa rappresentazione interna. Ciò può causare la visualizzazione degli ologrammi da alcune aree in altre posizioni. Il dispositivo può iniziare a perdere il rilevamento spesso perché la relativa rappresentazione interna dell'ambiente è danneggiata. In questo caso, è consigliabile reimpostare la comprensione ambientale del sistema. Si noti che la reimpostazione della mappa comporta la perdita di tutti i posti di ancoraggio spaziali. In questo modo l'auricolare si rileverà correttamente nelle aree univoche dell'ambiente. È tuttavia possibile che il problema si verifichi di nuovo se il dispositivo viene confuso tra le aree identiche.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Presentazione GDC 2017 su sistemi di coordinate spaziali e rendering olografico](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemi di coordinate in Unity](coordinate-systems-in-unity.md)
 * [Sistemi di coordinate in DirectX](coordinate-systems-in-directx.md)

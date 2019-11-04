@@ -1,24 +1,24 @@
 ---
 title: MR e Azure 304-riconoscimento facciale
-description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, riconoscimento viso, hololens, immersive, VR
-ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047178"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438500"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br> 
 
-# <a name="mr-and-azure-304-face-recognition"></a>MR e Azure 304: Riconoscimento viso
+# <a name="mr-and-azure-304-face-recognition"></a>MR e Azure 304: riconoscimento viso
 
 ![risultato del completamento del corso](images/AzureLabs-Lab4-00.png)
 
@@ -43,7 +43,7 @@ Nell'applicazione, spetta all'utente come integrare i risultati con la progettaz
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> MR e Azure 304: Riconoscimento viso</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR e Azure 304: riconoscimento viso</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -112,7 +112,7 @@ Per usare il servizio *API viso* in Azure, sarà necessario configurare un'istan
 
     6. Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    7. Selezionare **Crea***
+    7. Selezionare **Crea *.**
 
         ![Crea servizio API viso](images/AzureLabs-Lab4-03.png)
 
@@ -152,7 +152,7 @@ Questa applicazione usa le librerie *Microsoft. ProjectOxford. Face* che consent
 >
 > - Creare un *gruppo*di persone, ovvero un gruppo composto da più persone a cui si desidera associarlo. Con l'account Azure è possibile ospitare più gruppi di persone.
 >
-> - Creare una *persona*, che è un membro di un gruppo di persone. Ogni persona ha un certo numero di immagini facciali associate.
+> - Creare una *persona*, che è un membro di un gruppo di persone. Ogni persona ha un certo numero di immagini *facciali* associate.
 >
 > -  Assegnare le *Immagini facciali* a una *persona*per consentire al servizio API viso di Azure di riconoscere una *persona* con la *faccia*corrispondente.
 >
@@ -269,8 +269,8 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 
     1. Nella scheda **altre impostazioni** :
 
-        1. Creazione di **script** La **versione di runtime** deve essere **sperimentale** (equivalente a .NET 4,6). Se si modifica questa impostazione, è necessario riavviare l'editor.
-        2. Il **back-end** di scripting deve essere **.NET**
+        1. La **versione di runtime** di **Scripting** deve essere **sperimentale** (equivalente a .NET 4,6). Se si modifica questa impostazione, è necessario riavviare l'editor.
+        2. Il **back-end di scripting** deve essere **.NET**
         3. Il **livello di compatibilità API** deve essere **.NET 4,6**
 
             ![Aggiornare altre impostazioni.](images/AzureLabs-Lab4-16.png)
@@ -293,7 +293,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 ## <a name="chapter-4---main-camera-setup"></a>Capitolo 4-configurazione della fotocamera principale
 
 > [!IMPORTANT]
-> Se si desidera ignorare il componente di *configurazione* di Unity di questo corso e continuare direttamente con il codice, è possibile [scaricare questo. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)e importarlo nel progetto come [pacchetto personalizzato](https://docs.unity3d.com/Manual/AssetPackages.html). Tenere presente che questo pacchetto include anche l'importazione della *dll Newtonsoft*, illustrata nel [capitolo 5](#chapter-5--import-the-newtonsoftjson-library). Con questa importazione, è possibile continuare dal [capitolo 6](#chapter-6---create-the-faceanalysis-class).
+> Se si desidera ignorare il componente di *configurazione di Unity* di questo corso e continuare direttamente con il codice, è possibile [scaricare questo. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)e importarlo nel progetto come [pacchetto personalizzato](https://docs.unity3d.com/Manual/AssetPackages.html). Tenere presente che questo pacchetto include anche l'importazione della *dll Newtonsoft*, illustrata nel [capitolo 5](#chapter-5--import-the-newtonsoftjson-library). Con questa importazione, è possibile continuare dal [capitolo 6](#chapter-6---create-the-faceanalysis-class).
 
 1.  Nel pannello *gerarchia* selezionare la **fotocamera principale**.
 
@@ -344,7 +344,7 @@ Per creare la classe *FaceAnalysis* :
     ![Creare la classe FaceAnalysis.](images/AzureLabs-Lab4-22.png)
 
 2.  Fare doppio clic sulla cartella appena creata per aprirla. 
-3.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi fare clic su **Crea**  >   **C# script**. Chiamare lo script *FaceAnalysis*. 
+3.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi fare clic su **Crea** >  **C# script**. Chiamare lo script *FaceAnalysis*. 
 4.  Fare doppio clic sul nuovo script *FaceAnalysis* per aprirlo con Visual Studio 2017.
 5.  Immettere gli spazi dei nomi seguenti sopra la classe *FaceAnalysis* :
 
@@ -816,7 +816,7 @@ Per avviare il processo di compilazione:
 
 Per eseguire la distribuzione in HoloLens:
 
-1.  È necessario l'indirizzo IP del HoloLens (per la distribuzione remota) e per assicurarsi che il HoloLens sia in **modalità sviluppatore**. A tale scopo, effettuare le seguenti operazioni:
+1.  È necessario l'indirizzo IP del HoloLens (per la distribuzione remota) e per assicurarsi che il HoloLens sia in **modalità sviluppatore**. A tale scopo, effettua le seguenti operazioni:
 
     1. Quando si indossa il HoloLens, aprire le **Impostazioni**.
     2. Passare a **rete & Internet > opzioni avanzate Wi-Fi >**
@@ -864,4 +864,4 @@ Il **API viso di Azure** è sufficientemente potente da rilevare fino a 64 visi 
 
 ### <a name="exercise-2"></a>Esercizio 2
 
-Il **API viso di Azure** è inoltre in grado di fornire tutti i tipi di informazioni sugli attributi. Integrarlo nell'applicazione. Questo potrebbe essere ancora più interessante, se combinato con il [API emozioni](https://azure.microsoft.com/en-au/services/cognitive-services/emotion/).
+Il **API viso di Azure** è inoltre in grado di fornire tutti i tipi di informazioni sugli attributi. Integrarlo nell'applicazione. Questo potrebbe essere ancora più interessante, se combinato con il [API emozioni](https://azure.microsoft.com/services/cognitive-services/emotion/).

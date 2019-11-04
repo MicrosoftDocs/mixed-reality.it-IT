@@ -1,17 +1,17 @@
 ---
 title: Esportazione e compilazione di una soluzione Unity di Visual Studio
 description: Questo articolo illustra come esportare il progetto di realtà mista da Unity, in modo da poter compilare e distribuire in Visual Studio.
-author: ''
+author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, Visual Studio, Esporta, compila, Distribuisci
-ms.openlocfilehash: 68c86fdfe0e589536dafe2bf53c7d4e5dffcc514
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 752a9dd002d27d24d9b80a1a97cb07a44237b9e0
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525847"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435570"
 ---
 # <a name="exporting-and-building-a-unity-visual-studio-solution"></a>Esportazione e compilazione di una soluzione Unity di Visual Studio
 
@@ -19,16 +19,16 @@ Se non si prevede di usare la tastiera di sistema nell'applicazione, è consigli
 
 ## <a name="how-to-export-from-unity"></a>Come esportare da Unity
 
-![Impostazioni di compilazione Unity](images/unitybuildsettings-300px.png)<br>
+![impostazioni di compilazione Unity](images/unitybuildsettings-300px.png)<br>
 *Impostazioni di compilazione Unity*
 
 1. Quando si è pronti per esportare il progetto da Unity, aprire il menu **file** e selezionare **impostazioni di compilazione...**
 2. Fare clic su **Aggiungi scene aperte** per aggiungere la scena alla compilazione.
 3. Nella finestra di dialogo **impostazioni di compilazione** scegliere le opzioni seguenti per esportare per HoloLens:
-   * **Piattaforma** *Piattaforma UWP (Universal Windows Platform)* e assicurarsi di selezionare **Switch Platform (Cambia piattaforma** ) per rendere effettive le selezioni.
-   * **SDK** *Universale 10*.
+   * **Piattaforma:** *piattaforma UWP (Universal Windows Platform)* e assicurarsi di selezionare **Switch Platform (Cambia piattaforma** ) per rendere effettive le selezioni.
+   * **SDK:** *universale 10*.
    * **Tipo di compilazione UWP:** *D3D*.
-4. **Facoltativo**: **Progetti C# Unity:** Selezionata.
+4. **Facoltativo**: **progetti C# Unity:** selezionato.
 
 >[!NOTE]
 >Selezionando questa casella è possibile:
@@ -62,7 +62,7 @@ Il resto della compilazione e della distribuzione delle app avviene in [Visual S
 |----------|----------|
 |  Debug  |  Tutte le ottimizzazioni disattivate e il profiler è abilitato. Utilizzato per eseguire il debug degli script. | 
 |  Master  |  Tutte le ottimizzazioni sono attivate e il profiler è disabilitato. Usato per inviare app allo Store. | 
-|  Rilascio  |  Tutte le ottimizzazioni sono attivate e il profiler è abilitato. Usato per valutare le prestazioni dell'app. | 
+|  Rilascia  |  Tutte le ottimizzazioni sono attivate e il profiler è abilitato. Usato per valutare le prestazioni dell'app. | 
 
 Si noti che l'elenco precedente è un subset dei trigger comuni che comporteranno la generazione del progetto di Visual Studio. In generale, la modifica dei file con estensione cs da Visual Studio non richiede la rigenerazione del progetto da Unity.
 

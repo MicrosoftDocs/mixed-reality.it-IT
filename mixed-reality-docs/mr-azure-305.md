@@ -6,25 +6,25 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, funzioni, archiviazione, hololens, immersiva, VR
-ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 79c276d45163465c9921d02343d41d52d5f094e7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694553"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437983"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
 
 <br> 
 
-# <a name="mr-and-azure-305-functions-and-storage"></a>MR e Azure 305: Funzioni e archiviazione
+# <a name="mr-and-azure-305-functions-and-storage"></a>MR e Azure 305: funzioni e archiviazione
 
 ![prodotto finale-inizio](images/AzureLabs-Lab5-00.png)
 
 In questo corso si apprenderà come creare e usare funzioni di Azure e come archiviare i dati con una risorsa di archiviazione di Azure, all'interno di un'applicazione di realtà mista.
 
-*Funzioni di Azure* è un servizio Microsoft che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. *Funzioni di Azure* supporta diversi linguaggi di sviluppo,\#tra cui\#C, F, node. js, Java e php. Per altre informazioni, vedere l' [articolo funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+*Funzioni di Azure* è un servizio Microsoft che consente agli sviluppatori di eseguire piccole porzioni di codice, "funzioni", in Azure. Questo consente di delegare il lavoro al cloud, anziché l'applicazione locale, che può avere molti vantaggi. *Funzioni di Azure* supporta diversi linguaggi di sviluppo, tra cui C\#, F\#, node. js, Java e php. Per altre informazioni, vedere l' [articolo funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
 *Archiviazione di Azure* è un servizio cloud Microsoft che consente agli sviluppatori di archiviare i dati, con l'assicurazione che saranno a disponibilità elevata, protezione, durabilità, scalabilità e ridondanza. Ciò significa che Microsoft gestirà tutta la manutenzione e i problemi critici. Per altre informazioni, vedere l' [articolo archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-introduction).
 
@@ -44,7 +44,7 @@ Nell'applicazione, spetta all'utente come integrare i risultati con la progettaz
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>MR e Azure 305: Funzioni e archiviazione</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR e Azure 305: funzioni e archiviazione</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -115,7 +115,7 @@ Per usare il **servizio di archiviazione di Azure**, è necessario creare e conf
 
     10. Sarà inoltre necessario confermare di aver compreso i termini e le condizioni applicati a questo servizio.
 
-    11. Selezionare **Create**.
+    11. Seleziona **Crea**.
 
         ![informazioni sul servizio di input](images/AzureLabs-Lab5-03.png)
 
@@ -131,7 +131,7 @@ Per usare il **servizio di archiviazione di Azure**, è necessario creare e conf
 
 8.  Fare clic sul pulsante **Vai alla risorsa** nella notifica per esplorare la nuova istanza del servizio. Si verrà portati alla nuova istanza del servizio dell' *account di archiviazione* .
 
-    ![chiavi di accesso](images/AzureLabs-Lab5-06.png)
+    ![tasti di scelta](images/AzureLabs-Lab5-06.png)
 
 9.  Fare clic su *chiavi di accesso*per visualizzare gli endpoint per il servizio cloud. Usare *blocco note* o simile per copiare una delle chiavi da usare in un secondo momento. Prendere nota anche del valore della *stringa di connessione* , che verrà usato nella classe *Servizi* , che verrà creata in un secondo momento.
 
@@ -196,7 +196,7 @@ Per creare una funzione di Azure:
 
     ![Crea nuova funzione](images/AzureLabs-Lab5-13.png)
 
-10. Nella pagina successiva assicurarsi che webhook e l' **API** siano selezionati e per *scegliere una lingua* Selezionare **CSharp**, in quanto si tratta della lingua usata per questa esercitazione. Infine, fare clic sul pulsante **Crea funzione** .
+10. Nella pagina successiva assicurarsi che **webhook** e l'API siano selezionati e per *scegliere una lingua* Selezionare **CSharp**, in quanto si tratta della lingua usata per questa esercitazione. Infine, fare clic sul pulsante **Crea funzione** .
 
     ![Seleziona CSharp Web Hook](images/AzureLabs-Lab5-14.png)
 
@@ -223,7 +223,7 @@ Per creare una funzione di Azure:
         }
     ```
 
-13. Selezionare **Salva**.
+13. Seleziona **Salva**.
 
 14. Il risultato dovrebbe essere simile all'immagine seguente.
 
@@ -240,7 +240,7 @@ Di seguito è riportata una configurazione tipica per lo sviluppo con realtà mi
 Configurare e testare l'auricolare immersiva della realtà mista.
 
 > [!NOTE]
-> **Non** sarà necessario alcun controller di movimento per questo corso. Se è necessario supporto per la configurazione dell'auricolare immersivo, [vedere l'articolo relativo alla configurazione della realtà mista](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+> **Non** sarà necessario alcun controller di movimento per questo corso. Se è necessario supporto per la configurazione dell'auricolare immersivo, [vedere l'articolo relativo alla configurazione della realtà mista](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
 1.  Aprire Unity e fare clic su **New**.
 
@@ -250,15 +250,15 @@ Configurare e testare l'auricolare immersiva della realtà mista.
 
     ![assegnare un nome al nuovo progetto Unity](images/AzureLabs-Lab5-18.png)
 
-3.  Con Unity aperto, vale la pena controllare che l' **editor di script** predefinito sia impostato su **Visual Studio**. Passare a **modifica** > **Preferenze** e quindi dalla nuova finestra passare a **strumenti esterni**. Modificare l' **editor di script esterno** in **Visual Studio 2017**. Chiudere la finestra delle **Preferenze** .
+3.  Con Unity aperto, vale la pena controllare che l' **editor di script** predefinito sia impostato su **Visual Studio**. Passare a **modifica** **Preferenze** > e quindi dalla nuova finestra passare a **strumenti esterni**. Modificare l' **editor di script esterno** in **Visual Studio 2017**. Chiudere la finestra delle **Preferenze** .
 
     ![imposta Visual Studio come editor di script](images/AzureLabs-Lab5-19.png)
 
-4.  Passare quindi a**impostazioni di compilazione** **file** > e passare alla piattaforma **piattaforma UWP (Universal Windows Platform)** , facendo clic sul pulsante **Switch Platform** .
+4.  Passare quindi a **File** > **impostazioni di compilazione** e impostare la piattaforma su **piattaforma UWP (Universal Windows Platform)** , facendo clic sul pulsante **Switch Platform** .
 
     ![passa alla piattaforma UWP](images/AzureLabs-Lab5-20.png)
 
-5.  Passare a**impostazioni di compilazione** **file** > e verificare che:
+5.  Passare a **File** > **impostazioni di compilazione** e verificare che:
 
     1. Il **dispositivo di destinazione** è impostato su **qualsiasi dispositivo**.
 
@@ -298,8 +298,8 @@ Configurare e testare l'auricolare immersiva della realtà mista.
 
     1.  Nella scheda **altre impostazioni** :
 
-        1.  La **versione di runtime** di scripting deve essere **sperimentale** (equivalente a .NET 4,6), che attiverà la necessità di riavviare l'editor.
-        2.  Il **back-end** di scripting deve essere **.NET**
+        1.  La **versione di runtime di scripting** deve essere **sperimentale** (equivalente a .NET 4,6), che attiverà la necessità di riavviare l'editor.
+        2.  Il **back-end di scripting** deve essere **.NET**
         3.  Il **livello di compatibilità API** deve essere **.NET 4,6**
 
     2.  Nella scheda **impostazioni di pubblicazione** , in **funzionalità**, selezionare:
@@ -318,18 +318,18 @@ Configurare e testare l'auricolare immersiva della realtà mista.
 
 10.  Chiudere la finestra impostazioni di compilazione.
 
-11. Salva la scena e il progetto **(**  > **progetto**Salva**scena/Salva file** > ).
+11. Salvare la scena e il progetto (**file** > **Salva scena/file** > **Salva progetto**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Capitolo 4-installazione della fotocamera principale
 
 > [!IMPORTANT]
-> Se si vuole ignorare i componenti di *configurazione* di Unity di questo corso e continuare direttamente con il codice, è possibile [scaricare questo. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)e importarlo nel progetto come [pacchetto personalizzato](https://docs.unity3d.com/Manual/AssetPackages.html). Questo conterrà anche le dll del capitolo successivo. Dopo l'importazione, continuare con il [capitolo 7](#chapter-7---create-the-azureservices-class). 
+> Se si vuole ignorare i componenti di *configurazione di Unity* di questo corso e continuare direttamente con il codice, è possibile [scaricare questo. file unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)e importarlo nel progetto come [pacchetto personalizzato](https://docs.unity3d.com/Manual/AssetPackages.html). Questo conterrà anche le dll del capitolo successivo. Dopo l'importazione, continuare con il [capitolo 7](#chapter-7---create-the-azureservices-class). 
 
 1.  Nel *Pannello gerarchia*è presente un oggetto denominato **Main camera**, che rappresenta il punto di visualizzazione "Head" dopo che l'applicazione è stata "interna".
 
 2.  Con il dashboard Unity in primo piano, selezionare la **fotocamera principale GameObject**. Si noterà che il *pannello Inspector* , disponibile in genere a destra, all'interno del dashboard, visualizzerà i vari componenti di tale *GameObject*, con la *trasformazione* nella parte superiore, seguita dalla *fotocamera*e da altri componenti. Sarà necessario reimpostare la trasformazione della fotocamera principale, in modo che venga posizionata correttamente.
 
-3.  A tale scopo, selezionare l'  icona dell'ingranaggio accanto al componente *trasformazione* della fotocamera e selezionare **Reimposta**.
+3.  A tale scopo, selezionare l'icona dell' **ingranaggio** accanto al componente *trasformazione* della fotocamera e selezionare **Reimposta**.
 
     ![Reimposta trasformazione](images/AzureLabs-Lab5-29.png)
 
@@ -421,7 +421,7 @@ Configurare e testare l'auricolare immersiva della realtà mista.
 
 6.  Successivamente verrà creato un oggetto **testo 3D** per fornire commenti e suggerimenti sullo stato del servizio di Azure.
 
-    Fare di nuovo clic con il pulsante destro del mouse su **GazeButton** nel pannello gerarchia e aggiungere un oggetto **3D oggetto** > **testo 3D** come *elemento figlio*.
+    Fare di nuovo clic con il pulsante destro del mouse su **GazeButton** nel pannello gerarchia e aggiungere un **oggetto 3D** > oggetto **testo 3D** come *elemento figlio*.
 
     ![Crea nuovo oggetto testo 3D](images/AzureLabs-Lab5-42.png)
 
@@ -448,7 +448,7 @@ Configurare e testare l'auricolare immersiva della realtà mista.
     ![imposta componente mesh testo](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > Il colore selezionato è il colore esadecimale: **000000FF**, sebbene sia possibile sceglierne una propria, è sufficiente assicurarsi che sia leggibile.
+    > Il colore selezionato è il colore esadecimale: **000000FF**, sebbene sia possibile sceglierne un altro, è sufficiente assicurarsi che sia leggibile.
 
 10. La struttura del pannello della gerarchia dovrebbe ora essere simile alla seguente:
 
@@ -467,9 +467,9 @@ Attualmente esiste un problema noto in Unity che richiede che i plug-in vengano 
 
 Per importare l'SDK nel progetto, assicurarsi di aver scaricato la versione più recente [di ". file unitypackage Tools" da GitHub](https://aka.ms/azstorage-unitysdk). Eseguire quindi le operazioni seguenti:
 
-1.  Aggiungere il file con **estensione file unitypackage Tools** a Unity usando l'opzione di menu **Asset** > **Import Package** > **Custom Package** .
+1.  Aggiungere il file con **estensione file unitypackage Tools** a Unity usando l'opzione di menu **Asset** > **Importa pacchetto** > **pacchetto personalizzato** .
 
-2.  Nella casella **Importa pacchetto Unity** visualizzata è possibile selezionare tutti gli elementi in**archiviazione** **plug** > -in. Deselezionare tutti gli altri elementi, perché non sono necessari per questo corso.
+2.  Nella casella **Importa pacchetto Unity** visualizzata è possibile selezionare tutti gli elementi in **plug** -in > **archiviazione**. Deselezionare tutti gli altri elementi, perché non sono necessari per questo corso.
 
     ![Importa nel pacchetto](images/AzureLabs-Lab5-45.png)
 
@@ -477,10 +477,10 @@ Per importare l'SDK nel progetto, assicurarsi di aver scaricato la versione più
 
 4.  Passare alla cartella *archiviazione* in *plug*-in, nella visualizzazione del progetto e selezionare *solo*i plug-in seguenti:
 
-    -   Microsoft.Data.Edm
-    -   Microsoft.Data.OData
+    -   Microsoft. Data. Edm
+    -   Microsoft. Data. OData
     -   Microsoft. WindowsAzure. storage
-    -   Newtonsoft.Json
+    -   Newtonsoft. JSON
     -   System. Spatial
 
         ![deseleziona qualsiasi piattaforma](images/AzureLabs-Lab5-46.png)
@@ -519,7 +519,7 @@ La classe *Servizi* sarà responsabile di:
 
 Per creare questa classe:
 
-1.  Fare clic con il pulsante destro del mouse nella cartella *Asset* , che si trova nel pannello progetto, **Crea** > **cartella**. Denominare gli **script**della cartella.
+1.  Fare clic con il pulsante destro del mouse nella cartella *Asset* , che si trova nel pannello del progetto, **creare** > **cartella**. Denominare gli **script**della cartella.
 
     ![Crea nuova cartella](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Per creare questa classe:
 
 2.  Fare doppio clic sulla cartella appena creata per aprirla.
 
-3.  Fare clic con il pulsante destro del mouse all'interno della cartella **Crea**  >   **C# script**. Chiamare lo script *Servizi*.
+3.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi **creare** >  **C# script**. Chiamare lo script *Servizi*.
 
 4.  Fare doppio clic sulla nuova classe *Servizi* per aprirla con *Visual Studio*.
 
@@ -657,7 +657,7 @@ Per creare questa classe:
 
 1.  Passare alla cartella **Scripts** creata in precedenza.
 
-2.  Fare clic con il pulsante destro del mouse all'interno della cartella **Crea**  >   **C# script**. Chiamare lo script *ShapeFactory*.
+2.  Fare clic con il pulsante destro del mouse all'interno della cartella, quindi **creare** >  **C# script**. Chiamare lo script *ShapeFactory*.
 
 3.  Fare doppio clic sul nuovo script *ShapeFactory* per aprirlo con *Visual Studio*.
 
@@ -767,7 +767,7 @@ Per creare questa classe:
 
 1.  Passare alla cartella **Scripts** creata in precedenza.
 
-2.  Fare clic con il pulsante destro del mouse sul pannello del progetto, quindi scegliere **Crea**  >   **C# script**. Chiamare lo *sguardo*dello script.
+2.  Fare clic con il pulsante destro del mouse sul pannello del progetto, quindi **creare** >  **C# script**. Chiamare lo *sguardo*dello script.
 
 3.  Fare doppio clic *sul nuovo script* per aprirlo con *Visual Studio.*
 
@@ -1157,7 +1157,7 @@ Con gli altri script sul posto, è ora possibile *completare* la classe *Servizi
         }
     ```
 
-5.  Aggiungere un metodo per recuperare il testo archiviato nel file che si trova nel *file di archiviazione di Azure* e deserializzarlo in un elenco.
+5.  Aggiungere un metodo per recuperare il testo archiviato nel file che si trova nel *file di archiviazione di Azure* e *deserializzarlo* in un elenco.
 
 6.  Una volta completato il processo, il metodo abilita nuovamente lo sguardo in modo che l'utente possa aggiungere altre forme alla scena.
 
@@ -1197,7 +1197,7 @@ Con gli altri script sul posto, è ora possibile *completare* la classe *Servizi
 
 Per avviare il processo di compilazione:
 
-1.  Passare a **file** > **impostazioni di compilazione**.
+1.  Passare a **File** > **impostazioni di compilazione**.
 
     ![compilare l'app](images/AzureLabs-Lab5-54.png)
 
@@ -1218,8 +1218,8 @@ Per distribuire l'applicazione:
 3.  Nella **configurazione della soluzione** selezionare **debug**.
 
     > Per Microsoft HoloLens, può risultare più semplice impostare questa impostazione su *computer remoto*, in modo da non essere collegati al computer. Tuttavia, sarà necessario eseguire anche le operazioni seguenti:
-    > - Individuare l' **indirizzo IP** della HoloLens, che si trova all'interno della rete **Impostazioni** >  **&**  > **Opzioni avanzate** **Wi-Fi** > . l'indirizzo IPv4 è quello da usare. 
-    > - Verificare che la **modalità sviluppatore** sia **attiva**; disponibile in **Impostazioni** > **aggiornare & sicurezza** > **per gli sviluppatori**.
+    > - Conosce l' **indirizzo IP** del HoloLens, disponibile all'interno delle **impostazioni** > **rete & Internet** > **Wi-Fi** > **Opzioni avanzate**; IPv4 è l'indirizzo da usare. 
+    > - Verificare che la **modalità sviluppatore** sia **attiva**; disponibile in **impostazioni** > **Aggiorna &**  > **di sicurezza per gli sviluppatori**.
 
     ![Distribuisci soluzione](images/AzureLabs-Lab5-55.png)
 

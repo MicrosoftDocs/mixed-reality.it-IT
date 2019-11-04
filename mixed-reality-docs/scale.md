@@ -1,21 +1,25 @@
 ---
-title: Scalabilità
-description: Una chiave per la visualizzazione di contenuto che sembra realistico in forma olografica consiste nel simulare il più possibile le statistiche visive del mondo reale.
+title: Scala
+description: Per visualizzare contenuto che sembri realistico in forma olografica, è importante simulare quanto più possibile le statistiche visive del mondo reale.
 author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, stile, progettazione
-ms.openlocfilehash: 169665293e2cc612a546bbee5af14387855ae96b
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: eeec28fbf98cf4386a57cde4452cd3f8977d7780
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896555"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437503"
 ---
-# <a name="scale"></a>Scalabilità
+# <a name="scale"></a>Scala
 
-Una chiave per la visualizzazione di contenuto che sembra realistico in forma olografica consiste nel simulare il più possibile le statistiche visive del mondo reale. Ciò significa che l'integrazione di tutti i segnali visivi, come possiamo aiutarci (nel mondo reale) a capire dove si trovano gli oggetti, quanto è grande e cosa ne fanno. La scala di un oggetto è uno dei più importanti dei segnali visivi, offrendo a un visualizzatore un senso della dimensione di un oggetto, nonché i segnali alla relativa posizione, in particolare per gli oggetti con dimensioni note. Inoltre, la visualizzazione di oggetti su scala reale è stata considerata come uno dei principali elementi di differenziazione per la realtà mista in generale, un elemento che non è stato possibile visualizzare in precedenza sullo schermo.
+Per visualizzare contenuto che sembri realistico in forma olografica, è importante simulare quanto più possibile le statistiche visive del mondo reale. Ciò significa incorporare il maggior numero possibile di segnali visivi utili (nel mondo reale) per comprendere dove si trovino gli oggetti, quanto siano grandi e di cosa siano fatti. La scala di un oggetto è uno dei più importanti dei segnali visivi, offrendo a un visualizzatore un senso della dimensione di un oggetto, nonché i segnali alla relativa posizione, in particolare per gli oggetti con dimensioni note. Inoltre, la visualizzazione di oggetti su scala reale è stata considerata come uno dei principali elementi di differenziazione per la realtà mista in generale, un elemento che non è stato possibile visualizzare in precedenza sullo schermo.
+
+<br>
+
+---
 
 ## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>Come suggerire la scala di oggetti e ambienti
 
@@ -25,19 +29,42 @@ Esistono diversi modi per suggerire la scala di un oggetto, alcuni dei quali han
 
 Un metodo comune prevede l'utilizzo della distanza degli oggetti presentati all'utente. Si consideri, ad esempio, la visualizzazione di un'auto famiglia di grandi dimensioni davanti all'utente. Se la vettura si trovava direttamente davanti ad esse, entro la lunghezza di ARM, sarebbe troppo grande per il campo di visualizzazione dell'utente. In questo modo l'utente dovrà spostare la testa e il corpo per comprendere l'intero oggetto. Se la macchina è stata posizionata più a lungo (attraverso la stanza), l'utente può stabilire un senso di ridimensionamento visualizzando l'intero oggetto nel campo di visualizzazione, quindi ci si sposta più vicino per esaminare le aree in dettaglio.
 
-[Volvo](https://www.youtube.com/watch?v=DilzwF90vec) usa questa tecnica per creare un'esperienza di showroom per una nuova macchina, usando la scalabilità dell'automobile olografica in modo da essere realistica e intuitiva per l'utente. L'esperienza inizia con un ologramma dell'auto in una tabella fisica, consentendo all'utente di comprendere la dimensione e la forma totali del modello. Successivamente, l'auto si espande fino a una scala più ampia (oltre le dimensioni del campo di visualizzazione del dispositivo), ma poiché l'utente ha già acquisito un frame di riferimento dal modello più piccolo, può spostarsi in modo adeguato sulle funzionalità dell'auto.
+:::row:::
+    :::column:::
+        **[Volvo usa questa tecnica per creare un'](https://www.youtube.com/watch?v=DilzwF90vec)** esperienza di showroom per una nuova macchina, usando la scalabilità dell'automobile olografica in modo da essere realistica e intuitiva per l'utente. L'esperienza inizia con un ologramma dell'auto in una tabella fisica, consentendo all'utente di comprendere la dimensione e la forma totali del modello. Successivamente, l'auto si espande fino a una scala più ampia (oltre le dimensioni del campo di visualizzazione del dispositivo), ma poiché l'utente ha già acquisito un frame di riferimento dal modello più piccolo, può spostarsi in modo adeguato sulle funzionalità dell'auto.<br>
+        <br>
+        *Immagine: esperienza Volvo Cars per HoloLens*
+    :::column-end:::
+        :::column:::
+       ![Esperienza Volvo Cars per HoloLens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-![Esperienza Volvo Cars per HoloLens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
-*Esperienza Volvo Cars per HoloLens*
+
+<br>
+
+---
 
 ### <a name="use-holograms-to-modify-the-users-real-space"></a>Usare gli ologrammi per modificare lo spazio reale dell'utente
 
 Un altro metodo consiste nell'usare gli ologrammi per modificare lo spazio reale dell'utente, sostituendo i muri o i soffitti esistenti con gli ambienti o accodando "buchi" o "finestre", consentendo a oggetti di dimensioni superiori di "interrompere" lo spazio fisico. Un albero di grandi dimensioni, ad esempio, potrebbe non rientrare nella maggior parte dei salotti degli utenti, ma mettendo un cielo virtuale sul soffitto, lo spazio fisico si espande nel computer virtuale. In questo modo, l'utente può aggirare la base dell'albero virtuale e raccogliere un senso di scalabilità di come verrebbe visualizzato nella vita reale, quindi cercare di estenderlo oltre lo spazio fisico della stanza.
 
-[Minecraft](https://minecraft.net/) ha sviluppato un'esperienza concettuale usando una tecnica simile. Aggiungendo una finestra virtuale a una superficie fisica in una stanza, gli oggetti esistenti nella stanza vengono posizionati nel contesto di un ambiente notevolmente più ampio, oltre i limiti della scala fisica della stanza.
+:::row:::
+    :::column:::
+        **[Minecraft ha sviluppato un'esperienza concettuale](https://minecraft.net/)** con una tecnica simile. Aggiungendo una finestra virtuale a una superficie fisica in una stanza, gli oggetti esistenti nella stanza vengono posizionati nel contesto di un ambiente notevolmente più ampio, oltre i limiti della scala fisica della stanza.<br>
+        <br>
+        *Immagine: esperienza del concetto di Minecraft per HoloLens*
+    :::column-end:::
+        :::column:::
+       ![Esperienza del concetto Minecraft per HoloLens](images/800px-minecraftwindow-640px.jpg)<br><br>
+    :::column-end:::
+:::row-end:::
 
-![Esperienza del concetto Minecraft per HoloLens](images/800px-minecraftwindow-640px.jpg)<br>
-*Esperienza del concetto Minecraft per HoloLens*
+
+<br>
+
+---
+
 
 ## <a name="experimenting-with-scale"></a>Sperimentazione con scalabilità
 
@@ -49,7 +76,11 @@ Questa operazione può tuttavia creare alcuni artefatti possibili nell'esperienz
 * Con le aree di confronto nel mondo reale, tali modifiche di ridimensionamento vengono talvolta considerate come la modifica della posizione lungo più assi. gli oggetti possono sembrare ridotti anziché essere più vicini (simili in una proiezione 2D di spostamento 3D in alcuni casi).
 * Infine, per gli oggetti senza una dimensione nota ' reale ' (ad esempio, forme arbitrarie con dimensioni arbitrarie, elementi dell'interfaccia utente e così via), la modifica della scala può agire dal punto di vista funzionale come un modo per simulare le modifiche a distanza. i visualizzatori non hanno il numero di suggerimenti dall'alto verso il basso preesistenti per i quali comprendere le dimensioni o la posizione dell'oggetto, in modo che la scala possa essere elaborata come una cue più importante.
 
-## <a name="see-also"></a>Vedere anche
+<br>
+
+---
+
+## <a name="see-also"></a>Vedi anche
 * [Colore, luce e materiali](color,-light-and-materials.md)
 * [Tipografia](typography.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)
