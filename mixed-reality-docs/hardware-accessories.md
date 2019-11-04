@@ -6,20 +6,20 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: procedure, accessori, Bluetooth, BT, controller, gamepad, clicker, Xbox
-ms.openlocfilehash: c25f849cbf05a78ba2fe7118dbe160d05e0f5e3f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526617"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435142"
 ---
 # <a name="hardware-accessories"></a>Accessori hardware
 
 I dispositivi per la realtà mista di Windows supportano accessori. Gli accessori supportati verranno abbinati a HoloLens tramite Bluetooth, mentre è possibile usare Bluetooth o USB per abbinare gli accessori supportati a un headset immersivo tramite il PC a cui è connesso.
 
-Due scenari comuni per l'uso di accessori con HoloLens sono sostituiti dal gesto del rubinetto aereo e dalla tastiera virtuale. A questo proposito, i due accessori più comuni sono le tastiere **HoloLens** e **Bluetooth**. Microsoft HoloLens include una radio Bluetooth 4,1 e supporta i profili del [GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) Bluetooth [HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) e Bluetooth.
+Due scenari comuni per l'uso di accessori con HoloLens sono sostituiti dal gesto del rubinetto aereo e dalla tastiera virtuale. A questo proposito, i due accessori più comuni sono le **tastiere** **HoloLens** e Bluetooth. Microsoft HoloLens include una radio Bluetooth 4,1 e supporta i profili del [GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) Bluetooth [HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) e Bluetooth.
 
-Gli auricolari a realtà mista di Windows richiedono accessori per l'input oltre lo [sguardo](gaze.md) e la [voce](voice-input.md). Gli accessori supportati includono **tastiera e mouse**, **Gamepad**e **[controller di movimento](motion-controllers.md)** .
+Gli auricolari a realtà mista di Windows richiedono accessori per l'input oltre lo [sguardo](gaze-and-commit.md) e la [voce](voice-input.md). Gli accessori supportati includono **tastiera e mouse**, **Gamepad**e **[controller di movimento](motion-controllers.md)** .
 
 ## <a name="pairing-bluetooth-accessories"></a>Associazione di accessori Bluetooth
 
@@ -29,7 +29,7 @@ L'associazione di una periferica Bluetooth con Microsoft HoloLens è simile all'
 3. Accendere la radio Bluetooth se è spenta usando il dispositivo di scorrimento
 4. Posizionare il dispositivo Bluetooth in modalità di associazione. Questa operazione varia da dispositivo a dispositivo. Nella maggior parte dei dispositivi Bluetooth questa operazione viene eseguita tenendo premuto uno o più pulsanti.
 5. Attendere che il nome del dispositivo venga visualizzato nell'elenco dei dispositivi Bluetooth. In tal caso, selezionare il dispositivo e quindi fare clic sul pulsante **associa** . Se sono presenti molti dispositivi Bluetooth nelle vicinanze, potrebbe essere necessario scorrere fino alla fine dell'elenco dei dispositivi Bluetooth per visualizzare il dispositivo che si sta tentando di associare.
-6. Quando si abbinano periferiche Bluetooth con funzionalità di input (ad esempio: Tastiere Bluetooth), è possibile che venga visualizzato un pin a 6 cifre o a 8 cifre. Assicurarsi di digitare il pin sulla periferica e quindi premere INVIO per completare l'associazione con Microsoft HoloLens.
+6. Quando si abbinano periferiche Bluetooth con funzionalità di input (ad esempio, tastiere Bluetooth), è possibile che venga visualizzato un pin di 6 o 8 cifre. Assicurarsi di digitare il pin sulla periferica e quindi premere INVIO per completare l'associazione con Microsoft HoloLens.
 
 ## <a name="motion-controllers"></a>Controller di movimento
 
@@ -39,7 +39,7 @@ I controller di [movimento](motion-controllers.md) di realtà mista di Windows s
 
 ## <a name="hololens-clicker"></a>HoloLens clic
 
-Il HoloLens clic è il primo dispositivo periferico creato in modo specifico per HoloLens ed è incluso in HoloLens Development Edition. Il clicker HoloLens consente a un utente di fare clic e scorrere con un movimento minimo come sostituzione per il movimento di tocco aereo. Non è un sostituto per tutti i [movimenti](gestures.md). Ad esempio, i movimenti [Bloom](gestures.md#bloom) e [Resize o Move](gestures.md#composite-gestures) consentono di usare i movimenti di mano. Il HoloLens Clicker è un dispositivo sensore di orientamento con un pulsante semplice. Si connette a HoloLens usando Bluetooth Low Energy (BTLE).
+Il HoloLens clic è il primo dispositivo periferico creato in modo specifico per HoloLens ed è incluso in HoloLens Development Edition. Il clicker HoloLens consente a un utente di fare clic e scorrere con un movimento minimo come sostituzione per il movimento di tocco aereo. Non è un sostituto per tutti i [movimenti](gaze-and-commit.md#composite-gestures). Ad esempio, i movimenti [Bloom](system-gesture.md#bloom) e [Resize o Move](gaze-and-commit.md#composite-gestures) consentono di usare i movimenti di mano. Il HoloLens Clicker è un dispositivo sensore di orientamento con un pulsante semplice. Si connette a HoloLens usando Bluetooth Low Energy (BTLE).
 
 ![Clic del HoloLens](images/hololens-clicker-500px.jpg)
 

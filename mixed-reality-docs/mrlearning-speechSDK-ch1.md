@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 4baef90f8e00e5da1063c708ae24d2057e0dc227
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977987"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438381"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrazione e utilizzo di riconoscimento vocale e trascrizione
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrazione e utilizzo del riconoscimento vocale e della trascrizione
 
 Questa esercitazione consente di creare un'applicazione di realtà mista che Esplora l'uso dell'SDK vocale di servizi cognitivi di Azure con HoloLens 2. Al termine di questa serie di esercitazioni, sarà possibile usare il microfono del dispositivo per trascrivere il riconoscimento vocale in un testo in tempo reale, tradurre il discorso in altre lingue e sfruttare la funzionalità Intent dell'SDK di riconoscimento vocale per comprendere i comandi vocali usando intelligenza artificiale.
 
@@ -25,13 +25,13 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 ## <a name="instructions"></a>Istruzioni
 
-### <a name="getting-started"></a>Introduzione
+### <a name="getting-started"></a>Attività iniziali
 
 1. Avviare Unity e creare un nuovo progetto. Immettere il modulo di apprendimento del nome del progetto SDK. Scegliere un percorso in cui salvare il progetto. Fare quindi clic su Crea progetto.
 
 ![Module2Chapter3step1im](images/module4chapter1step1im.PNG)
 
-> Nota: Verificare che il modello sia impostato su 3D, come illustrato nell'immagine precedente.
+> Nota: assicurarsi che il modello sia impostato su 3D, come illustrato nell'immagine precedente.
 
 2. Scaricare il pacchetto [mixed reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.unitypackage) Unity e salvarlo in una cartella nel PC. Importare il pacchetto nel progetto Unity. Per istruzioni dettagliate su come eseguire questa operazione, vedere la [lezione 1 del modulo di base](mrlearning-base-ch1.md). 
 
@@ -58,7 +58,7 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 8. Nella scena sono ora presenti diversi nuovi elementi dal MRTK. Salvare la scena con un nome diverso facendo clic su "file", quindi su "Salva con nome" e denominare la scena SpeechScene. 
 
-> Nota: Se si preme Riproduci sulla scena dopo aver aggiunto il MRTK al progetto e non si entra in modalità di riproduzione, potrebbe essere necessario riavviare Unity. 
+> Nota: se si preme Riproduci sulla scena dopo aver aggiunto il MRTK al progetto e non si entra in modalità di riproduzione, potrebbe essere necessario riavviare Unity. 
 
 9. Con l'oggetto MixedRealityToolkit selezionato nella gerarchia, fare clic su copia e Personalizza nel pannello di controllo.
 
@@ -96,7 +96,7 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-17. Per connettere l'applicazione ai servizi cognitivi di Azure, è necessario immettere una chiave di sottoscrizione, nota anche come chiave API, per il servizio di riconoscimento vocale. Per ottenere una chiave di sottoscrizione gratuita, seguire le istruzioni riportate [qui](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) . Una volta ottenuta la chiave di sottoscrizione, immetterla nel campo chiave API del servizio vocale del componente LunarcomController nel pannello di controllo, come illustrato nell'immagine seguente.
+17. Per connettere l'applicazione ai servizi cognitivi di Azure, è necessario immettere una chiave di sottoscrizione, nota anche come chiave API, per il servizio di riconoscimento vocale. Per ottenere una chiave di sottoscrizione gratuita, seguire le istruzioni riportate [qui](https://docs.microsoft.com//azure/cognitive-services/speech-service/get-started) . Una volta ottenuta la chiave di sottoscrizione, immetterla nel campo chiave API del servizio vocale del componente LunarcomController nel pannello di controllo, come illustrato nell'immagine seguente.
 
 18. Immettere l'area scelta al momento dell'iscrizione alla chiave di sottoscrizione nel campo area servizio riconoscimento vocale del componente LunarcomController nel pannello di controllo. Ad esempio, per il tipo "Stati Uniti occidentali" dell'area in "westus"
 
@@ -143,18 +143,18 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 ![Dalla lezione 1 Chapter5 passo 4](images/Lesson1Chapter5Step4.JPG)
 
-> NOTA: se la compilazione ha esito negativo, prova a ripeterla o a riavviare Unity e a ripetere la compilazione. Se visualizzi un errore simile al seguente: "Errore CS0246 = Non è possibile trovare il tipo o il nome dello spazio dei nomi "XX" (direttiva using o riferimento ad assembly mancante?)" può essere necessario installare [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+> Nota: se la compilazione ha esito negativo, riprovare a compilare o riavviare Unity e compilare nuovamente. Se viene visualizzato un errore simile a "errore: CS0246 = Impossibile trovare il tipo o il nome dello spazio dei nomi" XX "(manca una direttiva using o un riferimento a un assembly?)", potrebbe essere necessario installare [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>) .
 
 7. Al termine della compilazione, apri la nuova cartella creata che contiene i file dell'applicazione appena compilata. Fare doppio clic sul file di soluzione ". sln" per aprire il file della soluzione in Visual Studio.
 
-> Nota: assicurati di aprire la cartella appena creata (ad esempio la cartella "App", se hai seguito le convenzioni di denominazione dei passaggi precedenti) perché un file con estensione sln denominato in modo analogo sarà presente al di fuori di tale cartella e non devi confonderlo con il file con estensione sln all'interno della cartella di compilazione. 
+> Nota: assicurarsi di aprire la cartella appena creata (ad esempio, la cartella "app", se si seguono le convenzioni di denominazione dei passaggi precedenti), poiché sarà presente un file con estensione sln analogo al di fuori di tale cartella che non deve essere confusa con il file con estensione sln all'interno della cartella di compilazione. 
 
 ![Lezione 1 capitolo 5 passaggio 5](images/Lesson1Chapter5Step5.JPG)
 
-> Nota: se Visual Studio richiede di installare nuovi componenti, dedica qualche minuto per verificare che tutti i componenti prerequisiti siano installati come specificato nella pagina ["Installare gli strumenti"](install-the-tools.md)
+> Nota: se Visual Studio richiede di installare nuovi componenti, verificare che tutti i componenti dei prerequisiti siano installati come specificato nella [pagina "installare gli strumenti"](install-the-tools.md) .
 
-8. Collega HoloLens 2 al PC con il cavo USB. Anche se le istruzioni in questa lezione presuppongono che distribuirai un test con un dispositivo HoloLens 2, puoi anche scegliere di distribuire nell'[emulatore HoloLens 2](using-the-hololens-emulator.md) oppure di creare un [pacchetto dell'app per il trasferimento locale](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
-9. Prima della compilazione, assicurati che il dispositivo sia in modalità sviluppatore. Se questa è la prima volta che esegui la distribuzione nel dispositivo HoloLens 2, Visual Studio può richiedere di associare HoloLens 2 a un PIN. Segui [queste istruzioni](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) se devi abilitare la modalità sviluppatore o eseguire l'associazione con Visual Studio.
+8. Collega HoloLens 2 al PC con il cavo USB. Anche se le istruzioni in questa lezione presuppongono che distribuirai un test con un dispositivo HoloLens 2, puoi anche scegliere di distribuire nell'[emulatore HoloLens 2](using-the-hololens-emulator.md) oppure di creare un [pacchetto dell'app per il trasferimento locale](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).
+9. Prima della compilazione, assicurati che il dispositivo sia in modalità sviluppatore. Se questa è la prima volta che esegui la distribuzione nel dispositivo HoloLens 2, Visual Studio può richiedere di associare HoloLens 2 a un PIN. Segui [queste istruzioni](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) se devi abilitare la modalità sviluppatore o eseguire l'associazione con Visual Studio.
 
 10. Configura Visual Studio per la compilazione nel dispositivo HoloLens 2 selezionando la configurazione "Release" e l'architettura "ARM".
 
@@ -168,5 +168,5 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
 Il riconoscimento vocale è stato configurato nell'applicazione, con tecnologia Azure. Eseguire l'applicazione per verificare il corretto funzionamento di tutte le funzioni e funzionalità. Iniziare a indicare la parola di riattivazione digitata nel passaggio 22, attivare il terminale. Selezionare il pulsante del microfono per avviare il riconoscimento vocale. Inizia a pronunciare. Si noterà che le parole sono state trascritte nel terminale mentre si parla. Premere il pulsante microfono una seconda volta per arrestare il riconoscimento vocale. Per nascondere il terminale Lunarcom, è possibile ignorare il terminale. Nella lezione successiva verrà illustrato come passare in modo dinamico all'uso del riconoscimento vocale basato su dispositivo per le situazioni in cui l'SDK di sintesi vocale di Azure non è disponibile perché HoloLens 2 è offline.
 
-[Esercitazione successiva: 2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
+[Esercitazione successiva: 2. aggiunta di una modalità offline per la traduzione vocale locale](mrlearning-speechSDK-ch2.md)
 

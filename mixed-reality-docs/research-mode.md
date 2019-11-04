@@ -6,24 +6,24 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modalità di ricerca, CV, RS4, visione artificiale, ricerca, HoloLens
-ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 307df0c226221422f13af09d8f4944c22ead3865
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829929"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438310"
 ---
 # <a name="hololens-research-mode"></a>Modalità di ricerca HoloLens
 
 > [!NOTE]
 > Questa funzionalità è stata aggiunta come parte dell' [aggiornamento di Windows 10 aprile 2018](release-notes-april-2018.md) per HoloLens e non è disponibile nelle versioni precedenti.
 
-La modalità di ricerca è una nuova funzionalità di HoloLens che fornisce l'accesso alle applicazioni ai sensori chiave del dispositivo. Sono inclusi:
+La modalità di ricerca è una nuova funzionalità di HoloLens che fornisce l'accesso alle applicazioni ai sensori chiave del dispositivo. Ecco alcuni esempi:
 - Le quattro fotocamere di rilevamento dell'ambiente usate dal sistema per la creazione e il rilevamento della mappa.
-- Due versioni dei dati di profondità della fotocamera, una per il rilevamento ad alta frequenza (30 FPS), comunemente usata per il rilevamento manuale e l'altra per il rilevamento di più bassa frequenza (1 FPS), attualmente usata dal mapping spaziale,
+- Due versioni dei dati di profondità della fotocamera, una per il rilevamento ad alta frequenza (30 FPS), comunemente usata per il rilevamento manuale e l'altra per la frequenza inferiore (1-5 FPS), il rilevamento a livello di profondità, attualmente usato dal mapping spaziale
 - Due versioni di un flusso IR-riflettività, usate dal HoloLens per calcolare la profondità, ma preziose nel proprio diritto, perché queste immagini sono illuminate dalla HoloLens e ragionevolmente non interessate dalla luce ambientale.
 
-![Schermata dell'app modalità di ricerca](images/sensor-stream-viewer.jpg)<br>
+schermata dell'app modalità di ricerca ![](images/sensor-stream-viewer.jpg)<br>
 *Acquisizione di realtà mista di un'applicazione di test che visualizza gli otto flussi di sensori disponibili in modalità ricerca*
 
 ## <a name="device-support"></a>Supporto di dispositivi
@@ -59,7 +59,7 @@ La modalità di ricerca è una modalità secondaria della modalità sviluppatore
 
 Usando un Web browser connesso alla stessa rete Wi-Fi della HoloLens, passare all'indirizzo IP della HoloLens (ottenuto tramite **le impostazioni > rete & Internet > Wi-fi > le proprietà hardware**). Si tratta del [portale del dispositivo](using-the-windows-device-portal.md)ed è presente una pagina "modalità di ricerca" nella sezione "sistema" del portale:
 
-![Scheda modalità ricerca del portale per dispositivi HoloLens](images/ResearchModeDevPortal.png)<br>
+![scheda modalità ricerca del portale per dispositivi HoloLens](images/ResearchModeDevPortal.png)<br>
 *Modalità di ricerca nel portale per dispositivi HoloLens*
 
 Dopo aver selezionato **Consenti accesso ai flussi di sensori**, sarà necessario riavviare HoloLens. Questa operazione può essere eseguita dal portale del dispositivo, sotto la voce di menu "Power" nella parte superiore della pagina.
@@ -78,7 +78,7 @@ Applicazioni di esempio che illustrano come accedere ai vari flussi in modalità
 
 Vedere la pagina relativa al [rilevamento dei problemi](https://github.com/Microsoft/HololensForCV/issues) nel repository HoloLensForCV.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repository GitHub HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)

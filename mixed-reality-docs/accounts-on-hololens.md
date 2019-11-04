@@ -1,17 +1,17 @@
 ---
 title: Account in HoloLens
 description: Come configurare e gestire gli account utente in HoloLens.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, User, account, AAD, ADFS, Microsoft account, MSA, Credentials
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516810"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437090"
 ---
 # <a name="accounts-on-hololens"></a>Account in HoloLens
 
@@ -38,9 +38,9 @@ Le app installate nel dispositivo saranno disponibili per tutti gli altri utenti
 
 All'interno di un singolo account del dispositivo, gli utenti possono collegare altre credenziali di account Web allo scopo di semplificare l'accesso all'interno delle app (ad esempio lo Store) o combinare l'accesso a risorse personali e di lavoro, in modo analogo alla versione desktop di Windows. L'accesso a un account aggiuntivo in questo modo non separa i dati utente creati nel dispositivo, ad esempio immagini o download. Una volta che un account è stato connesso a un dispositivo, le app possono usarlo con le autorizzazioni necessarie per ridurre la necessità di accedere singolarmente a ogni app.
 
-## <a name="using-single-sign-on-within-an-app"></a>Uso di Single Sign-on in un'app
+## <a name="using-single-sign-on-within-an-app"></a>Uso di Single Sign-On all'interno di un'app
 
-Gli sviluppatori di app possono sfruttare i vantaggi offerti dall'uso di un'identità connessa in HoloLens con le [API di gestione account di Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), proprio come si farebbe per altri dispositivi Windows. Alcuni esempi di codice per queste API sono disponibili [qui](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+Gli sviluppatori di app possono sfruttare i vantaggi offerti dall'uso di un'identità connessa in HoloLens con le [API di gestione account di Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), proprio come si farebbe per altri dispositivi Windows. Alcuni esempi di codice per queste API sono disponibili [qui](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 Eventuali interrupt di account che possono verificarsi, ad esempio la richiesta del consenso dell'utente per le informazioni sull'account, l'autenticazione a due fattori e così via, devono essere gestiti quando l'app richiede un token di autenticazione.
 

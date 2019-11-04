@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Audio spaziale, audio surround, audio 3D, audio 3D, audio spaziale
-ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829926"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437401"
 ---
 # <a name="spatial-sound"></a>Audio spaziale
 
@@ -21,7 +21,7 @@ Anche se gli ologrammi possono essere visualizzati solo visivamente quando lo sg
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/PTPvx7mDon4]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/PTPvx7mDon4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -35,7 +35,7 @@ Anche se gli ologrammi possono essere visualizzati solo visivamente quando lo sg
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
@@ -52,7 +52,7 @@ Analizzando il modo in cui il suono raggiunge entrambe le orecchie, il cervello 
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I segnali audio (Azimut) a sinistra o a destra hanno origine dalle differenze nel tempo che arriva a ogni orecchio. I segnali in su e in giù provengono da modifiche spettrali prodotte dalla forma dell'orecchio esterno (padiglioni). Designando la provenienza dell'audio, il sistema è in grado di simulare l'esperienza del suono in arrivo in momenti diversi. Si noti che in HoloLens, mentre la spazializzazione Azimut è personalizzata, la simulazione dell'elevazione è basata su un set di anthropometrics medio. Pertanto, l'accuratezza dell'elevazione può essere meno accurata dell'accuratezza dell'Azimut.
 
@@ -69,7 +69,7 @@ Poiché il principio generale della realtà mista consiste nel radicare gli [olo
 
 Il motore audio spaziale di Windows supporta solo una frequenza di campionamento 48.000 per la riproduzione. La maggior parte del middleware, ad esempio Unity, converte automaticamente i file audio nel formato supportato, ma quando si usano direttamente le API audio di Windows, il formato del contenuto è supportato dall'effetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [MR Spatial 220](holograms-220.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)
 * [Audio spaziale in DirectX](spatial-sound-in-directx.md)

@@ -6,18 +6,18 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, avvio di app 3D, auricolare immersivo, cubo attivo
-ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: ce9d242e26d67c8fe5af7ac32f4e910a15715d25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63517654"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437227"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>Guida alla progettazione dell'utilità di avvio delle app 3D
 
 Quando si usa un headset di Windows misto Reality (VR), si immette la Home realtà mista di Windows, viene visualizzata come una casa in una rupe circondata da montagne e acqua (anche se è possibile [scegliere altri ambienti e persino crearne di personalizzati](add-custom-home-environments.md)). All'interno dello spazio di questa casa, un utente può organizzare e organizzare gli oggetti e le app 3D a cui si è interessati. Un **avvio di app 3D** è un oggetto "fisico" nella casa della realtà mista dell'utente che può selezionare per avviare un'app.
 
-![Esempio: Utilità di avvio di app 3D Floaty Bird](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+Esempio ![: utilità di avvio delle app 3D Floaty Bird](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Esempio di utilità di avvio di app 3D Floaty Bird (app fittizia)*
 
 ## <a name="3d-app-launcher-creation-process"></a>processo di creazione dell'utilità di avvio delle app 3D
@@ -39,7 +39,7 @@ L'ambiente di realtà mista di Windows in cui si trova l'utilità di avvio delle
 
 Quando si esamina l'utilità di avvio delle app, il suo scopo è quello di avviare l'app, che dovrebbe essere ovvia e non dovrebbe causare confusione. Assicurarsi, ad esempio, che l'utilità di avvio sia un rappresentante abbastanza ovvio dell'app che non verrà confusa per un pezzo di arredamento in Cliff House. L'utilità di avvio delle app dovrebbe invitare gli utenti a toccarlo/selezionarlo.
 
-![Esempio: Schermata di avvio delle app 3D aggiornata](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
+Esempio di ![:](images/20171016-152145-mixedreality1-1200px-1000px.jpg) di avvio delle app 3D<br>
 *Esempio di avvio dell'app 3D (app fittizia)*
 
 ### <a name="home-scale"></a>Scalabilità domestica
@@ -50,7 +50,7 @@ i lanci di app 3D risiedono nella casa di Cliff e le dimensioni predefinite dovr
 
 L'utilità di avvio delle app dovrebbe essere simile a un oggetto che una persona sarebbe entusiasta di avere nello spazio. Si tratteranno praticamente di questi elementi, quindi l'utilità di avvio dovrebbe avere un aspetto simile a quello auspicabile dall'utente per cercarla e mantenerla vicina.
 
-![Esempio: Utilità di avvio app 3D Astro Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+Esempio ![: avvio dell'app 3D di Astro Warp](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
 *Esempio di avvio di app 3D di Astro Warp (app fittizia)*
 
 ### <a name="recognizable"></a>Riconoscibile
@@ -64,24 +64,20 @@ L'app merita di più di inserire il logo su un piano semplice e chiamarlo un gio
 
 :::row:::
     :::column:::
-        ![Logo only](images/20171016-140436-mixedreality-640px.jpg)
-        *Logo only*
+        solo logo di ![](images/20171016-140436-mixedreality-640px.jpg) *solo logo*
     :::column-end:::
     :::column:::
-        ![More recognizable with a character](images/20171016-140557-mixedreality-640px.jpg)
-        *More recognizable with a character*
+        ![più riconoscibili con un carattere](images/20171016-140557-mixedreality-640px.jpg) *più riconoscibile con un carattere*
     :::column-end:::
 :::row-end:::
 
 
 :::row:::
     :::column:::
-        ![Flat approach, not surprisingly, feels flat](images/20171016-155101-mixedreality-640px.jpg)
-        *Flat approach, not surprisingly, feels flat*
+        ![approccio Flat, non sorprendentemente, si sente un approccio Flat](images/20171016-155101-mixedreality-640px.jpg) flat *, non sorprendentemente, sembra piatto*
     :::column-end:::
     :::column:::
-        ![Volumetric approach better showcases your app](images/20171016-161407-mixedreality-640px.jpg)
-        *Volumetric approach better showcases your app*
+        ![approccio volumetrico presenta una migliore presentazione dell'app](images/20171016-161407-mixedreality-640px.jpg) *approccio volumetrico illustra meglio l'app*
     :::column-end:::
 :::row-end:::
 
@@ -98,7 +94,7 @@ L'app merita di più di inserire il logo su un piano semplice e chiamarlo un gio
 * Verificare che il modello sia ben letto a distanza e dimensioni diverse.
 * Quando il modello è pronto per l'uso, leggere le [linee guida](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview)per l'esportazione degli asset.
 
-![Modello con dettagli sottili nella trama](images/20171013-143334-mixedreality-640px.jpg)<br>
+![modello con dettagli sottili nella trama](images/20171013-143334-mixedreality-640px.jpg)<br>
 *Modello con dettagli sottili nella trama*
 
 ### <a name="what-to-avoid"></a>Cosa evitare
@@ -106,7 +102,7 @@ L'app merita di più di inserire il logo su un piano semplice e chiamarlo un gio
 * Non usare la geometria sottile: non funziona bene a una distanza e l'alias non è corretto.
 * Non lasciare che le parti del modello si estendano troppo oltre il rapporto dimensioni 1:1:1. Si creeranno problemi di scalabilità.
 
-![Evitare i modelli a contrasto elevato, piccoli modelli di occupato](images/20171013-143603-mixedreality-640px.jpg)<br>
+![evitare i modelli a contrasto elevato e a basso traffico](images/20171013-143603-mixedreality-640px.jpg)<br>
 *Evitare i modelli a contrasto elevato, piccoli e occupati*
 
 ## <a name="how-to-handle-type"></a>Come gestire il tipo
@@ -120,26 +116,23 @@ L'app merita di più di inserire il logo su un piano semplice e chiamarlo un gio
 
 :::row:::
     :::column:::
-        ![Flat type without a backdrop can be hard to view from certain angles and in certain environments](images/flattype-640px.png)
-        *Flat type without a backdrop can be hard to view from certain angles and in certain environments*
+        ![tipo Flat senza uno sfondo può essere difficile da visualizzare da determinati angoli e in determinati ambienti](images/flattype-640px.png) *tipo Flat senza uno sfondo può essere difficile da visualizzare da determinati angoli e in determinati ambienti*
     :::column-end:::
     :::column:::
-        ![Type with a built-in backdrop can work well](images/flattypeandbkg-640px.png)
-        *Type with a built-in backdrop can work well*
+        ![tipo con uno sfondo incorporato può funzionare correttamente](images/flattypeandbkg-640px.png) *tipo con uno sfondo incorporato può funzionare correttamente*
     :::column-end:::
     :::column:::
-        ![Extruded type can work well if you shade the sides](images/20171016-160221-mixedreality-640px.jpg)
-        *Extruded type can work well if you shade the sides*
+        ![tipo estruso può funzionare correttamente se si ombreggiano i lati](images/20171016-160221-mixedreality-640px.jpg) *tipo estruso può funzionare correttamente se si ombreggiano i lati*
     :::column-end:::
 :::row-end:::
 
 
 **Colori del tipo che funzionano**
-* Bianco
+* Vuoto
 * Nero
 * Colore luminoso semi-saturato
 
-![Digitare i colori che funzionano.](images/20171016-112111-mixedreality-640px.jpg)<br>
+![i colori del tipo che funzionano.](images/20171016-112111-mixedreality-640px.jpg)<br>
 *Colori del tipo che funzionano*
 
 ### <a name="what-to-avoid"></a>Cosa evitare
@@ -149,7 +142,7 @@ L'app merita di più di inserire il logo su un piano semplice e chiamarlo un gio
 * Grigio
 * Colori eccessivamente saturi o colori desaturi
 
-![Tipi di colori che provocano problemi.](images/20171016-112246-mixedreality-640px.jpg)<br>
+![i colori di tipo che provocano problemi.](images/20171016-112246-mixedreality-640px.jpg)<br>
 *Tipi di colori che provocano problemi*
 
 ## <a name="lighting"></a>Luce
@@ -158,16 +151,16 @@ L'illuminazione per l'utilità di avvio dell'app deriva dall'ambiente Cliff Hous
 
 Un posto ideale per testare il modo in cui l'utilità di avvio Guarda le varie luci nell'ambiente è lo studio, la media room, in qualsiasi punto all'esterno e sul patio (l'area concreta con il prato). Un altro test efficace consiste nell'inserirlo a metà luce e metà ombreggiatura per vedere come appare.
 
-![Assicurarsi che l'utilità di avvio sia corretta sia in chiaro che in ombreggiatura.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
+![assicurarsi che l'utilità di avvio sia corretta sia in chiaro che in ombreggiatura.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
 *Assicurarsi che l'utilità di avvio sia corretta in chiaro e in ombra*
 
 ## <a name="texturing"></a>Texturing
 
 ### <a name="authoring-your-textures"></a>Creazione di trame
 
-Il formato finale dell'utilità di avvio delle app 3D sarà un file con estensione GLB, che viene creato usando la pipeline di PBR (rendering fisico). Questo può essere un processo complesso, ora è il momento giusto per impiegare un artista tecnico, se non è già stato fatto. Se si è bravi fai da te, il tempo necessario per la [ricerca e l'apprendimento](http://wiki.polycount.com/wiki/PBR) della terminologia di PBR e cosa accade dietro le quinte prima di iniziare ti aiuterà a evitare errori comuni. 
+Il formato finale dell'utilità di avvio delle app 3D sarà un file con estensione GLB, che viene creato usando la pipeline di PBR (rendering fisico). Questo può essere un processo complesso, ora è il momento giusto per impiegare un artista tecnico, se non è già stato fatto. Se si è bravi fai da te, il tempo necessario per la [ricerca e l'apprendimento della terminologia di PBR](https://wiki.polycount.com/wiki/PBR) e cosa accade dietro le quinte prima di iniziare ti aiuterà a evitare errori comuni. 
 
-![Esempio: App nota aggiornata](images/pbr-freshnote1-640px-500px.png)<br>
+Esempio ![: Nota aggiornata](images/pbr-freshnote1-640px-500px.png) app<br>
 *Esempio di avvio dell'app 3D (app fittizia)*
 
 **Strumento di creazione consigliato**
@@ -186,7 +179,7 @@ Per creare il file finale, è consigliabile usare il [pittore di sostanze](https
     * Evitare l'illuminazione al forno nelle trame
     * Usare uno dei pacchetti di creazione materiali di PBR per ottenere le mappe corrette generate per lo shader
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Creare modelli 3D da usare nella Home realtà mista](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 * [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)

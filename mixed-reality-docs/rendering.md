@@ -1,19 +1,19 @@
 ---
-title: rendering
+title: Rendering
 description: Il rendering olografico consente all'app di creare un ologramma in una posizione precisa in tutto il mondo intorno all'utente, indipendentemente dal fatto che sia collocato esattamente nel mondo fisico o in un'area di autenticazione virtuale creata.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendering, ologramma
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415413"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437531"
 ---
-# <a name="rendering"></a>rendering
+# <a name="rendering"></a>Rendering
 
 Il rendering olografico consente all'applicazione di creare un ologramma in una posizione precisa in tutto il mondo intorno all'utente, indipendentemente dal fatto che sia collocato esattamente nel mondo fisico o in un'area di autenticazione virtuale creata. Gli [ologrammi](hologram.md) sono oggetti costituiti da suoni e luce. Il rendering consente all'Application di aggiungere la luce.
 
@@ -29,11 +29,11 @@ Il rendering olografico consente all'applicazione di creare un ologramma in una 
     <tr>
         <td><strong>Funzionalità</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (prima generazione)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>rendering</td>
+        <td>Rendering</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
@@ -48,11 +48,11 @@ I dispositivi con **schermi See-through**, ad esempio [HoloLens](hololens-hardwa
 
 Sebbene il rendering stereoscopico fornisca un segnale di profondità per gli ologrammi, l'aggiunta di [effetti di base](interaction-fundamentals.md) può aiutare gli utenti a vedere più facilmente la superficie di un ologramma. Una tecnica di base consiste nell'aggiungere un alone intorno a un ologramma sulla superficie vicina, quindi eseguire il rendering di un'ombreggiatura rispetto a questo bagliore. In questo modo, l'ombreggiatura sembra sottrarre la luce dall'ambiente. Il [suono spaziale](spatial-sound.md) è un altro spunto estremamente importante, che consente agli utenti di ragionare sulla distanza e sulla posizione relativa di un ologramma.
 
-I dispositivi con **visualizzazioni opache**, come gli auricolari ad [alta realtà mista di Windows](immersive-headset-hardware-details.md), bloccano il mondo. I pixel neri sono neri a tinta unita e qualsiasi altro colore viene visualizzato come colore per l'utente. L'applicazione è responsabile del rendering di tutto ciò che l'utente vede. Questo rende ancora più importante mantenere una frequenza di aggiornamento costante in modo che gli utenti abbiano un'esperienza confortevole.
+I dispositivi con **visualizzazioni opache**, come gli [auricolari ad alta realtà mista di Windows](immersive-headset-hardware-details.md), bloccano il mondo. I pixel neri sono neri a tinta unita e qualsiasi altro colore viene visualizzato come colore per l'utente. L'applicazione è responsabile del rendering di tutto ciò che l'utente vede. Questo rende ancora più importante mantenere una frequenza di aggiornamento costante in modo che gli utenti abbiano un'esperienza confortevole.
 
 ## <a name="predicted-rendering-parameters"></a>Parametri di rendering stimati
 
-Gli auricolari con realtà mista (HoloLens e auricolari immersivi) tengono continuamente traccia della posizione e dell'orientamento dell'intestazione dell'utente in relazione all'ambiente circostante. Quando l'applicazione inizia a preparare il frame successivo, il sistema prevede la posizione in cui si troverà la testa dell'utente nel momento esatto in cui il frame viene visualizzato sullo schermo. In base a questa stima, il sistema calcola le trasformazioni di visualizzazione e proiezione da usare per quel frame. **Per produrre risultati corretti, è necessario che l'applicazione utilizzi queste**trasformazioni. Se le trasformazioni fornite dal sistema non vengono usate, l'immagine risultante non verrà allineata al mondo reale, causando fastidio all'utente.
+Gli auricolari con realtà mista (HoloLens e auricolari immersivi) tengono continuamente traccia della posizione e dell'orientamento dell'intestazione dell'utente in relazione all'ambiente circostante. Quando l'applicazione inizia a preparare il frame successivo, il sistema prevede la posizione in cui si troverà la testa dell'utente nel momento esatto in cui il frame viene visualizzato sullo schermo. In base a questa stima, il sistema calcola le trasformazioni di visualizzazione e proiezione da usare per quel frame. **Per produrre risultati corretti, è necessario che l'applicazione utilizzi queste trasformazioni**. Se le trasformazioni fornite dal sistema non vengono usate, l'immagine risultante non verrà allineata al mondo reale, causando fastidio all'utente.
 
 Si noti che per prevedere in modo accurato quando un nuovo frame raggiungerà gli schermi, il sistema esegue costantemente la misurazione della latenza end-to-end efficace della pipeline di rendering dell'applicazione. Mentre il sistema si adatta alla lunghezza della pipeline di rendering, è possibile migliorare la stabilità dell'ologramma mantenendo la pipeline più breve possibile.
 
@@ -93,9 +93,9 @@ Quando si esegue il rendering di MRIs medicali o di volumi di progettazione in 3
 ## <a name="supported-resolutions-on-hololens-2"></a>Risoluzioni supportate su HoloLens 2
 
 > [!NOTE]
-> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md#news-and-notes)disponibili.
+> Altre indicazioni specifiche per HoloLens 2 [saranno presto](news.md)disponibili.
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [Rendering in DirectX](rendering-in-directx.md)

@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, stabilizzazione, case study
-ms.openlocfilehash: a084ede5f9bf3d5f058cc81ec75840e2c2e75af2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526267"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436440"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Case Study: uso del piano di stabilizzazione per ridurre la turbolenza olografica
 
@@ -19,7 +19,7 @@ L'uso di ologrammi può risultare complesso. Il fatto che sia possibile spostars
 
 ## <a name="the-tech"></a>Il Tech
 
-Per far sembrare gli ologrammi come se condividessero effettivamente lo spazio con l'utente, è necessario eseguire il rendering in modo corretto, senza separazione dei colori. Questa operazione viene eseguita, in parte, dalla tecnologia incorporata nell'hardware HoloLens, che mantiene gli ologrammi ancorati su ciò che viene chiamato un [piano](hologram-stability.md#stabilization-plane)di stabilizzazione.
+Per far sembrare gli ologrammi come se condividessero effettivamente lo spazio con l'utente, è necessario eseguire il rendering in modo corretto, senza separazione dei colori. Questa operazione viene eseguita, in parte, dalla tecnologia incorporata nell'hardware HoloLens, che mantiene gli ologrammi ancorati su ciò che viene chiamato un [piano di stabilizzazione](hologram-stability.md#reprojection).
 
 Un piano è definito da un punto e da un normale, ma poiché si vuole che il piano faccia sempre fronte alla fotocamera, è sufficiente impostare il punto del piano. Possiamo indicare a HoloLens quale punto di concentrarsi sull'elaborazione per mantenendo tutti gli elementi ancorati e stabili, ma come impostare questo punto di interesse è specifico dell'app e può creare o interrompere l'app a seconda del contenuto.
 
@@ -29,21 +29,21 @@ In breve, gli ologrammi funzionano meglio quando il piano di stabilizzazione vie
 
 Quando si sviluppano le app seguenti, si è notato che, quando il piano non è stato usato, gli oggetti potrebbero ondeggiare quando la testa è stata spostata e si vedrà la separazione dei colori con movimento rapido o ologramma. Nel corso dell'intervallo di tempo di sviluppo, abbiamo appreso attraverso la versione di valutazione e l'errore come usare al meglio il piano di stabilizzazione e come progettare le nostre app per risolvere i problemi che non possono essere corretti.
 
-### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Esplora galassie: Contenuto fisso, interattività 3D
+### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Galaxy Explorer: contenuto fisso, interattività 3D
 
-[Galaxy Explorer](galaxy-explorer.md) include due elementi principali nella scena: Visualizzazione principale del contenuto celeste e della barra degli strumenti dell'interfaccia utente piccola che segue lo sguardo. Per la logica di stabilizzazione, viene esaminato il modo in cui si interseca il vettore di sguardi corrente in ogni frame per determinare se si verificano elementi in un livello di collisione specificato. In questo caso, i livelli a cui si è interessati sono i pianeti, quindi se lo sguardo cade su un pianeta, il piano di stabilizzazione viene inserito. Se nessuno degli oggetti nel livello di collisione di destinazione viene raggiunto, l'app utilizza un livello secondario "piano B". Se non viene preso in osservazione, il piano di stabilizzazione viene mantenuto alla stessa distanza che era quando si guardava il contenuto. Gli strumenti dell'interfaccia utente vengono esclusi come destinazione del piano poiché è stato trovato il salto tra quasi e molto ridotto la stabilità della scena complessiva.
+[Galaxy Explorer](galaxy-explorer.md) include due elementi principali nella scena: la visualizzazione principale del contenuto celeste e la piccola barra degli strumenti dell'interfaccia utente che segue lo sguardo. Per la logica di stabilizzazione, viene esaminato il modo in cui si interseca il vettore di sguardi corrente in ogni frame per determinare se si verificano elementi in un livello di collisione specificato. In questo caso, i livelli a cui si è interessati sono i pianeti, quindi se lo sguardo cade su un pianeta, il piano di stabilizzazione viene inserito. Se nessuno degli oggetti nel livello di collisione di destinazione viene raggiunto, l'app utilizza un livello secondario "piano B". Se non viene preso in osservazione, il piano di stabilizzazione viene mantenuto alla stessa distanza che era quando si guardava il contenuto. Gli strumenti dell'interfaccia utente vengono esclusi come destinazione del piano poiché è stato trovato il salto tra quasi e molto ridotto la stabilità della scena complessiva.
 
 La progettazione di Galaxy Explorer si presta bene a garantire la stabilità e la riduzione dell'effetto della separazione dei colori. L'utente è invitato a esplorare e a orbitare il contenuto, anziché spostarsi da un lato all'altro, e i pianeti sono sufficientemente lenti per evitare che la separazione dei colori sia evidente. Viene inoltre mantenuta una costante 60 FPS, che consente di impedire che si verifichi la separazione dei colori.
 
 Per eseguire questa verifica, cercare un file denominato LSRPlaneModifier.cs nel [codice di Galaxy Explorer su GitHub](https://github.com/Microsoft/GalaxyExplorer/tree/master/Assets/Scripts/Utilities).
 
-### <a name="holostudio-stationary-content-with-a-ui-focus"></a>HoloStudio: Contenuto fisso con lo stato attivo dell'interfaccia utente
+### <a name="holostudio-stationary-content-with-a-ui-focus"></a>HoloStudio: contenuto stazionario con lo stato attivo dell'interfaccia utente
 
 In HoloStudio si dedica la maggior parte del tempo alla ricerca dello stesso modello su cui si sta lavorando. Lo sguardo non sposta una quantità significativa, tranne quando si seleziona un nuovo strumento o si vuole spostarsi nell'interfaccia utente, in modo da poter garantire la logica di impostazione del piano. Quando si esamina l'interfaccia utente, il piano è impostato su qualsiasi elemento dell'interfaccia utente a cui lo sguardo si blocca. Quando si esamina il modello, il piano è una distanza impostata, corrispondente alla distanza predefinita tra l'utente e il modello.
 
 ![Il piano di stabilizzazione visualizzato in HoloStudio quando l'utente Guarda il pulsante Home](images/holostudio-stabilization-plane-500px.png)
 
-### <a name="holotour-and-3d-viewer-stationary-content-with-animation-and-movies"></a>HoloTour e visualizzatore 3D: Contenuto fisso con animazione e filmati
+### <a name="holotour-and-3d-viewer-stationary-content-with-animation-and-movies"></a>HoloTour e visualizzatore 3D: contenuto fisso con animazione e filmati
 
 In HoloTour e 3D Viewer si sta esaminando un oggetto animato solitario o un filmato con effetti 3D aggiunti al suo interno. La stabilizzazione in queste app è impostata su quello che attualmente si sta visualizzando.
 
@@ -51,13 +51,13 @@ HoloTour impedisce anche di allontanarsi troppo dal mondo virtuale facendo in mo
 
 ![In questo esempio di HoloTour, il piano di stabilizzazione viene impostato su questo film del Pantheon di Adriano.](images/holotour-stabilization-plane-500px.jpg)
 
-### <a name="roboraid-dynamic-content-and-environmental-interactions"></a>RoboRaid: Contenuto dinamico e interazioni ambientali
+### <a name="roboraid-dynamic-content-and-environmental-interactions"></a>RoboRaid: contenuto dinamico e interazioni ambientali
 
 L'impostazione del piano di stabilizzazione in RoboRaid è sorprendentemente semplice, sebbene sia l'app che richiede lo spostamento più improvviso. Il piano è rivolto verso l'allungamento delle pareti o degli oggetti circostanti e fluttua a una distanza fissa davanti all'utente quando si è sufficientemente lontani.
 
 RoboRaid è stato progettato tenendo conto del piano di stabilizzazione. Il reticolo, che sposta il maggior numero da quando è bloccato, evita questo problema usando solo il rosso e il blu, che riduce al minimo l'emorragia del colore. Contiene anche un piccolo bit di profondità tra le parti, riducendo al minimo l'eventuale sanguinamento dei colori che si verificherebbe mascherando con un effetto di parallasse già previsto. I robot non si spostano molto rapidamente e passano a brevi distanze a intervalli regolari. Tendono a rimanere circa 2 metri davanti all'utente, dove la stabilizzazione è impostata per impostazione predefinita.
 
-### <a name="fragments-and-young-conker-dynamic-content-with-environmental-interaction"></a>Frammenti e Conker giovani: Contenuto dinamico con interazione ambientale
+### <a name="fragments-and-young-conker-dynamic-content-with-environmental-interaction"></a>Frammenti e Conker giovani: contenuto dinamico con interazione ambientale
 
 Scritto da Asobo Studio in C++, i frammenti e le Conker giovani prendono un approccio diverso per impostare il piano di stabilizzazione. I punti di interesse (PDI) sono definiti nel codice e ordinati in base alla priorità. I POIs sono contenuti nel gioco, ad esempio il modello Conker in Conker giovani, i menu, il reticolo di mira e i logo. I POIs sono intersecati dallo sguardo dell'utente e il piano è impostato sul centro dell'oggetto con la priorità più alta. Se non si verifica alcuna intersezione, il piano viene impostato sulla distanza predefinita.
 
@@ -93,11 +93,11 @@ Tornare a destra ancora una volta fino a quando non viene visualizzata una nuova
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Ben Strukus" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Ben Strukus</b><br>Software Engineer@Microsoft</td>
+<td style="border-style: none"><b>Ben Strukus</b><br>Software Engineer @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vedere anche
-* [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
+## <a name="see-also"></a>Vedi anche
+* [Nozioni fondamentali 100: Introduzione a Unity](holograms-100.md)
 * [Punto focale in Unity](focus-point-in-unity.md)
 * [Stabilità degli ologrammi](hologram-stability.md)

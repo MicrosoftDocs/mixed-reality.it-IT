@@ -2,16 +2,16 @@
 title: 'Case Study: ricerca nei buchi della realtà'
 description: In questo case study viene illustrato come implementare l'effetto "finestra magica" in HoloLens, che consente all'utente di vedere dietro le pareti, sotto il pavimento e in aperture virtuali all'interno dell'ambiente effettivo.
 author: EricRehmeyer
-ms.author: ericrehm
-ms.date: 03/21/2018
+ms.author: bestruku
+ms.date: 10/18/2019
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, Magic Window, parallasse
-ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873933"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436662"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Case Study: ricerca nei buchi della realtà
 
@@ -67,7 +67,7 @@ Cosa viene visualizzato in screenshot e video:
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-IN INGLESE: Ciò che viene visualizzato attraverso HoloLens è una semplice combinazione di realtà offuscata (ad esempio tramite occhiali) e qualsiasi ologramma che l'app vuole visualizzare. Tuttavia, quando si acquisisce una schermata, l'immagine della fotocamera viene fusa con gli ologrammi dell'app in base al valore di trasparenza per pixel.
+In inglese: ciò che viene visualizzato tramite HoloLens è una semplice combinazione di realtà offuscata (ad esempio tramite occhiali) e qualsiasi ologramma che l'app vuole visualizzare. Tuttavia, quando si acquisisce una schermata, l'immagine della fotocamera viene fusa con gli ologrammi dell'app in base al valore di trasparenza per pixel.
 
 Un modo per aggirare questo problema consiste nel modificare il materiale "black box" per scrivere solo nel buffer di profondità e ordinarlo con tutti gli altri materiali opachi. Per un esempio, vedere il [file WindowOcclusion. shader in MixedRealityToolkit su GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader). Le righe rilevanti vengono copiate qui:
 
@@ -93,7 +93,7 @@ Si ha un HoloLens e si vuole provare l'effetto per se stessi? La cosa più sempl
 
 La visualizzazione di questo modello nell'editor di Unity mostrerà un black box di grandi dimensioni intorno al vaso. In HoloLens, la casella scompare, consentendo un effetto della finestra magica.
 
-Se si vuole compilare un'app che usa questa tecnica, vedere l' [esercitazione nozioni di base su 101](holograms-101.md) nelle esercitazioni sulla [realtà mista](tutorials.md). Il capitolo 7 termina con un'esplosione al pavimento che rivela un Sottomondo nascosto (come illustrato in precedenza). Chi ha detto che le esercitazioni erano noiose?
+Se si vuole compilare un'app che usa questa tecnica, vedere l' [esercitazione nozioni di base su 101](holograms-101.md) nelle [esercitazioni sulla realtà mista](tutorials.md). Il capitolo 7 termina con un'esplosione al pavimento che rivela un Sottomondo nascosto (come illustrato in precedenza). Chi ha detto che le esercitazioni erano noiose?
 
 Di seguito sono riportate alcune idee in cui è possibile adottare questa idea:
 * Si pensi ai modi per rendere il contenuto all'interno del foro virtuale interattivo. Consentire agli utenti di avere un certo effetto oltre i muri può migliorare il senso di stupore che questo trick può offrire.
@@ -104,12 +104,12 @@ Di seguito sono riportate alcune idee in cui è possibile adottare questa idea:
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Eric Rehmeyer" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Eric Rehmeyer</b><br>Senior Software Engineer@Microsoft</td>
+<td style="border-style: none"><b>Eric Rehmeyer</b><br>Senior Software Engineer @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vedere anche
-* [Nozioni di base MR 101: Progetto completo con dispositivo](holograms-101.md)
+## <a name="see-also"></a>Vedi anche
+* [Nozioni fondamentali 101: completare il progetto con il dispositivo](holograms-101.md)
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Ancoraggi nello spazio](spatial-anchors.md)
 * [Mapping spaziale](spatial-mapping.md)

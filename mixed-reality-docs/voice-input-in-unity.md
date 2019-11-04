@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Input vocale, KeywordRecognizer, GrammarRecognizer, microfono, dettatura, voce
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548689"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438195"
 ---
 # <a name="voice-input-in-unity"></a>Input vocale in Unity
+
+>[!NOTE]
+>Anziché le informazioni riportate di seguito, provare a usare il plug-in di Unity per l'SDK cognitive Speech Services con risultati di accuratezza vocale molto migliori e per semplificare l'accesso a decodifica di sintesi vocale e funzionalità avanzate di riconoscimento vocale come la finestra di dialogo, basata su finalità interazione, traduzione, sintesi vocale e riconoscimento vocale del linguaggio naturale. Trovare l'esempio e la documentazione qui: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 Unity espone tre modi per aggiungere [input vocale](voice-input.md) all'applicazione Unity.
 
@@ -37,8 +40,8 @@ Per consentire all'app di restare in ascolto di frasi specifiche pronunciate dal
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
-**Namespace** *UnityEngine. Windows. Speech*<br>
-**Tipi** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**Spazio dei nomi:** *UnityEngine. Windows. Speech*<br>
+**Tipi:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
 Sono necessarie alcune istruzioni using per salvare alcune sequenze di tasti:
 
@@ -99,12 +102,12 @@ keywordRecognizer.Start();
 
 ### <a name="grammarrecognizer"></a>GrammarRecognizer
 
-**Namespace** *UnityEngine. Windows. Speech*<br>
+**Spazio dei nomi:** *UnityEngine. Windows. Speech*<br>
 **Tipi**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-GrammarRecognizer viene usato se si specifica la grammatica di riconoscimento usando SRGS. Questo può essere utile se l'app ha più di poche parole chiave, se si desidera riconoscere frasi più complesse o se si desidera attivare e disattivare facilmente i set di comandi. Vedere: [Creare grammatiche usando XML SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) per le informazioni sul formato di file.
+GrammarRecognizer viene usato se si specifica la grammatica di riconoscimento usando SRGS. Questo può essere utile se l'app ha più di poche parole chiave, se si desidera riconoscere frasi più complesse o se si desidera attivare e disattivare facilmente i set di comandi. Vedere: [creare grammatiche con SRGS XML](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) per informazioni sul formato di file.
 
-Una volta completata la grammatica SRGS, questa si trova nel progetto in una [cartella StreamingAssets](http://docs.unity3d.com/Manual/StreamingAssets.html):
+Una volta completata la grammatica SRGS, questa si trova nel progetto in una [cartella StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
@@ -144,7 +147,7 @@ grammarRecognizer.Start();
 **Spazio dei nomi:** *UnityEngine. Windows. Speech*<br>
 **Tipi**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
-Usare DictationRecognizer per convertire il riconoscimento vocale dell'utente in testo. DictationRecognizer espone la funzionalità di [dettatura](voice-input.md#dictation) e supporta la registrazione e l'ascolto di eventi di ipotesi completati e frasi completate, in modo che sia possibile inviare commenti e suggerimenti all'utente sia durante la loro pronuncia che in seguito. I metodi Start () e stop () rispettivamente abilitano e disabilitano il riconoscimento della dettatura. Una volta terminato con il riconoscimento, è necessario eliminarlo utilizzando il metodo Dispose () per rilasciare le risorse utilizzate. Queste risorse verranno rilasciate automaticamente durante Garbage Collection a un costo aggiuntivo in termini di prestazioni, se non vengono rilasciate prima di tale operazione.
+Usare DictationRecognizer per convertire il riconoscimento vocale dell'utente in testo. DictationRecognizer espone la funzionalità di [Dettatura](voice-input.md#dictation) e supporta la registrazione e l'ascolto di eventi di ipotesi completati e frasi completate, in modo che sia possibile inviare commenti e suggerimenti all'utente sia durante la loro pronuncia che in seguito. I metodi Start () e stop () rispettivamente abilitano e disabilitano il riconoscimento della dettatura. Una volta terminato con il riconoscimento, è necessario eliminarlo utilizzando il metodo Dispose () per rilasciare le risorse utilizzate. Queste risorse verranno rilasciate automaticamente durante Garbage Collection a un costo aggiuntivo in termini di prestazioni, se non vengono rilasciate prima di tale operazione.
 
 Per iniziare a usare la dettatura sono necessari solo alcuni passaggi:
 1. Creare un nuovo DictationRecognizer

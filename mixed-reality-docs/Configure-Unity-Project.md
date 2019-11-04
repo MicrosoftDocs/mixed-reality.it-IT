@@ -1,17 +1,17 @@
 ---
 title: Configurare un nuovo progetto Unity per la realtà mista di Windows
 description: configurare il progetto Unity senza MRTK
-author: yoyoz
-ms.author: Yoyoz
+author: thetuvix
+ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realtà mista, sviluppo, Guida introduttiva, nuovo progetto
-ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326096"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437117"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurare un nuovo progetto Unity per la realtà mista di Windows 
 
@@ -36,7 +36,7 @@ Per fare riferimento alla realtà mista di Windows, è necessario prima di tutto
 4. Nella sezione **impostazioni di XR** , selezionare la casella di controllo **realtà virtuale supportata** per aggiungere l'elenco **dispositivi della realtà virtuale** .
 5. Nel gruppo **impostazioni di XR** verificare che **"realtà mista di Windows"** sia elencato come un dispositivo supportato. (questo può apparire come "Windows olografico" nelle versioni precedenti di Unity)
 
-![Impostazioni qualità Unity](images/getting-started-unity-quality-settings.jpg)<br>
+impostazioni della qualità di ![Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Impostazioni di Unity XR*
 
 L'app ora può eseguire il rendering olografico di base e l'input spaziale. Per approfondire e sfruttare alcune funzionalità, l'app deve dichiarare le funzionalità appropriate nel manifesto. Le dichiarazioni di manifesto possono essere apportate in Unity, in modo che vengano incluse in ogni esportazione successiva del progetto. L'impostazione si trova in **Impostazioni lettore > impostazioni per piattaforma UWP (Universal Windows Platform) > impostazioni di pubblicazione > funzionalità**. Le funzionalità applicabili per l'abilitazione di API Unity utilizzate comunemente per la realtà mista sono:
@@ -51,7 +51,7 @@ L'app ora può eseguire il rendering olografico di base e l'input spaziale. Per 
 
 **Impostazioni qualità Unity**
 
-![Impostazioni qualità Unity](images/getting-started-unity-quality-settings.jpg)<br>
+impostazioni della qualità di ![Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Impostazioni qualità Unity*
 
 HoloLens dispone di una GPU di classe mobile. Se l'app è destinata a HoloLens, è necessario ottimizzare le impostazioni di qualità per ottenere prestazioni più rapide, in modo da mantenere la frequenza di framerate completa:
@@ -62,7 +62,7 @@ HoloLens dispone di una GPU di classe mobile. Se l'app è destinata a HoloLens, 
 
 **Impostazioni della fotocamera Unity**
 
-![Impostazioni della fotocamera Unity](images/Unitycamerasettings.png)<br>
+![impostazioni della fotocamera Unity](images/Unitycamerasettings.png)<br>
 *Impostazioni della fotocamera Unity*
 
 Una volta abilitata la casella di controllo "Virtual Reality supported", il componente della [fotocamera Unity](camera-in-unity.md) gestisce il [monitoraggio Head e il rendering stereoscopico](rendering.md). Per eseguire questa operazione, non è necessario sostituirlo con una fotocamera personalizzata.
@@ -72,11 +72,11 @@ Se l'app è destinata a HoloLens in modo specifico, è necessario modificare alc
 2. Nel pannello **Inspector** impostare la **posizione** di trasformazione su 0, 0 **, 0,** in modo che il percorso del titolo Users inizi in Unity World Origin.
 3. Modificare i **flag cancellati** in **colore a tinta unita**.
 4. Modificare il colore di **sfondo** in **RGBA 0**, 0, 0, 0. Il nero viene visualizzato come trasparente in HoloLens.
-5. Modificare i piani di ritaglio in **prossimità** del [HoloLens consigliato](camera-in-unity.md#clip-planes) 0,85 (contatori).
+5. Modificare i **piani di ritaglio in prossimità** del [HoloLens consigliato](camera-in-unity.md#clip-planes) 0,85 (contatori).
 
-Se si elimina e si crea una nuova fotocamera, assicurarsi che la fotocamera  sia contrassegnata come **MainCamera**.
+Se si elimina e si crea una nuova fotocamera, assicurarsi che la fotocamera sia **contrassegnata** come **MainCamera**.
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Toolkit di realtà mista V2](mrtk-getting-started.md)
 * [Panoramica sullo sviluppo Unity](unity-development-overview.md)

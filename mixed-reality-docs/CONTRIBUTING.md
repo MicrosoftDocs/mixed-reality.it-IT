@@ -5,18 +5,18 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: 934171f26571b3219bbe390aff44349fb6908f74
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861712"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437130"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contributo alla documentazione per gli sviluppatori di Microsoft Mixed Reality
 
 Il [repository pubblico per la documentazione per gli sviluppatori di Microsoft Mixed Reality](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs) Eventuali articoli creati o modificati in questo repository **saranno visibili al pubblico.** 
 
-I documenti di realtà mista di Windows sono ora disponibili nella piattaforma docs.microsoft.com, che usa Markdown di GitHub (con le funzionalità di Markdig). In pratica, il contenuto modificato in questo repository viene trasformato in pagine formattate e stilizzate visualizzate https://docs.microsoft.com/windows/mixed-reality in. 
+I documenti di realtà mista di Windows sono ora disponibili nella piattaforma docs.microsoft.com, che usa Markdown di GitHub (con le funzionalità di Markdig). In pratica, il contenuto modificato in questo repository viene trasformato in pagine formattate e stilizzate visualizzate in https://docs.microsoft.com/windows/mixed-reality. 
 
 In questa pagina vengono illustrati i passaggi e le linee guida di base per i contributi, oltre a collegamenti alle nozioni di base di Markdown. Grazie per il contributo.
 
@@ -48,12 +48,12 @@ Usare il flusso di lavoro seguente per apportare aggiornamenti a *un articolo es
    ![Modificare un articolo.](images/editpage.png)
 3. Modificare il contenuto dell'articolo (vedere ["Nozioni di base di Markdown"](#markdown-basics) di seguito per informazioni aggiuntive).
 4. Aggiornare i metadati come pertinente all'inizio di ogni articolo:
-   * titolo Si tratta del titolo della pagina che viene visualizzato nella scheda del browser quando viene visualizzato l'articolo. Poiché questa operazione viene usata per l'indicizzazione e l'ottimizzazione, non è necessario modificare il titolo a meno che non sia necessario (sebbene questo sia meno critico prima che la documentazione diventi pubblica).
-   * Descrizione Scrivere una breve descrizione del contenuto dell'articolo. Questa operazione favorisce la SEO e l'individuazione.
-   * autore Se si è il proprietario principale della pagina, aggiungere qui l'alias GitHub.
-   * ms. Author: Se si è il proprietario principale della pagina, aggiungere qui l'alias Microsoft (non è necessario @microsoft.com, solo l'alias).
-   * ms. Data: Aggiornare la data se si aggiunge contenuto principale alla pagina, ma non per correzioni quali chiarimenti, formattazione, grammatica o ortografia.
-   * Parole Parole chiave che facilitano il SEO (ottimizzazione del motore di ricerca). Aggiungere parole chiave, separate da una virgola e uno spazio, specifiche dell'articolo (ma senza punteggiatura dopo l'ultima parola chiave nell'elenco); non è necessario aggiungere parole chiave globali che si applicano a tutti gli articoli, perché sono gestite altrove. 
+   * title: titolo della pagina che viene visualizzato nella scheda del browser quando viene visualizzato l'articolo. Poiché questa operazione viene usata per l'indicizzazione e l'ottimizzazione, non è necessario modificare il titolo a meno che non sia necessario (sebbene questo sia meno critico prima che la documentazione diventi pubblica).
+   * Descrizione: scrivere una breve descrizione del contenuto dell'articolo. Questa operazione favorisce la SEO e l'individuazione.
+   * autore: se si è il proprietario principale della pagina, aggiungere qui l'alias GitHub.
+   * ms. Author: se si è il proprietario principale della pagina, aggiungere qui l'alias Microsoft (non è necessario @microsoft.com, solo l'alias).
+   * ms. Date: aggiornare la data se si aggiunge contenuto principale alla pagina, ma non per correzioni quali chiarificazione, formattazione, grammatica o ortografia.
+   * Parole chiave: supporto delle parole chiave in SEO (ottimizzazione del motore di ricerca). Aggiungere parole chiave, separate da una virgola e uno spazio, specifiche dell'articolo (ma senza punteggiatura dopo l'ultima parola chiave nell'elenco); non è necessario aggiungere parole chiave globali che si applicano a tutti gli articoli, perché sono gestite altrove. 
 5. Una volta completate le modifiche apportate all'articolo, scorrere verso il basso e fare clic sul pulsante **Proponi modifica file** .
 6. Nella pagina successiva fare clic su **Crea richiesta pull** per unire il ramo creato automaticamente in ' Master '.
 7. Ripetere i passaggi precedenti per il prossimo articolo che si desidera modificare.
@@ -62,7 +62,7 @@ Usare il flusso di lavoro seguente per apportare aggiornamenti a *un articolo es
 
 Se la modifica Rinomina o Elimina un articolo esistente, assicurarsi di aggiungere un reindirizzamento. In questo modo, tutti gli utenti con un collegamento all'articolo esistente continueranno a trovarsi nel posto giusto. I reindirizzamenti vengono gestiti dal file. openpublishing. redirector. JSON nella radice del repository.
 
-Per aggiungere un reindirizzamento a. openpublishing. redirector. JSON, aggiungere una voce alla `redirections` matrice:
+Per aggiungere un reindirizzamento a. openpublishing. redirector. JSON, aggiungere una voce alla matrice di `redirections`:
 
 ```json
 {
@@ -74,9 +74,9 @@ Per aggiungere un reindirizzamento a. openpublishing. redirector. JSON, aggiunge
         },
 ```
 
-- `source_path` È il percorso del repository relativo all'articolo precedente che si sta rimuovendo. Verificare che il percorso inizi con `mixed-reality-docs` e termini con `.md`.
-- `redirect_url` È l'URL pubblico relativo dall'articolo precedente al nuovo articolo. Assicurarsi che l'URL non contenga `mixed-reality-docs` o `.md`, perché si riferisce all'URL pubblico e non al percorso del repository. Il collegamento a una sezione all'interno del nuovo articolo `#section` con è consentito. Se necessario, è anche possibile usare un percorso assoluto di un altro sito.
-- `redirect_document_id`indica se si desidera memorizzare l'ID del documento del file precedente. Il valore predefinito è `false`. Usare `true` se si vuole mantenere il `ms.documentid` valore dell'attributo dall'articolo reindirizzato. Se si mantiene l'ID del documento, i dati, ad esempio le visualizzazioni di pagina e le classificazioni, verranno trasferiti all'articolo di destinazione. Eseguire questa operazione se il reindirizzamento è principalmente una ridenominazione e non un puntatore a un articolo diverso che copre solo parte dello stesso contenuto.
+- Il `source_path` è il percorso relativo del repository per l'articolo precedente che si sta rimuovendo. Verificare che il percorso inizi con `mixed-reality-docs` e termini con `.md`.
+- Il `redirect_url` è l'URL pubblico relativo dall'articolo precedente al nuovo articolo. Assicurarsi che l' **URL non contenga `mixed-reality-docs`** o `.md`, in quanto si riferisce all'URL pubblico e non al percorso del repository. Il collegamento a una sezione all'interno del nuovo articolo con `#section` è consentito. Se necessario, è anche possibile usare un percorso assoluto di un altro sito.
+- `redirect_document_id` indica se si desidera memorizzare l'ID del documento del file precedente. Il valore predefinito è `false`. Utilizzare `true` se si desidera mantenere il valore dell'attributo `ms.documentid` dall'articolo reindirizzato. Se si mantiene l'ID del documento, i dati, ad esempio le visualizzazioni di pagina e le classificazioni, verranno trasferiti all'articolo di destinazione. Eseguire questa operazione se il reindirizzamento è principalmente una ridenominazione e non un puntatore a un articolo diverso che copre solo parte dello stesso contenuto.
 
 Se si aggiunge un reindirizzamento, assicurarsi di eliminare anche il vecchio file.
 
@@ -111,7 +111,7 @@ Usare il flusso di lavoro seguente per *creare nuovi articoli* nel repository de
 
 5. Compilare i campi dei metadati pertinenti in base alle istruzioni riportate nella [sezione precedente](#editing-an-existing-article).
 6. Scrivere il contenuto dell'articolo usando le [nozioni fondamentali di Markdown](#markdown-basics)
-7. Aggiungere una `## See also` sezione nella parte inferiore dell'articolo con i collegamenti ad altri articoli pertinenti.
+7. Aggiungere una sezione `## See also` nella parte inferiore dell'articolo con i collegamenti ad altri articoli pertinenti.
 8. Al termine, fare clic su Esegui **commit nuovo file**.
 9. Fare clic su **nuova richiesta pull** e unire il ramo ' Master ' del fork in MicrosoftDocs/Mixed-Reality ' Master ' (assicurarsi che la freccia indichi la modalità corretta).
 
@@ -127,7 +127,7 @@ Le risorse seguenti consentiranno di apprendere come modificare la documentazion
 
 ### <a name="adding-tables"></a>Aggiunta di tabelle
 
-A causa del modo in cui le tabelle docs.microsoft.com stili, non avranno bordi o stili personalizzati, anche se si prova a usare CSS inline. Sembra funzionare per un breve periodo di tempo, ma alla fine la piattaforma eliminerà lo stile dalla tabella. Pianificare in anticipo e semplificare le tabelle. [Ecco un sito che semplifica la semplicità delle tabelle Markdown](http://www.tablesgenerator.com/markdown_tables).
+A causa del modo in cui le tabelle docs.microsoft.com stili, non avranno bordi o stili personalizzati, anche se si prova a usare CSS inline. Sembra funzionare per un breve periodo di tempo, ma alla fine la piattaforma eliminerà lo stile dalla tabella. Pianificare in anticipo e semplificare le tabelle. [Ecco un sito che semplifica la semplicità delle tabelle Markdown](https://www.tablesgenerator.com/markdown_tables).
 
 L' [estensione docs Markdown per Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) rende inoltre semplice la generazione di tabelle se si usa [Visual Studio Code (vedere di seguito)](#using-visual-studio-code) per modificare la documentazione.
 
@@ -168,7 +168,7 @@ Se si preferisce non gestire questi problemi, è consigliabile usare un client d
 
 Per i motivi elencati in [precedenza](#editing-in-the-browser-vs-editing-with-a-desktop-client), è preferibile usare un client desktop per modificare la documentazione anziché un Web browser. Si consiglia di usare [Visual Studio Code](https://code.visualstudio.com/).
 
-### <a name="setup"></a>Configurazione
+### <a name="setup"></a>Installazione
 
 Per configurare Visual Studio Code per l'uso con questo repository, seguire questa procedura:
 
@@ -189,7 +189,7 @@ Per configurare Visual Studio Code per l'uso con questo repository, seguire ques
 Usare il flusso di lavoro seguente per apportare modifiche alla documentazione con Visual Studio Code:
 
 >[!NOTE]
->Tutte le linee guida per la [modifica](#editing-an-existing-article) e la [creazione](#creating-a-new-article) di articoli e le nozioni [di base per la modifica di Markdown](#markdown-basics)vengono applicate anche quando si usa Visual Studio Code.
+>Tutte le linee guida per la [modifica](#editing-an-existing-article) e la [creazione](#creating-a-new-article) di articoli e le [nozioni di base per la modifica di Markdown](#markdown-basics)vengono applicate anche quando si usa Visual Studio Code.
 
 1. Verificare che il fork clonato sia aggiornato con il repository ufficiale.
    1. In un Web browser creare una richiesta pull per sincronizzare le modifiche recenti da altri collaboratori in MicrosoftDocs/Mixed-Reality ' Master ' al fork (assicurarsi che la freccia indichi il modo corretto).

@@ -2,20 +2,23 @@
 title: 'Case Study: espansione delle funzionalità di mapping spaziale di HoloLens'
 description: Quando si creano le prime app per Microsoft HoloLens, siamo ansiosi di vedere come è possibile eseguire il push dei limiti del mapping spaziale sul dispositivo.
 author: jevertt
-ms.author: jevertt
+ms.author: jemccull
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, mapping spaziale
-ms.openlocfilehash: 602b629afa5900ff34c28b3a3a32725af06590b7
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5142cb383d4408b29eb17eb5ede84d19b2533dc4
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522672"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436727"
 ---
 # <a name="case-study---expanding-the-spatial-mapping-capabilities-of-hololens"></a>Case Study: espansione delle funzionalità di mapping spaziale di HoloLens
 
 Quando si creano le prime app per Microsoft HoloLens, siamo ansiosi di vedere come è possibile eseguire il push dei limiti del mapping spaziale sul dispositivo. Jeff Evertt, un ingegnere del software presso Microsoft Studios, spiega come una nuova tecnologia è stata sviluppata dalla necessità di un maggiore controllo sulla modalità di inserimento degli ologrammi nell'ambiente reale di un utente.
+
+> [!NOTE]
+> HoloLens 2 implementa una nuova [scena che comprende il runtime](scene-understanding.md), che fornisce agli sviluppatori di realtà mista una rappresentazione dell'ambiente di alto livello strutturata progettata per rendere intuitivo lo sviluppo di applicazioni compatibili con l'ambiente. 
 
 ## <a name="watch-the-video"></a>Guarda il video
 
@@ -23,9 +26,9 @@ Quando si creano le prime app per Microsoft HoloLens, siamo ansiosi di vedere co
 
 ## <a name="beyond-spatial-mapping"></a>Oltre il mapping spaziale
 
-Mentre stavamo lavorando per i [frammenti](https://www.microsoft.com/p/fragments/9nblggh5ggm8) e i [Conker giovani](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), due dei primi giochi per HoloLens, abbiamo scoperto che, quando avessimo eseguito il posizionamento procedurale degli ologrammi nel mondo fisico, abbiamo bisogno di un livello superiore di comprensione degli utenti ambiente. Ogni gioco ha esigenze specifiche di selezione host: Nei frammenti, ad esempio, si voleva essere in grado di distinguere tra superfici diverse, ad esempio il piano o una tabella, per inserire gli indizi nelle posizioni pertinenti. Volevamo anche essere in grado di identificare le superfici su cui potevano poggiare i caratteri olografici di dimensioni reali, ad esempio un divano o una poltrona. In Young Conker volevamo che Conker e i suoi avversari fossero in grado di usare le superfici sollevate nella stanza di un giocatore come piattaforme.
+Mentre stavamo lavorando per i [frammenti](https://www.microsoft.com/p/fragments/9nblggh5ggm8) e i [Conker giovani](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), due dei primi giochi per HoloLens, abbiamo scoperto che, quando avessimo eseguito il posizionamento procedurale degli ologrammi nel mondo fisico, abbiamo bisogno di un livello superiore di comprensione degli utenti ambiente. Ogni gioco ha esigenze specifiche di selezione host: nei frammenti, ad esempio, si voleva essere in grado di distinguere tra superfici diverse, ad esempio il piano o una tabella, per inserire gli indizi nelle posizioni pertinenti. Volevamo anche essere in grado di identificare le superfici su cui potevano poggiare i caratteri olografici di dimensioni reali, ad esempio un divano o una poltrona. In Young Conker volevamo che Conker e i suoi avversari fossero in grado di usare le superfici sollevate nella stanza di un giocatore come piattaforme.
 
-[Asobo Studios](http://www.asobostudio.com/index.html), il nostro partner di sviluppo per questi giochi, ha affrontato questo problema e ha creato una tecnologia che estende le funzionalità di mapping spaziale di HoloLens. In questo modo è possibile analizzare la stanza di un giocatore e identificare superfici quali muri, tabelle, poltrone e pavimenti. Inoltre, ci ha consentito di ottimizzare il rispetto di un set di vincoli per determinare la posizione migliore per gli oggetti olografici.
+[Asobo Studios](https://www.asobostudio.com/index.html), il nostro partner di sviluppo per questi giochi, ha affrontato questo problema e ha creato una tecnologia che estende le funzionalità di mapping spaziale di HoloLens. In questo modo è possibile analizzare la stanza di un giocatore e identificare superfici quali muri, tabelle, poltrone e pavimenti. Inoltre, ci ha consentito di ottimizzare il rispetto di un set di vincoli per determinare la posizione migliore per gli oggetti olografici.
 
 ## <a name="the-spatial-understanding-code"></a>Codice di conoscenza spaziale
 
@@ -34,10 +37,10 @@ Abbiamo preso il codice originale di Asobo e abbiamo creato una libreria che inc
 Nell'esempio Unity sono disponibili numerose query utili che consentono di trovare spazi vuoti sulle pareti, posizionare oggetti sul soffitto o spazi di grandi dimensioni, identificare le posizioni dei caratteri e una miriade di altre query di comprensione spaziale.
 
 Sebbene la soluzione di mapping spaziale fornita da HoloLens sia progettata per essere sufficientemente generica per soddisfare le esigenze dell'intera gamma di spazi di problemi, il modulo di comprensione spaziale è stato creato per supportare le esigenze di due giochi specifici. In questo modo, la soluzione è strutturata in base a un processo e a un set di presupposti specifici:
-* **Playspace a dimensione fissa**: L'utente specifica le dimensioni massime di playspace nella chiamata init.
-* **Processo di analisi**monouso: Il processo richiede una fase di analisi discreta in cui l'utente si aggira, definendo la playspace. Le funzioni di query non funzioneranno finché non sarà stata completata l'analisi.
-* **"Disegno" di playspace basato sull'utente**: Durante la fase di analisi, l'utente sposta ed esamina la playspace, disegnando in modo efficace le aree che devono essere incluse. La mesh generata è importante per fornire commenti e suggerimenti degli utenti durante questa fase.
-* **Installazione domestica o di Office**: Le funzioni di query sono progettate intorno ad aree piane e muri a angoli retti. Si tratta di una limitazione flessibile. Tuttavia, durante la fase di analisi, viene completata un'analisi dell'asse primaria per ottimizzare lo schema a mosaico mesh lungo l'asse principale e secondario.
+* **Playspace a dimensione fissa**: l'utente specifica le dimensioni massime di playspace nella chiamata init.
+* **Processo di analisi**monouso: il processo richiede una fase di analisi discreta in cui l'utente si aggira, definendo la playspace. Le funzioni di query non funzioneranno finché non sarà stata completata l'analisi.
+* **"Disegno" di playspace basato sull'utente**: durante la fase di analisi, l'utente sposta ed esamina il playspace, disegnando in modo efficace le aree che devono essere incluse. La mesh generata è importante per fornire commenti e suggerimenti degli utenti durante questa fase.
+* **Installazione domestica o di Office**: le funzioni di query sono progettate intorno alle superfici e alle pareti piane negli angoli corretti. Si tratta di una limitazione flessibile. Tuttavia, durante la fase di analisi, viene completata un'analisi dell'asse primaria per ottimizzare lo schema a mosaico mesh lungo l'asse principale e secondario.
 
 ### <a name="room-scanning-process"></a>Processo di analisi chat room
 
@@ -52,20 +55,20 @@ Mapping spaziale mesh in bianco e informazioni su playspace mesh in verde
 
 
 Il file SpatialUnderstanding.cs incluso gestisce il processo della fase di analisi. Chiama le funzioni seguenti:
-* **SpatialUnderstanding_Init**: Chiamato una volta all'inizio.
-* **GeneratePlayspace_InitScan**: Indica che deve iniziare la fase di analisi.
-* **GeneratePlayspace_UpdateScan_DynamicScan**: Chiamato ogni frame per aggiornare il processo di analisi. La posizione e l'orientamento della fotocamera vengono passati e usati per il processo di disegno playspace, descritto in precedenza.
-* **GeneratePlayspace_RequestFinish**: Chiamato per finalizzare playspace. Questa operazione utilizzerà le aree "dipinte" durante la fase di analisi per definire e bloccare il playspace. L'applicazione può eseguire query sulle statistiche durante la fase di analisi, nonché eseguire query sulla mesh personalizzata per fornire commenti e suggerimenti degli utenti.
-* **Import_UnderstandingMesh**: Durante l'analisi, il comportamento di **SpatialUnderstandingCustomMesh** fornito dal modulo e inserito nella prefabbricazione di comprensione eseguirà periodicamente una query sulla mesh personalizzata generata dal processo. Inoltre, questa operazione viene eseguita ancora una volta dopo la finalizzazione dell'analisi.
+* **SpatialUnderstanding_Init**: chiamato una volta all'inizio.
+* **GeneratePlayspace_InitScan**: indica che deve iniziare la fase di analisi.
+* **GeneratePlayspace_UpdateScan_DynamicScan**: chiamato ogni frame per aggiornare il processo di analisi. La posizione e l'orientamento della fotocamera vengono passati e usati per il processo di disegno playspace, descritto in precedenza.
+* **GeneratePlayspace_RequestFinish**: chiamato per finalizzare il playspace. Questa operazione utilizzerà le aree "dipinte" durante la fase di analisi per definire e bloccare il playspace. L'applicazione può eseguire query sulle statistiche durante la fase di analisi, nonché eseguire query sulla mesh personalizzata per fornire commenti e suggerimenti degli utenti.
+* **Import_UnderstandingMesh**: durante l'analisi, il comportamento di **SpatialUnderstandingCustomMesh** fornito dal modulo e inserito nella prefabbricazione di informazioni consente di eseguire periodicamente query sulla mesh personalizzata generata dal processo. Inoltre, questa operazione viene eseguita ancora una volta dopo la finalizzazione dell'analisi.
 
 Il flusso di analisi, determinato dal comportamento **SpatialUnderstanding** , chiama **InitScan**e quindi **UpdateScan** ogni frame. Quando la query Statistics segnala una ragionevole copertura, l'utente può AirTap chiamare **RequestFinish** per indicare la fine della fase di analisi. **UpdateScan** continua a essere chiamato fino a quando non viene restituito il valore indica che l'elaborazione della dll è stata completata.
 
 ## <a name="the-queries"></a>Query
 
 Una volta completata l'analisi, sarà possibile accedere a tre tipi diversi di query nell'interfaccia:
-* **Query topologia**: Si tratta di query veloci basate sulla topologia della stanza sottoposta a scansione.
-* **Query di forma**: Questi utilizzano i risultati delle query della topologia per trovare superfici orizzontali che corrispondono a forme personalizzate definite dall'utente.
-* **Query posizionamento oggetti**: Si tratta di query più complesse che individuano la posizione più adatta in base a un set di regole e vincoli per l'oggetto.
+* **Query sulla topologia**: si tratta di query veloci basate sulla topologia della stanza sottoposta a scansione.
+* **Query di forma**: questi utilizzano i risultati delle query della topologia per trovare superfici orizzontali che corrispondono a forme personalizzate definite dall'utente.
+* **Query di posizionamento degli oggetti**: si tratta di query più complesse che individuano la posizione più adatta in base a un set di regole e vincoli per l'oggetto.
 
 Oltre alle tre query primarie, è disponibile un'interfaccia Raycasting che può essere usata per recuperare i tipi di superficie con tag e una mesh della stanza stermetica personalizzata che può essere copiata.
 
@@ -304,7 +307,7 @@ Nell'esempio Unity il cursore esegue il cast di un raggio per ogni fotogramma. P
 Intersezione di report dei risultati di Raycast con il piano.
 
 
-## <a name="get-the-code"></a>Ottenere il codice
+## <a name="get-the-code"></a>Ottieni il codice
 
 Il codice open source è disponibile in [MixedRealityToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity). Se si usa il codice in un progetto, segnalare i [forum per sviluppatori di HoloLens](https://forums.hololens.com/) . Non possiamo attendere per vedere cosa puoi fare!
 
@@ -318,9 +321,9 @@ Il codice open source è disponibile in [MixedRealityToolkit](https://github.com
 
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Mapping spaziale](spatial-mapping.md)
-* [Progettazione del mapping spaziale](spatial-mapping-design.md)
+* [Informazioni sulle scene](scene-understanding.md)
 * [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
 * [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-* [Asobo Studio: Lezioni dal Frontline dello sviluppo di HoloLens](http://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)
+* [Asobo Studio: lezioni dal Frontline dello sviluppo di HoloLens](https://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)

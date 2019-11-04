@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realtà mista di Windows, modelli di app, progettazione, HoloLens, analisi chat room, mapping spaziale, ricostruzione superficie, mesh
-ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: Realtà mista di Windows, modelli di app, progettazione, HoloLens, analisi chat room, mapping spaziale, mesh
+ms.openlocfilehash: bdb070407f27d04046bd022894c7a8a01b9658d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829907"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437520"
 ---
 # <a name="room-scan-visualization"></a>Visualizzazione analisi chat room
 
@@ -72,7 +72,7 @@ Nel caso del mapping spaziale memorizzato nella cache, l'applicazione esegue in 
 * Costo singolo per ogni post elaborazione dei dati spaziali per la fisica, la grafica e altri scopi.
 
 **Svantaggi**
-* Lo spostamento di oggetti o persone reali non viene riflesso dai dati memorizzati nella cache. ad esempio è possibile che l'applicazione prenda in considerazione uno sportello aperto quando viene effettivamente chiuso.
+* Lo spostamento di oggetti o persone reali non viene riflesso dai dati memorizzati nella cache. Ad esempio è possibile che l'applicazione prenda in considerazione uno sportello aperto quando viene effettivamente chiuso.
 * Potenzialmente più memoria dell'applicazione per mantenere la versione memorizzata nella cache dei dati.
 
 Un caso valido per questo metodo è un ambiente controllato o una tabella Top Game.
@@ -92,7 +92,7 @@ Alcune applicazioni possono basarsi sull'analisi continua per aggiornare i dati 
 
 Un caso ideale per questo metodo è quello in cui gli ologrammi devono interagire con gli oggetti mobili, ad esempio, un'automobile olografica che può inserirsi in uno sportello a seconda che sia aperta o chiusa.
 
-## <a name="see-also"></a>Vedere anche
-* [Progettazione del mapping spaziale](spatial-mapping-design.md)
+## <a name="see-also"></a>Vedi anche
+* [Mapping spaziale](spatial-mapping.md)
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)

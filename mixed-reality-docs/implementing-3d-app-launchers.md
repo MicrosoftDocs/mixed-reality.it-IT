@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icona, modellazione, avvio, utilità di avvio 3D, riquadro, cubo attivo, collegamento profondo, SecondaryTile, riquadro secondario, UWP
-ms.openlocfilehash: 4a8d4a696ff6ef19d7332b20580f1f5ee67bf045
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516735"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438013"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementare i lanci di app 3D (app UWP)
 
@@ -29,7 +29,7 @@ Per la creazione di un avvio di app 3D sono necessari tre passaggi:
 2. [Modellazione ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 3. Integrazione nell'applicazione (questo articolo)
 
-gli asset 3D da usare come avvii per l'applicazione devono essere creati usando le [linee guida](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per la creazione di realtà miste di Windows per garantire la compatibilità. Gli asset che non soddisfano questa specifica di authoring non verranno sottoposti a rendering nella Home della realtà mista di Windows.
+gli asset 3D da usare come avvii per l'applicazione devono essere creati usando le [linee guida per la creazione di realtà miste di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per garantire la compatibilità. Gli asset che non soddisfano questa specifica di authoring non verranno sottoposti a rendering nella Home della realtà mista di Windows.
 
 ## <a name="configuring-the-3d-launcher"></a>Configurazione dell'utilità di avvio 3D
 
@@ -42,12 +42,12 @@ Per prima cosa, individuare il manifesto del pacchetto dell'applicazione nel pro
 Nella parte superiore del manifesto aggiungere lo schema uap5 e includerlo come spazio dei nomi ignorabile:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 Specificare quindi "MixedRealityModel" nel riquadro predefinito per l'applicazione:
@@ -72,10 +72,10 @@ Specificare quindi "MixedRealityModel" nel riquadro predefinito per l'applicazio
 </Applications>
 ```
 
-Gli elementi MixedRealityModel accettano un percorso di file che punta a un asset 3D archiviato nel pacchetto dell'app. Attualmente sono supportati solo i modelli 3D distribuiti usando il formato di file. glb e creati in base alle [istruzioni per la creazione di asset 3D](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) con la realtà mista di Windows. Gli asset devono essere archiviati nel pacchetto dell'app e l'animazione non è attualmente supportata. Se il parametro "Path" viene lasciato vuoto, Windows visualizzerà lo Slate 2D anziché l'utilità di avvio 3D. **Nota:** l'asset. GLB deve essere contrassegnato come "contenuto" nelle impostazioni di compilazione prima di compilare ed eseguire l'app.
+Gli elementi MixedRealityModel accettano un percorso di file che punta a un asset 3D archiviato nel pacchetto dell'app. Attualmente sono supportati solo i modelli 3D distribuiti usando il formato di file. glb e creati in base alle [istruzioni per la creazione di asset 3D con la realtà mista di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) . Gli asset devono essere archiviati nel pacchetto dell'app e l'animazione non è attualmente supportata. Se il parametro "Path" viene lasciato vuoto, Windows visualizzerà lo Slate 2D anziché l'utilità di avvio 3D. **Nota:** l'asset. GLB deve essere contrassegnato come "contenuto" nelle impostazioni di compilazione prima di compilare ed eseguire l'app.
 
 
-![Selezionare il GLB in Esplora soluzioni e usare la sezione proprietà per contrassegnarlo come "contenuto" nelle impostazioni di compilazione](images/buildsetting-content-300px.png)<br>
+![selezionare il GLB in Esplora soluzioni e usare la sezione proprietà per contrassegnarlo come "contenuto" nelle impostazioni di compilazione](images/buildsetting-content-300px.png)<br>
 *Selezionare il GLB in Esplora soluzioni e usare la sezione proprietà per contrassegnarlo come "contenuto" nelle impostazioni di compilazione*
 
 ### <a name="bounding-box"></a>Rettangolo di selezione
@@ -85,13 +85,13 @@ Un rettangolo di delimitazione può essere utilizzato per aggiungere facoltativa
 Il supporto per l'attributo del rettangolo delimitatore verrà con l'aggiornamento di Windows RS4 come proprietà nell'elemento MixedRealityModel. Per definire innanzitutto un rettangolo di delimitazione nella parte superiore del manifesto dell'applicazione, aggiungere lo schema uap6 e includerlo come spazi dei nomi ignorabili:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 Quindi, in MixedRealityModel impostare la proprietà SpatialBoundingBox per definire il rettangolo di delimitazione: 
 
@@ -118,7 +118,7 @@ Quando si lavora con Unity, il progetto deve essere compilato e aperto in Visual
 >[!IMPORTANT]
 >i collegamenti profondi 3D (secondaryTiles) funzionano solo con le app UWP 2D. È tuttavia possibile creare un utilità di [avvio delle app 3D](implementing-3d-app-launchers.md) per avviare un'app esclusiva dalla Home realtà mista di Windows.
 
-Le applicazioni 2D possono essere migliorate per la realtà mista di Windows grazie all'aggiunta della possibilità di inserire modelli 3D dall'app nella [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) come collegamenti profondi ai contenuti all'interno dell'app 2D, proprio come i riquadri [secondari 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) all'avvio di Windows menu. Ad esempio, è possibile creare fotosfere 360 ° che si collegano direttamente a un'app del Visualizzatore foto di 360 ° o consentire agli utenti di inserire contenuto 3D da una raccolta di asset che apre una pagina di dettagli sull'autore. Si tratta solo di un paio di modi per espandere la funzionalità dell'applicazione 2D con contenuto 3D.
+Le applicazioni 2D possono essere migliorate per la realtà mista di Windows grazie all'aggiunta della possibilità di inserire modelli 3D dall'app nella [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) come collegamenti profondi ai contenuti all'interno dell'app 2D, proprio come i [riquadri secondari 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) all'avvio di Windows menu. Ad esempio, è possibile creare fotosfere 360 ° che si collegano direttamente a un'app del Visualizzatore foto di 360 ° o consentire agli utenti di inserire contenuto 3D da una raccolta di asset che apre una pagina di dettagli sull'autore. Si tratta solo di un paio di modi per espandere la funzionalità dell'applicazione 2D con contenuto 3D.
 
 ### <a name="creating-a-3d-secondarytile"></a>Creazione di un "secondaryTile" 3D
 
@@ -165,8 +165,8 @@ await tile.RequestCreateAsync();
 > Questa funzionalità sarà supportata a partire dall'aggiornamento di Windows RS4. Se si prevede di usare questa funzionalità, assicurarsi che l'applicazione sia destinata a una versione del Windows SDK maggiore o uguale a 10.0.17125.
 
 È possibile definire il comportamento di attivazione di un secondaryTile 3D per controllare il modo in cui viene reagisce quando viene selezionato da un utente. Questo può essere usato per inserire gli oggetti 3D nella Home realtà mista che sono Purley informativi o decorativi. Sono supportati i tipi di comportamento di attivazione seguenti:
-1. Valore predefinito: Quando un utente seleziona il secondaryTile 3D, l'app viene attivata
-2. None: Quando gli utenti selezionano il secondaryTile 3D non accade nulla e l'app non è attivata.
+1. Impostazione predefinita: quando un utente seleziona il secondaryTile 3D, l'app viene attivata
+2. None: se gli utenti selezionano il secondaryTile 3D, l'app non viene attivata.
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Acquisizione e aggiornamento di un "secondaryTile" esistente
 
@@ -202,7 +202,7 @@ Le notifiche dei riquadri attualmente non supportano l'invio di un aggiornamento
 
 Per altre informazioni sulle altre funzionalità e gli attributi dei riquadri e sul modo in cui vengono usati per i riquadri 2D, vedere la documentazione relativa ai [riquadri per le app UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Esempio di modello di realtà mista](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenente un utilità di avvio delle app 3D.
 * [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)

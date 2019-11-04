@@ -1,21 +1,21 @@
 ---
-title: 'Case Study: acquisizione e creazione di contenuto per HoloTour'
-description: HoloTour per Microsoft HoloLens fornisce tour personali immersivi 3D di posizioni iconiche in tutto il mondo.
+title: Case Study-HoloTour
+description: HoloTour per Microsoft HoloLens fornisce tour personali immersivi 3D di posizioni iconiche in tutto il mondo. In questo case study verrà illustrato il processo di acquisizione e creazione del contenuto utilizzato per HoloTour.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, realtà mista di Windows
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518211"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436930"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Case Study: acquisizione e creazione di contenuto per HoloTour
+# <a name="case-study---holotour"></a>Case Study-HoloTour
 
-HoloTour per Microsoft HoloLens fornisce tour personali immersivi 3D di posizioni iconiche in tutto il mondo. I progettisti, gli artisti, i produttori, i progettisti e gli sviluppatori che lavorano su questo progetto hanno scoperto che la creazione di un rendering 3D in modo convincente di una posizione nota accetta una combinazione univoca di creazioni guidate creative e tecnologiche.
+HoloTour per Microsoft HoloLens fornisce tour personali immersivi 3D di posizioni iconiche in tutto il mondo. I progettisti, gli artisti, i produttori, i progettisti e gli sviluppatori che lavorano su questo progetto hanno scoperto che la creazione di un rendering 3D in modo convincente di una posizione nota accetta una combinazione univoca di creazioni guidate creative e tecnologiche. In questo case study verrà illustrato il processo di acquisizione e creazione del contenuto utilizzato per HoloTour.
 
 ## <a name="the-tech"></a>Il Tech
 
@@ -42,7 +42,6 @@ Il nostro rig è stato aggiornato da Velcro e cartonato a una fotocamera a stamp
 
 Il 360 ° rig della fotocamera che si sta filmando in Machu Picchu. 
 
-
 ## <a name="behind-the-scenes"></a>Dietro le quinte
 
 Prima di filmarlo, era necessario scoprire quali sono le località da includere nella nostra presentazione virtuale. Roma è stata la prima sede per la spedizione e volevamo ottenerla, quindi abbiamo deciso di eseguire un viaggio di scouting in anticipo. Abbiamo inviato un team di sei persone, inclusi gli artisti, i progettisti e i produttori, per una visita al posto dei siti considerati. Il viaggio ha richiesto circa 9 giorni, 2,5 per le corse, il resto per il film. Per Machu Picchu abbiamo scelto di non eseguire una corsa Scout, una ricerca preliminare e la prenotazione di alcuni giorni di buffer per il film.
@@ -58,7 +57,7 @@ Al termine del viaggio Scout, è stato creato un piano finale per il filming eff
 
 ### <a name="capturing-the-video"></a>Acquisizione del video
 
-Eseguire alcune operazioni semplici durante l'acquisizione può semplificare notevolmente la post-elaborazione. Ad esempio, ogni volta che si uniscono immagini da più fotocamere, si verificano elementi visivi perché ogni fotocamera ha una visualizzazione leggermente diversa. Gli oggetti più vicini sono la fotocamera, maggiore è la differenza tra le visualizzazioni e più grande sarà l'Unione degli artefatti. Ecco un modo semplice per visualizzare il problema: tenere il dito davanti alla faccia e osservarlo con un solo occhio. Ora cambia gli occhi. Si noterà che il pollice sembra essere spostato rispetto allo sfondo. Se si tiene il cursore oltre il viso e si ripete l'esperimento, il cursore appare meno. Questo movimento apparente è simile al problema di Unione affrontato: Gli occhi, come le fotocamere, non vedono esattamente la stessa immagine perché sono separati da una distanza minima.
+Eseguire alcune operazioni semplici durante l'acquisizione può semplificare notevolmente la post-elaborazione. Ad esempio, ogni volta che si uniscono immagini da più fotocamere, si verificano elementi visivi perché ogni fotocamera ha una visualizzazione leggermente diversa. Gli oggetti più vicini sono la fotocamera, maggiore è la differenza tra le visualizzazioni e più grande sarà l'Unione degli artefatti. Ecco un modo semplice per visualizzare il problema: tenere il dito davanti alla faccia e osservarlo con un solo occhio. Ora cambia gli occhi. Si noterà che il pollice sembra essere spostato rispetto allo sfondo. Se si tiene il cursore oltre il viso e si ripete l'esperimento, il cursore appare meno. Questo movimento apparente è simile al problema che abbiamo affrontato: gli occhi, come le nostre fotocamere, non vedono esattamente la stessa immagine perché sono separati da una distanza minima.
 
 Poiché è molto più semplice evitare gli artefatti peggiori durante il film che è necessario correggere durante la post-elaborazione, si è tentato di evitare la necessità di unire gli oggetti di chiusura alla fotocamera, nella speranza di eliminare la necessità di unire gli oggetti di chiusura. La gestione di una grande deselezione della nostra fotocamera era probabilmente una delle principali problemi riscontrati durante la fase di Shooting. Lavorare con le guide locali è stato un enorme aiuto nella gestione delle folle, ma è stato anche scoperto che l'uso di segni, a volte piccoli coni o sacchetti di fagioli, per contrassegnare lo spazio di film era ragionevolmente efficace, soprattutto perché era necessario solo ottenere una breve quantità di metraggio in ogni posizione. Spesso il modo migliore per ottenere una buona acquisizione è stato quello di raggiungere il primo mattino, prima che la maggior parte delle persone si trovino.
 
@@ -77,7 +76,7 @@ L'acquisizione del contenuto di 360 ° è solo il primo passaggio, ma è necessa
 Una riduzione approssimativa del metraggio Pantheon prima dell'Unione. 
 
 
-Per unire i video, è stato usato uno strumento denominato [PTGui](http://www.ptgui.com/) che è stato integrato nella pipeline di elaborazione. Nell'ambito della post-elaborazione abbiamo estratto ancora i frame dai nostri video ed è stato trovato un modello di Unione che sembrava adatto per uno di questi frame. Il modello è stato quindi applicato a un plug-in personalizzato scritto che consentiva ai nostri artisti video di ottimizzare e modificare direttamente il modello di Unione durante la composizione in After Effects. 
+Per unire i video, è stato usato uno strumento denominato [PTGui](https://www.ptgui.com/) che è stato integrato nella pipeline di elaborazione. Nell'ambito della post-elaborazione abbiamo estratto ancora i frame dai nostri video ed è stato trovato un modello di Unione che sembrava adatto per uno di questi frame. Il modello è stato quindi applicato a un plug-in personalizzato scritto che consentiva ai nostri artisti video di ottimizzare e modificare direttamente il modello di Unione durante la composizione in After Effects. 
 
 ![Screenshot di PTGui che mostra il metraggio Pantheon ricamato.](images/stitching-tool-pantheon-500px.png)
 
@@ -153,5 +152,5 @@ Ci auguriamo che la condivisione di soluzioni ad alcune delle principali problem
 
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Video: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

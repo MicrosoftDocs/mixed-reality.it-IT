@@ -6,19 +6,19 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto focale, piano di messa a fuoco, piano di stabilizzazione, punto di stabilizzazione, riproiezione, LSR, buffer di profondità
-ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525465"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435421"
 ---
 # <a name="focus-point-in-unity"></a>Punto di messa a fuoco in Unity
 
-**Namespace** *UnityEngine. XR. WSA*<br>
+**Spazio dei nomi:** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-Il [punto di interesse](hologram-stability.md#stabilization-plane) può essere impostato in modo da fornire a HoloLens un suggerimento su come eseguire al meglio la stabilizzazione sugli ologrammi attualmente in fase di visualizzazione.
+Il [punto di interesse](hologram-stability.md#reprojection) può essere impostato in modo da fornire a HoloLens un suggerimento su come eseguire al meglio la stabilizzazione sugli ologrammi attualmente in fase di visualizzazione.
 
 Se si vuole impostare il punto di messa a fuoco in Unity, è necessario impostare ogni fotogramma usando *HolographicSettings. SetFocusPointForFrame ()* . Se il punto di attivazione non è impostato per un frame, verrà utilizzato il piano di stabilizzazione predefinito.
 
@@ -50,5 +50,5 @@ void Update()
 
 Si noti che il codice precedente può finire a ridurre la stabilità dell'ologramma se l'oggetto con stato attivo termina dietro l'utente.  Questo è il motivo per cui in genere è necessario impostare "Abilita condivisione buffer di profondità" anziché specificare manualmente un punto di interesse.
 
-### <a name="see-also"></a>Vedere anche
-* [Piano di stabilizzazione](hologram-stability.md#stabilization-plane)
+### <a name="see-also"></a>Vedi anche
+* [Piano di stabilizzazione](hologram-stability.md#reprojection)

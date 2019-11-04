@@ -1,17 +1,17 @@
 ---
 title: Uso di Vuforia con Unity
 description: Sfrutta Vuforia per creare applicazioni di realtà miste Windows in Unity.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, marcatori, coordinate, frame di riferimento, rilevamento
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750348"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437132"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Uso del motore Vuforia con Unity
 
@@ -60,7 +60,7 @@ Lo sviluppo di un'app del motore Vuforia per HoloLens è fondamentalmente lo ste
 10. Selezionare Compila per generare un progetto di Visual Studio
 11. Compilare il file eseguibile da Visual Studio e installarlo nella HoloLens
 
-Nota: A partire dalla versione 7,2, l'esempio di motore Vuforia per HoloLens include una scena di esempio, incluso l'utilizzo di esempio delle destinazioni dei modelli
+Nota: a partire dalla versione 7,2, l'esempio di motore Vuforia per HoloLens include una scena di esempio che include l'uso di esempio delle destinazioni dei modelli
 
 ## <a name="the-vuforia-developer-portal"></a>Portale per sviluppatori Vuforia
 
@@ -70,12 +70,12 @@ Gli sviluppatori che desiderano creare le proprie esperienze AR con il motore Vu
 
 Il [rilevamento esteso](https://library.vuforia.com/articles/Training/Extended-Tracking) crea una mappa dell'ambiente per mantenere il rilevamento anche quando una destinazione non è più in visualizzazione. Si tratta di una controparte dei motori Vuforia per il mapping spaziale eseguito da HoloLens. Quando si Abilita il rilevamento esteso in una destinazione, si Abilita la definizione della destinazione per il sistema di mapping spaziale. In questo modo, le destinazioni possono esistere sia nel motore Vuforia che nei sistemi di coordinate spaziali HoloLens, anche se non contemporaneamente.
 
-![Finestra impostazioni di Unity](images/vuforia-extendedtracking.png)<br>
+finestra delle impostazioni di ![Unity](images/vuforia-extendedtracking.png)<br>
 *Finestra impostazioni di Unity*
 
 **Abilitazione del rilevamento esteso in una destinazione**
 
-Il motore Vuforia trasformerà automaticamente la definizione di una destinazione che utilizza il rilevamento esteso nel sistema di coordinate spaziali HoloLens. Ciò consente a HoloLens di eseguire il monitoraggio e di integrare eventuali contenuti che si ampliano nella mappa spaziale degli ambienti di destinazione. Questo processo si verifica tra il motore Vuforia e le API di realtà mista in Unity e non richiede alcuna programmazione da parte dello sviluppatore, ma viene gestito automaticamente.
+Il motore Vuforia trasformerà automaticamente la definizione di una destinazione che utilizza il rilevamento esteso nel sistema di coordinate spaziali HoloLens. Ciò consente a HoloLens di prendere il controllo del rilevamento e di integrare qualsiasi contenuto che aumenti nel mapping spaziale degli ambienti di destinazione. Questo processo si verifica tra il motore Vuforia e le API di realtà mista in Unity e non richiede alcuna programmazione da parte dello sviluppatore, ma viene gestito automaticamente.
 
 **Ecco cosa accade...**
 1. Il Tracker di destinazione di Vuforia riconosce la destinazione
@@ -86,16 +86,16 @@ Il motore Vuforia trasformerà automaticamente la definizione di una destinazion
 
 Lo sviluppatore può controllare questo processo, per restituire il controllo a Vuforia, disabilitando il rilevamento esteso in TargetBehaviour.
 
-**NOTA:** A partire da Vuforia 7,2, il rilevamento esteso non è più abilitato per ogni singola destinazione. Gli sviluppatori possono invece attivare il rilevamento dei dispositivi per abilitare funzionalità simili in tutte le destinazioni della scena.
+**Nota:** A partire da Vuforia 7,2, il rilevamento esteso non è più abilitato per ogni singola destinazione. Gli sviluppatori possono invece attivare il rilevamento dei dispositivi per abilitare funzionalità simili in tutte le destinazioni della scena.
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Installare gli strumenti](install-the-tools.md)
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Mapping spaziale](spatial-mapping.md)
 * [Fotocamera in Unity](camera-in-unity.md)
 * [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Documentazione di Vuforia: Sviluppo per Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
-* [Documentazione di Vuforia: Come installare l'estensione Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
-* [Documentazione di Vuforia: Uso dell'esempio HoloLens in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
-* [Documentazione di Vuforia: Rilevamento esteso in Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)
+* [Documentazione di Vuforia: sviluppo per Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Documentazione di Vuforia: come installare l'estensione di Unity Vuforia](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
+* [Documentazione di Vuforia: uso dell'esempio HoloLens in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
+* [Documentazione di Vuforia: rilevamento esteso in Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

@@ -2,44 +2,44 @@
 title: Panoramica sullo sviluppo Unity
 description: Guida introduttiva alla creazione di app per realtà mista in Unity.
 author: thetuvix
-ms.author: Yoyoz
-ms.date: 04/15/2018
+ms.author: kurtie
+ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, realtà mista, sviluppo, Guida introduttiva, nuovo progetto, porting, funzionalità, fotocamera, simulazione, emulazione, documentazione
-ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701787"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437381"
 ---
 # <a name="unity-development-overview"></a>Panoramica sullo sviluppo Unity
 
-Il percorso più veloce per la creazione di un' [app per realtà mista](app-views.md) è con [Unity](http://aka.ms/HoloLensUnity). Si consiglia di prendere tempo per esplorare le esercitazioni su [Unity](https://unity3d.com/learn/tutorials). Se sono necessarie risorse, Unity dispone di un [Archivio asset](https://www.assetstore.unity3d.com/)completo. Una volta creata una conoscenza di base di Unity, è possibile visitare le [esercitazioni](tutorials.md) per apprendere le specifiche dello sviluppo di realtà miste con Unity. Visitare i [forum in realtà mista](http://forum.unity3d.com/forums/hololens.102/) di Unity per coinvolgere il resto della community sulla creazione di app per realtà mista in Unity e trovare soluzioni ai problemi che potrebbero verificarsi.
+Il percorso più veloce per la creazione di un' [app per realtà mista](app-views.md) è con [Unity](https://unity.com). Si consiglia di prendere tempo per esplorare le [esercitazioni su Unity](https://unity3d.com/learn/tutorials). Se sono necessarie risorse, Unity dispone di un [Archivio asset](https://www.assetstore.unity3d.com/)completo. Una volta creata una conoscenza di base di Unity, è possibile visitare le [esercitazioni](tutorials.md) per apprendere le specifiche dello sviluppo di realtà miste con Unity. Visitare i [forum in realtà mista di Unity](https://forum.unity3d.com/forums/hololens.102/) per coinvolgere il resto della community sulla creazione di app per realtà mista in Unity e trovare soluzioni ai problemi che potrebbero verificarsi.
 
 Per iniziare a creare app per realtà miste con Unity, [installare prima gli strumenti](install-the-tools.md). 
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Nuovo progetto Unity con il Toolkit di realtà misto 
 
-Il modo più semplice per sviluppare in Unity è costituito dal supporto di Mixed Reality Toolkit. Consente di configurare automaticamente con Project e di fornire un set di funzionalità di realtà mista per accelerare lo sviluppo. Per altre informazioni e per iniziare, vedere il [Toolkit di realtà misto V2](mrtk-getting-started.md) . 
+Il modo più semplice per sviluppare in Unity è il Toolkit di realtà mista. In questo modo sarà possibile configurare automaticamente il progetto e fornire un set di funzionalità di realtà mista per accelerare lo sviluppo. Per altre informazioni e per iniziare, vedere il [Toolkit di realtà misto V2](mrtk-getting-started.md) . 
 
 ## <a name="porting-an-existing-unity-app-to-windows-mixed-reality"></a>Porting di un'app Unity esistente a realtà mista di Windows
 
-Se si dispone di un progetto Unity esistente che si sta trasportando a realtà mista di Windows, seguire la [Guida](porting-guides.md) per il porting di Unity per iniziare.
+Se si dispone di un progetto Unity esistente che si sta trasportando a realtà mista di Windows, seguire la guida per il [porting di Unity](porting-guides.md) per iniziare.
 
 ## <a name="configuring-new-unity-project-for-windows-mixed-reality"></a>Configurazione del nuovo progetto Unity per la realtà mista di Windows
 
-Se si vuole creare un nuovo progetto Unity senza importare il Toolkit di realtà mista, è necessario modificare manualmente le impostazioni di Unity per la realtà mista di Windows. Questi sono suddivisi in due categorie: per progetto e per scena. Vedere qui per la guida dettagliata alla [configurazione del nuovo progetto Unity per la realtà mista di Windows](Configure-Unity-Project.md)
+Se si vuole creare un nuovo progetto Unity senza importare il Toolkit di realtà mista, è necessario modificare manualmente le impostazioni di Unity per la realtà mista di Windows. Questi sono suddivisi in due categorie: per progetto e per scena. Per una guida dettagliata alla [configurazione del nuovo progetto Unity per la realtà mista di Windows](Configure-Unity-Project.md) , vedere qui.
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Aggiunta di input e funzionalità di realtà mista
 
-Dopo aver configurato MRTK V2 con il progetto o aver configurato il progetto come descritto in precedenza, gli oggetti di gioco Unity standard (ad esempio la fotocamera) si illumineranno immediatamente per un' **esperienza**a scalabilità, con la posizione della fotocamera aggiornata automaticamente come l'utente sposta l'intestazione nel mondo.
+Dopo aver configurato MRTK V2 con il progetto o aver configurato il progetto come descritto in precedenza, gli oggetti di gioco Unity standard (ad esempio la fotocamera) si illumineranno immediatamente per un' **esperienza su scala**, con la posizione della fotocamera aggiornata automaticamente come l'utente sposta l'intestazione nel mondo.
 
 L'aggiunta del supporto per le funzionalità di realtà mista di Windows, ad esempio [fasi spaziali](coordinate-systems.md#spatial-coordinate-systems), [movimenti, controller di movimento](gestures-and-motion-controllers-in-unity.md) o [input vocale](voice-input-in-unity.md) , viene ottenuta usando le API compilate direttamente in Unity. 
 
 Esaminare prima di tutto le [scale di esperienza](coordinate-systems.md) che possono essere destinate alla Applicatioin:
-* Se si sta cercando di creare un' **esperienza**di **solo orientamento** o di scalabilità verticale, è necessario impostare il tipo di spazio di rilevamento di Unity su [stazionari](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
-* Se si sta cercando di creare un' esperienza di scalabilitào scalabilità, è necessario assicurarsi che il tipo di spazio di rilevamento di Unity sia impostato correttamente su [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
+* Se si sta cercando di creare un'esperienza di **solo orientamento** o di **scalabilità**verticale, è necessario impostare il tipo di spazio di rilevamento di Unity su [stazionari](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
+* Se si sta cercando di creare un'esperienza **di scalabilità o** **scalabilità**, è necessario assicurarsi che il tipo di spazio di rilevamento di Unity sia impostato correttamente su [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se si vuole creare un'esperienza **globale** su HoloLens che consente agli utenti di spostarsi oltre 5 metri, è necessario usare il componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .
 
 Tutti i componenti di base per le applicazioni di realtà miste sono esposti in modo coerente con altre API Unity. Sono disponibili anche tramite il Toolkit di realtà mista.
@@ -78,9 +78,9 @@ Oltre a questa documentazione disponibile in docs.microsoft.com, Unity installa 
     * Questo manuale è stato progettato per aiutare l'utente a imparare a usare Unity, dalle tecniche di base a quelle avanzate.
     * Accessibile dall'editor di Unity tramite **guida > manuale**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Toolkit di realtà mista V2](mrtk-getting-started.md)
-* [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
+* [Nozioni fondamentali 100: Introduzione a Unity](holograms-100.md)
 * [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
 * [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 * [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)

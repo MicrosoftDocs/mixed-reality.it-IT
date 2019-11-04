@@ -1,19 +1,19 @@
 ---
-title: Case Study-provisioning, creazione di prototipi, creazione di un processo di AfterNow
+title: Case Study-processo di AfterNow
 description: AfterNow, creazione di prototipi, creazione
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, AfterNow, provisioning, creazione di prototipi, compilazione
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523473"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436939"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Case Study-provisioning, creazione di prototipi, creazione di un processo di AfterNow
+# <a name="case-study---afternows-process"></a>Case Study-processo di AfterNow
 
 In [AfterNow](https://www.afternow.io/)si collaborerà con l'utente per trasformare idee e aspirazioni in prodotti concreti e completamente operativi ed esperienze pronte per il mercato. Prima di scrivere una singola riga di codice, però, creiamo un progetto tramite un processo denominato provisioning.
 
@@ -67,7 +67,7 @@ L'obiettivo di questo esercizio è quello di migliorare la comprensione colletti
 
 La procedura consigliata per questo processo si verifica quando si accettano singole note in come è possibile (HMW) il formato. HMW è una tecnica sviluppata da P & G negli anni '70. Si tratta di un metodo di nota che assume la forma di una domanda che in definitiva genera note organizzate e classificate in ordine di priorità. Viene annotata un'idea per ogni nota appiccicosa che inizia con la frase "come possiamo". Ad esempio, in che modo è possibile comunicare i valori di [azienda] in realtà mista?
 
-![Organizzare e decidere](images/organize-and-decide-640px.png)<br>
+![organizzare e decidere](images/organize-and-decide-640px.png)<br>
 *Organizzare e decidere*
 
 **Organizza note HMW**
@@ -104,7 +104,7 @@ Ci stiamo impiegando otto minuti per creare otto frame. Qui viene disegnata rapi
 
 Si spendono 30 minuti per disegnare gli storyboard. Sono state apportate le varianti migliori delle idee da folli 8S e viene creato uno storyboard a tre pannelli dell'idea.
 
-![Sketch degli storyboard](images/sketching-storyboards-640px.png)<br>
+![lo sketch degli storyboard](images/sketching-storyboards-640px.png)<br>
 *Sketch degli storyboard*
 
 ## <a name="day-3---decide"></a>GIORNO 3-decisione

@@ -3,28 +3,28 @@ title: Nozioni di base 101-completare il progetto con il dispositivo
 description: Segui questa procedura dettagliata di codifica usando Unity, Visual Studio e HoloLens per apprendere le nozioni di base della realtà mista di Windows.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: realtà mista, realtà mista di Windows, HoloLens, ologramma, Accademia, esercitazione
-ms.openlocfilehash: 043ffac8f30a4e29586478b5dca6ecccc2b5afd3
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 456aeea88b0d7f51acb52156d8139ec2df06883a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524022"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434714"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
 
 <br>
 
-# <a name="mr-basics-101-complete-project-with-device"></a>Nozioni fondamentali 101: Completa progetto con dispositivo
+# <a name="mr-basics-101-complete-project-with-device"></a>Nozioni fondamentali 101: completare il progetto con il dispositivo
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
 
-Questa esercitazione illustra in dettaglio un progetto completo, integrato in Unity, che illustra le funzionalità di base della realtà mista di Windows su HoloLens, tra cui lo [sguardo](gaze.md), i [movimenti](gestures.md), l' [input vocale](voice-input.md), il mapping di [suoni spaziali](spatial-sound.md) e [spaziali](spatial-mapping.md) .
+Questa esercitazione illustra in dettaglio un progetto completo, integrato in Unity, che illustra le funzionalità di base della realtà mista di Windows su HoloLens, tra cui lo [sguardo](gaze-and-commit.md), i [movimenti](gaze-and-commit.md#composite-gestures), l' [input vocale](voice-input.md), il mapping di [suoni spaziali](spatial-sound.md) e [spaziali](spatial-mapping.md) .
 
 Il completamento dell'esercitazione richiede circa 1 ora.
 
@@ -34,7 +34,7 @@ Il completamento dell'esercitazione richiede circa 1 ora.
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>Nozioni fondamentali 101: Completa progetto con dispositivo</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>Nozioni fondamentali 101: completare il progetto con il dispositivo</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
@@ -74,7 +74,7 @@ In questo capitolo verrà configurato il primo progetto Unity ed eseguiamo il pr
 * Selezionare **Apri**.
 * Immettere il percorso come cartella **origami** precedentemente non archiviata.
 * Selezionare **origami** e fare clic su **Seleziona cartella**.
-* Poiché il progetto **origami** non contiene una scena, salvare la scena predefinita vuota in un nuovo file usando: File / **Salva scena come**.
+* Poiché il progetto **origami** non contiene una scena, salvare la scena predefinita vuota in un nuovo file usando: **file** / **Salva scena con nome**.
 * Assegnare alla nuova scena il nome **origami** e premere il pulsante **Salva** .
 
 #### <a name="setup-the-main-virtual-camera"></a>Configurare la fotocamera virtuale principale
@@ -91,15 +91,15 @@ In questo capitolo verrà configurato il primo progetto Unity ed eseguiamo il pr
 * Fare clic con il pulsante destro del mouse sul nuovo **GameObject** e scegliere Rinomina. Rinominare GameObject in **origamicollection**.
 * Dalla cartella **olografici** nel pannello del progetto (espandere asset e selezionare ologrammi oppure fare doppio clic sulla cartella ologrammi nel pannello del progetto):
   * Trascinare la **fase** nella gerarchia in modo che sia un elemento figlio di **origamicollection**.
-  * Trascinare **Sphere1** nella gerarchia in modo che sia un elemento figlio di origamicollection.
-  * Trascinare **Sphere2** nella gerarchia in modo che sia un elemento figlio di origamicollection.
+  * Trascinare **Sphere1** nella gerarchia in modo che sia un elemento figlio di **origamicollection**.
+  * Trascinare **Sphere2** nella gerarchia in modo che sia un elemento figlio di **origamicollection**.
 * Fare clic con il pulsante destro del mouse sull'oggetto **direzionale chiaro** nel **Pannello gerarchia** e scegliere **Elimina**.
 * Dalla cartella **ologrammi** trascinare le **spie** nella radice del **Pannello gerarchia**.
-* Nella **gerarchia**selezionare origamicollection.
+* Nella **gerarchia**selezionare **origamicollection**.
 * Nel **controllo**impostare la posizione di trasformazione su **0,-0,5, 2,0**.
 * Premere il pulsante **Play** in Unity per visualizzare l'anteprima degli ologrammi.
 * Nella finestra di anteprima verranno visualizzati gli oggetti origami.
-* Premere  Riproduci una seconda volta per arrestare la modalità di anteprima.
+* Premere **Riproduci** una seconda volta per arrestare la modalità di anteprima.
 
 #### <a name="export-the-project-from-unity-to-visual-studio"></a>Esportare il progetto da Unity a Visual Studio
 
@@ -122,7 +122,7 @@ In questo capitolo verrà configurato il primo progetto Unity ed eseguiamo il pr
   * Lasciare la **modalità di autenticazione** impostata su **universale**.
   * Fare clic su **Seleziona**
 
-* Fare clic su **debug > avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario associarla a [Visual Studio](using-visual-studio.md#pairing-your-device-hololens-(1st-gen)).
+* Fare clic su **debug > avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario [associarla a Visual Studio](using-visual-studio.md#pairing-your-device).
 
 * Il progetto Origami verrà ora compilato, distribuito nella HoloLens e quindi eseguito.
 * Inserire il HoloLens e cercare i nuovi ologrammi.
@@ -131,7 +131,7 @@ In questo capitolo verrà configurato il primo progetto Unity ed eseguiamo il pr
 
 >[!VIDEO https://www.youtube.com/embed/MSO2BoFSQbM]
 
-In questo capitolo, verranno introdotti i primi tre modi per interagire con gli ologrammi [.](gaze.md)
+In questo capitolo, verranno introdotti i primi tre modi per interagire con gli ologrammi [.](gaze-and-commit.md)
 
 ### <a name="objectives"></a>Obiettivi
 
@@ -140,13 +140,13 @@ In questo capitolo, verranno introdotti i primi tre modi per interagire con gli 
 ### <a name="instructions"></a>Istruzioni
 
 * Tornare al progetto Unity e chiudere la finestra impostazioni di compilazione se è ancora aperta.
-* Selezionare la  cartella ologrammi nel **Pannello del progetto**.
+* Selezionare la cartella **ologrammi** nel **Pannello del progetto**.
 * Trascinare l'oggetto **cursore** nel **Pannello gerarchia** a livello di radice.
 * Fare doppio clic sull'oggetto **cursore** per esaminarlo più da vicino.
-* Fare clic con il pulsante  destro del mouse sulla cartella Scripts nel pannello Project.
+* Fare clic con il pulsante destro del mouse sulla cartella **Scripts** nel pannello Project.
 * Fare clic sul sottomenu **Crea** .
 * Selezionare  **C# script**.
-* Denominare lo script **WorldCursor**. Nota: Per il nome viene fatta distinzione tra maiuscole e minuscole. Non è necessario aggiungere l'estensione. cs.
+* Denominare lo script **WorldCursor**. Nota: il nome fa distinzione tra maiuscole e minuscole. Non è necessario aggiungere l'estensione. cs.
 * Selezionare l'oggetto **cursore** nel **Pannello gerarchia**.
 * Trascinare e rilasciare lo script **WorldCursor** nel **pannello Inspector**.
 * Fare doppio clic sullo script **WorldCursor** per aprirlo in Visual Studio.
@@ -207,7 +207,7 @@ public class WorldCursor : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/kW3ThJ2MbvQ]
 
-In questo capitolo verrà aggiunto il supporto per i [movimenti](gestures.md). Quando l'utente seleziona una sfera della carta, la sfera viene ricadeta attivando la gravità usando il motore di fisica di Unity.
+In questo capitolo verrà aggiunto il supporto per i [movimenti](gaze-and-commit.md#composite-gestures). Quando l'utente seleziona una sfera della carta, la sfera viene ricadeta attivando la gravità usando il motore di fisica di Unity.
 
 ### <a name="objectives"></a>Obiettivi
 
@@ -287,7 +287,7 @@ public class GazeGestureManager : MonoBehaviour
 ```
 
 * Creare un altro script nella cartella Scripts, questa volta denominata **SphereCommands**.
-* Espandere l'  oggetto origamicollection nella visualizzazione gerarchia.
+* Espandere l'oggetto **origamicollection** nella visualizzazione gerarchia.
 * Trascinare lo script **SphereCommands** sull'oggetto **Sphere1** nel pannello gerarchia.
 * Trascinare lo script **SphereCommands** sull'oggetto **Sphere2** nel pannello gerarchia.
 * Aprire lo script in Visual Studio per la modifica e sostituire il codice predefinito con il codice seguente:
@@ -318,7 +318,7 @@ public class SphereCommands : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/1-Aq0VVtHM8]
 
-In questo capitolo verrà aggiunto il supporto per due [comandi vocali](voice-input.md): "Reimposta il mondo" per restituire le sfere eliminate alla posizione originale e "drop Sphere" per far precipitare la sfera.
+In questo capitolo verrà aggiunto il supporto per due [comandi vocali](voice-input.md): "Reimposta tutto il mondo" per restituire le sfere eliminate alla posizione originale e "drop Sphere" per far precipitare la sfera.
 
 ### <a name="objectives"></a>Obiettivi
 
@@ -451,7 +451,7 @@ In questo capitolo verrà aggiunta la musica all'app e quindi verranno generati 
 
 * In Unity selezionare dal menu in alto **modificare > impostazioni progetto > audio**
 * Nel pannello Inspector sul lato destro trovare l'impostazione del plug-in **Spatializer** e selezionare **MS HRTF Spatializer**.
-* Dalla cartella **olografici** nel pannello del progetto trascinare l'oggetto **ambiente** nell'oggetto origamicollection  nel pannello gerarchia.
+* Dalla cartella **olografici** nel pannello del progetto trascinare l'oggetto **ambiente** nell'oggetto **origamicollection** nel pannello gerarchia.
 * Selezionare **origamicollection** e trovare il componente **origine audio** nel pannello di controllo. Modificare le proprietà seguenti:
   * Controllare la proprietà **Spatialize** .
   * Verificare la **riproduzione**.
@@ -559,7 +559,7 @@ Ora verrà usato il [mapping spaziale](spatial-mapping.md) per collocare la lava
 
 ### <a name="instructions"></a>Istruzioni
 
-* In Unity fare clic sulla  cartella ologrammi nel pannello del progetto.
+* In Unity fare clic sulla cartella **ologrammi** nel pannello del progetto.
 * Trascinare l'asset di **mapping spaziale** nella radice della **gerarchia**.
 * Fare clic sull'oggetto **mapping spaziale** nella gerarchia.
 * Nel **pannello Inspector**modificare le proprietà seguenti:
@@ -572,7 +572,7 @@ Ora verrà usato il [mapping spaziale](spatial-mapping.md) per collocare la lava
 Ora verrà illustrato come spostare l'oggetto Origamicollection in una nuova posizione:
 
 * Nella cartella **Scripts** creare uno script denominato **TapToPlaceParent**.
-* Nella **gerarchia**espandere origamicollection e  selezionare l'oggetto **stage** .
+* Nella **gerarchia**espandere **origamicollection** e selezionare l'oggetto **stage** .
 * Trascinare lo script **TapToPlaceParent** nell'oggetto Stage.
 * Aprire lo script **TapToPlaceParent** in Visual Studio e aggiornarlo come segue:
 
@@ -646,9 +646,9 @@ public class TapToPlaceParent : MonoBehaviour
 Ora verrà illustrato come scoprire il Sottomondo olografico:
 
 * Dalla cartella **ologrammi** nel pannello del progetto:
-  * Trascinare **Underworld** nella gerarchia in modo che sia un elemento figlio di origamicollection.
+  * Trascinare **Underworld** nella gerarchia in modo che sia un elemento figlio di **origamicollection**.
 * Nella cartella **Scripts** creare uno script denominato **HitTarget**.
-* Nella **gerarchia**espandere origamicollection.
+* Nella **gerarchia**espandere **origamicollection**.
 * Espandere l'oggetto **fase** e selezionare l'oggetto di **destinazione** (ventola blu).
 * Trascinare lo script **HitTarget** nell'oggetto di **destinazione** .
 * Aprire lo script **HitTarget** in Visual Studio e aggiornarlo come segue:
@@ -695,11 +695,11 @@ Si è appreso quanto segue:
 
 A questo punto è possibile iniziare a creare una propria esperienza olografica.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-* [Nozioni di base MR 101E: Progetto completo con emulatore](holograms-101e.md)
-* [Sguardo fisso](gaze.md)
-* [Movimenti](gestures.md)
+* [Nozioni di base su 101E: completare il progetto con l'emulatore](holograms-101e.md)
+* [Sguardo fisso](gaze-and-commit.md)
+* [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Input vocale](voice-input.md)
 * [Audio spaziale](spatial-sound.md)
 * [Mapping spaziale](spatial-mapping.md)

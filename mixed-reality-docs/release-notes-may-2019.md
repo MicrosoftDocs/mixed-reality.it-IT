@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Note sulla versione, versione, Windows 10, Build, 19h1, sistema operativo, 2019 maggio
-ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843310"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438314"
 ---
 # <a name="release-notes---may-2019"></a>Note sulla versione-2019 maggio
 
@@ -38,7 +38,7 @@ Per avviare un'applicazione Win32 in realtà mista di Windows, aprire il pannell
 ![Pin_Panel Win32](images/mr-win32-slates-pinspanel.png)
 
 #### <a name="please-help-us-improve"></a>Aiutaci a migliorare!
-Si cerca continuamente di migliorare la compatibilità.  Se le applicazioni Win32 classiche preferite non si comportano correttamente durante la realtà mista di Windows, inviare commenti e suggerimenti tramite l'hub per i [Commenti](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
+Si cerca continuamente di migliorare la compatibilità.  Se le applicazioni Win32 classiche preferite non si comportano correttamente durante la realtà mista di Windows, inviare commenti e suggerimenti tramite l'hub per i [Commenti](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
 ## <a name="hololens-1st-gen-long-term-servicing"></a>HoloLens (1a generazione) manutenzione a lungo termine
 
@@ -61,7 +61,7 @@ Usare l' [App Hub di feedback nel PC Windows 10](give-us-feedback.md) o il dispo
 * [Note sulla versione - maggio 2016](release-notes-may-2016.md)
 * [Note sulla versione - marzo 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Supporto per cuffie immersive (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Supporto di HoloLens (collegamento esterno)](https://support.microsoft.com/products/hololens)
 * [Installare gli strumenti](install-the-tools.md)

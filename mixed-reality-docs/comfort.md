@@ -6,37 +6,38 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Realtà mista, progettazione, comodità, HoloLens 2, HoloLens (1a generazione)
-ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e71b8d73a37a5d10a07d37d91cf14c88b7a85687
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024439"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436390"
 ---
 # <a name="comfort"></a>Comfort
 
-Durante la visualizzazione naturale, il sistema visuale umano si basa su più origini di informazioni o "suggerimenti" per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni suggerimenti si basano solo su un singolo occhio (indicatori monoculare), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità del campo](https://en.wikipedia.org/wiki/Depth_of_field)e [alloggio](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altre indicazioni si basano su entrambi gli occhi (suggerimenti binocoli) e includono [vergence](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi richiesti per esaminare un oggetto) e la disparità [binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello di differenze tra le proiezioni della scena nel indietro dei due occhi). Per garantire la massima comodità negli schermi montati, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi suggerimenti nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richiede movimenti faticosi del collo o delle braccia. In questo articolo verranno esaminate le considerazioni principali da tenere in considerazione per raggiungere questi obiettivi.
+Durante la visualizzazione naturale, il sistema visuale umano si basa su più origini di informazioni o "suggerimenti" per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni suggerimenti si basano solo su un singolo occhio (indicatori monoculare), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità del campo](https://en.wikipedia.org/wiki/Depth_of_field)e [alloggio](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altre indicazioni si basano su entrambi gli occhi (suggerimenti binocoli) e includono [vergence](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi richiesti per esaminare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello di differenze tra le proiezioni della scena nel indietro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richiede movimenti faticosi del collo o delle braccia. In questo articolo verranno esaminate le considerazioni principali da tenere in considerazione per raggiungere questi obiettivi.
 
 ## <a name="vergence-accommodation-conflict"></a>Vergence-conflitto di alloggi
 
-Per visualizzare gli oggetti in modo chiaro, [è necessario che](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)gli utenti soddisfino o modifichino lo stato attivo degli occhi alla distanza dell'oggetto. Allo stesso tempo, la rotazione di entrambi gli occhi deve [convergere](https://en.wikipedia.org/wiki/Convergence_(eye)) alla distanza dell'oggetto per evitare di visualizzare immagini doppie. Nella visualizzazione naturale, vergence e accommodation sono collegati. Quando si visualizza un elemento vicino, ad esempio un Mosca vicino al naso, gli occhi si incrociano e si adattano a un punto vicino. Viceversa, se si visualizza un elemento a infinito ottico (approssimativamente da 6 a 6 o più per la visione normale), le linee visive degli occhi diventano parallele e le lenti degli occhi sono adatte all'infinito. 
+Per visualizzare gli oggetti in modo chiaro [, è necessario che](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)gli utenti soddisfino o modifichino lo stato attivo degli occhi alla distanza dell'oggetto. Allo stesso tempo, la rotazione di entrambi gli occhi deve [convergere](https://en.wikipedia.org/wiki/Convergence_(eye)) alla distanza dell'oggetto per evitare di visualizzare immagini doppie. Nella visualizzazione naturale, vergence e accommodation sono collegati. Quando si visualizza un elemento vicino, ad esempio un Mosca vicino al naso, gli occhi si incrociano e si adattano a un punto vicino. Viceversa, se si visualizza un elemento a infinito ottico (approssimativamente da 6 a 6 o più per la visione normale), le linee visive degli occhi diventano parallele e le lenti degli occhi sono adatte all'infinito. 
 
 Nella maggior parte dei casi, gli utenti vengono sempre posizionati sulla distanza focale dello schermo (per ottenere un'immagine nitida), ma convergeranno sulla distanza dell'oggetto di interesse (per ottenere una singola immagine). Quando gli utenti sono in grado di adattarsi a diverse distanze, il collegamento naturale tra i due segnali deve essere danneggiato e questo può causare fastidio visivi o affaticarsi.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/-606oZKLa_s]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/-606oZKLa_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
 
 Le visualizzazioni di HoloLens sono fisse a distanza ottica circa 2,0 m dall'utente. Pertanto, gli utenti devono sempre adattarsi a circa 2,0 m per mantenere un'immagine chiara nel dispositivo. Gli sviluppatori di app possono guidare la convergenza degli occhi degli utenti inserendo contenuto e ologrammi a diverse profondità. Il disagio del conflitto vergence-accommodation può essere evitato o ridotto a icona mantenendo il contenuto a cui gli utenti si confluiscono più vicino a 2,0 m come possibile (ad esempio, in una scena con molta profondità, inserire le aree di interesse vicino a 2,0 m dall'utente quando possibile). Quando non è possibile posizionare il contenuto vicino a 2,0 m, il disagio del conflitto vergence-Accommodation è maggiore quando lo sguardo dell'utente passa da una distanza all'altra. In altre parole, è molto più semplice esaminare un ologramma stazionario che rimanga a 50 centimetri rispetto a un ologramma che si sposta verso e fuori dal tempo.
 
-![Distanza ottimale per inserire gli ologrammi dall'utente.](images/distanceguiderendering-950px.png)<br>
+![distanza ottimale per inserire gli ologrammi dall'utente.](images/distanceguiderendering-950px.png)<br>
 *Distanza ottimale per inserire gli ologrammi dall'utente*
 
 ### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedure consigliate per HoloLens (1a generazione) e HoloLens 2
 
-Per la massima comodità, **la zona ottimale per la posizione degli ologrammi è compresa tra 1.25 m e 5m**. In ogni caso, le finestre di progettazione devono tentare di strutturare gli scenari di contenuto per incoraggiare gli utenti a interagire tra 1 milione o più lontano dal contenuto (ad esempio, modificare le [dimensioni del contenuto e i parametri di posizionamento predefiniti](gaze-targeting.md)). 
+Per la massima comodità, **la zona ottimale per la posizione degli ologrammi è compresa tra 1.25 m e 5m**. In ogni caso, le finestre di progettazione devono tentare di strutturare gli scenari di contenuto per incoraggiare gli utenti a interagire tra 1 milione o più lontano dal contenuto (ad esempio, modificare le [dimensioni del contenuto e i parametri di posizionamento predefiniti](gaze-and-commit.md)). 
 
 Sebbene sia talvolta necessario che il contenuto venga visualizzato più vicino a 1 milione, è consigliabile evitare di presentare ologrammi più vicini a 40cm. È quindi consigliabile iniziare a **dissolvere il contenuto in 40cm e posizionare un piano di ritaglio di rendering a 30cm** per evitare gli oggetti più vicini.
 
@@ -44,7 +45,7 @@ Gli oggetti che si spostano in profondità sono più probabili degli oggetti sta
 
 ### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Considerazioni aggiuntive per le distanze HoloLens 2 e near Interaction
 
-Quando si progettano contenuti per l'interazione diretta (near) in HoloLens 2 o **in tutte le applicazioni in cui il contenuto deve essere più vicino a 1 milione, è necessario prestare particolare attenzione per garantire la comodità degli utenti**. La probabilità di disagio a causa del conflitto di vergence-accommodation aumenta in modo esponenziale con una riduzione della distanza di visualizzazione. Inoltre, gli utenti possono riscontrare un aumento della bluriness quando visualizzano il contenuto in prossimità di interazioni, quindi è consigliabile testare il contenuto sottoposto a rendering sia all'interno della zona della posizione ottimale dell'ologramma, sia più vicino (inferiore a 1,0 m al piano di ritaglio) a Assicurarsi che rimanga chiaro e comodo da visualizzare. 
+Quando si progettano contenuti per l'interazione diretta (near) in HoloLens 2 o **in tutte le applicazioni in cui il contenuto deve essere più vicino a 1 milione, è necessario prestare particolare attenzione per garantire la comodità degli utenti**. La probabilità di disagio a causa del conflitto di vergence-accommodation aumenta in modo esponenziale con una riduzione della distanza di visualizzazione. Inoltre, gli utenti possono riscontrare un aumento della sfocatura quando visualizzano il contenuto in prossimità di interazioni, quindi è consigliabile testare il contenuto sottoposto a rendering sia all'interno della zona della posizione ottimale dell'ologramma, sia più vicino (inferiore a 1,0 m al piano di ritaglio) a Assicurarsi che rimanga chiaro e comodo da visualizzare. 
 
 **Si consiglia di creare un "budget di profondità" per le app in base al periodo di tempo in cui un utente deve visualizzare il contenuto vicino (meno di 1,0 m) e avanzare in profondità**. Un esempio è evitare di inserire l'utente in tali situazioni più del 25% del tempo. Se viene superato il budget di profondità, si consiglia un attento test utente per assicurarsi che rimanga un'esperienza confortevole. 
 
@@ -127,7 +128,7 @@ La leggibilità ottimale del testo può aiutare a ridurre gli occhi e a mantener
 
 In generale, si consiglia di testare le applicazioni specifiche per la leggibilità e le dimensioni dei tipi di carattere per un'esperienza ottimale. Di seguito vengono fornite indicazioni generali come punto di partenza per lo sviluppo. Si noti che tutte le dimensioni dei tipi di carattere vengono segnalate in gradi di [angolo visivo](https://en.wikipedia.org/wiki/Visual_angle) invece che in dimensioni fisiche specifiche, che forniscono indicazioni per qualsiasi distanza all'interno della zona del posizionamento ottimale degli ologrammi, in quanto consente di tenere conto sia della dimensione del testo sia della distanza viene visualizzato nel visualizzatore. 
 
-Per indicazioni più dettagliate, vedere le pagine [tipografia](typography.md) e [testo in Unity](text-in-unity.md).
+Per indicazioni più dettagliate, vedere [tipografia](typography.md) e [testo in pagine Unity](text-in-unity.md) .
 
 ### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
 
@@ -164,15 +165,15 @@ Per evitare che il contenuto di un ceppo di occhio e collo debba essere progetta
 
 L'angolo di sguardo ottimale (in appoggio) viene considerato compreso tra 10-20 gradi al di sotto dell'orizzontale, in quanto la testa tende a inclinarsi leggermente verso il basso, soprattutto durante le attività.
 
-![Campo di visualizzazione consentito (FOV) determinato dall'intervallo di movimento del collo](images/optimal-field-of-view-2-750px.png)<br>
+![campo di visualizzazione consentito (FOV) come determinato dall'intervallo del collo di movimento](images/optimal-field-of-view-2.png)<br>
 *Campo di visualizzazione consentito (FOV) determinato dall'intervallo di movimento del collo*
 
 ## <a name="arm-positions"></a>Posizioni ARM
 
 La fatica muscolare può accumularsi quando si prevede che gli utenti mantengano una mano nel corso della durata dell'esperienza. Può anche essere faticoso richiedere all'utente di effettuare ripetutamente movimenti di tocco aereo nelle durate lunghe. È pertanto consigliabile evitare di richiedere input di movimenti ripetuti e costanti. Questo obiettivo può essere eseguito incorporando brevi interruzioni o offrendo una combinazione di movimento e input vocale per interagire con l'app.
 
-## <a name="see-also"></a>Vedere anche
-* [Sguardo fisso](gaze.md)
+## <a name="see-also"></a>Vedi anche
+* [Sguardo fisso](gaze-and-commit.md)
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Frame olografico](holographic-frame.md)

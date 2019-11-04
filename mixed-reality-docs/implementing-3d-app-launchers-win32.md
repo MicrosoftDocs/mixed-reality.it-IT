@@ -6,17 +6,17 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icona, modellazione, avvio, avvio 3D, riquadro, cubo attivo, Win32
-ms.openlocfilehash: ac3d5e17614bcd1072f6843a46bf0525f441f130
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 87eadfb5184f9fb5f8d513ab00a2a954e71df376
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515608"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438581"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementare i lanci di app 3D (app Win32)
 
 > [!NOTE]
-> Questa funzionalità è disponibile solo per i PC che eseguono i più recenti voli di [Windows](https://insider.windows.com) Insider (RS5), Build 17704 e versioni successive.
+> Questa funzionalità è disponibile solo per i PC che eseguono i più recenti voli di [Windows Insider](https://insider.windows.com) (RS5), Build 17704 e versioni successive.
 
 La [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) è il punto di partenza in cui gli utenti atterrano prima di avviare le applicazioni. Per impostazione predefinita, i giochi e le app VR Win32 immersive devono essere avviati dall'esterno dell'auricolare e non vengono visualizzati nell'elenco "tutte le app" nel menu Start della realtà mista di Windows. Tuttavia, seguendo le istruzioni riportate in questo articolo per implementare un'utilità di avvio delle app 3D, è possibile avviare l'esperienza immersiva Win32 VR dal menu Start della realtà mista di Windows e dall'ambiente domestico.
 
@@ -29,7 +29,7 @@ Per la creazione di un avvio di app 3D sono necessari tre passaggi:
 2. [Modellazione ed esportazione](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 3. Integrazione nell'applicazione (questo articolo)
 
-gli asset 3D da usare come avvii per l'applicazione devono essere creati usando le [linee guida](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per la creazione di realtà miste di Windows per garantire la compatibilità. Gli asset che non soddisfano questa specifica di authoring non verranno sottoposti a rendering nella Home della realtà mista di Windows.
+gli asset 3D da usare come avvii per l'applicazione devono essere creati usando le [linee guida per la creazione di realtà miste di Windows](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) per garantire la compatibilità. Gli asset che non soddisfano questa specifica di authoring non verranno sottoposti a rendering nella Home della realtà mista di Windows.
 
 ## <a name="configuring-the-3d-launcher"></a>Configurazione dell'utilità di avvio 3D
 
@@ -53,7 +53,7 @@ Le applicazioni Win32 verranno visualizzate nell'elenco "tutte le app" nel menu 
 ### <a name="sample-visual-elements-manifest"></a>Manifesto degli elementi visivi di esempio
 
 ```xml
-<Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   <VisualElements
     ShowNameOnSquare150x150Logo="on"
     Square150x150Logo="YOUR_APP_LOGO_150X150.png"
@@ -165,7 +165,7 @@ IconFile=C:\Program Files (x86)\MyLauncher\apps\app-identifier\game.exe
 IconIndex=0
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Esempio di modello di realtà mista](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenente un utilità di avvio delle app 3D.
 * [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)

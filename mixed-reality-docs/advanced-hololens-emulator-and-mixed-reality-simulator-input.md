@@ -6,16 +6,16 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, emulatore, simulazione, realtà mista di Windows
-ms.openlocfilehash: 6ea493d8c1269ff0bea1d4102b9e224e30d06aef
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580587"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437068"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Advanced HoloLens Emulator and Mixed Reality Simulator input
 
-La maggior parte degli utenti dell'emulatore dovrà usare solo i controlli di input di base per l' [emulatore HoloLens](using-the-hololens-emulator.md#basic-emulator-input) o il simulatore di [realtà mista di Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). I dettagli seguenti sono destinati agli utenti avanzati che hanno dovuto simulare tipi di input più complessi.
+La maggior parte degli utenti dell'emulatore dovrà usare solo i controlli di input di base per l' [emulatore HoloLens](using-the-hololens-emulator.md#basic-emulator-input) o il [simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). I dettagli seguenti sono destinati agli utenti avanzati che hanno dovuto simulare tipi di input più complessi.
 
 
 ## <a name="concepts"></a>Concetti
@@ -23,29 +23,29 @@ La maggior parte degli utenti dell'emulatore dovrà usare solo i controlli di in
 Per iniziare a controllare l'input virtuale per l'emulatore di HoloLens e il simulatore di realtà mista di Windows, è prima necessario comprendere alcuni concetti.
 
 Per movimento si intende il controllo e la modifica della posizione e dell'orientamento di qualcosa nella scena. Per un oggetto controllabile di destinazione, il movimento è controllato sia dalla rotazione che dalla conversione (spostamento) lungo tre assi.
-* **Imbardata**: Girare verso sinistra o verso destra.
-* **Passo**: Attiva o disattiva.
-* Esegui **rollforward**: Eseguire il roll side-to-side.
-* **X**: Spostare verso sinistra o verso destra.
-* **S**: Spostarsi verso l'alto o verso il basso.
-* **Z**: Spostarsi avanti o indietro.
+* **Imbardata**: ruotare verso sinistra o verso destra.
+* **Pitch**: attiva o disattiva.
+* **Roll**: roll affiancato.
+* **X**: sposta a sinistra o a destra.
+* **Y**: spostarsi verso l'alto o verso il basso.
+* **Z**: spostarsi avanti o indietro.
 
-L'input del controller [movimento e movimento](gestures.md) viene mappato in modo accurato al modo in cui i dispositivi fisici:
-* **Azione**: In questo modo viene simulata l'azione di pressione dell'indice sul pollice o di pull del pulsante di azione in un controller. Ad esempio, l'input dell'azione può essere usato per simulare il gesto di tocco aereo, scorrere il contenuto e premere e tenere premuto.
-* **Movimento o Home page di [Bloom](gestures.md#bloom)/System**: Il gesto HoloLens Bloom/System o il pulsante Home del controller viene usato per tornare alla shell e per eseguire le azioni di sistema.
+L'input del controller movimento e movimento viene mappato in modo accurato al modo in cui i dispositivi fisici:
+* **Azione**: consente di simulare l'azione di premere l'indice sul pollice o di estrarre il pulsante di azione in un controller. Ad esempio, l'input dell'azione può essere usato per simulare il gesto di tocco aereo, scorrere il contenuto e premere e tenere premuto.
+* **Movimento di [Bloom](system-gesture.md#bloom)/System o Home**: il movimento HoloLens Bloom/System o il pulsante Home del controller viene usato per tornare alla shell e per eseguire le azioni di sistema.
 
 Le mani hanno una reprresentation avanzata in HoloLens 2.  Oltre a essere monitorati/non rilevati e utilizzabili per la guida dei movimenti, le mani hanno ora un modello di ossatura articolato adattabile ed esposto allo sviluppatore.  Questo introduce 26 punti di rilevamento in ogni mano.  
-* **Unione**: Una delle 20 posizioni registrate per una determinata mano rilevata. Questo sarà un punto in cui è associato lo spazio 3D.
-* Genera: Raccolta completa di tutte le giunzioni in una mano rilevata. A questo punto, si tratta di una raccolta di 26 giunzioni. 
+* **Joint**: una delle venti posizioni registrate per una determinata mano rilevata. Questo sarà un punto in cui è associato lo spazio 3D.
+* **Pose**: raccolta completa di tutte le giunzioni in una mano rilevata. A questo punto, si tratta di una raccolta di 26 giunzioni. 
 
 Attualmente, il controllo diretto di ogni posizione congiunta non viene esposto singolarmente tramite l'interfaccia utente dell'emulatore, sebbene sia possibile impostarli tramite l'API di simulazione. Piuttosto, abbiamo un set di rappresentazioni utili che l'emulatore consente di passare da una all'altra.
 
 È anche possibile controllare lo stato dell'input del sensore simulato:
-* **Reimposta**: Questa operazione restituirà tutti i sensori simulati ai valori predefiniti.  A partire dall'emulatore HoloLens 2, è possibile definire l'ambito di una reimpostazione a una o entrambe le lancette usando le lancette desiderate usando i tasti di modifica appropriati o i pulsanti (Alt a sinistra e/o a destra o il paraurti sinistro e/o destro).
-* **Rilevamento**: Scorre le modalità di rilevamento posizionale. È possibile creare, ad esempio:
-  * **Predefinito**: Il sistema operativo sceglie la modalità di rilevamento migliore in base alle richieste effettuate dal sistema.
-   * **Orientamento**: Impone il rilevamento solo dell'orientamento, indipendentemente dalle richieste effettuate dal sistema.
-   * **Posizione**: Forza il rilevamento posizionale, indipendentemente dalle richieste effettuate dal sistema.
+* **Reset**: restituirà tutti i sensori simulati ai valori predefiniti.  A partire dall'emulatore HoloLens 2, è possibile definire l'ambito di una reimpostazione a una o entrambe le lancette usando le lancette desiderate usando i tasti di modifica appropriati o i pulsanti (Alt a sinistra e/o a destra o il paraurti sinistro e/o destro).
+* **Rilevamento**: scorre le modalità di rilevamento posizionale. È possibile creare, ad esempio:
+  * **Impostazione predefinita**: il sistema operativo sceglie la modalità di rilevamento migliore in base alle richieste effettuate dal sistema.
+   * **Orientation**: impone il rilevamento solo dell'orientamento, indipendentemente dalle richieste effettuate dal sistema.
+   * **Posizionale**: forza il rilevamento posizionale, indipendentemente dalle richieste effettuate dal sistema.
 
 ## <a name="types-of-input"></a>Tipi di input
 
@@ -54,12 +54,12 @@ Nella tabella seguente viene illustrato come viene eseguito il mapping di ogni t
 |  |  Tastiera |  Mouse |  Controller Xbox | 
 |----------|----------|----------|----------|
 |  Yaw |  Frecce sinistra/destra |  Trascinare verso sinistra/destra |  Destra levetta sinistra/destra | 
-|  Angolazione |  Frecce su/giù |  Trascina su/giù |  Levetta a destra | 
+|  Pitch |  Frecce su/giù |  Trascina su/giù |  Levetta a destra | 
 |  Roll |  DOMANDE E RISPOSTE |  |  DPad a sinistra/destra | 
-|  x |  A/D |  |  Sinistra levetta sinistra/destra | 
+|  X |  A/D |  |  Sinistra levetta sinistra/destra | 
 |  Y |  PGSU/PGGIÙ |  |  DPad | 
 |  Z |  W/S |  |  Levetta verso l'alto o verso il basso | 
-|  Action |  Immettere o spazio |  Pulsante destro |  Un pulsante o uno o più trigger | 
+|  Azione |  Immettere o spazio |  Pulsante destro |  Un pulsante o uno o più trigger | 
 |  Bloom/sistema |  Tasto F2 o Windows |  |  Pulsante B | 
 |  Pulsante grip controller |  G  |  |  | 
 |  Pulsante di menu controller |  M  |  |  | 
@@ -76,7 +76,7 @@ Nella tabella seguente viene illustrato come viene eseguito il mapping di ogni t
 |  Tracking |  T o F3 |  |  Pulsante X | 
 
 
-Nota: I pulsanti del controller possono essere destinati a una mano/controller o all'altro usando i modificatori di destinazione.
+Nota: i pulsanti del controller possono essere destinati a una mano/controller o all'altro usando i modificatori di destinazione.
 
 ## <a name="targeting"></a>Selezione della destinazione 
 
@@ -84,9 +84,9 @@ Alcuni dei concetti di input precedenti si basano su se stessi.  Action, Bloom/S
 
 Nella tabella seguente vengono descritte le opzioni per la destinazione e la modalità di attivazione di ognuna di esse.
 
-| Object | Modificatore di tastiera | Modificatore controller | Modificatore dell'interfaccia utente dell'emulatore |
+| Oggetto | Modificatore di tastiera | Modificatore controller | Modificatore dell'interfaccia utente dell'emulatore |
 |----------|----------|----------|----------|
-| Body | (predefinito) | (predefinito) | (predefinito) |
+| Corpo | (impostazione predefinita) | (impostazione predefinita) | (impostazione predefinita) |
 | Head | Mantieni H | (Non disponibile) | (Non disponibile) |
 | Mano sinistra/controller | Pulsante Alt sinistro | Pulsante Mantieni la spalla sinistra | Puntina da disegno a sinistra | 
 | Mano destra/controller | Pulsante ALT destro | Pulsante destro della spalla | Puntina da disegno a destra |
@@ -97,9 +97,9 @@ La tabella seguente illustra in che modo ogni modificatore di destinazione esegu
 |  | Predefinito (corpo) |  Mano/controller (tenendo premuto ALT, tenendo premuto il pulsante della spalla del gamepad o impostando la puntina da disegno dell'interfaccia utente) |  Head (tenendo H)  |  Occhi (Mantieni Y o imposta puntina da disegno dell'interfaccia utente) |
 |----------|----------|----------|----------|
 |  Yaw |  Trasforma corpo a sinistra/a destra |  Sposta mano sinistra/destra |  Trasforma la testa a sinistra/destra | Sguardi occhi a sinistra/destra |
-|  Angolazione |  Attiva/disattiva intestazione |  Spostare la mano verso l'alto o verso il basso |  Attiva/disattiva intestazione | Sguardi occhi in alto/in basso | 
+|  Pitch |  Attiva/disattiva intestazione |  Spostare la mano verso l'alto o verso il basso |  Attiva/disattiva intestazione | Sguardi occhi in alto/in basso | 
 |  Roll |  Roll Head verso sinistra/destra |  |  Roll Head verso sinistra/destra | (Nessuna azione) |
-|  x |  Diapositiva corpo sinistro/destro |  Spostare la mano/il controller a sinistra/destra |  Trasforma la testa a sinistra/destra | (Nessuna azione) |
+|  X |  Diapositiva corpo sinistro/destro |  Spostare la mano/il controller a sinistra/destra |  Trasforma la testa a sinistra/destra | (Nessuna azione) |
 |  Y |  Sposta il corpo verso l'alto o verso il basso |  Spostare la mano/il controller verso l'alto/il basso |  Attiva/disattiva intestazione | (Nessuna azione) |
 |  Z |  Sposta il corpo avanti/indietro |  Spostare la mano/il controller avanti/indietro |  Attiva/disattiva intestazione | (Nessuna azione) |
  
@@ -108,7 +108,7 @@ La tabella seguente illustra in che modo ogni modificatore di destinazione esegu
 
 Il set di controlli seguente è consigliato per l'utilizzo giornaliero:
 
-|  Operazione |  Tastiera e mouse |  Controller | 
+|  Operazione |  Tastiera e mouse |  Titolare del trattamento | 
 |----------|----------|----------|
 |  Corpo X |  A/D |  Sinistra levetta sinistra/destra | 
 |  Corpo Y |  PGSU/PGGIÙ |  DPad | 
@@ -123,7 +123,7 @@ Il set di controlli seguente è consigliato per l'utilizzo giornaliero:
 |  Imbardata mano/controller |  Alt + trascinamento del mouse verso sinistra/destra |  Spalla + destra levetta sinistra/destra | 
 |  Passo controller/mano |  Alt + trascina il mouse verso l'alto/il basso |  Spalla + levetta a destra | 
 |  Rullo della mano/controller |  ALT + Q/E |  Spalla + DPad a sinistra/destra | 
-|  Action |  Pulsante destro del mouse |  Trigger | 
+|  Azione |  Pulsante destro del mouse |  Trigger | 
 |  Bloom/System/Home |  Tasto F2 o Windows |  Pulsante B | 
 |  Reimposta |  ESC |  pulsante Start | 
 |  Tracking |  T |  Pulsante X | 
@@ -144,7 +144,7 @@ I tasti di scelta rapida seguenti sono disponibili per l'accesso al pannello di 
 | Impostare lo stato attivo della tastiera sul pannello di controllo | F8 | Se il pannello non è attualmente visibile, verrà visualizzato per primo. |
 | Ancorare o disancorare il pannello da/verso la finestra del portale dell'emulatore o della realtà mista | F9 | Se la finestra viene chiusa quando non ancorata, è ancorata e nascosta. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Installare gli strumenti](install-the-tools.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)
 * [Uso del simulatore di Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)

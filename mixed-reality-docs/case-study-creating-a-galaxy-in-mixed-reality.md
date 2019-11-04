@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, realtà mista di Windows, Condividi la tua idea case study
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523845"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436867"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Case Study-creazione di una galassia in realtà mista
 
@@ -25,7 +25,7 @@ Il [nostro team](galaxy-explorer.md#meet-the-team) , composto da due progettisti
 
 Volevamo sfruttare appieno la capacità di HoloLens di eseguire il rendering degli oggetti 3D direttamente nello spazio di lavoro, quindi abbiamo deciso di voler creare una galassia realistica in cui le persone sarebbero in grado di eseguire lo zoom avanti e visualizzare le singole stelle, ognuna sulle proprie traiettorie .
 
-Nella prima settimana dello sviluppo sono stati introdotti alcuni obiettivi per la rappresentazione della galassia Milky Way: Doveva avere un livello di profondità, spostamento e sensazione volumetrica, pieno di stelle che facilitavano la creazione della forma della galassia.
+Nella prima settimana dello sviluppo sono stati introdotti alcuni obiettivi per la rappresentazione della galassia del modo lattiginoso: era necessario disporre di profondità, spostamento e sensazione volumetrica, pieno di stelle che consentivano di creare la forma della galassia.
 
 Il problema della creazione di una galassia animata con miliardi di stelle consisteva nel fatto che il numero di singoli elementi che necessitano di aggiornamento sarebbe troppo grande per ogni fotogramma per HoloLens per l'animazione con la CPU. La nostra soluzione comprendeva una complessa combinazione di arte e scienza.
 
@@ -41,7 +41,7 @@ Sono stati avviati test di stress con migliaia di particelle puntiformi in vari 
 
 ### <a name="creating-the-position-of-the-stars"></a>Creazione della posizione delle stelle
 
-Uno dei membri del team ha già scritto il C# codice che genera stelle nella posizione iniziale. Le stelle si trovano su un'ellisse e la loro posizione può essere descritta da (**curveOffset**, **ellipseSize**, **elevazione**) dove **curveOffset** è l'angolo della stella lungo l'ellisse, **ellipseSize** è la dimensione dell'ellisse. lungo X e Z e elevazione dell'elevazione corretta della stella all'interno della galassia. In questo modo, è possibile creare un buffer ([ComputeBuffer di Unity](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) che verrebbe inizializzato con ogni attributo Star e lo invierà alla GPU in cui risiederà per il resto dell'esperienza. Per creare questo buffer, viene usato [DrawProcedural di Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) che consente l'esecuzione di uno shader (codice su una GPU) in un set arbitrario di punti senza avere una mesh effettiva che rappresenti la galassia:
+Uno dei membri del team ha già scritto il C# codice che genera stelle nella posizione iniziale. Le stelle si trovano su un'ellisse e la loro posizione può essere descritta da (**curveOffset**, **ellipseSize**, **elevazione**) dove **curveOffset** è l'angolo della stella lungo l'ellisse, **ellipseSize** è la dimensione dell'ellisse. lungo X e Z e elevazione dell'elevazione corretta della stella all'interno della galassia. In questo modo, è possibile creare un buffer ([ComputeBuffer di Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) che verrebbe inizializzato con ogni attributo Star e lo invierà alla GPU in cui risiederà per il resto dell'esperienza. Per creare questo buffer, viene usato [DrawProcedural di Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) che consente l'esecuzione di uno shader (codice su una GPU) in un set arbitrario di punti senza avere una mesh effettiva che rappresenti la galassia:
 
 **CPU**
 
@@ -147,7 +147,7 @@ L'esecuzione di cloud a schermo intero e il tentativo di sfocarli sarebbe stata 
 
 ### <a name="a-bit-of-context-first"></a>Prima un po' di contesto
 
-Quando si usano le trame in un gioco per le dimensioni della trama corrisponderanno raramente l'area in cui si vuole usarlo in, ma è possibile usare un tipo diverso di filtro per ottenere la scheda grafica per interpolare il colore dai pixel della trama della trama ([filtraggio della trama<C3/>).](https://msdn.microsoft.com/library/dn642451.aspx) Il filtraggio che interessa è il [filtraggio bilineare](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) che consente di calcolare il valore di qualsiasi pixel usando i 4 adiacenti più vicini.
+Quando si usano le trame in un gioco, le dimensioni della trama corrisponderanno raramente all'area in cui si vuole usarlo, ma è possibile usare un tipo diverso di filtro della trama per ottenere la scheda grafica per l'interpolazione del colore desiderato dai pixel della trama ([filtro della trama](https://msdn.microsoft.com/library/dn642451.aspx)). Il filtraggio che interessa è il [filtraggio bilineare](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) che consente di calcolare il valore di qualsiasi pixel usando i 4 adiacenti più vicini.
 
 ![Originale prima del filtro](images/texture-1.png)
 
@@ -203,6 +203,6 @@ Si è interessati a trovare altre informazioni sul processo di sviluppo per Gala
 </table>
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Galaxy Explorer su GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Aggiornamenti del progetto di Galaxy Explorer in YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

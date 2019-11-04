@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, introduzione, guida
-ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414165"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437101"
 ---
 # <a name="about-this-design-guidance"></a>Informazioni sulle linee guida di progettazione
 
@@ -29,14 +29,12 @@ E sappiamo che molte innovazioni saranno generate dalla più ampia community di 
 
 ## <a name="overview"></a>Panoramica
 
-Ecco una rapida panoramica del modo in cui sono organizzate le linee guida di progettazione. Sono disponibili sezioni per ognuna di queste aree con collegamenti a più articoli.
-* **[Introduzione alla progettazione](mixed-reality.md)** : leggere i concetti di alto livello e comprendere i principi seguiti.
-* **[Interazioni istintive](interaction-fundamentals.md)** : informazioni su input, comandi, navigazione e altri concetti di base di interazione per la progettazione delle app.
-* **[Stile](typography.md)** : rendere l'applicazione deliziosa usando colore, tipografia e movimento.
-* **[Modelli di app](types-of-mixed-reality-apps.md)** : informazioni su come le applicazioni possono estendersi a scenari in ambienti immersivi e reali.
-* **[Controlli](interactable-object.md)** : usare i controlli e i modelli come blocchi predefiniti per creare un'esperienza di applicazione personalizzata.
-* **[App di esempio](design.md#sample-apps)** : consente di creare esperienze eccezionali da esempi progettati e creati dal team.
-* **[Strumenti e risorse di progettazione](design.md#design-tools)** : avviare il progetto con modelli e strumenti di progettazione.
+Ecco una rapida panoramica del modo in cui sono organizzate le linee guida di progettazione. 
+* **[Panoramica](design.md)** : informazioni sul processo di progettazione, i concetti di base e i fattori di interazione da considerare.
+* **[Concetti di base](core-concepts-landingpage.md)** : informazioni su comfort, frame olografico, mapping spaziale e altri concetti di base da considerare.
+* **[Modelli di interazione](interaction-fundamentals.md)** : questa guida è strutturata intorno a tre modelli di interazione principali.
+* **[Elementi UX](app-patterns-landingpage.md)** : usare controlli e comportamenti come blocchi predefiniti per creare un'esperienza di applicazione personalizzata.
+* **[Risorse](design.md#choose-a-prototyping-option)** : avviare il progetto con strumenti di progettazione e opzioni di creazione di prototipi.
 
 Per quanto sopra, si mira a offrire il giusto mix di testo, illustrazioni e diagrammi e video, in modo da potervi sperimentare con diversi formati e tecniche, con la finalità di fornire le informazioni necessarie. E nei prossimi mesi, la tassonomia verrà espansa per includere un set più ampio di argomenti di progettazione. Quando possibile, verranno fornite le informazioni relative a ciò che sarà prossimo, quindi è necessario ricontrollarlo.
 
@@ -72,7 +70,7 @@ Una delle implicazioni dell'offerta di linee guida di progettazione in questo nu
 
 ![Il giusto equilibrio tra progettazione globale e locale](images/500px-fluentdesign.jpg) <br>
 
-Offriamo due livelli di linee guida per la progettazione: globale e locale. Le linee guida di progettazione "globali" sono incorporate nel [sistema di progettazione Fluent](http://fluent.microsoft.com). Informazioni dettagliate sul modo in cui consideriamo i concetti di base quali luce, profondità, movimento, materiale e scalabilità in tutta la progettazione Microsoft, ovvero dispositivi, prodotti, strumenti e servizi. Detto ciò, esistono differenze significative specifiche del dispositivo in questo sistema più ampio. Quindi, le linee guida di progettazione "locale" per gli schermi montati, descrivono la progettazione di dispositivi olografici e immersivi che spesso hanno metodi di input e output diversi, nonché diversi scenari e esigenze utente. Le linee guida sulla progettazione locale riguardano argomenti specifici di HMDs. Ad esempio:  ambienti e oggetti 3D; ambienti condivisi; uso di sensori, monitoraggio degli occhi e mapping spaziale; e le opportunità di audio spaziale. In tutta la guida è probabile che ci si faccia riferimento a questi aspetti globali e locali. Speriamo che ciò consentirà di basare il lavoro in una base di progettazione più ampia sfruttando al contempo le differenze di progettazione tra dispositivi specifici.
+Offriamo due livelli di linee guida per la progettazione: globale e locale. Le linee guida di progettazione "globali" sono incorporate nel [sistema di progettazione Fluent](https://fluent.microsoft.com). Informazioni dettagliate sul modo in cui consideriamo i concetti di base quali luce, profondità, movimento, materiale e scalabilità in tutta la progettazione Microsoft, ovvero dispositivi, prodotti, strumenti e servizi. Detto ciò, esistono differenze significative specifiche del dispositivo in questo sistema più ampio. Quindi, le linee guida di progettazione "locale" per gli schermi montati, descrivono la progettazione di dispositivi olografici e immersivi che spesso hanno metodi di input e output diversi, nonché diversi scenari e esigenze utente. Le linee guida sulla progettazione locale riguardano argomenti specifici di HMDs. Ad esempio: ambienti e oggetti 3D; ambienti condivisi; uso di sensori, monitoraggio degli occhi e mapping spaziale; e le opportunità di audio spaziale. In tutta la guida è probabile che ci si faccia riferimento a questi aspetti globali e locali. Speriamo che ciò consentirà di basare il lavoro in una base di progettazione più ampia sfruttando al contempo le differenze di progettazione tra dispositivi specifici.
 
 ### <a name="have-a-discussion"></a>Discussione
 

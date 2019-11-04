@@ -3,22 +3,22 @@ title: Input MR 210-sguardo
 description: Seguire questa procedura dettagliata di codifica usando Unity, Visual Studio e HoloLens per informazioni dettagliate sui concetti relativi a sguardi.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione, sguardo
-ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 8608701a1dd0a9a20aede1737d16d5af2e715f6b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993550"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434688"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
 
-# <a name="mr-input-210-gaze"></a>Input MR 210: Sguardo fisso
+# <a name="mr-input-210-gaze"></a>Input MR 210: sguardo
 
-Lo [sguardo](gaze.md) è la prima forma di input e rivela le finalità e la consapevolezza dell'utente. MR input 210 (noto anche come Project Explorer) è un approfondimento dei concetti correlati a sguardi per la realtà mista di Windows. Verrà aggiunta la consapevolezza contestuale al cursore e agli ologrammi, sfruttando appieno i vantaggi offerti dall'app per quanto riguarda lo sguardo dell'utente.
+Lo [sguardo](gaze-and-commit.md) è la prima forma di input e rivela le finalità e la consapevolezza dell'utente. MR input 210 (noto anche come Project Explorer) è un approfondimento dei concetti correlati a sguardi per la realtà mista di Windows. Verrà aggiunta la consapevolezza contestuale al cursore e agli ologrammi, sfruttando appieno i vantaggi offerti dall'app per quanto riguarda lo sguardo dell'utente.
 
 >[!VIDEO https://www.youtube.com/embed/yKAttGduVp0]
 
@@ -39,7 +39,7 @@ Qui è disponibile un astronauta che consente di apprendere i concetti di sguard
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>Input MR 210: Sguardo fisso</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Input MR 210: sguardo</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -49,7 +49,7 @@ Qui è disponibile un astronauta che consente di apprendere i concetti di sguard
 
 * Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md).
 * Alcune funzionalità C# di programmazione di base.
-* Sono state completate le nozioni di [base 101](holograms-101.md).
+* Sono state completate le [nozioni di base 101](holograms-101.md).
 * Un dispositivo HoloLens [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode).
 
 ### <a name="project-files"></a>File di progetto
@@ -91,7 +91,7 @@ Qui è disponibile un astronauta che consente di apprendere i concetti di sguard
 2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona di **Windows Store** .
 3. Espandere il gruppo di **Impostazioni XR** .
 4. Nella sezione **rendering** selezionare la casella di controllo **realtà virtuale supportata** per aggiungere un nuovo elenco **SDK di realtà virtuale** .
-5. Verificare che l'opzione **realtà mista di Windows** sia presente nell'elenco. In caso contrario, selezionare **+** il pulsante nella parte inferiore dell'elenco e scegliere **Windows olografico**.
+5. Verificare che l'opzione **realtà mista di Windows** sia presente nell'elenco. In caso contrario, selezionare il pulsante **+** nella parte inferiore dell'elenco e scegliere **Windows olografico**.
 
 Successivamente, è necessario impostare il back-end di scripting su .NET.
 
@@ -107,17 +107,17 @@ Infine, verranno aggiornate le impostazioni di qualità per ottenere prestazioni
 
 ### <a name="import-project-assets"></a>Importa asset progetto
 
-1. Fare clic con  il pulsante destro del mouse sulla cartella assets nel pannello **Project** .
+1. Fare clic con il pulsante destro del mouse sulla cartella **assets** nel pannello **Project** .
 2. Fare clic su **Importa pacchetto > pacchetto personalizzato**.
 3. Individuare i file di progetto scaricati e fare clic su **ModelExplorer. file unitypackage Tools**.
-4. Fare clic su **Apri**.
+4. Fai clic su **Apri**.
 5. Al termine del caricamento del pacchetto, fare clic sul pulsante **Importa** .
 
 ### <a name="setup-the-scene"></a>Configurare la scena
 
 1. Nella gerarchia eliminare la **fotocamera principale**.
-2. Nella cartella **HoloToolkit** aprire la cartella di **input** , quindi aprire la cartella  prefabbricates.
-3. Trascinare il prefabbricato **MixedRealityCameraParent** dalla cartella  prefabbricates alla **gerarchia**.
+2. Nella cartella **HoloToolkit** aprire la cartella di **input** , quindi aprire la cartella **prefabbricates** .
+3. Trascinare il prefabbricato **MixedRealityCameraParent** dalla cartella **prefabbricates** alla **gerarchia**.
 4. Fare clic con il pulsante destro del mouse sulla **luce direzionale** nella gerarchia e scegliere **Elimina**.
 5. Nella cartella **ologrammi** trascinare e rilasciare gli asset seguenti nella radice della **gerarchia**:
     * **AstroMan**
@@ -125,14 +125,14 @@ Infine, verranno aggiornate le impostazioni di qualità per ottenere prestazioni
     * **SpaceAudioSource**
     * **SpaceBackground**
 6. Avviare la **modalità di riproduzione** ▶ per visualizzare l'astronauta.
-7. Fare clic su **modalità** riproduci ▶ per **arrestare**.
+7. Fare clic su **modalità Riproduci** ▶ per **arrestare**.
 8. Nella cartella **ologrammi** individuare l'asset **fitbox** e trascinarlo nella radice della **gerarchia**.
 9. Selezionare **fitbox** nel pannello **gerarchia** .
-10. Trascinare la  raccolta astror dalla **gerarchia** alla proprietà della **raccolta ologramma** di fitbox nel pannello **Inspector** .
+10. Trascinare la raccolta **astror** dalla **gerarchia** alla proprietà della **raccolta ologramma** di fitbox nel pannello **Inspector** .
 
 ### <a name="save-the-project"></a>Salvare il progetto
 
-1. Salvare la nuova scena: **File > Salva scena come**.
+1. Salvare la nuova scena: **File > Salva scena con nome**.
 2. Fare clic su **nuova cartella** e denominare la cartella **Scenes**.
 3. Denominare il file "**ModelExplorer**" e salvarlo nella cartella **Scenes** .
 
@@ -158,7 +158,7 @@ Se si esegue la distribuzione in HoloLens:
 1. Usando la barra degli strumenti superiore in Visual Studio, modificare la destinazione da debug a **Release** e da ARM a **x86**.
 2. Fare clic sulla freccia a discesa accanto al pulsante computer locale e selezionare **computer remoto**.
 3. Immettere **l'indirizzo IP del dispositivo HoloLens** e impostare la modalità di autenticazione su **universale (protocollo non crittografato)** . Fare clic su **Seleziona**. Se non si conosce l'indirizzo IP del dispositivo, vedere **impostazioni > rete & Internet > opzioni avanzate**.
-4. Nella barra dei menu superiore fare clic su **debug-> avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario associarla a [Visual Studio](using-visual-studio.md#pairing-your-device-hololens).
+4. Nella barra dei menu superiore fare clic su **debug-> avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario [associarla a Visual Studio](using-visual-studio.md#pairing-your-device).
 5. Quando l'app è stata distribuita, chiudere il **fitbox** con un **movimento di selezione**.
 
 Se si esegue la distribuzione in un auricolare immersivo:
@@ -205,7 +205,7 @@ Il nostro lavoro verrà basato sui principi di progettazione dei cursori, vale a
 
 ### <a name="instructions"></a>Istruzioni
 
-1. Nel pannello **gerarchia** espandere l'oggetto ->Astron**GEO_G**->**Back_Center** .
+1. Nel pannello **gerarchia** espandere l'oggetto **Astron**->**GEO_G**->**Back_Center** .
 2. Fare doppio clic su **Interactible.cs** per aprirlo in Visual Studio.
 3. Rimuovere il commento dalle righe nei callback **IFocusable. OnFocusEnter ()** e **IFocusable. OnFocusExit ()** in **Interactible.cs**. Questi vengono chiamati dal InputManager del Toolkit di realtà mista quando lo stato attivo (tramite sguardo o con il puntatore del controller) entra e esce dall'oggetto Collider di GameObject specifico.
 
@@ -232,7 +232,7 @@ void IFocusable.OnFocusExit()
 ```
 
 >[!NOTE]
->`EnableKeyword` Usiamo e `DisableKeyword` versioni successive. Per usarle nella propria app con lo shader standard del Toolkit, è necessario seguire le [linee guida di Unity per accedere ai materiali tramite script](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html). In questo caso sono già state incluse le [tre varianti del materiale evidenziato](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) necessario nella cartella Resources (ricerca dei tre materiali con evidenziazione nel nome).
+>Si usano `EnableKeyword` e `DisableKeyword` sopra. Per usarle nella propria app con lo shader standard del Toolkit, è necessario seguire le [linee guida di Unity per accedere ai materiali tramite script](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html). In questo caso sono già state incluse le [tre varianti del materiale evidenziato](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) necessario nella cartella Resources (ricerca dei tre materiali con evidenziazione nel nome).
 
 ### <a name="build-and-deploy"></a>Compilazione e distribuzione
 
@@ -251,7 +251,7 @@ void IFocusable.OnFocusExit()
 ### <a name="instructions"></a>Istruzioni
 
 1. Nel pannello **gerarchia** selezionare l'oggetto **InputManager** .
-2. Nel pannello **Inspector** trovare lo script stabilizzatore dello **sguardo** . Fare clic su di esso per aprirlo in Visual Studio, se si vuole dare un'occhiata.
+2. Nel pannello **Inspector** trovare lo script **stabilizzatore dello sguardo** . Fare clic su di esso per aprirlo in Visual Studio, se si vuole dare un'occhiata.
     * Questo script scorre gli esempi di dati di Raycast e consente di stabilizzare lo sguardo dell'utente per la destinazione della precisione.
 3. Nel **controllo**è possibile modificare il valore dei **campioni di stabilità archiviati** . Questo valore rappresenta il numero di campioni di cui lo stabilizzatore esegue l'iterazione per calcolare il valore stabilizzato.
 
@@ -271,10 +271,10 @@ Verrà usato il file **DirectionIndicator.cs** che:
 2. Nascondere l'indicatore direzionale se l'utente sta guardando gli ologrammi.
 3. Aggiornare l'indicatore direzionale in modo che punti agli ologrammi.
 
-Ma veniamo al dunque.
+Cominciamo.
 
-1. Fare clic sull'  oggetto astror nel pannello **gerarchia** e **fare clic sulla freccia** per espanderlo.
-2. Nel pannello **gerarchia** selezionare l'oggetto **DirectionalIndicator** in Astron .
+1. Fare clic sull'oggetto **astror** nel pannello **gerarchia** e **fare clic sulla freccia** per espanderlo.
+2. Nel pannello **gerarchia** selezionare l'oggetto **DirectionalIndicator** in **Astron**.
 3. Nel pannello **Inspector** fare clic sul pulsante **Add Component** .
 4. Nel menu digitare nell' **indicatore di direzione**della casella di ricerca. Selezionare il risultato della ricerca.
 5. Nel pannello **gerarchia** trascinare e rilasciare l'oggetto **cursore** sulla proprietà **Cursor** del **controllo**.
@@ -344,7 +344,7 @@ Lo script **InteractibleAction.cs** , associato a **Interactible.cs** , esegue a
   * Nella parte superiore della **gerarchia**, nella barra di ricerca digitare **ChestButton_Center** e selezionare il risultato.
   * Nel pannello **Inspector** fare clic sul pulsante **Add Component** .
   * Nel menu digitare nella casella di ricerca **azione Tagalong**. Selezionare il risultato della ricerca.
-  * Nella  cartella ologrammi trovare l'asset **Tagalong** .
+  * Nella cartella **ologrammi** trovare l'asset **Tagalong** .
   * Consente di selezionare l'oggetto **ChestButton_Center** nella **gerarchia**. Trascinare e rilasciare l'oggetto **TagAlong** dal pannello del **progetto** nel **controllo** nella proprietà **oggetto in TagAlong** .
   * Trascinare l'oggetto **azione Tagalong** da **Inspector** nel campo **azione Interactible** nello script **Interactible** .
 * Fare doppio clic sullo script **TagalongAction** per aprirlo in Visual Studio.

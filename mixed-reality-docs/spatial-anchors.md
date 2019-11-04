@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate nello spazio, scala del mondo, mondo, scala, posizione, orientamento, ancoraggio, ancoraggio nello spazio, vincolato al mondo, vincolo con il mondo, persistenza, condivisione
-ms.openlocfilehash: 27b1dcd86c7edba176ca54840bdd27550736a16d
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387736"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438024"
 ---
 # <a name="spatial-anchors"></a>Ancoraggi nello spazio
 
@@ -22,7 +22,7 @@ Un ancoraggio spaziale rappresenta un punto importante nel mondo in cui il siste
 * Usando gli <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancoraggi spaziali di Azure</a> per creare un ancoraggio cloud, l'applicazione può condividere un ancoraggio spaziale tra più dispositivi HoloLens, iOS e Android. Poiché ogni dispositivo esegue il rendering di un ologramma usando lo stesso ancoraggio spaziale, gli utenti vedranno che l'ologramma viene visualizzato nella stessa posizione nel mondo reale. Ciò rende possibili esperienze condivise in tempo reale.
 * Puoi usare <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Ancoraggi nello spazio di Azure</a> anche per la persistenza asincrona degli ologrammi su dispositivi HoloLens, iOS e Android. Condividendo un ancoraggio durevole nello spazio del cloud, più dispositivi possono osservare nel tempo lo stesso ologramma salvato in modo permanente, anche se tali dispositivi non sono presenti insieme contemporaneamente.
 
-Per esperienze su scala o su larga scala per gli auricolari desktop con tethering che resteranno entro un diametro di 5 metri, è possibile usare in genere il [frame della fase di riferimento](coordinate-systems.md#stage-frame-of-reference) anziché gli ancoraggi spaziali, che fornisce un unico sistema di coordinate in cui esegue il rendering di tutto il contenuto. Tuttavia, se l'applicazione intende consentire agli utenti di aggirare oltre 5 metri in HoloLens, probabilmente operando in un intero piano di un edificio, saranno necessari ancoraggi spaziali per assicurare la stabilità del contenuto.
+Per le esperienze su scala o su larga scala per gli auricolari desktop con tethering che resteranno entro un diametro di 5 metri, in genere è possibile usare il [frame della fase di riferimento](coordinate-systems.md#stage-frame-of-reference) anziché gli ancoraggi spaziali, che fornisce un unico sistema di coordinate in cui esegue il rendering di tutto il contenuto. Tuttavia, se l'applicazione intende consentire agli utenti di aggirare oltre 5 metri in HoloLens, probabilmente operando in un intero piano di un edificio, saranno necessari ancoraggi spaziali per assicurare la stabilità del contenuto.
 
 Gli ancoraggi nello spazio sono uno strumento utilissimo per gli ologrammi che devono rimanere fissi nel mondo. Tuttavia, una volta posizionati, non possono essere spostati. Sono disponibili alternative agli ancoraggi più appropriati per gli ologrammi dinamici con tag insieme all'utente. È pertanto preferibile posizionare gli ologrammi dinamici usando una cornice di riferimento non spostabile (la base per le coordinate globali di Unity) oppure una cornice di riferimento associata.
 
@@ -34,7 +34,7 @@ Queste linee guide relative agli ancoraggi nello spazio consentiranno di eseguir
 
 In genere, gli utenti sono quelli che posizionano in modo esplicito gli ancoraggi spaziali.
 
-In HoloLens, ad esempio, un'applicazione può intersecare il raggio di [sguardi](gaze.md) dell'utente con la mesh di [mapping spaziale](spatial-mapping.md) per consentire all'utente di decidere dove posizionare un ologramma. Quando l'utente tocca per posizionare l'ologramma, creare un ancoraggio spaziale nel punto di intersezione e quindi posizionare l'ologramma all'origine del sistema di coordinate dell'ancoraggio.
+In HoloLens, ad esempio, un'applicazione può intersecare il raggio di [sguardi](gaze-and-commit.md) dell'utente con la mesh di [mapping spaziale](spatial-mapping.md) per consentire all'utente di decidere dove posizionare un ologramma. Quando l'utente tocca per posizionare l'ologramma, creare un ancoraggio spaziale nel punto di intersezione e quindi posizionare l'ologramma all'origine del sistema di coordinate dell'ancoraggio.
 
 Gli ancoraggi spaziali locali sono semplici ed efficienti da creare. Il sistema consoliderà i dati interni se più ancoraggi possono condividere i dati dei sensori sottostanti. È in genere consigliabile creare un nuovo ancoraggio spaziale locale per ogni ologramma che un utente inserisce in modo esplicito, eccetto nei casi descritti di seguito, ad esempio gruppi rigidi di ologrammi.
 
@@ -71,7 +71,7 @@ Ciò è particolarmente importante per gli ancoraggi locali salvati in modo perm
 
 Per gli ancoraggi nello spazio del cloud, le dimensioni dello spazio di archiviazione possono adattarsi come richiesto dallo scenario. È possibile archiviare il numero di ancoraggi cloud necessario, rilasciandoli solo quando si è certi che gli utenti non dovranno ritrovare gli ologrammi in quell'ancoraggio.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Esperienze condivise nella realtà mista](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>

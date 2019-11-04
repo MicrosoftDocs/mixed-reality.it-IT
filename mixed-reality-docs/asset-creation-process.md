@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Asset, creazione, processo, Budget, poligoni, trame, shader, prestazioni
-ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: fb8266a018e11a8fb944819a0cac5ace38f2cb25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896500"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437007"
 ---
 # <a name="asset-creation-process"></a>Processo di creazione dell'asset
 
@@ -19,7 +19,7 @@ La realtà mista di Windows si basa su decenni di investimenti effettuati da Mic
 
 Gli asset creati per un progetto sono disponibili in molte forme e form. Possono essere costituiti da una serie di trame/immagini, audio, video, modelli 3D e animazioni. Non è possibile iniziare a coprire tutti gli strumenti disponibili per creare i diversi tipi di asset usati in un progetto. Per questo articolo, si escentreranno sui metodi di creazione di asset 3D.
 
-![Concetto, creazione, integrazione e flusso di iterazione](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
+Concetto di ![, creazione, integrazione e flusso di iterazione](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
 *Concetto, creazione, integrazione e flusso di iterazione*
 
 ## <a name="things-to-consider"></a>Aspetti da considerare
@@ -33,23 +33,23 @@ Di seguito è riportato un budget di esempio per la propria esperienza. Le prest
 <tr>
 <th style="text-align:left;"><b>Asset</b></th><th style="text-align:right;"> CPU</th><th> GPU</th><th> Memoria</th>
 </tr><tr>
-<td> Poligoni</td><td> 0</td><td> 5%</td><td> 10%</td>
+<td> Poligoni</td><td> 0</td><td> 5</td><td> 10</td>
 </tr><tr>
-<td> Trame</td><td> 5%</td><td> 15</td><td>25%</td>
+<td> Trame</td><td> 5</td><td> 15</td><td>25%</td>
 </tr><tr>
 <td> Shader</td><td> 15</td><td> 35%</td><td> 0</td>
 </tr><tr>
 <td> <b>Dynamics</b></td><td></td><td></td><td></td>
 </tr><tr>
-<td> Fisica</td><td> 5%</td><td> 15</td><td> 0</td>
+<td> Fisica</td><td> 5</td><td> 15</td><td> 0</td>
 </tr><tr>
-<td> Illuminazione in tempo reale</td><td> 10%</td><td> 0</td><td> 0</td>
+<td> Illuminazione in tempo reale</td><td> 10</td><td> 0</td><td> 0</td>
 </tr><tr>
 <td> Supporti (audio/video)</td><td> -</td><td> 15</td><td> 25%</td>
 </tr><tr>
-<td> Script/logica</td><td> 25%</td><td> 0</td><td> 5%</td>
+<td> Script/logica</td><td> 25%</td><td> 0</td><td> 5</td>
 </tr><tr>
-<td> Overhead generale</td><td> 5%</td><td> 5%</td><td> 5%</td>
+<td> Overhead generale</td><td> 5</td><td> 5</td><td> 5</td>
 </tr><tr>
 <td> <b>Totale</b></td><td> <b>65%</b></td><td> <b>90%</b></td><td> <b>70%</b></td>
 </tr>
@@ -64,7 +64,7 @@ Di seguito è riportato un budget di esempio per la propria esperienza. Le prest
 
 Gli sviluppatori e gli artisti devono prendere in considerazione le funzionalità del dispositivo e del motore di grafica. Microsoft HoloLens ha tutto il calcolo e la grafica integrati nel dispositivo. Condivide le funzionalità che gli sviluppatori troveranno in una piattaforma mobile.
 
-Il processo di creazione per gli asset è lo stesso indipendentemente dal fatto che la destinazione sia un'esperienza per un [dispositivo olografico o](mixed-reality.md#the-mixed-reality-spectrum)per un dispositivo immersivo. L'aspetto principale da tenere presente è la funzionalità del dispositivo come indicato in precedenza, nonché la scalabilità, poiché è possibile vedere il mondo reale in realtà mista, in modo da mantenere la scalabilità corretta in base all'esperienza. 
+Il processo di creazione per gli asset è lo stesso indipendentemente dal fatto che la destinazione sia un'esperienza per un [dispositivo olografico o per un dispositivo immersivo](mixed-reality.md#the-mixed-reality-spectrum). L'aspetto principale da tenere presente è la funzionalità del dispositivo come indicato in precedenza, nonché la scalabilità, poiché è possibile vedere il mondo reale in realtà mista, in modo da mantenere la scalabilità corretta in base all'esperienza. 
 
 ## <a name="authoring-assets"></a>Creazione di asset
 
@@ -84,7 +84,7 @@ Per prima cosa è possibile creare asset personalizzati in diversi modi. gli art
 
 ### <a name="purchasing-assets"></a>Acquisti di asset
 
-Un'altra opzione eccellente è quella di acquistare asset per la propria esperienza. Sono disponibili moltissime risorse tramite servizi, ad esempio Unity [Asset Store](https://www.assetstore.unity3d.com/) o [TurboSquid](http://www.turbosquid.com/) , tra gli altri.
+Un'altra opzione eccellente è quella di acquistare asset per la propria esperienza. Sono disponibili moltissime risorse tramite servizi, ad esempio [Unity Asset Store](https://www.assetstore.unity3d.com/) o [TurboSquid](https://www.turbosquid.com/) , tra gli altri.
 
 Quando si acquistano asset da terze parti, è sempre necessario controllare quanto segue:
 * **Qual è il numero di Poly?**
@@ -92,7 +92,7 @@ Quando si acquistano asset da terze parti, è sempre necessario controllare quan
 * **Sono disponibili livelli di dettaglio (LODs) per il modello?**
   * Il livello di dettaglio di un modello consente di ridimensionare i dettagli di un modello in modo da ottenere prestazioni ottimali.
 * **Il file di origine è disponibile?**
-  * In genere non è incluso in [archivio risorse](https://www.assetstore.unity3d.com/) di Unity ma sempre incluso con servizi come [TurboSquid](http://www.turbosquid.com/).
+  * In genere non è incluso in [archivio risorse di Unity](https://www.assetstore.unity3d.com/) ma sempre incluso con servizi come [TurboSquid](https://www.turbosquid.com/).
   * Senza il file di origine, non sarà possibile modificare l'asset.
   * Verificare che il file di origine fornito possa essere importato dagli strumenti 3D.
 * **Scopri cosa stai ricevendo**

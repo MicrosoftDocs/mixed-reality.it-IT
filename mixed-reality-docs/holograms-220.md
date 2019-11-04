@@ -3,28 +3,28 @@ title: MR Spatial 220-audio spaziale
 description: Seguire questa procedura dettagliata di codifica usando Unity, Visual Studio e HoloLens per informazioni dettagliate sui concetti relativi ai suoni spaziali.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione, spazio audio
-ms.openlocfilehash: 50d17fe8c9a6e3f18b1309a59c9c41af982a7505
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a3fc054927d73cf9ac21f831caa4ec23875977bd
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526959"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434731"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
 
 <br>
 
-# <a name="mr-spatial-220-spatial-sound"></a>MR Spatial 220: Audio spaziale
+# <a name="mr-spatial-220-spatial-sound"></a>MR Spatial 220: audio spaziale
 
 Il [suono spaziale](spatial-sound.md) respira la vita negli ologrammi e offre loro la presenza nel nostro mondo. Gli ologrammi sono costituiti da luci e suoni e, se si perde la visione degli ologrammi, il suono spaziale può aiutarti a trovarli. Il suono spaziale non è analogo a quello tipico che è possibile sentire sulla radio, è un suono posizionato nello spazio 3D. Con il suono spaziale è possibile far sembrare gli ologrammi come se fossero dietro di te, accanto a te o persino in testa! In questo corso verrà:
 
 * Configurare l'ambiente di sviluppo per l'utilizzo di audio spaziale Microsoft.
 * Usare il suono spaziale per migliorare le interazioni.
-* Utilizzare il suono spaziale insieme al mapping spaziale.
+* Utilizzare il suono spaziale insieme al [mapping spaziale](spatial-mapping.md).
 * Comprendere le procedure consigliate per la progettazione e la combinazione di suoni.
 * Usare il suono per migliorare gli effetti speciali e coinvolgere l'utente nel mondo della realtà mista.
 
@@ -34,7 +34,7 @@ Il [suono spaziale](spatial-sound.md) respira la vita negli ologrammi e offre lo
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>MR Spatial 220: Audio spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR Spatial 220: audio spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -44,7 +44,7 @@ Il [suono spaziale](spatial-sound.md) respira la vita negli ologrammi e offre lo
 
 * Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md).
 * Alcune funzionalità C# di programmazione di base.
-* Sono state completate le nozioni di [base 101](holograms-101.md).
+* Sono state completate le [nozioni di base 101](holograms-101.md).
 * Un dispositivo HoloLens [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode).
 
 ### <a name="project-files"></a>File di progetto
@@ -60,7 +60,7 @@ Il [suono spaziale](spatial-sound.md) respira la vita negli ologrammi e offre lo
 
 ### <a name="errata-and-notes"></a>Errori e note
 
-* "Enable Just My Code" deve essere disabilitato (deselezionato) in Visual Studio in strumenti-Opzioni >-> debug per raggiungere i punti di interruzione nel codice.
+* "Enable Just My Code" deve essere disabilitato (*deselezionato*) in Visual Studio in strumenti-Opzioni >-> debug per raggiungere i punti di interruzione nel codice.
 
 ## <a name="chapter-1---unity-setup"></a>Capitolo 1-installazione di Unity
 
@@ -77,14 +77,14 @@ Il [suono spaziale](spatial-sound.md) respira la vita negli ologrammi e offre lo
 * Fare clic sulla cartella **Starting\Decibel** , quindi premere il pulsante **Seleziona cartella** .
 * Attendere che il progetto venga caricato in Unity.
 * Nel pannello del **progetto** aprire **Scenes\Decibel.Unity**.
-* Nel pannello **gerarchia** espandere ologrammcollection  e selezionare **P0LY**.
+* Nel pannello **gerarchia** espandere **ologrammcollection** e selezionare **P0LY**.
 * Nel controllo espandere **audiosource** e notare che non è presente alcuna casella di controllo **Spatialize** .
 
 Per impostazione predefinita, Unity non carica un plug-in Spatializer. Nei passaggi seguenti viene abilitato il suono spaziale nel progetto.
 
 * Nel menu principale di Unity scegliere **modifica > impostazioni progetto > audio**.
 * Individuare l'elenco a discesa plug-in **Spatializer** e selezionare **MS HRTF Spatializer**.
-* Nel pannello **gerarchia** selezionare ologrammcollection **> P0LY**.
+* Nel pannello **gerarchia** selezionare **ologrammcollection > P0LY**.
 * Nel pannello **Inspector** trovare il componente di **origine audio** .
 * Selezionare la casella di controllo **Spatialize** .
 * Trascinare il dispositivo di scorrimento di **Blend spaziale** fino a **3D**oppure immettere **1** nella casella di modifica.
@@ -111,7 +111,7 @@ Se si esegue la distribuzione in HoloLens:
 1. Usando la barra degli strumenti superiore in Visual Studio, modificare la destinazione da debug a **Release** e da ARM a **x86**.
 2. Fare clic sulla freccia a discesa accanto al pulsante computer locale e selezionare **computer remoto**.
 3. Immettere **l'indirizzo IP del dispositivo HoloLens** e impostare la modalità di autenticazione su **universale (protocollo non crittografato)** . Fare clic su **Seleziona**. Se non si conosce l'indirizzo IP del dispositivo, vedere **impostazioni > rete & Internet > opzioni avanzate**.
-4. Nella barra dei menu superiore fare clic su **debug-> avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario associarla a [Visual Studio](using-visual-studio.md#pairing-your-device---hololens-1st-gen).
+4. Nella barra dei menu superiore fare clic su **debug-> avvia senza eseguire debug** o premere **CTRL + F5**. Se questa è la prima volta che si esegue la distribuzione nel dispositivo, sarà necessario [associarla a Visual Studio](using-visual-studio.md#pairing-your-device).
 
 Se si esegue la distribuzione in un auricolare immersivo:
 
@@ -140,7 +140,7 @@ Il percorso appropriato per il suono dipende dall'ologramma. Se, ad esempio, l'o
 
 Le istruzioni seguenti allegheranno un suono spaziali a un ologramma.
 
-* Nel pannello **gerarchia** espandere ologrammcollection  e selezionare **P0LY**.
+* Nel pannello **gerarchia** espandere **ologrammcollection** e selezionare **P0LY**.
 * Nel pannello di **controllo** , in **audiosource**, fare clic sul cerchio accanto a **AudioClip** e selezionare **polihover** dal menu a comparsa.
 * Fare clic sul cerchio accanto a **output** e selezionare **SoundEffects** dal menu a comparsa.
 
@@ -165,12 +165,12 @@ Un esempio di aspettative apprese è che gli uccelli si trovano in genere sopra 
 
 Le istruzioni seguenti consentono a P0LY di nascondersi dietro l'utente, in modo da poter usare il suono per individuare l'ologramma.
 
-* Nel pannello **gerarchia** selezionare managers .
+* Nel pannello **gerarchia** selezionare **Managers**.
 * Nel pannello **Inspector** trovare gestore di **input vocale**.
 * In **gestore di input vocale**espandere **Vai a Nascondi**.
 * Modificare **Nessuna funzione** in **poliactions. GoHide**.
 
-![Parola chiave Nascondi](images/gohide.png)
+![Parola chiave: go Hide](images/gohide.png)
 
 ### <a name="part-3---gesture-feedback"></a>Parte 3: commenti e suggerimenti sui movimenti
 
@@ -182,7 +182,7 @@ Le istruzioni seguenti consentono a P0LY di nascondersi dietro l'utente, in modo
 
 #### <a name="instructions"></a>Istruzioni
 
-* Nel pannello **gerarchia** espandere ologrammcollection .
+* Nel pannello **gerarchia** espandere **ologrammcollection**.
 * Espandere **EnergyHub** e selezionare **base**.
 * Nel pannello di **controllo** fare clic su **Aggiungi componente** e aggiungere il **gestore audio del movimento**.
 * Nel **gestore del suono del movimento**fare clic sul cerchio accanto al clip avviato per la **navigazione** e selezionare il clip **aggiornato** e selezionare **RotateClick** dal menu a comparsa per entrambe.
@@ -212,7 +212,7 @@ Dopo la distribuzione dell'applicazione:
 * Pronunciare *"go Hide"* per fare in modo che P0LY si sposti in una posizione sottostante. Trovarlo in base al suono.
 * Guardare la base dell'hub energia. Toccare e trascinare verso sinistra o destra per ruotare l'ologramma e notare come il suono di clic confermi il movimento.
 
-Nota: È presente un pannello di testo che tag insieme all'utente. Questo conterrà i comandi vocali disponibili che è possibile usare in questo corso.
+Nota: è presente un pannello di testo che tag insieme all'utente. Questo conterrà i comandi vocali disponibili che è possibile usare in questo corso.
 
 ## <a name="chapter-3---spatial-sound-and-spatial-mapping"></a>Capitolo 3-mapping spaziale e spaziale
 
@@ -232,7 +232,7 @@ Ad esempio, l'impostazione di un calice in una tabella dovrebbe rendere un suono
 
 #### <a name="instructions"></a>Istruzioni
 
-* Nel pannello **gerarchia** espandere ologrammcollection .
+* Nel pannello **gerarchia** espandere **ologrammcollection**.
 * Espandere **EnergyHub**, selezionare **base**.
 * Nel pannello di **controllo** fare clic su **Aggiungi componente** e aggiungere **toccare per inserire il suono e l'azione**.
 * In **Tap per inserire il suono e l'azione**:
@@ -255,7 +255,7 @@ Un esempio classico è una sala concerti. Quando un listener si trova al di fuor
 
 #### <a name="instructions"></a>Istruzioni
 
-* Nel pannello **gerarchia** espandere ologrammcollection  e selezionare **P0LY**.
+* Nel pannello **gerarchia** espandere **ologrammcollection** e selezionare **P0LY**.
 * Nel pannello di **controllo** fare clic su **Aggiungi componente** e Aggiungi **emettitore audio**.
 
 La classe Emittor audio fornisce le funzionalità seguenti:
@@ -270,7 +270,7 @@ Il metodo RaycastNonAlloc viene utilizzato come ottimizzazione delle prestazioni
 
 Si noti che AudioEmitter viene aggiornato in base alle scale temporali umane, anziché ai singoli frame. Questa operazione viene eseguita perché gli utenti in genere non si spostano abbastanza rapidamente affinché l'effetto debba essere aggiornato con una frequenza maggiore di ogni trimestre o metà di un secondo. Gli ologrammi che si teletrasportano rapidamente da una posizione a un'altra possono suddividere l'illusione.
 
-* Nel pannello **gerarchia** espandere ologrammcollection .
+* Nel pannello **gerarchia** espandere **ologrammcollection**.
 * Espandere **EnergyHub** e selezionare **BlobOutside**.
 * Nel pannello di **controllo** fare clic su **Aggiungi componente** e aggiungere **occlusione audio**.
 * In **occlusione audio**impostare **frequenza di taglio** su **1500**.
@@ -299,17 +299,17 @@ Quando più occluders si trovano nel percorso tra l'utente e il **AudioEmitter**
 
 Quando più occluders si trovano nel percorso tra l'utente e il **AudioEmitter**, il pass-through del volume viene applicato in aggiunta.
 
-* Nel pannello **gerarchia** selezionare managers .
+* Nel pannello **gerarchia** selezionare **Managers**.
 * Nel pannello **Inspector** espandere gestore di **input vocale**.
-* In **gestore di input vocale**espandere **Vai**a addebiti.
+* In **gestore di input vocale**espandere **Vai a addebiti**.
 * Modificare **Nessuna funzione** in **poliactions. GoCharge**.
 
-![Parola chiave Ricarica](images/gocharge.png)
+![Parola chiave: go charge](images/gocharge.png)
 
 * Espandi **.**
-* **Non modificare alcuna funzione** in poliactions **. Comeback**.
+* **Non modificare alcuna funzione** in **poliactions. Comeback**.
 
-![Parola chiave Vieni qui](images/comehere.png)
+![Parola chiave: qui](images/comehere.png)
 
 #### <a name="build-and-deploy"></a>Compilazione e distribuzione
 
@@ -405,7 +405,7 @@ Immaginando la combinazione di un imbuto invertito, con i suoni meno importanti 
 
 I Voice over sono uno scenario interessante. In base all'esperienza che si sta creando, potrebbe essere necessario disporre di un audio stereo (non localizzato) o di spatialize. Due esperienze pubblicate da Microsoft illustrano esempi eccellenti di ogni scenario.
 
-[HoloTour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) usa una voce stereo. Quando l'Assistente vocale descrive la posizione visualizzata, il suono è coerente e non varia in base alla posizione dell'utente. Ciò consente all'Assistente vocale di descrivere la scena senza togliere i suoni spaziali dell'ambiente.
+[HoloTour](https://www.microsoft.com/store/p/holotour/9nblggh5pj87) usa una voce stereo. Quando l'Assistente vocale descrive la posizione visualizzata, il suono è coerente e non varia in base alla posizione dell'utente. Ciò consente all'Assistente vocale di descrivere la scena senza togliere i suoni spaziali dell'ambiente.
 
 I [frammenti](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) utilizzano una voce con spazialità sotto forma di detective. La voce del detective viene usata per aiutare a attirare l'attenzione dell'utente su un importante indizio come se fosse presente un uomo reale nella stanza. Questo consente un senso ancora più approfondito dell'esperienza di risoluzione del mistero.
 
@@ -439,7 +439,7 @@ In Unity è possibile contrassegnare un file audio per il flusso nelle impostazi
 
 #### <a name="instructions"></a>Istruzioni
 
-* Nel pannello **gerarchia** espandere ologrammcollection  e selezionare Sottomondo .
+* Nel pannello **gerarchia** espandere **ologrammcollection** e selezionare **Sottomondo**.
 * Espandere **Underworld** e selezionare **VoiceSource**.
 * Nel pannello di **controllo** fare clic su **Aggiungi componente** e aggiungere **effetto voce utente**.
 
@@ -450,7 +450,7 @@ Verrà aggiunto un componente **audiosource** a **VoiceSource**.
 * Trascinare il dispositivo di scorrimento di **Blend spaziale** fino a **3D**oppure immettere **1** nella casella di modifica.
 * Espandere **impostazioni audio 3D**.
 * Impostare il **livello di Doppler** su **0**.
-* In **effetto voce utente**impostare **oggetto padre** sul Sottomondo  dalla scena.
+* In **effetto voce utente**impostare **oggetto padre** sul **Sottomondo** dalla scena.
 * Impostare **distanza massima** su **1**.
 
 L'impostazione della **distanza massima** indica all' **utente** il modo in cui la chiusura dell'utente deve essere l'oggetto padre prima che l'effetto venga attivato.
@@ -464,7 +464,7 @@ Le impostazioni precedenti configurano i parametri del **AudioChorusFilter** Uni
 
 * In **effetto voce utente**espandere **parametri Echo**.
 * Imposta **ritardo** su **300**
-* Imposta il **rapporto** di decadimento su **0,2**.
+* Imposta il **rapporto di decadimento** su **0,2**.
 * Impostare **volume audio originale** su **0**.
 
 Le impostazioni precedenti configurano i parametri del **AudioEchoFilter** Unity usato per fare in modo che la voce dell'utente sia Echo.
@@ -481,17 +481,17 @@ Lo script dell'effetto vocale utente è responsabile di:
 
 L'effetto voce utente usa il componente MIC Stream Selector, da [MixedRealityToolkit per Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity), per selezionare il flusso di voce di qualità elevata e instradarlo nel sistema audio di Unity.
 
-* Nel pannello **gerarchia** selezionare managers .
+* Nel pannello **gerarchia** selezionare **Managers**.
 * Nel pannello **Inspector** espandere gestore di **input vocale**.
 * In **gestore di input vocale**espandere **Mostra Sottomondo**.
 * Modificare **Nessuna funzione** in **UnderworldBase. OnEnable**.
 
-![Parola chiave Mostra Sottomondo](images/showunderworld.png)
+![Parola chiave: Show Underworld](images/showunderworld.png)
 
 * Espandi **Nascondi Sottomondo**.
 * Modificare **Nessuna funzione** in **UnderworldBase. ondisable**.
 
-![Parola chiave Nascondi Sottomondo](images/hideunderworld.png)
+![Parola chiave: Hide Underworld](images/hideunderworld.png)
 
 #### <a name="build-and-deploy"></a>Compilazione e distribuzione
 
@@ -514,6 +514,6 @@ Il Sottomondo verrà nascosto e verranno nuovamente visualizzati gli ologrammi n
 
 ## <a name="the-end"></a>La fine
 
-La procedura è stata completata. A questo punto è **stato completato lo spazio di 220: Audio**spaziale.
+Complimenti. A questo punto è stato completato il comportamento di **spatial 220: Spatial**.
 
 Ascolta il mondo e fai vivere le tue esperienze con i suoni.

@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, audio spaziale, progettazione, stile
-ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750308"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438284"
 ---
 # <a name="spatial-sound-design"></a>Progettazione di suoni spaziali
 
@@ -21,7 +21,7 @@ Se hai già interpretato [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Supporto di dispositivi
 
@@ -100,12 +100,12 @@ L'attenuazione della distanza si verifica rapidamente all'interno del primo cont
 
 **Individuazione oggetti e interfacce utente**
 
-Quando si usano i segnali audio per indirizzare l'attenzione dell'utente oltre la visualizzazione corrente, il suono dovrebbe essere udibile e prominente nella combinazione, oltre ai suoni stereo e a tutti gli altri suoni spaziali che potrebbero distrarre dalla cue audio direzionale. Per i suoni e la musica associati a un elemento dell'interfaccia utente (ad esempio un menu), l'emettitore di suoni dovrebbe essere collegato a tale oggetto. Lo stereo e altre operazioni di riproduzione audio non posizionale possono rendere gli elementi spaziali difficili da individuare (vedere sopra: Evitare la maschera spaziale).
+Quando si usano i segnali audio per indirizzare l'attenzione dell'utente oltre la visualizzazione corrente, il suono dovrebbe essere udibile e prominente nella combinazione, oltre ai suoni stereo e a tutti gli altri suoni spaziali che potrebbero distrarre dalla cue audio direzionale. Per i suoni e la musica associati a un elemento dell'interfaccia utente (ad esempio un menu), l'emettitore di suoni dovrebbe essere collegato a tale oggetto. Stereo e altre operazioni di riproduzione audio non posizionale possono rendere gli elementi spaziali difficili da individuare (vedere sopra: evitare la maschera spaziale).
 
 **Usare il suono spaziale sul suono 3D standard per quanto possibile**
 
 In realtà mista, per la migliore esperienza utente, l'audio 3D dovrebbe essere ottenuta usando un suono spaziale anziché le tecnologie audio 3D legacy. In generale, la spazializzazione migliorata vale la pena del piccolo costo della CPU rispetto al suono 3D standard. L'audio 3D standard può essere usato per i suoni con priorità bassa, i suoni che sono spaziali ma non necessariamente collegati a un oggetto fisico o virtuale e gli oggetti che non sono mai necessari all'utente per interagire con l'app.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Audio spaziale](spatial-sound.md)
 * [Mapping spaziale](spatial-mapping.md)

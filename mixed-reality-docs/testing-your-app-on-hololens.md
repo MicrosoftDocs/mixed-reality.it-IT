@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, test
-ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507903"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437391"
 ---
 # <a name="testing-your-app-on-hololens"></a>Test dell'app in HoloLens
 
 Il test delle applicazioni HoloLens è molto simile a quello delle applicazioni Windows. Tutte le aree comuni devono essere considerate (funzionalità, interoperabilità, prestazioni, sicurezza, affidabilità e così via). Esistono, tuttavia, alcune aree che richiedono una particolare gestione o attenzione ai dettagli che non vengono in genere osservati nelle app per PC o telefoni. Le app olografiche devono essere eseguite senza problemi in un set eterogeneo di ambienti. Devono inoltre mantenere sempre le prestazioni e la comodità degli utenti. Le linee guida per il test di queste aree sono descritte in dettaglio in questo argomento.
 
-## <a name="performance"></a>Prestazioni
+## <a name="performance"></a>Performance
 
 Le app olografiche devono essere eseguite senza problemi in un set eterogeneo di ambienti. Devono inoltre mantenere sempre le prestazioni e la comodità degli utenti. Le prestazioni sono molto importanti per l'esperienza dell'utente con un'app olografica a cui è dedicato un intero argomento. Assicurarsi di leggere e seguire le [prestazioni di comprensione per la realtà mista](understanding-performance-for-mixed-reality.md)
 
@@ -37,23 +37,21 @@ Le app olografiche devono essere eseguite senza problemi in un set eterogeneo di
 ![Matrice di test dell'ambiente per lo sviluppo di app HoloLens](images/environment-matrix-600px.png)
 
 ## <a name="comfort"></a>Comfort
-1. **Ritagliare i piani.** Prestare attenzione alla posizione in cui [viene eseguito il rendering](hologram-stability.md#hologram-render-distances)degli ologrammi.
+1. **Ritagliare i piani.** Prestare attenzione alla posizione in cui [viene eseguito il rendering degli ologrammi](hologram-stability.md#hologram-render-distances).
 2. **Evitare lo spostamento virtuale incoerente con lo spostamento Head effettivo.** Evitare lo spostamento della fotocamera in modo che non sia rappresentativo del movimento effettivo dell'utente. Se l'app richiede lo spostamento dell'utente tramite una scena, rendere prevedibile il movimento, ridurre al minimo l'accelerazione e consentire all'utente di controllare il movimento.
-3. **Seguire le linee guida per la qualità degli ologrammi.** Le app performanti che implementano le [linee guida](hologram-stability.md) relative alla qualità olografica hanno una minore probabilità di causare disagio nell'utente.
+3. **Seguire le linee guida per la qualità degli ologrammi.** Le app performanti che implementano le [linee guida relative alla qualità olografica](hologram-stability.md) hanno una minore probabilità di causare disagio nell'utente.
 4. **Distribuisci gli ologrammi orizzontalmente anziché verticalmente.** Forzare l'utente a dedicare lunghi periodi di tempo alla ricerca verso l'alto o verso il basso può causare fatica nel collo.
+
 
 ## <a name="input"></a>Input
 
-### <a name="gaze-and-gestures"></a>Sguardi e movimenti
+### <a name="interaction-models"></a>Modelli di interazione
 
-[Sguardi](gaze.md) è una forma di base di input in HoloLens che consente agli utenti di puntare agli ologrammi e all'ambiente. È possibile visualizzare visivamente la destinazione dello sguardo in base alla posizione del cursore. È normale associare il cursore a sguardi con un cursore del mouse.
-
-I [movimenti](gestures.md) sono la modalità di interazione con gli ologrammi, ad esempio un clic del mouse. Nella maggior parte dei casi, i comportamenti del mouse e del tocco sono gli stessi, ma è importante comprendere e convalidare quando si differenziano.
+Assicurarsi che le interazioni ologramma funzionino con il [modello di interazione](interaction-fundamentals.md)scelto.
+È inoltre consigliabile convalidare con diversi accessori, ad esempio mouse e tastiera, se questi accessori sono necessari per supportare l'accessibilità.
 
 **Verificare quando l'app ha un comportamento diverso con il mouse e il tocco.** In questo modo si identificano le incoerenze e si aiutano a prendere decisioni di progettazione per rendere più naturale l'esperienza per gli utenti. Ad esempio, l'attivazione di un'azione in base al passaggio del mouse.
 
-> [!NOTE]
-> Altre indicazioni specifiche per HoloLens 2 [saranno presto](index.md#news-and-notes)disponibili.
 
 ### <a name="custom-voice-commands"></a>Comandi vocali personalizzati
 
@@ -114,5 +112,5 @@ Alcuni sviluppatori di app potrebbero voler automatizzare il test delle proprie 
 
 Per offrire all'app la possibilità di essere [pubblicata in Windows Store](submitting-an-app-to-the-microsoft-store.md), convalidarla e testarla localmente prima di inviarla per la certificazione. Se l'app è destinata al gruppo di dispositivi Windows. olografico, il [Kit di certificazione app Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) eseguirà solo i test di analisi statica locali nel PC. Nessun test verrà eseguito nella HoloLens.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Invio di un'app a Windows Store](submitting-an-app-to-the-microsoft-store.md)

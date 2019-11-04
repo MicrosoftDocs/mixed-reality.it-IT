@@ -3,22 +3,22 @@ title: MR Spatial 230-mapping spaziale
 description: Seguire questa procedura dettagliata di codifica usando Unity, Visual Studio e HoloLens per informazioni dettagliate sui concetti relativi al mapping spaziale.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, esercitazione, mapping spaziale, superficie di ricostruzione, mesh
-ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: cf4a2dd3e5eb74c0aaf849442e5f5e404d7cb661
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993555"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434576"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
+>Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
 
 <br>
 
-# <a name="mr-spatial-230-spatial-mapping"></a>MR Spatial 230: Mapping spaziale
+# <a name="mr-spatial-230-spatial-mapping"></a>MR Spatial 230: mapping spaziale
 
 Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virtuale insegnando gli ologrammi sull'ambiente. In MR Spatial 230 (Project Planetarium) si apprenderà come:
 
@@ -36,7 +36,7 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>MR Spatial 230: Mapping spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>MR Spatial 230: mapping spaziale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
@@ -46,7 +46,7 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 
 * Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md).
 * Alcune funzionalità C# di programmazione di base.
-* Sono state completate le nozioni di [base 101](holograms-101.md).
+* Sono state completate le [nozioni di base 101](holograms-101.md).
 * Un dispositivo HoloLens [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode).
 
 ### <a name="project-files"></a>File di progetto
@@ -62,7 +62,7 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 
 ### <a name="notes"></a>Note
 
-* "Enable Just My Code" in Visual Studio deve essere disabilitato (deselezionato) in strumenti > Opzioni > il debug per raggiungere i punti di interruzione nel codice.
+* "Enable Just My Code" in Visual Studio deve essere disabilitato (*deselezionato*) in strumenti > Opzioni > il debug per raggiungere i punti di interruzione nel codice.
 
 ## <a name="unity-setup"></a>Configurazione di Unity
 
@@ -77,7 +77,7 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 * Nel pannello **Inspector** trovare e selezionare l'icona di **Windows Store** verde.
 * Espandere **altre impostazioni**.
 * Nella sezione **rendering** , controllare l'opzione **Virtual Reality supported** .
-* Verificare che **Windows olografico** sia visualizzato nell'elenco degli **SDK di realtà virtuale**. In caso contrario, selezionare **+** il pulsante nella parte inferiore dell'elenco e scegliere **Windows olografico**.
+* Verificare che **Windows olografico** sia visualizzato nell'elenco degli **SDK di realtà virtuale**. In caso contrario, selezionare il pulsante **+** nella parte inferiore dell'elenco e scegliere **Windows olografico**.
 * Espandere **impostazioni di pubblicazione**.
 * Nella sezione **funzionalità** selezionare le impostazioni seguenti:
     * InternetClientServer
@@ -89,19 +89,19 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 * Passare a **asset > importa pacchetto > pacchetto personalizzato**.
 * Passare alla cartella **. ..\holographicacademy-holograms-230-SpatialMapping\Starting** .
 * Fare clic su **Planetarium. file unitypackage Tools**.
-* Fare clic su **Apri**.
+* Fai clic su **Apri**.
 * Verrà visualizzata una finestra **Importa pacchetto Unity** , fare clic sul pulsante **Importa** .
 * Attendere che Unity importi tutti gli asset necessari per completare il progetto.
 * Nel pannello **gerarchia** eliminare la **fotocamera principale**.
 * Nel pannello del **progetto** , **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** Folder, trovare l'oggetto **Main camera** .
 * Trascinare e rilasciare il prefabbricato della **fotocamera principale** nel pannello **gerarchia** .
 * Nel pannello **gerarchia** eliminare l'oggetto **direzionale Light** .
-* Nel pannello **progetto** , nella  cartella ologrammi individuare l'oggetto **cursore** .
+* Nel pannello **progetto** , nella cartella **ologrammi** individuare l'oggetto **cursore** .
 * Trascinare & rilasciare il prefabbricato del **cursore** nella **gerarchia**.
 * Nel pannello **gerarchia** selezionare l'oggetto **cursore** .
 * Nel pannello di **controllo** fare clic sull'elenco a discesa **livello** e selezionare **modifica livelli...** .
 * Nome **utente livello 31** come "**SpatialMapping**".
-* Salvare la nuova scena: **File > Salva scena con nome...**
+* Salva la nuova scena: **File > Salva scena con nome...**
 * Fare clic su **nuova cartella** e denominare la cartella **Scenes**.
 * Denominare il file "**Planetarium**" e salvarlo nella cartella **Scenes** .
 
@@ -110,16 +110,19 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 >[!VIDEO https://www.youtube.com/embed/888oW51z_cE]
 
 **Obiettivi**
+
 * Informazioni su SurfaceObserver e sul modo in cui le impostazioni incidono sull'esperienza e sulle prestazioni.
 * Consente di creare un'esperienza di analisi delle chat per raccogliere le maglie della stanza.
 
 **Istruzioni**
+
 * Nella cartella **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** del pannello del **progetto** individuare il prefabbricato **SpatialMapping** .
 * Trascinare & rilasciare la prefabbricazione **SpatialMapping** nel pannello **gerarchia** .
 
 **Compilazione e distribuzione (parte 1)**
+
 * In Unity selezionare **File > impostazioni di compilazione**.
-* Fare clic su **Aggiungi scene aperte** per  aggiungere la scena planetaria alla compilazione.
+* Fare clic su **Aggiungi scene aperte** per aggiungere la scena **planetaria** alla compilazione.
 * Selezionare **piattaforma UWP (Universal Windows Platform)** nell'elenco **piattaforma** e fare clic su **Cambia piattaforma**.
 * Impostare **SDK** su **Universal 10** e **tipo di compilazione UWP** su **D3D**.
 * Controllare **i C# progetti Unity**.
@@ -142,21 +145,23 @@ Il [mapping spaziale](spatial-mapping.md) combina il mondo reale e il mondo virt
 **Compilazione e distribuzione (parte 2)**
 
 Si analizzerà ora il modo in cui il mapping spaziale può influire sulle prestazioni.
-* In Unity selezionare **finestra >** Profiler.
+
+* In Unity selezionare **finestra > Profiler**.
 * Fare clic su **Aggiungi Profiler > GPU**.
-* Fare clic su **> <Enter IP>profiler attivo** .
+* Fare clic su **Active Profiler > <Enter IP>** .
 * Immettere l' **indirizzo IP** del HoloLens.
-* Fare clic su **Connetti**.
+* Fai clic su **Connetti**.
 * Osservare il numero di millisecondi impiegato dalla GPU per eseguire il rendering di un frame.
 * Arrestare l'esecuzione dell'applicazione nel dispositivo.
 * Tornare a Visual Studio e aprire **SpatialMappingObserver.cs**. Si troverà nella cartella HoloToolkit\SpatialMapping del progetto di assembly-CSharp (Windows universale).
-* Trovare la funzione **svegli ()** e aggiungere la riga di codice seguente: **TrianglesPerCubicMeter = 1200;**
-* Ridistribuire il progetto nel dispositivo e quindi **riconnettere il**Profiler. Osservare la modifica del numero di millisecondi per il rendering di un frame.
+* Trovare la funzione **sveglie ()** e aggiungere la riga di codice seguente: **TrianglesPerCubicMeter = 1200;**
+* Ridistribuire il progetto nel dispositivo e quindi **riconnettere il profiler**. Osservare la modifica del numero di millisecondi per il rendering di un frame.
 * Arrestare l'esecuzione dell'applicazione nel dispositivo.
 
 **Salva e carica in Unity**
 
 Infine, salvare il mesh della stanza e caricarlo in Unity.
+
 * Tornare a Visual Studio e rimuovere la riga **TrianglesPerCubicMeter** aggiunta nella funzione **svegli ()** durante la sezione precedente.
 * Ridistribuire il progetto nel dispositivo. A questo punto dovrebbe essere in esecuzione con **500** triangoli per ogni contatore cubo.
 * Aprire un browser e immettere in HoloLens IPAddress per passare al portale del **dispositivo Windows**.
@@ -171,22 +176,24 @@ Infine, salvare il mesh della stanza e caricarlo in Unity.
 * Fare clic sul cerchio a destra della proprietà del **modello room** .
 * Individuare e selezionare l'oggetto **SRMesh** e quindi chiudere la finestra.
 * Verificare che la proprietà **modello room** nel pannello **Inspector** sia ora impostata su **SRMesh**.
-* Premere il  pulsante Riproduci per attivare la modalità di anteprima di Unity.
+* Premere il pulsante **Riproduci** per attivare la modalità di anteprima di Unity.
 * Il componente SpatialMapping caricherà le mesh dal modello di chat room salvato per poterle usare in Unity.
 * Passare alla visualizzazione **scena** per visualizzare tutto il modello di chat room visualizzato con wireframe shader.
-* Premere di  nuovo il pulsante Riproduci per uscire dalla modalità di anteprima.
+* Premere di nuovo il pulsante **Riproduci** per uscire dalla modalità di anteprima.
 
-**NOTA:** Alla successiva immissione della modalità di anteprima in Unity, verrà caricata la mesh locale salvata per impostazione predefinita.
+**Nota:** Alla successiva immissione della modalità di anteprima in Unity, verrà caricata la mesh locale salvata per impostazione predefinita.
 
 ## <a name="chapter-2---visualization"></a>Capitolo 2-visualizzazione
 
 >[!VIDEO https://www.youtube.com/embed/RnkvXl-aXD4]
 
 **Obiettivi**
+
 * Informazioni sulle nozioni di base degli shader.
 * Visualizza l'ambiente circostante.
 
 **Istruzioni**
+
 * Nel pannello **gerarchia** di Unity selezionare l'oggetto **SpatialMapping** .
 * Nel pannello **Inspector** trovare il componente **Spatial mapping Manager (script)** .
 * Fare clic sul cerchio a destra della proprietà **superficie materiale** .
@@ -198,6 +205,7 @@ Infine, salvare il mesh della stanza e caricarlo in Unity.
     3. Imposta il colore del pixel per il rendering.
 
 **Compilazione e distribuzione**
+
 * Tornare a Unity e premere **Play** per passare alla modalità di anteprima.
 * Il rendering delle linee blu verrà eseguito su tutte le superfici verticali della mesh della stanza, che viene caricata automaticamente dai dati di analisi salvati.
 * Passare alla scheda **scena** per modificare la visualizzazione della chat room e vedere come viene visualizzata l'intera mesh room in Unity.
@@ -205,7 +213,7 @@ Infine, salvare il mesh della stanza e caricarlo in Unity.
 * Modificare alcune proprietà e vedere come vengono visualizzate le modifiche nell'editor di Unity.
     * Nel pannello **Inspector** modificare il valore **LineScale** in modo che le righe risultino più spesse o più sottili.
     * Nel pannello **Inspector** regolare il valore **LinesPerMeter** per modificare il numero di righe visualizzate in ogni parete.
-* Fare  di nuovo clic su Riproduci per uscire dalla modalità anteprima.
+* Fare di nuovo clic su **Riproduci** per uscire dalla modalità anteprima.
 * Eseguire la compilazione e la distribuzione in HoloLens e osservare come viene visualizzato il rendering dello shader su superfici reali.
 
 Unity è un ottimo lavoro di anteprima dei materiali, ma è sempre una buona idea estrarre il rendering nel dispositivo.
@@ -215,22 +223,26 @@ Unity è un ottimo lavoro di anteprima dei materiali, ma è sempre una buona ide
 >[!VIDEO https://www.youtube.com/embed/kaUKiNiDxwY]
 
 **Obiettivi**
+
 * Informazioni sulle tecniche per elaborare i dati di mapping spaziali da usare nell'applicazione.
 * Analizzare i dati del mapping spaziale per individuare i piani e rimuovere i triangoli.
 * Usare i piani per la posizione degli ologrammi.
 
 **Istruzioni**
+
 * Nel pannello del **progetto** di Unity, nella cartella **ologrammi** , trovare l'oggetto **SpatialProcessing** .
 * Trascinare & rilasciare l'oggetto **SpatialProcessing** nel pannello **gerarchia** .
 
 Il preprocessore SpatialProcessing include componenti per l'elaborazione dei dati di mapping spaziali. **SurfaceMeshesToPlanes.cs** troverà e genererà i piani in base ai dati di mapping spaziali. Microsoft utilizzerà i piani nell'applicazione per rappresentare i muri, i piani e i tetti. Questa prefabbricata include anche **RemoveSurfaceVertices.cs** che possono rimuovere i vertici dalla mesh di mapping spaziale. Questo può essere usato per creare buchi nella mesh o per rimuovere i triangoli superflui che non sono più necessari, perché è invece possibile usare i piani.
+
 * Nel pannello del **progetto** di Unity, cartella **olografici** , trovare l'oggetto **Spacecollection** .
-* Trascinare e rilasciare l'  oggetto spaziatore nel pannello **gerarchia** .
+* Trascinare e rilasciare l'oggetto **spaziatore** nel pannello **gerarchia** .
 * Nel pannello **gerarchia** selezionare l'oggetto **SpatialProcessing** .
 * Nel pannello **Inspector** trovare il componente **Play Space Manager (script)** .
 * Fare doppio clic su **PlaySpaceManager.cs** per aprirlo in Visual Studio.
 
 PlaySpaceManager.cs contiene codice specifico dell'applicazione. Si aggiungeranno funzionalità a questo script per abilitare il comportamento seguente:
+
 1. Interrompere la raccolta dei dati di mapping spaziali dopo il superamento del limite di tempo di analisi (10 secondi).
 2. Elaborare i dati di mapping spaziale:
     1. Usare SurfaceMeshesToPlanes per creare una rappresentazione più semplice del mondo come piani (muri, piani, soffitti e così via).
@@ -384,7 +396,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
         {
             // We do not have enough floors/walls to place our holograms on...
 
-            // 3.a: Re-enter scanning mode so the user can find more surfaces by 
+            // 3.a: Re-enter scanning mode so the user can find more surfaces by
             // calling StartObserver() on the SpatialMappingManager.Instance.
             SpatialMappingManager.Instance.StartObserver();
 
@@ -434,12 +446,13 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 ```
 
 **Compilazione e distribuzione**
-* Prima di eseguire la distribuzione in HoloLens,  premere il pulsante Riproduci in Unity per attivare la modalità di riproduzione.
+
+* Prima di eseguire la distribuzione in HoloLens, premere il pulsante **Riproduci** in Unity per attivare la modalità di riproduzione.
 * Dopo che la mesh Room è stata caricata dal file, attendere 10 secondi prima che l'elaborazione venga avviata sulla mesh di mapping spaziale.
 * Al termine dell'elaborazione, i piani verranno visualizzati per rappresentare il piano, i muri, il soffitto e così via.
 * Una volta trovati tutti i piani, viene visualizzato un sistema solare in una tabella di piano vicino alla fotocamera.
 * Verranno visualizzati due poster anche accanto alla fotocamera. Passare alla scheda **scena** se non è possibile visualizzarli in modalità di **gioco** .
-* Premere di  nuovo il pulsante Riproduci per uscire dalla modalità di riproduzione.
+* Premere di nuovo il pulsante **Riproduci** per uscire dalla modalità di riproduzione.
 * Compilare e distribuire in HoloLens, come di consueto.
 * Attendere il completamento dell'analisi e dell'elaborazione dei dati di mapping spaziali.
 * Dopo aver visualizzato i piani, provare a trovare il sistema solare e i poster nel mondo.
@@ -449,17 +462,20 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 >[!VIDEO https://www.youtube.com/embed/Srhtpid1uZc]
 
 **Obiettivi**
+
 * Determinare se un ologramma si adatta a una superficie.
 * Fornire commenti e suggerimenti all'utente quando un ologramma può o non può adattarsi a una superficie.
 
 **Istruzioni**
+
 * Nel pannello **gerarchia** di Unity selezionare l'oggetto **SpatialProcessing** .
 * Nel pannello **Inspector** trovare il componente **Surface Meshs to Planes (script)** .
 * Per cancellare la selezione, modificare la proprietà **piani di estrazione** in **Nessun** elemento.
 * Modificare la proprietà dei **piani di disegna** su **Wall**, in modo che venga eseguito il rendering solo dei piani di muro.
 * Nel pannello **progetto** , cartella **script** , fare doppio clic su **Placeable.cs** per aprirlo in Visual Studio.
 
-Lo  script posizionabile è già collegato ai manifesti e alla casella di proiezione creati al termine della ricerca del piano. È sufficiente rimuovere il commento dal codice e questo script consentirà di ottenere i risultati seguenti:
+Lo script **posizionabile** è già collegato ai manifesti e alla casella di proiezione creati al termine della ricerca del piano. È sufficiente rimuovere il commento dal codice e questo script consentirà di ottenere i risultati seguenti:
+
 1. Determinare se un ologramma si adatta a una superficie Raycasting dal centro e da quattro angoli del cubo di delimitazione.
 2. Controllare la normale della superficie per determinare se è sufficientemente uniforme per consentire l'ologramma in cui si trova lo scaricamento.
 3. Eseguire il rendering di un cubo di delimitazione intorno all'ologramma per visualizzarne le dimensioni effettive durante la posizione.
@@ -482,7 +498,7 @@ using Academy.HoloToolkit.Unity;
 /// </summary>
 public enum PlacementSurfaces
 {
-    // Horizontal surface with an upward pointing normal.    
+    // Horizontal surface with an upward pointing normal.
     Horizontal = 1,
 
     // Vertical surface with a normal facing the user.
@@ -909,7 +925,7 @@ public class Placeable : MonoBehaviour
     /// The target surface's normal vector.
     /// </param>
     /// <remarks>
-    /// The aligntoVerticalSurface parameter is ignored if the object
+    /// The alignToVerticalSurface parameter is ignored if the object
     /// is to be placed on a horizontalSurface
     /// </remarks>
     private void OrientObject(bool alignToVerticalSurface, Vector3 surfaceNormal)
@@ -1006,7 +1022,7 @@ public class Placeable : MonoBehaviour
             shadowAsset.GetComponent<Renderer>().sharedMaterial = NotPlaceableShadowMaterial;
         }
 
-        // Show the shadow asset as appropriate.        
+        // Show the shadow asset as appropriate.
         if (position != Vector3.zero)
         {
             // Position the shadow a small distance from the target surface, along the normal.
@@ -1052,6 +1068,7 @@ public class Placeable : MonoBehaviour
 ```
 
 **Compilazione e distribuzione**
+
 * Come in precedenza, compilare il progetto e distribuirlo in HoloLens.
 * Attendere il completamento dell'analisi e dell'elaborazione dei dati di mapping spaziali.
 * Quando viene visualizzato il sistema solare, osservare la casella di proiezione seguente ed eseguire un movimento di selezione per spostarlo. Mentre la casella di proiezione è selezionata, un cubo di delimitazione sarà visibile intorno alla casella di proiezione.
@@ -1063,24 +1080,28 @@ public class Placeable : MonoBehaviour
 >[!VIDEO https://www.youtube.com/embed/6Xrzh_w-7SE]
 
 **Obiettivi**
+
 * Determinare se un ologramma è nascosto dalla mesh di mapping spaziale.
 * Applicare diverse tecniche di occlusione per ottenere un effetto divertente.
 
 **Istruzioni**
 
 In primo luogo, si consentirà alla rete di mapping spaziale di occludere altri ologrammi senza occlusione il mondo reale:
+
 * Nel pannello **gerarchia** selezionare l'oggetto **SpatialProcessing** .
 * Nel pannello **Inspector** trovare il componente **Play Space Manager (script)** .
 * Fare clic sul cerchio a destra della proprietà **Material secondaria** .
-* Trovare e selezionare il  materiale di occlusione e chiudere la finestra.
+* Trovare e selezionare il materiale di **occlusione** e chiudere la finestra.
 
 Successivamente, si aggiungerà un comportamento speciale a Earth, in modo che abbia un'evidenziazione blu ogni volta che diventa bloccato da un altro ologramma (ad esempio il sole) o dalla mesh di mapping spaziale:
+
 * Nel pannello **progetto** , nella cartella **ologrammi** , espandere l'oggetto **Solarsystem** .
 * Fare clic su **Earth**.
 * Nel pannello **Inspector** trovare il materiale della terra (componente inferiore).
 * Nell' **elenco a discesa shader**impostare lo shader su **Custom > OcclusionRim**. Verrà eseguito il rendering di un'evidenziazione blu attorno alla terra ogni volta che viene nascosto da un altro oggetto.
 
 Infine, si Abilita un effetto di visione x-ray per i pianeti nel nostro sistema solare. È necessario modificare **PlanetOcclusion.cs** (presente nella cartella Scripts\SolarSystem) per ottenere i risultati seguenti:
+
 1. Determinare se un pianeta è bloccato dal livello SpatialMapping (maglie e piani della stanza).
 2. Mostra la rappresentazione wireframe di un pianeta ogni volta che viene bloccato dal livello SpatialMapping.
 3. Nascondere la rappresentazione wireframe di un pianeta quando non è bloccata dal livello SpatialMapping.
@@ -1179,6 +1200,7 @@ public class PlanetOcclusion : MonoBehaviour
 ```
 
 **Compilazione e distribuzione**
+
 * Compilare e distribuire l'applicazione in HoloLens, come di consueto.
 * Attendere che l'analisi e l'elaborazione dei dati del mapping spaziale siano completate (le linee blu verranno visualizzate sui muri).
 * Trovare e selezionare la casella di proiezione del sistema solare, quindi impostare la casella accanto a una parete o dietro un contatore.
@@ -1188,7 +1210,8 @@ public class PlanetOcclusion : MonoBehaviour
 
 ## <a name="the-end"></a>La fine
 
-La procedura è stata completata. A questo punto è **stato completato lo spazio di 230: Mapping**spaziale.
+Complimenti. A questo punto è stato completato il **mapping spaziale 230: mapping spaziale**.
+
 * Si sa come analizzare l'ambiente e caricare i dati di mapping spaziale in Unity.
 * Si conoscono le nozioni di base degli shader e il modo in cui è possibile usare i materiali per visualizzare nuovamente il mondo.
 * Sono state apprese le nuove tecniche di elaborazione per individuare i piani e rimuovere i triangoli da una mesh.

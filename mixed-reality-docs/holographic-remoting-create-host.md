@@ -3,15 +3,15 @@ title: Scrittura di un'app host di comunicazione remota olografica
 description: Creando un contenuto remoto dell'app host di comunicazione remota olografica, di cui viene eseguito il rendering in un computer remoto, può essere trasmesso a HoloLens 2. Questo articolo descrive il modo in cui è possibile ottenere questo risultato.
 author: bethau
 ms.author: bethau
-ms.date: 08/01/2019
+ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 6b0f92fce1099ec98d87100e015de9442bff6bd2
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: e296e5847849bb87f76a7187c3f8ea36a1d681e1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122027"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434306"
 ---
 # <a name="writing-a-holographic-remoting-host-app"></a>Scrittura di un'app host di comunicazione remota olografica
 
@@ -29,7 +29,7 @@ Una tipica connessione remota avrà una bassa di 50 ms di latenza. L'App Player 
 Un punto di partenza efficace è un'app desktop o UWP basata su DirectX funzionante che è destinata all'API di realtà mista di Windows. Per informazioni dettagliate, vedere [Cenni preliminari sullo sviluppo DirectX](directx-development-overview.md). Il [ C++ modello di progetto olografico](creating-a-holographic-directx-project.md) è un punto di partenza valido.
 
 >[!IMPORTANT]
->Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com/en-us/windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Apartment a thread singolo](https://docs.microsoft.com/en-us/windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si C++USA/WinRT [WinRT:: init_apartment](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/get-started) , un apartment multithread è il valore predefinito.
+>Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Apartment a thread singolo](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si C++USA/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) , un apartment multithread è il valore predefinito.
 
 
 
@@ -75,7 +75,7 @@ CreateRemoteContext(m_remoteContext, 20000, false, PreferredVideoCodec::Default)
 >[!WARNING]
 >La comunicazione remota olografica funziona sostituendo il runtime della realtà mista di Windows che fa parte di Windows con un runtime specifico di .NET Remoting. Questa operazione viene eseguita durante la creazione del contesto remoto. Per questo motivo qualsiasi chiamata a qualsiasi API di realtà mista di Windows prima di creare il contesto remoto può causare un comportamento imprevisto. L'approccio consigliato consiste nel creare il contesto remoto il prima possibile prima di interagire con qualsiasi API di realtà mista. Non combinare mai oggetti creati o recuperati tramite qualsiasi API di realtà mista di Windows prima della chiamata a CreateRemoteContext con gli oggetti creati o recuperati in seguito.
 
-Successivamente, è necessario creare lo spazio olografico. Non è necessario specificare un CoreWindow. Le app desktop che non dispongono di un CoreWindow possono semplicemente passare ```nullptr```un.
+Successivamente, è necessario creare lo spazio olografico. Non è necessario specificare un CoreWindow. Le app desktop che non dispongono di un CoreWindow possono semplicemente passare un ```nullptr```.
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(nullptr);
@@ -89,7 +89,7 @@ La connessione può essere eseguita in uno dei due modi seguenti.
 1) L'app host si connette al lettore in esecuzione sul dispositivo.
 2) Il lettore in esecuzione sul dispositivo si connette all'app host.
 
-Per stabilire una connessione dall'app host a HoloLens 2, chiamare il ```Connect``` metodo sul contesto remoto specificando il nome host e la porta. La porta usata dal lettore di comunicazione remota olografica è **8265**.
+Per stabilire una connessione dall'app host a HoloLens 2, chiamare il metodo ```Connect``` nel contesto remoto specificando il nome host e la porta. La porta usata dal lettore di comunicazione remota olografica è **8265**.
 
 ```cpp
 try
@@ -103,12 +103,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Come per qualsiasi C++API ```Connect``` /WinRT, può generare un WinRT:: hresult_error che deve essere gestito.
+>Come per qualsiasi C++API/WinRT ```Connect``` possibile generare un WinRT:: hresult_error che deve essere gestito.
 
 >[!TIP]
->Per evitare di [ C++](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/) usare la proiezione del linguaggio ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` /WinRT, è possibile includere il file che si trova all'interno del pacchetto NuGet remoto olografico. Contiene le dichiarazioni delle interfacce COM sottostanti. Tuttavia, è C++consigliabile usare/WinRT.
+>Per evitare di [ C++](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) usare la proiezione del linguaggio/WinRT, è possibile includere il file ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` che si trova all'interno del pacchetto NuGet remoto olografico. Contiene le dichiarazioni delle interfacce COM sottostanti. Tuttavia, è C++consigliabile usare/WinRT.
 
-L'ascolto delle connessioni in ingresso nell'app host può essere eseguito chiamando il ```Listen``` metodo. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati **8265** e **8266** .
+L'ascolto delle connessioni in ingresso nell'app host può essere eseguito chiamando il metodo ```Listen```. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati **8265** e **8266** .
 
 ```cpp
 try
@@ -122,12 +122,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Il ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` contenuto del pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
+>Il ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` nel pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
 
 ## <a name="handling-remoting-specific-events"></a>Gestione di eventi specifici della comunicazione remota
 
 Il contesto remoto espone tre eventi che sono importanti per monitorare lo stato di una connessione.
-1) OnConnected: Attivato quando una connessione al dispositivo è stata stabilita correttamente.
+1) OnConnected: attivato quando una connessione al dispositivo è stata stabilita correttamente.
 ```cpp
 winrt::weak_ref<winrt::Microsoft::Holographic::AppRemoting::IRemoteContext> remoteContextWeakRef = m_remoteContext;
 
@@ -138,7 +138,7 @@ m_onConnectedEventRevoker = m_remoteContext.OnConnected(winrt::auto_revoke, [thi
     }
 });
 ```
-2) Disconnected: Attivato se una connessione stabilita è chiusa o non è stato possibile stabilire una connessione.
+2) Disconnected: attivato se una connessione stabilita è chiusa o non è stato possibile stabilire una connessione.
 ```cpp
 m_onDisconnectedEventRevoker =
     m_remoteContext.OnDisconnected(winrt::auto_revoke, [this, remoteContextWeakRef](ConnectionFailureReason failureReason) {
@@ -164,7 +164,7 @@ m_onDisconnectedEventRevoker =
         }
     });
 ```
-3) Onlistening: In attesa dell'avvio delle connessioni in ingresso.
+3) Onlistening: durante l'ascolto delle connessioni in ingresso viene avviato.
 ```cpp
 m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [this, remoteContextWeakRef]() {
     if (auto remoteContext = remoteContextWeakRef.get())
@@ -174,7 +174,7 @@ m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [thi
 });
 ```
 
-Inoltre, è possibile eseguire query sullo stato della connessione ```ConnectionState``` utilizzando la proprietà nel contesto remoto.
+Inoltre, è possibile eseguire query sullo stato della connessione utilizzando la proprietà ```ConnectionState``` nel contesto remoto.
 ```cpp
 auto connectionState = m_remoteContext.ConnectionState();
 ```
@@ -199,7 +199,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-Utilizzando un metodo helper asincrono è quindi possibile inizializzare il riconoscimento vocale remoto. Questa operazione deve essere eseguita in modo asincrono perché l'inizializzazione potrebbe richiedere una quantità di tempo considerevole. [Le operazioni di concorrenza e asincrone C++con/WinRT](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/concurrency) spiegano come creare funzioni asincrone C++con/WinRT.
+Utilizzando un metodo helper asincrono è quindi possibile inizializzare il riconoscimento vocale remoto. Questa operazione deve essere eseguita in modo asincrono perché l'inizializzazione potrebbe richiedere una quantità di tempo considerevole. [Le operazioni di concorrenza e asincrone C++con/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) spiegano come creare funzioni asincrone C++con/WinRT.
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -231,13 +231,13 @@ winrt::fire_and_forget InitializeSpeechAsync(
     dictionary.push_back(L"Default");
     dictionary.push_back(L"Aquamarine");
 
-    remoteSpeech.ApplyParameters(L"en-US", grammarFile, dictionary);
+    remoteSpeech.ApplyParameters(L"", grammarFile, dictionary);
 }
 ```
 
 Esistono due modi per specificare le frasi da riconoscere.
-1) Specifica all'interno di un file XML di grammatica vocale. Per informazioni dettagliate, vedere [come creare una grammatica XML di base](https://docs.microsoft.com/en-us/previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) .
-2) Specificare passandoli all'interno del vettore del dizionario ```ApplyParameters```a.
+1) Specifica all'interno di un file XML di grammatica vocale. Per informazioni dettagliate, vedere [come creare una grammatica XML di base](https://docs.microsoft.com//previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) .
+2) Specificare passandoli all'interno del vettore del dizionario per ```ApplyParameters```.
 
 All'interno del callback OnRecognizedSpeech è possibile elaborare gli eventi di riconoscimento vocale:
 
@@ -268,7 +268,7 @@ void SampleHostMain::OnRecognizedSpeech(const winrt::hstring& recognizedText)
 
 ## <a name="preview-streamed-content-locally"></a>Anteprima del contenuto trasmesso localmente
 
-Per visualizzare lo stesso contenuto nell'app host che viene inviato al dispositivo, è possibile ```OnSendFrame``` usare l'evento del contesto remoto. L' ```OnSendFrame``` evento viene attivato ogni volta che la libreria remota olografica invia il frame corrente al dispositivo remoto. Questo è il momento ideale per eseguire il contenuto, blit anche nella finestra desktop o UWP.
+Per visualizzare lo stesso contenuto nell'app host che viene inviato al dispositivo, è possibile usare ```OnSendFrame``` evento del contesto remoto. L'evento ```OnSendFrame``` viene attivato ogni volta che la libreria remota olografica invia il frame corrente al dispositivo remoto. Questo è il momento ideale per eseguire il contenuto, blit anche nella finestra desktop o UWP.
 
 ```cpp
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -291,14 +291,14 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
     });
 ```
 
-## <a name="optional-custom-data-channels"></a>Facoltativo: Canali di dati personalizzati
+## <a name="optional-custom-data-channels"></a>Facoltativo: canali di dati personalizzati
 
 I canali di dati personalizzati possono essere utilizzati per inviare dati utente tramite la connessione remota già stabilita. Per ulteriori informazioni, vedere [canali di dati personalizzati](holographic-remoting-custom-data-channels.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
 * [Stabilire una connessione sicura con la comunicazione remota olografica](holographic-remoting-secure-connection.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)
-* [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

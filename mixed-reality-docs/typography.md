@@ -6,19 +6,19 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, stile, carattere, tipografia, interfaccia utente, UX
-ms.openlocfilehash: cc8e25e9cd7ba41bed179328fe7198e935e65d76
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830007"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437410"
 ---
 # <a name="typography"></a>Tipografia
 
-Il testo è un elemento importante per la distribuzione di informazioni nell'esperienza dell'app. Proprio come la tipografia sulle schermate 2D, l'obiettivo è quello di essere chiaro e leggibile. Con l'aspetto tridimensionale della realtà mista, c'è la possibilità di influenzare il testo e l'esperienza utente complessiva in modo ancora più ampio.
-
 ![Esempio di tipografia in HoloLens](images/typography-cover.png)<br>
-*Esempio di tipografia in HoloLens*
+
+
+Il testo è un elemento importante per la distribuzione di informazioni nell'esperienza dell'app. Proprio come per la tipografia su schermi 2D, l'obiettivo è chiarezza e leggibilità. Grazie all'aspetto tridimensionale della realtà mista, è possibile influire sul testo e sull'esperienza utente complessiva in modo ancora più significativo.
 
 Quando si parla di tipo in 3D, si tende a pensare a testo 3D estruso e volumetrico. Fatta eccezione per alcune progettazioni di logotipi e altre applicazioni limitate, il testo estruso tende a ridurre la leggibilità del testo. Anche se stiamo progettando esperienze per 3D, usiamo 2D per il tipo perché è più leggibile e più facile da leggere.
 
@@ -32,7 +32,7 @@ Le regole tipografiche in realtà mista non sono diverse da qualsiasi altra posi
 
 Contrasto e gerarchia di compilazione utilizzando dimensioni e pesi diversi per i tipi. La definizione di una rampa di tipo e la successiva esperienza nell'app offriranno un'esperienza utente ottimale con una gerarchia di informazioni coerenti.
 
-![Esempi di Ramp di tipo](images/typography-ramp-1000px.jpg)<br>
+esempi di ![di tipo ramp](images/typography-ramp-1000px.jpg)<br>
 *Definire la rampa di tipo e seguirla in tutta l'esperienza dell'app*
 
 ### <a name="limit-your-fonts"></a>Limitare i tipi di carattere
@@ -52,37 +52,45 @@ In HoloLens, poiché gli ologrammi vengono costruiti con un sistema di luce addi
 <br>
 
 
-![Si consiglia di usare testo bianco su un pannello posteriore scuro o colorato. *Esempi di testo bianco su un pannello posteriore scuro o colorato.* ](images/typography-whiteonblack2-1000px.jpg)
-
+![si consiglia di usare testo bianco su un pannello posteriore scuro o colorato.](images/typography-whiteonblack2-1000px.jpg)
+*esempi di testo bianco su un pannello posteriore scuro o colorato.*
 <br>
 
 Per usare testo scuro, è necessario usare una piastra indietro luminosa per renderla leggibile. Nei sistemi di colori additivi, il nero viene visualizzato come trasparente. Ciò significa che non sarà possibile visualizzare il testo nero senza una piastra posteriore colorata.
 
-![Esempi di testo nero](images/typography-whiteonblack.png)
-<br>*Esempi di bianco sul retro e nero su testo bianco*
+:::row:::
+    :::column:::
+        ![esempi di testo nero](images/typography-whiteonblack.png)<br>
+        *Esempi di bianco su nero e nero su testo bianco*<br>
+    :::column-end:::
+    :::column:::
+        ![esempi di testo nero](images/640px-typography-blackonwhite.jpg)<br>
+        *Esempi di testo nero nelle app di sistema-archivio e impostazioni*<br>
+    :::column-end:::
+:::row-end:::
 
+<br>
 
-![Esempi di testo nero](images/640px-typography-blackonwhite.jpg)
-<br>*Esempi di testo nero nelle app di sistema-archivio e impostazioni*
+---
 
 ## <a name="recommended-font-size"></a>Dimensioni del carattere consigliate
 
-Come si può immaginare, i tipi di dimensioni usati in un PC o un Tablet (in genere tra 12-32pt) sembrano abbastanza piccoli a una distanza di 2 metri. Dipende dalle caratteristiche di ogni tipo di carattere, ma in generale l'angolo di visualizzazione minimo consigliato e l'altezza del tipo di carattere per la leggibilità sono circa 0,35 °-0,4 °/12.21-13.97mm in base agli studi di ricerca degli utenti. È pari a circa 35 40pt con il fattore di scalabilità introdotto nel [testo nella](text-in-unity.md) pagina Unity. 
+Come si può immaginare, i tipi di dimensioni usati in un PC o un Tablet (in genere tra 12-32pt) sembrano abbastanza piccoli a una distanza di 2 metri. Dipende dalle caratteristiche di ogni tipo di carattere, ma in generale l'angolo di visualizzazione minimo consigliato e l'altezza del tipo di carattere per la leggibilità sono circa 0,35 °-0,4 °/12.21-13.97mm in base agli studi di ricerca degli utenti. È pari a circa 35 40pt con il fattore di scalabilità introdotto nel [testo nella pagina Unity](text-in-unity.md) . 
 
 Per l'interazione near a 0,45 m (45 cm), l'angolo di visualizzazione del tipo di carattere leggibile minimo e l'altezza sono 0.4 °-0,5 °/3.14 – 3,9 mm. Si tratta di circa 9 12pt con il fattore di scala introdotto nel [testo in Unity](text-in-unity.md).
 
-![Contenuto dell'intervallo](images/typography-distance-1000px.jpg)
-di interazione near-and-distante*nell'intervallo di interazione near and lontano*
+![intervallo di interazione near and lontano](images/typography-distance-1000px.jpg)
+*contenuto nell'intervallo di interazione near and lontano*
 
 ### <a name="the-minimum-legible-font-size"></a>Dimensioni minime del carattere leggibili
-| distanza | Angolo di visualizzazione | Altezza testo | Dimensioni carattere * * |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensioni carattere * * |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0.4 °-0,5 ° | 3.14 – 3,9 mm | 8,9 – 11.13 PT |
 | 2m | 0,35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Dimensioni del carattere facilmente leggibili
-| distanza | Angolo di visualizzazione | Altezza testo | Dimensioni carattere * * |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensioni carattere * * |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0,65 °-0,8 ° | 5.1-6,3 mm | 14.47-17,8 PT |
 | 2m | 0.6 °-0,75 ° | 20,9-26.2 mm | 59.4-74.2 PT |
@@ -90,18 +98,37 @@ di interazione near-and-distante*nell'intervallo di interazione near and lontano
 
 Segoe UI (il tipo di carattere predefinito per Windows) funziona correttamente nella maggior parte dei casi. Tuttavia, evitare di usare famiglie di caratteri chiaro o semichiaro in piccole dimensioni poiché i tratti verticali sottili vibrano e diminuiscono la leggibilità. I tipi di carattere moderni con uno spessore del tratto sufficiente funzionano correttamente. Ad esempio, Helvetica e Arial sembrano splendidi e sono molto leggibili in HoloLens con pesi regolari o in grassetto.
 
-\* * Per informazioni più dettagliate sul calcolo delle dimensioni del testo in Unity, vedere il [testo](text-in-unity.md) della pagina in Unity
+**Per informazioni più dettagliate sul calcolo delle dimensioni del testo in Unity, consultare il [testo in Unity](text-in-unity.md)**
 
-![Visualizzazione angolo](images/Text_In_Unity_ViewingAngle.jpg)
-,*angolo e altezza del testo*
+Angolo di visualizzazione ![](images/Text_In_Unity_ViewingAngle.jpg)
+*visualizzazione della distanza, dell'angolo e dell'altezza del testo*
+
+<br>
+
+---
 
 ## <a name="resources"></a>Risorse
-* [Tipi di carattere Segoe](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
-* [Tipo di carattere HoloLens](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
-![Il tipo di carattere HoloLens fornisce i glifi dei simboli usati nella realtà mista di Windows](images/300px-hololensmdl2symbols.jpg)
-<br>*Il tipo di carattere HoloLens fornisce i glifi dei simboli usati in realtà mista di Windows.*
+:::row:::
+    :::column:::
+    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Tipi di carattere Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    (File zip)<br>
+    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[Tipo di carattere HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    (File zip)<br>
+    <br>
+    *Image: il tipo di carattere HoloLens fornisce i glifi dei simboli usati nella realtà mista di Windows.*
+    :::column-end:::
+        :::column:::
+        ![Il tipo di carattere HoloLens fornisce i glifi dei simboli usati nella realtà mista di Windows](images/hololensmdl2symbols.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Vedere anche
+
+<br>
+
+---
+
+
+## <a name="see-also"></a>Vedi anche
 * [Testo in Unity](text-in-unity.md)
 * [Colore, luce e materiali](color,-light-and-materials.md)
