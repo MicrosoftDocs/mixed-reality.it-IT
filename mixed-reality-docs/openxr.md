@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, realtà mista OpenXR portale per sviluppatori, DirectX, nativo, motore personalizzato app native, middleware
-ms.openlocfilehash: cf8795e6fed7db9fd0743d0902ce1585d56fa5e0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438144"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641136"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -90,7 +90,7 @@ Entro la fine dell'anno, il runtime di OpenXR per la realtà mista di Windows su
 * [Articolazione manuale + mesh mano](hands-and-tools.md)
 * [Tracciamento oculare](eye-tracking.md)
 * [Configurazioni di viste secondarie (acquisizione di realtà mista)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
-* [Mapping spaziale](spatial-mapping.md)
+* [Informazioni sulle scene](scene-understanding.md)
 * Interoperabilità con API Windows SDK
 
 Sebbene alcune di queste estensioni possano iniziare come estensioni MSFT specifiche del fornitore, Microsoft e altri fornitori di runtime di OpenXR collaborano per progettare estensioni EXT o KHR tra fornitori per molte di queste aree di funzionalità.  In questo modo il codice scritto per le funzionalità sarà portabile tra i fornitori di runtime, come per la specifica di base.

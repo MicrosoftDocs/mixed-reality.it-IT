@@ -6,12 +6,12 @@ ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, HoloTour, audio spaziale, case study
-ms.openlocfilehash: eca675534dba12dd65a20fb9d85e4df57f725288
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e1da80bd647084aa4d7839c0f1b1848b46c2b1b4
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522433"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641149"
 ---
 # <a name="case-study---spatial-sound-design-for-holotour"></a>Case Study: progettazione di suoni spaziali per HoloTour
 
@@ -33,7 +33,7 @@ Sono state create esperienze HoloTour in due posizioni diverse: Roma e Machu Pic
 
 Nel [case study sull'acquisizione del contenuto visivo per HoloTour](case-study-capturing-and-creating-content-for-holotour.md), abbiamo parlato della progettazione personalizzata del rig della fotocamera. È costituito da 14 fotocamere GoPro contenute in un'abitazione stampata in 3D, progettate per le dimensioni specifiche del treppiede. Per acquisire audio da questo rig, è stato aggiunto un array a quattro microfoni sotto le fotocamere, che è stato inserito in un'unità di registrazione compatta a 4 canali che si trovava alla base del treppiede. Abbiamo scelto i microfoni che non solo venivano eseguiti correttamente, ma con un footprint molto ridotto, in modo da non occludere la visualizzazione della fotocamera.
 
-![Rig fotocamera e microfono personalizzati](images/camera-rig-microphones-300px.png)<br>
+![](images/camera-rig-microphones-300px.png) rig della fotocamera e del microfono personalizzati<br>
 *Rig fotocamera e microfono personalizzati*
 
 Questa configurazione ha acquisito un suono in quattro direzioni dalla posizione precisa della fotocamera, fornendo informazioni sufficienti per ricreare una panoramica 3D uditiva usando un suono spaziale, che è possibile sincronizzare successivamente con il video di 360 gradi.
@@ -59,26 +59,25 @@ Un approccio diverso prevede la riproduzione di un ambiente stereo a ciclo in co
 ## <a name="tips-and-tricks"></a>Suggerimenti e trucchi
 
 Quando si combinano audio per una scena, sono disponibili alcuni metodi aggiuntivi che consentono di evidenziare ulteriormente la direzionalità e l'immersione, sfruttando al meglio le funzionalità audio spaziali di HoloLens. È stato fornito un elenco di alcuni di seguito, in ascolto per la prossima volta che si prova a usare HoloTour.
-* **Cerca destinazioni**: Si tratta di suoni che vengono attivati solo quando si esamina un oggetto specifico o un'area del frame olografico. Se, ad esempio, si esamina la direzione del caffè sul lato strada a Roma, Piazza Navona attiverà leggermente i suoni di un ristorante occupato.
-* **Visione locale**: Il viaggio, tuttavia, HoloTour contiene alcuni ritmi in cui la Guida introduttiva, che aiuta gli ologrammi, esplorerà un argomento in modo approfondito. Ad esempio, poiché la facciata del Pantheon si risolve per rivelare l'Oculus, il riverbero di audio inserito come emettitore 3D dall'interno del Pantheon invita l'utente a esplorare il modello interno.
-* **Direzionalità avanzata**: In molte scene, abbiamo inserito i suoni in diversi modi per aggiungere la direzionalità. Nella scena Pantheon, ad esempio, il suono della fontana è stato inserito come un emettitore separato sufficientemente vicino all'utente, in modo da ottenere un senso di "Sonic Parallax" Man mano che si aggira lo spazio di riproduzione. Nella scena Salinas de Mara del Perù, il singolo punto di vista di alcuni flussi è stato inserito come emettitori distinti per creare un ambiente di ambiente più immersivo, che circonda l'utente con i suoni autentici di tale percorso.
-* **Emettitore spline**: Questo emettitore di suoni spaziali speciale si sposta nello spazio 3D rispetto alla posizione visiva dell'oggetto a cui è collegato. Un esempio di questo è stato il treno di Machu Picchu, in cui è stato usato un emettitore spline per fornire un senso di direzionalità e movimento distinti.
-* **Musica e SFX**: Alcuni aspetti di HoloTour che rappresentano un approccio più stilizzato o cinematografico usano musica e effetti audio per aumentare l'impatto emotivo. Nel gladiatore Battle alla fine del tour di Roma sono stati usati effetti speciali come whooshes o Stingers per contribuire a rafforzare l'effetto delle etichette visualizzate in scene.
+* **Obiettivi di ricerca**: si tratta di suoni che si attivano solo quando si esamina un oggetto specifico o un'area del frame olografico. Se, ad esempio, si esamina la direzione del caffè sul lato strada a Roma, Piazza Navona attiverà leggermente i suoni di un ristorante occupato.
+* **Visione locale**: il percorso di HoloTour contiene alcuni ritmi in cui la Guida introduttiva, che aiuta gli ologrammi, esplorerà un argomento in modo approfondito. Ad esempio, poiché la facciata del Pantheon si risolve per rivelare l'Oculus, il riverbero di audio inserito come emettitore 3D dall'interno del Pantheon invita l'utente a esplorare il modello interno.
+* **Direzionalità avanzata**: in molte scene è stato inserito un suono in diversi modi per aggiungere la direzionalità. Nella scena Pantheon, ad esempio, il suono della fontana è stato inserito come un emettitore separato sufficientemente vicino all'utente, in modo da ottenere un senso di "Sonic Parallax" Man mano che si aggira lo spazio di riproduzione. Nella scena Salinas de Mara del Perù, il singolo punto di vista di alcuni flussi è stato inserito come emettitori distinti per creare un ambiente di ambiente più immersivo, che circonda l'utente con i suoni autentici di tale percorso.
+* **Emettitore spline**: questo emettitore di suoni spaziali speciale si sposta nello spazio 3D rispetto alla posizione visiva dell'oggetto a cui è collegato. Un esempio di questo è stato il treno di Machu Picchu, in cui è stato usato un emettitore spline per fornire un senso di direzionalità e movimento distinti.
+* **Music and SFX**: alcuni aspetti di HoloTour che rappresentano un approccio più stilizzato o cinematografico usano musica e effetti audio per aumentare l'impatto emotivo. Nel gladiatore Battle alla fine del tour di Roma sono stati usati effetti speciali come whooshes o Stingers per contribuire a rafforzare l'effetto delle etichette visualizzate in scene.
 
 ## <a name="about-the-author"></a>Informazioni sull'autore
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason Syltebo</b><br>Finestra di progettazione audio@Microsoft</td>
+<td style="border-style: none"><b>Jason Syltebo</b><br>Finestra di progettazione audio @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Audio spaziale](spatial-sound.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)
-* [MR Spatial 220](holograms-220.md)
 * [Video: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
 
  
