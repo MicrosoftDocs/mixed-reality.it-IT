@@ -1,31 +1,25 @@
 ---
 title: Tracciamento oculare
-description: HoloLens 2 consente di raggiungere un nuovo livello di comprensione contestuale e umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a cosa gli utenti stanno guardando.
+description: HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a ciò che l'utente sta esaminando.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Rilevamento degli occhi, realtà mista, input, sguardi oculari, calibrazione
-ms.openlocfilehash: 60de5ceb9f55ca7e2f74856af9bd75567763e382
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441112"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641138"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Tracciamento oculare in HoloLens 2
 
 ![Demo sul rilevamento degli occhi in MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 consente di raggiungere un nuovo livello di comprensione contestuale e umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a cosa gli utenti stanno guardando. Questa pagina offre una panoramica di questa nuova funzionalità per sviluppatori e progettisti su come possono trarre vantaggio dal monitoraggio degli sguardi per i diversi casi d'uso e le linee guida per gli sviluppatori di base. 
+HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a ciò che l'utente sta esaminando. Questa pagina offre una panoramica di questa nuova funzionalità per sviluppatori e progettisti su come possono trarre vantaggio dal monitoraggio degli sguardi per i diversi casi d'uso e le linee guida per gli sviluppatori di base. 
 
-
-## <a name="calibration"></a>Calibrazione 
-Per il corretto funzionamento degli occhi, è necessario che ogni utente esamini la [calibrazione degli utenti](calibration.md) per cui l'utente deve esaminare un set di destinazioni olografiche. In questo modo, il dispositivo può modificare il sistema per un'esperienza di visualizzazione più comoda e di qualità superiore per l'utente e garantire il rilevamento accurato degli occhi allo stesso tempo. Il rilevamento degli occhi dovrebbe funzionare per la maggior parte degli utenti, ma in rari casi un utente potrebbe non essere in grado di calibrare correttamente.
-Per altre informazioni sulla calibrazione e su come garantire un'esperienza uniforme, vedere la pagina relativa alla [calibrazione degli utenti per la verifica degli occhi](calibration.md) .
-
-
-## <a name="device-support"></a>Supporto di dispositivi
+### <a name="device-support"></a>Supporto di dispositivi
 <table>
 <colgroup>
     <col width="25%" />
@@ -46,6 +40,24 @@ Per altre informazioni sulla calibrazione e su come garantire un'esperienza unif
      <td>❌</td>
 </tr>
 </table>
+
+<br>
+
+## <a name="calibration"></a>Calibrazione 
+Per il corretto funzionamento degli occhi, è necessario che ogni utente esamini la [calibrazione degli utenti](calibration.md) per cui l'utente deve esaminare un set di destinazioni olografiche. In questo modo, il dispositivo può modificare il sistema per un'esperienza di visualizzazione più comoda e di qualità superiore per l'utente e garantire il rilevamento accurato degli occhi allo stesso tempo. 
+
+Il rilevamento degli occhi dovrebbe funzionare per la maggior parte degli utenti, ma in rari casi un utente potrebbe non essere in grado di calibrare correttamente. La calibrazione potrebbe non riuscire per vari motivi, tra cui: 
+* L'utente ha rifiutato in precedenza il processo di calibrazione
+* L'utente è stato distratto e non ha seguito gli obiettivi di calibrazione
+* L'utente dispone di determinati tipi di obiettivi e occhiali di contatto che il sistema non supporta ancora 
+* L'utente ha una certa fisiologia degli occhi, condizioni oculari o interventi chirurgici che il sistema non supporta ancora  
+* Fattori esterni che inibiscono la verifica affidabile degli occhi, ad esempio le sbavature sulla visiera HoloLens o sugli occhiali, il sole intenso diretto e le occlusioni a causa dei capelli davanti agli occhi
+
+Gli sviluppatori devono assicurarsi di fornire un supporto adeguato per gli utenti per i quali i dati di rilevamento degli occhi potrebbero non essere disponibili (che non sono in grado di eseguire correttamente la calibrazione). Sono disponibili raccomandazioni per le soluzioni di fallback nella sezione nella parte inferiore di questa pagina. 
+
+Per altre informazioni sulla calibrazione e su come garantire un'esperienza uniforme, vedere la pagina relativa alla [calibrazione degli utenti per la verifica degli occhi](calibration.md) .
+
+<br>
 
 ## <a name="available-eye-tracking-data"></a>Dati di rilevamento degli occhi disponibili
 Prima di approfondire i casi d'uso specifici per l'input con sguardo a occhio, è opportuno evidenziare brevemente le funzionalità fornite dall'API HoloLens 2 [Eye Tracking](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) . Gli sviluppatori possono accedere a un singolo raggio d'occhio (origine e direzione dello sguardo) a circa _30 fps (30 Hz)_ .
@@ -103,35 +115,33 @@ Prestare attenzione a non sovraccaricare l'utente. per saperne di più, consulta
 
 ## <a name="using-eye-gaze-for-interaction"></a>Uso di Eye-sguardi per l'interazione
 La creazione di un'interazione che sfrutta la scelta rapida per gli occhi in rapida evoluzione può risultare complessa.
-Da un lato, gli occhi si muovono così velocemente che è necessario prestare attenzione a come usare l'input occhio, perché altrimenti l'utente potrebbe trovare un'esperienza travolgente o distrazione. D'altra parte, è anche possibile creare esperienze realmente magiche che stimolano gli utenti. Per aiutarti, Guarda la panoramica dei vantaggi principali, delle sfida e dei consigli di progettazione per gli occhi mirati [all'interazione](eye-gaze-interaction.md). 
+Da un lato, gli occhi si muovono così velocemente che è necessario prestare attenzione a come usare l'input occhio, perché in caso contrario gli utenti potrebbero riscontrare un'esperienza travolgente o distrazione. D'altra parte, è anche possibile creare esperienze realmente magiche che stimolano gli utenti. Per aiutarti, Guarda la panoramica dei vantaggi principali, delle sfida e dei consigli di progettazione per gli occhi mirati [all'interazione](eye-gaze-interaction.md). 
 
 <br>
  
-## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Linee guida per lo sviluppo: cosa accade se la verifica degli occhi non è disponibile?
-Potrebbero verificarsi situazioni in cui l'app non riceverà dati di rilevamento degli occhi a causa di vari motivi, tra cui:
-* L'utente ha ignorato la calibrazione del rilevamento degli occhi.
-* L'utente è stato calibrato, ma ha deciso di non concedere all'app l'autorizzazione per l'uso dei dati di rilevamento degli occhi.
-* L'utente ha occhiali univoci o una condizione oculare che il sistema non supporta ancora.
-* Fattori esterni che inibiscono il monitoraggio degli occhi affidabili, ad esempio le sbavature sulla visiera HoloLens o sugli occhiali, il sole intenso diretto e le occlusioni a causa dei capelli davanti agli occhi.
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluzioni di fallback quando la verifica degli occhi non è disponibile
+In rari casi, i dati di rilevamento degli occhi potrebbero non essere disponibili.
+Questo problema può essere dovuto a diversi motivi per i quali più comuni sono elencati di seguito:
+* Il sistema non è riuscito a [calibrare l'utente](calibration.md).
+* La [calibrazione](calibration.md)è stata ignorata dall'utente.   
+* L'utente è calibrato, ma ha deciso di non concedere all'app l'autorizzazione per l'uso dei dati di rilevamento degli occhi.    
+* L'utente ha occhiali univoci o una condizione oculare che il sistema non supporta ancora.    
+* Fattori esterni che inibiscono il monitoraggio degli occhi affidabili, ad esempio le sbavature sulla visiera HoloLens o sugli occhiali, il sole intenso diretto e le occlusioni a causa dei capelli davanti agli occhi.   
+Di conseguenza, gli sviluppatori devono assicurarsi che sia disponibile un supporto di fallback appropriato per questi utenti. Nella pagina relativa al [rilevamento degli occhi nella pagina DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) vengono illustrate le API necessarie per rilevare se i dati di rilevamento degli occhi sono disponibili. 
 
-Per gli sviluppatori di app, questo significa che è necessario tenere conto di come supportare gli utenti per i quali i dati di rilevamento degli occhi potrebbero non essere disponibili. Di seguito viene illustrato prima di tutto come rilevare se il rilevamento degli occhi è disponibile e come risolverlo quando non è disponibile per applicazioni diverse.
+Come descritto in precedenza, esistono diversi motivi per cui i dati di rilevamento degli occhi potrebbero non essere disponibili.   
+Anche se alcuni utenti hanno deciso consapevolmente di revocare l'accesso ai dati di rilevamento degli occhi e sono OK con il compromesso di un'esperienza utente inferiore alla privacy di non fornire l'accesso ai dati di rilevamento degli occhi, in alcuni casi potrebbe non essere intenzionale.  
+Di conseguenza, se l'app usa la funzionalità di rilevamento degli occhi e si tratta di una parte importante dell'esperienza, è consigliabile comunicarla chiaramente all'utente.     
+Si consiglia di informare l'utente sul motivo per cui la verifica degli occhi è cruciale per l'applicazione (forse anche elencando alcune funzionalità avanzate) per sperimentare il potenziale completo dell'applicazione può aiutare gli utenti a comprendere meglio ciò che stanno rinunciando.    
+Consentire all'utente di identificare il motivo per cui la verifica degli occhi potrebbe non funzionare (in base ai controlli precedenti) e offre alcuni suggerimenti per risolvere rapidamente i potenziali problemi.  
+Se, ad esempio, è possibile rilevare che il sistema supporta la verifica degli occhi, l'utente viene calibrato e persino ha dato le autorizzazioni necessarie, ma non vengono ricevuti dati di rilevamento degli occhi, questo può puntare ad altri problemi, ad esempio le sbavature o gli occhi che vengono bloccati.    
+Si noti tuttavia che ci sono casi rari di utenti per i quali la verifica degli occhi potrebbe non funzionare semplicemente.    
+Quindi, è opportuno rispettarlo consentendo di ignorare o addirittura disabilitare i promemoria per abilitare il rilevamento degli occhi nell'app.
 
-### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. come rilevare che il rilevamento degli occhi è disponibile
-Sono disponibili alcuni controlli per determinare se i dati di rilevamento degli occhi sono disponibili. Controllare se...
-* ... il sistema supporta il rilevamento degli sguardi. Chiamare il *Metodo*seguente: [Windows. Perception. people. EyesPose. IsValid ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
-
-* ... l'utente è calibrato. Chiamare la *Proprietà*seguente: [Windows. Perception. people. EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
-
-* ... l'utente ha concesso all'app l'autorizzazione per usare i dati di rilevamento degli occhi: recuperare il _' GazeInputAccessStatus '_ corrente. Un esempio di come eseguire questa operazione è illustrato nella pagina relativa alla [richiesta di accesso a sguardi input](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
-
-Inoltre, è possibile verificare che i dati di rilevamento degli occhi non siano obsoleti aggiungendo un timeout tra gli aggiornamenti dei dati di rilevamento degli occhi ricevuti e altrimenti il fallback a Head-sguardi come descritto di seguito. 
-
-Come descritto in precedenza, esistono diversi motivi per cui i dati di rilevamento degli occhi potrebbero non essere disponibili. Anche se alcuni utenti hanno deciso consapevolmente di revocare l'accesso ai dati di rilevamento degli occhi e sono OK con il compromesso di un'esperienza utente inferiore alla privacy di non fornire l'accesso ai dati di rilevamento degli occhi, in alcuni casi potrebbe non essere intenzionale. Di conseguenza, se l'app usa la funzionalità di rilevamento degli occhi e si tratta di una parte importante dell'esperienza, è consigliabile comunicarla chiaramente all'utente. Si consiglia di informare l'utente sul motivo per cui la verifica degli occhi è cruciale per l'applicazione (forse anche elencando alcune funzionalità avanzate) per sperimentare il potenziale completo dell'applicazione può aiutare gli utenti a comprendere meglio ciò che stanno rinunciando. Consentire all'utente di identificare il motivo per cui la verifica degli occhi potrebbe non funzionare (in base ai controlli precedenti) e offre alcuni suggerimenti per risolvere rapidamente i potenziali problemi. Se, ad esempio, è possibile rilevare che il sistema supporta la verifica degli occhi, l'utente viene calibrato e persino ha dato le autorizzazioni necessarie, ma non vengono ricevuti dati di rilevamento degli occhi, questo può puntare ad altri problemi, ad esempio le sbavature o gli occhi che vengono bloccati. Si noti tuttavia che ci sono casi rari di utenti per i quali la verifica degli occhi potrebbe non funzionare semplicemente. Quindi, è opportuno rispettarlo consentendo di ignorare o addirittura disabilitare i promemoria per abilitare il rilevamento degli occhi nell'app.
-
-### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. fallback per le app che usano gli sguardi come puntatore di input primario
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Fallback per le app che usano Eye-sguardi come puntatore di input primario
 Se l'app usa Eye-sguardi come input del puntatore per selezionare rapidamente gli ologrammi nella scena, ma i dati di rilevamento degli occhi non sono disponibili, è consigliabile eseguire il fallback a Head-sguardi e iniziare a visualizzare il cursore Head-sguardi. È consigliabile usare un timeout (ad esempio, da 500 a 1500 ms) per determinare se passare o meno. In questo modo si impedisce la comparsa di un cursore ogni volta che il sistema può perdere brevemente il rilevamento a causa di movimenti rapidi degli occhi o occhiolini. Per gli sviluppatori di Unity, il fallback automatico a Head-sguardi è già gestito nel Toolkit per la realtà mista. Se si è uno sviluppatore di DirectX, è necessario gestire manualmente questo switch.
 
-### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. fallback per altre applicazioni specifiche per il rilevamento degli occhi
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Fallback per altre applicazioni specifiche per il rilevamento degli occhi
 L'app può usare gli sguardi in modo univoco in modo specifico per gli occhi, ad esempio per animare gli occhi di un avatar o per attirare l'attenzione su Heatmaps, che si basano su informazioni precise sull'attenzione visiva. In questo caso, non esiste alcun fallback chiaro. Se il rilevamento degli occhi non è disponibile, è possibile che sia sufficiente disabilitare queste funzionalità.
 Anche in questo caso, si consiglia di comunicare chiaramente questo problema all'utente che potrebbe non essere a conoscenza del funzionamento della funzionalità.
 
