@@ -39,6 +39,7 @@
 ### [Visualizzazione della scansione dello spazio](room-scan-visualization.md)
 ### [Informazioni sulle scene](scene-understanding.md)
 ### [Ancoraggi nello spazio](spatial-anchors.md)
+### [Suoni](spatial-sound.md)
 ### [Mapping spaziale](spatial-mapping.md)
 ### [Movimento di sistema](system-gesture.md)
 ### [Tipi di app di realtà mista](types-of-mixed-reality-apps.md)
@@ -65,7 +66,6 @@
 ### Stile
 #### [Colore, luce e materiali](color,-light-and-materials.md)
 #### [Ridimensiona](scale.md)
-#### [Audio spaziale](spatial-sound.md)
 #### [Progettazione dell'audio spaziale](spatial-sound-design.md)
 #### [Tipografia](typography.md)
 ### Controlli e comportamenti
@@ -193,7 +193,6 @@
 #### [Puntamento con la testa e sguardo fisso](gaze-in-directx.md)
 #### [Mani e controller del movimento](hands-and-motion-controllers-in-directx.md)
 #### [Input vocale](voice-input-in-directx.md)
-#### [Audio spaziale](spatial-sound-in-directx.md)
 #### [Mapping spaziale](spatial-mapping-in-directx.md)
 #### [Informazioni sulle scene](scene-understanding-sdk.md)
 #### [Ancoraggi nello spazio condivisi](shared-spatial-anchors-in-directx.md)
