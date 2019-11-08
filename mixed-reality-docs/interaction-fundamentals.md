@@ -1,37 +1,38 @@
 ---
-title: Panoramica dell'interazione multimodale
-description: Panoramica dell'interazione multimodale
+title: Interazioni istintive
+description: Scopri la filosofia delle interazioni semplici e istintive alla base di tutta la piattaforma di realtà mista.
 author: shengkait
-ms.author: shengkait
+ms.author: shentan
 ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, sguardo fisso, selezione della destinazione con lo sguardo fisso, interazione, progettazione, HoloLens, MMR, multimodale
-ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507902"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437981"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione alle interazioni istintive
 
-La filosofia delle interazioni semplici e istintive è alla base di tutta la piattaforma Realtà mista.  Abbiamo adottato tre accorgimenti per consentire ai progettisti e agli sviluppatori di applicazioni di fornire ai clienti interazioni facili e intuitive. 
+La filosofia delle interazioni semplici e istintive è alla base di tutta la piattaforma di realtà mista. Abbiamo adottato tre accorgimenti per consentire ai progettisti e agli sviluppatori di applicazioni di fornire ai clienti interazioni facili e intuitive. 
 
-In primo luogo, ci siamo assicurati che i sensori e le tecnologie di input, tra cui il tracciamento oculare e delle mani e l'input in linguaggio naturale, si combinino in perfetti modelli di interazione multimodale.  In base alle nostre ricerche, le attività di progettazione e sviluppo all'interno di un framework multimodale e non basate su singoli input sono la chiave di volta per creare esperienze istintive.
+In primo luogo, ci siamo assicurati che i sensori e le tecnologie di input, tra cui il tracciamento oculare e delle mani e l'input in linguaggio naturale, si combinino in perfetti modelli di interazione multimodale.  
+In base alle nostre ricerche, le attività di progettazione e sviluppo all'interno di un framework multimodale (e non basate su singoli input) sono la chiave di volta per creare esperienze istintive.
 
-In secondo luogo, constatiamo che molti sviluppatori destinano le loro applicazioni a più dispositivi HoloLens, come HoloLens 2 e HoloLens (prima generazione) oppure HoloLens e VR.  Abbiamo quindi progettato modelli di interazione in grado di funzionare in tutti i dispositivi, anche se la tecnologia di input varia da uno all'altro.  Ad esempio, per l'interazione da lontano con un visore VR immersive di Windows dotato di un controller 6DoF e per l'interazione da lontano con un dispositivo HoloLens 2 vengono usati gli stessi inviti e modelli, semplificando lo sviluppo di applicazioni per più dispositivi che assicurano interazioni più naturali con gli utenti finali. 
+In secondo luogo, constatiamo che molti sviluppatori destinano le loro applicazioni a più dispositivi HoloLens, come HoloLens 2 e HoloLens (prima generazione) oppure HoloLens e VR.  
+Abbiamo quindi progettato modelli di interazione in grado di funzionare in tutti i dispositivi, anche se la tecnologia di input varia da uno all'altro.  
+Ad esempio, per l'interazione da lontano con un visore VR immersive di Windows dotato di un controller 6DoF e per l'interazione da lontano con un dispositivo HoloLens 2 vengono usati gli stessi inviti e modelli, semplificando lo sviluppo di applicazioni per più dispositivi e assicurando interazioni più naturali con gli utenti. 
 
-Anche se sappiamo che esistono migliaia di interazioni efficaci, coinvolgenti e fantastiche nella realtà mista, abbiamo constatato che l'utilizzo intenzionale di un unico modello di interazione end-to-end in un'applicazione è il modo migliore per garantire agli utenti risultati ottimali e un'esperienza eccezionale. A questo scopo, in queste indicazioni relative all'interazione abbiamo incluso tre aspetti:
-* Il materiale è strutturato attorno ai tre principali modelli di interazione e ai componenti e agli schemi necessari per ognuno.
-* Sono state aggiunte istruzioni supplementari su altri vantaggi offerti dalla piattaforma.
-* Sono state inoltre incluse indicazioni per aiutare a selezionare il modello di interazione appropriato per uno scenario specifico.
+Anche se riconosciamo che possono esistere migliaia di interazioni efficaci, coinvolgenti e magiche nella realtà mista, abbiamo constatato che l'utilizzo intenzionale di un unico modello di interazione end-to-end in un'applicazione è il modo migliore per garantire agli utenti risultati ottimali e un'esperienza eccezionale. A questo scopo, in queste indicazioni relative all'interazione abbiamo incluso tre aspetti:
+* Materiale specifico incentrato sui tre principali modelli di interazione e sui componenti e schemi necessari per ciascun modello.
+* Istruzioni supplementari su altri vantaggi offerti dalla piattaforma.
+* Indicazioni di carattere generale, utili per selezionare il modello di interazione appropriato per uno scenario di sviluppo specifico.
 
 ## <a name="multimodal-interaction-models"></a>Modelli di interazione multimodale
 
-In base alle nostre ricerche e al feedback dei clienti, abbiamo scoperto che la maggior parte delle esperienze di realtà mista viene soddisfatta da tre principali modelli di interazione.
-
-Per molti versi, il modello di interazione è lo schema mentale seguito dall'utente per completare i flussi. Ognuno di questi modelli di interazione è ottimizzato per una serie di esigenze dei clienti. Ognuno è pratico, efficace e utilizzabile a se stante. 
+In base alle nostre ricerche e al feedback dei clienti, abbiamo scoperto che la maggior parte delle esperienze di realtà mista viene soddisfatta da tre principali modelli di interazione. Per molti versi, il modello di interazione è lo schema mentale seguito dall'utente per completare un flusso di lavoro. Ognuno di questi modelli di interazione è ottimizzato per una serie di esigenze dei clienti ed è comodo, efficiente e applicabile se usato in modo corretto. 
 
 La classifica seguente offre una panoramica semplificata. Informazioni dettagliate per l'utilizzo di ogni modello di interazione sono collegate a immagini ed esempi di codice nelle pagine seguenti. 
 
@@ -62,7 +63,7 @@ La classifica seguente offre una panoramica semplificata. Informazioni dettaglia
         <td>HoloLens 2<br>HoloLens (prima generazione)<br>Visori VR immersive</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Puntamento con la testa e commit</a></td>
+        <td><a href="gaze-and-commit.md">Sguardo e commit</a></td>
         <td>Esperienze di tipo click-through, ad esempio presentazioni 3D e demo.</td>
         <td>È necessario eseguire il training in dispositivi HMD, non in dispositivi mobili. Ideale per controller accessibili. Ideale per HoloLens (prima generazione).</td>
         <td>HoloLens 2<br>HoloLens (prima generazione)<br>Visori VR immersive<br>AR per dispositivi mobili</td>
@@ -70,32 +71,29 @@ La classifica seguente offre una panoramica semplificata. Informazioni dettaglia
 </table>
 <br>
 
-Per evitare che siano presenti lacune o vuoti nell'interazione dell'esperienza utente, è preferibile seguire le indicazioni per un singolo modello dall'inizio alla fine. 
-
-Per velocizzare le attività di progettazione e sviluppo, abbiamo incluso informazioni dettagliate e collegamenti a immagini ed esempi di codice all'interno della documentazione relativa a ciascun modello.
+Per evitare che siano presenti lacune nell'esperienza di interazione dell'utente, è preferibile seguire le indicazioni per un singolo modello dall'inizio alla fine.
 
 Le sezioni seguenti illustrano la procedura di selezione e implementazione di uno di questi modelli di interazione.  
  
 ### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>Al termine di questa pagina, avrai appreso a:
  
 * Scegliere un modello di interazione per il cliente
-* Usare le indicazioni relative al modello di interazione
+* Implementare il modello di interazione
 * Passare da un modello di interazione all'altro
 * Progettare i passaggi successivi
 
 
 ## <a name="choose-an-interaction-model-for-your-customer"></a>Scegliere un modello di interazione per il cliente
 
-
 In genere, gli sviluppatori e gli autori valutano tutti i tipi di interazione che i clienti possono avere. Per incoraggiare un approccio alla progettazione incentrato sul cliente, è consigliabile attenersi alle indicazioni seguenti per selezionare il modello di interazione ottimizzato per il cliente specifico.
 
 ### <a name="why-follow-this-guidance"></a>Perché seguire le indicazioni?
 
 * I nostri modelli di interazione sono testati in base a criteri obiettivi e soggettivi, ad esempio lo sforzo fisico e cognitivo, l'intuitività e la capacità di apprendimento. 
-* Poiché esistono diversi tipi di interazione, è possibile che anche gli inviti audio e video e il comportamento degli oggetti siano diversi da un modello all'altro.  
-* Combinando parti di diversi modelli di interazione si rischia di ottenere inviti concorrenti, ad esempio raggi della mano simultanei e un cursore di puntamento con la testa, che possono confondere gli utenti.
+* Poiché esistono diversi tipi di interazione, è possibile che anche gli inviti audio/video e il comportamento degli oggetti siano diversi da un modello di interazione all'altro.  
+* Combinando parti di diversi modelli di interazione si rischia di ottenere inviti concorrenti, ad esempio raggi della mano simultanei e un cursore di puntamento con la testa. Tutto questo può inondare l'utente di troppe informazioni e confonderlo.
 
-Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogni modello di interazione.  Notiamo spesso che le domande dei nuovi utenti sono simili, ad esempio: "Come si può capire se il sistema funziona? Come si può sapere quali azioni si possono eseguire? Come si può sapere se il sistema ha capito quali azioni sono state eseguite?"
+Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogni modello di interazione. Notiamo spesso che le domande dei nuovi utenti sono simili, ad esempio: _"Come si può capire se il sistema funziona?"_ , _"Come si può sapere quali azioni si possono eseguire?"_ e _"Come si può sapere se il sistema ha capito quali azioni sono state eseguite?"_
 
 <br>
 
@@ -121,7 +119,7 @@ Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogn
     <tr>
         <td><a href="gaze-and-commit.md">Puntamento con la testa e commit</a></td>
         <td>Si vede un cursore al centro del campo visivo.</td>
-        <td>Il cursore di puntamento con la testa cambia stato quando è posizionato su determinati oggetti.</td>
+        <td>Il cursore cambia stato quando è posizionato su determinati oggetti.</td>
         <td>Si vedono conferme visive e/o si sentono conferme udibili quando si intraprendono azioni.</td>
     </tr>   
     <tr>
@@ -134,14 +132,14 @@ Ecco alcuni esempi di come sono ottimizzati gli inviti e i comportamenti per ogn
         <td><a href="hands-free.md">Mani libere (esecuzione di comandi vocali)</a></td>
         <td>Si vedono un indicatore di ascolto e sottotitoli che mostrano quello che il sistema ha sentito.</td>
         <td>Si ricevono messaggi vocali e suggerimenti. Quando si dice: "Cosa posso dire?" viene visualizzato un messaggio di feedback.</td>
-        <td>Si vedono o si sentono conferme visive o udibili quando si dà un comando o quando si ottiene una disambiguazione dell'esperienza utente, se necessario.</a></td>
+        <td>Si vedono o si sentono conferme visive o udibili quando si dà un comando o si ottiene una disambiguazione dell'esperienza utente, se necessario.</a></td>
     </tr>
 </table>
 
-### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Di seguito sono riportate le domande che, in base ai nostri riscontri, possono aiutare i team a scegliere un modello di interazione:
+### <a name="below-are-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Di seguito sono riportate alcune domande che, in base ai nostri riscontri, possono aiutare i team a scegliere un modello di interazione:
  
 1.  D:  Gli utenti vogliono toccare gli ologrammi ed eseguire manipolazioni olografiche precise?<br><br>
-R:  Se la risposta è affermativa, scegli il modello di interazione mani e controller del movimento per la selezione di precisione della destinazione e la manipolazione con mani e controller del movimento.
+R:  Se la risposta è affermativa, scegli il modello di interazione mani e controller del movimento per la selezione della destinazione di precisione e la manipolazione.
  
 2.  D:  Gli utenti devono avere le mani libere per poter eseguire attività reali?<br><br>
 R:  In caso affermativo, prendi in considerazione il modello di interazione a mani libere, che offre un'eccezionale esperienza a mani libere attraverso interazioni basate sullo sguardo e sulla voce.
@@ -165,27 +163,30 @@ R:  Poiché quello di puntamento con la testa e commit è il modello di interazi
 R:  Tutti i modelli di interazione sono adatti a questi utenti.  
 
 > [!NOTE]
-> Saranno [presto disponibili](index.md#news-and-notes) altre istruzioni di progettazione specifiche per le app.
+> Saranno [presto disponibili](news.md) altre istruzioni di progettazione specifiche per le app.
 
 
 ## <a name="transitioning-interaction-models"></a>Passaggio da un modello di interazione all'altro
-Per alcuni casi d'uso può essere necessario impiegare più modelli di interazione. Ad esempio, per il flusso di creazione di un'applicazione viene utilizzato il modello di interazione mani e controller del movimento, ma per i tecnici sul campo è preferibile adottare una modalità a mani libere.  
-
-Se per un'esperienza sono necessari più modelli di interazione, tieni presente che molti utenti finali possono avere difficoltà a passare da un modello all'altro, in particolare quelli che hanno scarsa familiarità con la realtà mista.
+Per alcuni casi d'uso può essere necessario impiegare più modelli di interazione. Ad esempio, per il flusso di creazione di un'applicazione viene usato il modello di interazione _"mani e controller del movimento"_ , ma per i tecnici sul campo è preferibile adottare una modalità a mani libere.
+Se per un'esperienza sono necessari più modelli di interazione, tieni presente che molti utenti possono avere difficoltà a passare da un modello all'altro, in particolare quelli che hanno scarsa familiarità con la realtà mista.
 
 > [!Note]
 > Continueremo a fornire altre indicazioni che saranno rese disponibili per sviluppatori e progettisti per informarli su come, quando e perché usare più modelli di interazione di realtà mista.
  
 
 ## <a name="see-also"></a>Vedi anche
-* [Puntamento con la testa e commit](gaze-and-commit.md)
-* [Puntamento con la testa e attesa](gaze-and-dwell.md)
-* [Manipolazione diretta con le mani](direct-manipulation.md)
-* [Puntamento e commit con le mani](point-and-commit.md)
-* [Movimenti](gestures.md)
-* [Esecuzione di comandi vocali](voice-design.md)
-* [Controller del movimento](motion-controllers.md)
-* [Progettazione dell'audio spaziale](spatial-sound-design.md)
-* [Progettazione del mapping spaziale](spatial-mapping-design.md)
 * [Comodità](comfort.md)
+* [Interazione basata sullo sguardo](eye-gaze-interaction.md)
+* [Tracciamento oculare in HoloLens 2](eye-tracking.md)
+* [Sguardo e commit](gaze-and-commit.md)
+* [Sguardo fisso e attesa](gaze-and-dwell.md)
+* [Mani - Manipolazione diretta](direct-manipulation.md)
+* [Mani - Movimenti](gaze-and-commit.md#composite-gestures)
+* [Mani - Puntamento e commit](point-and-commit.md)
+* [Interazioni istintive](interaction-fundamentals.md)
+* [Controller del movimento](motion-controllers.md)
+* [Mapping spaziale](spatial-mapping.md)
+* [Progettazione dell'audio spaziale](spatial-sound-design.md)
+* [Input vocale](voice-input.md)
+
 
