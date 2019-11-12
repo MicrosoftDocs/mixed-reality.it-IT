@@ -6,33 +6,33 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: immagine volumetrica, rendering del volume, prestazioni, realtà mista
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548637"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926675"
 ---
-# <a name="volume-rendering"></a><span data-ttu-id="83d93-105">Rendering del volume</span><span class="sxs-lookup"><span data-stu-id="83d93-105">Volume rendering</span></span>
+# <a name="volume-rendering"></a><span data-ttu-id="3e90b-105">Rendering del volume</span><span class="sxs-lookup"><span data-stu-id="3e90b-105">Volume rendering</span></span>
 
-<span data-ttu-id="83d93-106">Per i volumi di ingegneria o MRI medici, vedere [rendering del volume in Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering).</span><span class="sxs-lookup"><span data-stu-id="83d93-106">For medical MRI or engineering volumes, see [Volume Rendering on Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering).</span></span> <span data-ttu-id="83d93-107">Queste immagini volumetriche contengono informazioni dettagliate con opacità e colore in tutto il volume che non possono essere facilmente espresse come superfici come le [mesh poligonali](https://en.wikipedia.org/wiki/Polygon_mesh).</span><span class="sxs-lookup"><span data-stu-id="83d93-107">These 'volumetric images' contain rich information with opacity and color throughout the volume that cannot be easily expressed as surfaces such as [polygonal meshes](https://en.wikipedia.org/wiki/Polygon_mesh).</span></span>
+<span data-ttu-id="3e90b-106">Per i volumi di ingegneria o MRI medici, vedere [rendering del volume in Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering).</span><span class="sxs-lookup"><span data-stu-id="3e90b-106">For medical MRI or engineering volumes, see [Volume Rendering on Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering).</span></span> <span data-ttu-id="3e90b-107">Queste immagini volumetriche contengono informazioni dettagliate con opacità e colore in tutto il volume che non possono essere facilmente espresse come superfici come le [mesh poligonali](https://en.wikipedia.org/wiki/Polygon_mesh).</span><span class="sxs-lookup"><span data-stu-id="3e90b-107">These 'volumetric images' contain rich information with opacity and color throughout the volume that cannot be easily expressed as surfaces such as [polygonal meshes](https://en.wikipedia.org/wiki/Polygon_mesh).</span></span>
 
-<span data-ttu-id="83d93-108">Soluzioni principali per migliorare le prestazioni</span><span class="sxs-lookup"><span data-stu-id="83d93-108">Key solutions to improve performance</span></span>
-1. <span data-ttu-id="83d93-109">NON VALIDO Approccio ingenuo: Mostra volume intero, in genere troppo lento</span><span class="sxs-lookup"><span data-stu-id="83d93-109">BAD: Naïve Approach: Show Whole Volume, generally runs too slowly</span></span>
-2. <span data-ttu-id="83d93-110">BUONA Piano di taglio: Mostra solo una singola sezione del volume</span><span class="sxs-lookup"><span data-stu-id="83d93-110">GOOD: Cutting Plane: Show only a single slice of the volume</span></span>
-3. <span data-ttu-id="83d93-111">BUONA Riduzione del volume secondario: Mostra solo pochi livelli del volume</span><span class="sxs-lookup"><span data-stu-id="83d93-111">GOOD: Cutting Sub-Volume: Show only a few layers of the volume</span></span>
-4. <span data-ttu-id="83d93-112">BUONA Abbassare la risoluzione del rendering del volume (vedere il rendering di una scena di risoluzione mista)</span><span class="sxs-lookup"><span data-stu-id="83d93-112">GOOD: Lower the resolution of the volume rendering (see 'Mixed Resolution Scene Rendering')</span></span>
+<span data-ttu-id="3e90b-108">Soluzioni principali per migliorare le prestazioni</span><span class="sxs-lookup"><span data-stu-id="3e90b-108">Key solutions to improve performance</span></span>
+1. <span data-ttu-id="3e90b-109">ERRATO: approccio ingenuo: Mostra volume intero, in genere troppo lento</span><span class="sxs-lookup"><span data-stu-id="3e90b-109">BAD: Naïve Approach: Show Whole Volume, generally runs too slowly</span></span>
+2. <span data-ttu-id="3e90b-110">BENE: piano di taglio: Mostra solo una singola sezione del volume</span><span class="sxs-lookup"><span data-stu-id="3e90b-110">GOOD: Cutting Plane: Show only a single slice of the volume</span></span>
+3. <span data-ttu-id="3e90b-111">BENE: riduzione del volume secondario: Mostra solo pochi livelli del volume</span><span class="sxs-lookup"><span data-stu-id="3e90b-111">GOOD: Cutting Sub-Volume: Show only a few layers of the volume</span></span>
+4. <span data-ttu-id="3e90b-112">BENE: abbassare la risoluzione del rendering del volume (vedere il rendering di una scena di risoluzione mista)</span><span class="sxs-lookup"><span data-stu-id="3e90b-112">GOOD: Lower the resolution of the volume rendering (see 'Mixed Resolution Scene Rendering')</span></span>
 
-<span data-ttu-id="83d93-113">Esiste solo una certa quantità di informazioni che possono essere trasferite dall'applicazione sullo schermo in un particolare frame, ovvero la larghezza di banda totale della memoria.</span><span class="sxs-lookup"><span data-stu-id="83d93-113">There is only a certain amount of information that can be transferred from the application to the screen in any particular frame, this is the total memory bandwidth.</span></span> <span data-ttu-id="83d93-114">Anche qualsiasi elaborazione (o ' ombreggiatura ') necessaria per trasformare i dati per la presentazione richiede anche tempo.</span><span class="sxs-lookup"><span data-stu-id="83d93-114">Also any processing (or 'shading') required to transform that data for presentation also requires time.</span></span> <span data-ttu-id="83d93-115">Le considerazioni principali per il rendering del volume sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="83d93-115">The primary considerations when doing volume rendering are as such:</span></span>
-* <span data-ttu-id="83d93-116">Screen-width \* screen-height \* screen-count \* volume-layers-on-that-pixel = Total-volume-Samples-per-frame</span><span class="sxs-lookup"><span data-stu-id="83d93-116">Screen-Width \* Screen-Height \* Screen-Count \* Volume-Layers-On-That-Pixel = Total-Volume-Samples-Per-Frame</span></span>
-* <span data-ttu-id="83d93-117">1028 \* 720 \* 2 \* 256 = 378961920 (100%) (volume res completo: troppi esempi)</span><span class="sxs-lookup"><span data-stu-id="83d93-117">1028 \* 720 \* 2 \* 256 = 378961920 (100%) (full res volume: too many samples)</span></span>
-* <span data-ttu-id="83d93-118">1028 \* 720 \* 2 \* 1 = 1480320 (0,3% of Full) (slice sottile: 1 campione per pixel, in esecuzione senza problemi)</span><span class="sxs-lookup"><span data-stu-id="83d93-118">1028 \* 720 \* 2 \* 1 = 1480320 (0.3% of full) (thin slice: 1 sample per pixel, runs smoothly)</span></span>
-* <span data-ttu-id="83d93-119">1028 \* 720 \* 2 \* 10 = 14803200 (3,9% della versione completa) (sezione del volume secondario: 10 esempi per pixel, eseguiti in modo abbastanza uniforme, sembrano 3D)</span><span class="sxs-lookup"><span data-stu-id="83d93-119">1028 \* 720 \* 2 \* 10 = 14803200 (3.9% of full) (sub-volume slice: 10 samples per pixel, runs fairly smoothly, looks 3d)</span></span>
-* <span data-ttu-id="83d93-120">200 \* 200 \* 2 \* 256 = 20480000 (5% di pieno) (volume res inferiore: un minor numero di pixel, un volume intero, un aspetto 3D ma un bit sfocato)</span><span class="sxs-lookup"><span data-stu-id="83d93-120">200 \* 200 \* 2 \* 256 = 20480000 (5% of full) (lower res volume: fewer pixels, full volume, looks 3d but a bit blury)</span></span>
+<span data-ttu-id="3e90b-113">Esiste solo una certa quantità di informazioni che possono essere trasferite dall'applicazione sullo schermo in un particolare frame, ovvero la larghezza di banda totale della memoria.</span><span class="sxs-lookup"><span data-stu-id="3e90b-113">There is only a certain amount of information that can be transferred from the application to the screen in any particular frame, this is the total memory bandwidth.</span></span> <span data-ttu-id="3e90b-114">Anche qualsiasi elaborazione (o ' ombreggiatura ') necessaria per trasformare i dati per la presentazione richiede anche tempo.</span><span class="sxs-lookup"><span data-stu-id="3e90b-114">Also any processing (or 'shading') required to transform that data for presentation also requires time.</span></span> <span data-ttu-id="3e90b-115">Le considerazioni principali per il rendering del volume sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="3e90b-115">The primary considerations when doing volume rendering are as such:</span></span>
+* <span data-ttu-id="3e90b-116">Screen-width \* screen-height \* screen-count \* volume-layers-on-that-pixel = Total-volume-Samples-per-frame</span><span class="sxs-lookup"><span data-stu-id="3e90b-116">Screen-Width \* Screen-Height \* Screen-Count \* Volume-Layers-On-That-Pixel = Total-Volume-Samples-Per-Frame</span></span>
+* <span data-ttu-id="3e90b-117">1028 \* 720 \* 2 \* 256 = 378961920 (100%) (volume res completo: troppi esempi)</span><span class="sxs-lookup"><span data-stu-id="3e90b-117">1028 \* 720 \* 2 \* 256 = 378961920 (100%) (full res volume: too many samples)</span></span>
+* <span data-ttu-id="3e90b-118">1028 \* 720 \* 2 \* 1 = 1480320 (0,3% of Full) (slice sottile: 1 campione per pixel, esecuzione senza problemi)</span><span class="sxs-lookup"><span data-stu-id="3e90b-118">1028 \* 720 \* 2 \* 1 = 1480320 (0.3% of full) (thin slice: 1 sample per pixel, runs smoothly)</span></span>
+* <span data-ttu-id="3e90b-119">1028 \* 720 \* 2 \* 10 = 14803200 (3,9% della versione completa) (sezione del volume secondario: 10 campioni per pixel, esecuzione abbastanza agevole, aspetto 3D)</span><span class="sxs-lookup"><span data-stu-id="3e90b-119">1028 \* 720 \* 2 \* 10 = 14803200 (3.9% of full) (sub-volume slice: 10 samples per pixel, runs fairly smoothly, looks 3d)</span></span>
+* <span data-ttu-id="3e90b-120">200 \* 200 \* 2 \* 256 = 20480000 (5% di pieno) (volume res inferiore: un minor numero di pixel, un volume intero, appare 3D ma un bit sfocato)</span><span class="sxs-lookup"><span data-stu-id="3e90b-120">200 \* 200 \* 2 \* 256 = 20480000 (5% of full) (lower res volume: fewer pixels, full volume, looks 3d but a bit blurry)</span></span>
 
-## <a name="representing-3d-textures"></a><span data-ttu-id="83d93-121">Rappresentazione di trame 3D</span><span class="sxs-lookup"><span data-stu-id="83d93-121">Representing 3D Textures</span></span>
+## <a name="representing-3d-textures"></a><span data-ttu-id="3e90b-121">Rappresentazione di trame 3D</span><span class="sxs-lookup"><span data-stu-id="3e90b-121">Representing 3D Textures</span></span>
 
-<span data-ttu-id="83d93-122">Sulla CPU:</span><span class="sxs-lookup"><span data-stu-id="83d93-122">On the CPU:</span></span>
+<span data-ttu-id="3e90b-122">Sulla CPU:</span><span class="sxs-lookup"><span data-stu-id="3e90b-122">On the CPU:</span></span>
 
 ```
 public struct Int3 { public int X, Y, Z; /* ... */ }
@@ -67,7 +67,7 @@ public struct Int3 { public int X, Y, Z; /* ... */ }
  }
 ```
 
-<span data-ttu-id="83d93-123">Sulla GPU:</span><span class="sxs-lookup"><span data-stu-id="83d93-123">On the GPU:</span></span>
+<span data-ttu-id="3e90b-123">Sulla GPU:</span><span class="sxs-lookup"><span data-stu-id="3e90b-123">On the GPU:</span></span>
 
 ```
 float3 _VolBufferSize;
@@ -85,9 +85,9 @@ float3 _VolBufferSize;
  }
 ```
 
-## <a name="shading-and-gradients"></a><span data-ttu-id="83d93-124">Ombreggiatura e sfumature</span><span class="sxs-lookup"><span data-stu-id="83d93-124">Shading and Gradients</span></span>
+## <a name="shading-and-gradients"></a><span data-ttu-id="3e90b-124">Ombreggiatura e sfumature</span><span class="sxs-lookup"><span data-stu-id="3e90b-124">Shading and Gradients</span></span>
 
-<span data-ttu-id="83d93-125">Come ombreggiare un volume, ad esempio MRI, per una visualizzazione utile.</span><span class="sxs-lookup"><span data-stu-id="83d93-125">How to shade an volume, such as MRI, for useful visualization.</span></span> <span data-ttu-id="83d93-126">Il metodo principale consiste nel disporre di una "finestra intensità" (un valore minimo e massimo) in cui si desidera visualizzare le intensità e semplicemente ridimensionare lo spazio per visualizzare l'intensità del nero e del bianco.</span><span class="sxs-lookup"><span data-stu-id="83d93-126">The primary method is to have an 'intensity window' (a min and max) that you want to see intensities within, and simply scale into that space to see the black and white intensity.</span></span> <span data-ttu-id="83d93-127">È quindi possibile applicare una "rampa di colore" ai valori all'interno di tale intervallo e archiviarli come trama, in modo che le diverse parti dello spettro di intensità possano ombreggiare colori diversi:</span><span class="sxs-lookup"><span data-stu-id="83d93-127">A 'color ramp' can then be applied to the values within that range, and stored as a texture, so that different parts of the intensity spectrum can be shaded different colors:</span></span>
+<span data-ttu-id="3e90b-125">Come ombreggiare un volume, ad esempio MRI, per una visualizzazione utile.</span><span class="sxs-lookup"><span data-stu-id="3e90b-125">How to shade an volume, such as MRI, for useful visualization.</span></span> <span data-ttu-id="3e90b-126">Il metodo principale consiste nel disporre di una "finestra intensità" (un valore minimo e massimo) in cui si desidera visualizzare le intensità e semplicemente ridimensionare lo spazio per visualizzare l'intensità del nero e del bianco.</span><span class="sxs-lookup"><span data-stu-id="3e90b-126">The primary method is to have an 'intensity window' (a min and max) that you want to see intensities within, and simply scale into that space to see the black and white intensity.</span></span> <span data-ttu-id="3e90b-127">È quindi possibile applicare una "rampa di colore" ai valori all'interno di tale intervallo e archiviarli come trama, in modo che le diverse parti dello spettro di intensità possano ombreggiare colori diversi:</span><span class="sxs-lookup"><span data-stu-id="3e90b-127">A 'color ramp' can then be applied to the values within that range, and stored as a texture, so that different parts of the intensity spectrum can be shaded different colors:</span></span>
 
 ```
 float4 ShadeVol( float intensity ) {
@@ -98,16 +98,16 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-<span data-ttu-id="83d93-128">In molte applicazioni archiviate nel volume sia un valore di intensità RAW che un "indice di segmentazione" (per segmentare parti diverse, ad esempio Skin e Bone, questi segmenti vengono in genere creati dagli esperti in strumenti dedicati).</span><span class="sxs-lookup"><span data-stu-id="83d93-128">In many our applications we store in our volume both a raw intensity value and a 'segmentation index' (to segment different parts such as skin and bone, these segments are generally created by experts in dedicated tools).</span></span> <span data-ttu-id="83d93-129">Questa operazione può essere combinata con l'approccio precedente per inserire un colore diverso o persino una rampa di colore diversa per ogni indice di segmento:</span><span class="sxs-lookup"><span data-stu-id="83d93-129">This can be combined with the approach above to put a different color, or even different color ramp for each segment index:</span></span>
+<span data-ttu-id="3e90b-128">In molte applicazioni archiviate nel volume sia un valore di intensità RAW che un "indice di segmentazione" (per segmentare parti diverse, ad esempio Skin e Bone, questi segmenti vengono in genere creati dagli esperti in strumenti dedicati).</span><span class="sxs-lookup"><span data-stu-id="3e90b-128">In many our applications we store in our volume both a raw intensity value and a 'segmentation index' (to segment different parts such as skin and bone, these segments are generally created by experts in dedicated tools).</span></span> <span data-ttu-id="3e90b-129">Questa operazione può essere combinata con l'approccio precedente per inserire un colore diverso o persino una rampa di colore diversa per ogni indice di segmento:</span><span class="sxs-lookup"><span data-stu-id="3e90b-129">This can be combined with the approach above to put a different color, or even different color ramp for each segment index:</span></span>
 
 ```
 // Change color to match segment index (fade each segment towards black):
  color.rgb = SegmentColors[ segment_index ] * color.a; // brighter alpha gives brighter color
 ```
 
-## <a name="volume-slicing-in-a-shader"></a><span data-ttu-id="83d93-130">Sezionamento del volume in uno shader</span><span class="sxs-lookup"><span data-stu-id="83d93-130">Volume Slicing in a Shader</span></span>
+## <a name="volume-slicing-in-a-shader"></a><span data-ttu-id="3e90b-130">Sezionamento del volume in uno shader</span><span class="sxs-lookup"><span data-stu-id="3e90b-130">Volume Slicing in a Shader</span></span>
 
-<span data-ttu-id="83d93-131">Il primo passaggio consiste nel creare un "piano di sezionamento" che può spostarsi tra il volume, "sezionamento" e come i valori di analisi in ogni punto.</span><span class="sxs-lookup"><span data-stu-id="83d93-131">A great first step is to create a "slicing plane" that can move through the volume, 'slicing it', and how the scan values at each point.</span></span> <span data-ttu-id="83d93-132">Si presuppone che esista un cubo ' VolumeSpace ', che rappresenta il punto in cui il volume si trova nello spazio globale, che può essere usato come riferimento per inserire i punti:</span><span class="sxs-lookup"><span data-stu-id="83d93-132">This assumes that there is a 'VolumeSpace' cube, which represents where the volume is in world space, that can be used as a reference for placing the points:</span></span>
+<span data-ttu-id="3e90b-131">Il primo passaggio consiste nel creare un "piano di sezionamento" che può spostarsi tra il volume, "sezionamento" e come i valori di analisi in ogni punto.</span><span class="sxs-lookup"><span data-stu-id="3e90b-131">A great first step is to create a "slicing plane" that can move through the volume, 'slicing it', and how the scan values at each point.</span></span> <span data-ttu-id="3e90b-132">Si presuppone che esista un cubo ' VolumeSpace ', che rappresenta il punto in cui il volume si trova nello spazio globale, che può essere usato come riferimento per inserire i punti:</span><span class="sxs-lookup"><span data-stu-id="3e90b-132">This assumes that there is a 'VolumeSpace' cube, which represents where the volume is in world space, that can be used as a reference for placing the points:</span></span>
 
 ```
 // In the vertex shader:
@@ -120,9 +120,9 @@ float4 ShadeVol( float intensity ) {
  float4 color = ShadeVol( SampleVol( volSpace ) );
 ```
 
-## <a name="volume-tracing-in-shaders"></a><span data-ttu-id="83d93-133">Traccia del volume in shader</span><span class="sxs-lookup"><span data-stu-id="83d93-133">Volume Tracing in Shaders</span></span>
+## <a name="volume-tracing-in-shaders"></a><span data-ttu-id="3e90b-133">Traccia del volume in shader</span><span class="sxs-lookup"><span data-stu-id="3e90b-133">Volume Tracing in Shaders</span></span>
 
-<span data-ttu-id="83d93-134">Come usare la GPU per eseguire la traccia dei sottovolumi (si tratta di un numero ridotto di voxel, quindi i livelli sui dati da una parte all'altra):</span><span class="sxs-lookup"><span data-stu-id="83d93-134">How to use the GPU to do sub-volume tracing (walks a few voxels deep then layers on the data from back to front):</span></span>
+<span data-ttu-id="3e90b-134">Come usare la GPU per eseguire la traccia dei sottovolumi (si tratta di un numero ridotto di voxel, quindi i livelli sui dati da una parte all'altra):</span><span class="sxs-lookup"><span data-stu-id="3e90b-134">How to use the GPU to do sub-volume tracing (walks a few voxels deep then layers on the data from back to front):</span></span>
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -164,9 +164,9 @@ float4 AlphaBlend(float4 dst, float4 src) {
  float4 color = volTraceSubVolume( volSpace, cameraInVolSpace );
 ```
 
-## <a name="whole-volume-rendering"></a><span data-ttu-id="83d93-135">Rendering intero del volume</span><span class="sxs-lookup"><span data-stu-id="83d93-135">Whole Volume Rendering</span></span>
+## <a name="whole-volume-rendering"></a><span data-ttu-id="3e90b-135">Rendering intero del volume</span><span class="sxs-lookup"><span data-stu-id="3e90b-135">Whole Volume Rendering</span></span>
 
-<span data-ttu-id="83d93-136">Modificando il codice del sottovolume precedente si ottiene:</span><span class="sxs-lookup"><span data-stu-id="83d93-136">Modifying the sub-volume code above we get:</span></span>
+<span data-ttu-id="3e90b-136">Modificando il codice del sottovolume precedente si ottiene:</span><span class="sxs-lookup"><span data-stu-id="3e90b-136">Modifying the sub-volume code above we get:</span></span>
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -177,15 +177,15 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
    int numLoops = min( distanceInVoxels, maxSamples ); // put a min on the voxels to sample
 ```
 
-## <a name="mixed-resolution-scene-rendering"></a><span data-ttu-id="83d93-137">Rendering di scene con risoluzione mista</span><span class="sxs-lookup"><span data-stu-id="83d93-137">Mixed Resolution Scene Rendering</span></span>
+## <a name="mixed-resolution-scene-rendering"></a><span data-ttu-id="3e90b-137">Rendering di scene con risoluzione mista</span><span class="sxs-lookup"><span data-stu-id="3e90b-137">Mixed Resolution Scene Rendering</span></span>
 
-<span data-ttu-id="83d93-138">Come eseguire il rendering di una parte della scena con una risoluzione bassa e inserirla di nuovo:</span><span class="sxs-lookup"><span data-stu-id="83d93-138">How to render a part of the scene with a low resolution and put it back in place:</span></span>
-1. <span data-ttu-id="83d93-139">Configurare due fotocamere fuori schermo, una per seguire ogni occhio che aggiorna ogni frame</span><span class="sxs-lookup"><span data-stu-id="83d93-139">Setup two off-screen cameras, one to follow each eye that update each frame</span></span>
-2. <span data-ttu-id="83d93-140">Configurare due destinazioni di rendering a bassa risoluzione (ad ogni 200x200), in cui viene eseguito il rendering delle fotocamere</span><span class="sxs-lookup"><span data-stu-id="83d93-140">Setup two low-resolution render targets (say 200x200 each), that the cameras render into</span></span>
-3. <span data-ttu-id="83d93-141">Configurare un quad che si sposta davanti all'utente</span><span class="sxs-lookup"><span data-stu-id="83d93-141">Setup a quad that moves in front of the user</span></span>
+<span data-ttu-id="3e90b-138">Come eseguire il rendering di una parte della scena con una risoluzione bassa e inserirla di nuovo:</span><span class="sxs-lookup"><span data-stu-id="3e90b-138">How to render a part of the scene with a low resolution and put it back in place:</span></span>
+1. <span data-ttu-id="3e90b-139">Configurare due fotocamere fuori schermo, una per seguire ogni occhio che aggiorna ogni frame</span><span class="sxs-lookup"><span data-stu-id="3e90b-139">Setup two off-screen cameras, one to follow each eye that update each frame</span></span>
+2. <span data-ttu-id="3e90b-140">Configurare due destinazioni di rendering a bassa risoluzione (ad ogni 200x200), in cui viene eseguito il rendering delle fotocamere</span><span class="sxs-lookup"><span data-stu-id="3e90b-140">Setup two low-resolution render targets (say 200x200 each), that the cameras render into</span></span>
+3. <span data-ttu-id="3e90b-141">Configurare un quad che si sposta davanti all'utente</span><span class="sxs-lookup"><span data-stu-id="3e90b-141">Setup a quad that moves in front of the user</span></span>
 
-<span data-ttu-id="83d93-142">Ogni frame:</span><span class="sxs-lookup"><span data-stu-id="83d93-142">Each Frame:</span></span>
-1. <span data-ttu-id="83d93-143">Disegnare le destinazioni di rendering per ogni occhio a bassa risoluzione (dati del volume, shader costosi e così via)</span><span class="sxs-lookup"><span data-stu-id="83d93-143">Draw the render targets for each eye at low-resolution (volume data, expensive shaders, etc.)</span></span>
-2. <span data-ttu-id="83d93-144">Creare la scena normalmente come risoluzione completa (mesh, interfaccia utente e così via)</span><span class="sxs-lookup"><span data-stu-id="83d93-144">Draw the scene normally as full resolution (meshes, UI, etc.)</span></span>
-3. <span data-ttu-id="83d93-145">Disegnare un quad davanti all'utente, sulla scena e proiettare i rendering a bassa risoluzione su tale oggetto.</span><span class="sxs-lookup"><span data-stu-id="83d93-145">Draw a quad in front of the user, over the scene, and project the low-res renders onto that.</span></span>
-4. <span data-ttu-id="83d93-146">Risultato: combinazione visiva di elementi a risoluzione completa con dati di volume a bassa risoluzione ma ad alta densità.</span><span class="sxs-lookup"><span data-stu-id="83d93-146">Result: visual combination of full-resolution elements with low-resolution but high-density volume data.</span></span>
+<span data-ttu-id="3e90b-142">Ogni frame:</span><span class="sxs-lookup"><span data-stu-id="3e90b-142">Each Frame:</span></span>
+1. <span data-ttu-id="3e90b-143">Disegnare le destinazioni di rendering per ogni occhio a bassa risoluzione (dati del volume, shader costosi e così via)</span><span class="sxs-lookup"><span data-stu-id="3e90b-143">Draw the render targets for each eye at low-resolution (volume data, expensive shaders, etc.)</span></span>
+2. <span data-ttu-id="3e90b-144">Creare la scena normalmente come risoluzione completa (mesh, interfaccia utente e così via)</span><span class="sxs-lookup"><span data-stu-id="3e90b-144">Draw the scene normally as full resolution (meshes, UI, etc.)</span></span>
+3. <span data-ttu-id="3e90b-145">Disegnare un quad davanti all'utente, sulla scena e proiettare i rendering a bassa risoluzione su tale oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e90b-145">Draw a quad in front of the user, over the scene, and project the low-res renders onto that.</span></span>
+4. <span data-ttu-id="3e90b-146">Risultato: combinazione visiva di elementi a risoluzione completa con dati di volume a bassa risoluzione ma ad alta densità.</span><span class="sxs-lookup"><span data-stu-id="3e90b-146">Result: visual combination of full-resolution elements with low-resolution but high-density volume data.</span></span>
