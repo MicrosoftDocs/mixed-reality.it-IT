@@ -1,24 +1,24 @@
 ---
 title: Uso di Visual Studio per la distribuzione e il debug
-description: Come compilare, eseguire il debug e distribuire app per HoloLens e la realtà mista di Windows con Visual Studio.
+description: Informazioni su come compilare, eseguire il debug e distribuire app per HoloLens e la realtà mista di Windows con Visual Studio.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
 keywords: Visual Studio, HoloLens, realtà mista, debug, distribuzione
-ms.openlocfilehash: 2b84183417a1bd4eaa90eef58bebe2b65966b933
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437258"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914119"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso di Visual Studio per la distribuzione e il debug
 
 Se si vuole usare DirectX o Unity per sviluppare un'app per realtà mista, si userà Visual Studio per il debug e la distribuzione. In questa sezione si apprenderà come:
-* Modalità di distribuzione delle applicazioni in HoloLens o Windows Mixed Reality con l'auricolare immersivo tramite Visual Studio.
-* Come usare l'emulatore di HoloLens incorporato in Visual Studio.
-* Come eseguire il debug di app realtà miste.
+* Distribuisci le tue applicazioni in HoloLens o in Windows con l'auricolare immersiva a realtà mista tramite Visual Studio.
+* Usare l'emulatore di HoloLens incorporato in Visual Studio.
+* Eseguire il debug di app realtà miste.
 
 ## <a name="prerequisites"></a>Prerequisiti
 1. Vedere [installare gli strumenti](install-the-tools.md) per le istruzioni di installazione.
@@ -26,7 +26,7 @@ Se si vuole usare DirectX o Unity per sviluppare un'app per realtà mista, si us
 
 ## <a name="enabling-developer-mode"></a>Abilitazione della modalità sviluppatore
 
-Per iniziare, abilitare la **modalità sviluppatore** sul dispositivo in modo che Visual Studio possa connettersi.
+Per iniziare, abilitare la **modalità sviluppatore** sul dispositivo, in modo che Visual Studio possa connettersi.
 
 ### <a name="hololens"></a>HoloLens
 1. Accendere il HoloLens e mettere sul dispositivo.
@@ -59,7 +59,7 @@ Se si lavora con un auricolare di realtà mista di Windows connesso al PC, è ne
 2. Selezionare **computer remoto** nel menu a discesa destinazione distribuzione ![destinazione distribuzione computer remoto in Visual Studio](images/remotemachinesetting_arm64.png)
 3. Per C++ i progetti e JavaScript, passare a **progetto > proprietà > proprietà di configurazione > debug**. Per C# i progetti, viene visualizzata automaticamente una finestra di dialogo per configurare la connessione.
   a. Immettere l'indirizzo IP del dispositivo nel campo **Indirizzo** o **nome computer** . Trovare l'indirizzo IP nella HoloLens in **impostazioni > rete & Internet > opzioni avanzate**oppure è possibile richiedere a Cortana "Qual è l'indirizzo IP?"
-  b. Impostare la modalità di autenticazione su **universale (protocollo non crittografato)** ![finestra di dialogo di connessione remota in Visual Studio](images/remotedeploy.png)
+  b. Impostare la modalità di autenticazione su **universale (protocollo non crittografato)** ![finestra di dialogo connessione remota in Visual Studio](images/remotedeploy.png)
 4. Selezionare **debug > avviare il debug** per distribuire l'app e avviare il debug![avviare senza eseguire debug in Visual Studio](images/deploywithdebugging.png)
 5. La prima volta che si distribuisce un'app in HoloLens dal PC, verrà richiesto di specificare un PIN. Seguire le istruzioni di **associazione del dispositivo** riportate di seguito.
 

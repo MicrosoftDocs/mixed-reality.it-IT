@@ -1,21 +1,21 @@
 ---
 title: Esercitazioni sugli ancoraggi spaziali di Azure-2. Salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
-description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 70f84c1ec03919a15bed486ffa51fb57db39deec
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: a24d15f0c0fff045c01f6070027b7defa87c2416
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977974"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914452"
 ---
-# <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
+# <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. salvataggio, recupero e condivisione di ancoraggi spaziali di Azure
 
-In questa esercitazione si apprenderà come salvare i nostri ancoraggi spaziali di Azure tra più sessioni di App salvando le informazioni di ancoraggio nel disco di HoloLens 2. Si apprenderà anche come condividere queste informazioni di ancoraggio ad altri dispositivi per un allineamento di ancoraggio a più dispositivi.
+In questa esercitazione si apprenderà come salvare i nostri ancoraggi spaziali di Azure tra più sessioni di App salvando le informazioni di ancoraggio nell'archivio di HoloLens 2. Si apprenderà anche come condividere queste informazioni di ancoraggio ad altri dispositivi per un allineamento di ancoraggio a più dispositivi.
 
 ## <a name="objectives"></a>Obiettivi
 
@@ -27,7 +27,7 @@ In questa esercitazione si apprenderà come salvare i nostri ancoraggi spaziali 
 
 ### <a name="persist-azure-anchors-between-app-sessions---save-anchor-id-to-disk"></a>Mantieni gli ancoraggi di Azure tra le sessioni dell'app-salva l'ID ancoraggio sul disco
 
-1. Cercare e aggiungere la prefabbricazione SaveAnchorToDisk alla scena. Sono inclusi due pulsanti, un pulsante per salvare tutti gli ID di ancoraggio di Azure disponibili sul disco HoloLens 2 e un altro per recuperare gli ID dal disco.
+1. Cercare e aggiungere la prefabbricazione SaveAnchorToDisk alla scena. Sono inclusi due pulsanti, un pulsante per salvare tutti gli ID di ancoraggio di Azure disponibili nell'archiviazione HoloLens 2 e un altro per recuperare gli ID dal disco.
 
 ![module2chapter2step1im](images/module2chapter2step1im.PNG)
 
@@ -52,9 +52,9 @@ In questa esercitazione si apprenderà come salvare i nostri ancoraggi spaziali 
 
 ### <a name="share-azure-anchors-between-multiple-devices"></a>Condividere gli ancoraggi di Azure tra più dispositivi
 
-Questa sezione illustra come condividere l'ID ancoraggio di Azure tra più dispositivi. Questo consentirà a più dispositivi di eseguire query su Azure per lo stesso ID ancoraggio, consentendo agli ologrammi e alle scene ancorati di essere allineati a livello spaziale. L'allineamento spaziale (visualizzazione degli stessi ologrammi nella stessa posizione fisica tra più dispositivi) è fondamentale per le esperienze condivise locali in HoloLens 2. Esistono diversi modi per trasferire le informazioni relative agli ID di Azure tra i dispositivi, inclusi i metodi descritti nelle esercitazioni sulle esperienze condivise degli ancoraggi spaziali di Azure [Esercitazioni](mrlearning-sharing(photon)-ch1.md). Questo esempio usa un semplice servizio Web per caricare e scaricare gli ID di ancoraggio tra i dispositivi.
+Questa sezione illustra come condividere l'ID ancoraggio di Azure tra più dispositivi. Questo consentirà a più dispositivi di eseguire query su Azure per lo stesso ID ancoraggio, consentendo agli ologrammi e alle scene ancorati di essere allineati a livello spaziale. L'allineamento spaziale (visualizzazione degli stessi ologrammi nella stessa posizione fisica tra più dispositivi) è fondamentale per le esperienze condivise locali in HoloLens 2. Esistono diversi modi per trasferire le informazioni relative agli ID di Azure tra i dispositivi, inclusi i metodi descritti [nelle esercitazioni](mrlearning-sharing(photon)-ch1.md)delle esercitazioni sulle esperienze condivise degli ancoraggi spaziali di Azure. Questo esempio usa un semplice servizio Web per caricare e scaricare gli ID di ancoraggio tra i dispositivi.
 
-1. Aggiungere la prefabbricazione ShareAnchor nella gerarchia. Questa prefabbricata aggiunge due nuovi pulsanti alla scena. uno per il caricamento delle informazioni sull'ID ancoraggio e un altro per il download delle informazioni sull'ID di ancoraggio. 
+1. Aggiungere la prefabbricazione ShareAnchor nella gerarchia. Questa prefabbricata aggiunge due nuovi pulsanti alla scena, uno per il caricamento delle informazioni sull'ID di ancoraggio e l'altro per il download delle informazioni sull'ID di ancoraggio. 
 
 ![module2chapter2step5im](images/module2chapter2step5im.PNG)
 
@@ -70,9 +70,12 @@ Questa sezione illustra come condividere l'ID ancoraggio di Azure tra più dispo
 
 3. Seguire le istruzioni dell' [esercitazione 1](mrlearning-base-ch1.md). per compilare l'applicazione aggiornata nel dispositivo. Dopo aver premuto il pulsante Crea ancoraggio Azure, come è stato fatto nella lezione precedente, è ora possibile condividere l'ID di ancoraggio di Azure con altri dispositivi premendo il pulsante Condividi con altro dispositivo.
 
-   > Nota: Selezionare l'ancoraggio padre e scorrere verso il basso fino allo script di ancoraggio padre. Verificare che il pin di condivisione pubblico sia univoco, in modo che, quando lo si condivide, si sappia che si sta condividendo. Potrebbero essere presenti migliaia di utenti che condividono i propri ancoraggi di Azure. in questo modo sarà possibile assicurarsi di condividere gli ancoraggi di Azure corretti.
+   > Nota: selezionare l'ancoraggio padre e scorrere verso il basso fino allo script di ancoraggio padre. Verificare che il pin di condivisione pubblico sia univoco (è possibile modificare il pin in un altro numero), in modo che, quando lo si condivide, si sappia che è la condivisione. Potrebbero essere presenti migliaia di utenti che condividono i propri ancoraggi di Azure. in questo modo sarà possibile assicurarsi di condividere gli ancoraggi di Azure corretti.
+   > 
 
-4. Se si dispone di un altro dispositivo HoloLens 2, avviare l'applicazione e quindi avviare la sessione di Azure. Premere il pulsante Get Shared Anchor ID, quindi premere il pulsante Locate Azure Anchor per individuare l'ancoraggio associato all'ID salvato sul disco. L'intera scena dovrebbe ora bloccarsi nella posizione, nel punto in cui è stata posizionata sull'altro dispositivo HoloLens 2. Se è presente un solo HoloLens 2, è comunque possibile testare la funzionalità riavviando l'applicazione, avviando la sessione di Azure e quindi premere il pulsante "Ottieni ID ancoraggio condiviso" e quindi fare clic sul pulsante Individua ancoraggio Azure per individuare l'ancoraggio associato al ID salvato sul disco. L'intera scena dovrebbe ora essere posizionata nella posizione in cui è stato salvato in precedenza l'ancoraggio.
+![module2chapter2step7bim](images/module2chapter2step7bim.PNG)
+
+4. Se si dispone di un altro dispositivo HoloLens 2, avviare l'applicazione e quindi avviare la sessione di Azure. Premere il pulsante Get Shared Anchor ID, quindi premere il pulsante Locate Azure Anchor per individuare l'ancoraggio associato all'ID condiviso usando il servizio Web. L'intera scena dovrebbe ora entrare in posizione, in cui è stata posizionata sull'altro dispositivo HoloLens 2. Se è presente un solo HoloLens 2, è comunque possibile testare la funzionalità riavviando l'applicazione, avviando la sessione di Azure e quindi premere il pulsante "Ottieni ID ancoraggio condiviso" e quindi fare clic sul pulsante "individua il pulsante di ancoraggio Azure" per individuare l'ancoraggio associato all'ID salvati sul disco. L'intera scena dovrebbe ora essere posizionata nella posizione in cui è stato salvato in precedenza l'ancoraggio.
 
 ## <a name="congratulations"></a>Lezione completata
 In questa lezione si è appreso come salvare in modo permanente gli ancoraggi spaziali di Azure tra le sessioni dell'applicazione e i riavvii delle applicazioni salvando l'ID di ancoraggio spaziale di Azure nel disco locale in HoloLens 2. Si è anche appreso come condividere gli ancoraggi spaziali di Azure tra più dispositivi per un'esperienza condivisa di base di un ologramma statico multiutente.
@@ -81,5 +84,5 @@ Viene illustrato come implementare gli ancoraggi spaziali di Azure come parte di
 
 Nella lezione successiva verrà illustrato come fornire agli utenti il feedback in tempo reale. Questo feedback includerà informazioni sulla creazione di ancoraggi, sulla qualità della comprensione dell'ambiente e sullo stato della sessione di Azure. Senza commenti, gli utenti potrebbero non sapere se un ancoraggio è stato caricato correttamente in Azure, se la qualità dell'ambiente è sufficiente per la creazione dell'ancoraggio o lo stato corrente.
 
-[Lezione successiva: 3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
+[Lezione successiva: 3. Visualizzazione del feedback di ancoraggio spaziale di Azure](mrlearning-asa-ch3.md)
 

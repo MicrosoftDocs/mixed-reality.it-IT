@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Reality, show, Calendar, Academy, Schedule, SF, San Francisco, Reactor
-ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a7cecd4dcce63afb17c3f6d26596c138490f0181
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438327"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926850"
 ---
 # <a name="the-realities-show"></a>La realtà Mostra
 ![Progettazione per la realtà mista](images/therealitiesshow.jpg)
@@ -31,11 +31,11 @@ Questo episodio è molto importante per la comprensione umana: near Interactions
 
 ___
 ## <a name="world-understanding---coming-soon"></a>**Conoscenza globale** -presto disponibile
-Il modo in cui i dispositivi Edge intelligenti LeverEdge la potenza di calcolo del cloud per comprendere il mondo. Inclusi HoloLens 2, visione artificiale, servizio di ancoraggio condiviso, etichetta semantica e Azure Kinect DK.
+Il modo in cui i dispositivi Edge intelligenti sfruttano la potenza di calcolo del cloud per comprendere il mondo. Inclusi HoloLens 2, visione artificiale, servizio di ancoraggio condiviso, etichetta semantica e Azure Kinect DK.
 
 ___
 ## <a name="mixedrealitytoolkit---coming-soon"></a>**MixedRealityToolkit** -presto disponibile
-MixedRealityToolkit (MRTK) fornisce un set di componenti e funzionalità fondamentali per accelerare lo sviluppo di app. La versione più recente di MRTK-Unity (v2) supporta le piattaforme HoloLens/HoloLens 2, la realtà mista di Windows e OpenVR. Ecco una procedura approfondita con i progettisti e le finestre di progettazione sottostanti.
+MixedRealityToolkit (MRTK) fornisce un set di componenti e funzionalità fondamentali per accelerare lo sviluppo di app. La versione più recente di MRTK-Unity (v2) supporta le piattaforme HoloLens/HoloLens 2, la realtà mista di Windows e OpenVR. Ecco una procedura approfondita con i tecnici e i progettisti alla base.
 
 ___
 ## <a name="designing-for-hololens-2---coming-soon"></a>**Progettazione per HoloLens 2** -presto disponibile

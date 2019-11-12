@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, servizi multimediali, streaming video, 360, immersiva, VR
-ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0350d69eed9b922e174bc521107beac7d11b1bc
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438568"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926825"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -828,7 +828,7 @@ Per compilare:
 
 3.  Passare a **File > impostazioni di compilazione**, fare clic su **Compila**.
 
-4.  Verrà richiesto di selezionare la cartella in cui si vuole buildthe la soluzione.
+4.  Verrà richiesto di selezionare la cartella in cui si vuole compilare la soluzione.
 
 5.  Creare una cartella **compilazioni** e all'interno di tale cartella creare un'altra cartella con un nome appropriato.
 

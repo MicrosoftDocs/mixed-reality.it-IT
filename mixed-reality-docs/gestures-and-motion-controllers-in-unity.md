@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: movimenti, controller di movimento, Unity, sguardo, input
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435223"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926566"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Movimenti e controller di movimento in Unity
 
@@ -145,7 +145,7 @@ Unity usa attualmente le API *input. GetButton/input. getaxis* per esporre l'inp
 
 Per usare le API di input di Unity generale, si inizia in genere collegando pulsanti e assi ai nomi logici in [Gestione input Unity](https://docs.unity3d.com/Manual/ConventionalGameInput.html), associando un pulsante o gli ID dell'asse a ogni nome. È quindi possibile scrivere codice che fa riferimento a tale nome di pulsante/asse logico.
 
-Ad esempio, per eseguire il mapping del pulsante trigger del controller di movimento sinistro all'azione Invia, passare a **modifica > impostazioni progetto > input** in Unity ed espandere le proprietà della sezione Submit in assi. Modificare la proprietà **pulsante postali** o **ALT positivo pulsante** per leggere il **pulsante del joystick 14**, come indicato di seguito:
+Ad esempio, per eseguire il mapping del pulsante trigger del controller di movimento sinistro all'azione Invia, passare a **modifica > impostazioni progetto > input** in Unity ed espandere le proprietà della sezione Submit in assi. Modificare il pulsante **positivo** o la proprietà **pulsante Alt positivo** per leggere il **pulsante del joystick 14**, in questo modo:
 
 ](images/unity-input-manager.png) InputManager di Unity ![<br>
 *Unity InputManager*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Avviare l'acquisizione di movimenti
 
-Per impostazione predefinita, un oggetto *GestureRecognizer* non monitora l'input fino a quando non viene chiamato *StartCapturingGestures ()* . È possibile che venga generato un evento di movimento dopo che è stato chiamato *StopCapturingGestures ()* se l'input è stato eseguito prima del frame in cui è stato elaborato *StopCapturingGestures ()* . L'oggetto *GestureRecognizer* ricorda se era attivo o disattivato durante il frame prece in cui si è effettivamente verificato il movimento ed è quindi affidabile per avviare e arrestare il monitoraggio dei movimenti in base alla destinazione dello sguardo del frame.
+Per impostazione predefinita, un oggetto *GestureRecognizer* non monitora l'input fino a quando non viene chiamato *StartCapturingGestures ()* . È possibile che venga generato un evento di movimento dopo che è stato chiamato *StopCapturingGestures ()* se l'input è stato eseguito prima del frame in cui è stato elaborato *StopCapturingGestures ()* . L'oggetto *GestureRecognizer* ricorda se è stato acceso o disattivato durante il frame precedente in cui si è effettivamente verificato il movimento ed è quindi affidabile per avviare e arrestare il monitoraggio dei movimenti in base alla destinazione dello sguardo del frame.
 
 ```cs
 recognizer.StartCapturingGestures();

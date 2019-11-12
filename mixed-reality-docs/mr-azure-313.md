@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realtà mista, Academy, Edge, Internet delle cose, esercitazione, API, notifiche, funzioni, tabelle, hololens, immersive, VR, Internet delle cose, macchina virtuale, Ubuntu, Python
-ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: bfb1518869892ed4899019d7b9c504a960e7db3f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437970"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926840"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -890,7 +890,7 @@ Tornare al portale di Azure, in cui si creerà un servizio tabelle di Azure crea
 
 9. Nella pagina Panoramica fare clic su **tabelle**sul lato destro.
     
-    ![Tabelle](images/AzureLabs-Lab313-40.png)
+    ![tabelle](images/AzureLabs-Lab313-40.png)
 
 10. Il pannello a destra cambierà in modo da visualizzare le informazioni sul **servizio tabelle** , in cui è necessario aggiungere una nuova tabella. A tale scopo, fare clic sul pulsante **+ tabella** nell'angolo superiore sinistro.
 

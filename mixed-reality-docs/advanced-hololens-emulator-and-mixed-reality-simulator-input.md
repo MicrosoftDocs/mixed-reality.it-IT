@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, emulatore, simulazione, realtà mista di Windows
-ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c5601ae2caf235cb22248ce7c6bf7e29225ade2c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437068"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926601"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Advanced HoloLens Emulator and Mixed Reality Simulator input
 
@@ -34,7 +34,7 @@ L'input del controller movimento e movimento viene mappato in modo accurato al m
 * **Azione**: consente di simulare l'azione di premere l'indice sul pollice o di estrarre il pulsante di azione in un controller. Ad esempio, l'input dell'azione può essere usato per simulare il gesto di tocco aereo, scorrere il contenuto e premere e tenere premuto.
 * **Movimento di [Bloom](system-gesture.md#bloom)/System o Home**: il movimento HoloLens Bloom/System o il pulsante Home del controller viene usato per tornare alla shell e per eseguire le azioni di sistema.
 
-Le mani hanno una reprresentation avanzata in HoloLens 2.  Oltre a essere monitorati/non rilevati e utilizzabili per la guida dei movimenti, le mani hanno ora un modello di ossatura articolato adattabile ed esposto allo sviluppatore.  Questo introduce 26 punti di rilevamento in ogni mano.  
+Le mani hanno una rappresentazione avanzata in HoloLens 2.  Oltre a essere monitorati/non rilevati e utilizzabili per la guida dei movimenti, le mani hanno ora un modello di ossatura articolato adattabile ed esposto allo sviluppatore.  Questo introduce 26 punti di rilevamento in ogni mano.  
 * **Joint**: una delle venti posizioni registrate per una determinata mano rilevata. Questo sarà un punto in cui è associato lo spazio 3D.
 * **Pose**: raccolta completa di tutte le giunzioni in una mano rilevata. A questo punto, si tratta di una raccolta di 26 giunzioni. 
 
@@ -76,11 +76,11 @@ Nella tabella seguente viene illustrato come viene eseguito il mapping di ogni t
 |  Tracking |  T o F3 |  |  Pulsante X | 
 
 
-Nota: i pulsanti del controller possono essere destinati a una mano/controller o all'altro usando i modificatori di destinazione.
+Nota: i pulsanti del controller possono essere assegnati a una mano/controller o all'altro usando i modificatori di destinazione.
 
 ## <a name="targeting"></a>Selezione della destinazione 
 
-Alcuni dei concetti di input precedenti si basano su se stessi.  Action, Bloom/System, reset e tracking sono concetti completi, non sono necessari e non sono interessati da alcun modificatore aggiuntivo per la destinazione.  Tuttavia, i concetti rimanenti possono essere applicati a una di più destinazioni. Sono stati introdotti modi per specificare la destinazione prevista a cui applicare il comando.  In tutti i casi, è possibile specificare tramite l'interfaccia utente o tramite i tasti di scelta rapida, l'oggetto da targtet.  In alcuni casi, è anche possibile specificare direttamente con il controller Xbox. 
+Alcuni dei concetti di input precedenti si basano su se stessi.  Action, Bloom/System, reset e tracking sono concetti completi, non sono necessari e non sono interessati da alcun modificatore aggiuntivo per la destinazione.  Tuttavia, i concetti rimanenti possono essere applicati a una di più destinazioni. Sono stati introdotti modi per specificare la destinazione prevista a cui applicare il comando.  In tutti i casi, è possibile specificare tramite l'interfaccia utente o tramite i tasti di scelta rapida, l'oggetto di destinazione.  In alcuni casi, è anche possibile specificare direttamente con il controller Xbox. 
 
 Nella tabella seguente vengono descritte le opzioni per la destinazione e la modalità di attivazione di ognuna di esse.
 

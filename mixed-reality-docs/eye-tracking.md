@@ -6,18 +6,21 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Rilevamento degli occhi, realtà mista, input, sguardi oculari, calibrazione
-ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641138"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913217"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Tracciamento oculare in HoloLens 2
 
 ![Demo sul rilevamento degli occhi in MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a ciò che l'utente sta esaminando. Questa pagina offre una panoramica di questa nuova funzionalità per sviluppatori e progettisti su come possono trarre vantaggio dal monitoraggio degli sguardi per i diversi casi d'uso e le linee guida per gli sviluppatori di base. 
+HoloLens 2 consente un nuovo livello di contesto e comprensione umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a ciò che l'utente sta esaminando. Questa pagina indica agli sviluppatori come possono trarre vantaggio dal monitoraggio degli sguardi per diversi casi d'uso, nonché da cosa cercare quando si progettano interazioni utente basate su sguardi visivi. 
+
+L'API di rilevamento degli occhi è stata progettata tenendo presente la privacy degli utenti, evitando di passare informazioni identificabili, in particolare qualsiasi biometria. Per le applicazioni che supportano il rilevamento degli occhi, l'utente deve concedere l'autorizzazione dell'app per usare le informazioni di rilevamento degli occhi. 
+
 
 ### <a name="device-support"></a>Supporto di dispositivi
 <table>
@@ -94,13 +97,16 @@ Seguono altri casi di utilizzo per le _azioni implicite_:
 - **Ologrammi attenti:** Olografici che reagiscono in maniera impercettibile quando si osservano. Questo può variare da elementi dell'interfaccia utente leggermente luminosi, un fiore lentamente fiorito a un cane virtuale che inizia a esaminare l'utente e scuotendo la coda. Questa interazione potrebbe offrire un'interessante sensazione di connettività e soddisfazione nell'applicazione.
 
 ### <a name="attention-tracking"></a>Tracciamento dell'attenzione   
-Le informazioni su dove o quali utenti esaminano sono uno strumento estremamente potente per valutare l'usabilità delle progettazioni e per identificare i problemi nei flussi di lavoro efficienti. La visualizzazione e l'analisi dei tracciati degli occhi sono una pratica comune in varie aree di applicazione. Con HoloLens 2, viene fornita una nuova dimensione a questa comprensione perché gli ologrammi 3D possono essere inseriti in contesti reali e valutati di conseguenza. Il [Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornisce esempi di base per la registrazione e il caricamento dei dati di rilevamento degli occhi e come visualizzarli.
+Le informazioni su dove o quali utenti osservano possono essere uno strumento estremamente potente, che consente di valutare l'usabilità delle progettazioni e identificare i problemi nei flussi di lavoro per renderli più efficienti.
+La visualizzazione e l'analisi dei tracciati degli occhi sono una pratica comune in varie aree di applicazione. Con HoloLens 2, viene fornita una nuova dimensione a questa comprensione perché gli ologrammi 3D possono essere inseriti in contesti reali e valutati di conseguenza. Il [Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fornisce esempi di base per la registrazione e il caricamento dei dati di rilevamento degli occhi e come visualizzarli.
+Microsoft è dedicata a facilitare l'innovazione garantendo al tempo stesso agli utenti un'esperienza informativa e trasparente con il modo in cui vengono usate le informazioni di rilevamento degli occhi.  Microsoft collaborerà con gli sviluppatori e i team UX per fornire indicazioni per le terze parti in grado di garantire che le esperienze siano incentrate sull'utente.  
+
 
 Di seguito sono riportate altre applicazioni in questo settore: 
--   **Visualizzazione sguardo remoto:** Consente di visualizzare i collaboratori remoti che cercano di migliorare la comprensione condivisa.
--   **Studi di ricerca per gli utenti:** Il monitoraggio dell'attenzione può aiutare a comprendere meglio il modo in cui si percepisce e si interagisce con l'ambiente che può aiutare a migliorare i modelli di finalità umana per le interazioni tra computer umani più istintivi. 
--   **Formazione:** Miglioramento della formazione dei novizi grazie alla migliore comprensione dei modelli di ricerca visivi degli esperti e al coordinamento degli occhi per attività complesse, ad esempio per l'analisi di dati medici o di macchinari operativi.
--   **Valutazioni di progettazione e ricerche di mercato:** Il rilevamento degli occhi è uno strumento comune per la ricerca di mercato quando si valutano i siti Web e i progetti di prodotti. Con HoloLens 2, è possibile estendere questa funzionalità agli spazi 3D unendo le varianti di progettazione del prodotto digitale con l'ambiente fisico. 
+-   **Visualizzazione sguardo remoto:** Visualizzazioni remote degli sguardi: è possibile visualizzare quali collaboratori remoti stanno cercando di fornire feedback immediato e facilitare l'elaborazione di informazioni più accurate.
+-   **Studi di ricerca per gli utenti:** Il monitoraggio dell'attenzione può aiutare i ricercatori a ottenere maggiori informazioni sul modo in cui gli utenti percepiscono e si impegnano nell'ambiente naturale, senza interferire, per progettare interazioni tra computer umani più istintive. Il rilevamento degli occhi può fornire informazioni non direttamente articolate dai partecipanti allo studio, che altrimenti potrebbero essere facilmente perse dal ricercatore. 
+-   **Training e monitoraggio delle prestazioni:** Pratica e ottimizza l'esecuzione delle attività identificando i colli di bottiglia in modo più efficace nel flusso di esecuzione. Il monitoraggio degli occhi può fornire informazioni naturali, in tempo reale e obiettive per contribuire al miglioramento della formazione, della produttività e della sicurezza nell'area di lavoro. 
+-   **Valutazioni di progettazione, marketing e ricerca di utenti:** Il rilevamento degli occhi consente alle aziende commerciali di eseguire studi di marketing e consumer in ambienti reali o di analizzare ciò che acquisisce l'attenzione dell'utente per migliorare la progettazione del prodotto o dello spazio. 
 
 ### <a name="additional-use-cases"></a>Altri casi di utilizzo
 - **Giochi:** Hai mai voluto avere superpotenza? Ora hai questa opportunità. È possibile levitare gli ologrammi guardandoli. Spara i raggi laser dagli occhi: Provalo in [RoboRaid per HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
@@ -116,10 +122,9 @@ Prestare attenzione a non sovraccaricare l'utente. per saperne di più, consulta
 ## <a name="using-eye-gaze-for-interaction"></a>Uso di Eye-sguardi per l'interazione
 La creazione di un'interazione che sfrutta la scelta rapida per gli occhi in rapida evoluzione può risultare complessa.
 Da un lato, gli occhi si muovono così velocemente che è necessario prestare attenzione a come usare l'input occhio, perché in caso contrario gli utenti potrebbero riscontrare un'esperienza travolgente o distrazione. D'altra parte, è anche possibile creare esperienze realmente magiche che stimolano gli utenti. Per aiutarti, Guarda la panoramica dei vantaggi principali, delle sfida e dei consigli di progettazione per gli occhi mirati [all'interazione](eye-gaze-interaction.md). 
-
-<br>
  
 ## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluzioni di fallback quando la verifica degli occhi non è disponibile
+
 In rari casi, i dati di rilevamento degli occhi potrebbero non essere disponibili.
 Questo problema può essere dovuto a diversi motivi per i quali più comuni sono elencati di seguito:
 * Il sistema non è riuscito a [calibrare l'utente](calibration.md).
@@ -127,9 +132,9 @@ Questo problema può essere dovuto a diversi motivi per i quali più comuni sono
 * L'utente è calibrato, ma ha deciso di non concedere all'app l'autorizzazione per l'uso dei dati di rilevamento degli occhi.    
 * L'utente ha occhiali univoci o una condizione oculare che il sistema non supporta ancora.    
 * Fattori esterni che inibiscono il monitoraggio degli occhi affidabili, ad esempio le sbavature sulla visiera HoloLens o sugli occhiali, il sole intenso diretto e le occlusioni a causa dei capelli davanti agli occhi.   
+
 Di conseguenza, gli sviluppatori devono assicurarsi che sia disponibile un supporto di fallback appropriato per questi utenti. Nella pagina relativa al [rilevamento degli occhi nella pagina DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) vengono illustrate le API necessarie per rilevare se i dati di rilevamento degli occhi sono disponibili. 
 
-Come descritto in precedenza, esistono diversi motivi per cui i dati di rilevamento degli occhi potrebbero non essere disponibili.   
 Anche se alcuni utenti hanno deciso consapevolmente di revocare l'accesso ai dati di rilevamento degli occhi e sono OK con il compromesso di un'esperienza utente inferiore alla privacy di non fornire l'accesso ai dati di rilevamento degli occhi, in alcuni casi potrebbe non essere intenzionale.  
 Di conseguenza, se l'app usa la funzionalità di rilevamento degli occhi e si tratta di una parte importante dell'esperienza, è consigliabile comunicarla chiaramente all'utente.     
 Si consiglia di informare l'utente sul motivo per cui la verifica degli occhi è cruciale per l'applicazione (forse anche elencando alcune funzionalità avanzate) per sperimentare il potenziale completo dell'applicazione può aiutare gli utenti a comprendere meglio ciò che stanno rinunciando.    
@@ -153,7 +158,7 @@ In questa pagina è stata auspicata una panoramica approfondita per iniziare a c
 ## <a name="see-also"></a>Vedi anche
 * [Calibrazione](calibration.md)
 * [Comodità](comfort.md)
-* [Interazione basata sugli sguardi](eye-gaze-interaction.md)
+* [Interazione basata su sguardo fisso](eye-gaze-interaction.md)
 * [Eye-sguardi in DirectX](gaze-in-directx.md)
 * [Eye-sguardi in Unity (Toolkit realtà mista)](https://aka.ms/mrtk-eyes)
 * [Sguardo e commit](gaze-and-commit.md)

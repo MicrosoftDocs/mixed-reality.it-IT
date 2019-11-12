@@ -6,16 +6,16 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, progettazione, interazione, comandi vocali
-ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437220"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926705"
 ---
 # <a name="voice-commanding"></a>Esecuzione di comandi vocali
 
-Con i comandi vocali, lo sguardo viene in genere usato come meccanismo di selezione della destinazione da sfruttare come puntatore ("seleziona") o per indirizzare il comando a un'applicazione ("guarda, parla"). Naturalmente alcuni comandi vocali non richiedono una destinazione, ad esempio "Vai all'inizio" o "Ehi Cortana".
+Quando si usano i comandi vocali, lo sguardo viene in genere usato come meccanismo di destinazione, sia che si tratti di un puntatore ("Select") o di indirizzare il comando a un'applicazione ("vedere il messaggio"). Naturalmente alcuni comandi vocali non richiedono una destinazione, ad esempio "Vai all'inizio" o "Ehi Cortana".
 
 
 ## <a name="device-support"></a>Supporto di dispositivi

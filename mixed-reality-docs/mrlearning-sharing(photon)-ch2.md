@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 91935cb5b465e51d3948f68b818f93ba52b215f1
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438386"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914416"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. recupero di Unity pronto per lo sviluppo 
 
@@ -28,7 +28,7 @@ In questa esercitazione si apprenderà come preparare e configurare Unity per lo
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Scaricare e salvare il pacchetto di Unity del Toolkit di realtà misto facendo clic [qui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
+1. Scaricare e salvare il pacchetto Mixed Reality Toolkit Foundation Unity facendo clic [qui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage)
 
 2. In Unity fare clic sul menu assets e selezionare Import Package, quindi fare clic su Custom Package.
 
@@ -50,13 +50,15 @@ In questa esercitazione si apprenderà come preparare e configurare Unity per lo
 
 ![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
 
-6. Una volta completato, viene visualizzato un nuovo file di configurazione che consente di scegliere di personalizzare il profilo. Fare clic su copia e Personalizza.
+6. Una volta completato, viene visualizzato un nuovo file di configurazione che consente di scegliere di personalizzare il profilo. 
 
-![Module3Chapter2step6ima](images/module3chapter2step6ima.PNG)
+![Module2Chapter1step4im](images/Module2Chapter1step4im.PNG)
 
-![Module3Chapter2step6imb](images/module3chapter2step6imb.PNG)
+7. Selezionare il Toolkit di realtà mista (MRTK) dalla gerarchia. Nel pannello Inspector cercare lo script Mixed Reality Toolkit e premere il pulsante "copy & Customize", come illustrato nella figura seguente.  Un pop verrà visualizzato dopo questo e selezionare l'opzione Clona nel menu a comparsa.
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
+
+![Module3Chapter2step6imd](images/module3chapter2step6imd.PNG)
 
 7. Scorrere verso il basso e deselezionare Abilita sistema di diagnostica se si desidera nascondere la finestra di diagnostica. È consigliabile mantenere la finestra di diagnostica abilitata durante lo sviluppo di applicazioni per monitorare le prestazioni e quindi disabilitarla durante le dimostrazioni di produzione o di applicazioni. 
 

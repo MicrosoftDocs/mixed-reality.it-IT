@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9f57cb9874aade2d6b19d0c061fd83eb04b9ef11
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438420"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914386"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualizzazione del feedback di ancoraggio spaziale di Azure
 
@@ -45,28 +45,11 @@ In questa lezione si apprenderà come fornire agli utenti feedback sull'individu
 
 ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. Nel pannello progetto selezionare "asset" e fare clic con il pulsante destro del mouse, quindi selezionare "Mostra in Esplora".
-   
-
-![module2chapter3step4im](images/module2chapter3step5im.PNG)
-
-Fare clic [qui](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) per scaricare i file necessari nei passaggi successivi.
-
-6. Dopo aver aperto Esplora risorse, selezionare la cartella assets, quindi la cartella "ASAmodulesAssets" e copiare lo script di ancoraggio feedback e i file script del modulo di ancoraggio nella cartella. 
-
-![module2chapter3step5im](images/module2chapter3step6im.PNG)
-
-> Nota: se viene visualizzato un messaggio popup in cui viene chiesto se si desidera sovrascrivere il vecchio o conservare il vecchio, selezionare Sovrascrivi.
-
-7. Tornare alla cartella assets. Passare quindi alla cartella "AzureSpatialAnchorsPlugin", seguita dalla cartella Examples e infine dalla cartella Scripts. Copiare quindi il wrapper demo di Azure Spatial Anchors in tale cartella. 
-
-![module2chapter3step8im](images/module2chapter3step7im.PNG)
-
-8. Ora che i file sono stati caricati, assicurarsi che sia selezionato il testo "feedbackpanel" nella gerarchia ASA_feedback, fare clic su "Aggiungi componente" e aggiungere lo script di ancoraggio feedback cercandolo e selezionando il testo quando viene visualizzato. 
+5. Verificare che nel ASA_feedback gerarchia sia selezionato il testo "feedbackpanel", fare clic su "Aggiungi componente" e aggiungere lo script per il feedback di ancoraggio cercandolo e selezionando il testo quando viene visualizzato. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Trascinare l'oggetto testo "feedbackPanel" dalla gerarchia ASA_Feedback nello slot vuoto sotto lo script, come illustrato nell'immagine seguente. 
+6. Trascinare l'oggetto testo "feedbackPanel" dalla gerarchia di ASA_Feedback nello slot vuoto sotto lo script, come illustrato nell'immagine seguente. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 

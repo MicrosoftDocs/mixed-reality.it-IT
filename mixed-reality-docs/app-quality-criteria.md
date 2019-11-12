@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criteri di qualità delle app, realtà mista, app per realtà mista
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437044"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926584"
 ---
 # <a name="app-quality-criteria"></a>Criteri di qualità delle app
 
@@ -124,7 +124,7 @@ Durante l'uso del dispositivo e la visualizzazione dell'esperienza:
 * Spostarsi tra gli ologrammi e l'ambiente, cercare comportamenti come Swim e nervosismo. Questo tipo di movimento è probabilmente causato dal fatto che il dispositivo non tiene traccia dell'ambiente o la distanza dall'ancoraggio spaziale.
 * Se nel frame sono presenti ologrammi di grandi dimensioni o più, osservare il comportamento degli ologrammi a diverse profondità spostando la posizione della testa da un lato all'altro, se shakiness è probabilmente causato dal piano di stabilizzazione.
 
-### <a name="recomendations"></a>Consigli
+### <a name="recommendations"></a>Consigli
 
 * Aggiungere un contatore della frequenza dei fotogrammi all'inizio del lavoro di sviluppo.
 * Usare il piano di stabilizzazione.
@@ -188,7 +188,7 @@ I disallineamenti degli ologrammi con oggetti fisici (se destinati a essere posi
 * La mappa spaziale è utile per posizionare oggetti sulle superfici quando la precisione non è necessaria.
 * Per la massima precisione, usare i marcatori o i poster per impostare gli ologrammi e un controller Xbox (o un meccanismo di allineamento manuale) per la calibrazione finale.
 * Prendere in considerazione la possibilità di suddividere ologrammi molto grandi in parti logiche e di allineare ogni parte alla superficie.
-* L'impostazione non corretta della distanza interpupilla (dpi) può influire anche sull'allineamento degli ologrammi. Configurare sempre HoloLens sul DPI dell'utente.
+* L'impostazione non corretta della distanza interpupillare (dpi) può anche influire sull'allineamento degli ologrammi. Configurare sempre HoloLens sul DPI dell'utente.
 
 ### <a name="resources"></a>Risorse
 
@@ -523,7 +523,7 @@ La chiarezza dell'interazione di input è essenziale per l'usabilità di un'app 
 ### <a name="how-to-measure"></a>Come misurare
 
 * L'app usa [metodi di input standard coerenti.](interaction-fundamentals.md)
-* Se l'app ha input personalizzato, viene chiaramente comunicata tramite:
+* Se l'app ha un input personalizzato, viene chiaramente comunicata tramite:
 * Esperienza di prima esecuzione
 * Schermate introduttive
 * Descrizioni comandi
