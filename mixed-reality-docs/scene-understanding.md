@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: 7ee0cf3af8012a053733896a8bf92192306b7f8b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437480"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926913"
 ---
 # <a name="scene-understanding"></a>Comprensione della scena
 
@@ -95,7 +95,7 @@ La generazione di NAV-mesh accurati richiede attualmente la post-elaborazione, v
 
 ### <a name="visualization"></a>Visualizzazione
 
-Sebbene la [visualizzazione del mapping spaziale](spatial-mapping.md#visualization) possa essere usata per il feedback in tempo reale dell'ambiente, esistono molti scenari in cui la semplicità degli oggetti planari e stagni garantisce maggiore prestazioni o qualità visiva. Le tecniche di proiezione Shadow e di base descritte con il mapping spaziale possono essere più gradevoli se proiettate sulle superfici planari fornite da quad o dalla mesh impermeabile piana. Ciò vale soprattutto per gli ambienti e gli scenari in cui la pre-analisi non è ottimale a causa del fatto che la scena dedurrà e gli ambienti completi e i presupposti planari riducono al minimo gli artefatti.
+Sebbene la [visualizzazione del mapping spaziale](spatial-mapping.md#visualization) possa essere usata per il feedback in tempo reale dell'ambiente, esistono molti scenari in cui la semplicità degli oggetti planari e stagni garantisce maggiore prestazioni o qualità visiva. Le tecniche di proiezione Shadow e di base descritte con il mapping spaziale possono essere più gradevoli se proiettate sulle superfici planari fornite da quad o dalla mesh impermeabile piana. Ciò vale soprattutto per gli ambienti e gli scenari in cui l'analisi preliminare completa non è ottimale a causa del fatto che la scena dedurrà e gli ambienti completi e i presupposti planari riducono al minimo gli artefatti.
 
 Inoltre, il numero totale di superfici restituite dal mapping spaziale è limitato dalla cache spaziale interna, mentre la versione di comprensione della scena della mesh di mapping spaziale è in grado di accedere ai dati di mapping spaziali non memorizzati nella cache. Per questo motivo, la comprensione della scena è più adatta per l'acquisizione di rappresentazioni di mesh per spazi più grandi (ad esempio, più grandi di una singola stanza) per la visualizzazione o per un'ulteriore elaborazione di mesh. La mesh globale restituita con EnableWorldMesh avrà un livello di dettaglio coerente, che può produrre una visualizzazione più gradevole se ne viene eseguito il rendering come wireframe.
 

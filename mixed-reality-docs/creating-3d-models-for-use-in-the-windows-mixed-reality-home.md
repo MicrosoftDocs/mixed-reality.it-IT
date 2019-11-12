@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modellazione, linee guida per la modellazione, requisiti delle risorse, linee guida per la creazione, avvio, avvio 3D, trama, materiali, complessità, triangoli, mesh, poligoni, policount, limiti
-ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692290"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926575"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Creare modelli 3D da usare nella Home page
 
@@ -67,7 +67,7 @@ La Home realtà mista di Windows non supporta i modelli con più di 64 nodi o so
 
 ## <a name="material-guidelines"></a>Linee guida materiali
 
-Le trame devono essere preparate usando un flusso di lavoro di rugosità Metal del PBR. Per iniziare, creare un set completo di trame, tra cui albedo, Normal, occlusione, Metallic e Rough. La realtà mista di Windows supporta le trame con risoluzioni fino a 4096x4096, ma è consigliabile creare in 512x512. Inoltre, le trame devono essere create in risoluzioni in multipli di 4, perché questo è un requisito per il formato di compressione applicato alle trame nei passaggi di esportazione descritti di seguito. Infine, quando gerating MIP Maps o una trama il MIP minimo deve essere un massimo di 4x4.
+Le trame devono essere preparate usando un flusso di lavoro di rugosità Metal del PBR. Per iniziare, creare un set completo di trame, tra cui albedo, Normal, occlusione, Metallic e Rough. La realtà mista di Windows supporta le trame con risoluzioni fino a 4096x4096, ma è consigliabile creare in 512x512. Inoltre, le trame devono essere create in risoluzioni in multipli di 4, perché questo è un requisito per il formato di compressione applicato alle trame nei passaggi di esportazione descritti di seguito. Infine, quando si generano mappe MIP o una trama, il MIP minimo deve essere un massimo di 4x4.
 <br>
 
 |  Dimensioni di trama consigliate  |  Dimensioni massime trama | MIP più basso
@@ -96,7 +96,7 @@ Indica allo shader se qualcosa è metal o no. Raw Metal = 1,0 bianco non metal =
 
 ## <a name="optimizations"></a>Ottimizzazioni
 
-La Home realtà mista di Windows offre una serie di ottimizzazioni oltre alla specifica glTF di base definita con estensioni personalizzate. Queste ottimizzazioni sono necessarie nelle versioni di Windows < = 1709 e consigliate nelle versioni più recenti di Windows. È possibile ottimizzare facilmente qualsiasi modello glTF 2,0 usando il [convertitore di asset per la realtà mista di Windows disponibile su GitHub](https://github.com/Microsoft/glTF-Toolkit/releases). Questo strumento esegue le ottimizzazioni e la compressione delle trame corrette come specificato di seguito. Per un utilizzo generale è consigliabile usare WindowsMRAssetConverter, ma se è necessario un maggiore controllo sull'esperienza e si vuole creare una pipeline ottimizzazione personalizzata, è possibile fare riferimento alla specifica dettagliata riportata di seguito.  
+La Home realtà mista di Windows offre una serie di ottimizzazioni oltre alla specifica glTF di base definita con estensioni personalizzate. Queste ottimizzazioni sono necessarie nelle versioni di Windows < = 1709 e consigliate nelle versioni più recenti di Windows. È possibile ottimizzare facilmente qualsiasi modello glTF 2,0 usando il [convertitore di asset per la realtà mista di Windows disponibile su GitHub](https://github.com/Microsoft/glTF-Toolkit/releases). Questo strumento esegue le ottimizzazioni e la compressione delle trame corrette come specificato di seguito. Per un utilizzo generale è consigliabile usare WindowsMRAssetConverter, ma se è necessario un maggiore controllo sull'esperienza e si vuole creare una pipeline di ottimizzazione personalizzata, è possibile fare riferimento alla specifica dettagliata riportata di seguito.  
 
 ### <a name="materials"></a>Materiali
 
@@ -161,7 +161,7 @@ Quando si comprimono le trame DDS, per ogni mappa è prevista la compressione se
 
 ### <a name="adding-mesh-lods"></a>Aggiunta di LODs mesh
 
-Windows MR usa il nodo Geometry LODs per eseguire il rendering di modelli 3D con diversi livelli di dettaglio a seconda della copertura dello schermo. Anche se questa funzionalità non è necessaria tecnicamente, è fortemente consigliata per tutti gli asset. Attualmente Windows supporta 3 livelli di dettaglio. Il valore predefinito di LOD è 0, che rappresenta la qualità più elevata. Gli altri LODs sono numerati in sequenza, ad esempio 1, 2 e ottengono progressivamente una riduzione della qualità. Il [convertitore di asset](https://github.com/Microsoft/glTF-Toolkit/releases) per la realtà mista di Windows supporta la generazione di asset che soddisfano questa specifica LOD accettando più modelli glTF e unendoli in un singolo asset con livelli di LOD validi. Nella tabella seguente vengono descritte le destinazioni del triangolo e l'ordinamento del LOD previsto:
+Windows MR usa il nodo Geometry LODs per eseguire il rendering di modelli 3D con diversi livelli di dettaglio a seconda della copertura dello schermo. Anche se questa funzionalità non è necessaria tecnicamente, è fortemente consigliata per tutti gli asset. Attualmente Windows supporta 3 livelli di dettaglio. Il valore predefinito di LOD è 0, che rappresenta la qualità più elevata. Gli altri LODs sono numerati in sequenza, ad esempio 1, 2 e ottengono progressivamente una riduzione della qualità. Il [convertitore di asset per la realtà mista di Windows](https://github.com/Microsoft/glTF-Toolkit/releases) supporta la generazione di asset che soddisfano questa specifica LOD accettando più modelli glTF e unendoli in un singolo asset con livelli di LOD validi. Nella tabella seguente vengono descritte le destinazioni del triangolo e l'ordinamento del LOD previsto:
 <br>
 
 |  Livello LOD  |  Conteggio triangolo consigliato  |  Numero massimo di triangolo | 
@@ -170,7 +170,7 @@ Windows MR usa il nodo Geometry LODs per eseguire il rendering di modelli 3D con
 |  LOD 1 |  5\.000  |  10.000 | 
 |  LOD 2 |  2\.500  |  10.000 | 
 
-Quando si usa LODs, specificare sempre 3 livelli LOD. LODs mancanti provocheranno il rendering imprevisto del modello perché il sistema LOD passa al livello di LOD mancante. glTF 2,0 non supporta attualmente LODs come parte della specifica di base. LODs deve pertanto essere definito usando l' [estensione MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
+Quando si usa LODs, specificare sempre 3 livelli LOD. LODs mancanti provocheranno il rendering imprevisto del modello perché il sistema LOD passa al livello di LOD mancante. glTF 2,0 non supporta attualmente LODs come parte della specifica di base. LODs deve pertanto essere definito utilizzando l' [estensione MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
 
 ### <a name="screen-coverage"></a>Copertura dello schermo
 
@@ -198,12 +198,12 @@ Prima di tutto, scaricare gli strumenti seguenti, se non sono già presenti. Que
 
 
 ### <a name="opening-and-previewing-the-model"></a>Apertura e visualizzazione in anteprima del modello
-Per iniziare, aprire il modello glTF in VSCode trascinando il file con estensione glTF nella finestra dell'editor. Si noti che se si dispone di un file con estensione GLB invece di un file con estensione glTF, è possibile importarlo in VSCode usando il componente aggiuntivo degli strumenti glTF scaricato. Passare a "View-> Command palette", quindi iniziare a digitare "glTF" nel riquadro comandi e selezionare "glTF: Importa da GLB "che consente di visualizzare un selettore di file per l'importazione di un file con estensione GLB con. 
+Per iniziare, aprire il modello glTF in VSCode trascinando il file con estensione glTF nella finestra dell'editor. Si noti che se si dispone di un file con estensione GLB invece di un file con estensione glTF, è possibile importarlo in VSCode usando l'addon degli strumenti glTF scaricato. Passare a "View-> Command palette", quindi iniziare a digitare "glTF" nel riquadro comandi e selezionare "glTF: Import from GLB", in cui verrà visualizzata una selezione file per l'importazione di un file con estensione glb. 
 
-Una volta aperto il modello glTF, il codice JSON dovrebbe essere visualizzato nella finestra dell'editor. Si noti che è anche possibile visualizzare in anteprima il modello in un visualizzatore 3D Live usando il pulsante destro del mouse sul nome del file e selezionando "glTF: Anteprima del modello 3D di comando dal menu di scelta rapida. 
+Una volta aperto il modello glTF, il codice JSON dovrebbe essere visualizzato nella finestra dell'editor. Si noti che è anche possibile visualizzare in anteprima il modello in un visualizzatore 3D Live usando il pulsante destro del mouse sul nome del file e selezionando il collegamento del comando "glTF: Preview 3D Model" dal menu di scelta rapida. 
 
 ### <a name="adding-the-triggers"></a>Aggiunta dei trigger
-I trigger di animazione vengono aggiunti al modello glTF JSON usando l'estensione della mappa di animazione. L'estensione della mappa di animazione è documentata pubblicamente [in GitHub](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Nota: SI TRATTA DI UN'ESTENSIONE BOZZA). Per aggiungere l'estensione al modello, è sufficiente scorrere fino alla fine del file glTF nell'editor e aggiungere il blocco "extensionsUsed" e "Extensions" al file, se non esistono già. Nella sezione "extensionsUsed" si aggiungerà un riferimento all'estensione "EXT_animation_map" e nel blocco "Extensions" si aggiungeranno i mapping alle animazioni nel modello.
+I trigger di animazione vengono aggiunti al modello glTF JSON usando l'estensione della mappa di animazione. L'estensione della mappa di animazione è documentata pubblicamente [in GitHub](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Nota: questa è un'estensione bozza). Per aggiungere l'estensione al modello, è sufficiente scorrere fino alla fine del file glTF nell'editor e aggiungere il blocco "extensionsUsed" e "Extensions" al file, se non esistono già. Nella sezione "extensionsUsed" si aggiungerà un riferimento all'estensione "EXT_animation_map" e nel blocco "Extensions" si aggiungeranno i mapping alle animazioni nel modello.
 
 Come indicato [nella specifica](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) , si definisce che cosa attiva l'animazione usando la stringa "semantica" in un elenco di "animazioni", che è una matrice di indici di animazione. Nell'esempio seguente è stata specificata l'animazione da riprodurre mentre l'utente sta guardando l'oggetto:
 
@@ -223,22 +223,22 @@ Come indicato [nella specifica](https://github.com/msfeldstein/glTF/blob/04f7005
   }
 ```
 La semantica dei trigger di animazione seguente è supportata dalla Home realtà mista di Windows.  
-* "ALWAYS": Eseguire costantemente il ciclo di un'animazione
-* "MANTENUTO": Ciclo durante l'intera durata dell'acquisizione di un oggetto.
-* "GUARDA": Ciclo eseguito mentre viene esaminato un oggetto
-* "PROSSIMITÀ": Ciclo mentre un visualizzatore è vicino a un oggetto
-* "PUNTATORE": Ciclo mentre un utente punta a un oggetto
+* "ALWAYs": ciclo continuo di un'animazione
+* "Mantenuto": ciclo durante l'intera durata dell'acquisizione di un oggetto.
+* "Sguardo": viene eseguito il ciclo mentre un oggetto viene esaminato
+* "Prossimità": ciclo mentre un visualizzatore è vicino a un oggetto
+* "Puntatore": ciclo mentre un utente punta a un oggetto
 
 ### <a name="saving-and-exporting"></a>Salvataggio ed esportazione
-Dopo aver apportato le modifiche al modello glTF, è possibile salvarlo direttamente come glTF oppure fare clic con il pulsante destro del mouse sul nome del file nell'editor e selezionare "glTF: Esportare in GLB (file binario) "per esportare invece un file con estensione glb. 
+Dopo aver apportato le modifiche al modello glTF, è possibile salvarlo direttamente come glTF oppure fare clic con il pulsante destro del mouse sul nome del file nell'editor e selezionare "glTF: Export to GLB (file binario)" per esportare invece un file con estensione glb. 
 
 ### <a name="restrictions"></a>Restrizioni
-Le animazioni non possono essere più lunghe di 20 minuti e non possono contenere più di 36.000 fotogrammi chiave (20 minuti a 30 FPS). Inoltre, quando si usano le animazioni basate su morph target, non devono superare 8192 vertici di destinazione morph o meno. Il superamento di questi conteggi causare l'asset animato in modo che non sia supportato nella Home realtà mista di Windows. 
+Le animazioni non possono essere più lunghe di 20 minuti e non possono contenere più di 36.000 fotogrammi chiave (20 minuti a 30 FPS). Inoltre, quando si usano le animazioni basate su morph target, non devono superare 8192 vertici di destinazione morph o meno. Il superamento di questi conteggi farà sì che l'asset animato non sia supportato nella Home realtà mista di Windows. 
 
-|Funzionalità|Massima|
+|Funzionalità|Valore massimo|
 |-----|-----|
-|Duration|20 minuti|
-|KeyFrames|36,000| 
+|Durata|20 minuti|
+|KeyFrames|36.000| 
 |Vertici di destinazione morph|8192|
 
 ## <a name="gltf-implementation-notes"></a>Note sull'implementazione di glTF
@@ -251,17 +251,17 @@ L'asset glTF deve puntare alla scena predefinita usando l'attributo della scena 
 
 Le seguenti proprietà del materiale vengono usate dalla specifica di core glTF 2,0, ma non sono necessarie:
 * baseColorFactor, metallicFactor, roughnessFactor
-* baseColorTexture: Deve puntare a una trama archiviata in DDS.
-* emissiveTexture: Deve puntare a una trama archiviata in DDS.
+* baseColorTexture: deve puntare a una trama archiviata in DDS.
+* emissiveTexture: deve puntare a una trama archiviata in DDS.
 * emissiveFactor
 * alphaMode
 
 Le seguenti proprietà del materiale vengono ignorate dalla specifica di base:
 * Tutte le più UV
-* metalRoughnessTexture: È necessario usare invece Microsoft Optimized texture Packaging definito di seguito
-* normalTexture: È necessario usare invece Microsoft Optimized texture Packaging definito di seguito
+* metalRoughnessTexture: è necessario usare invece la compressione di trama ottimizzata Microsoft definita di seguito
+* normalTexture: è necessario usare invece la compressione di trama ottimizzata Microsoft definita di seguito
 * normalScale
-* occlusionTexture: È necessario usare invece Microsoft Optimized texture Packaging definito di seguito
+* occlusionTexture: è necessario usare invece la compressione di trama ottimizzata Microsoft definita di seguito
 * occlusionStrength
 
 Windows non supporta le linee e i punti della modalità primitive. 
@@ -277,7 +277,7 @@ Windows non supporta le linee e i punti della modalità primitive.
 * [HoloLens Mixed Reality texture Packaging Extensions Specification](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Specifica delle estensioni di Microsoft DDS Textures glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)
 * [Implementare utilità di avvio per app 3D (app Win32)](implementing-3d-app-launchers-win32.md)

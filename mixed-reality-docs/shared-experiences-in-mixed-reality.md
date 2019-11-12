@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: esperienza condivisa, realtà mista, ologramma, ancoraggio spaziale, multiutente, più
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437462"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926926"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Esperienze condivise in realtà mista
 
@@ -166,7 +166,7 @@ Usare [MixedReality-WebRTC](https://github.com/microsoft/mixedreality-webrtc) ne
 
 ## <a name="presenter-spectator-applications-and-demos"></a>Presenter-applicazioni e demo Spectator
 
-Usare [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) per rendere le [funzionalità di visualizzazione di specator](spectator-view.md) nell'app.  Abilitare altri dispositivi (HL, Android, iOS e videocamere) per vedere cosa vede HoloLens da una prospettiva diversa nello stesso percorso e ricevere aggiornamenti sulle interazioni dell'utente HoloLens dell'host che interagisce con gli ologrammi.  Guardare, scattare foto e registrare video sulle operazioni svolte dall'host con gli ologrammi nell'applicazione dal punto di vista spaziale con il compagno spettatore della stessa app.
+Usare [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) per rendere le [funzionalità di visualizzazione degli spettatori](spectator-view.md) nell'app.  Abilitare altri dispositivi (HL, Android, iOS e videocamere) per vedere cosa vede HoloLens da una prospettiva diversa nello stesso percorso e ricevere aggiornamenti sulle interazioni dell'utente HoloLens dell'host che interagisce con gli ologrammi.  Guardare, scattare foto e registrare video sulle operazioni svolte dall'host con gli ologrammi nell'applicazione dal punto di vista spaziale con il compagno spettatore della stessa app.
 
 **Nota:** Le immagini vengono acquisite tramite screenshot sui dispositivi iOS/Android.
 

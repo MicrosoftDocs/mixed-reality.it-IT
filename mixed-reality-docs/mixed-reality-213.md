@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, immersive, Motion controller, Academy, esercitazione
-ms.openlocfilehash: e2199c3afed21f9396ed84f71093a8b2fb3bb23b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 273d1bf384d588ab24bfe29e30f299b7a41fe541
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438542"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926815"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
@@ -277,7 +277,7 @@ private void AttachElementToController(MotionControllerInfo newController)
 }
 ```
 
-Il modo più semplice per usare lo script **AttachToController** consiste nell'ereditare da esso, come è stato fatto nel caso di **ColorPickerWheel.** È sufficiente eseguire l'override delle funzioni **OnAttachToController** e **OnDetatchFromController** per eseguire l'installazione o la ripartizione quando il controller viene rilevato/disconnesso.
+Il modo più semplice per usare lo script **AttachToController** consiste nell'ereditare da esso, come è stato fatto nel caso di **ColorPickerWheel.** È sufficiente eseguire l'override delle funzioni **OnAttachToController** e **OnDetachFromController** per eseguire l'installazione o la ripartizione quando il controller viene rilevato/disconnesso.
 
 **Istruzioni**
 
@@ -294,7 +294,7 @@ Poiché **ColorPickerWheel** eredita **AttachToController**, Mostra la **manuali
 
 ![Script ColorPickerWheel](images/mr213-attachtocontroller-300px.jpg)
 
-**ColorPickerWheel** esegue l'override di **OnAttachToController** e **OnDetatchFromController** per sottoscrivere l'evento di input che verrà usato nel capitolo successivo per la selezione dei colori con input touchpad.
+**ColorPickerWheel** esegue l'override di **OnAttachToController** e **OnDetachFromController** per sottoscrivere l'evento di input che verrà usato nel capitolo successivo per la selezione dei colori con input touchpad.
 
 ```cs
 public class ColorPickerWheel : AttachToController, IPointerTarget
@@ -346,7 +346,7 @@ private IEnumerator Start() {
 ### <a name="instructions"></a>Istruzioni
 
 * Nel pannello **gerarchia** fare clic su **ColorPickerWheel**
-* Nel pannello **Inspector** , in **animatior**, fare doppio clic su **ColorPickerWheelController**
+* Nel pannello **Inspector** , in **Animator**, fare doppio clic su **ColorPickerWheelController**
 * Sarà possibile visualizzare la scheda **Animator** aperta
 
 **Visualizzazione/occultamento dell'interfaccia utente con il controller di animazione di Unity**
@@ -624,7 +624,7 @@ private void SpawnObject()
 {
     // Instantiate the spawned object
     GameObject newObject = Instantiate(displayObject.gameObject, spawnParent);
-    // Detatch the newly spawned object
+    // Detach the newly spawned object
     newObject.transform.parent = null;
     // Reset the scale transform to 1
     scaleParent.localScale = Vector3.one;
@@ -801,7 +801,7 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 
 ## <a name="advanced-design---teleportation-and-locomotion"></a>Progettazione avanzata: teleporte e locomozione
 
-Se si vuole consentire all'utente di spostarsi nella scena con la teleportazione con levetta, usare **MixedRealityCameraParent** anziché **MixedRealityCamera**. È anche necessario aggiungere **InputManager** e **DefaultCusor**. Poiché **MixedRealityCameraParent** include già **MotionControllers** e **Boundary** come componenti figlio, è necessario rimuovere i prefabbricati **MotionControllers** e **Environment** esistenti.
+Se si vuole consentire all'utente di spostarsi nella scena con la teleportazione con levetta, usare **MixedRealityCameraParent** anziché **MixedRealityCamera**. È anche necessario aggiungere **InputManager** e **DefaultCursor**. Poiché **MixedRealityCameraParent** include già **MotionControllers** e **Boundary** come componenti figlio, è necessario rimuovere i prefabbricati **MotionControllers** e **Environment** esistenti.
 
 ### <a name="instructions"></a>Istruzioni
 
@@ -834,7 +834,7 @@ A questo punto è possibile iniziare a creare un'esperienza immersiva con i cont
 ## <a name="completed-scenes"></a>Scene completate
 
 * Nel pannello del **progetto** di Unity fare clic sulla cartella **Scenes** .
-* Sono disponibili due Unity sceens **MixedReality213** e **MixedReality213Advanced**.
+* Sono disponibili due scene Unity **MixedReality213** e **MixedReality213Advanced**.
     * **MixedReality213**: scena completata con pennello singolo
     * **MixedReality213Advanced**: sequenza completa con più pennelli con l'esempio di pressione del pulsante di selezione
 

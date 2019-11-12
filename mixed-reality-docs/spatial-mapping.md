@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mapping spaziale, HoloLens, realtà mista, ricostruzione della superficie, mesh
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437453"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926742"
 ---
 # <a name="spatial-mapping"></a>Mapping spaziale
 
@@ -64,13 +64,13 @@ Questi volumi possono essere stazionari (in una posizione fissa rispetto al mond
 
 Quando HoloLens raccoglie nuovi dati sull'ambiente e, quando si verificano modifiche all'ambiente, le superfici spaziali vengono visualizzate, scompaiono e cambiano.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Mapping spaziale rispetto alla scena Undesranding WorldMesh
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>Confronto tra mapping spaziale e visione della scena WorldMesh
 Per HoloLens 2, è possibile eseguire una query su una versione statica dei dati di mapping spaziale usando [scene Understanding SDK](scene-understanding-SDK.md) (impostazione EnableWorldMesh). Di seguito sono riportate le differenze tra due modalità di accesso ai dati di mapping spaziale:
 * API di mapping spaziale:
    * Intervallo limitato: i dati di mapping spaziale disponibili per le applicazioni in una dimensione limitata memorizzata nella cache ' Bubble ' intorno all'utente.
    * Fornisce aggiornamenti a bassa latenza delle aree di rete modificate tramite eventi SurfacesChanged.
    * Livello variabile dei dettagli controllati da triangoli per ogni parametro del contatore cubo.
-* Scenario dell'intesa SDK:
+* Scenario di comprensione dell'SDK:
    * Intervallo illimitato: fornisce tutti i dati di mapping spaziale analizzati all'interno del raggio della query.
    * Fornisce uno snapshot statico dei dati di mapping spaziali. Per ottenere i dati di mapping spaziale aggiornati è necessario eseguire una nuova query per l'intera mesh.
    * Livello di dettaglio coerente controllato dall'impostazione RequestedMeshLevelOfDetail.
@@ -366,7 +366,7 @@ Di seguito sono riportati alcuni esempi di diversi tipi di elaborazione di mesh 
 * È consigliabile eseguire i test con utenti reali (e preferibilmente senza coach), perché non possono usare il HoloLens o l'applicazione nello stesso modo in cui si esegue. In realtà, potrebbe sorprendere il comportamento, le conoscenze e le ipotesi delle persone divergenti.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
-* Affinché le mesh della superficie siano orientate correttamente, ogni GameObject deve essere attivo prima di essere inviato al SurfaceObeserver per costruire la mesh. In caso contrario, le maglie vengono visualizzate nello spazio, ma ruotate a angoli strani.
+* Affinché le mesh della superficie siano orientate correttamente, ogni GameObject deve essere attivo prima di essere inviato al SurfaceObserver per costruire la mesh. In caso contrario, le maglie vengono visualizzate nello spazio, ma ruotate a angoli strani.
 * Il GameObject che esegue lo script che comunica con il SurfaceObserver deve essere impostato sull'origine. In caso contrario, tutte le GameObject create e inviate al SurfaceObserver per la costruzione delle mesh avranno un offset uguale all'offset dell'oggetto del gioco padre. In questo modo, le mesh possono visualizzare diversi metri che rendono molto difficile eseguire il debug di ciò che accade.
 
 ## <a name="see-also"></a>Vedi anche

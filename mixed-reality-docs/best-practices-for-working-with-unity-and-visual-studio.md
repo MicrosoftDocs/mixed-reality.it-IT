@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Deploy, Unity, Visual Studio, HoloLens, HoloLens 2, Full-Headset
-ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436970"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926544"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Procedure consigliate per l'utilizzo di Unity e Visual Studio
 
@@ -45,7 +45,7 @@ Scarica [Visual Studio Tools per Unity](https://docs.microsoft.com/visualstudio/
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Esporre C# le variabili di classe per semplificare l'ottimizzazione
 
-Esistono due modi per esporre le variabili di classe. Il modo consigliato per eseguire questa operazione consiste nell'aggiungere l'attributo [SerializeField] alle variabili private. In questo modo, è possibile accedervi dall'editor, ma non a livello esposti.  L'altra opzione consiste nel rendere C# pubbliche le variabili di classe per esporle nell'interfaccia utente dell'editor. 
+Esistono due modi per esporre le variabili di classe. Il modo consigliato per eseguire questa operazione consiste nell'aggiungere l'attributo [SerializeField] alle variabili private. In questo modo, è possibile accedervi dall'editor, ma non esposte a livello di codice.  L'altra opzione consiste nel rendere C# pubbliche le variabili di classe per esporle nell'interfaccia utente dell'editor. 
 
 Entrambi gli approcci consentono di modificare facilmente le variabili durante la riproduzione in-Editor. Questa operazione è particolarmente utile per l'ottimizzazione delle proprietà meccaniche di interazione.
 

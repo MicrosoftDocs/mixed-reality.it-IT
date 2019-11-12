@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, Machine Learning, ml, Machine Learning Studio, hololens, immersive, VR
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437930"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926613"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -410,7 +410,7 @@ Per importare il pacchetto:
 
     ![Importazione del pacchetto MLProducts Unity](images/AzureLabs-Lab7-41.png)
 
-5.  All'interno della cartella del **Pannello del progetto** , fare clic sulla cartella **Scenes** e fare doppio clic sulla scena all'interno di (denominata **MR_MachineLearningScene**). La scena si aprirà (vedere l'immagine seguente). Se i diamanti rossi sono mancanti, è sufficiente fare clic sul pulsante **gizmos (Gizmo** ) in alto a destra nel **Pannello del gioco**.
+5.  Nella cartella del **Pannello del progetto** fare clic sulla cartella **Scenes** e fare doppio clic sulla scena all'interno (denominata **MR_MachineLearningScene**). La scena si aprirà (vedere l'immagine seguente). Se i diamanti rossi sono mancanti, è sufficiente fare clic sul pulsante **gizmos (Gizmo** ) in alto a destra nel **Pannello del gioco**.
 
     ![Importazione del pacchetto MLProducts Unity](images/AzureLabs-Lab7-44.png)
 
@@ -731,7 +731,7 @@ Per creare questa classe:
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))

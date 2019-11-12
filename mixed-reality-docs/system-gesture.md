@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: b46f642babb18387da2e76d5bdbb7631577c85de
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439822"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926731"
 ---
 # <a name="system-gesture"></a>Movimento di sistema
 
@@ -62,7 +62,7 @@ Per visualizzare il menu Start in HoloLens (1st Gen), abbiamo progettato "Bloom"
     :::column-end:::
     :::column:::
         ![Bloom Open](images/bloom-open.png)<br>
-        **Passaggio 2: palmare con spread a portata di mano**<br>
+        **Passaggio 2: Palm up con la distribuzione a portata di mano**<br>
     :::column-end:::
 :::row-end:::
 

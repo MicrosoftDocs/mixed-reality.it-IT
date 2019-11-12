@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 75e7c276560b4efbbdcbf2ea7579ed5ad7aadb4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439232"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926643"
 ---
 # <a name="holographic-remoting-version-history"></a>Cronologia delle versioni remota olografica
 
@@ -21,7 +21,7 @@ ms.locfileid: "73439232"
 ## Versione 2.0.14 (26 ottobre 2019)<a name="v2.0.14"></a>
 * Supporto per le nuove API PerceptionDevice (aggiornamento di Windows 10 di novembre 2019).
 * Correzione di un problema che impedisce l'attivazione degli eventi di movimento da SpatialGestureRecognizer.
-* Correzione del problema Theading quando si utilizza SpatialSurfaceObserver. SetBoundingVolume.
+* Correzione del problema di threading quando si utilizza SpatialSurfaceObserver. SetBoundingVolume.
 
 ## Versione 2.0.12 (18 ottobre 2019)<a name="v2.0.12"></a>
 * Correzione di un arresto anomalo in SpatialGestureRecognizer quando si utilizza NavigationRail (X/Y/Z).

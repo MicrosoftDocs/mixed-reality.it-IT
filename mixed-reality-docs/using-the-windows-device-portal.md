@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale per dispositivi Windows, HoloLens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438220"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926748"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portale per dispositivi Windows
 

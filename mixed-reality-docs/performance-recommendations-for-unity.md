@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: grafica, CPU, GPU, rendering, Garbage Collection, hololens
-ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438124"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926865"
 ---
 # <a name="performance-recommendations-for-unity"></a>Suggerimenti sulle prestazioni per Unity
 
@@ -273,7 +273,7 @@ Le tecniche che operano sull'intero schermo possono essere piuttosto onerose per
 
 ### <a name="optimal-lighting-settings"></a>Impostazioni di illuminazione ottimali
 
-L' [illuminazione globale in tempo reale](https://docs.unity3d.com/Manual/GIIntro.html) in Unity può fornire risultati visivi oustanding, ma comporta calcoli di illuminazione piuttosto costosi. È consigliabile disabilitare l'illuminazione globale in tempo reale per ogni file di scena Unity tramite **finestra** > **rendering** > **impostazioni di illuminazione** > deselezionare l' **illuminazione globale in tempo reale**.
+L' [illuminazione globale in tempo reale](https://docs.unity3d.com/Manual/GIIntro.html) in Unity può fornire risultati visivi in attesa, ma comporta calcoli di illuminazione piuttosto costosi. È consigliabile disabilitare l'illuminazione globale in tempo reale per ogni file di scena Unity tramite **finestra** > **rendering** > **impostazioni di illuminazione** > deselezionare l' **illuminazione globale in tempo reale**.
 
 Si consiglia inoltre di disabilitare tutti i cast di Shadow, perché aggiungono anche costosi passaggi GPU a una scena Unity. Le ombreggiature possono essere disabilitate per luce ma possono anche essere controllate in maniera olistica tramite le impostazioni di qualità.
 
@@ -301,7 +301,7 @@ Una semplice approssimazione per confrontare gli shader nelle prestazioni consis
 
     ![Operazioni standard di Unity shader](images/unity-standard-shader-compilation.png)
 
-#### <a name="optmize-pixel-shaders"></a>Pixel shader ottimizzazione
+#### <a name="optimize-pixel-shaders"></a>Ottimizza pixel shader
 
 Esaminando i risultati statistici compilati utilizzando il metodo precedente, il [frammento shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) eseguirà in genere più operazioni rispetto al [vertex shader](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) in media. Il frammento shader, noto anche come pixel shader, viene eseguito per ogni pixel nell'output dello schermo, mentre il vertex shader viene eseguito solo per ogni vertice di tutte le mesh disegnate sullo schermo. 
 

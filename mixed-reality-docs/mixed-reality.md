@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realtà mista, olografica, AR, VR, Mr, XR, realtà aumentata, realtà virtuale, spiegazione
-ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437891"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926779"
 ---
 # <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
 
@@ -71,7 +71,7 @@ Attualmente la maggior parte dei telefoni cellulari sul mercato non ha alcuna ca
 <br>
 
 ![lo spettro di realtà misto](images/MixedRealitySpectrum.jpg)<br>
-*Specturm realtà mista*
+*Spettro della realtà mista*
 
 <br>
 

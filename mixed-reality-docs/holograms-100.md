@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realtà mista, realtà mista di Windows, HoloLens, immersiva, VR, Mr, introduzione, ologramma, Accademia, esercitazione
-ms.openlocfilehash: 5e9a90af6b80333addbde2a2e11086372483b7c3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434781"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926638"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
@@ -156,7 +156,7 @@ A questo punto, dopo aver creato il cubo, è possibile eseguire un controllo rap
 ### <a name="initial-setup"></a>Configurazione iniziale
 
 1. Nel computer di sviluppo, in Unity, aprire **File > finestra impostazioni di compilazione** .
-2. Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su **Cambia platfrom**
+2. Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su Cambia **piattaforma**
 
 ### <a name="for-hololens-use-unity-remoting"></a>Per HoloLens usare la comunicazione remota di Unity
 

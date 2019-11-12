@@ -6,29 +6,29 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: immagine volumetrica, rendering del volume, prestazioni, realtà mista
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548637"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926675"
 ---
 # <a name="volume-rendering"></a>Rendering del volume
 
 Per i volumi di ingegneria o MRI medici, vedere [rendering del volume in Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering). Queste immagini volumetriche contengono informazioni dettagliate con opacità e colore in tutto il volume che non possono essere facilmente espresse come superfici come le [mesh poligonali](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Soluzioni principali per migliorare le prestazioni
-1. NON VALIDO Approccio ingenuo: Mostra volume intero, in genere troppo lento
-2. BUONA Piano di taglio: Mostra solo una singola sezione del volume
-3. BUONA Riduzione del volume secondario: Mostra solo pochi livelli del volume
-4. BUONA Abbassare la risoluzione del rendering del volume (vedere il rendering di una scena di risoluzione mista)
+1. ERRATO: approccio ingenuo: Mostra volume intero, in genere troppo lento
+2. BENE: piano di taglio: Mostra solo una singola sezione del volume
+3. BENE: riduzione del volume secondario: Mostra solo pochi livelli del volume
+4. BENE: abbassare la risoluzione del rendering del volume (vedere il rendering di una scena di risoluzione mista)
 
 Esiste solo una certa quantità di informazioni che possono essere trasferite dall'applicazione sullo schermo in un particolare frame, ovvero la larghezza di banda totale della memoria. Anche qualsiasi elaborazione (o ' ombreggiatura ') necessaria per trasformare i dati per la presentazione richiede anche tempo. Le considerazioni principali per il rendering del volume sono le seguenti:
 * Screen-width * screen-height * screen-count * volume-layers-on-that-pixel = Total-volume-Samples-per-frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volume res completo: troppi esempi)
-* 1028 * 720 * 2 * 1 = 1480320 (0,3% of Full) (slice sottile: 1 campione per pixel, in esecuzione senza problemi)
-* 1028 * 720 * 2 * 10 = 14803200 (3,9% della versione completa) (sezione del volume secondario: 10 esempi per pixel, eseguiti in modo abbastanza uniforme, sembrano 3D)
-* 200 * 200 * 2 * 256 = 20480000 (5% di pieno) (volume res inferiore: un minor numero di pixel, un volume intero, un aspetto 3D ma un bit sfocato)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3% of Full) (slice sottile: 1 campione per pixel, esecuzione senza problemi)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9% della versione completa) (sezione del volume secondario: 10 campioni per pixel, esecuzione abbastanza agevole, aspetto 3D)
+* 200 * 200 * 2 * 256 = 20480000 (5% di pieno) (volume res inferiore: un minor numero di pixel, un volume intero, appare 3D ma un bit sfocato)
 
 ## <a name="representing-3d-textures"></a>Rappresentazione di trame 3D
 

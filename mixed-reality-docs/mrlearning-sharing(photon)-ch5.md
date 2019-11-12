@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9d76d5323705c001dbafe4411a9334dd3403d0ca
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437565"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926233"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrazione di ancoraggi spaziali di Azure in un'esperienza condivisa
 
-In questa lezione viene illustrato come integrare Azure Spatial Anchors (ASA) nell'esperienza condivisa. ASA consente a più dispositivi con percorso condiviso di avere un riferimento comune se l'ambiente fisico prevede l'ancoraggio di esperienze virtuali in modo che tutti i partecipanti vedano gli oggetti nella stessa posizione fisica.
+In questa lezione si apprenderà come integrare Azure Spatial Anchors (ASA) nell'esperienza condivisa. ASA consente a più dispositivi con percorso condiviso di avere un riferimento comune se l'ambiente fisico prevede l'ancoraggio di esperienze virtuali in modo che tutti i partecipanti vedano gli oggetti nella stessa posizione fisica.
 
-Prima di procedere con questa lezione, è necessario completare il modulo ASA Learning, che riguarderà le nozioni di base di ASA, la creazione di account e risorse di Azure e altri blocchi di edifici fondamentali necessari prima di poter integrare ASA nell'esperienza condivisa.
+Prima di procedere con questa lezione, è necessario completare il modulo ASA Learning, che riguarderà le nozioni di base di ASA, la creazione di account e risorse di Azure, nonché altri blocchi predefiniti fondamentali necessari prima di integrare ASA nell'esperienza condivisa.
 
 Obiettivi
 
@@ -37,11 +37,11 @@ Obiettivi
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. A questo punto, nella gerarchia selezionare ShareAzureAnchorButton e spostare l'attenzione sul pannello inaspectr. Scorrere verso il basso fino al menu a discesa visualizzato nell'immagine seguente, selezionare AnchorModuleScript e fare clic su ShareAnchorNetework ().
+4. A questo punto, nella gerarchia selezionare ShareAzureAnchorButton e spostare l'attenzione sul pannello Inspector. Scorrere verso il basso fino al menu a discesa visualizzato nell'immagine seguente, selezionare AnchorModuleScript e fare clic su ShareAnchorNetwork ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Selezionare GetAzureAnchorButton (vedere il passaggio 4) e riportare l'attenzione al pannello Inspector. Scorrere verso il basso fino al menu a discesa visualizzato nell'immagine seguente e selezionare AnchorModuleScript, quindi fare clic su GetSharedAnchorNetwork () e quindi su Salva.
+5. Selezionare GetAzureAnchorButton (vedere il passaggio 4) e riportare l'attenzione al pannello Inspector. Scorrere verso il basso fino al menu a discesa visualizzato nell'immagine seguente, selezionare AnchorModuleScript, fare clic su GetSharedAnchorNetwork () e quindi su Save (Salva).
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
@@ -55,5 +55,5 @@ Obiettivi
 
 ## <a name="congratulations"></a>Lezione completata
 
-In questa lezione si è appreso come integrare i nuovi ancoraggi spaziali di Azure per allineare i dispositivi con percorso condiviso in un'esperienza condivisa. Si conclude anche il modulo sharing. Si è appreso come configurare un nuovo account Photon, integrare Photon e PUN in una nuova applicazione Unity, configurare avatar e oggetti condivisi e infine allineare più partecipanti usando ASA. 
+In questa lezione si è appreso come integrare i nuovi ancoraggi spaziali avanzati di Azure per allineare i dispositivi con percorso condiviso in un'esperienza condivisa. Si conclude anche il modulo sharing. Si è appreso come configurare un nuovo account Photon, integrare Photon e PUN in una nuova applicazione Unity, configurare avatar e oggetti condivisi e infine allineare più partecipanti usando ASA. 
 

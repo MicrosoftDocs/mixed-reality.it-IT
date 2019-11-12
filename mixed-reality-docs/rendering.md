@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendering, ologramma
-ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437531"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926854"
 ---
 # <a name="rendering"></a>Rendering
 
-Il rendering olografico consente all'applicazione di creare un ologramma in una posizione precisa in tutto il mondo intorno all'utente, indipendentemente dal fatto che sia collocato esattamente nel mondo fisico o in un'area di autenticazione virtuale creata. Gli [ologrammi](hologram.md) sono oggetti costituiti da suoni e luce. Il rendering consente all'Application di aggiungere la luce.
+Il rendering olografico consente all'applicazione di creare un ologramma in una posizione precisa in tutto il mondo intorno all'utente, indipendentemente dal fatto che sia collocato esattamente nel mondo fisico o in un'area di autenticazione virtuale creata. Gli [ologrammi](hologram.md) sono oggetti costituiti da suoni e luce. Il rendering consente all'applicazione di aggiungere la luce.
 
 ## <a name="device-support"></a>Supporto di dispositivi
 

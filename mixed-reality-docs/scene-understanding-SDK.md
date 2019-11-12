@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438294"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926910"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Panoramica dell'SDK per la comprensione della scena
 
@@ -23,7 +23,7 @@ SceneUnderstanding SDK è scaricabile tramite NuGet.
 
 [SDK di SceneUnderstanding](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-**Nota:** la versione più recente dipende dall'anteprima pacakges ed è necessario abilitare i pacchetti di versioni non definitive per visualizzarla.
+**Nota:** la versione più recente dipende dai pacchetti di anteprima ed è necessario abilitare i pacchetti di versioni non definitive per visualizzarli.
 
 A partire dalla versione 0.5.2022-RC, la comprensione della scena supporta le C# proiezioni di linguaggio per e C++ consente alle applicazioni di sviluppare applicazioni per piattaforme Win32 o UWP. A partire da questa versione, SceneUnderstanding supporta Unity support in-Editor, bloccando il SceneObserver usato esclusivamente per la comunicazione con HoloLens2. 
 
@@ -35,7 +35,7 @@ Se si usa l'SDK in un progetto Unity, usare [NuGet per Unity](https://github.com
 
 ### <a name="the-scene"></a>Scena
 
-Il dispositivo di realtà mista sta integrando costantemente le informazioni relative a ciò che viene visualizzato nell'ambiente in uso. La comprensione della scena incanala tutte queste origini dati e produce un'unica astrazione coesiva. La comprensione della scena genera scene che sono una composizione di [SceneObjects](scene-understanding-SDK.md#sceneobjects) che rappresenta un'istanza di un singolo elemento, ad esempio una parete/soffitto/piano. Gli oggetti scena stessi sono una composizione di [SceneComponents](scene-understanding-SDK.md#scenecomponents) che rappresentano parti più granulari che compongono questo SceneObject. Esempi di componenti sono i quad e i mesh, ma in futuro potrebbero rappresentare i rettangoli di delimitazione, i mehses di collisione, i metadati e così via.
+Il dispositivo di realtà mista sta integrando costantemente le informazioni relative a ciò che viene visualizzato nell'ambiente in uso. La comprensione della scena incanala tutte queste origini dati e produce un'unica astrazione coesiva. La comprensione della scena genera scene che sono una composizione di [SceneObjects](scene-understanding-SDK.md#sceneobjects) che rappresenta un'istanza di un singolo elemento, ad esempio una parete/soffitto/piano. Gli oggetti scena stessi sono una composizione di [SceneComponents](scene-understanding-SDK.md#scenecomponents) che rappresentano parti più granulari che compongono questo SceneObject. Esempi di componenti sono i quad e i mesh, ma in futuro potrebbero rappresentare i riquadri, le mesh di collisione, i metadati e così via.
 
 Il processo di conversione dei dati dei sensori non elaborati in una scena è un'operazione potenzialmente costosa che può richiedere secondi per spazi medi (~ 10x10m) a minuti per spazi di dimensioni molto grandi (~ 50x50m) e pertanto non è un elemento che viene calcolato dal dispositivo senza richiesta dell'applicazione. La generazione della scena viene invece attivata dall'applicazione su richiesta. La classe SceneObserver dispone di metodi statici che consentono di calcolare o deserializzare una scena, con cui è possibile enumerare/interagire. L'azione "calcolo" viene eseguita su richiesta ed eseguita sulla CPU, ma in un processo separato (il driver della realtà mista). Tuttavia, mentre si esegue il calcolo in un altro processo, i dati della scena risultanti vengono archiviati e conservati nell'applicazione nell'oggetto scena. 
 
@@ -43,7 +43,7 @@ Di seguito è riportato un diagramma che illustra il flusso del processo e Mostr
 
 ![Diagramma di processo](images/SU-ProcessFlow.png)
 
-Sul lato sinistro è presente un diagramma del runtime di realtà mista che è sempre attivo e in esecuzione nel proprio processo. Questo runtime è responsabile dell'esecuzione del rilevamento dei dispositivi, del mapping spaziale e di altre operazioni che la comprensione della scena USA per comprendere e ragionare in tutto il mondo. Sul lato destro del diagramma sono illustrate due applicazioni teoriche che fanno uso della comprensione della scena. La prima interfaccia dell'applicazione con MRTK che usa la scena Understanding SDK internamente, la seconda app calcola e usa due istanze della scena sepèree. Tutte e tre le scene in questo diagramma generano istanze distinte delle scene, il driver non rileva lo stato globale condiviso tra le applicazioni e gli oggetti scena in un'unica scena non è presente in un altro. La comprensione della scena fornisce un meccanismo per tenere traccia nel tempo, ma questa operazione viene eseguita usando l'SDK e il codice che esegue questo rilevamento viene eseguito nell'SDK nel processo dell'app.
+Sul lato sinistro è presente un diagramma del runtime di realtà mista che è sempre attivo e in esecuzione nel proprio processo. Questo runtime è responsabile dell'esecuzione del rilevamento dei dispositivi, del mapping spaziale e di altre operazioni che la comprensione della scena USA per comprendere e ragionare in tutto il mondo. Sul lato destro del diagramma sono illustrate due applicazioni teoriche che fanno uso della comprensione della scena. La prima interfaccia dell'applicazione con MRTK che usa la scena Understanding SDK internamente, la seconda app calcola e usa due istanze della scena separate. Tutte e tre le scene in questo diagramma generano istanze distinte delle scene, il driver non rileva lo stato globale condiviso tra le applicazioni e gli oggetti scena in un'unica scena non è presente in un altro. La comprensione della scena fornisce un meccanismo per tenere traccia nel tempo, ma questa operazione viene eseguita usando l'SDK e il codice che esegue questo rilevamento viene eseguito nell'SDK nel processo dell'app.
 
 Poiché ogni scena archivia i dati nello spazio di memoria dell'applicazione, si può presupporre che tutte le funzioni dell'oggetto scene o dei dati interni vengano sempre eseguite nel processo dell'applicazione.
 
@@ -95,7 +95,7 @@ Di seguito viene presentato un esempio di una struttura sia nel formato flat che
 </tr>
 </table>
 
-In questa illustrazione viene evidenziata la differenza tra il layout fisico e logico della scena. A destra viene visualizzato il layout gerarchico dei dati visualizzati dall'applicazione durante l'enumerazione della scena. A sinistra si noterà che la scena è costituita da 12 componenti distinti, se necessario, accessibili singolarmente. Quando si elabora una nuova scena, si prevede che le applicazioni analizzino logicamente questa gerarchia. Tuttavia, durante il rilevamento tra gli aggiornamenti della scena, alcune applicazioni potrebbero essere interessate solo a specifici componenti condivisi tra due scene.
+In questa illustrazione viene evidenziata la differenza tra il layout fisico e logico della scena. A sinistra viene visualizzato il layout gerarchico dei dati visualizzati dall'applicazione durante l'enumerazione della scena. A destra si noterà che la scena è in realtà costituita da 12 componenti distinti che sono accessibili singolarmente, se necessario. Quando si elabora una nuova scena, si prevede che le applicazioni analizzino logicamente questa gerarchia. Tuttavia, durante il rilevamento tra gli aggiornamenti della scena, alcune applicazioni potrebbero essere interessate solo a specifici componenti condivisi tra due scene.
 
 ## <a name="api-overview"></a>Panoramica delle API
 
@@ -223,7 +223,7 @@ firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
 
 if (firstFloor != null)
 {
-    // We found it again, we can now update the transforms of all objects we attatched to this floor transform
+    // We found it again, we can now update the transforms of all objects we attached to this floor transform
 }
 ```
 
@@ -249,7 +249,7 @@ foreach (var mesh in firstFloor.Meshes)
 }
 ```
 
-Si noti che si tratta del SceneObject con la trasformazione rispetto all'origine della scena. Questo perché SceneObject rappresenta un'istanza di una "cosa" ed è locatable nello spazio, i quad e le mesh rappresentano la geometria che viene trasformata in relazione al rispettivo elemento padre. È possibile che SceneObjects separate facciano riferimento allo stesso SceneComponewnts SceneMesh/SceneQuad ed è anche possibile che un SceneObject disponga di più di un SceneMesh/SceneQuad.
+Si noti che si tratta del SceneObject con la trasformazione rispetto all'origine della scena. Questo perché SceneObject rappresenta un'istanza di una "cosa" ed è locatable nello spazio, i quad e le mesh rappresentano la geometria che viene trasformata in relazione al rispettivo elemento padre. È possibile che SceneObjects separate facciano riferimento allo stesso SceneComponents SceneMesh/SceneQuad ed è anche possibile che un SceneObject disponga di più di un SceneMesh/SceneQuad.
 
 ### <a name="dealing-with-transforms"></a>Gestione delle trasformazioni
 
@@ -285,7 +285,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Ogni `SceneObject` dispone di una proprietà `Position` e `Orientation` che può essere usata per posizionare il contenuto corrispondente rispetto all'origine del `Scene`che lo contiene. Ad esempio, l'esempio seguenti presuppone che il gioco sia un elemento figlio della radice della scena e assegna la posizione e la rotazione locali per l'allineamento a una determinata `SceneObject`:
+Ogni `SceneObject` dispone di una proprietà `Position` e `Orientation` che può essere usata per posizionare il contenuto corrispondente rispetto all'origine del `Scene`che lo contiene. Ad esempio, nell'esempio seguente si presuppone che il gioco sia un figlio della radice della scena e assegna la posizione e la rotazione locali per l'allineamento a una determinata `SceneObject`:
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -324,14 +324,14 @@ foreach (var sceneObject in myScene.SceneObjects)
                 // Step 1: Create a new game object for the quad itself as a child of the scene root
                 // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
                 // Step 3: Create your hologram and set it as a child of the quad's game object
-                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
+                // Step 4: Set the hologram's local transform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-I passaggi 1-4 dipendono in modo estremamente da un particolare Framework/implementazione, ma i temi dovrebbero essere simili. È importante notare che il quad rappresenta semplicemente un piano 2D con binding localizzato nello spazio. Se il motore/Framework sa dove si trova il quad e si radicano gli oggetti rispetto al quad, gli ologrammi saranno posizionati correttamente con repect nel mondo reale. Per informazioni più dettagliate, vedere gli esempi su quad che mostrano implementazioni specifiche.
+I passaggi 1-4 dipendono in modo estremamente da un particolare Framework/implementazione, ma i temi dovrebbero essere simili. È importante notare che il quad rappresenta semplicemente un piano 2D con binding localizzato nello spazio. Se il motore/Framework sa dove si trova il quad e si radicano gli oggetti rispetto al quad, gli ologrammi saranno posizionati correttamente rispetto al mondo reale. Per informazioni più dettagliate, vedere gli esempi su quad che mostrano implementazioni specifiche.
 
 ### <a name="mesh"></a>Mesh
 

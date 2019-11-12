@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: occhio, sguardo, Head-sguardi, tracking, tracciamento degli occhi, DirectX, input, ologrammi
-ms.openlocfilehash: 48188cc8c886b371847357701b42249f486bceac
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 664657b9ab01530a608e31091823e828cc99d0cd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641123"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926554"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>Input occhi e sguardi in DirectX
 
@@ -100,7 +100,7 @@ std::thread requestAccessThread([this]()
 requestAccessThread.detach();
 
 ```
-L'avvio di un thread scollegato è solo un'opzione per la gestione delle chiamate asincrone. In alternativa, è possibile usare la nuova funzionalità [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) supportata da C++/WinRT.
+L'avvio di un thread scollegato è solo un'opzione per la gestione delle chiamate asincrone. In alternativa, è possibile usare la nuova funzionalità di [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) supportata C++da/WinRT.
 Di seguito è riportato un altro esempio per richiedere l'autorizzazione utente:
 -   EyesPose:: supporto () consente all'applicazione di attivare la finestra di dialogo di autorizzazione solo se è presente uno strumento di rilevamento.
 -   GazeInputAccessStatus m_gazeInputAccessStatus; In questo modo si evita di riscattare il prompt delle autorizzazioni più volte.
@@ -144,7 +144,7 @@ Vengono aggiunte le righe seguenti alla sezione del *pacchetto* nel file appxman
 
 ### <a name="getting-the-eye-gaze-ray"></a>Ottenere il raggio d'occhio
 Dopo aver ricevuto l'accesso a ET, è possibile cogliere il raggio d'occhio per ogni fotogramma.
-Come per gli occhi, ottenere il [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) chiamando [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) con un timestamp e un sistema di coordinate desiderati. SpatialPointerPose contiene un oggetto [EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose) tramite la proprietà [Eyes](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) . Questo valore non è null solo se è abilitata la funzionalità Eye Tracking. Da qui è possibile verificare se l'utente nel dispositivo ha una calibrazione del rilevamento degli occhi chiamando [EyesPose:: IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  Usare quindi la proprietà [sguardi](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) per ottenere la posizione e la direzione di un [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) . La proprietà sguardi può talvolta essere null, quindi assicurarsi di controllarla. Questo problema può verificarsi se un utente calibrato chiude temporaneamente gli occhi.
+Come per gli occhi, ottenere il [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) chiamando [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) con un timestamp e un sistema di coordinate desiderati. SpatialPointerPose contiene un oggetto [EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose) tramite la proprietà [Eyes](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) . Questo valore non è null solo se è abilitata la funzionalità Eye Tracking. Da qui è possibile verificare se l'utente nel dispositivo ha una calibrazione del rilevamento degli occhi chiamando [EyesPose:: IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  Usare quindi la proprietà [sguardi](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) per ottenere l'oggetto [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) che contiene la posizione e la direzione degli sguardi. La proprietà sguardi può talvolta essere null, quindi assicurarsi di controllarla. Questo problema può verificarsi se un utente calibrato chiude temporaneamente gli occhi.
 
 Il codice seguente illustra come accedere al raggio d'occhio.
 
@@ -193,7 +193,10 @@ Tuttavia, per l'input che viene indirizzato attraverso SpatialInteractionManager
 <br>
 
 ## <a name="calibration"></a>Calibrazione
-Per il corretto funzionamento dell'analisi degli occhi, è necessario che ogni utente debba esaminare la [calibrazione degli utenti](calibration.md). In questo modo, il dispositivo può modificare il sistema per un'esperienza di visualizzazione più comoda e di qualità superiore per l'utente e garantire il rilevamento accurato degli occhi allo stesso tempo. Gli sviluppatori non devono eseguire alcuna operazione al termine della gestione della calibrazione degli utenti. Il sistema garantisce che all'utente venga richiesto di calibrare il dispositivo nei casi seguenti: * l'utente sta usando il dispositivo per la prima volta * l'utente ha rifiutato in precedenza il processo di calibrazione * il processo di calibrazione non ha avuto esito positivo per l'ultimo tempo di utilizzo del dispositivo da parte dell'utente
+Per il corretto funzionamento dell'analisi degli occhi, è necessario che ogni utente debba esaminare la [calibrazione degli utenti](calibration.md). In questo modo, il dispositivo può modificare il sistema per un'esperienza di visualizzazione più comoda e di qualità superiore per l'utente e garantire il rilevamento accurato degli occhi allo stesso tempo. Gli sviluppatori non devono eseguire alcuna operazione al termine della gestione della calibrazione degli utenti. Il sistema garantisce che all'utente venga richiesto di calibrare il dispositivo nei casi seguenti:
+* L'utente sta usando il dispositivo per la prima volta
+* L'utente ha rifiutato in precedenza il processo di calibrazione
+* Il processo di calibrazione non ha avuto esito positivo all'ultima volta in cui l'utente ha usato il dispositivo
 
 Gli sviluppatori devono garantire un supporto adeguato per gli utenti per i quali i dati di rilevamento degli occhi potrebbero non essere disponibili. Per altre informazioni sulle soluzioni di fallback, vedere [Eye tracking on Hololens 2](eye-tracking.md).
 

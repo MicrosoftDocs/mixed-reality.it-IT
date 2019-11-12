@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icona, modellazione, avvio, utilità di avvio 3D, riquadro, cubo attivo, collegamento profondo, SecondaryTile, riquadro secondario, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438013"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926766"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementare i lanci di app 3D (app UWP)
 
@@ -164,7 +164,7 @@ await tile.RequestCreateAsync();
 > [!NOTE]
 > Questa funzionalità sarà supportata a partire dall'aggiornamento di Windows RS4. Se si prevede di usare questa funzionalità, assicurarsi che l'applicazione sia destinata a una versione del Windows SDK maggiore o uguale a 10.0.17125.
 
-È possibile definire il comportamento di attivazione di un secondaryTile 3D per controllare il modo in cui viene reagisce quando viene selezionato da un utente. Questo può essere usato per inserire gli oggetti 3D nella Home realtà mista che sono Purley informativi o decorativi. Sono supportati i tipi di comportamento di attivazione seguenti:
+È possibile definire il comportamento di attivazione di un secondaryTile 3D per controllare il modo in cui viene reagisce quando viene selezionato da un utente. Questo può essere usato per inserire gli oggetti 3D nella Home realtà mista che sono puramente informativi o decorativi. Sono supportati i tipi di comportamento di attivazione seguenti:
 1. Impostazione predefinita: quando un utente seleziona il secondaryTile 3D, l'app viene attivata
 2. None: se gli utenti selezionano il secondaryTile 3D, l'app non viene attivata.
 

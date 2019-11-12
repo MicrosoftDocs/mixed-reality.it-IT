@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, realtà mista, sviluppo, Guida introduttiva, nuovo progetto, porting, funzionalità, fotocamera, simulazione, emulazione, documentazione
-ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926702"
 ---
 # <a name="unity-development-overview"></a>Panoramica sullo sviluppo Unity
 
@@ -37,7 +37,7 @@ Dopo aver configurato MRTK V2 con il progetto o aver configurato il progetto com
 
 L'aggiunta del supporto per le funzionalità di realtà mista di Windows, ad esempio [fasi spaziali](coordinate-systems.md#spatial-coordinate-systems), [movimenti, controller di movimento](gestures-and-motion-controllers-in-unity.md) o [input vocale](voice-input-in-unity.md) , viene ottenuta usando le API compilate direttamente in Unity. 
 
-Esaminare prima di tutto le [scale di esperienza](coordinate-systems.md) che possono essere destinate alla Applicatioin:
+Esaminare prima di tutto le [scale di esperienza](coordinate-systems.md) che possono essere destinate all'applicazione:
 * Se si sta cercando di creare un'esperienza di **solo orientamento** o di **scalabilità**verticale, è necessario impostare il tipo di spazio di rilevamento di Unity su [stazionari](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se si sta cercando di creare un'esperienza **di scalabilità o** **scalabilità**, è necessario assicurarsi che il tipo di spazio di rilevamento di Unity sia impostato correttamente su [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Se si vuole creare un'esperienza **globale** su HoloLens che consente agli utenti di spostarsi oltre 5 metri, è necessario usare il componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .

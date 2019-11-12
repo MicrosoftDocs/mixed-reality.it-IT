@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, realtà mista, Accademia, Unity, esercitazione, API, riconoscimento viso, hololens, immersive, VR
-ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 23676684c2ec325f9d6f1924e7a0bad14d41f13e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438500"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926789"
 ---
 >[!NOTE]
 >Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. In futuro sarà disponibile una nuova serie di esercitazioni che illustrano come sviluppare per HoloLens 2.  Questo avviso verrà aggiornato con un collegamento a queste esercitazioni quando vengono pubblicate.
@@ -575,7 +575,7 @@ Per creare la classe *FaceAnalysis* :
             facesToIdentify.maxNumOfCandidatesReturned = 1;
             facesToIdentify.confidenceThreshold = 0.5;
 
-            // Serialise to Json format
+            // Serialize to Json format
             string facesToIdentifyJson = JsonConvert.SerializeObject(facesToIdentify);
             // Change the object into a bytes array
             byte[] facesData = Encoding.UTF8.GetBytes(facesToIdentifyJson);
@@ -769,7 +769,7 @@ Per creare la classe *ImageCapture* :
         }
 
         /// <summary>
-        /// Register the full execution of the Photo Capture. If successfull, it will begin the Image Analysis process.
+        /// Register the full execution of the Photo Capture. If successful, it will begin the Image Analysis process.
         /// </summary>
         void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
         {
