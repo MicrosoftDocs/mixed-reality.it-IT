@@ -6,12 +6,12 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 331fa6dc752c64eeaa5bc2e9d1dd6b2c15049a27
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438480"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926754"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentazione del pacchetto di dati spaziali della realtà mista
 
@@ -66,7 +66,7 @@ Requisiti e limitazioni principali:
 4. Ridurre al minimo le superfici senza trama, ad esempio inserire un intervallo di poster diversi sui muri bianchi
 5. Mappare lo spazio senza oggetti dinamici nella scena, ad esempio lo stato di trasferimento di persone
 6. Blocca la mappa durante l'importazione (disponibile tramite l'anteprima di Insider)
-7. Sbloccare la mappa e ripetere la scansione dei ambiente quando si verificano peggioramenti qualitativi e/o sono presenti modifiche nell'ambiente (illuminazione o modifiche nel layout degli oggetti)
+7. Sbloccare la mappa e ripetere l'analisi dell'ambiente quando si verificano peggioramenti della qualità e/o sono presenti modifiche nell'ambiente (illuminazione o modifiche nel layout degli oggetti)
 ***
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Esecuzione di pacchetti di dati spaziali di realtà mista con script complementare
@@ -107,7 +107,7 @@ I parametri dello script sono definiti di seguito:
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
-Lock map value succesfully set to 0
+Lock map value successfully set to 0
 
 Running: C:\bin\MixedRealitySpatialDataPackager.exe export D:\temp\ HoloShell_cw5n1h2txyewy S-1-5-21-1279937937-3984375698-1043392598-499
 
@@ -197,7 +197,7 @@ Failed to find local user for passed in user SID
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>Se si è verificato un errore relativo all'avvio e all'arresto dello spettro/SharedRealitySvc
+### <a name="if-there-was-an-error-related-to-starting-and-stopping-spectrumsharedrealitysvc"></a>Se si è verificato un errore relativo all'avvio e all'arresto dello spettro/SharedRealitySvc
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>
