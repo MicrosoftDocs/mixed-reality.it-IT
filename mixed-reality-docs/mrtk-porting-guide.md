@@ -3,16 +3,16 @@ title: Preparare un'app esistente per HoloLens 2
 description: Questo articolo è destinato agli sviluppatori che dispongono di un'app esistente su HoloLens (prima generazione) e/o della versione precedente del toolkit MRTK e che vogliono eseguire la conversione a MRTK versione 2 e HoloLens 2.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/19
+ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, testare, MRTK, MRTK versione 2, HoloLens 2
-ms.openlocfilehash: e1256cfaf9253a31161a836f75a90c64d17cf093
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438353"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926207"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparare un'app esistente per HoloLens 2
 
@@ -129,7 +129,7 @@ Ogni applicazione e ogni scenario hanno caratteristiche diverse e si proseguirà
 
 - Le applicazioni Unity lineari sono semplici perché è possibile creare un bundle di applicazioni ARM o distribuirle direttamente nel dispositivo per l'esecuzione del bundle. Alcuni plug-in nativi di Unity possono presentare specifici problemi di sviluppo. Per questo motivo, è necessario aggiornare tutti i plug-in nativi di Unity a Visual Studio 2019 e quindi rieseguire la compilazione per ARM.
 
-- Per un'applicazione è stato usato il plug-in AudioKinetic Wwise di Unity e tale versione di Unity non include un plug-in ARM UWP, quindi è stato necessario un notevole sforzo per rielaborare le funzionalità audio nell'applicazione in questione per l'esecuzione su ARM. Assicurati che tutti i plug-in necessari per i tuoi piani di sviluppo siano installati e disponibili in Unity.
+- Per un'applicazione è stato usato il plug-in AudioKinetic Wwise di Unity e tale versione di Unity non include un plug-in ARM della piattaforma UWP, quindi è stato necessario un notevole sforzo per rielaborare le funzionalità audio nell'applicazione in questione per l'esecuzione su ARM. Assicurati che tutti i plug-in necessari per i tuoi piani di sviluppo siano installati e disponibili in Unity.
 
 - In alcuni casi, tra i plug-in richiesti dall'applicazione potrebbe non esistere un plug-in ARM/UWP, il che impedisce la possibilità di convertirla ed eseguirla in HoloLens 2. Contatta il provider di plug-in per risolvere il problema e fornire il supporto per ARM.
 

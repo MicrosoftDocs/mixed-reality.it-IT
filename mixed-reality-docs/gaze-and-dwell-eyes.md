@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: tracciamento oculare, realtà mista, input, sguardo fisso, selezione oculare della destinazione, HoloLens 2, selezione con gli occhi, attesa
-ms.openlocfilehash: 5130fd3c1ecd551788f61f8abb8d02cdedeb4181
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437807"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926612"
 ---
 # <a name="eye-gaze-and-dwell"></a>Sguardo fisso e attesa
 
@@ -28,7 +28,7 @@ L'utente fissa semplicemente lo sguardo sulla destinazione da selezionare e visu
 
 ## <a name="challenges-of-the-eye-gaze-and-dwell-interaction-model"></a>Svantaggi del modello di interazione "sguardo fisso e attesa"
 In generale, è consigliabile usare le attivazioni basate sull'attesa come ultima possibilità qualora non sia possibile usare l'input tramite voce o mani. La scelta del tempo di attesa infatti può essere piuttosto complessa. Gli utenti inesperti sono a proprio agio con tempi di attesa più lunghi, mentre gli utenti esperti vogliono esplorare in modo rapido ed efficiente le proprie esperienze. Questa esigenza comporta la difficoltà di adattare il tempo di attesa in base alle esigenze specifiche di un utente.
-Se il tempo di attesa è troppo breve, è possibile che l'utente sia sopraffatto dalla presenza continua di ologrammi che reagiscono al suo sguardo. Se il tempo di attesa è troppo lungo, l'esperienza può risultare troppo lenta in quanto l'utente deve fissare lo sguardo sulle destinazioni per un lungo periodo di tempo interrompendo il flusso del lavoro.
+Se il tempo di attesa è troppo breve, è possibile che l'utente sia sopraffatto dalla presenza continua di ologrammi che reagiscono al suo sguardo fisso. Se il tempo di attesa è troppo lungo, l'esperienza può risultare troppo lenta in quanto l'utente deve fissare lo sguardo sulle destinazioni per un lungo periodo di tempo interrompendo il flusso del lavoro.
 
 ## <a name="design-recommendations"></a>Suggerimenti per la progettazione
 È consigliabile usare un approccio a due stati per il feedback dell'attesa:
