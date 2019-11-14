@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926731"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064233"
 ---
 # <a name="system-gesture"></a>Movimento di sistema
 
@@ -98,7 +98,7 @@ In HoloLens 2, il movimento Bloom è stato sostituito con un pulsante di polso v
     :::column-end:::
     :::column:::
         ](images/wrist-button-pinch.png) pizzico pulsante ![polso<br>
-        **Passaggio: occhio al pulsante e quindi pizzicare**<br>
+        **Passaggio 2: osservare il pulsante e quindi pizzicare**<br>
     :::column-end:::
 :::row-end:::
 

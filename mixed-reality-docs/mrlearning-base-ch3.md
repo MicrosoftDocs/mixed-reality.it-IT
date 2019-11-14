@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913560"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064261"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. posizionamento del contenuto dinamico e utilizzo dei risolutori
 
@@ -72,7 +72,7 @@ In questa sezione si configurerà l'oggetto Game Cube creato in precedenza per s
 
     ![mrlearning-base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
 
-3. Impostare le distanze massime e minime della visualizzazione radiale su 0, in modo che il cubo non abbia alcuna distanza tra l'oggetto e il polso dell'utente. Una volta impostato, il cubo sarà perfettamente allineato al polso. È inoltre possibile modificare il campo direzione riferimento per regolare il comportamento di orientamento del cubo, ad esempio se si desidera consentire all'oggetto di ruotare con il polso dell'utente impostando la direzione di riferimento su Orient con l'oggetto rilevato.
+3. Impostare le distanze massime e minime della visualizzazione radiale su 0, in modo che il cubo non abbia alcuna distanza tra l'oggetto e il polso dell'utente. Una volta impostato, il cubo sarà perfettamente allineato al polso. È inoltre possibile modificare il campo direzione riferimento per regolare il comportamento di orientamento del cubo, ad esempio se si desidera consentire all'oggetto di ruotare con il polso dell'utente impostando la direzione di riferimento su orientata a oggetti.
 
     ![mrlearning-base-CH3-3-step3. png](images/mrlearning-base-ch3-3-step3.png)
 
