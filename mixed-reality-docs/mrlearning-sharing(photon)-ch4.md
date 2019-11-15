@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 34b8165888c13b0c94be8951d5a4fdc07fab5308
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438362"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106013"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. condivisione di movimenti di oggetti con più utenti
 
@@ -62,11 +62,13 @@ Nota: se si fa clic su uno degli oggetti prefabbricati e sulla versione, il cont
 >Nota: assicurarsi che le posizioni della fotocamera principale e del SharedPlayground siano impostate su 0, 0, 0.
 >
 
-9. Creare un nuovo set di oggetti di gioco come oggetto figlio per l'oggetto padre SharedPlayground per creare un nuovo oggetto. Fare clic con il pulsante destro del mouse sull'oggetto padre e scegliere Crea vuoto. 
+9. Selezionare l'oggetto "SharedPlayground" e fare clic con il pulsante destro del mouse per scegliere l'opzione "Crea vuoto" per creare un oggetto gioco vuoto come figlio dell'oggetto gioco "SharedPlayground".
+
+   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
 10. Con il nuovo oggetto selezionato nella gerarchia, modificare il nome dell'oggetto in TableAnchor nel pannello Inspector. Inoltre, fare clic su Aggiungi componente e cercare il componente TableAnchor. Selezionarlo e aggiungerlo all'oggetto. 
 
-![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
+![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
 11. Dal pannello progetto nella cartella prefabbricati trascinare la tabella prefabbricata nell'oggetto figlio "TableAnchor" appena creato.
 
@@ -79,9 +81,9 @@ Nota: se si fa clic su uno degli oggetti prefabbricati e sulla versione, il cont
 ## <a name="congratulations"></a>Lezione completata
 
 
-Al termine di questa operazione, tutti gli utenti che partecipano al progetto Unity possono spostare l'avvio Lunar. Tutti i movimenti sono sincronizzati in modo che ogni utente possa visualizzare le interazioni di ogni altro utente. Questi concetti servono come blocchi predefiniti fondamentali per esperienze di collaborazione condivise complete. 
+Al termine, cercare il modulo lunare. In seguito, tutti gli utenti che partecipano al progetto Unity possono spostare l'avvio Lunar.  Tutti i movimenti sono sincronizzati in modo che ogni utente possa visualizzare le interazioni di ogni altro utente. Questi concetti servono come blocchi predefiniti fondamentali per esperienze di collaborazione condivise complete. 
 
-Sebbene tutti gli utenti siano connessi come parte di un'esperienza condivisa e possano visualizzare i movimenti relativi degli oggetti, l'applicazione non è ancora in grado di allineare in modo accurato gli avatar e gli oggetti in modo che gli utenti locali vedano reciprocamente gli oggetti e nella stessa posizione all'interno del computer fisico mondo. Per ancorare un'esperienza condivisa locale, ogni dispositivo richiede una conoscenza comune dell'ambiente fisico. In questo modulo questa operazione verrà eseguita usando gli [ancoraggi spaziali di Azure](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) che saranno implementati nella lezione successiva.
+Anche se tutti gli utenti sono connessi come parte di un'esperienza condivisa e possono visualizzare i movimenti relativi degli oggetti, l'applicazione non è ancora in grado di allineare in modo accurato gli avatar e gli oggetti in modo che gli utenti locali non possano vedersi reciprocamente e oggetti nella stessa posizione all'interno di mondo fisico. Per ancorare un'esperienza condivisa locale, ogni dispositivo richiede una conoscenza comune dell'ambiente fisico. In questo modulo questa operazione verrà eseguita usando gli [ancoraggi spaziali di Azure](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) che saranno implementati nella lezione successiva.
 
 Prima di procedere alla lezione successiva, è necessario completare il modulo di apprendimento ASA che copre le nozioni di base di ASA, la creazione di account e risorse di Azure, nonché altri blocchi fondamentali dell'edificio necessari prima di poter integrare questa funzionalità nell'esperienza condivisa.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: da485f167ef3902dd75adf8da8181504fbc6c6df
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: cf51505cab2db765325c2e7b78a52e4b790845c9
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913160"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105951"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Modulo di apprendimento vocale SDK-controllo lanciarazzi con comandi vocali
 
@@ -24,7 +24,7 @@ In questa lezione verrà usata la funzionalità finalità del servizio riconosci
 
 ## <a name="instructions"></a>Istruzioni
 
-1. In questa esercitazione verrà usato un asset "BaseModule" per integrare Rocket Launcher con i comandi vocali. A tale proposito, è necessario importare l'asset nel progetto. È possibile scaricare l'asset "lanciarazzi" con questo [collegamento](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage).
+1. In questa esercitazione verrà usato un asset "BaseModule" per integrare Rocket Launcher con i comandi vocali. A tale proposito, è necessario importare l'asset nel progetto. È possibile scaricare l'asset "lanciarazzi" con questo [collegamento](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage).
 
 2. Per importare l'asset, passare a Asset-> Importa pacchetto-> pacchetto personalizzato-> passare al file scaricato e fare clic su Importa.
 

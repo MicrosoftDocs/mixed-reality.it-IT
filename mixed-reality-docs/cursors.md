@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (1a generazione), HoloLens 2, realtà mista, cursori, targeting, sguardi, movimenti
-ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435797"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105746"
 ---
 # <a name="cursors"></a>Cursori
+
+![Cursori](images/UX/UX_Hero_Cursor.jpg)
 
 Un cursore, o un indicatore del vettore di destinazione corrente, fornisce un feedback continuo all'utente per comprendere la posizione in cui l'auricolare ritiene che lo stato attivo corrente sia in quel momento. Il cursore consente all'utente di comprendere il punto di destinazione corrente e funge da feedback per indicare quale area, ologramma o punto risponderà all'input. Si tratta della rappresentazione digitale del punto in cui il dispositivo è in grado di comprendere l'attenzione dell'utente (anche se ciò potrebbe non essere uguale a quello di determinare le proprie intenzioni).
 
@@ -154,6 +156,15 @@ La progettazione senza cursore è consigliata quando il senso di immersione è u
 
 ---
 
+## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursore in MRTK (Mixed Reality Toolkit) per Unity
+Per impostazione predefinita, **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce una precostruzione del cursore ([DefaultCursor. prefabbricate](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) che ha lo stesso stato di visualizzazione del cursore di sistema della shell. Viene assegnato nel profilo di input di MRTK in puntatori. È possibile sostituire o personalizzare questo cursore per la propria esperienza. Per l'esperienza con l'input di rilevamento degli occhi, MRTK fornisce anche EyeGazeCursor con un oggetto visivo sottile per ridurre al minimo la distrazione.
+
+* [MRTK-profilo puntatore](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK-sistema di input](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK-puntatori](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
+---
 
 ## <a name="see-also"></a>Vedi anche
 * [Movimenti](gaze-and-commit.md#composite-gestures)

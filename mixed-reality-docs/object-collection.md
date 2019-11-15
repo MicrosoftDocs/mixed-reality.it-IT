@@ -6,16 +6,16 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, controlli, progettazione
-ms.openlocfilehash: 8f3629c6d9465383efc901ed784a3719cd6fdfb2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438188"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105999"
 ---
 # <a name="object-collection"></a>Raccolta di oggetti
 
-![Raccolta di oggetti usata nella tabella periodica dell'app elementi](images/640px-objectcollection-hero-640px.jpg)<br>
+![Raccolta di oggetti usata nella tabella periodica dell'app elementi](images/UX/UX_Hero_ObjectCollection.jpg)<br>
 
 
 La raccolta di oggetti è un controllo di layout che consente di disporre una matrice di oggetti in una forma tridimensionale predefinita. Supporta diversi stili di superficie: **piano, cilindro, sfera** e **radiale**. È possibile regolare il raggio e le dimensioni degli oggetti e lo spazio tra di essi. La raccolta di oggetti supporta qualsiasi oggetto da Unity, sia 2D che 3D. Nel **[Toolkit di realtà mista](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** abbiamo creato script Unity ed esempi che consentiranno di creare una raccolta di oggetti.
@@ -44,7 +44,36 @@ La raccolta di oggetti è un controllo di layout che consente di disporre una ma
 ![un esempio di immagini 2D con la raccolta di oggetti](images/940px-layout-2dimages.jpg)<br>
 *Esempi di utilizzo della raccolta di oggetti con immagini 2D*
 
+<br>
+
+---
+
+## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Raccolta di oggetti in MRTK (Mixed Reality Toolkit) per Unity
+
+* [MRTK-raccolta di oggetti](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
+
+
+<br>
+
+---
+
+
 ## <a name="see-also"></a>Vedi anche
-* [Script e prefabbricati per la raccolta di oggetti nel Toolkit di realtà mista in GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+
+* [Cursori](cursors.md)
+* [Raggio della mano](point-and-commit.md)
+* [Button](button.md)
 * [Oggetto che supporta interazioni](interactable-object.md)
-* [Rettangolo di delimitazione](app-bar-and-bounding-box.md)
+* [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
+* [Manipolazione](direct-manipulation.md)
+* [Menu a mano](hand-menu.md)
+* [Menu vicino](near-menu.md)
+* [Raccolta di oggetti](object-collection.md)
+* [Comando Voice](voice-input.md)
+* [Tastiera](keyboard.md)
+* [Descrizione comando](tooltip.md)
+* [Slate](slate.md)
+* [Dispositivo di scorrimento](slider.md)
+* [Billboarding e tag-along](billboarding-and-tag-along.md)
+* [Visualizzazione dello stato](progress.md)
+* [Magnetismo di superficie](surface-magnetism.md)

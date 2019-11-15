@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 07bcce2ab9ab3bda035f7f2b39a90753cf45358d
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913768"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105975"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interazione con oggetti 3D
 
@@ -38,7 +38,7 @@ In questa esercitazione vengono fornite informazioni sul contenuto 3D di base e 
 
     ![mrlearning-base-CH4-1-Step1. png](images/mrlearning-base-ch4-1-step1.png)
 
-2. Scaricare il pacchetto Unity [BaseModuleAssets versione 1.2.1](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage) e importarlo usando le stesse istruzioni per importare i pacchetti personalizzati descritti in [dalla lezione 1](mrlearning-base-ch1.md). Questo pacchetto include modelli 3D e altre risorse utili che vengono usate in questa esercitazione.
+2. Scaricare il pacchetto Unity [. HoloLens2. GettingStarted. Tutorials. asset. 2.1.0.0](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) e importarlo usando le stesse istruzioni per importare i pacchetti personalizzati descritti in [dalla lezione 1](mrlearning-base-ch1.md). Questo pacchetto include modelli 3D e altre risorse utili che vengono usate in questa esercitazione.
 
 3. Nel pannello del progetto passare a Asset > BaseModuleAssets > modulo di base prefabbricati e cercare "incompleto". si utilizzeranno alcuni di questi prefabbricati.
 

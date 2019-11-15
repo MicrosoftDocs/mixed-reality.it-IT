@@ -6,19 +6,16 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realtà mista di Windows, barra dell'app, rettangolo di delimitazione
-ms.openlocfilehash: f09187bc2a3969a8f844711052e15433f5449d6d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437061"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105765"
 ---
 # <a name="bounding-box-and-app-bar"></a>Rettangolo di delimitazione e barra dell'app
-![Il delimitatore è l'interfaccia standard per la manipolazione di oggetti in realtà mista.](images/640px-boundingbox-hero.jpg)<br>
-
+![delimitatore è l'interfaccia standard per la manipolazione degli oggetti in realtà mista.](images/640px-boundingbox-hero.jpg)<br>
 <br>
-
----
 
 ## <a name="what-is-the-bounding-box"></a>Che cos'è il rettangolo di delimitazione?
 
@@ -95,15 +92,33 @@ La barra dell'app è un menu a livello di oggetto contenente una serie di pulsan
 <br>
 
 
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Rettangolo di delimitazione in MRTK (Mixed Reality Toolkit) per Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce script e prefabbricati per il rettangolo di delimitazione e la barra dell'app. È possibile aggiungere un rettangolo di delimitazione semplicemente assegnando lo script BoundingBox.cs su qualsiasi oggetto.
 
-**Per lo sviluppo di app Unity, vedere [barra delle app in Mixed Reality Toolkit-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)**
+* [MRTK-rettangolo di delimitazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
 
 <br>
 
 ---
 
+
 ## <a name="see-also"></a>Vedi anche
+
+* [Cursori](cursors.md)
+* [Raggio della mano](point-and-commit.md)
+* [Button](button.md)
 * [Oggetto che supporta interazioni](interactable-object.md)
-* [Testo in Unity](text-in-unity.md)
+* [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
+* [Manipolazione](direct-manipulation.md)
+* [Menu a mano](hand-menu.md)
+* [Menu vicino](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
+* [Comando Voice](voice-input.md)
+* [Tastiera](keyboard.md)
+* [Descrizione comando](tooltip.md)
+* [Slate](slate.md)
+* [Dispositivo di scorrimento](slider.md)
+* [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
+* [Magnetismo di superficie](surface-magnetism.md)
