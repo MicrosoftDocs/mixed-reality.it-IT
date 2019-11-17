@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 07433b3749ca6dc62edbc2b7a29f72d582ba5396
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 2c3c1a8550a3ae953f0e6af942159e958d560eec
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106200"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143112"
 ---
 # <a name="surface-magnetism"></a>Magnetismo di superficie
 
@@ -43,13 +43,14 @@ Usando la tecnica di magnetismo di Surface, è possibile posizionare oggetti sul
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)

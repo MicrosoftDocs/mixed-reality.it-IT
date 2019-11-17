@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menu, pulsante, accesso rapido, layout
-ms.openlocfilehash: b4ea7411be22633e82a88d1c91b6b2b1edbea735
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105646"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143184"
 ---
 # <a name="hand-menu"></a>Menu a mano
 
@@ -147,13 +147,14 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)

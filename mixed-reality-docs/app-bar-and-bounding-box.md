@@ -6,15 +6,15 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realtà mista di Windows, barra dell'app, rettangolo di delimitazione
-ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105765"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143169"
 ---
 # <a name="bounding-box-and-app-bar"></a>Rettangolo di delimitazione e barra dell'app
-![delimitatore è l'interfaccia standard per la manipolazione degli oggetti in realtà mista.](images/640px-boundingbox-hero.jpg)<br>
+![delimitatore è l'interfaccia standard per la manipolazione degli oggetti in realtà mista.](images/UX/UX_Hero_BoundingBox.jpg)<br>
 <br>
 
 ## <a name="what-is-the-bounding-box"></a>Che cos'è il rettangolo di delimitazione?
@@ -112,13 +112,14 @@ La barra dell'app è un menu a livello di oggetto contenente una serie di pulsan
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 91046dd5bbf7bdc692e4ff26c19bda59af31876e
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106190"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143223"
 ---
 # <a name="slider"></a>Dispositivo di scorrimento
 
@@ -40,13 +40,14 @@ I dispositivi di scorrimento sono componenti dell'interfaccia utente che consent
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, controlli, progettazione
-ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105999"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143150"
 ---
 # <a name="object-collection"></a>Raccolta di oggetti
 
@@ -67,13 +67,14 @@ La raccolta di oggetti è un controllo di layout che consente di disporre una ma
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)

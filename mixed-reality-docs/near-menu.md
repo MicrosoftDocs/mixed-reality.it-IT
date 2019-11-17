@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 696aa516aa51f32ee0d687338c9783d2b4d46afb
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 693516285457885f62fe96e6a20d829b007d80fc
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106230"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143207"
 ---
 # <a name="near-menu"></a>Menu vicino
 
@@ -45,13 +45,14 @@ Per riabilitare il tag, è possibile premere il pulsante del PIN e fare in modo 
 * [Rettangolo di selezione e barra dell'app](app-bar-and-bounding-box.md)
 * [Manipolazione](direct-manipulation.md)
 * [Menu a mano](hand-menu.md)
-* [Menu vicino](near-menu.md)
+* [Menu adiacente](near-menu.md)
 * [Raccolta di oggetti](object-collection.md)
-* [Comando Voice](voice-input.md)
+* [Comando vocale](voice-input.md)
 * [Tastiera](keyboard.md)
 * [Descrizione comando](tooltip.md)
 * [Slate](slate.md)
 * [Dispositivo di scorrimento](slider.md)
+* [Shader](shader.md)
 * [Billboarding e tag-along](billboarding-and-tag-along.md)
 * [Visualizzazione dello stato](progress.md)
 * [Magnetismo di superficie](surface-magnetism.md)
