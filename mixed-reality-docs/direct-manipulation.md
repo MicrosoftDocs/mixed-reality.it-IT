@@ -7,14 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, sguardo fisso, selezione della destinazione con lo sguardo, interazione, progettazione, a portata di mano, HoloLens
-ms.openlocfilehash: ed3b25fe9a7dd404d07073b578b8da13e1984cab
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435985"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105939"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipolazione diretta con le mani
+
+![Pulsante](images/UX/UX_Hero_Manipulation.jpg)
+
 La manipolazione diretta è un modello di input che consiste nel toccare gli ologrammi direttamente con le mani. L'idea alla base di questo concetto è che il comportamento degli oggetti deve essere uguale a quello che avrebbero nella realtà. I pulsanti possono essere attivati semplicemente premendoli, gli oggetti possono essere selezionati afferrandoli e il contenuto 2D si comporta come un touchscreen virtuale. Per questo motivo, è facile e anche divertente per gli utenti imparare a usare la manipolazione diretta. È considerata un modello di input "da vicino", in quanto è ideale per interagire con contenuto raggiungibile stendendo le braccia.
 
 La manipolazione diretta è basata sull'invito, ovvero è facile da usare. Non esistono movimenti simbolici da insegnare agli utenti. Tutte le interazioni avvengono intorno a un elemento visivo che è possibile toccare o afferrare.
@@ -296,12 +299,6 @@ Se ad esempio un oggetto o un punto di controllo deve essere afferrato avvicinan
 
 Avrai notato che sono presenti simmetrie di interazione che è possibile tracciare tra le mani nella realtà aumentata (AR) e i controller del movimento nella realtà virtuale (VR). Entrambi gli input possono essere usati per avviare manipolazioni dirette nei rispettivi ambienti. In HoloLens 2 afferrare e trascinare con le mani a una distanza ravvicinata funziona praticamente come il pulsante usato per afferrare nei controller del movimento in WMR. In questo modo si offre una familiarità di interazione tra le due piattaforme che può rivelarsi utile se deciderai di convertire la tua applicazione da una all'altra.
 
-
-<br>
-
----
-
-
 <br>
 
 ---
@@ -324,6 +321,18 @@ In questo modo sposti accidentalmente la mano su alcuni pulsanti olografici inte
 * **Dove**: usa le informazioni su ciò che l'utente sta guardando con movimenti di lancio rapido. Afferra un ologramma e scaglialo verso la destinazione prevista.  
 
     Anche se questa soluzione a volte funziona correttamente, l'esecuzione di movimenti della mano può avere come risultato delle destinazioni estremamente imprecise. Il tracciamento oculare tuttavia può migliorare l'accuratezza del movimento.
+
+<br>
+
+---
+
+## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Manipolazione in MRTK (Mixed Reality Toolkit) per Unity
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** puoi facilmente ottenere un comportamento di manipolazione comune usando lo script **ManipulationHandler**. ManipulationHandler ti consente di afferrare e spostare gli oggetti direttamente con le mani o con il raggio della mano. Supporta anche la manipolazione a due mani per il ridimensionamento e la rotazione di un oggetto.
+
+* [MRTK - Manipolazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+
+
+---
 
 ## <a name="see-also"></a>Vedi anche
 

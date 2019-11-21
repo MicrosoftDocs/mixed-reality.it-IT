@@ -7,14 +7,16 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, interazione, progettazione, HoloLens, mani, da lontano, puntamento e commit
-ms.openlocfilehash: e454b7f26b402d5c168323762865d10f7feb8a17
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437678"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105992"
 ---
 # <a name="point-and-commit-with-hands"></a>Puntamento e commit con le mani
+
+![Cursori](images/UX/UX_Hero_HandRay.jpg)
 
 Puntamento e commit con le mani è un modello di input che consente agli utenti di puntare come destinazione, selezionare e manipolare contenuto 2D e oggetti 3D fuori portata. Questa tecnica di interazione "da lontano" è specifica della realtà mista e non corrisponde al modo in cui le persone interagiscono naturalmente con il mondo reale. Ad esempio, nel film di supereroi *X-Men* il personaggio [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) è in grado di manipolare a distanza un oggetto lontano con le sue mani. Questa non è un'azione che gli esseri umani possono compiere nella realtà. Nella realtà aumentata (AR) e nella realtà mista (VR) di HoloLens, gli utenti vengono dotati di questo potere magico, che consente di superare i vincoli fisici del mondo reale, non solo per vivere esperienze divertenti con contenuti olografici, ma anche per migliorare l'efficacia e l'efficienza delle interazioni.
 
@@ -195,6 +197,17 @@ Il concetto alla base del puntamento e commit per un'interazione da lontano iniz
 :::row-end:::
 
 <br>
+
+
+---
+
+## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Raggio della mano in MRTK (Mixed Reality Toolkit) per Unity
+Per impostazione predefinita, MRTK fornisce un file prefab relativo al raggio della mano ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) con lo stesso stato di visualizzazione del raggio della mano di sistema della shell. Tale file viene assegnato in Pointers (Puntatori) nel profilo di input di MRTK. Nel visore VR immersive di Windows Mixed Reality gli stessi raggi vengono usati anche per i controller del movimento.
+
+* [MRTK - Profilo del puntatore](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK - Sistema di input](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK - Puntatori](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
 
 ---
 
