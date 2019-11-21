@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: Hands, controller di movimento, DirectX, input, ologrammi
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435200"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203333"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Controller hands and Motion in DirectX
 
@@ -99,16 +99,16 @@ Ciò comporta le seguenti procedure consigliate per il rendering e la destinazio
 ## <a name="cross-device-input-properties"></a>Proprietà input tra dispositivi
 L'API SpatialInteractionSource supporta i controller e i sistemi di rilevamento manuale con una vasta gamma di funzionalità. Alcune di queste funzionalità sono comuni tra i tipi di dispositivi. Ad esempio, il rilevamento manuale e i controller di movimento forniscono un'azione ' Select ' e una posizione 3D. Laddove possibile, l'API esegue il mapping di queste funzionalità comuni alle stesse proprietà in SpatialInteractionSource.  Ciò consente alle applicazioni di supportare più facilmente un'ampia gamma di tipi di input. Nella tabella seguente vengono descritte le proprietà supportate e il modo in cui vengono confrontate tra i tipi di input.
 
-| Proprietà | Descrizione | Movimenti HoloLens | Controller di movimento | Mano articolata|
+| Proprietà | Descrizione | Movimenti di HoloLens (1a generazione) | Controller di movimento | Mano articolata|
 |--- |--- |--- |--- |--- |
-| [SpatialInteractionSource::**manualità**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | A destra o a sinistra/controller. | Non supportato | Supportati | Supportati |
+| [SpatialInteractionSource::**manualità**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | A destra o a sinistra/controller. | Non supportato | Supportato | Supportato |
 | [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Stato corrente del pulsante primario. | Rubinetto aereo | Trigger | Tocco aria rilassato (tocco verticale) |
 | [SpatialInteractionSourceState:: è stato**afferrato**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | Stato corrente del pulsante di cattura. | Non supportato | Pulsante di cattura | Pinza o chiusa |
 | [SpatialInteractionSourceState::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | Stato corrente del pulsante di menu.    | Non supportato | Pulsante di menu | Non supportato |
 | [SpatialInteractionSourceLocation::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Posizione XYZ della mano o della posizione del grip sul controller. | Percorso Palm | Posizione del grip | Percorso Palm |
 | [SpatialInteractionSourceLocation::**Orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | Quaternione che rappresenta l'orientamento della mano o della posizione del grip sul controller. | Non supportato | Orientamento della posizione del grip | Orientamento Palm |
-| [SpatialPointerInteractionSourcePose::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origine del raggio di puntamento. | Non supportato | Supportati | Supportati |
-| [SpatialPointerInteractionSourcePose::**ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Direzione del raggio di puntamento. | Non supportato | Supportati | Supportati |
+| [SpatialPointerInteractionSourcePose::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origine del raggio di puntamento. | Non supportato | Supportato | Supportato |
+| [SpatialPointerInteractionSourcePose::**ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Direzione del raggio di puntamento. | Non supportato | Supportato | Supportato |
 
 Alcune delle proprietà precedenti non sono disponibili in tutti i dispositivi e l'API fornisce un mezzo per testarlo. Ad esempio, è possibile esaminare la proprietà [SpatialInteractionSource:: IsGraspSupported](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) per determinare se l'origine fornisce un'azione di comprensione.
 
@@ -122,7 +122,7 @@ La realtà mista di Windows supporta i controller di movimento in diversi fattor
 * **Asse di avanzamento dell'orientamento del grip**: quando si chiude parzialmente la mano (come se si utilizzasse il controller), il raggio che punta "in poi" attraverso il tubo formato dalle dita non Thumb.
 * **Asse verticale dell'orientamento del grip**: l'asse verso l'alto implicato dalle definizioni di destra e di avanzamento.
 
-È possibile accedere al **puntatore** con [SpatialInteractionSourceState::P oprietà:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) o [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_) .
+È possibile accedere al **puntatore** con [SpatialInteractionSourceState::P oprietà:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) o [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
 ## <a name="controller-specific-input-properties"></a>Proprietà di input specifiche del controller
 Per i controller, SpatialInteractionSource dispone di una proprietà Controller con funzionalità aggiuntive.
@@ -146,7 +146,7 @@ Oltre ai 25 giunti gerarchici, il sistema fornisce un insieme di Palm.  Il Palm 
 
 Per ogni giunzione vengono fornite le informazioni seguenti:
 
-| Name | Descrizione |
+| Nome | Descrizione |
 |--- |--- |
 |Posizione | posizione 3D del giunto, disponibile in qualsiasi sistema di coordinate richiesto. |
 |Orientation | orientamento 3D dell'osso, disponibile in qualsiasi sistema di coordinate richiesto. |
@@ -195,7 +195,7 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-L'avvio di un thread scollegato è solo un'opzione per la gestione delle chiamate asincrone.  In alternativa, è possibile usare la nuova funzionalità [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) supportata da C++/WinRT.
+L'avvio di un thread scollegato è solo un'opzione per la gestione delle chiamate asincrone.  In alternativa, è possibile usare la nuova funzionalità di [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) supportata C++da/WinRT.
 
 Quando si dispone di un oggetto HandMeshObserver, è necessario mantenerlo per la durata di attivazione del SpatialInteractionSource corrispondente.  Ogni frame, quindi, può essere richiesto per l'ultimo buffer di vertex che rappresenta la mano chiamando [GetVertexStateForPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) e passando un'istanza di [HandPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handpose) che rappresenta la posa per la quale si desiderano i vertici.  Ogni vertice nel buffer ha una posizione e una normale.  Di seguito è riportato un esempio di come ottenere il set corrente di vertici per una mesh a mano.  Esattamente come in precedenza, la variabile *CurrentState* rappresenta un'istanza di [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate).
 
