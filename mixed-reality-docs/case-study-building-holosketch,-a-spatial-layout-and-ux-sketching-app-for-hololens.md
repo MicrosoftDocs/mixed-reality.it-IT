@@ -77,7 +77,7 @@ Con HoloSketch è stato voluto semplificare questo processo senza coinvolgere gl
 
 Abbiamo pensato che questo strumento darebbe ai progettisti la possibilità di esplorare le soluzioni in uno spazio effettivamente tridimensionale e di non rimanere bloccati in 2D. Non è necessario considerare la creazione di uno sfondo 3D per la propria interfaccia utente, poiché lo sfondo è il mondo reale nel caso di HoloLens. HoloSketch apre una soluzione che consente ai progettisti di esplorare facilmente la progettazione 3D in HoloLens.
 
-## <a name="get-started"></a>Per iniziare
+## <a name="get-started"></a>Inizia subito
 
 ### <a name="how-to-import-2d-images-jpgpng-into-holosketch"></a>Come importare immagini 2D (JPG/PNG) in HoloSketch
 
@@ -126,7 +126,7 @@ Prima di caricare nella cartella OneDrive, attenersi alla procedura seguente per
    ![dal menu asset, selezionare ' compila AssetBundles ' per generare il file.](images/holosketch-15a-assetbundles.png)
 
 
-13. **Caricare il file generato nella cartella/Files/Documents/HoloSketch in OneDrive.** Caricare solo il file asset_unique_name. Non è necessario caricare file manifesto o file AssetBundles. <br>
+13. **Caricare il file generato nella cartella/Files/Documents/HoloSketch in OneDrive.** Caricare solo il file di asset_unique_name. Non è necessario caricare file manifesto o file AssetBundles. <br>
 ![aggiungere file a file/documenti/HoloSketch/cartella](images/holosketch-onedriveupload-1000px.png)
 ![viene visualizzato un oggetto 3D aggiunto nel menu OneDrive di HoloSketch](images/holosketch-14-onedriveexample-1000px.jpg)
 

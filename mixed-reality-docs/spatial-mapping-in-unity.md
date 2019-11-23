@@ -352,7 +352,7 @@ Le funzioni wrapper sono disponibili nel modulo Unity per semplificare la creazi
 
 ### <a name="object-placement-solver"></a>Risolutore posizionamento oggetti
 
-Il Risolutore posizionamento oggetti può essere usato per identificare le posizioni ideali nella stanza fisica per inserire gli oggetti. Il Risolutore troverà il percorso più adatto in base alle regole e ai vincoli dell'oggetto. Inoltre, le query di oggetto vengono mantenute fino a quando l'oggetto non viene rimosso con chiamate a "Solver_RemoveObject" o "Solver_RemoveAllObjects", consentendo il posizionamento di più oggetti vincolato. Le query di posizionamento degli oggetti sono costituite da tre parti: tipo di posizionamento con parametri, un elenco di regole e un elenco di vincoli. Per eseguire una query, usare l'API seguente.
+Il Risolutore posizionamento oggetti può essere usato per identificare le posizioni ideali nella stanza fisica per inserire gli oggetti. Il Risolutore troverà il percorso più adatto in base alle regole e ai vincoli dell'oggetto. Inoltre, le query di oggetto vengono mantenute fino a quando l'oggetto non viene rimosso con chiamate "Solver_RemoveObject" o "Solver_RemoveAllObjects", consentendo il posizionamento di più oggetti vincolato. Le query di posizionamento degli oggetti sono costituite da tre parti: tipo di posizionamento con parametri, un elenco di regole e un elenco di vincoli. Per eseguire una query, usare l'API seguente.
 
 ```cpp
 public static int Solver_PlaceObject(

@@ -23,7 +23,7 @@ ms.locfileid: "73439902"
 
 ## <a name="october-2019"></a>2019 ottobre
 
-Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il tuo feedback è molto importante per Microsoft, che ti invita a [partecipare alla conversazione](https://holodevelopersslack.azurewebsites.net/) per proporre argomenti, richiedere informazioni, istruzioni o esercitazioni specifiche e altro ancora. È anche possibile restare in contatto con Microsoft tramite [Twitter](https://twitter.com/MxdRealityDev) e [partecipare al programma per sviluppatori](https://aka.ms/iwantmr) per ricevere aggiornamenti diretti sulle novità per documentazione, strumenti, eventi e così via. Altre informazioni saranno disponibili prossimamente.
+Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il feedback degli utenti è molto importante per Microsoft, che invita tutti a [partecipare alla conversazione](https://holodevelopersslack.azurewebsites.net/) per proporre argomenti, richiedere informazioni, istruzioni o esercitazioni specifiche e altro ancora. È anche possibile restare in contatto con Microsoft tramite [Twitter](https://twitter.com/MxdRealityDev) e [partecipare al programma per sviluppatori](https://aka.ms/iwantmr) per ricevere aggiornamenti diretti sulle novità per documentazione, strumenti, eventi e così via. Altre informazioni saranno disponibili prossimamente.
 
 <table>
 <tr>
@@ -47,7 +47,7 @@ Come promesso, siamo lieti di condividere altre novità sulla realtà mista. Il 
 <td>Linee guida per la progettazione e lo sviluppo per HoloLens 2</td><td>2019 ottobre</td><td> <ul><li>Panoramica della realtà mista <a href=https://docs.microsoft.com/windows/mixed-reality/></a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>Progettazione e creazione di prototipi</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>Strumenti e architettura per sviluppatori</a></td>
 </tr>
 <tr>
-  <td>Nuove informazioni su Unreal</td><td>2019 ottobre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Panoramica sullo sviluppo non reale</a></td>
+  <td>Nuove informazioni su Unreal</td><td>2019 ottobre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Panoramica dello sviluppo non reale</a></td>
 </tr>
 <tr>
   <td>Progettazione Microsoft Fluent</td><td>2019 ottobre</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>pagina di progettazione della realtà mista</a></td>
