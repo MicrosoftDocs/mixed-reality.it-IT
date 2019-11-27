@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realtà mista, olografica, AR, VR, Mr, XR, realtà aumentata, realtà virtuale, spiegazione
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926779"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539566"
 ---
 # <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
+
+![Puntare ed eseguire il commit con hands on HoloLens 2](images/02_MixedRealitySlashMixedReality.png)
 
 La realtà mista è il risultato della fusione del mondo fisico con il mondo digitale. È l'evoluzione successiva nell'interazione tra uomo, computer e ambiente e rende possibili cose che finora si limitavano all'immaginazione. Questo è possibile grazie a miglioramenti in visione artificiale, potenza di elaborazione grafica, tecnologia di visualizzazione e sistemi di input. Il termine *realtà mista* è stato originariamente introdotto in un documento 1994 di Paul Milgram e Fumio Kishino, "[una tassonomia di visualizzazioni visive realtà miste](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". Nel documento è stato introdotto il concetto di *continuità della virtualizzazione*e si è concentrato sul modo in cui viene applicata la categorizzazione della tassonomia. Da allora, l'applicazione della realtà mista va oltre le visualizzazioni. Include anche l'input ambientale, il suono spaziale e la posizione.
 

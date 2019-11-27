@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 0595010a0b443d88e3f208b785903e3f6cc99295
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926524"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539738"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. creazione dell'interfaccia utente e configurazione del Toolkit per la realtà mista
 
@@ -29,7 +29,7 @@ Nella lezione precedente sono state illustrate alcune delle funzionalità offert
 
 In questa sezione si apprenderà come personalizzare e configurare i profili MRTK predefiniti regolando l'opzione di visualizzazione della mesh di riconoscimento spaziale. Puoi seguire gli stessi principi per modificare le impostazioni o i valori nei profili di MRTK.
 
-1. Selezionare il Toolkit di realtà mista (MRTK) dalla gerarchia di BaseScene. Nel pannello Inspector cercare lo script Mixed Reality Toolkit e selezionare il profilo attivo, come illustrato nella figura seguente. Fai doppio clic per aprirlo.
+1. Selezionare il Toolkit di realtà mista (MRTK) dalla gerarchia di BaseScene. Nel pannello Inspector cercare lo script Mixed Reality Toolkit e selezionare il profilo attivo, come illustrato nella figura seguente. Fare doppio clic per aprirlo.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -46,7 +46,7 @@ In questa sezione si apprenderà come personalizzare e configurare i profili MRT
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step2b.png)
 
-    Fare clic su **clona** per creare una copia del profilo MRTK. Con la tua copia del profilo di MRTK, puoi ora personalizzare le impostazioni del profilo. Sarà inoltre necessario ripetere il passaggio copia e personalizzazione per tutti i profili aggiuntivi nidificati sotto questo profilo, come descritto nei passaggi successivi.
+    Fare clic su **clona** per creare una copia del profilo MRTK. Con la propria copia del profilo MRTK è ora possibile personalizzare le impostazioni in questo profilo. Sarà inoltre necessario ripetere il passaggio copia e personalizzazione per tutti i profili aggiuntivi nidificati sotto questo profilo, come descritto nei passaggi successivi.
 
 3. Disabilita la visibilità della mesh di consapevolezza spaziale. A tale scopo, individuare le impostazioni del sistema di riconoscimento spaziale come illustrato nell'immagine seguente. Verificare che l'opzione **Abilita il sistema di riconoscimento spaziale** sia selezionata. Fare clic sul pulsante **clona** a destra del profilo di sistema di riconoscimento spaziale per sostituire il profilo predefinito con una copia personalizzabile. Nella finestra popup visualizzata premere il pulsante **Clone** , come illustrato nella seconda immagine riportata di seguito.
 
@@ -99,13 +99,13 @@ In questa sezione si apprenderà come usare il rilevamento manuale per premere u
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
     >[!NOTE]
-    >in generale, 1 unità in Unity equivale quasi a 1 metro nel mondo fisico. Vi sono tuttavia eccezioni, ad esempio quando gli oggetti sono figli di oggetti ridimensionati.
+    >in generale, 1 unità in Unity equivale quasi a 1 metro nel mondo fisico. Ci sono alcune eccezioni. ad esempio, quando gli oggetti sono elementi figlio di oggetti ridimensionati.
 
-5. Con l'oggetto gioco PressableButtonHoloLens2 selezionato, nella finestra di controllo scorrere verso il basso per individuare la sezione eventi del componente interactable (script).
+5. Con l'oggetto del gioco PressableButtonHoloLens2 selezionato, scorrere verso la parte inferiore del controllo per individuare la sezione degli eventi del componente interactable (script).
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step4.png)
 
-6. Si modificherà l'evento esistente per fornire al pulsante un evento a cui rispondere quando viene eseguito il push. Come si può notare, il tipo di ricevitore di eventi è impostato su InteractableOnPressReceiver. In questo modo il pulsante risponde a un evento di pressione quando una mano tracciata preme il pulsante. A questo punto è necessario modificare anche il filtro di interazione in near e lontano.
+6. Si modificherà l'evento esistente per fornire al pulsante un evento a cui rispondere quando viene eseguito il push. Come si può notare, il tipo di ricevitore di eventi è impostato su InteractableOnPressReceiver. In questo modo il pulsante risponde a un evento di pressione quando una mano tracciata preme il pulsante. A questo punto, è necessario modificare anche il filtro interazione in near e lontano.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step5.png)
 
@@ -117,24 +117,24 @@ In questa sezione si apprenderà come usare il rilevamento manuale per premere u
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step7b.png)
 
-    Fare clic sul cerchio accanto al campo materiale vuoto per aprire la finestra popup Seleziona materiale. Il MRTK include molti materiali e colori tra cui scegliere. Per questo esempio, verrà usato il materiale MRTK_Standard_Cyan, disponibile digitando "MRTK_Standard" nella barra di ricerca popup. Selezionare il materiale MRTK_Standard_Cyan per popolare il campo Material.
+    Fare clic sul cerchio accanto al campo materiale vuoto per aprire la finestra popup Seleziona materiale. Il MRTK include molti materiali e colori tra cui scegliere. Per questo esempio, si userà il materiale MRTK_Standard_Cyan trovato digitando "MRTK_Standard" nella barra di ricerca popup. Selezionare il materiale MRTK_Standard_Cyan per popolare il campo Material.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step7c.png)
 
     L'evento è ora impostato in modo che, quando il pulsante viene premuto, il cubo cambi colore in base al materiale specificato. In questo esempio il cubo assumerà il colore ciano.
 
-8. A questo punto, configurerai l'azione di rilascio in modo che, al momento del rilascio, venga ripristinato il colore predefinito del pulsante. Ripetere il passaggio 7 sopra riportato. Questa volta, tuttavia, con l'evento onRelease invece che con onPress MRTK_Standard_LightGray materiale come illustrato nell'immagine seguente.
+8. Successivamente, si imposterà l'azione di rilascio in modo che, al rilascio, il pulsante torni al colore predefinito. Ripetere il passaggio 7 sopra. Tuttavia, questa volta con l'evento onRelease invece che con onPress MRTK_Standard_LightGray Material come illustrato nell'immagine seguente.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step8.png)
 
-    Ora, quando si preme il pulsante, questo verrà modificato in un nuovo colore, cyan. Quando si rilascia il pulsante, viene modificato il colore predefinito specificato (ad esempio, grigio chiaro). Premere il pulsante Riproduci nella parte superiore della schermata per provarlo nell'editor o distribuirlo in HoloLens 2 per eseguire il test. Per altre informazioni sulla simulazione in-Editor, inclusa la simulazione della mano, vedere la [pagina della documentazione di simulazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
+    A questo punto, quando si preme il pulsante, questo verrà modificato in un nuovo colore; ciano. Quando il pulsante viene rilasciato, viene modificato nuovamente sul colore predefinito specificato, ad esempio grigio chiaro. Premere il pulsante Riproduci nella parte superiore della schermata per provarlo nell'editor o distribuirlo in HoloLens 2, per eseguire il test. Per altre informazioni sulla simulazione in-Editor, inclusa la simulazione della mano, vedere la [pagina della documentazione di simulazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
 ### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creazione di un pannello di pulsanti con la raccolta di oggetti griglia di MRTK
 
 In questa sezione si apprenderà come allineare automaticamente più pulsanti in un'interfaccia utente accurata usando lo strumento GridObjectCollection di MRTK.
 
-1. Duplicare il pulsante della sezione precedente finché non sono disponibili cinque pulsanti. Sono disponibili diversi modi per eseguire questa operazione:-fare clic con il pulsante destro del mouse sul pulsante e scegliere Copia. Quindi, andare sotto il pulsante e fare di nuovo clic con il pulsante destro del mouse e scegliere Incolla.
-    -Fare clic con il pulsante destro del mouse sul pulsante e scegliere Duplica.
+1. Duplicare il pulsante della sezione precedente finché non sono disponibili cinque pulsanti. Sono disponibili diversi modi per eseguire questa operazione: fare clic con il pulsante destro del mouse sul pulsante e scegliere Copia. Quindi, andare sotto il pulsante e fare di nuovo clic con il pulsante destro del mouse, quindi scegliere Incolla.
+    Fare clic con il pulsante destro del mouse sul pulsante e scegliere Duplica.
     -Utilizzare il comando della tastiera facendo clic sul cubo e premendo CTRL D sulla tastiera.
 
     Ripetere l'operazione fino a cinque pulsanti. vedere le cinque frecce rosse nell'immagine seguente.
@@ -164,7 +164,7 @@ In questa sezione si apprenderà come allineare automaticamente più pulsanti in
 
 ### <a name="adding-text-into-your-scene"></a>Aggiunta di testo nella scena
 
-In questa sezione apprenderai come aggiungere e modificare il testo nelle esperienze di realtà mista. Se non lo hai già fatto, assicurati che TextMeshPro sia abilitato in Unity seguendo le istruzioni riportate [qui](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
+In questa sezione apprenderai come aggiungere e modificare il testo nelle esperienze di realtà mista. Se non è già stato fatto, assicurarsi che TextMeshPro sia abilitato in Unity seguendo le istruzioni riportate [qui](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
 
 1. Selezionare l'oggetto Buttoncollection padre e fare clic con il pulsante destro del mouse sulla raccolta. Espandere oggetto 3D nel menu a discesa. Quindi selezionare TextMeshPro-text. Verrà visualizzato un oggetto TextMeshPro nella raccolta dei pulsanti, come illustrato nell'immagine seguente.
 
@@ -174,11 +174,11 @@ In questa sezione apprenderai come aggiungere e modificare il testo nelle esperi
 
     ![Della lezione 2 Chapter4 passaggio 3](images/mrlearning-base-ch2-4-step3.png)
 
-3. Nel campo di testo del componente TextMeshPro nel pannello Inspector, digitare "button Collection text" e modificare le proprietà di allineamento in modo da centrare e fare Top come illustrato nell'immagine seguente.
+3. Nel campo di testo del componente TextMeshPro nel pannello Inspector, digitare "button Collection text" e modificare le proprietà di allineamento in modo che siano Center e top, come illustrato nell'immagine seguente.
 
     ![Della lezione 2 Chapter4 passo 4](images/mrlearning-base-ch2-4-step4.png)
 
-4. Per modificare i valori di testo negli oggetti Button, fare clic sulla freccia accanto a qualsiasi pulsante per espanderlo e passare all'oggetto SeeItSayItLabel. Passare a TextMeshPro in cui è possibile modificare il testo nei pulsanti, come descritto nei passaggi precedenti.
+4. Per modificare i valori di testo negli oggetti Button, fare clic sulla freccia accanto a qualsiasi pulsante per espanderlo e passare all'oggetto SeeItSayItLabel. Passare a TextMeshPro, in cui è possibile modificare il testo nei pulsanti, come descritto nei passaggi precedenti.
 
     ![Lezione 2 capitolo 4 passaggio 5](images/Lesson2_Chapter4_Step5.JPG)
 

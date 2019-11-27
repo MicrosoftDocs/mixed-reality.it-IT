@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: f38145c4124a9f162e58188c6179dc29c22e864e
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
-ms.translationtype: HT
+ms.openlocfilehash: f365b0444576e03acd8dba194d7f8f24175e7bee
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491123"
+ms.locfileid: "74539517"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Panoramica dell'SDK per la comprensione della scena
 
@@ -265,7 +265,7 @@ Si noti che si tratta del SceneObject con la trasformazione rispetto all'origine
 
 La comprensione della scena ha effettuato un tentativo intenzionale di allinearsi alle rappresentazioni tradizionali della scena 3D quando si gestiscono le trasformazioni. Ogni scena è quindi confinata a un singolo sistema di coordinate, in modo analogo alla maggior parte delle rappresentazioni ambientali 3D. SceneObjects forniscono la posizione e l'orientamento all'interno del sistema di coordinate. Se l'applicazione sta affrontando scenari che estendono il limite di una singola origine, può ancorare SceneObjects a SpatialAnchors o generare diverse scene e unirle, ma per semplicità si presuppone che le scene stagne esistano nei propri origine localizzata da un NodeId definito da scene. OriginSpatialGraphNodeId.
 
-Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde all'origine mondiale di Unity, nonché il metodo di estensione `.ToUnity()` per la conversione tra `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
+Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde a Unity ' s di origine, nonché il metodo di estensione `.ToUnity()` per la conversione tra `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -368,7 +368,20 @@ I buffer di indice/vertice devono essere > = i conteggi di indice/vertice, ma in
 
 A questo punto è necessario comprendere i componenti di base della scena Understanding Runtime and SDK. La maggior parte della potenza e della complessità si basa sui modelli di accesso, sull'interazione con i framework 3D e sugli strumenti che possono essere scritti su queste API per eseguire attività più avanzate, come la pianificazione spaziale, l'analisi delle stanze, la navigazione, la fisica e così via. Ci auguriamo che questi esempi vengano acquisiti in esempi che dovrebbero guidare l'utente nella direzione corretta per rendere più brillanti gli scenari. Se sono presenti esempi/scenari non indirizzati, è possibile inviare una notifica e provare a documentare/prototipare gli elementi necessari.
 
+### <a name="where-can-i-get-sample-code"></a>Dove è possibile ottenere il codice di esempio?
+
+Scenario per informazioni sul codice di esempio per Unity, vedere la pagina di [esempio Unity](https://github.com/sceneunderstanding-microsoft/unitysample) . Questa applicazione consente di comunicare con il dispositivo ed eseguire il rendering dei vari oggetti scena, oppure di caricare una scena serializzata nel PC e di sperimentare la comprensione della scena senza un dispositivo.
+
+### <a name="where-can-i-get-sample-scenes"></a>Dove è possibile ottenere scene di esempio?
+
+Se si dispone di un HoloLens2, è possibile salvare qualsiasi scena acquisita salvando l'output di ComputeSerializedAsync in file e deserializzarlo in base alla propria convenienza. 
+
+Se non si ha un dispositivo HoloLens2 ma si vuole giocare con la comprensione della scena, è necessario scaricare una scena pre-acquisita. L'esempio di comprensione della scena è attualmente fornito con scene serializzate che possono essere scaricate e usate con facilità. È possibile trovarli qui:
+
+[Scene di esempio sulla comprensione della scena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
 ## <a name="see-also"></a>Vedi anche
 
 * [Mapping spaziale](spatial-mapping.md)
 * [Informazioni sulle scene](scene-understanding.md)
+* [Esempio di Unity](https://github.com/sceneunderstanding-microsoft/unitysample)

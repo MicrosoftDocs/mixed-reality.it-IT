@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926913"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539697"
 ---
 # <a name="scene-understanding"></a>Comprensione della scena
 
@@ -19,7 +19,29 @@ La comprensione delle scene fornisce agli sviluppatori di realtà mista una rapp
 
 ![Mesh di mapping spaziale, superfici planari con etichetta, mesh impermeabile](images/SUScenarios.png)
 
-Questo documento ha lo scopo di fornire una panoramica dello scenario e di chiarire la relazione tra la conoscenza della scena e la condivisione di mapping spaziale. Per informazioni dettagliate sul funzionamento della comprensione della scena e su come svilupparlo, vedere la pagina relativa alla [Panoramica della panoramica dell'SDK](scene-understanding-SDK.md) .
+Questo documento ha lo scopo di fornire una panoramica dello scenario e di chiarire la relazione tra la conoscenza della scena e la condivisione di mapping spaziale.
+
+## <a name="developing-with-scene-understanding"></a>Sviluppo con comprensione della scena
+
+Questo articolo serve solo per introdurre la scena per comprendere il runtime e i concetti. Se si sta cercando la documentazione su come sviluppare con la comprensione della scena, è possibile che si sia interessati a quanto segue:
+
+[Panoramica dell'SDK per la comprensione della scena](scene-understanding-SDK.md)
+
+È possibile scaricare l'app di esempio per informazioni sulla scena dal sito GitHub di esempio:
+
+[Esempio di comprensione della scena](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+Se non si ha un dispositivo e si vuole accedere a scene di esempio per provare a comprendere la scena, sono disponibili alcune scene nella cartella asset di esempio:
+
+[Scene di esempio sulla comprensione della scena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>SDK
+
+Per informazioni dettagliate su come sviluppare per la scena understandiing, per informazioni dettagliate sul funzionamento della comprensione della scena e su come svilupparle, vedere la pagina relativa alla panoramica della documentazione [Panoramica sull'SDK](scene-understanding-SDK.md) .
+
+
+### <a name="sample"></a>Esempio
+
 
 ## <a name="device-support"></a>Supporto di dispositivi
 

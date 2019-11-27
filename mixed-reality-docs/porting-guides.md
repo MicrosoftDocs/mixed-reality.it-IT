@@ -2,16 +2,16 @@
 title: Guide alla conversione
 description: Procedura dettagliata walthrough che spiega come trasferire un'applicazione immersiva esistente a una realtà mista di Windows.
 author: ChimeraScorn
-ms.author: cwhite
+ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Port, porting, Unity, middleware, Engine, UWP
-ms.openlocfilehash: 19835cd06680e374c92e6e454b11663481bc4a07
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d3debc9a810873f21a9f55a32061565d4ce75ae
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438332"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539515"
 ---
 # <a name="porting-guides"></a>Guide alla conversione
 
