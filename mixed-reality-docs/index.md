@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
-ms.openlocfilehash: 1a5e4fcbb7704db6df59db9d01bb72a5b153b576
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438056"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539621"
 ---
 # <a name="get-started-with-mixed-reality"></a>Informazioni di base sulla realtà mista
 
@@ -55,7 +55,7 @@ ms.locfileid: "73438056"
 Se non hai familiarità con la realtà mista, scoprirai che cos'è e quali funzionalità offre.
 
 
-![Spettro realtà mista](images/RWtpZ1.jpeg)
+![Colibrì virtuale con mano umana](images/01_MixedReality.png)
 
 ## <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
 
@@ -190,7 +190,7 @@ Per visualizzare contenuto che sembri realistico in forma olografica, è importa
     :::column-end:::
     :::column:::
         [![Diventa un autore](images/icon-design.jpg)](design.md)<br>
-        **[Diventa un autore](design.md)**<br>
+        **[Diventare un autore](design.md)**<br>
         Di seguito vengono illustrati i concetti di base che ti serviranno per iniziare a progettare e a creare prototipi.
     :::column-end:::
     :::column:::

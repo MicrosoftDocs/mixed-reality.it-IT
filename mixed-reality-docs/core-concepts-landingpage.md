@@ -7,14 +7,17 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Realtà mista di Windows, progettazione, modelli di app, controlli, stile, HoloLens, interazione, elementi UX, comportamenti, blocchi predefiniti
-ms.openlocfilehash: 5f5f97d3f4a34e0d88c781df494a4afc2ee0b992
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d8f904183e51943246613e99a805bee1518523c8
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439432"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539529"
 ---
 # <a name="core-concepts-overview"></a>Cenni preliminari sui concetti di base
+
+![Manipolazione diretta con le mani](images/05_CoreConcepts.png)
+
 
 Prima di immergersi nella progettazione dell'esperienza, è utile comprendere alcuni concetti di base. Ogni argomento seguente è un fattore di base che influisce in modo sostanziale e contribuisce alla qualità dell'esperienza di realtà mista che si sta creando per l'utente. 
 
