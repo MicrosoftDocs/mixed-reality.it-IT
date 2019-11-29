@@ -7,14 +7,16 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Realtà mista di Windows, progettazione, modelli di app, controlli, stile, HoloLens, interazione, elementi UX, comportamenti, blocchi predefiniti
-ms.openlocfilehash: c454190cf376f39974efec1ea416afbdb9db1a10
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143188"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539657"
 ---
 # <a name="ux-elements-overview"></a>Cenni preliminari sugli elementi UX
+
+![Interfaccia utente di HoloLens 2 che interagisce con i pulsanti olografici](images/06_AppPatterns.png)
 
 ## <a name="style"></a>Stile
 
