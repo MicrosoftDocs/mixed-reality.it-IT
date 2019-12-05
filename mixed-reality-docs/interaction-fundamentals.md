@@ -7,14 +7,16 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, sguardo fisso, selezione della destinazione con lo sguardo fisso, interazione, progettazione, HoloLens, MMR, multimodale
-ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437981"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539725"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione alle interazioni istintive
+
+![Manipolazione da lontano con le mani](images/04_InteractionFundamentals.png)
 
 La filosofia delle interazioni semplici e istintive è alla base di tutta la piattaforma di realtà mista. Abbiamo adottato tre accorgimenti per consentire ai progettisti e agli sviluppatori di applicazioni di fornire ai clienti interazioni facili e intuitive. 
 

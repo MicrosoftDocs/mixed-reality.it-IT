@@ -8,17 +8,16 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, directx
-ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435693"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539580"
 ---
-# <a name="learn-the-tools-and-architecture"></a>Informazioni sugli strumenti e sull'architettura
+# <a name="learn-the-tools-and-architecture"></a>ottieni informazioni sugli strumenti e sull'architettura
 
-
-![Team che lavorano con i materiali nella Mixed Reality Academy](images/Development_Hero.png)
+![Sfera 3D astratta](images/07_Development.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Espandere il processo di progettazione](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -131,8 +130,8 @@ Tutti gli elementi di base necessari per iniziare a scrivere un'app di realtà m
 
 :::row:::
     :::column:::
-       [![Comprendere i concetti di base](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
-        **[Comprendere i concetti di base](index.md#understand-the-basics)**<br>
+       [![Acquisisci i concetti di base](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+        **[Acquisisci i concetti di base](index.md#understand-the-basics)**<br>
         Comprendi meglio ciò che si intende per realtà mista e il modo in cui viene usata.
     :::column-end:::
     :::column:::
@@ -142,12 +141,12 @@ Tutti gli elementi di base necessari per iniziare a scrivere un'app di realtà m
     :::column-end:::
     :::column:::
         [![Installare gli strumenti](images/icon-developer.jpg)](install-the-tools.md)<br>
-         **[Installare gli strumenti](install-the-tools.md)**<br>
+         **[Installa gli strumenti](install-the-tools.md)**<br>
         Usa l'elenco di controllo dell'installazione per ottenere gli strumenti necessari per creare app per HoloLens e per la realtà mista.
     :::column-end:::
     :::column:::
         [![Partecipare a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
-         **[Partecipare a un evento](sf-academy-events.md)**<br>
+         **[Partecipa a un evento](sf-academy-events.md)**<br>
         Vieni a vedere l'hardware e partecipa a un'esercitazione pratica per creare la tua prima applicazione HoloLens 2.
     :::column-end:::
 :::row-end:::

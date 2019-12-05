@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, guide pratiche per HoloLens, progetti open source, concetti di base, interazione
-ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435707"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539594"
 ---
 # <a name="start-designing-and-prototyping"></a>Iniziare a progettare e a creare prototipi
 
 
-![Concetti di base](images/text_in_unity_viewingangle.jpg)
+![Immagine di mesh 3D](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Espandere il processo di progettazione](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -98,6 +98,10 @@ Per visualizzare contenuto che sembri realistico in forma olografica, è importa
 ### <a name="clear-and-readable-typographytypographymd"></a>[Tipografia chiara e leggibile](typography.md)
 Proprio come per la tipografia su schermi 2D, l'obiettivo è chiarezza e leggibilità. Grazie all'aspetto tridimensionale della realtà mista, è possibile influire sul testo e sull'esperienza utente complessiva in modo ancora più significativo.
 
+<br>
+
+### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[Elementi UX per la realtà mista](app-patterns-landingpage.md)
+Scopri le caratteristiche dei componenti di base per le interazioni spaziali e l'interfaccia utente nella realtà mista.
 <br>
 
 

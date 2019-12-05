@@ -1,176 +1,177 @@
 ---
 title: Comfort
-description: Durante la visualizzazione naturale, il sistema visuale umano si basa su più origini di informazioni o "suggerimenti" per interpretare le forme 3D e la posizione relativa degli oggetti.
+description: Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e la posizione relativa degli oggetti.
 author: erickjpaul
 ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
-keywords: Realtà mista, progettazione, comodità, HoloLens 2, HoloLens (1a generazione)
-ms.openlocfilehash: e71b8d73a37a5d10a07d37d91cf14c88b7a85687
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Realtà mista, progettazione, comfort, HoloLens 2, HoloLens (prima generazione)
+ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436390"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491152"
 ---
 # <a name="comfort"></a>Comfort
 
-Durante la visualizzazione naturale, il sistema visuale umano si basa su più origini di informazioni o "suggerimenti" per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni suggerimenti si basano solo su un singolo occhio (indicatori monoculare), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità del campo](https://en.wikipedia.org/wiki/Depth_of_field)e [alloggio](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altre indicazioni si basano su entrambi gli occhi (suggerimenti binocoli) e includono [vergence](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi richiesti per esaminare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello di differenze tra le proiezioni della scena nel indietro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richiede movimenti faticosi del collo o delle braccia. In questo articolo verranno esaminate le considerazioni principali da tenere in considerazione per raggiungere questi obiettivi.
+Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni indizi si basano su un solo occhio (indizi monoculari), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità di campo](https://en.wikipedia.org/wiki/Depth_of_field) e [accomodazione](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altri indizi si basano su entrambi gli occhi (indizi binoculari) e includono la [convergenza](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi necessarie per guardare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello delle differenze tra le proiezioni della scena sul retro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante che i progettisti e gli sviluppatori creino e presentino contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richieda movimenti faticosi del collo o delle braccia. In questo articolo esamineremo gli aspetti principali da tenere in considerazione per raggiungere questi obiettivi.
 
-## <a name="vergence-accommodation-conflict"></a>Vergence-conflitto di alloggi
+## <a name="vergence-accommodation-conflict"></a>Conflitto tra convergenza e accomodazione
 
-Per visualizzare gli oggetti in modo chiaro [, è necessario che](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)gli utenti soddisfino o modifichino lo stato attivo degli occhi alla distanza dell'oggetto. Allo stesso tempo, la rotazione di entrambi gli occhi deve [convergere](https://en.wikipedia.org/wiki/Convergence_(eye)) alla distanza dell'oggetto per evitare di visualizzare immagini doppie. Nella visualizzazione naturale, vergence e accommodation sono collegati. Quando si visualizza un elemento vicino, ad esempio un Mosca vicino al naso, gli occhi si incrociano e si adattano a un punto vicino. Viceversa, se si visualizza un elemento a infinito ottico (approssimativamente da 6 a 6 o più per la visione normale), le linee visive degli occhi diventano parallele e le lenti degli occhi sono adatte all'infinito. 
+Per visualizzare chiaramente un oggetto, gli utenti devono [accomodare](https://en.wikipedia.org/wiki/Accommodation_%28eye%29), ovvero regolare, la messa a fuoco oculare in base alla distanza dell'oggetto. Allo stesso tempo, la rotazione di entrambi gli occhi deve [convergere](https://en.wikipedia.org/wiki/Convergence_(eye)) in base alla distanza dell'oggetto per evitare la visione di immagini doppie. Nella visione naturale, convergenza e accomodazione sono collegate. Quando si guarda qualcosa da vicino, ad esempio una mosca vicino al naso, gli occhi si incrociano e si accomodano in base a un punto vicino. Viceversa, se si guarda qualcosa all'infinito ottico (che corrisponde circa ad almeno 6 metri di distanza nella visione naturale), le linee visive degli occhi diventano parallele e le lenti degli occhi si accomodano all'infinito. 
 
-Nella maggior parte dei casi, gli utenti vengono sempre posizionati sulla distanza focale dello schermo (per ottenere un'immagine nitida), ma convergeranno sulla distanza dell'oggetto di interesse (per ottenere una singola immagine). Quando gli utenti sono in grado di adattarsi a diverse distanze, il collegamento naturale tra i due segnali deve essere danneggiato e questo può causare fastidio visivi o affaticarsi.
+Nella maggior parte dei caschi con visore, gli occhi degli utenti si accomodano sempre alla distanza focale del visore (per ottenere un'immagine nitida), ma convergono in base alla distanza dell'oggetto di interesse (per ottenere una singola immagine). Quando l'accomodazione e la convergenza avvengono a distanze diverse, il collegamento naturale tra i due segnali viene interrotto e questo può causare fastidio o affaticamento visivo.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/-606oZKLa_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
+### <a name="guidance-for-holographic-devices"></a>Indicazioni per i dispositivi olografici
 
-Le visualizzazioni di HoloLens sono fisse a distanza ottica circa 2,0 m dall'utente. Pertanto, gli utenti devono sempre adattarsi a circa 2,0 m per mantenere un'immagine chiara nel dispositivo. Gli sviluppatori di app possono guidare la convergenza degli occhi degli utenti inserendo contenuto e ologrammi a diverse profondità. Il disagio del conflitto vergence-accommodation può essere evitato o ridotto a icona mantenendo il contenuto a cui gli utenti si confluiscono più vicino a 2,0 m come possibile (ad esempio, in una scena con molta profondità, inserire le aree di interesse vicino a 2,0 m dall'utente quando possibile). Quando non è possibile posizionare il contenuto vicino a 2,0 m, il disagio del conflitto vergence-Accommodation è maggiore quando lo sguardo dell'utente passa da una distanza all'altra. In altre parole, è molto più semplice esaminare un ologramma stazionario che rimanga a 50 centimetri rispetto a un ologramma che si sposta verso e fuori dal tempo.
+I display HoloLens sono fissati a una distanza ottica di circa 2 m dall'utente. Pertanto, gli utenti devono sempre accomodare la visione a circa 2 m per mantenere un'immagine chiara nel dispositivo. Gli sviluppatori di app possono guidare la convergenza degli occhi degli utenti posizionando contenuto e ologrammi a varie profondità. Il disagio provocato dal conflitto tra convergenza e accomodazione può essere evitato o ridotto al minimo mantenendo il contenuto su cui gli utenti convergono lo sguardo il più vicino possibile a 2 m. Ad esempio, in una scena con molta profondità, è opportuno posizionare le aree di interesse a una distanza di circa 2 m dall'utente, quando possibile. Se non è possibile mantenere il contenuto a questa distanza, il disagio provocato dal conflitto tra convergenza e accomodazione è significativo quando lo sguardo dell'utente passa da una distanza all'altra. In altre parole, è molto più confortevole guardare un ologramma che rimane fisso a 50 cm di distanza rispetto a un ologramma distante 50 cm che si avvicina e si allontana nel corso del tempo.
 
-![distanza ottimale per inserire gli ologrammi dall'utente.](images/distanceguiderendering-950px.png)<br>
-*Distanza ottimale per inserire gli ologrammi dall'utente*
+![Distanza ottimale per il posizionamento degli ologrammi rispetto allo sguardo dell'utente.](images/distanceguiderendering-950px.png)<br>
+*Distanza ottimale per il posizionamento degli ologrammi rispetto allo sguardo dell'utente*
 
-### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedure consigliate per HoloLens (1a generazione) e HoloLens 2
+### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedure consigliate per HoloLens (prima generazione) e HoloLens 2
 
-Per la massima comodità, **la zona ottimale per la posizione degli ologrammi è compresa tra 1.25 m e 5m**. In ogni caso, le finestre di progettazione devono tentare di strutturare gli scenari di contenuto per incoraggiare gli utenti a interagire tra 1 milione o più lontano dal contenuto (ad esempio, modificare le [dimensioni del contenuto e i parametri di posizionamento predefiniti](gaze-and-commit.md)). 
+Per il massimo comfort, **la zona ottimale per il posizionamento degli ologrammi è compresa tra 1,25 e 5 m**. In ogni caso, i progettisti devono cercare di strutturare le scene di contenuto per incoraggiare gli utenti a interagire ad almeno 1 m dal contenuto, ad esempio regolando i [parametri relativi alle dimensioni del contenuto e al posizionamento predefinito](gaze-and-commit.md). 
 
-Sebbene sia talvolta necessario che il contenuto venga visualizzato più vicino a 1 milione, è consigliabile evitare di presentare ologrammi più vicini a 40cm. È quindi consigliabile iniziare a **dissolvere il contenuto in 40cm e posizionare un piano di ritaglio di rendering a 30cm** per evitare gli oggetti più vicini.
+Anche se talvolta il contenuto deve essere visualizzato a una distanza inferiore a 1 m, è opportuno evitare di presentare ologrammi a meno di 40 cm di distanza. Consigliamo quindi di **applicare un effetto di dissolvenza a 40 cm e posizionare un piano di ritaglio del rendering a 30 cm** per evitare gli oggetti più vicini.
 
-Gli oggetti che si spostano in profondità sono più probabili degli oggetti stazionari per produrre disagio a causa del conflitto vergence-accommodation. Allo stesso modo, richiedere agli utenti di passare rapidamente tra lo stato attivo e lo stato attivo, ad esempio a causa di un ologramma popup che richiede l'interazione diretta, può causare disagio e fatica visivi. È pertanto **necessario prestare particolare attenzione per ridurre al minimo la frequenza con cui gli utenti sono in grado di visualizzare i contenuti che si spostano in profondità; o di passare rapidamente lo stato attivo tra gli ologrammi vicini e lontani**. 
+Gli oggetti che si muovono in profondità hanno più probabilità di causare disagio rispetto agli oggetti fissi a causa del conflitto tra convergenza e accomodazione. Analogamente, costringere gli utenti a passare rapidamente tra la messa a fuoco da lontano e quella da vicino, ad esempio a causa di un ologramma popup che richiede l'interazione diretta, può causare disagio e affaticamento visivi. È quindi necessario **stare molto attenti a ridurre la frequenza con cui gli utenti devono visualizzare contenuto che si sta muovendo in profondità o cambiare rapidamente la messa a fuoco tra ologrammi vicini e lontani**. 
 
-### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Considerazioni aggiuntive per le distanze HoloLens 2 e near Interaction
+### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Considerazioni aggiuntive per HoloLens 2 e le distanze di interazione vicina
 
-Quando si progettano contenuti per l'interazione diretta (near) in HoloLens 2 o **in tutte le applicazioni in cui il contenuto deve essere più vicino a 1 milione, è necessario prestare particolare attenzione per garantire la comodità degli utenti**. La probabilità di disagio a causa del conflitto di vergence-accommodation aumenta in modo esponenziale con una riduzione della distanza di visualizzazione. Inoltre, gli utenti possono riscontrare un aumento della sfocatura quando visualizzano il contenuto in prossimità di interazioni, quindi è consigliabile testare il contenuto sottoposto a rendering sia all'interno della zona della posizione ottimale dell'ologramma, sia più vicino (inferiore a 1,0 m al piano di ritaglio) a Assicurarsi che rimanga chiaro e comodo da visualizzare. 
+Quando si progetta contenuto per l'interazione diretta (vicina) in HoloLens 2 o **in qualsiasi applicazione in cui il contenuto deve essere posizionato a una distanza inferiore a 1 m, è necessario prestare particolare attenzione ad assicurare il comfort dell'utente**. La probabilità di disagio a causa del conflitto tra convergenza e accomodazione aumenta in modo esponenziale man mano che si riduce la distanza di visualizzazione. Inoltre, gli utenti possono riscontrare maggiori effetti di sfocatura quando visualizzano il contenuto a distanze di interazione vicine. Consigliamo quindi di testare il contenuto sottoposto a rendering sia entro la zona di posizionamento ottimale dell'ologramma sia più vicino (da meno di 1 m fino al piano di ritaglio) per essere sicuri che rimanga nitido e comodo da visualizzare. 
 
-**Si consiglia di creare un "budget di profondità" per le app in base al periodo di tempo in cui un utente deve visualizzare il contenuto vicino (meno di 1,0 m) e avanzare in profondità**. Un esempio è evitare di inserire l'utente in tali situazioni più del 25% del tempo. Se viene superato il budget di profondità, si consiglia un attento test utente per assicurarsi che rimanga un'esperienza confortevole. 
+**Consigliamo quindi di definire un "budget di profondità" per le app in base al periodo di tempo in cui si prevede che un utente visualizzi contenuto che si trova vicino (a meno di 1 m) e che si muove in profondità**. Un esempio consiste nell'evitare di costringere l'utente a rimanere in situazioni di questo tipo per oltre un quarto del tempo. Se questo budget viene superato, è opportuno eseguire con attenzione una serie di test utente per assicurare un'esperienza confortevole costante. 
 
-In generale, si consiglia anche un attento test per garantire che i requisiti di interazione (ad esempio velocità di spostamento, raggiungibilità e così via) rimangano comodi per gli utenti. 
+In generale, è opportuno eseguire anche un attento test per garantire che i requisiti di interazione (come la velocità di spostamento, la raggiungibilità e così via) a distanze vicine risultino confortevoli per gli utenti. 
 
 
-### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi immersivi
+### <a name="guidance-for-immersive-devices"></a>Indicazioni per i dispositivi di tipo immersive
 
-Per i dispositivi immersivi, vengono comunque applicate le linee guida e le procedure consigliate per HoloLens, ma i valori specifici per la zona di comfort vengono spostati a seconda della distanza focale alla visualizzazione. In generale, le distanze focali per questi schermi sono comprese tra 1.25 m-2,5 m. In caso di dubbi, evitare di eseguire il rendering di oggetti di interesse troppo vicino agli utenti e provare invece a ridurre la maggior parte del contenuto di 1 milione o più lontano.
+Per i dispositivi di tipo immersive sono comunque valide le linee guida e le procedure consigliate per HoloLens, ma i valori specifici per la zona di comfort variano a seconda della distanza focale rispetto al display. In generale, le distanze focali rispetto a questi display sono comprese tra 1,25 e 2,5 m. In caso di dubbio, è opportuno evitare di eseguire il rendering di oggetti di interesse troppo vicino agli utenti e provare invece a mantenere la maggior parte del contenuto ad almeno 1 m.
 
 ## <a name="interpupillary-distance-and-vertical-offset"></a>Distanza interpupillare e offset verticale
 
-Quando si Visualizza il contenuto digitale su schermi montati a capo (HMD), la posizione degli occhi di un visualizzatore rispetto alla posizione di visualizzazione del contenuto digitale è fondamentale. In particolare, sia la distanza interpupillare ([dpi](https://en.wikipedia.org/wiki/Pupillary_distance)) sia l'offset verticale (vo) sono importanti per una visualizzazione confortevole del contenuto digitale in HMDS. 
+Quando viene visualizzato contenuto digitale sui caschi con visore, la posizione degli occhi dell'utente rispetto alla posizione di visualizzazione del contenuto digitale ha un'importanza critica. In particolare, sia la distanza interpupillare ([IPD](https://en.wikipedia.org/wiki/Pupillary_distance)) sia l'offset verticale (VO) sono importanti per una visualizzazione confortevole di contenuto digitale su caschi di questo tipo. 
 
-Il valore di dpi si riferisce alla distanza tra gli occhi degli alunni o i centri degli occhi di un utente. VO si riferisce al potenziale offset verticale del contenuto digitale visualizzato a ogni occhio rispetto all'asse orizzontale degli occhi del Visualizzatore (in particolare, non corrisponde all'offset orizzontale o alla disparità binoculare). La corrispondenza errata di uno o entrambi i fattori per un singolo utente può peggiorare gli effetti del disagio causato da un conflitto di vergence-accommodation, ma può anche causare disagio quando il conflitto V-A è ridotto a icona (ad esempio, per il contenuto visualizzato alla focale di 2,0 m distanza del HoloLens). 
+Il valore di IPD si riferisce alla distanza tra le pupille, ovvero i punti centrali degli occhi di un individuo. Il valore di VO si riferisce invece al possibile offset verticale del contenuto digitale visualizzato da ogni occhio rispetto all'asse orizzontale degli occhi dell'utente (che NON corrisponde all'offset orizzontale, o disparità binoculare). La corrispondenza errata di almeno uno di questi fattori può peggiorare gli effetti del disagio provato dall'utente a causa del conflitto tra convergenza e accomodazione, ma può causare disturbo anche quando questo conflitto è ridotto al minimo (ad esempio, nel caso di contenuto visualizzato alla distanza focale di 2 m di HoloLens). 
 
-### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
+### <a name="guidance-for-holographic-devices"></a>Indicazioni per i dispositivi olografici
 
 #### <a name="hololens-1st-gen"></a>HoloLens (prima generazione)
 
-Per HoloLens (1a generazione), il dpi viene stimato e impostato durante la [calibrazione](calibration.md)del dispositivo. Per i nuovi utenti di un dispositivo già configurato, è necessario eseguire la taratura o impostare manualmente. VO dipende interamente dalla idoneità del dispositivo. In particolare, per ridurre il valore di VO, è necessario che il dispositivo si trovi a capo di un utente in modo che gli schermi siano a livello dell'asse degli occhi. 
+Per HoloLens (prima generazione), il valore di IPD viene stimato e impostato durante la [calibrazione](calibration.md) del dispositivo. Per i nuovi utenti di un dispositivo già configurato, è necessario eseguire la calibrazione o impostare il valore di IPD manualmente. Il valore di VO dipende completamente dal modo in cui viene indossato il dispositivo. In particolare, per ridurre al minimo il valore di VO, il dispositivo deve essere posizionato sulla testa dell'utente in modo tale che i display si trovino allo stesso livello dell'asse degli occhi. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-Per HoloLens 2, il dpi viene stimato e impostato durante la [calibrazione](calibration.md)degli occhi e dei dispositivi. Per i nuovi utenti di un dispositivo già configurato, è necessario eseguire la taratura per assicurarsi che la configurazione DPI sia impostata correttamente. VO viene contabilizzato automaticamente in HoloLens 2. 
+Per HoloLens 2, il valore di IPD viene stimato e impostato durante la [calibrazione](calibration.md) del dispositivo rispetto agli occhi. Per i nuovi utenti di un dispositivo già configurato, è necessario eseguire la calibrazione per assicurarsi che il valore di IPD sia impostato correttamente. In HoloLens 2 il valore di VO viene calcolato automaticamente. 
 
-### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi immersivi
+### <a name="guidance-for-immersive-devices"></a>Indicazioni per i dispositivi di tipo immersive
 
-I HMDs di realtà mista di Windows sono privi di calibrazione automatica per dpi o VO. È possibile impostare il valore DIP manualmente nel software (in impostazioni del portale di realtà mista, vedere [calibrazione](calibration.md)) o alcuni HMDS hanno un dispositivo di scorrimento meccanico che consente all'utente di adattare la spaziatura delle lenti a una posizione comoda, ovvero che approssimativamente corrisponde al relativo valore dpi. 
+I caschi con visore di tipo immersive di Windows Mixed Reality non prevedono la calibrazione automatica per i valori di IPD o VO. Il valore di IPD può essere impostato manualmente nel software (nelle impostazioni del Portale realtà mista, vedi la sezione relativa alla [calibrazione](calibration.md)). In alternativa, alcuni caschi con visore sono dotati di un dispositivo di scorrimento meccanico che consente all'utente di adattare la spaziatura delle lenti a una posizione comoda, che corrisponda approssimativamente alla distanza interpupillare. 
 
 ## <a name="rendering-rates"></a>Velocità di rendering
 
-Le app di realtà miste sono univoche perché gli utenti possono muoversi liberamente nel mondo e interagire con contenuto virtuale come se fossero oggetti reali. Per mantenere questa impressione, è fondamentale eseguire il rendering degli ologrammi in modo che risultino stabili in tutto il mondo e animano senza problemi. Il rendering con un [minimo di 60 fotogrammi al secondo (fps) consente di](understanding-performance-for-mixed-reality.md) raggiungere questo obiettivo. Ci sono alcuni dispositivi di realtà mista che supportano il rendering in framerate superiori a 60 FPS e per questi dispositivi è consigliabile eseguire il rendering con framerate più elevati per offrire un'esperienza utente ottimale.
+Le app di realtà mista sono veramente straordinarie perché gli utenti possono muoversi liberamente nel mondo e interagire con contenuto virtuale come se fossero oggetti reali. Per mantenere questa impressione, è fondamentale eseguire il rendering degli ologrammi in modo che risultino stabili nel mondo e si muovano senza interruzioni di continuità. Il rendering ad [almeno 60 fotogrammi al secondo (FPS)](understanding-performance-for-mixed-reality.md) consente di raggiungere questo obiettivo. Esistono alcuni dispositivi per la realtà mista che supportano il rendering a una frequenza dei fotogrammi superiore a 60 FPS e per questi dispositivi è fortemente consigliabile eseguire il rendering a una frequenza più elevata per offrire agli utenti un'esperienza ottimale.
 
 **Approfondimenti**
 
-Per disegnare gli ologrammi in modo [che siano stabili nel mondo reale o virtuale](hologram-stability.md), le app devono eseguire il rendering delle immagini dalla posizione dell'utente. Poiché il rendering delle immagini richiede tempo, HoloLens e altri dispositivi di realtà mista Windows stimano dove si troverà la testa di un utente quando le immagini vengono visualizzate nella visualizzazione. Questo algoritmo di stima è un'approssimazione. Algoritmi di realtà mista di Windows e hardware consentono di regolare l'immagine di rendering per tenere conto della discrepanza tra la posizione della testa stimata e quella effettiva. Questo processo rende l'immagine visualizzata dall'utente come se fosse stata sottoposta a rendering dalla posizione corretta e gli ologrammi si ritengono stabili. Gli aggiornamenti funzionano meglio per le piccole modifiche nella posizione Head e non possono tenere conto completamente di alcune differenze di immagine sottoposte a rendering, come quelle causate da Motion-parallasse.
+Per disegnare gli ologrammi in modo che appaiano [stabili nel mondo reale o virtuale](hologram-stability.md), le app devono eseguire il rendering delle immagini dalla posizione dell'utente. Poiché il rendering delle immagini richiede tempo, HoloLens e altri dispositivi di Windows Mixed Reality eseguono una stima della posizione in cui si troverà la testa di un utente quando le immagini verranno visualizzate nei display. Questo algoritmo di stima è un'approssimazione. Gli algoritmi e l'hardware di Windows Mixed Reality consentono di regolare l'immagine sottoposta a rendering in modo da tenere conto della discrepanza tra la posizione stimata della testa e quella effettiva. Questo processo ha l'effetto di mostrare l'immagine visualizzata dall'utente come se sottoposta a rendering dalla posizione corretta e gli ologrammi appaiono stabili. Gli aggiornamenti funzionano meglio per le piccole variazioni della posizione della testa e non possono tenere completamente conto di alcune differenze delle immagini sottoposte a rendering, come quelle causate dalla parallasse di movimento.
 
-**Eseguendo il rendering con un framerate minimo di 60 FPS, si eseguono due operazioni per rendere gli ologrammi stabili:**
-1. Riduzione dell'aspetto di judder, caratterizzato da immagini di movimento e doppie non uniformi. Un movimento dell'ologramma più veloce e frequenze di rendering inferiori sono associate a judder più pronunciato. Pertanto, il tentativo di mantenere sempre 60 FPS (o la velocità di rendering massima del dispositivo) consentirà di evitare il tremolio degli ologrammi.
-2. Riduzione della latenza complessiva. In un motore con un thread di gioco e un thread di rendering in esecuzione in contemporanea, l'esecuzione a 30 fps può aggiungere 33,3 ms di latenza aggiuntiva. Riducendo la latenza, questo riduce l'errore di stima e aumenta la stabilità degli ologrammi.
+**Con il rendering a una frequenza dei fotogrammi minima di 60 FPS, due aspetti consentono di rendere stabili gli ologrammi:**
+1. Riduzione dell'effetto di tremolio, caratterizzato da immagini doppie o con movimento non uniforme. Un movimento dell'ologramma più veloce e velocità di rendering inferiori determinano un effetto di tremolio più pronunciato. Pertanto, una frequenza dei fotogrammi di 60 FPS (o la massima velocità di rendering del dispositivo) consentirà di evitare questo effetto di tremolio.
+2. Riduzione della latenza complessiva. In un motore con un thread di gioco e un thread di rendering eseguiti contemporaneamente, l'esecuzione a 30 FPS può causare un aumento della latenza di 33,3 ms. La riduzione della latenza consente di ridurre l'errore di stima e aumentare la stabilità degli ologrammi.
 
 **Analisi delle prestazioni**
 
-Sono disponibili diversi strumenti che è possibile usare per eseguire il benchmark della frequenza dei fotogrammi dell'applicazione, ad esempio:
+Sono disponibili diversi strumenti per sottoporre a benchmark della frequenza dei fotogrammi dell'applicazione, ad esempio:
 * GPUView
 * Debugger grafica di Visual Studio
-* Profiler incorporati in motori 3D come il debugger frame in Unity
+* Profiler integrati nei motori 3D come Frame Debugger in Unity
 
-## <a name="self-motion-and-user-locomotion"></a>Auto-Motion e locomozione utente
+## <a name="self-motion-and-user-locomotion"></a>Movimento autonomo e locomozione dell'utente
 
-L'unica limitazione è la dimensione dello spazio fisico. Se si desidera consentire agli utenti di spostarsi più a fondo nell'ambiente virtuale rispetto a quanto possibile nelle loro sale reali, è necessario implementare una forma di movimento puramente virtuale. Tuttavia, un movimento virtuale sostenuto che non corrisponde al movimento fisico dell'utente può spesso provocare la malattia in movimento. Questo risultato è dovuto ai *segnali visivi* per il movimento autonomo dal *mondo virtuale* in conflitto con i [segnali vestibolari](https://en.wikipedia.org/wiki/Vestibular_system) per le automotion provenienti dal *mondo reale*.
+L'unica limitazione è rappresentata dalle dimensioni dello spazio fisico. Se vuoi consentire agli utenti di spostarsi più lontano nell'ambiente virtuale rispetto a quanto è possibile nella stanza reale, devi implementare una forma di movimento puramente virtuale. Tuttavia, un movimento virtuale sostenuto che non corrisponde al movimento fisico dell'utente può spesso provocare una sensazione di mal d'auto. Questo effetto è dovuto agli *indizi visivi* per il movimento autonomo provenienti dal *mondo virtuale* che sono in conflitto con gli [indizi dell'apparato vestibolare](https://en.wikipedia.org/wiki/Vestibular_system) per il movimento autonomo provenienti dal *mondo reale*.
 
-Fortunatamente, sono disponibili suggerimenti per l'implementazione di locomozione utente che può contribuire a evitare il problema:
-* Inserire sempre l'utente nel controllo dei movimenti; il self-Motion imprevisto è particolarmente problematico
-* Gli uomini sono molto sensibili alla direzione di gravità. Pertanto, è consigliabile evitare movimenti verticali non avviati dall'utente, in particolare.
+Per fortuna, puoi evitare questo problema seguendo alcuni suggerimenti per l'implementazione della locomozione dell'utente:
+* Inserisci sempre l'utente nel controllo dei movimenti: un movimento autonomo imprevisto può risultare particolarmente problematico.
+* Gli uomini sono molto sensibili alla direzione della forza di gravità. Pertanto, evita di usare in particolare movimenti verticali non avviati dall'utente.
 
-### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
+### <a name="guidance-for-holographic-devices"></a>Indicazioni per i dispositivi olografici
 
-Un metodo per consentire all'utente di spostarsi in un'altra posizione in un ambiente virtuale di grandi dimensioni consiste nel dare l'impressione che sposti un piccolo oggetto nella scena. Questo effetto può essere ottenuto come segue:
-   1. Fornire un'interfaccia in cui l'utente può selezionare una posizione nell'ambiente virtuale in cui si desidera spostarsi.
-   2. Al momento della selezione, compattare il rendering della scena su un disco intorno al punto desiderato.
-   3. Mantenendo il punto selezionato, consentire all'utente di spostarlo come se fosse un oggetto di piccole dimensioni. L'utente può quindi spostare la selezione vicino ai piedi.
-   4. Al momento della deselezione, riprendere il rendering dell'intera scena.
+Un metodo per consentire all'utente di spostarsi in un'altra posizione in un ambiente virtuale di grandi dimensioni consiste nel dare l'impressione di stare spostando un piccolo oggetto nella scena. Questo effetto può essere ottenuto nel modo seguente:
+   1. Fornisci un'interfaccia in cui l'utente può selezionare un punto nell'ambiente virtuale in cui vuole spostarsi.
+   2. Al momento della selezione, compatta il rendering della scena su un'area circolare intorno al punto desiderato.
+   3. Mantenendo il punto selezionato, consenti all'utente di spostare l'area circolare come se fosse un oggetto di piccole dimensioni. L'utente potrà quindi spostare la selezione vicino ai piedi.
+   4. Al momento della deselezione, riprendi il rendering dell'intera scena.
 
-### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi immersivi
+### <a name="guidance-for-immersive-devices"></a>Indicazioni per i dispositivi di tipo immersive
 
-L'approccio precedente per i dispositivi olografici non funziona anche in un dispositivo immersivo perché richiede che l'app esegua il rendering di un grande void nero o di un altro ambiente predefinito durante lo stato di trasferimento del disco. Questo trattamento interrompe il senso di un'immersione. Uno stratagemma per la locomozione dell'utente in un headset immersivo è l'approccio "Blink". Questa implementazione consente all'utente di controllare il proprio movimento e offre una breve impressione di spostamento, ma rende così breve che l'utente è meno incline a essere disorientato da un self-Motion puramente virtuale:
-   1. Fornire un'interfaccia in cui l'utente può selezionare una posizione nell'ambiente virtuale in cui si desidera spostarsi.
-   2. Al momento della selezione, iniziare un movimento simulato (100 m/s) molto rapido verso tale posizione, mentre si dissolve rapidamente il rendering.
-   3. Dissolve il rendering dopo aver terminato la traduzione.
+L'approccio precedente indicato per un dispositivo olografico non funziona altrettanto bene in un dispositivo di tipo immersive perché richiede che l'app esegua il rendering di una grande area nera vuota o di un altro ambiente predefinito mentre viene spostata l'area circolare. Questa modalità di rendering ha l'effetto di disturbare il senso di immersione del dispositivo. Una soluzione per la locomozione dell'utente in un visore VR immersive consiste nell'adottare un approccio di tipo "blink". Questa implementazione consente all'utente di controllare il proprio movimento e offre una breve impressione di spostamento, ma così breve che l'utente si sentirà meno disorientato dal movimento autonomo puramente virtuale:
+   1. Fornisci un'interfaccia in cui l'utente può selezionare un punto nell'ambiente virtuale in cui vuole spostarsi.
+   2. Al momento della selezione, inizia un movimento simulato molto rapido (100 m/s) verso tale posizione, mentre si dissolve rapidamente il rendering.
+   3. Inverti la dissolvenza del rendering dopo aver terminato la traslazione.
 
-## <a name="heads-up-displays"></a>Visualizzazione delle intestazioni
+## <a name="heads-up-displays"></a>Visori a sovrimpressione
 
-Nei videogiochi per i primi utenti, le intestazioni di visualizzazione (HUDs) presentano in modo permanente informazioni come l'integrità dei giocatori, le mini-mappe e gli inventari direttamente sullo schermo. HUDs funziona bene per fare in modo che il lettore venga informato senza intrusione sull'esperienza di gioco. Nelle esperienze di realtà miste, HUDs possono causare fastidio significativi e devono essere adattati al contesto più immersivo. In particolare, è probabile che i HUDs bloccati rigidamente all'orientamento Head dell'utente possano produrre disagio. Se un'app richiede un HUD, si consiglia il blocco del *corpo* anziché il blocco Head. Questo trattamento può essere implementato come un set di visualizzazioni che vengono immediatamente convertite con l'utente, ma non vengono ruotate con l'intestazione dell'utente finché non viene raggiunta una soglia di rotazione. Una volta eseguita la rotazione, HUD può riorientarsi per presentare le informazioni nel campo di visualizzazione dell'utente. L'implementazione della rotazione e della traduzione di 1:1 HUD rispetto ai movimenti Head dell'utente deve essere sempre evitata.
+Nei videogiochi in cui si spara in prima persona, i visori a sovrimpressione (HUD, Head-Up Display) presentano costantemente informazioni, come lo stato dei giocatori, piccole mappe e le scorte disponibili, direttamente sullo schermo. Questi visori sono utili per consentire al giocatore di rimanere informato senza alcuna intrusione nell'esperienza di gioco. Nelle esperienze di realtà mista, i visori a sovrimpressione possono causare notevole fastidio e devono essere adattati al contesto più immersivo. In particolare, i visori a sovrimpressione bloccati rigidamente all'orientamento della testa dell'utente possono causare disagio. Se un'app richiede un visore di questo tipo, è preferibile bloccarlo al *corpo* anziché alla testa. Questo approccio può essere implementato come un set di visualizzazioni che si spostano immediatamente con l'utente, ma non vengono ruotate con la sua testa finché non viene raggiunta una soglia di rotazione. Una volta eseguita la rotazione, il visore può essere riorientato in modo da presentare le informazioni nel campo di visione dell'utente. L'implementazione di una rotazione 1:1 per un visore a sovrimpressione rispetto ai movimenti della testa dell'utente deve essere sempre evitata.
 
 ## <a name="text-legibility"></a>Leggibilità del testo
 
-La leggibilità ottimale del testo può aiutare a ridurre gli occhi e a mantenere la comodità degli utenti, soprattutto in applicazioni o scenari che richiedono agli utenti di leggere in un HMD. La leggibilità del testo dipende da diversi fattori, tra cui varie proprietà di visualizzazione (ad esempio, densità dei pixel, luminosità, contrasto), proprietà dell'obiettivo (ad esempio, aberrazione cromatica) e proprietà Text/Font, ad esempio il tipo di carattere specifico caratteristiche come il peso, la spaziatura, i Serif e così via, il colore del tipo di carattere, il colore dello sfondo.  
+La leggibilità ottimale del testo può aiutare a ridurre l'affaticamento oculare e a mantenere una posizione confortevole, soprattutto in applicazioni o scenari che richiedono la lettura di testo usando un casco con visore. La leggibilità del testo dipende da diversi fattori, tra cui varie proprietà di visualizzazione (ad esempio, la densità dei pixel, la luminosità e il contrasto), le proprietà delle lenti (ad esempio, l'aberrazione cromatica) e le proprietà del testo o del tipo di carattere (ad esempio, le caratteristiche specifiche del tipo di carattere, come lo spessore, la spaziatura, la presenza di grazie, il colore del carattere e quello dello sfondo).  
 
-In generale, si consiglia di testare le applicazioni specifiche per la leggibilità e le dimensioni dei tipi di carattere per un'esperienza ottimale. Di seguito vengono fornite indicazioni generali come punto di partenza per lo sviluppo. Si noti che tutte le dimensioni dei tipi di carattere vengono segnalate in gradi di [angolo visivo](https://en.wikipedia.org/wiki/Visual_angle) invece che in dimensioni fisiche specifiche, che forniscono indicazioni per qualsiasi distanza all'interno della zona del posizionamento ottimale degli ologrammi, in quanto consente di tenere conto sia della dimensione del testo sia della distanza viene visualizzato nel visualizzatore. 
+In generale, consigliamo di testare le applicazioni specifiche per determinare la leggibilità del testo e aumentare il più possibile le dimensioni dei caratteri per assicurare un'esperienza confortevole. Di seguito sono riportate alcune indicazioni generali come punto di partenza per lo sviluppo. Tieni presente che tutte le dimensioni dei caratteri sono indicate in gradi di [angolo visivo](https://en.wikipedia.org/wiki/Visual_angle) anziché in specifiche dimensioni fisiche. Questo consente di determinare qualsiasi distanza entro la zona di posizionamento ottimale degli ologrammi perché tiene conto sia delle dimensioni del testo sia della distanza in cui il testo appare all'utente. 
 
-Per indicazioni più dettagliate, vedere [tipografia](typography.md) e [testo in pagine Unity](text-in-unity.md) .
+Per istruzioni più dettagliate, vedi gli articoli [Caratteri tipografici](typography.md) e [Testo in Unity](text-in-unity.md).
 
-### <a name="guidance-for-holographic-devices"></a>Linee guida per i dispositivi olografici
+### <a name="guidance-for-holographic-devices"></a>Indicazioni per i dispositivi olografici
 
-Per i dispositivi olografici, il rendering del testo nero/scuro in uno sfondo bianco/chiaro fornisce il rapporto di contrasto più coerente perché lo sfondo occludere le interferenze dal mondo reale dietro il rendering. Il rendering di testo bianco/chiaro su uno sfondo nero/scuro consente la visualizzazione di più ambienti reali, che potrebbero interferire con la leggibilità del testo. 
+Per i dispositivi olografici, il rendering di testo nero/scuro su uno sfondo bianco/chiaro fornisce il rapporto di contrasto più coerente perché lo sfondo ha l'effetto di occludere l'interferenza del mondo reale dietro il rendering. Il rendering di testo bianco/chiaro su uno sfondo nero/scuro consente una maggiore interferenza del mondo reale, che può influire sulla leggibilità del testo. 
 
 #### <a name="hololens-1st-gen"></a>HoloLens (prima generazione)
 
-Le dimensioni minime del carattere leggibili (misurazione dalla linea di base del tipo di carattere a ascendente) sono pari a circa 0,35 ° e le dimensioni del carattere sono pari almeno circa 0,5 ° per la lettura del contenuto presentato a una distanza di 2m all'utente. 
+La dimensione minima per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) è approssimativamente di 0,35° e il valore più confortevole per questa dimensione è almeno di circa 0,5° per la lettura di contenuto presentato a una distanza di 2 m dall'utente. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-La dimensione minima del carattere leggibile (misurazione dalla linea di base del tipo di carattere a ascendente) è almeno approssimativamente: 
-   - 0.4 °-0,5 ° a 45 cm (distanza di manipolazione diretta) 
-   - 0,35 °-0,4 ° a 2,0 m
+Le dimensioni minime per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) sono approssimativamente le seguenti: 
+   - 0,4°-0,5° a 45 cm (distanza di manipolazione diretta) 
+   - 0,35°-0, 4° a 2 m
    
-La dimensione del carattere perfettamente leggibile (misurazione dalla linea di base del tipo di carattere a ascendente) è almeno approssimativamente: 
-   - 0,65 °-0,8 ° a 45 cm (distanza di manipolazione diretta)
-   - 0.6 °-0,75 ° a 2,0 m
+Le dimensioni confortevoli per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) sono approssimativamente le seguenti: 
+   - 0,65°-0,8° a 45 cm (distanza di manipolazione diretta)
+   - 0,6°-0,75° a 2 m
 
-Si noti che le dimensioni del carattere devono essere leggermente più grandi per il testo a distanza di manipolazione diretta a causa del conflitto vergence-accommodation descritto in precedenza (gli occhi degli utenti sono in grado di ospitare a una distanza di 2,0 m sulla visualizzazione HoloLens, di conseguenza il rendering del contenuto in, ad esempio, 45 cm può sembrare più sfocata agli utenti. 
+Si noti che le dimensioni dei caratteri devono essere leggermente più grandi per il testo a distanza di manipolazione diretta a causa del conflitto tra convergenza e accomodazione descritto in precedenza. Gli occhi degli utenti riescono ad accomodarsi a una distanza di 2 m sul display HoloLens e pertanto il contenuto sottoposto a rendering a una distanza minore, ad esempio 45 cm, può apparire più sfocato agli utenti. 
 
-### <a name="guidance-for-immersive-devices"></a>Linee guida per i dispositivi immersivi
+### <a name="guidance-for-immersive-devices"></a>Indicazioni per i dispositivi di tipo immersive
 
-I dispositivi immersivi in genere presentano rapporti di contrasto più elevati a causa dell'occlusione completa dell'ambiente esterno, ma in parte possono avere una minore densità di pixel effettiva, a causa dell'ingrandimento degli obiettivi davanti alle visualizzazioni. 
+I dispositivi di tipo immersive presentano in genere rapporti di contrasto più elevati a causa dell'occlusione completa dell'ambiente esterno, ma in parte possono avere una minore densità di pixel effettiva, a causa dell'ingrandimento delle lenti di fronte ai display. 
 
-Per HMDs di realtà mista di Windows, le dimensioni minime del carattere leggibile (misurazione dalla linea di base del tipo di carattere a ascendente) sono approssimativamente 0.7-0.9 ° e una dimensione verticale comoda è approssimativamente 1,0 ° per la lettura del contenuto presentato a una distanza di 2m al utente.
+Per i caschi con visore di tipo immersive di Windows Mixed Reality, la dimensione minima per la leggibilità dei caratteri in verticale (dalla linea di base all'estremità dell'asta ascendente) è approssimativamente di 0,7-0,9° e il valore più confortevole per questa dimensione è di circa 1,0° per la lettura di contenuto presentato a una distanza di 2 m dall'utente.
 
 ## <a name="gaze-direction"></a>Direzione dello sguardo
 
-Per evitare che il contenuto di un ceppo di occhio e collo debba essere progettato in modo da evitare movimenti di occhi e collo eccessivi.
-* **Evitare** gli angoli degli sguardi più di 10 gradi sopra l'orizzonte (spostamento verticale)
-* **Evitare** gli angoli degli sguardi più di 60 gradi sotto l'orizzonte (spostamento verticale)
-* **Evitare** le rotazioni del collo più di 45 gradi fuori dal centro (spostamento orizzontale)
+Per evitare l'affaticamento oculare e la tensione a livello cervicale, il contenuto dovrebbe essere progettato in modo da evitare movimenti eccessivi di occhi e collo.
+* **Evita** angolature dello sguardo di oltre 10 gradi al di sopra dell'orizzonte (spostamento verticale)
+* **Evita** angolature dello sguardo di oltre 60 gradi al di sotto dell'orizzonte (spostamento verticale)
+* **Evita** rotazioni del collo di oltre 45 gradi rispetto al centro (spostamento orizzontale)
 
-L'angolo di sguardo ottimale (in appoggio) viene considerato compreso tra 10-20 gradi al di sotto dell'orizzontale, in quanto la testa tende a inclinarsi leggermente verso il basso, soprattutto durante le attività.
+L'angolo dello sguardo considerato ottimale (condizione di riposo) è compreso tra 10 e 20 gradi al di sotto dell'orizzonte, poiché la testa tende a inclinarsi leggermente verso il basso, soprattutto nel corso delle attività.
 
-![campo di visualizzazione consentito (FOV) come determinato dall'intervallo del collo di movimento](images/optimal-field-of-view-2.png)<br>
-*Campo di visualizzazione consentito (FOV) determinato dall'intervallo di movimento del collo*
+![Campo di visualizzazione consentito in base all'intervallo di movimento del collo](images/optimal-field-of-view-2.png)<br>
+*Campo di visualizzazione consentito in base all'intervallo di movimento del collo*
 
-## <a name="arm-positions"></a>Posizioni ARM
+## <a name="arm-positions"></a>Posizioni delle braccia
 
-La fatica muscolare può accumularsi quando si prevede che gli utenti mantengano una mano nel corso della durata dell'esperienza. Può anche essere faticoso richiedere all'utente di effettuare ripetutamente movimenti di tocco aereo nelle durate lunghe. È pertanto consigliabile evitare di richiedere input di movimenti ripetuti e costanti. Questo obiettivo può essere eseguito incorporando brevi interruzioni o offrendo una combinazione di movimento e input vocale per interagire con l'app.
+L'affaticamento muscolare può aumentare quando gli utenti devono tenere una mano alzata per tutta la durata di un'esperienza. Può anche essere faticoso per l'utente dover effettuare ripetutamente movimenti di simulazione del tocco con un dito per periodi prolungati. Consigliamo pertanto di evitare di richiedere movimenti ripetuti e costanti. Questo obiettivo può essere raggiunto incorporando brevi interruzioni oppure offrendo la possibilità di interagire con l'app con una combinazione di gesti e input vocale.
 
 ## <a name="see-also"></a>Vedi anche
 * [Sguardo fisso](gaze-and-commit.md)
