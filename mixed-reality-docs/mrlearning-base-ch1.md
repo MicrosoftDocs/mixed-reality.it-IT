@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: d4e58e2c9236ba35b4394fd80cde3843edaa6f57
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: cae2398582d399f2bad56b354694f7e99ef8681c
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491207"
+ms.locfileid: "74539694"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inizializzazione del progetto e prima applicazione
 
@@ -97,14 +97,14 @@ In questa prima lezione apprenderai alcune delle funzionalità offerte da [Mixed
     ![Lezione 1 - Sezione 5 - Passaggio 4](images/mrlearning-base-ch1-5-step4.JPG)
 
   > [!IMPORTANT]
-  > se la compilazione ha esito negativo, prova a ripeterla o a riavviare Unity e a ripetere la compilazione. Se viene restituito un errore simile al seguente: "Errore CS0246 = Non è possibile trovare il tipo o il nome dello spazio dei nomi "XX" (direttiva using o riferimento ad assembly mancante?)" può essere necessario installare [Windows 10 SDK (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk)
+  > se la compilazione ha esito negativo, prova a ripeterla o a riavviare Unity e a ripetere la compilazione. Se viene restituito un errore simile al seguente: "Errore CS0246 = Non è possibile trovare il tipo o il nome dello spazio dei nomi "XX" (direttiva using o riferimento ad assembly mancante?)" può essere necessario installare [Windows 10 SDK (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk).
 
-5. Al termine della compilazione, apri la nuova cartella creata che contiene i file dell'applicazione appena compilata. Fai doppio clic sulla soluzione *MixedRealityBase.sln* o sul nome corrispondente, se hai usato un nome alternativo per il progetto, per aprire il file della soluzione in Visual Studio.
+5. Al termine della compilazione, apri la nuova cartella creata che contiene i file dell'applicazione appena compilata. Fai doppio clic sulla soluzione *MixedRealityBase.sln*, o sul nome corrispondente se hai usato un nome alternativo per il progetto, per aprire il file della soluzione in Visual Studio.
 
     > [!NOTE]
-    > Assicurati di aprire la cartella appena creata (ad esempio la cartella *App*, se hai seguito le convenzioni di denominazione dei passaggi precedenti) perché un file con estensione sln e un nome analogo sarà presente al di fuori di tale cartella e non devi confonderlo quello che si trova all'interno della cartella di compilazione. La struttura di cartelle dovrebbe avere un aspetto simile al seguente.
+    > Assicurati di aprire la nuova cartella creata (ad esempio la cartella *App*, se hai seguito le convenzioni di denominazione dei passaggi precedenti) perché fuori da tale cartella sarà presente un file con estensione sln e nome analogo, da non confondere con quello che si trova all'interno della cartella di compilazione. La struttura di cartelle dovrebbe avere un aspetto simile al seguente.
     >
-    > se Visual Studio richiede di installare nuovi componenti, dedica qualche minuto per verificare che tutti i componenti prerequisiti siano installati come specificato nella pagina ["Installare gli strumenti"](install-the-tools.md)
+    > Se Visual Studio chiede di installare nuovi componenti, dedica qualche minuto a verificare che tutti i componenti indispensabili siano installati come specificato nella pagina [Installare gli strumenti](install-the-tools.md).
 
     ![Lezione 1 - Sezione 5 - Passaggio 5](images/mrlearning-base-ch1-5-step5.JPG)
 
