@@ -5,17 +5,19 @@ author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Realtà mista di Windows, ologrammi, rendering, grafica 3D, HolographicFrame, ciclo di rendering, ciclo di aggiornamento, procedura dettagliata, codice di esempio
-ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Realtà mista di Windows, ologrammi, rendering, grafica 3D, HolographicFrame, ciclo di rendering, ciclo di aggiornamento, procedura dettagliata, codice di esempio, Direct3D
+ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629040"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940869"
 ---
 # <a name="rendering-in-directx"></a>Rendering in DirectX
 
 La realtà mista di Windows si basa su DirectX per produrre un'esperienza grafica 3D avanzata per gli utenti. L'astrazione del rendering si trova appena sopra DirectX e consente a un motivo dell'app sulla posizione e sull'orientamento di uno o più osservatori di una scena olografica, come previsto dal sistema. Lo sviluppatore può quindi individuare i propri ologrammi in relazione a ogni fotocamera, consentendo all'app di eseguire il rendering di questi ologrammi in vari sistemi di coordinate spaziali quando l'utente si sposta.
+
+Nota: in questa procedura dettagliata viene descritto il rendering olografico in Direct3D 11. Un modello di app per la realtà mista Direct3D 12 Windows viene fornito anche con l'estensione dei modelli di app per realtà mista.
 
 ## <a name="update-for-the-current-frame"></a>Aggiornamento per il frame corrente
 
@@ -306,7 +308,7 @@ context->VSSetConstantBuffers(
 
 È consigliabile verificare che **TryGetViewTransform** abbia avuto esito positivo prima di provare a usare i dati di visualizzazione/proiezione, perché se il sistema di coordinate non è locatable (ad esempio, il rilevamento è stato interrotto) non è possibile eseguire il rendering dell'app per quel frame. Il modello chiama solo il **rendering** sul cubo rotante se la classe **CameraResources** indica un aggiornamento riuscito.
 
-Per proteggere gli ologrammi in cui uno sviluppatore o un utente li inserisce nel mondo, la realtà mista di Windows include funzionalità per la stabilizzazione delle [Immagini](hologram-stability.md). La stabilizzazione delle immagini consente di nascondere la latenza intrinseca in una pipeline di rendering per garantire la migliore esperienza olografica per gli utenti. è possibile specificare un punto di interesse per migliorare ulteriormente la stabilizzazione dell'immagine oppure è possibile fornire un buffer di profondità per calcolare la stabilizzazione delle immagini ottimizzata in tempo reale.
+Per proteggere gli ologrammi in cui uno sviluppatore o un utente li inserisce nel mondo, la realtà mista di Windows include funzionalità per la [stabilizzazione delle immagini](hologram-stability.md). La stabilizzazione delle immagini consente di nascondere la latenza intrinseca in una pipeline di rendering per garantire la migliore esperienza olografica per gli utenti. è possibile specificare un punto di interesse per migliorare ulteriormente la stabilizzazione dell'immagine oppure è possibile fornire un buffer di profondità per calcolare la stabilizzazione delle immagini ottimizzata in tempo reale.
 
 Per ottenere risultati ottimali, l'app deve fornire un buffer di profondità usando l'API <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> . La realtà mista di Windows può quindi usare le informazioni di geometria dal buffer di profondità per ottimizzare la stabilizzazione delle immagini in tempo reale. Per impostazione predefinita, il modello di app Windows olografico consente di eseguire il commit del buffer di profondità dell'app per ottimizzare la stabilità degli ologrammi.
 
@@ -401,7 +403,7 @@ cbuffer ViewProjectionConstantBuffer : register(b1)
 };
 ```
 
-Per ogni pixel è necessario impostare l'indice della matrice di destinazione di rendering. Nel frammento di codice seguente viene eseguito il mapping di output. viewId alla semantica di **SV_RenderTargetArrayIndex** . Si noti che è necessario il supporto per una funzionalità facoltativa Direct3D 11,3, che consente di impostare la semantica dell'indice della matrice di destinazione di rendering da qualsiasi fase dello shader.
+Per ogni pixel è necessario impostare l'indice della matrice di destinazione di rendering. Nel frammento di codice seguente viene eseguito il mapping di output. viewId alla semantica **SV_RenderTargetArrayIndex** . Si noti che è necessario il supporto per una funzionalità facoltativa Direct3D 11,3, che consente di impostare la semantica dell'indice della matrice di destinazione di rendering da qualsiasi fase dello shader.
 
 Da **VPRTVertexShader. HLSL**:
 
@@ -457,7 +459,7 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-Se si desidera utilizzare le tecniche di disegno con istanze esistenti con questo metodo di disegno in una matrice di destinazione di rendering stereo, è sufficiente disegnare il numero di istanze di cui si dispone normalmente. Nello shader dividere **input. IDIstanza** per 2 per ottenere l'ID istanza originale, che può essere indicizzato in (ad esempio) un buffer di dati per oggetto:`int actualIdx = input.instId / 2;`
+Se si desidera utilizzare le tecniche di disegno con istanze esistenti con questo metodo di disegno in una matrice di destinazione di rendering stereo, è sufficiente disegnare il numero di istanze di cui si dispone normalmente. Nello shader dividere **input. IDIstanza** per 2 per ottenere l'ID istanza originale, che può essere indicizzato in (ad esempio) un buffer di dati per oggetto: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>Nota importante sul rendering del contenuto stereo in HoloLens
 
@@ -553,7 +555,7 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**HLSL NOTA**: In questo caso, è necessario caricare anche un vertex shader leggermente modificato che passa l'indice della matrice di destinazione di rendering a geometry shader usando una semantica shader sempre consentita, ad esempio TEXCOORD0. Il geometry shader non deve eseguire alcuna operazione; il modello geometry shader passa tutti i dati, ad eccezione dell'indice della matrice di destinazione di rendering, usato per impostare la semantica SV_RenderTargetArrayIndex.
+**HLSL nota**: in questo caso, è necessario caricare anche un vertex shader leggermente modificato che passa l'indice della matrice di destinazione di rendering a geometry shader usando una semantica shader sempre consentita, ad esempio TEXCOORD0. Il geometry shader non deve eseguire alcuna operazione; il modello geometry shader passa attraverso tutti i dati, fatta eccezione per l'indice della matrice di destinazione di rendering, che viene usato per impostare la semantica del SV_RenderTargetArrayIndex.
 
 Codice modello app per **GeometryShader. HLSL**:
 
@@ -706,7 +708,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 L'uso di Media Foundation nei sistemi ibridi può causare problemi se il rendering dei video non è danneggiato o la trama video è danneggiata. Questa situazione può verificarsi perché Media Foundation viene impostato come valore predefinito su un comportamento del sistema come indicato in precedenza. In alcuni scenari, la creazione di un ID3D11Device separato è necessaria per supportare il multithreading e vengono impostati i flag di creazione corretti.
 
-Quando si inizializza ID3D11Device, il flag D3D11_CREATE_DEVICE_VIDEO_SUPPORT deve essere definito come parte di D3D11_CREATE_DEVICE_FLAG. Una volta creato il dispositivo e il contesto, chiamare <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> per abilitare il multithreading. Per associare il dispositivo a <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, usare la funzione <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
+Durante l'inizializzazione di ID3D11Device, D3D11_CREATE_DEVICE_VIDEO_SUPPORT flag deve essere definito come parte del D3D11_CREATE_DEVICE_FLAG. Una volta creato il dispositivo e il contesto, chiamare <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> per abilitare il multithreading. Per associare il dispositivo a <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, usare la funzione <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
 
 Codice per **associare un ID3D11Device a IMFDXGIDeviceManager**:
 
@@ -741,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Sistemi di coordinate in DirectX](coordinate-systems-in-directx.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)
