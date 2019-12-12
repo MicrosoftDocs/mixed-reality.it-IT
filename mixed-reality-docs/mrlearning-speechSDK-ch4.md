@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 9235452d9dce38e9d849821a694a5d4c710d8e87
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913284"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003210"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. configurazione della finalità e della comprensione del linguaggio naturale
 
@@ -25,7 +25,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Consenti alla macchina virtuale di abilitare la dettatura. a tale scopo, passare a impostazioni di Windows, selezionare "privacy", "vocale", infine "Inking & digitando" e attivare servizi vocali e digitare suggerimenti.
+1. Consentire al computer di abilitare la dettatura. A tale scopo, passare a impostazioni di Windows, selezionare "privacy", quindi "voce", seguito da "Inking & digitando" e attivare servizi vocali e digitando suggerimenti.
 
     ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
 
@@ -33,7 +33,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. Accedere al portale di [Azure](https://portal.azure.com/). Una volta effettuato l'accesso, fare clic su Crea una risorsa e cercare "Language Understanding" e premere INVIO.
+2. Accedere al [portale di Azure](https://portal.azure.com/). Una volta effettuato l'accesso, fare clic su Crea una risorsa, cercare "Language Understanding" e premere INVIO.
 
     ![mrlearning-Speech-CH4-1-Step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -45,12 +45,12 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![mrlearning-Speech-CH4-1-step3b. png](images/mrlearning-speech-ch4-1-step3b.png)
 
-4. Selezionare la **posizione di creazione** e il **percorso di runtime**ai fini di questa esercitazione, usare gli stati *Uniti occidentali*. Scegliere quindi *F0 (5 chiamate al secondo, 10.000 chiamate al mese)* per il piano **tariffario di creazione** e il piano **tariffario di runtime**. Infine, fare clic sul pulsante **Create (crea** ) per creare la risorsa e il nuovo gruppo di risorse.
+4. Selezionare la **posizione di creazione** e il **percorso di runtime**. Ai fini di questa esercitazione, usare *(US) Stati Uniti occidentali*, quindi scegliere *F0 (5 chiamate al secondo, 10.000 chiamate al mese)* per il piano **tariffario** per la creazione e il piano **tariffario di runtime**. Infine, fare clic sul pulsante **Create (crea** ) per creare la risorsa e il nuovo gruppo di risorse.
 
     ![mrlearning-Speech-CH4-1-step4. png](images/mrlearning-speech-ch4-1-step4.png)
 
     >[!NOTE]
-    >Dopo aver fatto clic sul pulsante Crea, è necessario attendere che il servizio venga creato. l'operazione potrebbe richiedere alcuni minuti.
+    >Dopo aver fatto clic sul pulsante Crea, è necessario attendere la creazione del servizio. l'operazione potrebbe richiedere alcuni minuti.
 
 5. Al termine del processo di creazione delle risorse, verrà visualizzato il messaggio la **distribuzione è stata completata**.
 
@@ -59,7 +59,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 6. Utilizzando lo stesso account utente, accedere al portale di [Language Understanding Intelligent Service (Luis)](https://www.luis.ai/) , selezionare il paese e accettare le condizioni per l'utilizzo.
 
     >[!NOTE]
-    >Quando si raggiunge il portale di Language Understanding, potrebbe essere necessario eseguire l'accesso, se non lo si è già fatto, con le stesse credenziali del portale di Azure. Se è la prima volta che si usa LUIS, sarà necessario scorrere fino alla fine della pagina iniziale per trovare e fare clic sul pulsante "Crea LUIS" dell'app.
+    >Quando si raggiunge il portale di Language Understanding, potrebbe essere necessario eseguire l'accesso, se non è già stato fatto, con le stesse credenziali del portale di Azure. Se è la prima volta che si usa LUIS, sarà necessario scorrere verso il basso fino alla fine della pagina iniziale per trovare e fare clic sul pulsante "Crea LUIS" dell'app.
 
 7. Una volta effettuato l'accesso, fare clic su App personali (se non si è attualmente in questa sezione). È quindi possibile fare clic su Crea nuova app. Assegnare alla nuova app il nome "modulo learning per l'SDK vocale". Aggiungere anche "modulo di apprendimento per l'SDK vocale" al campo Description. Quindi fare clic su "fine".
 
@@ -82,11 +82,11 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
     >[!NOTE]
     >A questo punto dovrebbero essere presenti 2 Intent, ovvero "PressButton" e "None".
 
-10. In asset dell'app a sinistra selezionare "entità" e fare clic su "Crea nuova entità" e denominarla "azione" e impostare il tipo di entità su "semplice".
+10. In asset app a sinistra selezionare "entità", fare clic su "Crea nuova entità", denominarla "azione" e impostare il tipo di entità su "semplice".
 
     ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
 
-11. Fare di nuovo clic su "Crea nuova entità" e denominarla "destinazione" e mantenerne il tipo "semplice".
+11. Fare di nuovo clic su "Crea nuova entità" e denominarlo "destinazione". Mantieni anche il tipo di entità "Simple".
 
     ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
 
@@ -94,7 +94,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![Module4Chapter4step13im](images/module4chapter4step13im.PNG)
 
-13. Fare clic sull'elenco a discesa "Visualizza opzioni" a destra e selezionare "Mostra valori entità".
+13. Fare clic sull'elenco a discesa "opzioni di visualizzazione" a destra e selezionare "Mostra valori entità".
 
     ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
 
@@ -102,7 +102,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![Module4Chapter4step14bim](images/module4chapter4step14bim.PNG)
 
-14. Fare clic sull'elenco a discesa "Visualizza opzioni" a destra e selezionare "Mostra nomi entità".
+14. Fare clic sull'elenco a discesa "opzioni di visualizzazione" a destra e selezionare "Mostra nomi entità".
 
     ![Module4Chapter4step15im](images/module4chapter4step15im.PNG)
 
@@ -121,11 +121,11 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
     >
     > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
 
-18. A questo punto, fare clic su "Publish" (pubblica) in alto a destra. Verificare che l'elenco a discesa indichi "produzione" e fare clic su "pubblica" anche nel popup.
+18. Fare clic su "pubblica" in alto a destra. Assicurarsi che l'elenco a discesa indichi "produzione" e fare clic su "pubblica" anche nella finestra popup.
 
     ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
 
-19. Una volta pubblicato, viene visualizzata una barra verde nella parte superiore della pagina.  Fare clic sulla barra verde per andare alla pagina "Gestisci".
+19. Una volta pubblicato, viene visualizzata una barra verde nella parte superiore della pagina. Fare clic sulla barra verde per visualizzare la pagina "Gestisci".
 
     ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
 
@@ -138,7 +138,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
     ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
 
     >[!NOTE]
-    >Assicurarsi di copiare e salvare l'URL dell'endpoint associato alla risorsa appena assegnata in modo che sia facilmente accessibile per la sezione successiva.
+    >Assicurarsi di copiare e salvare l'URL dell'endpoint associato alla risorsa appena assegnata, in modo che sia facilmente accessibile per la sezione successiva.
 
     >[!NOTE]
     >Per il nome del tenant, inserire la società o il profilo creato per questa applicazione.
@@ -163,4 +163,4 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
 ## <a name="congratulations"></a>Lezione completata
 
-In questa lezione si è appreso come aggiungere comandi di riconoscimento vocale basati su intelligenza artificiale. A questo punto il programma è in grado di riconoscere le finalità degli utenti anche se non hanno un comando vocale preciso.
+In questa lezione si è appreso come aggiungere comandi vocali basati su intelligenza artificiale. A questo punto il programma è in grado di riconoscere le finalità degli utenti, anche se non comunicano comandi vocali precisi.

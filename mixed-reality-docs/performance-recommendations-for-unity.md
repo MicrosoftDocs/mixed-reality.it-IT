@@ -6,18 +6,18 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: grafica, CPU, GPU, rendering, Garbage Collection, hololens
-ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 6507667904cfa26dfad1ccf1402cc75f14386609
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926865"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003200"
 ---
 # <a name="performance-recommendations-for-unity"></a>Suggerimenti sulle prestazioni per Unity
 
 Questo articolo si basa sulla discussione descritta in [raccomandazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md) , ma è incentrata sulle informazioni specifiche dell'ambiente del motore Unity.
 
-È inoltre consigliabile che gli sviluppatori rivedano le [impostazioni di ambiente consigliate per l'articolo di Unity](Recommended-settings-for-unity.md). Questo articolo presenta contenuti con alcune delle configurazioni di scena più importanti in relazione alla creazione di app per realtà mista a prestazioni elevate. Alcune di queste impostazioni consigliate sono evidenziate anche di seguito.
+È inoltre consigliabile che gli sviluppatori rivedano le [impostazioni di ambiente consigliate per l'articolo di Unity](Recommended-settings-for-unity.md). Questo articolo contiene contenuti con alcune delle configurazioni di scena più importanti per la creazione di app per la realtà mista ad alte prestazioni. Alcune di queste impostazioni consigliate sono evidenziate di seguito.
 
 ## <a name="how-to-profile-with-unity"></a>Come eseguire la profilatura con Unity
 
@@ -38,7 +38,7 @@ Il contenuto riportato di seguito include procedure di prestazioni più approfon
 
 #### <a name="cache-references"></a>Riferimenti alla cache
 
-È consigliabile memorizzare nella cache i riferimenti a tutti i componenti rilevanti e GameObject in fase di inizializzazione. Ciò è dovuto al fatto che le chiamate di funzione ripetute come *[getComponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* sono molto più dispendiose rispetto al costo di memoria per l'archiviazione di un puntatore. Questo vale anche per la [fotocamera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html)utilizzata regolarmente. La *fotocamera. Main* in realtà usa solo *[FindGameObjectsWithTag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* sotto il quale cerca in modo oneroso il grafico della scena per un oggetto della fotocamera con il tag *"MainCamera"* .
+È consigliabile memorizzare nella cache i riferimenti a tutti i componenti rilevanti e GameObject in fase di inizializzazione. Ciò è dovuto al fatto che le chiamate di funzione ripetute come *[getComponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* sono molto più dispendiose rispetto al costo di memoria per l'archiviazione di un puntatore. Questo vale anche per la [fotocamera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html)usata molto spesso. La *fotocamera. Main* in realtà usa solo *[FindGameObjectsWithTag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* sottostante, che cerca in modo oneroso il grafico della scena per un oggetto della fotocamera con il tag *"MainCamera"* .
 
 ```CS
 using UnityEngine;
@@ -117,7 +117,7 @@ public class ExampleClass : MonoBehaviour
 
     La C# [conversione boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) è un concetto di base del linguaggio e del runtime. Si tratta del processo di wrapping di variabili tipizzate a valore quali Char, int, bool e così via in variabili tipizzate a cui si fa riferimento. Quando una variabile tipizzata come valore è "boxed", viene sottoposta a incapsulamento all'interno di un oggetto System. Object archiviato nell'heap gestito. In questo modo, la memoria viene allocata e alla fine, quando eliminata, deve essere elaborata dal Garbage Collector. Queste allocazioni e deallocazioni comportano un costo in termini di prestazioni e in molti scenari non sono necessari o possono essere facilmente sostituiti da un'alternativa meno costosa.
 
-    Una delle forme più comuni di conversione boxing nello sviluppo è l'uso di [tipi di valore Nullable](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/). È normale che si voglia essere in grado di restituire null per un tipo di valore in una funzione, specialmente quando l'operazione potrebbe non riuscire a ottenere il valore. Il potenziale problema con questo approccio è che l'allocazione è ora presente nell'heap e, di conseguenza, deve essere sottoposta a Garbage Collection in seguito.
+    Una delle forme più comuni di conversione boxing nello sviluppo è l'uso di [tipi di valore Nullable](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/). È comune voler restituire null per un tipo di valore in una funzione, soprattutto quando l'operazione potrebbe non riuscire a ottenere il valore. Il potenziale problema con questo approccio è che l'allocazione viene ora eseguita nell'heap e di conseguenza deve essere sottoposta a Garbage Collection in un secondo momento.
 
     **Esempio di conversione boxing inC#**
 
@@ -129,7 +129,7 @@ public class ExampleClass : MonoBehaviour
 
     **Esempio di conversione boxing problematica tramite tipi di valore Nullable**
 
-    Questo codice illustra una classe particella fittizia che è possibile creare in un progetto Unity. Una chiamata a `TryGetSpeed()` provocherà l'allocazione di oggetti nell'heap che dovrà essere sottoposta a Garbage Collection in un secondo momento. Questo esempio è particolarmente problematico perché in una scena possono essere presenti oltre 1000 particelle, ciascuna delle quali viene richiesta la velocità corrente. In questo modo, vengono allocati 1.000 oggetti e, di conseguenza, deallocati tutti i frame che diminuiscono notevolmente le prestazioni. La riscrittura della funzione per la restituzione di un valore negativo, ad esempio-1, per indicare un errore evita questo problema e mantiene la memoria nello stack.
+    Questo codice illustra una classe particella fittizia che è possibile creare in un progetto Unity. Una chiamata a `TryGetSpeed()` provocherà l'allocazione di oggetti nell'heap che dovrà essere sottoposta a Garbage Collection in un secondo momento. Questo esempio è particolarmente problematico perché in una scena possono essere presenti oltre 1000 particelle, ciascuna delle quali viene richiesta la velocità corrente. In questo modo, vengono allocati 1.000 oggetti e, di conseguenza, deallocati tutti i frame, riducendo così le prestazioni. La riscrittura della funzione per la restituzione di un valore negativo, ad esempio-1, per indicare un errore evita questo problema e mantiene la memoria nello stack.
 
     ```csharp
         public class MyParticle
@@ -148,7 +148,7 @@ Tutte le funzioni di callback Unity ripetute (ad esempio Update) che vengono ese
 
 1) **Funzioni di callback vuote**
 
-    Sebbene il codice seguente possa sembrare innocente da lasciare nell'applicazione, soprattutto perché ogni script Unity Inizializza automaticamente con questo blocco di codice, queste richiamate vuote possono effettivamente diventare molto costose. Unity opera avanti e indietro su un limite di codice gestito/non gestito, tra il codice UnityEngine e il codice dell'applicazione. Il cambio di contesto di questo Bridge è piuttosto costoso anche se non è necessario eseguire alcuna operazione. Questa operazione diventa particolarmente problematica se l'app dispone di 100 GameObject con componenti con callback di Unity ripetuti vuoti.
+    Sebbene il codice seguente possa sembrare innocente da lasciare nell'applicazione, soprattutto perché ogni script Unity Inizializza automaticamente con questo blocco di codice, queste richiamate vuote possono effettivamente diventare molto costose. Unity opera avanti e indietro su un limite di codice gestito/non gestito, tra il codice UnityEngine e il codice dell'applicazione. Il cambio di contesto di questo Bridge è piuttosto costoso, anche se non è necessario eseguire alcuna operazione. Questa operazione diventa particolarmente problematica se l'app dispone di 100 GameObject con componenti con callback di Unity ripetuti vuoti.
 
     ```CS
     void Update()
@@ -157,7 +157,7 @@ Tutte le funzioni di callback Unity ripetute (ad esempio Update) che vengono ese
     ```
 
 >[!NOTE]
-> Update () è la manifestazione più comune di questo problema di prestazioni, ma gli altri callback di Unity ripetuti come quelli riportati di seguito possono essere ugualmente non validi se non peggiori: FixedUpdate (), LateUpdate (), OnPostRender ", OnPreRender (), OnRenderImage () e così via. 
+> Update () è la manifestazione più comune di questo problema di prestazioni, ma altri callback di Unity ripetuti, ad esempio quelli riportati di seguito, possono essere ugualmente cattivi, se non peggiori: FixedUpdate (), LateUpdate (), OnPostRender ", OnPreRender (), OnRenderImage () e così via. 
 
 2) **Operazioni che favoriscono l'esecuzione una volta per ogni fotogramma**
 
@@ -184,15 +184,15 @@ Tutte le funzioni di callback Unity ripetute (ad esempio Update) che vengono ese
 
 4) **Evitare il passaggio di struct in base al valore**
 
-    Diversamente dalle classi, gli struct sono tipi di valore e, quando vengono passati direttamente a una funzione, il relativo contenuto viene copiato in un'istanza appena creata. Questa copia aggiunge costi CPU e memoria aggiuntiva nello stack. Per gli struct di piccole dimensioni, l'effetto è generalmente minimo e quindi accettabile. Tuttavia, per le funzioni richiamate ripetutamente ogni frame e funzioni che accettano struct di grandi dimensioni, se possibile, modificare la definizione della funzione in modo che venga passata per riferimento. [Altre informazioni sono disponibili qui](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
+    Diversamente dalle classi, gli struct sono tipi di valore e, quando vengono passati direttamente a una funzione, il relativo contenuto viene copiato in un'istanza appena creata. Questa copia aggiunge un costo della CPU, oltre a memoria aggiuntiva nello stack. Per gli struct di piccole dimensioni, l'effetto è generalmente minimo e quindi accettabile. Tuttavia, per le funzioni richiamate ripetutamente ogni frame e funzioni che accettano struct di grandi dimensioni, se possibile, modificare la definizione della funzione in modo che venga passata per riferimento. Fare clic [qui](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method) per altre informazioni
 
 #### <a name="miscellaneous"></a>Varie
 
 1) **Fisica**
 
-    a) generalmente, il modo più semplice per migliorare la fisica consiste nel limitare la quantità di tempo impiegato per la fisica o il numero di iterazioni al secondo. Naturalmente, questa operazione ridurrà la precisione della simulazione. Vedere [TimeManager](https://docs.unity3d.com/Manual/class-TimeManager.html) in Unity
+    a) in genere, il modo più semplice per migliorare la fisica consiste nel limitare la quantità di tempo impiegato per la fisica o il numero di iterazioni al secondo. Naturalmente, questa operazione ridurrà la precisione della simulazione. Vedere [TimeManager](https://docs.unity3d.com/Manual/class-TimeManager.html) in Unity
 
-    b) il tipo di Collider in Unity presenta caratteristiche di prestazioni notevolmente diverse. Nell'ordine seguente sono elencati i Collider più performanti per i Collider meno performanti da sinistra verso destra. È più importante evitare i conflitti di rete che sono sostanzialmente più costosi rispetto ai Collider primitivi.
+    b) il tipo di Collider in Unity presenta caratteristiche di prestazioni notevolmente diverse. Nell'ordine seguente sono elencati i Collider più performanti per i Collider meno performanti da sinistra verso destra. È più importante evitare i Collider di rete, che sono sostanzialmente più costosi rispetto ai Collider primitivi.
 
         Sphere < Capsule < Box <<< Mesh (Convex) < Mesh (non-Convex)
 
@@ -238,15 +238,15 @@ Per ulteriori informazioni, vedere batch *statici* in [batch di chiamate di chia
 
 #### <a name="dynamic-batching"></a>Suddivisione in batch dinamica
 
-Poiché è problematico contrassegnare gli oggetti come *statici* per lo sviluppo di HoloLens, l'invio in batch dinamici può essere un ottimo strumento per compensare questa funzionalità mancante. Naturalmente, può essere utile anche per gli auricolari immersivi. La suddivisione in batch dinamica in Unity può tuttavia essere difficile da abilitare perché GameObject deve **condividere lo stesso materiale** e **b) soddisfare un lungo elenco di altri criteri**.
+Poiché è problematico contrassegnare gli oggetti come *statici* per lo sviluppo di HoloLens, l'invio in batch dinamici può essere un ottimo strumento per compensare questa funzionalità mancante. Naturalmente, può essere utile anche per gli auricolari immersivi. Tuttavia, la suddivisione in batch dinamica in Unity può essere difficile da abilitare perché GameObject deve **condividere lo stesso materiale** e **b) soddisfare un lungo elenco di altri criteri**.
 
-Per l'elenco completo, leggere *batch dinamici* in [batch di chiamate di chiamata](https://docs.unity3d.com/Manual/DrawCallBatching.html) . In genere, GameObject non è più valido per l'invio in batch in modo dinamico perché i dati di mesh associati non possono essere più di 300 vertici.
+Per l'elenco completo, leggere *batch dinamici* in [batch di chiamate di chiamata](https://docs.unity3d.com/Manual/DrawCallBatching.html) . In genere, GameObject non è più valido per l'invio in batch in modo dinamico, perché i dati di mesh associati non possono essere più di 300 vertici.
 
 #### <a name="other-techniques"></a>Altre tecniche
 
-L'invio in batch può verificarsi solo se più GameObject sono in grado di condividere lo stesso materiale. Questa operazione viene in genere bloccata dalla necessità che GameObject disponga di una trama univoca per il rispettivo materiale. È comune combinare le trame in un'unica trama, un metodo noto come [Atlante delle trame](https://en.wikipedia.org/wiki/Texture_atlas).
+L'invio in batch può verificarsi solo se più GameObject sono in grado di condividere lo stesso materiale. In genere, questa operazione verrà bloccata dalla necessità che GameObject disponga di una trama univoca per il rispettivo materiale. È comune combinare le trame in un'unica trama, un metodo noto come [Atlante delle trame](https://en.wikipedia.org/wiki/Texture_atlas).
 
-Inoltre, in genere è preferibile combinare le mesh in una GameObject, ove possibile e ragionevole. A ogni renderer in Unity sarà associata una o più chiamate di disegni e l'invio di una mesh combinata sotto un renderer.
+Inoltre, in genere è preferibile combinare le mesh in una GameObject, ove possibile e ragionevole. Ogni renderer in Unity avrà le chiamate di disegni associate rispetto all'invio di una mesh combinata sotto un renderer.
 
 >[!NOTE]
 > Se si modificano le proprietà di renderer. Material in fase di esecuzione, viene creata una copia del materiale e, di conseguenza, si interrompe il batch. Utilizzare renderer. sharedMaterial per modificare le proprietà del materiale condiviso tra GameObject.
@@ -265,7 +265,7 @@ La fedeltà ridotta della gamma di profondità rende più probabile che si verif
 
 **Buffer stencil disabilitato**
 
-Quando Unity crea una [trama di rendering con profondità a 16 bit](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html), non è stato creato alcun buffer dello stencil. Selezionando il formato di profondità a 24 bit, la documentazione per Unity, creerà un buffer z a 24 bit, oltre a un [buffer di stencil a 8 bit](https://docs.unity3d.com/Manual/SL-Stencil.html) (se 32 bit è applicabile nel dispositivo, che in genere è il caso, ad esempio HoloLens).
+Quando Unity crea una [trama di rendering con profondità a 16 bit](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html), non è stato creato alcun buffer dello stencil. Selezionando il formato di profondità a 24 bit, la documentazione per Unity, creerà un buffer z a 24 bit, oltre a un [buffer di stencil a 8 bit] (https://docs.unity3d.com/Manual/SL-Stencil.html) (se 32 bit è applicabile in un dispositivo, che in genere è il caso, ad esempio HoloLens).
 
 ### <a name="avoid-full-screen-effects"></a>Evitare effetti a schermo intero
 
@@ -275,7 +275,7 @@ Le tecniche che operano sull'intero schermo possono essere piuttosto onerose per
 
 L' [illuminazione globale in tempo reale](https://docs.unity3d.com/Manual/GIIntro.html) in Unity può fornire risultati visivi in attesa, ma comporta calcoli di illuminazione piuttosto costosi. È consigliabile disabilitare l'illuminazione globale in tempo reale per ogni file di scena Unity tramite **finestra** > **rendering** > **impostazioni di illuminazione** > deselezionare l' **illuminazione globale in tempo reale**.
 
-Si consiglia inoltre di disabilitare tutti i cast di Shadow, perché aggiungono anche costosi passaggi GPU a una scena Unity. Le ombreggiature possono essere disabilitate per luce ma possono anche essere controllate in maniera olistica tramite le impostazioni di qualità.
+Inoltre, è consigliabile disabilitare tutti i cast di Shadow perché aggiungono anche costosi passaggi della GPU in una scena Unity. Le ombreggiature possono essere disabilitate per luce ma possono anche essere controllate in maniera olistica tramite le impostazioni di qualità.
 
 **Modificare** > **Impostazioni progetto**, quindi selezionare la categoria **qualità** > selezionare la **qualità bassa** per la piattaforma UWP. È anche possibile impostare la proprietà **Shadows** solo per **disabilitare le ombreggiature**.
 
@@ -290,7 +290,7 @@ Il numero di poligoni viene in genere ridotto da uno
 
 Una semplice approssimazione per confrontare gli shader nelle prestazioni consiste nell'identificare il numero medio di operazioni eseguite in fase di esecuzione. Questa operazione può essere eseguita facilmente in Unity.
 
-1) Selezionare l'asset shader o selezionare un materiale, quindi nell'angolo superiore destro della finestra di controllo, selezionare l'icona a forma di ingranaggio e quindi **"Seleziona shader"** .
+1) Selezionare l'asset shader o selezionare un materiale, quindi nell'angolo superiore destro della finestra di controllo selezionare l'icona dell'ingranaggio seguito da **"Select shader"** .
 
     ![Seleziona shader in Unity](images/Select-shader-unity.png)
 2) Con l'asset shader selezionato, fare clic sul pulsante **"Compila e Mostra codice"** nella finestra di controllo
@@ -303,7 +303,7 @@ Una semplice approssimazione per confrontare gli shader nelle prestazioni consis
 
 #### <a name="optimize-pixel-shaders"></a>Ottimizza pixel shader
 
-Esaminando i risultati statistici compilati utilizzando il metodo precedente, il [frammento shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) eseguirà in genere più operazioni rispetto al [vertex shader](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) in media. Il frammento shader, noto anche come pixel shader, viene eseguito per ogni pixel nell'output dello schermo, mentre il vertex shader viene eseguito solo per ogni vertice di tutte le mesh disegnate sullo schermo. 
+Esaminando i risultati statistici compilati utilizzando il metodo precedente, il [frammento shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) eseguirà in genere più operazioni rispetto al [vertex shader](https://en.wikipedia.org/wiki/Shader#Vertex_shaders), in media. Il frammento shader, noto anche come pixel shader, viene eseguito per ogni pixel nell'output dello schermo, mentre il vertex shader viene eseguito solo per ogni vertice di tutte le mesh disegnate sullo schermo. 
 
 Pertanto, non solo gli shader di frammento hanno più istruzioni rispetto ai vertex shader a causa di tutti i calcoli di illuminazione, i frammenti shader vengono quasi sempre eseguiti su un set di dati più grande. Se, ad esempio, l'output della schermata è un'immagine 2K per 2K, il frammento shader può essere eseguito 2000 * 2000 = 4 milioni volte. Se si esegue il rendering di due occhi, questo numero raddoppia perché sono presenti due schermate. Se un'applicazione di realtà mista ha più sessioni, effetti di post-elaborazione a schermo intero o il rendering di più mesh sullo stesso pixel, questo numero aumenterà in modo significativo. 
 
@@ -321,17 +321,17 @@ Usare il *precaricamento dello shader* e altri trucchi per ottimizzare il [tempo
 
 ### <a name="limit-overdraw"></a>Limite di sovralievo
 
-In Unity, è possibile visualizzare il sovraprogetto per la scena, impostando il [**menu modalità**](https://docs.unity3d.com/Manual/ViewModes.html) di visualizzazione nell'angolo superiore sinistro della **visualizzazione scena** e selezionando **sovradisegnato**.
+In Unity, è possibile visualizzare il sovraprogetto per la propria scena, impostando il [**menu modalità**](https://docs.unity3d.com/Manual/ViewModes.html) di visualizzazione nell'angolo superiore sinistro della **visualizzazione scena** e selezionando **sovradisegnato**.
 
-In genere, il sovraprogetto può essere mitigato eliminando gli oggetti in anticipo prima che vengano inviati alla GPU. Unity fornisce informazioni dettagliate sull'implementazione dell' [abbattimento di occlusione](https://docs.unity3d.com/Manual/OcclusionCulling.html) per il motore.
+In genere, il sovraprogetto può essere mitigato eliminando gli oggetti in anticipo prima che vengano inviati alla GPU. Unity fornisce informazioni dettagliate sull'implementazione dell'[abbattimento di occlusione](https://docs.unity3d.com/Manual/OcclusionCulling.html) per il motore.
 
 ## <a name="memory-recommendations"></a>Consigli sulla memoria
 
-Un'allocazione eccessiva della memoria & operazioni di deallocazione possono avere effetti negativi sull'applicazione olografica, con prestazioni incoerenti, frame bloccati e altro comportamento dannoso. È particolarmente importante comprendere le considerazioni sulla memoria durante lo sviluppo in Unity, perché la gestione della memoria è controllata dal Garbage Collector.
+Un'allocazione eccessiva della memoria & operazioni di deallocazione possono avere effetti negativi sull'applicazione olografica, ottenendo prestazioni incoerenti, frame bloccati e altro comportamento dannoso. È particolarmente importante comprendere le considerazioni sulla memoria durante lo sviluppo in Unity, perché la gestione della memoria è controllata dal Garbage Collector.
 
 #### <a name="garbage-collection"></a>Garbage Collection
 
-Le app olografiche elimineranno l'elaborazione del tempo di calcolo nel Garbage Collector (GC) quando il GC viene attivato per analizzare gli oggetti che non sono più nell'ambito durante l'esecuzione e la memoria deve essere rilasciata in modo da poter essere resi disponibili per il riutilizzo. Le allocazioni e le deallocazioni costanti richiedono in genere che l'Garbage Collector venga eseguita con maggiore frequenza, in modo da compromettere le prestazioni e l'esperienza utente.
+Le app olografiche perderanno il tempo di calcolo per il Garbage Collector (GC) quando il GC viene attivato per analizzare gli oggetti che non sono più nell'ambito durante l'esecuzione e la memoria deve essere rilasciata, quindi può essere reso disponibile per il riutilizzo. Le allocazioni e le deallocazioni costanti richiedono in genere che l'Garbage Collector venga eseguita più di frequente, in modo da compromettere le prestazioni e l'esperienza utente.
 
 Unity ha fornito una pagina eccellente che illustra in dettaglio il funzionamento del Garbage Collector e suggerimenti per scrivere codice più efficiente per quanto riguarda la gestione della memoria.
 - [Ottimizzazione Garbage Collection nei Giochi Unity](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
@@ -340,7 +340,7 @@ Una delle procedure più comuni che porta a un numero eccessivo di Garbage Colle
 
 Altri suggerimenti rapidi:
 - Usare la classe [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) C# per compilare in modo dinamico stringhe complesse in fase di esecuzione
-- Rimuovere le chiamate a debug. log () quando non sono più necessarie perché sono ancora in esecuzione in tutte le versioni di compilazione di un'app
+- Rimuovere le chiamate a debug. log () quando non sono più necessarie, perché continuano a essere eseguite in tutte le versioni di compilazione di un'app
 - Se l'app olografica richiede in genere molta memoria, provare a chiamare [ _**System. GC. Collect ()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante il caricamento di fasi, ad esempio quando si presenta una schermata di caricamento o di transizione
 
 #### <a name="object-pooling"></a>Pool di oggetti
@@ -351,7 +351,7 @@ Il pool di oggetti è una tecnica comune per ridurre il costo delle allocazioni 
 
 ## <a name="startup-performance"></a>Prestazioni di avvio
 
-È consigliabile avviare l'app con una scena più piccola, quindi usare *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* per caricare il resto della scena. Ciò consente all'app di ottenere uno stato interattivo il più velocemente possibile. Tenere presente che potrebbe essere presente un picco di CPU elevato mentre è in corso l'attivazione della nuova scena e che qualsiasi contenuto sottoposto a rendering potrebbe balbettare o bloccarsi. Per ovviare a questo problema, è possibile impostare la proprietà AsyncOperation. allowSceneActivation su false sulla scena caricata, attendere il caricamento della scena, deselezionare la schermata su nero e quindi impostare di nuovo su true per completare l'attivazione della scena.
+È consigliabile avviare l'app con una scena più piccola, quindi usare *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* per caricare il resto della scena. Ciò consente all'app di ottenere uno stato interattivo il più velocemente possibile. Tenere presente che potrebbe essere presente un picco di CPU elevato mentre è in corso l'attivazione della nuova scena e che qualsiasi contenuto sottoposto a rendering potrebbe balbettare o bloccarsi. Per ovviare a questo problema, impostare la proprietà AsyncOperation. allowSceneActivation su "false" sulla scena caricata, attendere il caricamento della scena, deselezionare la schermata su nero e quindi reimpostarla su "true" per completare l'attivazione della scena.
 
 Tenere presente che, durante il caricamento della scena di avvio, la schermata iniziale olografica verrà visualizzata all'utente.
 
