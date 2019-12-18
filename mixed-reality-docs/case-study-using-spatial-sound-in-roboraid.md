@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, RoboRaid, suono spaziale
-ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1482c914d261cae698a1460873b217b0683cd16b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436494"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181941"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Case Study-uso di un suono spaziale in RoboRaid
 
-Charles Sinex, l'audio Lead del team di Microsoft HoloLens Experience, illustra le uniche questioni che ha riscontrato durante la creazione di audio per [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), una realtà mista sparatutto per la prima persona.
+In questo articolo vengono descritte le specifiche esigenze del team di Microsoft HoloLens Experience durante la creazione di audio per [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), uno sparatutto in realtà mista.
 
 ## <a name="the-tech"></a>Il Tech
 
@@ -35,7 +35,7 @@ Il suono spaziale può richiedere la CPU. Per un'esperienza frenetica come RoboR
 
 Il meccanico che si sta evitando è uno degli aspetti più importanti del gioco in RoboRaid e anche un elemento che abbiamo ritenuto realmente univoco per l'esperienza HoloLens. Di conseguenza, volevamo che le Dodge fossero molto gratificanti per il lettore. È stato ottenuto il "mago" di Doppler per sembrare piuttosto tempestivo in fase di sviluppo. Inizialmente, il mio piano consisteva nell'usare un ciclo e modificarlo in tempo reale usando volume, pitch e Filter. L'implementazione di questa operazione è stata molto elaborata, pertanto prima di eseguire il commit delle risorse per compilarlo, abbiamo creato un prototipo a basso costo usando un asset con l'effetto Doppler preparato in solo per scoprire come si riteneva *. Il nostro sviluppo di talento lo ha fatto in modo che questo asset venga riprodotto esattamente 0,7 secondi prima che il proiettile fosse passato dall'orecchio del giocatore e i risultati fossero davvero straordinari. Inutile dirlo, abbiamo abbandonato la soluzione più complessa e implementato il prototipo.
 
-\* * (Per altre informazioni sulla creazione di un asset audio con l'effetto Doppler incorporato, vedere l'articolo relativo a sound designer Charles deenan chiamato [100 Whooshes in 2 minuti](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)). *
+*Per altre informazioni sulla creazione di un asset audio con l'effetto Doppler incorporato, vedere [100 Whooshes in 2 minuti](http://designingsound.org/2010/02/26/charles-deenen-special-100-whooshes-in-2-minutes/).*  
 <br>
 ![riuscito a schivare il proiettile di un nemico premia il lettore con un suono che soddisfi le proprie esigenze.](images/successful-dodge-roboraid-500px.jpg)
 
@@ -67,15 +67,15 @@ Per fare in modo che RoboRaid sia il più grande possibile sul dispositivo, è s
 
 Spero che i professionisti audio siano in possesso di una grande quantità di divertimento e entusiasmo a lavorare sulle proprie app, come ho fatto per lavorare a RoboRaid. Non posso aspettare di vedere (e ascoltare) quali sono le persone di talento all'esterno di Microsoft per HoloLens.
 
-## <a name="do-it-yourself"></a>Fai da te
+## <a name="do-it-yourself"></a>Provare
 
 Un trucco che ho scoperto per far sembrare "più grande" alcuni eventi, ad esempio le esplosioni, è quello di creare un asset mono per il suono spaziale e combinarlo con un asset stereo 2D, per riprodurlo in 3D. Questa operazione non comporta alcuna ottimizzazione, perché la presenza di una quantità eccessiva di informazioni nel contenuto stereo diminuisce la direzionalità degli asset mono. Tuttavia, l'ottenimento del giusto equilibrio comporterà la visualizzazione di grandi quantità di suoni che conterranno ai giocatori di trasformare le loro teste nella direzione giusta.
 
 È possibile provare a usare le risorse audio seguenti:
 
 **Scenario 1**
-1. Scaricare [roboraid_enemy_explo_mono. wav](images/roboraid-enemy-explo-mono.wav) e impostare per la riproduzione tramite un suono spaziale e assegnarlo a un evento.
-2. Scaricare [roboraid_enemy_explo_stereo. wav](images/roboraid-enemy-explo-stereo.wav) e impostare la riproduzione in stereo 2D e assegnarlo allo stesso evento indicato in precedenza. Poiché queste risorse vengono normalizzate in Unity, attenuare il volume di entrambi gli asset in modo da non ritagliare.
+1. Scaricare [roboraid_enemy_explo_mono. wav](images/roboraid-enemy-explo-mono.wav) e impostare la riproduzione tramite un suono spaziale e assegnarlo a un evento.
+2. Scaricare [roboraid_enemy_explo_stereo. wav](images/roboraid-enemy-explo-stereo.wav) e impostare la riproduzione in stereo 2D e assegnarla allo stesso evento indicato in precedenza. Poiché queste risorse vengono normalizzate in Unity, attenuare il volume di entrambi gli asset in modo da non ritagliare.
 3. Riprodurre entrambi i suoni insieme. Spostare la testa per sentire la spazialità.
 
 **Scenario 2**
@@ -83,14 +83,7 @@ Un trucco che ho scoperto per far sembrare "più grande" alcuni eventi, ad esemp
 2. Riprodurre questo asset da solo e confrontarlo con l'evento dello scenario 1.
 3. Provare a eseguire un saldo diverso di file mono e stereo.
 
-## <a name="about-the-author"></a>Informazioni sull'autore
 
-<table style="border-collapse:collapse">
-<tr>
-<td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>@Microsoft tecnico audio</td>
-</tr>
-</table>
 
 ## <a name="see-also"></a>Vedi anche
 * [Audio spaziale](spatial-sound.md)

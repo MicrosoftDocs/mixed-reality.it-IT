@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendering, ologramma
-ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926854"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182031"
 ---
 # <a name="rendering"></a>Rendering
 
@@ -83,17 +83,21 @@ In generale, l'applicazione eseguirà il rendering di una singola fotocamera ste
 Quando si esegue il rendering di MRIs medicali o di volumi di progettazione in 3D, vengono spesso usate tecniche di [rendering del volume](volume-rendering.md) . Queste tecniche possono essere particolarmente interessanti nella realtà mista, in cui gli utenti possono visualizzare naturalmente tale volume dagli angoli principali, semplicemente spostando l'intestazione.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>Risoluzioni supportate su HoloLens (1a generazione)
-> [!NOTE]
-> Altri aggiornamenti sono imminenti. [Visualizzare l'elenco degli aggiornamenti](release-notes-april-2018.md)
 
-* Le risoluzioni supportate correnti e massime sono proprietà della [configurazione della vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). Per impostazione predefinita, HoloLens è impostato sulla risoluzione massima, ovvero 720p (1268x720).
-* La dimensione minima del viewport supportata è 50% di 720p, ovvero 360p (634x360). In HoloLens, si tratta di un ViewportScaleFactor di 0,5.
-* **Non è consigliabile** usare elementi inferiori a 540p a causa della riduzione visiva, ma è possibile usarli per identificare i colli di bottiglia in percentuale di riempimento in pixel.
+* La dimensione massima del viewport è una proprietà di [HolographicDisplay](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay). Per impostazione predefinita, HoloLens è impostato sulla dimensione massima del viewport, che è 720p (1268x720).
+* È possibile modificare le dimensioni del viewport impostando ViewportScaleFactor in HolographicCamera. Questo fattore di scala è compreso nell'intervallo tra 0 e 1.
+* La dimensione più bassa del viewport supportata in HoloLens (1a generazione) è 50% di 720p, ovvero 360p (634x360). Si tratta di un ViewportScaleFactor di 0,5.
+* Non è consigliabile usare elementi inferiori a 540p a causa della riduzione visiva, ma è possibile usarli per identificare i colli di bottiglia in percentuale di riempimento in pixel.
 
 ## <a name="supported-resolutions-on-hololens-2"></a>Risoluzioni supportate su HoloLens 2
 
-> [!NOTE]
-> Altre indicazioni specifiche per HoloLens 2 [saranno presto](news.md)disponibili.
+* Le dimensioni correnti e massime della destinazione di rendering supportate sono proprietà della [configurazione della vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). Per impostazione predefinita, HoloLens 2 è impostato sulla dimensione massima della destinazione di rendering, che è 1440x936.
+* Le app possono modificare le dimensioni dei buffer di destinazione di rendering chiamando il metodo RequestRenderTargetSize per richiedere una nuova dimensione della destinazione di rendering. Verranno scelte nuove dimensioni della destinazione di rendering che soddisfano o superano le dimensioni richieste della destinazione di rendering. Questa API modifica la dimensione del buffer di destinazione di rendering, che richiede la riallocazione della memoria sulla GPU. Le implicazioni di questo esempio includono: le dimensioni della destinazione di rendering possono essere ridimensionate per ridurre l'utilizzo della memoria sulla GPU e questo metodo non deve essere chiamato a frequenza elevata.
+* Le app possono comunque modificare le dimensioni del viewport nello stesso modo in cui sono state effettuate per HoloLens 1. Questa operazione non comporta la riallocazione della memoria sulla GPU, quindi può essere modificata a frequenza elevata, ma non può essere usata per ridurre le richieste di memoria sulla GPU.
+* La dimensione più bassa del viewport supportata in HoloLens 2 è 634x412. Si tratta di un ViewportScaleFactor di circa 0,44 quando la dimensione di destinazione di rendering predefinita è in uso.
+* Se viene fornita una dimensione della destinazione di rendering minore della dimensione del viewport supportata più bassa, il fattore di scala del viewport verrà ignorato.
+* Non è consigliabile usare elementi inferiori a 540p a causa della riduzione visiva, ma è possibile usarli per identificare i colli di bottiglia in percentuale di riempimento in pixel.
+
 
 
 ## <a name="see-also"></a>Vedi anche

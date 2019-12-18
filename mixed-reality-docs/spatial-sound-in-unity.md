@@ -1,61 +1,64 @@
 ---
 title: Audio spaziale in Unity
-description: Riproduzione di un suono spaziale che deriva da uno specifico punto 3D nella scena Unity.
+description: Riprodurre un suono spaziale da uno specifico punto 3D nella scena Unity.
 author: kegodin
 ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, audio spaziale, HRTF, dimensioni della stanza
-ms.openlocfilehash: c96717d9df9b89fbb09f0b4466ee3a9bf5c8a149
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641061"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181991"
 ---
 # <a name="spatial-sound-in-unity"></a>Audio spaziale in Unity
 
-Questa pagina contiene collegamenti alle risorse che consentono di usare e progettare con Microsoft HRTF Spatializer nei progetti di realtà mista Unity.
+Questa pagina contiene collegamenti a risorse per il suono spaziale in Unity.
+
+## <a name="spatializer-options"></a>Opzioni di Spatializer
+Le opzioni di Spatializer per le applicazioni di realtà mista includono:
+* *SPATIALIZER HRTF MS*. Unity fornisce questo elemento come parte del pacchetto facoltativo di *realtà mista di Windows* .
+  * Questa operazione viene eseguita sulla CPU in un'architettura a "singola origine" con costi più elevati.
+  * Questa operazione viene fornita per garantire la compatibilità con le versioni precedenti delle applicazioni HoloLens originali.
+* *Microsoft Spatializer*. Questa operazione è disponibile dal [repository GitHub Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity).
+  * Questa operazione usa un'architettura a più livelli di costo inferiore.
+  * In HoloLens 2 questa operazione viene scaricata in un acceleratore hardware.
+
+Per le nuove applicazioni, è consigliabile *Microsoft Spatializer*.
 
 ## <a name="enable-spatialization"></a>Abilita spazializzazione
 
-Abilitare **MS HRTF Spatializer** nelle impostazioni audio del progetto. Per altri dettagli, vedere [la documentazione di Unity Spatializer](https://docs.unity3d.com/Manual/VRAudioSpatializer.html). 
+Usare [NuGet per Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) per installare _Microsoft. SpatialAudio. Spatializer. Unity_ e scegliere **Microsoft Spatializer** nelle impostazioni audio del progetto. Quindi:
+* Alleghi un' **origine audio** a un oggetto nella gerarchia
+* Selezionare la casella di controllo **Abilita spazializzazione**
+* Spostare il dispositivo di scorrimento di **Blend spaziale** su "1"
 
-Alleghi un' **origine audio** a un oggetto nella gerarchia e Abilita la spazializzazione selezionando la casella di controllo **Abilita spazializzazione** e spostando il dispositivo di scorrimento di **Blend spaziale** su "1". Per altri dettagli, vedere [la documentazione relativa all'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html). 
+Per altri dettagli, vedi:
+* [Repository GitHub Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity)
+* [Esercitazione di Spatializer di Microsoft](unity-spatial-audio-ch1.md)
+* [Documentazione dell'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
+* [Documentazione di Unity Spatializer](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="design-with-spatialization"></a>Progettare con la spazializzazione
+## <a name="distance-based-attenuation"></a>Attenuazione basate sulla distanza
+Il decadimento basato sulla distanza predefinito di Unity ha una distanza minima di 1 metro e una distanza massima di 500 metri, con un attenuazione logaritmico. Queste impostazioni possono essere usate per lo scenario in uso oppure è possibile che le origini siano attenuate troppo rapidamente o troppo lentamente. Per altri dettagli, vedi:
+* [Progettazione audio in realtà mista](spatial-sound-design.md) per le impostazioni consigliate.
+* [Documentazione dell'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) per istruzioni sull'impostazione di queste curve.
 
-### <a name="distance-based-attenuation"></a>Attenuazione basata sulla distanza
-Il decadimento basato sulla distanza predefinito di Unity ha una distanza minima di 1 metro e una distanza massima di 500 metri, con un attenuazione logaritmico. Questo può funzionare per lo scenario in uso oppure è possibile che le origini siano attenuate troppo rapidamente o troppo lentamente. Vedere [progettazione audio in realtà mista](spatial-sound-design.md) per le impostazioni consigliate per le curve di decadimento della distanza e vedere [la documentazione sull'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) per informazioni sull'impostazione di queste curve in Unity.
+## <a name="reverb"></a>Riverbero
+_Microsoft Spatializer_ Disabilita gli effetti post-Spatializer per impostazione predefinita. Per abilitare il riverbero e altri effetti per le origini spaziali:
+* Alleghi il componente del **livello di invio dell'effetto chat** a ogni origine
+* Modificare la curva del livello di invio per ogni origine, per controllare il guadagno sull'audio restituito al grafico per l'elaborazione degli effetti
 
-### <a name="environment"></a>Ambiente
-**MS HRTF Spatializer** include un componente Reverb room con [quattro impostazioni di riverbero](https://docs.microsoft.com/windows/win32/api/hrtfapoapi/ne-hrtfapoapi-hrtfenvironment) e il valore predefinito è "Small". L'impostazione Room può essere modificata a livello di codice per ogni origine audio alleghiendo C# lo script seguente a ogni oggetto in Unity con un'origine audio con spazialità:
-
-```cs
-using UnityEngine;
-   using System.Collections;
-   public class SetHRTF : MonoBehaviour    {
-       public enum ROOMSIZE { Small, Medium, Large, None };
-       public ROOMSIZE room = ROOMSIZE.Small;  // Small is regarded as the "most average"
-       // defaults and docs from MSDN
-       // https://msdn.microsoft.com/library/windows/desktop/mt186602(v=vs.85).aspx
-       AudioSource audiosource;
-       void Awake()
-       {
-           audiosource = this.gameObject.GetComponent<AudioSource>();
-           if (audiosource == null)
-           {
-               print("SetHRTFParams needs an audio source to do anything.");
-               return;
-           }
-           audiosource.spatialize = 1; // we DO want spatialized audio
-           audiosource.spread = 0; // we dont want to reduce our angle of hearing
-           audiosource.spatialBlend = 1;   // we do want to hear spatialized audio
-           audiosource.SetSpatializerFloat(1, (float)room);    // 1 is the roomsize param
-       }
-   }
-```
+Per informazioni dettagliate, vedere [il capitolo 5 dell'esercitazione su Spatializer](unity-spatial-audio-ch5.md) .
 
 ## <a name="unity-spatial-sound-examples"></a>Esempi di suoni spaziali Unity
-Il Toolkit di realtà mista (MRTK) include esempi di modalità di applicazione degli effetti audio in realtà mista: [demo MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio).
+Per esempi di suoni spaziali in Unity, vedere:
+* [Demo di MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
+* [Progetto di esempio Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)
+
+## <a name="next-steps"></a>Passaggi successivi
+* [Progettazione audio in realtà mista](spatial-sound-design.md)
+* [Esercitazione di Spatializer di Microsoft](unity-spatial-audio-ch1.md)
 

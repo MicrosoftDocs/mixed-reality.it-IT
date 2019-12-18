@@ -3,15 +3,15 @@ title: Limitazioni e risoluzione dei problemi di comunicazione remota olografica
 description: Procedura di risoluzione dei problemi per la comunicazione remota olografica in HoloLens 2.
 author: FlorianBagarMicrosoft
 ms.author: flbagar
-ms.date: 10/28/2019
+ms.date: 12/17/2019
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, comunicazione remota olografica, rendering remoto, rendering di rete, HoloLens, ologrammi remoti, risoluzione dei problemi, guida
-ms.openlocfilehash: 7b438d9169c9306e0056655e561c04b62b1662cf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 05333c8911010945a543cf603b9925eb30c841db
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434239"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181971"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Risoluzione dei problemi di comunicazione remota olografica
 
@@ -31,13 +31,23 @@ Le API seguenti **non** sono attualmente supportate quando si usa la comunicazio
 [Windows.Graphics.Holographic](https://docs.microsoft.com/uwp/api/windows.graphics.holographic)
 
 * [HolographicCamera.ViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration)
+  - Supportato a partire dalla versione [2.0.18](holographic-remoting-version-history.md#v2.0.18)
+  - Nelle versioni precedenti genera sempre un errore.
+* [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
+  - Non ha esito negativo, ma le dimensioni della destinazione di rendering non verranno modificate.
 * [HolographicCameraPose.OverrideProjectionTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [HolographicCameraPose.OverrideViewport](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - Non ha esito negativo, ma il buffer di profondità non sarà remoto.
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
+  - L'esecuzione di query su HolographicViewConfigurationKind. PhotoVideoCamera restituirà sempre un ```nullptr```.
+  - Supportato a partire dalla versione [2.0.18](holographic-remoting-version-history.md#v2.0.18)
+  - Nelle versioni precedenti genera sempre un errore.
 * [HolographicSpace.CreateFramePresentationMonitor](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createframepresentationmonitor)
+* [HolographicDisplay. GetDefault](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.getdefault#Windows_Graphics_Holographic_HolographicDisplay_GetDefault)
+  - Segnala un errore se chiamato prima che venga stabilita una connessione.
+
 
 [Windows.Perception.Spatial](https://docs.microsoft.com/uwp/api/windows.perception.spatial)
 
@@ -83,4 +93,4 @@ Le API seguenti **non** sono attualmente supportate quando si usa la comunicazio
 * [Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
