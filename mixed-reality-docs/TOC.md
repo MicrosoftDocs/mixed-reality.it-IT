@@ -64,10 +64,13 @@
 ## Elementi UX
 ### [Panoramica](app-patterns-landingpage.md)
 ### Stile
-#### [Colore, luce e materiali](color,-light-and-materials.md)
+#### [Colore, luce e materiali](color-light-and-materials.md)
 #### [Ridimensiona](scale.md)
-#### [Progettazione dell'audio spaziale](spatial-sound-design.md)
 #### [Tipografia](typography.md)
+### Audio spaziale
+#### [Progettazione dell'audio spaziale](spatial-sound-design.md)
+#### [Case study: Holotour ](case-study-spatial-sound-design-for-holotour.md)
+#### [Case study: RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Controlli e comportamenti
 #### [Cursori](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
 ###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch5.md)
+##### Esercitazioni sull'audio spaziale
+###### [1. Aggiunta dell'audio spaziale al progetto](unity-spatial-audio-ch1.md)
+###### [2. Spazializzazione dei suoni di interazione del pulsante](unity-spatial-audio-ch2.md)
+###### [3. Spazializzazione dell'audio da un video](unity-spatial-audio-ch3.md)
+###### [4. Abilitazione e disabilitazione dell'audio spaziale in fase di esecuzione](unity-spatial-audio-ch4.md)
+###### [5. Uso del riverbero per aggiungere distanza all'audio spaziale](unity-spatial-audio-ch5.md)
 #### App di esempio open source per HoloLens (prima generazione)
 ##### [Periodic Table of the Elements](periodic-table-of-the-elements.md)
 ##### [Lunar Module](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [Mapping spaziale](spatial-mapping-in-directx.md)
 #### [Informazioni sulle scene](scene-understanding-sdk.md)
 #### [Ancoraggi nello spazio condivisi](shared-spatial-anchors-in-directx.md)
-#### [Input da tastiera, mouse e controller](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [Input da tastiera, mouse e controller](keyboard-mouse-and-controller-input-in-directx.md)
 #### [Uso di XAML con app olografiche](using-xaml-with-holographic-directx-apps.md)
 #### [Rilevamento di codici a matrice](qr-code-tracking.md)
 ### [Esperienze condivise nella realtà mista](shared-experiences-in-mixed-reality.md)

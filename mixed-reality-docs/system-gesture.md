@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
-ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064233"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182001"
 ---
 # <a name="system-gesture"></a>Movimento di sistema
 
@@ -33,7 +33,7 @@ Il gesto del sistema è un movimento della mano usato per richiamare il menu Sta
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Bloom</td>
+        <td>Fioritura</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Il gesto del sistema è un movimento della mano usato per richiamare il menu Sta
     </tr>
 </table>
 
-## <a name="bloom"></a>Bloom
+## <a name="bloom"></a>Fioritura
 Per visualizzare il menu Start in HoloLens (1st Gen), abbiamo progettato "Bloom", un gesto simbolico che simula il fiore fiorito. È distinto per l'interazione surefooted, facile da eseguire e rapido da richiamare. Per eseguire il gesto di fioritura su HoloLens (1 ° gen), è necessario passare a un palmo e a una mano insieme, quindi aprire la mano diffondendo le dita.
 
 :::row:::
@@ -70,7 +70,7 @@ Per visualizzare il menu Start in HoloLens (1st Gen), abbiamo progettato "Bloom"
 
 ---
 
-## <a name="wrist-button"></a>Pulsante polso
+## <a name="start-gesture"></a>Azione di avvio
 In HoloLens 2, il movimento Bloom è stato sostituito con un pulsante di polso virtuale che consente interazioni più istintive che non richiedono ulteriori attività di insegnamento. Visualizzando gli utenti con il pulsante del polso, è possibile accedervi in modo intuitivo e premerlo con l'altra parte.
 
 :::row:::
@@ -89,8 +89,15 @@ In HoloLens 2, il movimento Bloom è stato sostituito con un pulsante di polso v
 ---
 
 
-## <a name="eye-gaze-and-palm-up-pinch"></a>Occhio e palmare
-È stata anche progettata una soluzione a mano singola per semplificare l'accesso in HoloLens 2. Questo gesto richiede agli utenti di osservare il pulsante del polso, quindi di usare la stessa mano per eseguire un pizzico di palmare usando il pollice e il dito dell'indice.<br>
+## <a name="one-handed-start-gesture"></a>Gesto iniziale a una mano
+
+> [!IMPORTANT]
+> Per il funzionamento del movimento iniziale a una sola mano:
+>
+> 1. È necessario eseguire l'aggiornamento all'aggiornamento di novembre 2019 (Build 18363,1039) o versione successiva.
+> 1. È necessario calibrare gli occhi del dispositivo in modo che funzionino correttamente. Se non vengono visualizzati punti orbitanti intorno all'icona di avvio quando si esaminano i punti, gli occhi non vengono calibrati sul dispositivo.
+
+È anche possibile eseguire il gesto di avvio con una sola mano. A tale scopo, è necessario guardare la Palma con l' **icona di avvio** sul polso interno. **Tenendo sempre d'occhio l'icona**, pizzicare il pollice e l'indice insieme.<br>
 :::row:::
     :::column:::
         ![pronto per il pulsante del polso](images/wrist-button-ready.png)<br>
