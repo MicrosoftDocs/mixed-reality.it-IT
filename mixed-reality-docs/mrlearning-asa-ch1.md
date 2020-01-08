@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 861c42f9449fcb3cf038258af91088fc927941e5
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: e62d3626ec6f2dbf8b66378212afab7db2f56422
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940979"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334457"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introduzione agli ancoraggi spaziali di Azure
 
@@ -32,9 +32,17 @@ Nella terza esercitazione, in cui viene [visualizzato il feedback di ancoraggio 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Soddisfare i requisiti elencati nella sezione [prerequisiti](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#prerequisites) della [Guida introduttiva: creare un'app HoloLens Unity che usa](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) l'esercitazione sugli ancoraggi spaziali di Azure.
+>[!TIP]
+>Se non è ancora stata completata la serie di [esercitazioni introduttive](mrlearning-base.md) , è consigliabile completare prima queste esercitazioni.
+
+* Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md)
+* Windows 10 SDK 10.0.18362.0 o versione successiva
+* Funzionalità di C# programmazione di base
+* Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
 * Completare la sezione [creare una risorsa ancoraggi spaziali](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) della [Guida introduttiva: creare un'app HoloLens Unity che usa l'esercitazione sugli ancoraggi spaziali di Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
-* Se non è ancora stata completata la serie di [esercitazioni introduttive](mrlearning-base.md) , è consigliabile completare prima queste esercitazioni.
+
+>[!IMPORTANT]
+>Questa serie di esercitazioni richiede <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e la versione consigliata è Unity 2019.1.14. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
 
 ## <a name="creating-the-unity-project"></a>Creazione del progetto Unity
 

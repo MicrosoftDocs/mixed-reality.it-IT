@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b033e4f9a379fb1778da3d94da70262e073d141b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926514"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334374"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. creazione di un'applicazione di esempio del modulo Lunar
 
@@ -25,9 +25,7 @@ In questa esercitazione vengono combinati più concetti rispetto alle lezioni pr
 - Usare la forza e la fisica dei corpi rigidi
 - Esplorare l'uso delle descrizioni comandi
 
-## <a name="instructions"></a>Istruzioni
-
-### <a name="configuring-the-lunar-module"></a>Configurazione del modulo lunare
+## <a name="configuring-the-lunar-module"></a>Configurazione del modulo lunare
 
 In questa sezione vengono introdotti i vari componenti necessari per creare l'esperienza di esempio.
 
@@ -38,7 +36,7 @@ In questa sezione vengono introdotti i vari componenti necessari per creare l'es
 
     ![Immagine lezione 6 capitolo 1 passaggio 1](images/Lesson6_Chapter1_step1im.PNG)
 
-    Se si espande l'oggetto gioco Rocket Launcher_Tutorial nella gerarchia e si espande ulteriormente l'oggetto Lunar Module, si troveranno diversi oggetti figlio con un materiale denominato "x-ray". Il materiale "x-ray" consente un colore leggermente trasparente che verrà usato come hint di selezione host per l'utente. 
+    Se si espande l'oggetto gioco Rocket Launcher_Tutorial nella gerarchia e si espande ulteriormente l'oggetto Lunar Module, si troveranno diversi oggetti figlio con un materiale denominato "x-ray". Il materiale "x-ray" consente un colore leggermente trasparente che verrà usato come hint di selezione host per l'utente.
 
     ![Lesson6 Chapter1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG)
 
@@ -81,7 +79,7 @@ In questa sezione vengono introdotti i vari componenti necessari per creare l'es
 
     ![Immagine lezione 6 capitolo 1 passaggio 6](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Cenni preliminari sulle parti del modulo Lunar
+## <a name="lunar-module-parts-overview"></a>Cenni preliminari sulle parti del modulo Lunar
 
 L'oggetto padre Parts del modulo Lunar è la raccolta degli oggetti con cui l'utente interagisce. I nomi degli oggetti di gioco con la scena con etichetta nomi racchiusi tra parentesi sono disponibili nell'elenco seguente:
 
@@ -106,7 +104,7 @@ L'oggetto descrizione comando è l'etichetta descrizione comando nella scena. Qu
 
 L'origine audio viene afferrata automaticamente.
 
-### <a name="configuring-the-placement-hints-button"></a>Configurazione del pulsante degli hint di selezione host
+## <a name="configuring-the-placement-hints-button"></a>Configurazione del pulsante degli hint di selezione host
 
 Nella [lezione 2](mrlearning-base-ch2.md)si è appreso come posizionare e configurare i pulsanti per eseguire operazioni quali la modifica del colore di un elemento o la riproduzione di un suono quando viene effettuato il push. Useremo questi stessi principi per configurare i pulsanti in modo da attivare o disattivare i suggerimenti di posizionamento.
 
@@ -120,7 +118,7 @@ Lo scopo è quello di configurare il pulsante in modo che ogni volta che l'utent
 
     ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Configurazione del pulsante Reimposta
+## <a name="configuring-the-reset-button"></a>Configurazione del pulsante Reimposta
 
 Si verificheranno situazioni in cui l'utente commette un errore, genera accidentalmente l'oggetto o semplicemente vuole reimpostare l'esperienza. Il pulsante Reimposta consente di riavviare l'esperienza.
 
@@ -137,7 +135,7 @@ Si verificheranno situazioni in cui l'utente commette un errore, genera accident
     >[!NOTE]
     >Si noti che per impostazione predefinita, GameObject. BroadcastMessage è configurato per ResetPlacement. Viene trasmesso un messaggio denominato ResetPlacement per ogni oggetto figlio della RocketLauncher_Tutorial. Qualsiasi oggetto con un metodo per ResetPlacement () risponde a tale messaggio reimpostando la relativa posizione.
 
-### <a name="configuring-the-launch-button"></a>Configurazione del pulsante Launch
+## <a name="configuring-the-launch-button"></a>Configurazione del pulsante Launch
 
 Questa sezione illustra come configurare il pulsante Launch (avvio), che consente all'utente di premere il pulsante e avviare il modulo Lunar nello spazio.
 
@@ -161,6 +159,6 @@ Questa sezione illustra come configurare il pulsante Launch (avvio), che consent
 
     ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
 
-### <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Lezione completata
 
 Questa applicazione è stata configurata completamente. A questo punto, quando si preme Play, è possibile assemblare completamente il modulo Lunar, attivare o disabilitare i suggerimenti, avviare il modulo Lunar e reimpostarlo per riavviarlo.

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105975"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334384"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interazione con oggetti 3D
 
@@ -30,9 +30,7 @@ In questa esercitazione vengono fornite informazioni sul contenuto 3D di base e 
 * Esplorare l'interazione da vicino e da lontano
 * Informazioni sugli altri movimenti di rilevamento della mano, ad esempio la cattura e il tocco
 
-## <a name="instructions"></a>Istruzioni
-
-### <a name="organizing-3d-objects-in-a-collection"></a>Organizzazione di oggetti 3D in una raccolta
+## <a name="organizing-3d-objects-in-a-collection"></a>Organizzazione di oggetti 3D in una raccolta
 
 1. Fare clic con il pulsante destro del mouse sulla gerarchia e selezionare Crea vuoto per creare un oggetto gioco vuoto, rinominarlo in 3DObjectCollection e verificare che sia posizionato in corrispondenza di x = 0, y = 0 e z = 0.
 
@@ -70,7 +68,7 @@ In questa esercitazione vengono fornite informazioni sul contenuto 3D di base e 
     >[!NOTE]
     >È possibile notare che alcuni oggetti sono fuori centro, ad esempio gli oggetti nell'immagine precedente. Questo avviene perché i prefab o gli oggetti possono includere oggetti figlio non allineati. Puoi apportare le modifiche necessarie alla posizione dell'oggetto o dell'oggetto figlio per ottenere una griglia ben allineata.
 
-### <a name="manipulating-3d-objects"></a>Manipolazione di oggetti 3D
+## <a name="manipulating-3d-objects"></a>Manipolazione di oggetti 3D
 
 1. Aggiungi la capacità di manipolare un cubo. Per aggiungere la possibilità di modificare gli oggetti 3D, eseguire le operazioni seguenti:
     * Selezionare l'oggetto 3D che si desidera modificare nella gerarchia (ad esempio, uno dei cubi).
@@ -132,7 +130,7 @@ In questa esercitazione vengono fornite informazioni sul contenuto 3D di base e 
     >[!NOTE]
     >Questa impostazione è utile per gli scenari, ad esempio la creazione di una palla che è possibile generare. Mantenendo la velocità e la velocità angolari appropriate per garantire che una volta rilasciata la palla continuerà a spostarsi alla velocità in cui è stata rilasciata; in modo analogo al comportamento di una palla fisica.
 
-### <a name="adding-bounding-boxes"></a>Aggiunta di cubi di delimitazione
+## <a name="adding-bounding-boxes"></a>Aggiunta di cubi di delimitazione
 
 I rettangoli di delimitazione rendono più semplice e intuitivo manipolare gli oggetti con una sola mano per la manipolazione diretta (near Interaction) e la manipolazione basata su Ray (di gran lunga interazione). I rettangoli di delimitazione forniscono handle che possono essere recuperati per la scala e la rotazione di oggetti lungo un asse specifico.
 
@@ -180,7 +178,7 @@ I rettangoli di delimitazione rendono più semplice e intuitivo manipolare gli o
     >[!NOTE]
     >Le visualizzazioni del rettangolo di delimitazione vengono visualizzate solo in modalità di riproduzione.
 
-### <a name="adding-touch-effects"></a>Aggiunta degli effetti tocco
+## <a name="adding-touch-effects"></a>Aggiunta degli effetti tocco
 
 In questo esempio riprodurremo un effetto sonoro quando si tocca un oggetto con la mano.
 

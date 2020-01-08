@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539738"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334397"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. creazione dell'interfaccia utente e configurazione del Toolkit per la realtà mista
 
@@ -23,9 +23,7 @@ Nella lezione precedente sono state illustrate alcune delle funzionalità offert
 * Interagire con gli ologrammi usando gli elementi e i pulsanti dell'interfaccia utente
 * Eseguire interazioni e input di tracciamento delle mani
 
-## <a name="instructions"></a>Istruzioni
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Come configurare i profili del Toolkit di realtà mista (opzione di visualizzazione modifica consapevolezza spaziale)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Come configurare i profili del Toolkit di realtà mista (opzione di visualizzazione modifica consapevolezza spaziale)
 
 In questa sezione si apprenderà come personalizzare e configurare i profili MRTK predefiniti regolando l'opzione di visualizzazione della mesh di riconoscimento spaziale. Puoi seguire gli stessi principi per modificare le impostazioni o i valori nei profili di MRTK.
 
@@ -73,7 +71,7 @@ In questa sezione si apprenderà come personalizzare e configurare i profili MRT
 
 Complimenti. hai appreso come modificare un'impostazione nel profilo di MRTK. Come puoi notare, per modificare le impostazioni di MRTK devi creare copie dei profili predefiniti in modo da poterle modificare. Si avranno sempre i profili predefiniti, che non sono modificabili, per tornare a se si desidera creare un profilo con nuove impostazioni oppure è possibile fare riferimento ai profili predefiniti. Esistono numerose impostazioni che puoi modificare. Per informazioni di riferimento complete sulle impostazioni del profilo MRTK, vedere la documentazione di MRTK qui: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Movimenti di tracciamento delle mani e pulsanti con supporto per interazioni
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Movimenti di tracciamento delle mani e pulsanti con supporto per interazioni
 
 In questa sezione si apprenderà come usare il rilevamento manuale per premere un pulsante stampabile.
 
@@ -94,7 +92,7 @@ In questa sezione si apprenderà come usare il rilevamento manuale per premere u
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    A questo punto, sullo schermo dovrebbe essere visualizzato un cubo. Verrà visualizzato molto grande. Per ridurre le dimensioni, è possibile modificare le coordinate (mentre il cubo è ancora selezionato nell'area della gerarchia). Impostare i valori di scala su x = 0,02, y = 0,02 e z = 0,02. Assicurarsi di posizionare il cubo nella scena accanto al pulsante, ma non sovrapposto. Nell'immagine seguente la posizione del cubo è x = 0, y = 0,4 e z = 0,2.
+    A questo punto, sullo schermo dovrebbe essere visualizzato un cubo. Verrà visualizzato molto grande. Per ridurre le dimensioni, è possibile modificare le coordinate (mentre il cubo è ancora selezionato nell'area della gerarchia). Impostare i valori di scala su x = 0,02, y = 0,02 e z = 0,02. Assicurarsi di posizionare il cubo nella scena accanto al pulsante, ma non sovrapposto. Nell'immagine seguente la posizione del cubo è x = 0, y = 0,04 e z = 0,2.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ In questa sezione si apprenderà come usare il rilevamento manuale per premere u
 
     A questo punto, quando si preme il pulsante, questo verrà modificato in un nuovo colore; ciano. Quando il pulsante viene rilasciato, viene modificato nuovamente sul colore predefinito specificato, ad esempio grigio chiaro. Premere il pulsante Riproduci nella parte superiore della schermata per provarlo nell'editor o distribuirlo in HoloLens 2, per eseguire il test. Per altre informazioni sulla simulazione in-Editor, inclusa la simulazione della mano, vedere la [pagina della documentazione di simulazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creazione di un pannello di pulsanti con la raccolta di oggetti griglia di MRTK
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creazione di un pannello di pulsanti con la raccolta di oggetti griglia di MRTK
 
 In questa sezione si apprenderà come allineare automaticamente più pulsanti in un'interfaccia utente accurata usando lo strumento GridObjectCollection di MRTK.
 
@@ -162,7 +160,7 @@ In questa sezione si apprenderà come allineare automaticamente più pulsanti in
     >[!NOTE]
     >a seconda dell'orientamento degli oggetti figlio o dell'oggetto padre, sarà probabilmente necessario modificare l'impostazione dell'orientamento in modo diverso nei progetti futuri. È probabile che sia necessario definire in modo diverso anche i valori dei campi Cell Width (Larghezza cella) e Cell Height (Altezza cella), a seconda delle dimensioni degli oggetti nella raccolta.
 
-### <a name="adding-text-into-your-scene"></a>Aggiunta di testo nella scena
+## <a name="adding-text-into-your-scene"></a>Aggiunta di testo nella scena
 
 In questa sezione apprenderai come aggiungere e modificare il testo nelle esperienze di realtà mista. Se non è già stato fatto, assicurarsi che TextMeshPro sia abilitato in Unity seguendo le istruzioni riportate [qui](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
 

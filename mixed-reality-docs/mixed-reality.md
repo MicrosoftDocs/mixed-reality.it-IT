@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: realtà mista, olografica, AR, VR, Mr, XR, realtà aumentata, realtà virtuale, spiegazione
-ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539566"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334029"
 ---
 # <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
 
@@ -19,8 +19,8 @@ ms.locfileid: "74539566"
 
 La realtà mista è il risultato della fusione del mondo fisico con il mondo digitale. È l'evoluzione successiva nell'interazione tra uomo, computer e ambiente e rende possibili cose che finora si limitavano all'immaginazione. Questo è possibile grazie a miglioramenti in visione artificiale, potenza di elaborazione grafica, tecnologia di visualizzazione e sistemi di input. Il termine *realtà mista* è stato originariamente introdotto in un documento 1994 di Paul Milgram e Fumio Kishino, "[una tassonomia di visualizzazioni visive realtà miste](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". Nel documento è stato introdotto il concetto di *continuità della virtualizzazione*e si è concentrato sul modo in cui viene applicata la categorizzazione della tassonomia. Da allora, l'applicazione della realtà mista va oltre le visualizzazioni. Include anche l'input ambientale, il suono spaziale e la posizione.
 
-![lo spettro di realtà misto](images/MixedRealitySpectrum-worlds.jpg)<br>
-*La realtà mista è il risultato della fusione del mondo fisico con Digiworld.*
+![lo spettro di realtà misto](images/mixedrealityspectrum-worlds.png)<br>
+*Immagine: la realtà mista è il risultato della fusione del mondo fisico con Digiworld.*
 
 <br>
 
@@ -30,22 +30,16 @@ La realtà mista è il risultato della fusione del mondo fisico con il mondo dig
 
 Negli ultimi decenni è stata esplorata la relazione tra l'input umano e il computer. Ha anche una disciplina ampiamente studiata nota come *interazione tra computer umani* o HCI. L'input umano si verifica attraverso un'ampia gamma di mezzi, tra cui tastiere, topi, tocco, input penna, voce e anche rilevamento scheletrico Kinect.
 
-I progressi nei sensori e nell'elaborazione sono la crescita di una nuova area di input del computer dagli ambienti. L'interazione tra computer e ambienti è in effetti la comprensione o la *percezione*ambientale. Di conseguenza, i nomi delle API in Windows che rivelano informazioni ambientali sono detti [API percettive](https://docs.microsoft.com/uwp/api/Windows.Perception). L'input ambientale acquisisce elementi come la posizione di una persona nel mondo, ad esempio il [rilevamento della testa](coordinate-systems.md), le superfici e i limiti (ad esempio, [mapping spaziale](spatial-mapping.md) e [comprensione della scena](scene-understanding.md)), illuminazione ambientale, suono ambientale, riconoscimento degli oggetti, e posizione.
+I progressi nei sensori e nell'elaborazione sono la crescita di una nuova area di input del computer dagli ambienti. L'interazione tra computer e ambienti è in effetti la comprensione o la *percezione*ambientale. Di conseguenza, i nomi delle API in Windows che rivelano informazioni ambientali sono detti [API percettive](https://docs.microsoft.com/uwp/api/Windows.Perception). L'input ambientale acquisisce elementi come la posizione di una persona nel mondo, ad esempio il [rilevamento della testa](coordinate-systems.md), le superfici e i limiti, ad esempio il [mapping spaziale](spatial-mapping.md) e la [comprensione della scena](scene-understanding.md), l'illuminazione ambientale, il suono ambientale, il riconoscimento degli oggetti e la posizione.
 
 <br>
 
+![diagramma Venn che mostra le interazioni tra computer, persone e ambienti](images/mixed-reality-venn-diagram-300px.png)<br>*immagine  
+: le interazioni tra computer, persone e ambienti.*
 
+<br>
 
-:::row:::
-    :::column:::
-        A questo punto, la combinazione di tutti e tre i**computer di elaborazione, input umano e input ambientale**: consente di creare esperienze reali miste. Lo spostamento attraverso il mondo fisico può tradursi in movimento nel mondo digitale. I limiti nel mondo fisico possono influenzare le esperienze delle applicazioni, ad esempio giochi, nel mondo digitale. Senza input ambientale, le esperienze non possono essere combinate tra le realtà fisiche e digitali.<br>
-        <br>
-        *Image: interazioni tra computer, persone e ambienti.*
-    :::column-end:::
-        :::column:::
-       ![Diagramma di Venn che mostra le interazioni tra computer, persone e ambienti](images/mixed-reality-venn-diagram-300px.png)<br> 
-    :::column-end:::
-:::row-end:::
+A questo punto, la combinazione di tutti e tre i**computer di elaborazione, input umano e input ambientale**: consente di creare esperienze reali miste. Lo spostamento attraverso il mondo fisico può tradursi in movimento nel mondo digitale. I limiti nel mondo fisico possono influenzare le esperienze delle applicazioni, ad esempio giochi, nel mondo digitale. Senza input ambientale, le esperienze non possono essere combinate tra le realtà fisiche e digitali.<br>
 
 <br>
 
@@ -72,8 +66,8 @@ Attualmente la maggior parte dei telefoni cellulari sul mercato non ha alcuna ca
 
 <br>
 
-![lo spettro di realtà misto](images/MixedRealitySpectrum.jpg)<br>
-*Spettro della realtà mista*
+![lo spettro di realtà misto](images/mixedrealityspectrum.png)<br>
+*Image: lo spettro della realtà mista*
 
 <br>
 
@@ -91,15 +85,17 @@ Esistono due tipi principali di dispositivi che offrono esperienze di realtà mi
 
 <table>
 <tr>
-<th width="20%"> Caratteristica</th><th width="40%"> Dispositivi olografici</th><th width="40%"> Dispositivi immersivi</th>
+<th width="30%"> Caratteristica</th><th width="35%"> Dispositivi olografici</th><th width="35%"> Dispositivi immersivi</th>
 </tr><tr>
-<td> Dispositivo di esempio</td><td> Microsoft HoloLens<br /> <img alt="Microsoft HoloLens image" width="300" height="169" src="images/mshololens-hero1-whitbg-rgb-300px.png" /></td><td> Ambiente di sviluppo di realtà mista Acer Windows<br /> <img alt="Acer Windows Mixed Reality Development Edition image" width="300" height="169" src="images/acer-windows-mixed-reality-development-edition-headset-300px.jpg" /></td>
+<td><strong>Dispositivo di esempio</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td> Schermo</td><td> <i>Visualizza-fino alla visualizzazione.</i> Consente all'utente di visualizzare l'ambiente fisico indossando la cuffia.</td><td> <i>Visualizzazione opaca.</i> Blocca l'ambiente fisico mentre è in uso l'auricolare.</td>
+<td><strong>Display</strong> (Schermo)</td><td> Visualizza-fino alla visualizzazione. Consente all'utente di visualizzare l'ambiente fisico indossando la cuffia.</td><td> Visualizzazione opaca. Blocca l'ambiente fisico mentre è in uso l'auricolare.</td>
 </tr><tr>
-<td> Spostamento</td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td>
+<td><strong>Spostamento</strong></td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td>
 </tr>
 </table>
+
+
 
 Si noti che, se un dispositivo è connesso o collegato a un PC separato (tramite cavo USB o Wi-Fi) o autonomo (senza tethering), non riflette se un dispositivo è olografico o immersivo. Certamente, le funzionalità che migliorano la mobilità comportano una migliore esperienza e i dispositivi olografici e immersivi possono essere collegati o non collegati.
 
@@ -108,8 +104,8 @@ L'avanzamento tecnologico è quello che ha abilitato esperienze di realtà miste
 
 <br>
 
-![i tipi di dispositivo nello spettro di realtà misto](images/MixedRealitySpectrum-devices.jpg)<br>
-*Dove sono presenti i dispositivi nello spettro della realtà mista*
+![i tipi di dispositivo nello spettro di realtà misto](images/Final_WhatIsMixedReality07.png)<br>
+*Immagine: dove sono presenti i dispositivi nello spettro della realtà mista*
 
 Spesso è preferibile pensare al tipo di esperienza che uno sviluppatore di applicazioni o giochi vuole creare. In genere, le esperienze sono destinate a un punto o a una parte specifica dello spettro. Gli sviluppatori dovrebbero quindi considerare le funzionalità dei dispositivi di destinazione. Ad esempio, le esperienze che si basano sul mondo fisico vengono eseguite in modo ottimale in HoloLens.
 * **Verso sinistra (prossimità della realtà fisica).** Gli utenti rimangono presenti nel proprio ambiente fisico e non sono mai fatti a credere che abbiano lasciato quell'ambiente.

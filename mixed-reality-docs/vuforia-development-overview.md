@@ -3,15 +3,15 @@ title: Uso di Vuforia con Unity
 description: Sfrutta Vuforia per creare applicazioni di realtà miste Windows in Unity.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, marcatori, coordinate, frame di riferimento, rilevamento
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003190"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334474"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Uso del motore Vuforia con Unity
 
@@ -80,7 +80,7 @@ Il motore Vuforia unisce automaticamente le pose dal rilevamento della fotocamer
 Poiché il processo viene gestito automaticamente, non richiede alcuna programmazione da parte dello sviluppatore.
 
 
-**Ecco cosa accade...**
+**Di seguito è riportata una descrizione di alto livello del processo:**
 1. Il Tracker di destinazione di Vuforia riconosce la destinazione
 2. Il rilevamento della destinazione viene quindi inizializzato
 3. La posizione e la rotazione della destinazione vengono analizzate per fornire una stima di posa affidabile per HoloLens

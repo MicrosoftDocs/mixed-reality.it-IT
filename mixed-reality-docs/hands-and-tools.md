@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realtà mista, mani, controller di movimento, interazione, progettazione
-ms.openlocfilehash: 395862fe987244e2af70bb6794caa91e243cd076
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 27d13316bbc4b3b40a1e617d73dd5487c05cb347
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435168"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334443"
 ---
 # <a name="hands-and-motion-controllers"></a>Controller di movimento e Hands
 ## <a name="scenarios"></a>Scenari
@@ -22,7 +22,7 @@ Alcuni scenari specifici potrebbero essere:
 * Esercitazione e guide per i ruoli di lavoro di prima linea per le linee di assemblaggio Factory
 * Sviluppo di strumenti professionali per assistere e educare professionisti medici  
 * Uso di oggetti virtuali 3D per decorare il mondo reale o creare un secondo mondo 
-* Creazione di servizi e giochi location based usando il mondo reale come sfondo
+* Creazione di servizi e giochi basati sul percorso usando il mondo reale come sfondo
 
 <br>
 
@@ -39,7 +39,7 @@ Alcuni scenari specifici potrebbero essere:
     :::column:::
        [![punto e commit con hands](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
         ### <a name="point-and-commit-with-handspoint-and-commitmdbr"></a>[Puntamento e commit con le mani](point-and-commit.md)<br>
-        Questa modalità consente agli utenti di interagire con gli ologrammi a distanza. Consente agli utenti di sfruttare al meglio i dintorni. Gli utenti possono posizionare gli ologrammi ovunque e possono comunque accedervi da qualsiasi distanza. I modelli e i movimenti mentali per controllare e modificare gli ologrammi 2D e 3D sono sincronizzati con quelli di manipolazione diretta.
+        Questa modalità consente agli utenti di interagire con gli ologrammi a distanza. Consente agli utenti di sfruttare al meglio i dintorni. Gli utenti possono posizionare gli ologrammi ovunque e continuare ad accedervi da qualsiasi distanza. I modelli e i movimenti mentali per controllare e modificare gli ologrammi 2D e 3D sono sincronizzati con quelli di manipolazione diretta.
     :::column-end:::
     :::column:::
        [controller di movimento ![](images/hands-and-controllers-motion-controllers.jpg)](motion-controllers.md)<br>

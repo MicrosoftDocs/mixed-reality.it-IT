@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064297"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334355"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. esplorazione delle opzioni di input avanzate
 
@@ -23,9 +23,7 @@ In questa esercitazione vengono esplorate diverse opzioni di input avanzate per 
 - Usare le mani tracciate per la panoramica delle trame e degli oggetti 3D con le mani rilevate
 - Sfruttare le funzionalità di rilevamento degli occhi di HoloLens 2 per selezionare gli oggetti
 
-## <a name="instructions"></a>Istruzioni
-
-### <a name="enabling-voice-commands"></a>Abilitazione dei comandi vocali
+## <a name="enabling-voice-commands"></a>Abilitazione dei comandi vocali
 
 In questa sezione vengono implementati due comandi vocali. In primo luogo, la possibilità di abilitare o disabilitare il pannello diagnostica frequenza frame viene introdotta con la dicitura "Disabilita diagnostica". In secondo luogo, viene analizzata la possibilità di riprodurre un suono con un comando Voice. I profili e le impostazioni di MRTK responsabili della configurazione dei comandi vocali vengono esaminati per primi.
 
@@ -108,7 +106,7 @@ In questa sezione vengono implementati due comandi vocali. In primo luogo, la po
 
     ![Lesson5 Chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>Il movimento di panoramica
+## <a name="the-pan-gesture"></a>Il movimento di panoramica
 
 In questa sezione verrà illustrato come utilizzare il gesto di panoramica. Questa operazione è utile per lo scorrimento usando il dito o la mano per scorrere il contenuto. È anche possibile usare il movimento Pan per ruotare gli oggetti, scorrere una raccolta di oggetti 3D o anche per scorrere un'interfaccia utente 2D.
 
@@ -194,7 +192,7 @@ In questa sezione verrà illustrato come utilizzare il gesto di panoramica. Ques
 
     ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>Tracciamento oculare
+## <a name="eye-tracking"></a>Tracciamento oculare
 
 In questa sezione verrà illustrato come abilitare la registrazione degli occhi nella demo. Le voci di menu 3D verranno spinte lentamente quando vengono osservate con lo sguardo. Attiveremo inoltre un effetto divertente al momento della selezione dell'oggetto fissato.
 

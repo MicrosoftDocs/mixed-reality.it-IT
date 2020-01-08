@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064261"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334364"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. posizionamento del contenuto dinamico e utilizzo dei risolutori
 
@@ -23,9 +23,7 @@ Gli ologrammi entrano a far parte di HoloLens 2 quando seguono in modo intuitivo
 * Usare i risolutori per fare in modo che una raccolta di pulsanti segua l'utente
 * Usare i risolutori per fare in modo che un oggetto gioco segua le mani tracciate dell'utente
 
-## <a name="instructions"></a>Istruzioni
-
-### <a name="location-of-solvers-in-the-mrtk"></a>Posizione dei risolutori in MRTK
+## <a name="location-of-solvers-in-the-mrtk"></a>Posizione dei risolutori in MRTK
 
  Per trovare i resolver disponibili nel progetto, cercare nella cartella MRTK SDK (cartella MixedRealityToolkit. SDK). Nella cartella Utilities viene visualizzata la cartella solvers, come illustrato nell'immagine seguente.
 
@@ -34,7 +32,7 @@ Gli ologrammi entrano a far parte di HoloLens 2 quando seguono in modo intuitivo
 >[!NOTE]
 >In questa lezione, verrà esaminata solo l'implementazione del Risolutore di Orbital e del Risolutore RadialView. Per altre informazioni sull'intera gamma di risolutori disponibili in MRTK, vedere: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
 
-### <a name="use-a-solver-to-follow-the-user"></a>Usare un risolutore per seguire l'utente
+## <a name="use-a-solver-to-follow-the-user"></a>Usare un risolutore per seguire l'utente
 
 L'obiettivo di questo capitolo è quello di migliorare la raccolta dei pulsanti creata in precedenza in modo che segua la direzione dello sguardo dell'utente. Nella versione precedente di MRTK e HoloToolkit è stato definito funzionalità Tagalong.
 
@@ -50,13 +48,14 @@ L'obiettivo di questo capitolo è quello di migliorare la raccolta dei pulsanti 
     >Quando si aggiunge il componente Orbital si noterà che il sistema aggiunge anche il componente SolverHandler, che è un componente obbligatorio.
 
 3. Per configurare la raccolta di pulsanti in modo che segua l'utente, è necessario implementare le regolazioni seguenti (vedere l'immagine seguente):
+
     * Nello script Orbital impostare l'elenco a discesa tipo orientamento su solo imbardata. In questo modo, un solo asse dell'oggetto ruota seguendo l'utente.
     * Imposta l'offset locale su 0 in tutti gli assi. Impostare offset globale su x = 0, y =-0,1 e z = 0,6. Questo blocca lo spostamento dell'oggetto in modo che, quando l'utente cambia l'altezza, l'oggetto rimanga a un'altezza fissa nell'ambiente fisico, consentendo allo stesso tempo di seguire l'utente mentre l'utente si sposta sull'ambiente. Questi valori possono essere modificati per ottenere un'ampia varietà di comportamenti.
     * Per un comportamento successivo, in base al quale i pulsanti seguono solo la visualizzazione dell'utente dopo che l'utente ha trasformato la propria intestazione in modo sufficientemente lungo, è possibile selezionare la casella di controllo Usa angolo di avanzamento per l'offset globale (Nota: questo titolo può essere troncato in alcune schermate, come nell'immagine seguente). Ad esempio, per fare in modo che l'oggetto segua l'utente solo ogni 90 gradi, impostare il numero di passaggi uguale a 4 (contrassegnato da una freccia verde nell'esempio seguente).
 
     ![Immagine lezione 3 capitolo 2 passaggio 3](images/Lesson3_chapter2_step3im.PNG)
 
-### <a name="enabling-objects-to-follow-tracked-hands"></a>Abilitazione degli oggetti per seguire le mani tracciate
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Abilitazione degli oggetti per seguire le mani tracciate
 
 In questa sezione si configurerà l'oggetto Game Cube creato in precedenza per seguire le mani rilevate dall'utente usando il Risolutore RadialView.
 

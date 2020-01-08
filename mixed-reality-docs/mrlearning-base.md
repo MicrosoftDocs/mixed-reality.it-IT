@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 19456a9cc33dc86b1e31323547aa2685949d8044
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438397"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334340"
 ---
 # <a name="1-overview-and-objectives"></a>1. Panoramica e obiettivi
 
@@ -46,5 +46,8 @@ ms.locfileid: "73438397"
 * Windows 10 SDK 10.0.18362.0 o versione successiva
 * Funzionalità di C# programmazione di base
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
+
+>[!IMPORTANT]
+>Questa serie di esercitazioni richiede <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e la versione consigliata è Unity 2019.1.14. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
 
 [Lezione successiva: 2. inizializzazione del progetto e della prima applicazione](mrlearning-base-ch1.md)
