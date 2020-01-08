@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539697"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502672"
 ---
 # <a name="scene-understanding"></a>Comprensione della scena
 
-La comprensione delle scene fornisce agli sviluppatori di realtà mista una rappresentazione dell'ambiente di alto livello strutturata progettata per rendere intuitivo lo sviluppo di applicazioni compatibili con l'ambiente. La comprensione della scena consente di combinare la potenza dei runtime di realtà mista esistenti, ad esempio il [mapping spaziale](spatial-mapping.md) meno strutturato e i nuovi runtime basati su intelligenza artificiale. Combinando queste tecnologie, la comprensione della scena genera rappresentazioni di ambienti 3D simili a quelle che potrebbero essere state usate nei Framework, ad esempio Unity o ARKit/ARCore. Il punto di ingresso comprensione della scena inizia con un osservatore della scena che viene chiamato dall'applicazione per calcolare una nuova scena. Oggi la tecnologia è in grado di generare tre categorie di oggetti distinti ma correlati: mesh dell'ambiente impermeabile semplificate che derivano la struttura dello spazio planare senza confusione, aree del piano per la selezione host che chiameremo quad e uno snapshot del [ mesh di mapping spaziale](spatial-mapping.md) che è allineato con i quad o i dati stagni che emergiamo.
+La comprensione delle scene fornisce agli sviluppatori di realtà mista una rappresentazione dell'ambiente di alto livello strutturata progettata per rendere intuitivo lo sviluppo di applicazioni compatibili con l'ambiente. Questa operazione viene eseguita combinando la potenza dei runtime di realtà mista esistenti, ad esempio il [mapping spaziale](spatial-mapping.md) meno strutturato e con i nuovi runtime basati su intelligenza artificiale. Combinando queste tecnologie, la comprensione della scena genera rappresentazioni di ambienti 3D simili a quelle che potrebbero essere state usate nei Framework, ad esempio Unity o ARKit/ARCore. Il punto di ingresso comprensione della scena inizia con un Observer della scena, che viene chiamato dall'applicazione per calcolare una nuova scena. Attualmente, la tecnologia è in grado di generare tre categorie di oggetti distinti ma correlati: mesh dell'ambiente impermeabile semplificate che derivano la struttura dello spazio planare senza confusione, aree del piano per la selezione host che vengono chiamati quad e uno snapshot della mesh di [mapping spaziale](spatial-mapping.md) allineata con i quad o i dati stagni che emergiamo.
 
 ![Mesh di mapping spaziale, superfici planari con etichetta, mesh impermeabile](images/SUScenarios.png)
 
@@ -37,7 +37,7 @@ Se non si ha un dispositivo e si vuole accedere a scene di esempio per provare a
 
 ### <a name="sdk"></a>SDK
 
-Per informazioni dettagliate su come sviluppare per la scena understandiing, per informazioni dettagliate sul funzionamento della comprensione della scena e su come svilupparle, vedere la pagina relativa alla panoramica della documentazione [Panoramica sull'SDK](scene-understanding-SDK.md) .
+Per informazioni dettagliate su come sviluppare per la comprensione della scena o per informazioni dettagliate sul funzionamento della comprensione della scena e su come svilupparle, vedere la sezione relativa alla panoramica della documentazione [Panoramica sull'SDK](scene-understanding-SDK.md) .
 
 
 ### <a name="sample"></a>Esempio
@@ -73,9 +73,9 @@ Per informazioni dettagliate su come sviluppare per la scena understandiing, per
 
 <br>
 
-Molti degli scenari principali per le applicazioni compatibili con l'ambiente (posizionamento, occlusione, fisica e così via) sono indirizzabili sia dal mapping spaziale che dalla comprensione della scena, in questa sezione vengono evidenziate queste differenze. Una differenza fondamentale tra la comprensione della scena e il mapping spaziale è un compromesso tra precisione massima e latenza alla struttura e alla semplicità. Se l'applicazione richiede la latenza più bassa possibile e richiede solo triangoli mesh, sarà necessario accedere direttamente al mapping spaziale. Tuttavia, se si esegue un'elaborazione di livello superiore, è possibile passare alla scena che comprende il modello deve fornire un superset di funzionalità. Si noti inoltre che, poiché la comprensione della scena fornisce la mesh di mapping spaziale come parte della relativa rappresentazione, sarà sempre possibile accedere ai dati di mapping spaziali più completi e accurati.
+Molti degli scenari principali per le applicazioni compatibili con l'ambiente (posizionamento, occlusione, fisica e così via) sono indirizzabili sia dal mapping spaziale che dalla comprensione della scena e in questa sezione vengono evidenziate queste differenze. Una differenza fondamentale tra la comprensione della scena e il mapping spaziale è un compromesso tra precisione massima e latenza alla struttura e alla semplicità. Se l'applicazione richiede la latenza più bassa possibile e i triangoli mesh che solo si vuole accedere direttamente al mapping spaziale ma si sta eseguendo un'elaborazione di livello superiore, è possibile passare al modello di comprensione della scena come dovrebbe fornire con un superset di funzionalità. Si noti inoltre che, poiché la comprensione della scena fornisce la mesh di mapping spaziale come parte della relativa rappresentazione, sarà sempre possibile accedere ai dati di mapping spaziali più completi e accurati.
 
- Le sezioni seguenti rivisitano gli scenari di mapping spaziale principali nel contesto della nuova scena Understanding SDK.
+Le sezioni seguenti rivisitano gli scenari di mapping spaziale principali nel contesto della nuova scena Understanding SDK.
 
 ### <a name="placement"></a>Posizionamento
 
@@ -101,13 +101,13 @@ Se l'applicazione intende inserire ologrammi 2D o 3D in strutture rigide dell'am
 
 ### <a name="occlusion"></a>Occlusione
 
-L' [occlusione del mapping spaziale](spatial-mapping.md#occlusion) rimane il modo meno latente per acquisire lo stato in tempo reale dell'ambiente. Sebbene ciò possa risultare utile per fornire l'occlusione in scenari estremamente dinamici, è consigliabile prendere in considerazione la comprensione della scena per l'occlusione per diversi motivi. Se si usa la mesh di mapping spaziale generata dalla comprensione della scena, è possibile richiedere i dati dal mapping spaziale che non vengono archiviati nella cache locale e pertanto non sono disponibili nelle API di percezione. Se si usa il mapping spaziale per l'occlusione, le mesh stagne forniranno un valore aggiuntivo, in particolare il completamento della struttura dello spazio non analizzata.
+L' [occlusione del mapping spaziale](spatial-mapping.md#occlusion) rimane il modo meno latente per acquisire lo stato in tempo reale dell'ambiente. Sebbene ciò possa risultare utile per fornire l'occlusione in scenari estremamente dinamici, è consigliabile prendere in considerazione la comprensione della scena per l'occlusione per diversi motivi. Se si usa la mesh di mapping spaziale generata dalla comprensione della scena, è possibile richiedere i dati dal mapping spaziale che non verranno archiviati nella cache locale e pertanto non disponibili nelle API di percezione. Se si usa il mapping spaziale per l'occlusione, le mesh stagne forniranno un valore aggiuntivo, in particolare il completamento della struttura dello spazio non analizzata.
 
-Se i requisiti possono tollerare un aumento della latenza della comprensione della scena, gli sviluppatori di applicazioni devono prendere in considerazione l'uso della scena per comprendere la mesh stagna e presumibilmente la mesh di mapping spaziale in Unison con le rappresentazioni planari. Questo offrirebbe una "migliore di entrambi i mondi", in cui l'occlusione stagna semplificata è sposata con una geometria non piana più precisa che fornisce le mappe di occlusione più realistiche possibili.
+Se i requisiti possono tollerare un aumento della latenza della comprensione della scena, gli sviluppatori di applicazioni devono prendere in considerazione l'uso della scena per comprendere la mesh stagna e presumibilmente la mesh di mapping spaziale in Unison con le rappresentazioni planari. Questo potrebbe offrire uno scenario "migliore di entrambi i mondi", in cui l'occlusione stagna semplificata è sposata con una geometria non piana più precisa che fornisce le mappe di occlusione più realistiche possibili.
 
 ### <a name="physics"></a>Fisica
 
-La comprensione della scena genera maglie stagne che compongono lo spazio con la semantica in modo specifico per soddisfare molte limitazioni alla fisica imposte dalle mesh di mapping spaziale. Le strutture stagne assicurano che i cast dei raggi fisici vengano sempre raggiunti e la scomposizione semantica consente la generazione più semplice di mesh NAV per la navigazione interna. Come descritto nella sezione sull' [occlusione](#occlusion) per la creazione di una scena con EnableSceneObjectMeshes e EnableWorldMesh, viene prodotta la mesh con la massima fisicità più completa possibile. La proprietà stagne della mesh dell'ambiente impedisce che gli hit test abbiano esito negativo e che i dati della mesh garantiscano che la fisica interagisca con tutti gli oggetti nella scena e non solo con la struttura della stanza.
+La comprensione della scena genera maglie stagne che compongono lo spazio con la semantica, in particolare per rispondere a molte limitazioni per la fisica che i mesh di mapping spaziale impongono. Le strutture stagne assicurano che i cast dei raggi fisici vengano sempre raggiunti e la scomposizione semantica consente la generazione più semplice di mesh NAV per la navigazione interna. Come descritto nella sezione relativa all' [occlusione](#occlusion), la creazione di una scena con EnableSceneObjectMeshes e EnableWorldMesh produrrà la mesh più fisicamente completa possibile. La proprietà stagne della mesh dell'ambiente impedisce che gli hit test abbiano esito negativo e che i dati della mesh garantiscano che la fisica interagisca con tutti gli oggetti nella scena e non solo con la struttura della stanza.
 
 ### <a name="navigation"></a>Navigazione
 

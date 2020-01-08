@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realtà mista, sviluppo, Guida introduttiva, nuovo progetto
-ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 99c72f2d9d900c8a05fb7d8b9b8de10d657fdd13
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437117"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502652"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurare un nuovo progetto Unity per la realtà mista di Windows 
 
@@ -29,7 +29,7 @@ Per fare riferimento alla realtà mista di Windows, è necessario prima di tutto
 5. Imposta **tipo di compilazione** su **D3D**
 6. Impostare **UWP SDK** sull' **ultima versione installata**
 
-È quindi necessario informare Unity che l'app che si sta tentando di esportare deve creare una [visualizzazione immersiva](app-views.md) anziché una visualizzazione 2D. Questa operazione viene eseguita abilitando la "Virtual Reality supported":
+È quindi necessario informare Unity che l'app che si sta tentando di esportare deve creare una [visualizzazione immersiva](app-views.md) anziché una visualizzazione 2D. A tale scopo, abilitare "Virtual Reality supported":
 1. Dalla finestra **impostazioni di compilazione...** aprire **lettore impostazioni...**
 2. Selezionare le **impostazioni per** la scheda piattaforma UWP (Universal Windows Platform)
 3. Espandere il gruppo di **impostazioni di XR**
@@ -39,7 +39,7 @@ Per fare riferimento alla realtà mista di Windows, è necessario prima di tutto
 impostazioni della qualità di ![Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Impostazioni di Unity XR*
 
-L'app ora può eseguire il rendering olografico di base e l'input spaziale. Per approfondire e sfruttare alcune funzionalità, l'app deve dichiarare le funzionalità appropriate nel manifesto. Le dichiarazioni di manifesto possono essere apportate in Unity, in modo che vengano incluse in ogni esportazione successiva del progetto. L'impostazione si trova in **Impostazioni lettore > impostazioni per piattaforma UWP (Universal Windows Platform) > impostazioni di pubblicazione > funzionalità**. Le funzionalità applicabili per l'abilitazione di API Unity utilizzate comunemente per la realtà mista sono:
+L'app ora può eseguire il rendering olografico di base e l'input spaziale. Per approfondire e sfruttare alcune funzionalità, l'app deve dichiarare le funzionalità appropriate nel manifesto. Le dichiarazioni di manifesto possono essere apportate in Unity, in modo che vengano incluse in ogni esportazione successiva del progetto. Le impostazioni sono disponibili in **Impostazioni lettore > impostazioni per piattaforma UWP (Universal Windows Platform) > impostazioni di pubblicazione > funzionalità**. Le funzionalità applicabili per l'abilitazione di API Unity utilizzate comunemente per la realtà mista sono:
 
 |  Capability  |  API che richiedono funzionalità | 
 |----------|----------|
@@ -69,7 +69,7 @@ Una volta abilitata la casella di controllo "Virtual Reality supported", il comp
 
 Se l'app è destinata a HoloLens in modo specifico, è necessario modificare alcune impostazioni per ottimizzare le visualizzazioni trasparenti del dispositivo, in modo che l'app venga visualizzata nel mondo fisico:
 1. Nella **gerarchia**selezionare la **fotocamera principale**
-2. Nel pannello **Inspector** impostare la **posizione** di trasformazione su 0, 0 **, 0,** in modo che il percorso del titolo Users inizi in Unity World Origin.
+2. Nel pannello **Inspector** impostare la **posizione** di trasformazione su 0, 0 **, 0,** in modo che la posizione della testa dell'utente inizi in corrispondenza dell'origine mondiale di Unity.
 3. Modificare i **flag cancellati** in **colore a tinta unita**.
 4. Modificare il colore di **sfondo** in **RGBA 0**, 0, 0, 0. Il nero viene visualizzato come trasparente in HoloLens.
 5. Modificare i **piani di ritaglio in prossimità** del [HoloLens consigliato](camera-in-unity.md#clip-planes) 0,85 (contatori).
@@ -78,5 +78,5 @@ Se si elimina e si crea una nuova fotocamera, assicurarsi che la fotocamera sia 
 
 
 ## <a name="see-also"></a>Vedi anche
-* [Toolkit di realtà mista V2](mrtk-getting-started.md)
+* [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Panoramica sullo sviluppo Unity](unity-development-overview.md)

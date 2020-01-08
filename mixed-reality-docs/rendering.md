@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendering, ologramma
-ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 544e43ced57309cfe2628cbea65d07e94563eb41
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182031"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503819"
 ---
 # <a name="rendering"></a>Rendering
 
@@ -42,7 +42,7 @@ Il rendering olografico consente all'applicazione di creare un ologramma in una 
 
 ## <a name="holographic-rendering"></a>Rendering olografico
 
-La chiave per il rendering olografico è sapere se si sta eseguendo il rendering in una visualizzazione di tipo See-through, ad esempio HoloLens, che consente all'utente di visualizzare sia il mondo fisico che gli ologrammi oppure un display opaco come un auricolare immersivo di Windows mista che si blocca il mondo.
+La chiave per il rendering olografico è sapere se si sta eseguendo il rendering in una visualizzazione di tipo See-through, ad esempio HoloLens, che consente all'utente di visualizzare sia il mondo fisico che gli ologrammi oppure un display opaco come un auricolare immersivo di Windows a realtà mista che blocca il mondo.
 
 I dispositivi con **schermi See-through**, ad esempio [HoloLens](hololens-hardware-details.md), aggiungono luce al mondo. I pixel neri sono completamente trasparenti, mentre i pixel più luminosi sono sempre più opachi. Poiché la luce dagli schermi viene aggiunta alla luce dal mondo reale, i pixel bianchi sono parzialmente traslucidi.
 
@@ -52,11 +52,11 @@ I dispositivi con **visualizzazioni opache**, come gli [auricolari ad alta realt
 
 ## <a name="predicted-rendering-parameters"></a>Parametri di rendering stimati
 
-Gli auricolari con realtà mista (HoloLens e auricolari immersivi) tengono continuamente traccia della posizione e dell'orientamento dell'intestazione dell'utente in relazione all'ambiente circostante. Quando l'applicazione inizia a preparare il frame successivo, il sistema prevede la posizione in cui si troverà la testa dell'utente nel momento esatto in cui il frame viene visualizzato sullo schermo. In base a questa stima, il sistema calcola le trasformazioni di visualizzazione e proiezione da usare per quel frame. **Per produrre risultati corretti, è necessario che l'applicazione utilizzi queste trasformazioni**. Se le trasformazioni fornite dal sistema non vengono usate, l'immagine risultante non verrà allineata al mondo reale, causando fastidio all'utente.
+Gli auricolari con realtà mista (HoloLens e auricolari immersivi) tengono continuamente traccia della posizione e dell'orientamento dell'intestazione dell'utente in relazione all'ambiente circostante. Quando l'applicazione inizia a preparare il frame successivo, il sistema prevede la posizione in cui si troverà la testa dell'utente nel momento esatto in cui il frame viene visualizzato sullo schermo. In base a questa stima, il sistema calcola la visualizzazione e le trasformazioni di proiezione da usare per quel frame. **Per produrre risultati corretti, è necessario che l'applicazione utilizzi queste trasformazioni**. Se le trasformazioni fornite dal sistema non vengono usate, l'immagine risultante non verrà allineata al mondo reale, causando fastidio all'utente.
 
 Si noti che per prevedere in modo accurato quando un nuovo frame raggiungerà gli schermi, il sistema esegue costantemente la misurazione della latenza end-to-end efficace della pipeline di rendering dell'applicazione. Mentre il sistema si adatta alla lunghezza della pipeline di rendering, è possibile migliorare la stabilità dell'ologramma mantenendo la pipeline più breve possibile.
 
-Le applicazioni che utilizzano tecniche avanzate per aumentare la stima del sistema possono eseguire l'override della vista di sistema e delle trasformazioni di proiezione. Queste applicazioni devono comunque usare le trasformazioni fornite dal sistema come base per le trasformazioni personalizzate per produrre risultati significativi.
+Le applicazioni che utilizzano tecniche avanzate per aumentare la stima del sistema possono eseguire l'override della vista di sistema e delle trasformazioni di proiezione. Queste applicazioni devono comunque usare le trasformazioni fornite dal sistema come base per le trasformazioni personalizzate in modo da produrre risultati significativi.
 
 ## <a name="other-rendering-parameters"></a>Altri parametri di rendering
 
@@ -74,7 +74,7 @@ Per informazioni di basso livello sul suo argomento, vedere l'articolo relativo 
 
 ## <a name="holographic-cameras"></a>Fotocamere olografiche
 
-La realtà mista di Windows introduce il concetto di **fotocamera olografica**. Le fotocamere olografiche sono simili alla fotocamera tradizionale presente nei testi grafici 3D: definiscono le proprietà estrinseche (posizione e orientamento) e le proprietà intrinseche della fotocamera. (Ad esempio, il campo di visualizzazione viene usato per visualizzare una scena 3D virtuale). Diversamente dalle fotocamere 3D tradizionali, l'applicazione non è in grado di controllare la posizione, l'orientamento e le proprietà intrinseche della fotocamera. La posizione e l'orientamento della fotocamera olografica vengono invece controllati in modo implicito dal movimento dell'utente. Lo spostamento dell'utente viene inoltrato all'applicazione in base ai frame tramite una trasformazione della visualizzazione. Analogamente, le proprietà intrinseche della fotocamera sono definite dall'ottica calibrata del dispositivo e inoltrate frame per frame tramite la trasformazione di proiezione.
+La realtà mista di Windows introduce il concetto di **fotocamera olografica**. Le fotocamere olografiche sono simili alla fotocamera tradizionale presente nei testi grafici 3D; definiscono le proprietà estrinseche (posizione e orientamento) e intrinseche della fotocamera. (Ad esempio, il campo di visualizzazione viene usato per visualizzare una scena 3D virtuale). Diversamente dalle fotocamere 3D tradizionali, l'applicazione non è in grado di controllare la posizione, l'orientamento e le proprietà intrinseche della fotocamera. La posizione e l'orientamento della fotocamera olografica vengono invece controllati in modo implicito dal movimento dell'utente. Lo spostamento dell'utente viene inoltrato all'applicazione in base ai frame tramite una trasformazione della visualizzazione. Analogamente, le proprietà intrinseche della fotocamera sono definite dall'ottica calibrata del dispositivo e inoltrate frame per frame tramite la trasformazione di proiezione.
 
 In generale, l'applicazione eseguirà il rendering di una singola fotocamera stereo. Tuttavia, un ciclo di rendering affidabile supporta più fotocamere e supporta sia le fotocamere mono che stereo. Ad esempio, il sistema potrebbe chiedere all'applicazione di eseguire il rendering da una prospettiva alternativa quando l'utente attiva una funzionalità come l' [acquisizione di realtà mista](mixed-reality-capture.md) (MRC), a seconda della forma dell'auricolare in questione. Le applicazioni in grado di supportare più fotocamere li ottengono [scegliendo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) il [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) di fotocamere che possono supportare.
 
@@ -92,7 +92,7 @@ Quando si esegue il rendering di MRIs medicali o di volumi di progettazione in 3
 ## <a name="supported-resolutions-on-hololens-2"></a>Risoluzioni supportate su HoloLens 2
 
 * Le dimensioni correnti e massime della destinazione di rendering supportate sono proprietà della [configurazione della vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). Per impostazione predefinita, HoloLens 2 è impostato sulla dimensione massima della destinazione di rendering, che è 1440x936.
-* Le app possono modificare le dimensioni dei buffer di destinazione di rendering chiamando il metodo RequestRenderTargetSize per richiedere una nuova dimensione della destinazione di rendering. Verranno scelte nuove dimensioni della destinazione di rendering che soddisfano o superano le dimensioni richieste della destinazione di rendering. Questa API modifica la dimensione del buffer di destinazione di rendering, che richiede la riallocazione della memoria sulla GPU. Le implicazioni di questo esempio includono: le dimensioni della destinazione di rendering possono essere ridimensionate per ridurre l'utilizzo della memoria sulla GPU e questo metodo non deve essere chiamato a frequenza elevata.
+* Le app possono modificare le dimensioni dei buffer di destinazione di rendering chiamando il metodo RequestRenderTargetSize per richiedere una nuova dimensione della destinazione di rendering. Verranno scelte nuove dimensioni della destinazione di rendering, che soddisfano o superano le dimensioni richieste della destinazione di rendering. Questa API modifica la dimensione del buffer di destinazione di rendering, che richiede la riallocazione della memoria sulla GPU. Le implicazioni di questo esempio includono: le dimensioni della destinazione di rendering possono essere ridimensionate per ridurre l'utilizzo della memoria sulla GPU e questo metodo non deve essere chiamato a frequenza elevata.
 * Le app possono comunque modificare le dimensioni del viewport nello stesso modo in cui sono state effettuate per HoloLens 1. Questa operazione non comporta la riallocazione della memoria sulla GPU, quindi può essere modificata a frequenza elevata, ma non può essere usata per ridurre le richieste di memoria sulla GPU.
 * La dimensione più bassa del viewport supportata in HoloLens 2 è 634x412. Si tratta di un ViewportScaleFactor di circa 0,44 quando la dimensione di destinazione di rendering predefinita è in uso.
 * Se viene fornita una dimensione della destinazione di rendering minore della dimensione del viewport supportata più bassa, il fattore di scala del viewport verrà ignorato.

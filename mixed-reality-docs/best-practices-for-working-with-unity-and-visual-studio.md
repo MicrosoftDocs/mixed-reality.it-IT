@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Deploy, Unity, Visual Studio, HoloLens, HoloLens 2, Full-Headset
-ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926544"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502632"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Procedure consigliate per l'utilizzo di Unity e Visual Studio
 
@@ -26,10 +26,10 @@ Il supporto per il back-end di scripting .NET in Unity è stato deprecato in Uni
    - Aprire **Virus & Threat Protection** nell'app impostazioni di Windows 10
    - Selezionare **Gestisci impostazioni** in **virus & impostazioni di protezione dalle minacce**
    - Selezionare **Aggiungi o Rimuovi esclusioni** nella sezione **esclusioni**
-   - Fare clic su **Aggiungi un'esclusione** e selezionare la cartella che contiene il codice del progetto Unity e gli output di compilazione
+   - Fare clic su **Aggiungi un'esclusione** e selezionare la cartella contenente il codice del progetto Unity e gli output di compilazione
 3) Usare un'unità SSD per la compilazione
 
-Per altre informazioni, vedere [ottimizzazione dei tempi di compilazione per IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Vedere anche [debug per il back-end di scripting di IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Per altre informazioni, vedere [ottimizzazione dei tempi di compilazione per IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Esaminare inoltre [il debug nel back-end di scripting di IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 Si consiglia inoltre di installare l' [estensione *UnityScriptAnalyzer* di Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Questo strumento analizza gli script Unity C# per il codice che può essere scritto in modo più ottimizzato.
 
@@ -45,7 +45,7 @@ Scarica [Visual Studio Tools per Unity](https://docs.microsoft.com/visualstudio/
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Esporre C# le variabili di classe per semplificare l'ottimizzazione
 
-Esistono due modi per esporre le variabili di classe. Il modo consigliato per eseguire questa operazione consiste nell'aggiungere l'attributo [SerializeField] alle variabili private. In questo modo, è possibile accedervi dall'editor, ma non esposte a livello di codice.  L'altra opzione consiste nel rendere C# pubbliche le variabili di classe per esporle nell'interfaccia utente dell'editor. 
+Esistono due modi per esporre le variabili di classe. Il modo consigliato consiste nell'aggiungere l'attributo [SerializeField] alle variabili private. In questo modo, è possibile accedervi dall'editor, ma non esposte a livello di codice.  L'altra opzione consiste nel rendere C# pubbliche le variabili di classe per esporle nell'interfaccia utente dell'editor. 
 
 Entrambi gli approcci consentono di modificare facilmente le variabili durante la riproduzione in-Editor. Questa operazione è particolarmente utile per l'ottimizzazione delle proprietà meccaniche di interazione.
 
