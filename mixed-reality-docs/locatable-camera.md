@@ -6,16 +6,16 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: fotocamera, hololens, fotocamera a colori, anteriore, hololens 2, CV, visione artificiale, fiduciale, marcatori, codice a matrice, QR, foto, video
-ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f4c62a1c2ad7cf4de569e815ffc405fbcb06744a
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438510"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597624"
 ---
 # <a name="locatable-camera"></a>Fotocamera locatable
 
-HoloLens include una fotocamera riguardante il mondo montata sulla parte anteriore del dispositivo, che consente alle app di visualizzare i dati visualizzati dall'utente. Gli sviluppatori possono accedere e controllare la fotocamera in modo analogo alle fotocamere a colori su smartphone, portatili o desktop. Le stesse API Windows [Media Capture](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.mediacapture.aspx) e Windows Media Foundation che funzionano su lavoro per dispositivi mobili e desktop in HoloLens. Unity [ha inoltre eseguito il wrapper di queste API Windows](locatable-camera-in-unity.md) per astrarre un semplice utilizzo della fotocamera in HoloLens per attività quali l'esecuzione di foto e video regolari (con o senza ologrammi) e l'individuazione della posizione della fotocamera in e della prospettiva sulla scena.
+HoloLens include una fotocamera riguardante il mondo montata sulla parte anteriore del dispositivo, che consente alle app di visualizzare i dati visualizzati dall'utente. Gli sviluppatori possono accedere e controllare la fotocamera, proprio come per le fotocamere a colori su smartphone, portatili o desktop. Le stesse API Windows [Media Capture](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.mediacapture.aspx) e Windows Media Foundation che funzionano su lavoro per dispositivi mobili e desktop in HoloLens. Unity [ha inoltre eseguito il wrapper di queste API Windows](locatable-camera-in-unity.md) per astrarre un semplice utilizzo della fotocamera in HoloLens per attività quali l'esecuzione di foto e video regolari (con o senza ologrammi) e l'individuazione della posizione della fotocamera in e della prospettiva sulla scena.
 
 ## <a name="device-camera-information"></a>Informazioni sulla fotocamera del dispositivo
 
@@ -27,7 +27,7 @@ HoloLens include una fotocamera riguardante il mondo montata sulla parte anterio
 
   |  Video  |  Preview  |  Ancora  |  Campo di visualizzazione orizzontale (H-FOV) |  Utilizzo suggerito | 
   |----------|----------|----------|----------|----------|
-  |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (modalità predefinita con stabilizzazione video) | 
+  |  1280 x 720 |  1280 x 720 |  1280 x 720 |  45deg  |  (modalità predefinita con stabilizzazione video) | 
   |  N/D |  N/D |  2048x1152 |  67deg |  Immagine ancora a risoluzione massima | 
   |  1408x792 |  1408x792 |  1408x792 |  48deg |  Risoluzione Overscan (riempimento) prima della stabilizzazione del video | 
   |  1344x756 |  1344x756 |  1344x756 |  67deg |  Modalità video FOV grande con overscan | 
@@ -50,7 +50,7 @@ HoloLens include una fotocamera riguardante il mondo montata sulla parte anterio
   | Videoconferenza, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64,69                            | Conferenze video, scenari con lunga durata |
   | Videoconferenza, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64,69                            | Conferenze video, scenari con lunga durata |
   | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
-  | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
+  | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 1280 x 720  | 1280 x 720  | 1280 x 720  | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
   | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
   | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
   | Videoconferenza, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15, 30       | 64,69                            | Conferenze video, scenari con lunga durata |
@@ -69,11 +69,11 @@ Quando HoloLens acquisisce foto e video, i frame acquisiti includono il percorso
 
 "La fotocamera" altrove nella documentazione di HoloLens può riferirsi alla "fotocamera virtuale del gioco" (tronco a cui viene eseguito il rendering dell'app). Se non indicato diversamente, "camera" in questa pagina si riferisce alla fotocamera a colori RGB del mondo reale.
 
-In questa pagina vengono illustrati i dettagli relativi all'uso della classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) , tuttavia sono disponibili anche API per il pull di funzioni intrinseche e posizioni della fotocamera con [attributi Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Per ulteriori informazioni, fare riferimento all' [esempio di rilevamento del volto olografico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
+I dettagli in questa pagina riguardano l'uso della classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) . Tuttavia, esistono anche API per eseguire il pull di funzioni intrinseche e posizioni della fotocamera usando [gli attributi Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Per ulteriori informazioni, fare riferimento all' [esempio di rilevamento del volto olografico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
 
 ### <a name="images-with-coordinate-systems"></a>Immagini con sistemi di coordinate
 
-Ogni fotogramma immagine (foto o video) include un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) radice alla fotocamera al momento dell'acquisizione a cui è possibile accedere usando la proprietà [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) di [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Ogni frame contiene inoltre una descrizione del modello di obiettivo della fotocamera che è possibile trovare nella proprietà [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Insieme, queste trasformazioni definiscono per ogni pixel un raggio nello spazio 3D che rappresenta il percorso utilizzato dai fotoni che hanno prodotto il pixel. Questi raggi possono essere correlati ad altro contenuto nell'app ottenendo la trasformazione dal sistema di coordinate del frame a un altro sistema di coordinate, ad esempio da un [frame di riferimento](coordinate-systems.md#stationary-frame-of-reference)fisso. Per riepilogare, ogni frame dell'immagine offre quanto segue:
+Ogni fotogramma immagine (foto o video) include un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) radice alla fotocamera al momento dell'acquisizione, a cui è possibile accedere usando la proprietà [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) di [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Ogni frame contiene inoltre una descrizione del modello di obiettivo della fotocamera, che è possibile trovare nella proprietà [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Insieme, queste trasformazioni definiscono per ogni pixel un raggio nello spazio 3D che rappresenta il percorso utilizzato dai fotoni che hanno prodotto il pixel. Questi raggi possono essere correlati ad altro contenuto nell'app ottenendo la trasformazione dal sistema di coordinate del frame a un altro sistema di coordinate, ad esempio da un [frame di riferimento](coordinate-systems.md#stationary-frame-of-reference)fisso. Per riepilogare, ogni frame dell'immagine offre quanto segue:
 * Dati pixel (in formato RGB/NV12/JPEG/ecc.)
 * [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) dalla posizione di acquisizione
 * Classe [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) che contiene la modalità Lens della fotocamera
@@ -105,7 +105,7 @@ Molte applicazioni di realtà mista usano un'immagine riconoscibile o un modello
 Per riconoscere un modello visivo e quindi inserire l'oggetto nello spazio globale delle applicazioni, è necessario eseguire alcune operazioni:
 1. Un toolkit di riconoscimento delle immagini, ad esempio codice a matrice, tag AR, ricerca viso, Tracker Circle, OCR e così via.
 2. Raccogliere i frame dell'immagine in fase di esecuzione e passarli al livello di riconoscimento
-3. Riportare i percorsi delle immagini nelle posizioni internazionali o nei possibili raggi internazionali. Consultare
+3. Riportare i percorsi delle immagini nelle posizioni internazionali o nei possibili raggi internazionali. 
 4. Posizionare i modelli virtuali in queste posizioni internazionali
 
 Alcuni collegamenti importanti per l'elaborazione delle immagini:
@@ -114,7 +114,7 @@ Alcuni collegamenti importanti per l'elaborazione delle immagini:
 * [FaceSDK](https://research.microsoft.com/projects/facesdk/)
 * [Microsoft Translator](https://www.microsoft.com/translator/business)
 
-Mantenere una frequenza dei fotogrammi dell'applicazione interattiva è fondamentale, soprattutto quando si gestiscono algoritmi di riconoscimento delle immagini con esecuzione prolungata. Per questo motivo viene usato comunemente il modello seguente:
+Mantenere una frequenza dei fotogrammi dell'applicazione interattiva è fondamentale, soprattutto quando si gestiscono algoritmi di riconoscimento delle immagini con esecuzione prolungata. Per questo motivo, viene comunemente usato il modello seguente:
 1. Thread principale: gestisce l'oggetto fotocamera
 2. Thread principale: richieste nuovi frame (asincrono)
 3. Thread principale: passa nuovi frame al thread di rilevamento
@@ -122,7 +122,7 @@ Mantenere una frequenza dei fotogrammi dell'applicazione interattiva è fondamen
 5. Thread principale: sposta il modello virtuale in modo che corrisponda ai punti chiave trovati
 6. Thread principale: ripetere il passaggio 2
 
-Alcuni sistemi di marcatori di immagini forniscono solo una posizione in un singolo pixel (altri forniscono la trasformazione completa, nel qual caso questa sezione non sarà necessaria), che corrisponde a un raggio di posizioni possibili. Per accedere a una singola posizione 3D, possiamo quindi sfruttare più raggi e trovare il risultato finale in base all'intersezione approssimativa. A tale scopo, è necessario:
+Alcuni sistemi di marcatori di immagini forniscono solo una posizione in un singolo pixel (altri forniscono la trasformazione completa, nel qual caso questa sezione non sarà necessaria), che corrisponde a un raggio di posizioni possibili. Per accedere a una singola posizione 3D, è possibile sfruttare più raggi e trovare il risultato finale in base all'intersezione approssimativa. A tale scopo è necessario:
 1. Ottenere un ciclo per la raccolta di più immagini della fotocamera
 2. Individuare i punti di funzionalità associati e i relativi raggi internazionali
 3. Quando si dispone di un dizionario di funzionalità, ognuna con più raggi internazionali, è possibile usare il codice seguente per risolvere l'intersezione dei raggi:
@@ -145,7 +145,7 @@ public static Vector3 ClosestPointBetweenRays(
  }
 ```
 
-Date due o più posizioni dei tag rilevati, è possibile posizionare una scena modellata in modo da adattarsi allo scenario corrente degli utenti. Se non è possibile presupporre gravità, saranno necessari tre percorsi di tag. In molti casi viene usata una combinazione di colori semplice in cui le sfere bianche rappresentano posizioni dei tag rilevati in tempo reale e le sfere blu rappresentano posizioni dei tag modellate, in modo da consentire all'utente di misurare visivamente la qualità dell'allineamento. Si presuppone che la configurazione seguente sia in tutte le applicazioni:
+Date due o più posizioni dei tag rilevati, è possibile posizionare una scena modellata in modo da adattarsi allo scenario corrente dell'utente. Se non è possibile presupporre gravità, saranno necessari tre percorsi di tag. In molti casi, si usa una combinazione di colori semplice in cui le sfere bianche rappresentano posizioni dei tag rilevati in tempo reale e le sfere blu rappresentano i percorsi dei tag modellati. Ciò consente all'utente di misurare visivamente la qualità dell'allineamento. Si presuppone che la configurazione seguente sia in tutte le applicazioni:
 * Due o più percorsi di tag modellati
 * Uno "spazio di calibrazione" che nella scena è l'elemento padre dei tag
 * Identificatore funzionalità fotocamera
@@ -166,7 +166,7 @@ Date due o più posizioni dei tag rilevati, è possibile posizionare una scena m
 
 ### <a name="track-or-identify-tagged-stationary-or-moving-real-world-objectsfaces-using-leds-or-other-recognizer-libraries"></a>Tenere traccia o identificare gli oggetti o i visi del mondo reale con tag con i LED o altre librerie di riconoscimento
 
-Esempi:
+Di seguito sono riportati alcuni esempi.
 * Robot industriali con LED (o codici a matrice per oggetti mobili più lenti)
 * Identificare e riconoscere gli oggetti nella chat room
 * Identificare e riconoscere persone nella stanza (ad esempio, inserire schede di contatto olografiche sui visi)

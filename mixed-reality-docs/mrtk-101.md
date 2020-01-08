@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, Toolkit per realtà mista, realtà mista di Windows, progettazione, app di esempio, controlli
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439652"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623502"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>MRTK 101: come usare il Toolkit di realtà mista Unity per le interazioni di base (HoloLens 2, HoloLens, realtà mista di Windows, Open VR)
 
@@ -55,7 +55,7 @@ ManipulationHandler.cs supporta la scala e la rotazione a due passate. Questa op
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>Come spostare o ruotare un oggetto con precisione
-Assegnare BoundingBox.cs a un oggetto per usare il rettangolo di delimitazione che rappresenta l'interfaccia per la scala e la rotazione di un oggetto. Per impostazione predefinita, vengono visualizzati gli handle e i cavi blu stile HoloLens 1. Per usare handle animati basati sulla prossimità di HoloLens 2, è necessario assegnare prefabbricati e materiali. Per i dettagli di configurazione, fare riferimento alla documentazione del riquadro delimitatore e alla scena BoundingBoxExamples. Unity.
+Assegnare BoundingBox.cs a un oggetto per usare il rettangolo di delimitazione che rappresenta l'interfaccia per la scala e la rotazione di un oggetto. Per impostazione predefinita, vengono visualizzati gli handle e i cavi blu stile HoloLens 1. Per usare handle animati basati sulla prossimità di HoloLens 2, è necessario assegnare prefabbricati e materiali. Per i dettagli di configurazione, fare riferimento alla [documentazione del riquadro delimitatore](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) e alla scena BoundingBoxExamples. Unity.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, native, app nativa, motore personalizzato, middleware
-ms.openlocfilehash: aa91918e20b4276b7453bae1a05ad18df9d8ab0e
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: 8140b9d3a9e1f4d2d7a25b77a48b39cb765cf6d9
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694135"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -83,7 +83,7 @@ Dopo aver compilato un pacchetto dell'app OpenXR UWP, è possibile [distribuire 
 
 È possibile vedere un esempio delle procedure consigliate riportate di seguito nel file [OpenXRProgram. cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) di BasicXrApp. La funzione Run () all'inizio acquisisce un flusso di codice dell'app OpenXR tipico dall'inizializzazione all'evento e al ciclo di rendering.
 
-### <a name="select-a-pixel-format"></a>Selezionare un formato pixel
+### <a name="select-a-swapchain-format"></a>Selezionare un formato presentazione catena
 
 Enumerare sempre i formati pixel supportati usando `xrEnumerateSwapchainFormats`e scegliere il primo formato pixel di colore e profondità dal runtime supportato dall'app, perché questo è quello che il runtime preferisce. Si noti che, in HoloLens 2, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` e `DXGI_FORMAT_D16_UNORM` sono in genere la prima scelta per ottenere prestazioni di rendering migliori. Questa preferenza può essere diversa negli auricolari VR in esecuzione su un PC desktop.  
   
@@ -148,9 +148,7 @@ In questo modo l'ologramma viene mantenuto indipendentemente stabile nel tempo.
 ### <a name="support-mixed-reality-capture"></a>Supportare l'acquisizione di realtà mista
 
 Sebbene la visualizzazione principale di HoloLens 2 usi la fusione dell'ambiente additiva, quando l'utente avvia l' [acquisizione della realtà mista](mixed-reality-capture-for-developers.md), il contenuto di rendering dell'app verrà sottoposto ad Alpha blending con il flusso video dell'ambiente.
-Per ottenere la migliore qualità visiva nei video di acquisizione di realtà mista, è preferibile impostare il `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` nel `layerFlags`del livello di proiezione.  
-
-**Avviso di prestazioni:** L'omissione del flag `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` a livello di proiezione singolo comporterà la post-elaborazione in fase di esecuzione, che comporta una riduzione significativa delle prestazioni.
+Per ottenere la migliore qualità visiva nei video di acquisizione di realtà mista, è preferibile impostare il `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` nel `layerFlags`del livello di proiezione.
 
 ### <a name="avoid-quad-layers"></a>Evitare i livelli quad
 
@@ -163,8 +161,7 @@ Anziché inviare livelli quad come livelli di composizione con `XrCompositionLay
 In HoloLens 2 sono disponibili diversi modi per inviare i dati di composizione tramite `xrEndFrame` che comporteranno una riduzione delle prestazioni in fase di post-elaborazione.
 Per evitare la penalizzazione delle prestazioni, [inviare una singola `XrCompositionProjectionLayer`](#use-a-single-projection-layer) con le caratteristiche seguenti:
 * [Usare una matrice di trama presentazione catena](#render-with-texture-array-and-vprt)
-* [Usa il formato presentazione catena del colore primario](#select-a-pixel-format)
-* [Imposta il flag di fusione di texture-Source-Alpha](#support-mixed-reality-capture)
+* [Usa il formato presentazione catena del colore primario](#select-a-swapchain-format)
 * [Usare le dimensioni di visualizzazione consigliate](#render-with-recommended-rendering-parameters-and-frame-timing)
 * Non impostare il flag di `XR_COMPOSITION_LAYER_UNPREMULTIPLIED_ALPHA_BIT`
 * Impostare il `XrCompositionLayerDepthInfoKHR` `minDepth` su 0,0 f e `maxDepth` su 1,0 f

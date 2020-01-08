@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, stabilizzazione, case study
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436440"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597654"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Case Study: uso del piano di stabilizzazione per ridurre la turbolenza olografica
 
@@ -63,9 +63,9 @@ Scritto da Asobo Studio in C++, i frammenti e le Conker giovani prendono un appr
 
 I frammenti e i giovani Conker progettano anche la dispersione di troppo lontano dagli ologrammi sospendendo l'app se si passa al di fuori di ciò che è stato analizzato in precedenza come spazio di riproduzione. Di conseguenza, mantengono l'utente entro i limiti rilevati per offrire l'esperienza più stabile.
 
-## <a name="do-it-yourself"></a>Fai da te
+## <a name="do-it-yourself"></a>Provare
 
-Se si ha un HoloLens e si vuole provare a usare i concetti illustrati, è possibile scaricare una scena di test e provare gli esercizi seguenti. Usa l'API Gizmo incorporata di Unity e consente di visualizzare la posizione in cui viene impostato il piano. Questo codice è stato usato anche per acquisire le schermate in questo case study.
+Se si ha un HoloLens e si vuole provare a usare i concetti di questo articolo, è possibile scaricare una scena di test e provare gli esercizi seguenti. Usa l'API Gizmo incorporata di Unity e consente di visualizzare la posizione in cui viene impostato il piano. Questo codice è stato usato anche per acquisire le schermate in questo case study.
 1. Sincronizzare la versione più recente di [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
 2. Aprire la scena [HoloToolkit-examples/Utilities/sceness/StabilizationPlaneSetting. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) .
 3. Compilare e configurare il progetto generato.
@@ -73,17 +73,17 @@ Se si ha un HoloLens e si vuole provare a usare i concetti illustrati, è possib
 
 ### <a name="exercise-1"></a>Esercizio 1
 
-Verranno visualizzati diversi puntini di sospensione con orientamenti diversi. In primo piano, verranno visualizzati tre puntini di profondità differenti. Toccare aria per modificare il punto su cui è impostato il piano. Per questo esercizio e per gli altri due, spostarsi nello spazio mentre si osservano i punti. Capovolgere l'intestazione a sinistra, a destra, verso l'alto e verso il basso. Avvicinarsi a e a Father da punti. Vedere come reagiscono quando il piano di stabilizzazione è impostato su destinazioni diverse.
+Verranno visualizzati diversi puntini di sospensione con orientamenti diversi. In primo piano, verranno visualizzati tre puntini di profondità differenti. Toccare aria per modificare il punto su cui è impostato il piano. Per questo esercizio e per gli altri due, spostarsi nello spazio mentre si osservano i punti. Capovolgere l'intestazione a sinistra, a destra, verso l'alto e verso il basso. Avvicinarsi più vicino ai punti. Vedere come reagiscono quando il piano di stabilizzazione è impostato su destinazioni diverse.
 
 ### <a name="exercise-2"></a>Esercizio 2
 
-A questo punto, è possibile tornare a destra fino a visualizzare due punti mobili, uno oscillante su un tracciato orizzontale e uno in un percorso verticale. Anche in questo caso, toccare aria per modificare il punto su cui è impostato il piano. Si noti che la separazione dei colori viene ridotta sul punto collegato al piano. Toccare di nuovo per usare la velocità del punto nella funzione di impostazione del piano. Questo parametro fornisce un hint a HoloLens sul movimento designato dell'oggetto. È importante capire quando usarlo, come si noterà quando la velocità viene usata in un punto, l'altro punto che lo sposti Visualizza una separazione dei colori maggiore. Tenere presente questo aspetto quando si progettano le app: la presenza di un flusso coeso al movimento degli oggetti può impedire la visualizzazione di artefatti.
+A questo punto, è possibile tornare a destra fino a visualizzare due punti mobili, uno oscillante su un tracciato orizzontale e uno in un percorso verticale. Anche in questo caso, toccare aria per modificare il punto su cui è impostato il piano. Si noti come la separazione dei colori venga ridotta e visualizzata sul punto connesso al piano. Toccare di nuovo per usare la velocità del punto nella funzione di impostazione del piano. Questo parametro fornisce un hint a HoloLens sul movimento designato dell'oggetto. È importante capire quando usarlo, come si noterà quando la velocità viene usata in un punto, l'altro punto che lo sposti Visualizza una separazione dei colori maggiore. Tenere presente questo aspetto quando si progettano le app: la presenza di un flusso coeso al movimento degli oggetti può impedire la visualizzazione di artefatti.
 
 ### <a name="exercise-3"></a>Esercizio 3
 
-Tornare a destra ancora una volta fino a quando non viene visualizzata una nuova configurazione di punti. In questo caso sono presenti punti nella distanza e un punto a spirale all'interno e all'esterno. Toccare aria per modificare il punto su cui è impostato il piano, alternando tra i punti nella parte posteriore e il punto in movimento. Si noti che l'impostazione della posizione del piano e della velocità su quella del punto di spirale rende gli artefatti visibili ovunque.
+Tornare a destra ancora una volta fino a quando non viene visualizzata una nuova configurazione di punti. In questo caso, sono presenti punti nella distanza e un punto a spirale all'interno e all'esterno. Toccare aria per modificare il punto su cui è impostato il piano, alternando tra i punti nella parte posteriore e il punto in movimento. Si noti che l'impostazione della posizione del piano e della velocità su quella del punto di spirale rende gli artefatti visibili ovunque.
 
-**Consigli**
+**Suggerimenti**
 * Semplificare la logica di impostazione del piano. Come si è visto, non sono necessari algoritmi di impostazione del piano complessi per creare un'esperienza immersiva. Il piano di stabilizzazione è solo una parte del puzzle.
 * Quando possibile, spostare sempre il piano tra le destinazioni in modo graduale. Il cambio immediato di destinazioni distanti può compromettere visivamente la scena.
 * Si consiglia di disporre di un'opzione nella logica di impostazione del piano per il blocco su una destinazione molto specifica. In questo modo, se necessario, è possibile bloccare il piano su un oggetto, ad esempio un logo o una schermata del titolo.

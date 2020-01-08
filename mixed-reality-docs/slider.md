@@ -1,29 +1,29 @@
 ---
 title: Dispositivo di scorrimento
-description: ''
+description: Un dispositivo di scorrimento è un componente dell'interfaccia utente che consente di impostare un valore spostando una manopola o una levetta in una traccia.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 8a2ec075b0b73c2cf3b73759ccbb5ee44ca4da34
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143223"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694155"
 ---
 # <a name="slider"></a>Dispositivo di scorrimento
 
 ![Dispositivo di scorrimento](images/UX/UX_Hero_Slider.jpg)
 
-I dispositivi di scorrimento sono componenti dell'interfaccia utente che consentono di modificare continuamente un valore spostando un dispositivo di scorrimento in una traccia. Il dispositivo di scorrimento del pizzico può essere spostato afferrando direttamente il dispositivo di scorrimento, direttamente o a distanza. I dispositivi di scorrimento funzionano con vari tipi di input, come lo sguardo e il tocco aereo, nonché il controller di movimento.
+Un dispositivo di scorrimento è un componente dell'interfaccia utente usato per impostare un valore. Fornisce un'indicazione visiva del contenuto regolabile, nonché l'impostazione corrente nell'intervallo totale di contenuto. Viene visualizzato come traccia con le opzioni su entrambi i lati. Una manopola o una levetta viene trascinata in un'estremità o nell'altra per scegliere, che indica il valore corrente. Il dispositivo di scorrimento del pizzico può essere spostato afferrando direttamente il dispositivo di scorrimento, direttamente o a distanza. I dispositivi di scorrimento funzionano con vari tipi di input, ad esempio lo sguardo e il tocco aereo, nonché un controller di movimento.
 
 <br>
 
 ---
 
-## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Dispositivo di scorrimento in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="slider-in-mrtk-mixed-reality-toolkit-for-unity"></a>Dispositivo di scorrimento in MRTK (Mixed Reality Toolkit) per Unity
 
 * [MRTK-Slider](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
 

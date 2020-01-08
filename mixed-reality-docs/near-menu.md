@@ -1,23 +1,23 @@
 ---
 title: Menu vicino
-description: ''
+description: Un menu vicino è una raccolta di pulsanti in un pannello che seguono il comportamento di tag-along.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 693516285457885f62fe96e6a20d829b007d80fc
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: afd3215a90f6cbdd918475d011ba57c7b86a7694
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694125"
 ---
 # <a name="near-menu"></a>Menu vicino
 
 ![Menu vicino](images/UX/UX_Hero_NearMenu.jpg)
 
-Near menu è una raccolta dei pulsanti in un pannello che segue il comportamento di tag-along. Rimane in un determinato intervallo di distanza e angolo per consentire l'interazione con il contenuto. È possibile usare il pulsante Aggiungi o selezionare e posizionare il menu per impostarlo come globale e disabilitare il comportamento di tag lungo. In questo modo è possibile concentrarsi sul contenuto di destinazione senza essere disturbato dal menu a virgola mobile.
+Un menu vicino è una raccolta di pulsanti in un pannello che seguono il [comportamento di tag-along](billboarding-and-tag-along.md#what-is-a-tag-along). Rimane in un determinato intervallo di distanza e angolo per consentire l'interazione con il contenuto. È possibile usare il pulsante Aggiungi o selezionare e posizionare il menu per impostarlo come globale e disabilitare il comportamento di tag lungo. In questo modo è possibile concentrarsi sul contenuto di destinazione senza essere disturbato dal menu a virgola mobile.
 
 Per riabilitare il tag, è possibile premere il pulsante del PIN e fare in modo che il menu segua di nuovo.
 
@@ -25,7 +25,7 @@ Per riabilitare il tag, è possibile premere il pulsante del PIN e fare in modo 
 
 ---
 
-## <a name="near-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Near menu in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Near menu in MRTK (Mixed Reality Toolkit) per Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** offre diversi esempi di prefabbricati di menu near.
 
 * [MRTK-menu vicino](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)

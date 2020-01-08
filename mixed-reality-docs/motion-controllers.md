@@ -1,19 +1,19 @@
 ---
-title: Controller di movimento
+title: Controller del movimento
 description: Dettagli sui controller di movimento della realtà mista.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: controller 6DOF, controller di movimento
-ms.openlocfilehash: 84ebc6c0d7c63e58346b6ee9e565811bc40571b5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e4b3946401bcc9abfcefeb3e33bb79f01526ba20
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437847"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597674"
 ---
-# <a name="motion-controllers"></a>Controller di movimento
+# <a name="motion-controllers"></a>Controller del movimento
 
 :::row:::
     :::column:::
@@ -46,7 +46,7 @@ ms.locfileid: "73437847"
      <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
 </tr>
 <tr>
-     <td>Controller di movimento</td>
+     <td>Controller del movimento</td>
      <td>❌</td>
      <td>❌</td>
      <td>✔️</td>
@@ -87,7 +87,7 @@ I controller di movimento per la realtà mista di Windows offrono un tracking pr
 I controller di movimento possono essere legati a computer host usando le impostazioni di Windows come qualsiasi altro dispositivo Bluetooth.
 
 1. Inserire 2 batterie AA nella parte posteriore del controller. Lasciare il coperchio della batteria per il momento.
-2. Se si usa una scheda Bluetooth USB esterna anziché una radio Bluetooth incorporata, verificare le procedure consigliate [Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) prima di procedere. Per la configurazione del desktop con la radio predefinita, assicurarsi che l'antenna sia connessa.
+2. Se si usa una scheda Bluetooth USB esterna anziché una radio Bluetooth incorporata, vedere le procedure consigliate [Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) prima di procedere. Per la configurazione del desktop con la radio predefinita, assicurarsi che l'antenna sia connessa.
 3. Aprire **impostazioni di Windows** -> **dispositivi** -> **aggiungere Bluetooth o altro dispositivo** -> **Bluetooth** e rimuovere le istanze precedenti di "motion controller – Right" e "motion controller – left". Controllare anche la categoria altri dispositivi nella parte inferiore dell'elenco.
 4. Selezionare **Aggiungi Bluetooth o altro dispositivo** e vedere avvio per individuare i dispositivi Bluetooth.
 5. Premere e tenere premuto il pulsante Windows del controller per accendere il controller, quindi rilasciarlo dopo il ronzio.
@@ -112,7 +112,7 @@ I controller di movimento possono essere legati a computer host usando le impost
 
 :::row:::
     :::column:::
-        Una volta abbinati entrambi i controller, le impostazioni dovrebbero essere simili a quelle della **categoria "mouse, tastiera, & Pen"** <br>
+        Una volta abbinati entrambi i controller, le impostazioni dovrebbero essere simili alle seguenti, nella **categoria "mouse, tastiera, & Pen"** <br>
         <br>
         *Immagine: controller di movimento connessi*
     :::column-end:::
@@ -121,7 +121,7 @@ I controller di movimento possono essere legati a computer host usando le impost
     :::column-end:::
 :::row-end:::
 
-Se i controller sono spenti dopo l'associazione, lo stato verrà visualizzato come abbinato. Se i controller vengono mantenuti in modo permanente nell'associazione di categoria "altri dispositivi", potrebbe essere stato completato solo parzialmente e deve essere eseguito di nuovo per ottenere la funzionalità del controller.
+Se i controller sono spenti dopo l'associazione, lo stato verrà visualizzato come abbinato. Se i controller vengono mantenuti in modo permanente nella categoria "altri dispositivi", l'associazione potrebbe essere stata completata solo parzialmente e deve essere eseguita di nuovo per ottenere la funzionalità del controller.
 
 ### <a name="updating-controller-firmware"></a>Aggiornamento del firmware del controller
 
@@ -146,11 +146,11 @@ Se i controller sono spenti dopo l'associazione, lo stato verrà visualizzato co
 
 ## <a name="gazing-and-pointing"></a>Osservazione e puntamento
 
-La realtà mista di Windows supporta due modelli chiave per interazione, **sguardo e commit** , **punto e commit**:
+La realtà mista di Windows supporta due modelli chiave per l'interazione. **sguardo e commit** , **punto e commit**:
 * Con lo **sguardo e il commit**, gli utenti hanno come destinazione un oggetto con il proprio [sguardo](gaze-and-commit.md) , quindi selezionano gli oggetti con rubinetti d'aria, un gamepad, un clic o la loro voce.
 * Con **Point e commit**, un utente può puntare a un controller di movimento in grado di puntare all'oggetto di destinazione e quindi selezionare oggetti con il trigger del controller.
 
-Le app che supportano l'indirizzamento con i controller di movimento devono anche abilitare le interazioni basate su sguardi laddove possibile, per offrire agli utenti la possibilità di scegliere i dispositivi di input utilizzati.
+Le app che supportano il puntamento con i controller di movimento devono anche abilitare le interazioni basate su sguardi laddove possibile, per offrire agli utenti una scelta nei dispositivi di input usati.
 
 ### <a name="managing-recoil-when-pointing"></a>Gestione della ribobina quando si punta
 
@@ -162,7 +162,7 @@ Per gestire un eventuale rinculo che può verificarsi quando gli utenti effettua
 
 La realtà mista di Windows supporta i controller di movimento in diversi fattori di forma, con la progettazione di ogni controller diversa nella relazione tra la posizione della mano dell'utente e la direzione naturale "Avanti" che le app devono usare per puntare durante il rendering del controller.
 
-Per rappresentare meglio questi controller, esistono due tipi di pose che è possibile esaminare per ogni origine interazione, la **posizione del grip** e la **posizione del puntatore**.
+Per rappresentare meglio questi controller, esistono due tipi di pose che è possibile esaminare per ogni origine di interazione. la posa del **grip** e l' **indicatore**di misura.
 
 ### <a name="grip-pose"></a>Pose di grip
 
@@ -203,13 +203,13 @@ Le app che desiderano gestire le posizioni in modo diverso in base allo stato di
 <tr>
 <th> Stato di rilevamento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td>   di <b>accuratezza elevata</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td>   di <b>accuratezza elevata</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> True</td>
 </tr><tr>
-<td> <b>Accuratezza elevata (a rischio di perdita)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Accuratezza elevata (a rischio di perdita)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> True</td>
 </tr><tr>
-<td> <b>Accuratezza approssimativa</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Accuratezza approssimativa</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: green; color: white"> True</td>
 </tr><tr>
-<td> <b>Nessuna posizione</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: orange"> false</td>
+<td> <b>Nessuna posizione</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: orange"> False</td>
 </tr>
 </table>
 
@@ -224,12 +224,12 @@ Questi stati di rilevamento del controller di movimento sono definiti come segue
 ## <a name="interactions-low-level-spatial-input"></a>Interazioni: input spaziale di basso livello
 
 Le interazioni di base tra i controller hands e Motion sono **Select**, **menu**, **afferrare**, **touchpad**, **levetta**e **Home**.
-* **Select** è l'interazione principale per attivare un ologramma, costituito da una pressione seguita da una versione. Per i controller di movimento, eseguire una selezione premere usando il trigger del controller. Altri modi per eseguire un'impostazione Select sono pronunciando il [comando vocale](voice-input.md) "Select". La stessa interazione SELECT può essere usata in qualsiasi app. Si pensi a SELECT come all'equivalente di un clic del mouse, un'azione universale che si apprende una volta e quindi si applica a tutte le app.
+* **Select** è l'interazione principale per attivare un ologramma, costituito da una pressione seguita da una versione. Per i controller di movimento, eseguire una selezione premere usando il trigger del controller. Altri modi per eseguire un'impostazione Select sono pronunciando il [comando vocale](voice-input.md) "Select". La stessa interazione SELECT può essere usata in qualsiasi app. Si pensi a SELECT come equivalente di un clic del mouse; un'azione universale che si apprende una volta e quindi si applica a tutte le app.
 * **Menu** è l'interazione secondaria per agire su un oggetto, usato per eseguire il pull di un menu di scelta rapida o eseguire altre azioni secondarie. Con i controller di movimento è possibile eseguire un'azione di menu usando il pulsante di *menu* del controller. (ovvero il pulsante con l'icona "menu" di hamburger)
 * La **comprensione** è il modo in cui gli utenti possono agire direttamente sugli oggetti a loro disposizione per manipolarli. Con i controller di movimento, è possibile eseguire un'azione di comprensione inserendo il pugno. Un controller di movimento può rilevare una stretta con un pulsante di cattura, un trigger di Palma o un altro sensore.
 * **Touchpad** consente all'utente di modificare un'azione in due dimensioni lungo la superficie del touchpad del controller di movimento, eseguendo il commit dell'azione facendo clic sul touchpad. I touchpad forniscono lo stato premuto, lo stato di contatto e le coordinate XY normalizzate. X e Y sono compresi tra-1 e 1 nell'intervallo del touchpad circolare, con un centro in corrispondenza di (0, 0). Per X,-1 si trova a sinistra e 1 si trova a destra. Per Y,-1 si trova nella parte inferiore e 1 si trova nella parte superiore.
 * **Levetta** consente all'utente di modificare un'azione in due dimensioni spostando il levetta del controller di movimento nell'intervallo circolare, eseguendo il commit dell'azione facendo clic sul levetta. ThumbSticks inoltre fornire uno stato premuto e le coordinate XY normalizzate. X e Y sono compresi tra-1 e 1 nell'intervallo del touchpad circolare, con un centro in corrispondenza di (0, 0). Per X,-1 si trova a sinistra e 1 si trova a destra. Per Y,-1 si trova nella parte inferiore e 1 si trova nella parte superiore.
-* **Home** è un'azione speciale di sistema che viene utilizzata per tornare al menu Start. È simile a premere il tasto Windows su una tastiera o il pulsante Xbox in un controller Xbox. È possibile passare a casa premendo il pulsante Windows in un controller di movimento. Si noti anche che è sempre possibile tornare all'inizio dicendo "Hey Cortana, Go Home". Le app non possono rispondere in modo specifico alle azioni domestiche, perché vengono gestite dal sistema.
+* **Home** è un'azione speciale di sistema che viene utilizzata per tornare al menu Start. È simile a premere il tasto Windows su una tastiera o il pulsante Xbox in un controller Xbox. È possibile passare a casa premendo il pulsante Windows in un controller di movimento. Si noti che è sempre possibile tornare all'inizio dicendo "Hey Cortana, Go Home". Le app non possono rispondere in modo specifico alle azioni domestiche, perché vengono gestite dal sistema.
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Movimenti compositi: input spaziale di alto livello
 
@@ -259,7 +259,7 @@ I controller di movimento supportano l'associazione a un singolo computer. Per a
 
 ### <a name="how-do-i-update-motion-controller-firmware"></a>Ricerca per categorie aggiornare il firmware del controller di movimento?
 
-Il firmware del controller di movimento fa parte del driver della cuffia e verrà aggiornato automaticamente in caso di connessione, se necessario. Gli aggiornamenti del firmware in genere importano 1-2 minuti a seconda della qualità del collegamento e della radio Bluetooth. In rari casi, gli aggiornamenti del firmware del controller possono richiedere fino a 10 minuti, che possono indicare una scarsa connettività Bluetooth o interferenze radio. Per risolvere i problemi di connettività, vedere [procedure consigliate Bluetooth nella Guida per gli appassionati](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) . Dopo un aggiornamento del firmware, i controller verranno riavviati e riconnessi al PC host. è possibile notare che i LED sono luminosi per il rilevamento. Se un aggiornamento del firmware viene interrotto (ad esempio, i controller perdono energia), verrà ritentata la volta successiva che i controller saranno accesi.
+Il firmware del controller di movimento fa parte del driver della cuffia e verrà aggiornato automaticamente alla connessione, se necessario. Gli aggiornamenti del firmware in genere importano 1-2 minuti a seconda della qualità del collegamento e della radio Bluetooth. In rari casi, gli aggiornamenti del firmware del controller possono richiedere fino a 10 minuti, che possono indicare una scarsa connettività Bluetooth o interferenze radio. Per risolvere i problemi di connettività, vedere [procedure consigliate Bluetooth nella Guida per gli appassionati](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) . Dopo un aggiornamento del firmware, i controller verranno riavviati e riconnessi al PC host. è possibile notare che i LED sono luminosi per il rilevamento. Se un aggiornamento del firmware viene interrotto (ad esempio, i controller perdono energia), verrà ritentata la volta successiva che i controller saranno accesi.
 
 ### <a name="how-i-can-check-battery-level"></a>Come posso controllare il livello della batteria?
 

@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale per dispositivi Windows, HoloLens
-ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182021"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623324"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portale per dispositivi Windows
 
@@ -75,7 +75,7 @@ Se si vuole modificare il nome utente o la password in qualsiasi momento, è pos
 
 ## <a name="security-certificate"></a>Certificato di sicurezza
 
-Se ricevi un messaggio di errore relativo al certificato nel browser, puoi correggerlo creando una relazione di trust con il dispositivo.
+Se nel browser viene visualizzato un errore di certificato, è possibile correggerlo creando una relazione di trust con il dispositivo.
 
 Ogni dispositivo HoloLens genera un certificato autofirmato univoco per la connessione SSL. Per impostazione predefinita, questo certificato non è ritenuto attendibile dal Web browser del PC e potresti ricevere un messaggio di errore. Scaricando il certificato da HoloLens (tramite USB o una rete Wi-Fi considerata attendibile) e impostandolo come attendibile nel PC, puoi connetterti al dispositivo in modo sicuro.
 1. **Assicurarsi di trovarsi in una rete sicura (USB o rete Wi-Fi considerata attendibile).**
@@ -84,7 +84,7 @@ Ogni dispositivo HoloLens genera un certificato autofirmato univoco per la conne
 3. Installare il certificato nell'archivio "autorità di certificazione radice attendibili" nel PC.
    * Dal menu Windows digitare: Manage computer certificates e avviare l'applet.
    * Espandere la cartella **autorità di certificazione radice attendibile** .
-   * Fare clic sulla cartella **Certificates** .
+   * Fare clic sulla cartella **Certificati**.
    * Dal menu Azione scegli Tutte le attività &gt; Importa...
    * Completa l'Importazione guidata certificati usando il file di certificato che hai scaricato da Device Portal.
 4. Riavvia il browser.
@@ -136,7 +136,7 @@ Usa la pagina 3D View per osservare in che modo HoloLens interpreta l'ambiente c
   * **Mostra ancoraggi spaziali**: Visualizza gli ancoraggi spaziali per l'app attiva. È necessario fare clic sul pulsante Aggiorna per ottenere e aggiornare i punti di ancoraggio.
   * **Show details**: visualizza la posizione delle mani, i quaternioni di rotazione della testa e il vettore di origine del dispositivo man mano che cambiano in tempo reale.
   * **Pulsante Full screen**: mostra la visualizzazione 3D in modalità schermo intero. Premi ESC per chiudere la visualizzazione a schermo intero.
-* **Ricostruzione della superficie**: toccare o fare clic su **Aggiorna** per visualizzare la mesh di mapping spaziale più recente dal dispositivo. Un passaggio completo può impiegare una certa quantità di tempo, fino ad alcuni secondi. La mesh non viene aggiornata automaticamente nella visualizzazione 3D ed è necessario fare clic manualmente su **Aggiorna** per ottenere la mesh più recente dal dispositivo. Fare clic su **Salva** per salvare la mesh di mapping spaziale corrente come file obj nel PC.
+* **Ricostruzione della superficie**: toccare o fare clic su **Aggiorna** per visualizzare la mesh di mapping spaziale più recente dal dispositivo. Il completamento di un passaggio completo può richiedere del tempo (fino a pochi secondi). La mesh non viene aggiornata automaticamente nella visualizzazione 3D ed è necessario fare clic manualmente su **Aggiorna** per ottenere la mesh più recente dal dispositivo. Fare clic su **Salva** per salvare la mesh di mapping spaziale corrente come file obj nel PC.
 * **Ancoraggi spaziali**: fare clic su Aggiorna per visualizzare o aggiornare gli ancoraggi spaziali per l'app attiva.
 
 ### <a name="mixed-reality-capture"></a>Mixed Reality Capture
@@ -236,7 +236,7 @@ Usare Esplora file per esplorare, caricare e scaricare i file. È possibile usar
 >[!NOTE]
 >La modalità tutto schermo è disponibile solo con [Microsoft HoloLens Commercial Suite](commercial-features.md).
 
-Per istruzioni aggiornate sull'abilitazione della modalità tutto schermo tramite il portale del dispositivo Windows, vedere l'articolo su come [configurare HoloLens in modalità](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) tutto schermo in Windows IT Pro Center.
+Vedere l'articolo [configurare HoloLens in modalità](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) tutto schermo in Windows IT Pro Center per istruzioni aggiornate sull'abilitazione della modalità tutto schermo tramite il portale per dispositivi Windows.
 
 ### <a name="logging"></a>Logging
 
@@ -256,10 +256,10 @@ Tocca o fai clic su **Enable** per avviare la traccia. Il provider viene aggiunt
 * **Custom providers**: consente di selezionare un provider ETW personalizzato e il livello di traccia. Identifica il provider tramite il relativo GUID. Non includere parentesi nel GUID.
 * **Enabled providers**: elenca i provider abilitati. Seleziona un provider nell'elenco a discesa e tocca o fai clic su **Disable** per arrestare la traccia. Tocca o fai clic su **Stop** per sospendere tutte le operazioni di traccia.
 * **Providers history**: mostra i provider ETW abilitati durante la sessione corrente. Tocca o fai clic su **Enable** per attivare un provider disabilitato. Tocca o fai clic su **Clear** per cancellare la cronologia.
-* **Events**: elenca gli eventi ETW dei provider selezionati in formato di tabella. La tabella viene aggiornata in tempo reale. Sotto la tabella, fare clic sul pulsante **Cancella** per eliminare tutti gli eventi ETW dalla tabella. Questa operazione non disabilita alcun provider. Puoi fare clic su **Save to file** per esportare gli eventi ETW attualmente raccolti in un file CSV locale.
+* **Events**: elenca gli eventi ETW dei provider selezionati in formato di tabella. La tabella viene aggiornata in tempo reale. Sotto la tabella fai clic sul pulsante **Clear** per eliminare tutti gli eventi ETW dalla tabella. Questa operazione non disabilita alcun provider. Puoi fare clic su **Save to file** per esportare gli eventi ETW attualmente raccolti in un file CSV locale.
 * **Filtri**: consentono di filtrare gli eventi ETW raccolti in base all'ID, alla parola chiave, al livello, al nome del provider, al nome dell'attività o al testo. È possibile combinare diversi criteri insieme:
-   1. Per i criteri applicati alla stessa proprietà, gli eventi possono soddisfare uno qualsiasi di questi criteri.
-   2. Per i criteri applicati a eventi di proprietà diversi devono soddisfare tutti i criteri
+   1. Per i criteri applicati alla stessa proprietà, vengono visualizzati gli eventi che possono soddisfare uno di questi criteri.
+   2. Per i criteri applicati a una proprietà diversa, gli eventi devono soddisfare tutti i criteri
 
 Ad esempio, è possibile specificare i criteri *(il nome dell'attività contiene ' foo ' o ' bar ') e (il testo contiene ' Error ' o ' Warning ')*
 

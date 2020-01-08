@@ -1,0 +1,108 @@
+---
+title: Community
+description: Documenta le community online, locali, Microsoft e MVP
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 12/27/2019
+ms.topic: article
+keywords: Realtà mista, community, MVP, Meetup
+ms.openlocfilehash: 7cdbebc63cc04d2e3c2913662ed29e65880da727
+ms.sourcegitcommit: 48e12b342a50b9777330392db74d462ead5a8012
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75662431"
+---
+# <a name="mixed-reality-community"></a>Community di realtà mista
+
+Microsoft ritiene che l'accesso a community complesse sia essenziale per la crescita di sviluppatori, piattaforme e ecosistemi.  Questa pagina è concepita per aiutare gli sviluppatori a trovare le numerose posizioni che possono partecipare alle community, oltre a presentare alcuni dei membri del team e della community che sono utili.
+
+## <a name="online-communities"></a>Community online
+
+|Nome community  |Collega  |Descrizione  |
+|---------|---------|---------|
+|**HoloDevelopers Slack**|[Unisciti qui](https://aka.ms/holodevelopers)|Il HoloDevelopers Slack è stato inizialmente creato per gli sviluppatori che esplorano HoloLens per conoscerne l'altro, formare amicizie, ottenere un trust di compilazione e ottenere assistenza tra loro.  È cresciuta in una community fiorente che è ancora incentrata su questi aspetti, ma le conversazioni che si verificano coprono la gamma di realtà mista in molte piattaforme, dispositivi e società.|
+|**Stack Overflow**|[Domande e risposte](https://stackoverflow.com/questions/tagged/windows-mixed-reality)||
+|**Auricolari WMR Reddit**|[Subreddit WMR](https://www.reddit.com/r/WindowsMR/)|         |
+|**HoloLens Reddit**|[Subreddit HoloLens](https://www.reddit.com/r/HoloLens/)|         |
+
+<br>
+
+## <a name="local-communities"></a>Community locali
+Se si esegue una community che si desidera includere in questa pagina, inviare un messaggio di [posta elettronica](mailto:jemccull@microsoft.com) con i dettagli
+
+|Nome community|Paese|Città|Collega|
+|---------|---------|---------|---------|
+|**Chicago AWE Nite**|Stati Uniti|Chicago|[Collegamento](https://www.meetup.com/AWENiteChicago/)|
+<!-- 
+|Row2     |         |         |         |
+|Row3     |         |         |         |
+|Row4     |         |         |         |
+|Row5     |         |         |         |
+|Row6     |         |         |         |
+-->
+
+<br>
+
+## <a name="microsoft-mr-developer-ecosystem-team"></a>Team Microsoft MR Developer ecosistema
+
+|||||
+|---------|---------|---------|---------|
+|<!-- ![Daniel Escudero](images/BiographyImages/) --></br>**Daniel Escudero**</br>*Designer principale di MR Academy*| |San Francisco, CA|[Email](mailto:daescu@microsoft.com)|
+|<!-- ![Daniel Gonzalez](images/BiographyImages/) --></br>**Daniel Gonzalez**</br>*Program Manager II*| |Redmond, WA|[Email](mailto:dgonza@microsoft.com)|
+|<!-- ![Jane Fang](images/BiographyImages/) --></br>**Jane Fang**</br>*Lead principale Program Manager*| |San Francisco, CA|[Email](mailto:jafang@microsoft.com)|
+|![Jesse McCulloch](images/BiographyImages/JesseMcCulloch270x270.png)</br>**Jesse McCulloch**</br>*Program Manager II*|Jesse è un Program Manager del team dell'ecosistema per sviluppatori di realtà mista in Microsoft. Spesso si trova in un gruppo di sviluppatori Slack, su Twitter che tenta di rimanere al passo con tutti gli aspetti in questo spazio in rapida crescita o in un tubo di Big Metal che vola attraverso l'aria per coinvolgere gli sviluppatori nel mondo reale.|Redmond, WA|[Email](mailto:jemccull@microsoft.com)|
+|<!-- ![Jo Ryall](images/BiographyImages/) --></br>**Jo Ryall**</br>*Responsabile del marketing, SF Academy*| |San Francisco, CA|[Email](mailto:joryal@microsoft.com)|
+|![Nick Klingensmith](images/BiographyImages/NickKlingensmith_270x270.png)</br>**Nick Klingensmith**</br>*Ingegnere responsabile di MR Academy*|Nick è uno sviluppatore di giochi esperto specializzato in sviluppo di strumenti, programmazione grafica, MR e Unity. Con più di 100 giochi pubblicati, ha lavorato su piccoli giochi arcade, una GPU per dispositivi mobili di alta fedeltà che spingono i titoli, fino a grandi giochi di social networking. Gli strumenti pubblicati in Unity Asset Store vengono usati anche in migliaia di giochi, su qualsiasi piattaforma moderna immaginabile. Nick ha raccolto la maggior parte delle certificazioni ufficiali di Unity e ne ha contribuito anche la scrittura. Nick attualmente lavora per Microsoft come responsabile del team di realtà mista a San Francisco.|San Francisco, CA|[Email](mailto:niklinge@microsoft.com)|
+
+<br>
+
+## <a name="azure-cloud-advocate-spatial-computing-team"></a>Team di calcolo spaziale di Azure cloud Advocate
+
+La carta di supporto di Azure cloud Advocates consente a tutti i tecnici del mondo di avere successo, ovvero gli studenti o quelli che lavorano in aziende o Startup. Si impegnano in Outreach per gli sviluppatori e altri utenti nell'ecosistema software, tutti progettati per ulteriore formazione tecnica e competenza con la piattaforma di Microsoft Cloud e intelligenza artificiale.
+
+I membri elencati di seguito sono i sostenitori del cloud che operano sul team di calcolo spaziale all'interno dell'organizzazione del difensore del cloud. Lavorano molto vicino al team di ecosistema degli sviluppatori di realtà mista ed è spesso difficile capire dove si arresta un team e l'altro inizia.
+
+Altre informazioni saranno presto disponibili...
+<!--
+|||||
+|---------|---------|---------|---------|
+|![Adi Polak](images/BiographyImages/)</br>**Adi Polak**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![April Speight](images/BiographyImages/)</br>**April Speight**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Aysegul Yonet](images/BiographyImages/)</br>**Aysegul Yonet**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Cassie Breviu](images/BiographyImages/)</br>**Cassie Breviu**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Chris Noring](images/BiographyImages/)</br>**Chris Noring**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Christopher Maneu](images/BiographyImages/)</br>**Christopher Maneu**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Em Lazer-Walker](images/BiographyImages/)</br>**Em Lazer-Walker**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Karissa Peth](images/BiographyImages/)</br>**Karissa Peth**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Madoka Chiyoda](images/BiographyImages/)</br>**Madoka Chiyoda**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Thomas Lewis](images/BiographyImages/)</br>**Thomas Lewis**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+|![Vanessa Diaz](images/BiographyImages/)</br>**Vanessa Diaz**</br>*Title*|Bio|Location|[Email](mailto:test@microsoft.com)|
+-->
+
+<br>
+
+## <a name="microsoft-mixed-reality-mvps"></a>Microsoft Mixed Reality MVP
+
+Microsoft Most Valuable Professionals, o MVP, sono esperti di tecnologia che condividono le proprie conoscenze con la community. Sono sempre in "Bleeding Edge" e hanno un impulso inarrestabile per avere a disposizione nuove tecnologie entusiasmanti. Hanno una conoscenza approfondita dei prodotti e dei servizi Microsoft e possono anche riunire diverse piattaforme, prodotti e soluzioni per risolvere i problemi reali. Gli MVP costituiscono una community globale di oltre 4.000 esperti tecnici e leader della community in 90 paesi o aree geografiche e sono basati sulla loro passione, lo spirito della community e la ricerca di informazioni. Oltre a tutte le straordinarie capacità tecniche, gli MVP sono sempre disposti a aiutare gli altri, cosa che li distingue.
+
+||||
+|---------|---------|---------|
+|![Aleksandr Kudishov](images/BiographyImages/aleksandr_kudishov_270_270.png)</br>**Aleksandr Kudishov**</br>*Russia*|MVP dedicato allo sviluppo di giochi & sviluppo per Windows, VR/AR/MR. Game Producer, Tech Evangelist, sviluppatore olografico, responsabile dello sviluppo di giochi.|[Email](mailto:draconifore@gmail.com)|
+|![Alexander Meijers](images/BiographyImages/AlexanderMeijers_270x270.png)</br>**Alexander Meijers**</br>*Paesi Bassi, Rijswijk*|Un professionista che ispira, motiva e istruisce le aziende a sfruttare le tecnologie emergenti con la realtà virtuale, aumentata e mista nel proprio percorso di innovazione digitale. Ha uno sfondo forte su SharePoint, Office 365 e Microsoft Azure e sta lavorando con machine learning, intelligenza artificiale e servizi cognitivi.</br></br>Principalmente incentrato sulla produzione, la costruzione, il settore, la logistica e marittima/offshore, il suo obiettivo è aiutare le aziende a ottenere più informazioni sulla creazione, il miglioramento, il smartening e l'abbreviazione di processi aziendali tramite servizi, app e dispositivi come HoloLens e Kinect per Azure.|[Email](mailto:alexander@appzinside.com)|
+|![Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*Brasile*|Responsabile dell'innovazione, lavorare alla gestione e all'architettura dei progetti di innovazione di pagine digitali, con esperienza per la realtà aumentata da XR, le piattaforme di realtà miste e virtuali. Microsoft MVP nella realtà mista 2020-2021 in realtà mista, lavoro come esperto nello sviluppo e nella pianificazione di soluzioni di realtà mista, concentrandosi su Microsoft HoloLens. Esperienza con lo sviluppo di giochi e applicazioni, nonché la creazione di asset e contenuto multimediale.|[Email](mailto:brunof.anjos@outlook.com)|
+|![Clemente Giorio](images/BiographyImages/ClementeGiorio_270x270.png)</br>**Clemente Giorio**</br>*Torino, Italia*|"Hacker, geek, Maker, Researcher, Innovator, trainer, Developer...</br>Ha reso la scienza e la tecnologia la sua passione a parte il suo lavoro.</br>Segue molte community ed è spesso coinvolti attivamente come speaker e organizzatori di eventi in particolare con: codifica di gym, DotNetPodcast, FabLabNapoli, DotNetCampania e HoloLens Developers.</br>I suoi piatti di firma, lontano dal fornello, sono: intelligenza artificiale, Visione artificiale, Internet delle cose, interfaccia utente naturale e realtà mista.</br>Microsoft MVP e Intel Software Innovator operano come Senior Research & Developer Engineer per Deltatre, dove sviluppa i prototipi software.|[Email](mailto:tinuxnet@hotmail.com)|
+|![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, Paesi Bassi*|Dave Smits è Microsoft MVP dalla 2014 e lavora con il HoloLens a partire dalla prima versione avviata. Diversi progetti per i clienti iniziano con modelli semplici per le applicazioni che includono sensori di rilevamento del movimento da usare sugli ologrammi.|[Email](mailto:dave@familie-smits.com)|
+|![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*Montreal, QC, Canada*|Eric è un Framework per la realtà mista Senior e uno sviluppatore di UX in CAE, uno dei primi partner Microsoft per la realtà mista e un'adozione di HoloLens Wave 1. Il suo ruolo principale è l'architettura e lo sviluppo di un Framework di sviluppo multipiattaforma interno molto simile a MRTK, nonché lo sviluppo e la gestione di applicazioni di formazione e simulazione sanitarie nuove ed esistenti. Ha principalmente creato app in Unity, in VR (Oculus quest), AR (HoloLens 1 & 2), oltre che in base allo schermo (WebGL + iOS/Android).|[Email](mailto:erproven@gmail.com)|
+|![Fabrice Barbin](images/BiographyImages/FabriceBarbin_270x270.jpg)</br>**Fabrice Barbin**</br>*Francia*|Entrepreneur, Innovation and Technology fan for years, Fabrice è CEO di [SYNERGIZ](http://www.synergiz.com), Microsoft Mixed Reality partner, pioniere dei casi d'uso di HoloLens in Francia. Promuovere attivamente le tecnologie Microsoft come speaker, MVP premiato per 12 anni, Fabrice è interessato da un ampio set di prodotti: HoloLens, Kinect4Azure, Internet, Surface Hub, Ink, touch, IA, Machine Learning, servizi cognitivi, Azure|[Email](mailto:fbarbin@synergiz.com)|
+|![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italia*|Gianni è un MVP Microsoft dalla 2011, con particolare attenzione alle tecnologie emergenti, AI e alla realtà virtuale/aumentata/mista a partire dal 2013. Attualmente è R & D Senior Software Engineer in Deltatre ' s Innovation Lab, progettazione e creazione di prototipi di soluzioni di prossima generazione per le esperienze e i servizi correlati allo sport, da app VR/MR a architetture e flussi di lavoro video end-to-end, passando da servizi cognitivi, intelligenza artificiale e molto altro. Inoltre, è un membro attivo della community locale "Torino Technologies Group" (TTG), Organizzatore e Trainer per codificare i Meetup mensili di Torino, Pluralsight Online Courses Author, pubblicare articoli sul suo blog e il suo altoparlante in nazionale e convegni e eventi tecnici internazionali.|[Email](mailto:giannishub@hotmail.com)|
+|![Jessica Engstrom](images/BiographyImages/JessicaEngstrom_270x270.jpg)</br>**Jessica Engstrom**</br>*Stoccolma, Svezia*|Microsoft MVP: sviluppo della piattaforma Windows, speaker pubblico, UX, bot e realtà mista. Codifica dopo il co-host del podcast di lavoro. Gruppo utenti e libreria conferenze|[Email](mailto:jessica@catoholic.se)|
+|![Jimmy Engstrom](images/BiographyImages/JimmyEngstrom_270x270.jpg)</br>**Jimmy Engstrom**</br>*Stoccolma, Svezia*|Microsoft MVP: sviluppo della piattaforma Windows, speaker, blazer, realtà mista, HoloLens e Windows Developer. Codifica dopo il co-host del podcast di lavoro. Gruppo utenti e libreria conferenze|[Email](mailto:jimmy@engstromjimmy.se)|
+|![Joost van Schaik](images/BiographyImages/JoostVanSchaik_270x270.jpg)</br>**Joost van Schaik**</br>*Amersfoort, Paesi Bassi*|Non sono il primo a dipingere grandi storie e panoramiche su larga scala nello spazio di MR. mi chiamo uno sviluppatore + + e faccio tutto il possibile. Le mie primarie rivendicazioni di ' celebrità' sono il mio blog e le mie app: una delle prime app Indie per HoloLens 1 e 2 disponibili dallo Store è la mia. Cercare l'editore "LocalJoost" e vedere per se stessi. Negli ultimi tre anni ho partecipato anche ad alcuni progetti commerciali. Mi considero un utente della community, mi piace condividere le mie conoscenze, sia sul mio blog che in persona.|[Email](mailto:joostvanschaik@outlook.com.)|
+|![Lance Larsen](images/BiographyImages/LanceLarsen_270x270.png)</br>**Lance Larsen**</br>*Madison, WI, Stati Uniti*|Lance Larsen è un MVP di Microsoft, un fondatore e il Chief visionario ufficiale (CVO) di [HOLOSOFT](https://www.HoloSoft.com) , oltre a un appassionato community Speaker-and-President of [MADdotNET](https://www.MADdotNET.com), Madison Wisconsin ' s .NET Developer Community!  Inoltre, è uno degli organizzatori originali della conferenza, il campo estivo per i fanatici.  La maggior parte degli sviluppatori è incentrata sui colloqui "Growinging up geek" per aumentare la prossima generazione di ragazzi sulla tecnologia. Tecnologia incentrata su "Hololens/realtà mista", "VR/AR per il settore", "ancoraggi spaziali di Azure", "Kinect di Azure", "sviluppo Unity" e molto altro...|[Email](mailto:lance@lancelarsen.com)|
+|![Lance McCarthy](images/BiographyImages/LanceMcCarthy_270x270.jpg)</br>**Lance McCarthy**</br>*Boston, MA, Stati Uniti*|Lance McCarthy è un leader della community eccezionale con un'esperienza acuta per tutte le C# cose .NET e (in particolare nello stack XAML), oltre che per applicazioni HoloLens/realtà miste.</br></br>Lance è molto utile in linea, guidando e rispondendo alle domande degli sviluppatori Microsoft su Twitter come @lancewmccarthy e i Blog di DVLUP.com. Organizza & ospita gli eventi nell'area di Boston, ad esempio serate del gruppo di utenti, campi di Mini-codice e gli hackathon completi.|[Email](mailto:lance@dvlup.com)|
+|![Philipp Bauknecht](images/BiographyImages/PhilippBauknecht_270x270.jpg)</br>**Philipp Bauknecht**</br>*Pforzheim, Germania*|Salve, sono Philipp Bauknecht della Germania, fondatore & CEO di medialesson GmbH, un early adopter di HoloLens e membro del programma Microsoft Mixed Reality partner. Posso aiutare i miei clienti a progettare, progettare, compilare e gestire applicazioni moderne, bellissime e utilizzabili, che possono essere eseguite su qualsiasi piattaforma come consulente, progettista e trainer insieme al mio team di progettisti e sviluppatori altamente qualificati.</br></br>Oltre a insegnare la progettazione dell'interfaccia all'Università di Pforzheim e coinvolgere la community come oratore presso conferenze e gruppi di utenti e organizzatori di code Camps e gli hackathon.</br></br>Sono stato selezionato come uno dei 100 Creative Talents dall'Unione europea e dal Comitato delle aree. Sono un Microsoft Most Valuable Professional (MVP) per lo sviluppo per Windows dal 2013. In 2017 è stato accettato il programma Microsoft Regional Director.|[Email](mailto:bauknecht@medialesson.de)|
+|![René Schulte](images/BiographyImages/ReneSchulte_270x270.jpg)</br>**Schulte René**</br>*Dresda, Germania*|René Schulte è Director of Global Innovation at valorem Reply collaborando con i team in tutto il mondo su tecnologie emergenti come la rivoluzionaria soluzione di telepresenza di video volumetrico 3D HoloBeam e il cloud AR che consente un utente multipiattaforma di grandi dimensioni esperienze con la persistenza.</br></br>È un leader di pensiero creativo con una passione per l'esperienza utente e una conoscenza tecnica approfondita, da più di 10 anni nella tecnologia VR/AR/MR/XR e nella programmazione 3D, in fase di sviluppo per Microsoft HoloLens dalla 2015, è stata presentata in Forbes ed è elencata come "VR/AR/MR dev influencer". Ha codificato anche le reti neurali per l'apprendimento avanzato per l'intelligenza artificiale e usa l'intelligenza artificiale moderna per potenziare gli utenti.</br></br>È un comune oratore e speaker della sessione e paneler di conferenze come build, Unity, Vision VR/AR Summit, VRDC (GDC), AWE, ESA e altro ancora. Blog su molti argomenti. Ha inoltre creato librerie open source più diffuse, ad esempio WriteableBitmapEx e la libreria AR SLARToolKit.</br></br>È stato onorato più volte per la propria community dev collaborare con il premio Microsoft MVP, riconosciuto come Microsoft Regional Director e Global Advisory Board Member per l'associazione VR/AR.</br></br>Vive a Dresda, Germania con la sua moglie e i suoi 5 figli.|[Email](mailto:schulte.rene@outlook.com)|
+|![Takahiro Miyaura](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Miyaura Takahiro**</br>*Nara, Giappone*|Sto lavorando come ingegnere del software e sviluppatore nel settore IT. In particolare, ho fatto la ricerca XR (VR/AR/MR e così via). ) e diverse tecnologie (AI, Internet e così via) che possono trarre vantaggio da XR.|[Email](mailto:cafe.kobe@gmail.com)|
+|![demo](images/BiographyImages/tamasdeme_270.png)</br>**Demo di Torre**</br>*Budapest, Ungheria*|Si tratta di un ingegnere della realtà mista che lavora a VIM basato su Atlanta, dove sviluppa soluzioni per i dispositivi che spaziano da server a un auricolare che Mostra gli ologrammi. Si tratta di un 5 volte Microsoft MVP per lo sviluppo di Windows, interessato a progetti open source, insegnamento e mentoring. È possibile trovarlo online in [https://tomzorz.me](https://tomzorz.me) o su twitter al [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_).|[Email](mailto:mixedreality@tomzorz.me)|
+|![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, Giappone*|MR Educator of Physics in 5 paesi, tra cui Afrika, President of Side of Physics|[Email](mailto:tatsuro.ueda@feel-physics.jp)|

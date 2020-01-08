@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: 2f2f823fe7192bd92e038d58901cb7098d2f4d64
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438108"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597634"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -68,12 +68,12 @@ Per abilitare questa funzionalità nel progetto Unity
 
 Si consiglia inoltre di selezionare la **profondità a 16 bit** nell'impostazione del **formato Depth** in questo pannello, specialmente per lo sviluppo HoloLens. La selezione di 16 bit rispetto a 24 bit ridurrà in modo significativo i requisiti di larghezza di banda, in quanto sarà necessario spostare o elaborare i dati.
 
-Per ottimizzare la stabilità dell'ologramma, la piattaforma per la realtà mista di Windows si basa sul buffer di profondità, che corrisponde a tutti gli ologrammi sottoposti a rendering sullo schermo. Quindi, con la condivisione del buffer di profondità in, è importante quando si esegue il rendering del colore, anche per il rendering della profondità. In Unity, la maggior parte dei materiali opachi o TransparentCutout eseguirà il rendering per impostazione predefinita, ma gli oggetti trasparenti e di testo non eseguiranno in genere il rendering della profondità anche se si tratta di uno shader dipendente
+Per ottimizzare la stabilità dell'ologramma, la piattaforma per la realtà mista di Windows si basa sul buffer di profondità, che corrisponde a tutti gli ologrammi sottoposti a rendering sullo schermo. Pertanto, con la condivisione del buffer di profondità in, è importante quando si esegue il rendering del colore, per eseguire anche il rendering della profondità. In Unity, la maggior parte dei materiali opachi o TransparentCutout eseguirà il rendering per impostazione predefinita, ma gli oggetti trasparenti e di testo non eseguiranno in genere il rendering della profondità anche se si tratta di uno shader dipendente
 
 Se si usa il [Toolkit di realtà misto standard shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), per eseguire il rendering della profondità per gli oggetti trasparenti:
 
 1) Selezionare il materiale trasparente che usa lo shader standard MRTK e aprire la finestra Editor di controllo
-2) Selezionare il pulsante **Correggi ora** nell'avviso di condivisione del buffer di profondità. Questa operazione può essere eseguita anche manualmente impostando **la modalità di rendering** su **personalizzata** e impostando la **modalità** su **trasparente** e infine impostando **Depth Write** **su on**
+2) Selezionare il pulsante **Correggi ora** nell'avviso di condivisione del buffer di profondità. Questa operazione può essere eseguita anche manualmente impostando la **modalità di rendering** su **personalizzata**; Impostare quindi **mode** su **Transparent** e infine impostare **Depth Write** **su on**
 
 > [!IMPORTANT]
 > Gli sviluppatori devono prestare attenzione alla lotta Z quando cambiano questi valori insieme alle impostazioni del piano vicino/lontano della fotocamera. Il combattimento Z si verifica quando due GameObject tentano di eseguire il rendering nello stesso pixel e a causa delle limitazioni della fedeltà del buffer di profondità (ovvero z depth), Unity non è in grado di distinguere l'oggetto che è davanti all'altro. Gli sviluppatori noteranno uno sfarfallio tra due oggetti del gioco mentre *combattono* per lo stesso valore di profondità z. Questo problema può essere risolto passando a un formato di profondità a 24 bit, perché sarà disponibile un intervallo più ampio di valori per ogni oggetto da calcolare per la profondità z dalla fotocamera.
@@ -85,14 +85,14 @@ Se si usa il [Toolkit di realtà misto standard shader](https://github.com/micro
 
 ### <a name="building-for-il2cpp"></a>Compilazione per IL2CPP
 
-Unity ha deprecato il supporto per il back-end di scripting .NET e pertanto consiglia agli sviluppatori di usare **IL2CPP** per le compilazioni di UWP in Visual Studio. Anche se questo offre diversi vantaggi, la creazione della soluzione di Visual Studio da Unity per **Il2CPP** può essere notevolmente più lenta rispetto al vecchio metodo .NET. Pertanto, è consigliabile seguire le procedure consigliate per la compilazione di **IL2CPP** per risparmiare sul tempo di iterazione dello sviluppo.
+Unity ha deprecato il supporto per il back-end di scripting .NET e pertanto consiglia agli sviluppatori di usare **IL2CPP** per le compilazioni UWP di Visual Studio. Anche se questo offre diversi vantaggi, la creazione della soluzione di Visual Studio da Unity per **Il2CPP** può essere notevolmente più lenta rispetto al vecchio metodo .NET. Pertanto, è consigliabile seguire le procedure consigliate per la compilazione di **IL2CPP** per risparmiare sul tempo di iterazione dello sviluppo.
 
 1) Utilizzare la compilazione incrementale compilando il progetto nella stessa directory ogni volta, riutilizzando i file predefiniti
 2) Disabilitare le analisi del software anti-malware per il progetto & cartelle di compilazione
    - Aprire **Virus & Threat Protection** nell'app impostazioni di Windows 10
    - Selezionare **Gestisci impostazioni** in **virus & impostazioni di protezione dalle minacce**
    - Selezionare **Aggiungi o Rimuovi esclusioni** nella sezione **esclusioni**
-   - Fare clic su **Aggiungi un'esclusione** e selezionare la cartella che contiene il codice del progetto Unity e gli output di compilazione
+   - Fare clic su **Aggiungi un'esclusione** e selezionare la cartella contenente il codice del progetto Unity e gli output di compilazione
 3) Usare un'unità SSD per la compilazione
 
 Per altre informazioni, vedere [ottimizzazione dei tempi di compilazione per IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) .
@@ -141,7 +141,7 @@ Per personalizzare l'immagine del rilevamento perso:
 
 Per rifiutare esplicitamente il comportamento di sospensione automatica:
 
-1) Passare a **modifica** **Impostazioni progetto** > pagina **lettore** di > 
+1) Vai alla pagina > modifica **Impostazioni progetto** > **lettore**
 2) Fare clic sulla scheda **Windows Store** e aprire la sezione **immagine iniziale** .
 3) Modificare la casella **di controllo > Windows olografico nella casella di controllo Sospendi perdita e Mostra immagine** .
 
@@ -156,7 +156,7 @@ Per fare in modo che un'app sfrutti i vantaggi di determinate funzionalità, dev
 È possibile abilitare le funzionalità per un'applicazione di realtà mista:
 
 1) Passare a **modifica** **Impostazioni progetto** > pagina **lettore** di > 
-2) Fare clic sulla scheda **Windows Store** e aprire la sezione **impostazioni di pubblicazione** e cercare l'elenco delle **funzionalità**
+2) Fare clic sulla scheda **Windows Store** , aprire la sezione **impostazioni di pubblicazione** e cercare l'elenco delle **funzionalità**
 
 Le funzionalità applicabili per l'abilitazione delle API di uso comune per le app olografiche sono:
 <br>

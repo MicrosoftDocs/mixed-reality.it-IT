@@ -1,23 +1,23 @@
 ---
 title: Shader
-description: ''
+description: Lo shader standard MRTK fornisce vari tipi di effetti visivi che possono essere usati con gli ologrammi.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 23371ae5d70e5e792415fd25c0d58def0a7cefbb
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 4d95e335b3f7020766beae916423d0588ee66572
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143271"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694165"
 ---
 # <a name="shader"></a>Shader
 
 ![Shader](images/UX/UX_Hero_StandardShader.jpg)
 
-Poiché gli oggetti olografici sono combinati con quelli fisici nell'ambiente, fornire un segnale visivo è importante in realtà mista. MRTK standard shader fornisce vari tipi di effetti visivi che possono essere usati con gli ologrammi. Il sistema di ombreggiatura standard MRTK usa un unico shader flessibile che può ottenere oggetti visivi simili allo shader standard di Unity, implementare i principi del sistema di progettazione Fluent e rimanere efficienti nei dispositivi a realtà mista.
+Poiché gli oggetti olografici sono combinati con quelli fisici nell'ambiente, è importante fornire segnali visivi in realtà mista. Lo shader standard MRTK fornisce vari tipi di effetti visivi che possono essere usati con gli ologrammi. Il sistema di ombreggiatura standard di MRTK usa un unico shader flessibile che può ottenere oggetti visivi simili allo shader standard di Unity, implementa i [principi del sistema di progettazione Fluent](https://www.microsoft.com/design/fluent/#/)e mantiene le prestazioni nei dispositivi a realtà mista.
 <br>
 
 ## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>Esempi di effetti visivi con MRTK standard shader 
@@ -32,9 +32,11 @@ Poiché gli oggetti olografici sono combinati con quelli fisici nell'ambiente, f
     :::column-end:::
 :::row-end:::
 
+<br>
+
 ---
 
-## <a name="mrtk-standard-shader-in-mrtkmixed-reality-toolkit-for-unity"></a>Shader standard MRTK in MRTK (Toolkit realtà mista) per Unity
+## <a name="mrtk-standard-shader-in-mrtk-mixed-reality-toolkit-for-unity"></a>Shader standard MRTK in MRTK (Toolkit realtà mista) per Unity
 
 * [MRTK-standard shader](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)
 

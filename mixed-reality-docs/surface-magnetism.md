@@ -1,33 +1,33 @@
 ---
 title: Magnetismo di superficie
-description: ''
+description: Usando la tecnica di magnetismo di Surface, è possibile posizionare gli oggetti olografici in una superficie fisica reale.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 2c3c1a8550a3ae953f0e6af942159e958d560eec
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143112"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694145"
 ---
 # <a name="surface-magnetism"></a>Magnetismo di superficie
 
 ![Magnetismo di superficie](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Usando la tecnica di magnetismo di Surface, è possibile posizionare oggetti sulla superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale.
+Usando la tecnica di magnetismo di Surface, è possibile posizionare gli oggetti olografici in una superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale.
 
 <br>
 
 ---
 
-## <a name="surface-magnetism-in-mrtkmixed-reality-toolkit-for-unity"></a>Magnetismo di superficie in MRTK (Toolkit realtà mista) per Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce gli script e la scena di esempio per la tecnica di magnetismo della superficie. È possibile usare il magnetismo della superficie con vari tipi di input, ad esempio un raggio di mano, un occhio e un controller di movimento.
+## <a name="surface-magnetism-in-mrtk-mixed-reality-toolkit-for-unity"></a>Magnetismo di superficie in MRTK (Toolkit realtà mista) per Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce gli script e le scene di esempio per la tecnica di magnetismo della superficie. È possibile usare il magnetismo della superficie con vari tipi di input, ad esempio il raggio di mano, lo sguardo e i controller di movimento.
 
 * [Risolutore MRTK-Surface magnetismo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#surfacemagnetism)
-* [Scena di esempio MRTK-Spatial Awareness + Surface magnetismo](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
+* [Scenari di esempio di MRTK-Spatial Awareness + Surface magnetismo](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MixedRealityToolkit.Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
 
 
 <br>

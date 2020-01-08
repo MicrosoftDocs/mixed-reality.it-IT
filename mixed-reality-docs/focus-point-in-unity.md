@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto focale, piano di messa a fuoco, piano di stabilizzazione, punto di stabilizzazione, riproiezione, LSR, buffer di profondità
-ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9a7f30b552242b24a9a7b260b6574690a27d2c1d
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435421"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502622"
 ---
 # <a name="focus-point-in-unity"></a>Punto di messa a fuoco in Unity
 

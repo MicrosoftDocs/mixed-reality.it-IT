@@ -6,12 +6,12 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: immagine volumetrica, rendering del volume, prestazioni, realtà mista
-ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926675"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503830"
 ---
 # <a name="volume-rendering"></a>Rendering del volume
 
@@ -23,7 +23,7 @@ Soluzioni principali per migliorare le prestazioni
 3. BENE: riduzione del volume secondario: Mostra solo pochi livelli del volume
 4. BENE: abbassare la risoluzione del rendering del volume (vedere il rendering di una scena di risoluzione mista)
 
-Esiste solo una certa quantità di informazioni che possono essere trasferite dall'applicazione sullo schermo in un particolare frame, ovvero la larghezza di banda totale della memoria. Anche qualsiasi elaborazione (o ' ombreggiatura ') necessaria per trasformare i dati per la presentazione richiede anche tempo. Le considerazioni principali per il rendering del volume sono le seguenti:
+È presente una certa quantità di informazioni che possono essere trasferite dall'applicazione alla schermata in un particolare frame, ovvero la larghezza di banda totale della memoria. Inoltre, qualsiasi elaborazione (o ' ombreggiatura ') necessaria per trasformare i dati per la presentazione richiede tempo. Le considerazioni principali per il rendering del volume sono le seguenti:
 * Screen-width * screen-height * screen-count * volume-layers-on-that-pixel = Total-volume-Samples-per-frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volume res completo: troppi esempi)
 * 1028 * 720 * 2 * 1 = 1480320 (0,3% of Full) (slice sottile: 1 campione per pixel, esecuzione senza problemi)
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-In molte applicazioni archiviate nel volume sia un valore di intensità RAW che un "indice di segmentazione" (per segmentare parti diverse, ad esempio Skin e Bone, questi segmenti vengono in genere creati dagli esperti in strumenti dedicati). Questa operazione può essere combinata con l'approccio precedente per inserire un colore diverso o persino una rampa di colore diversa per ogni indice di segmento:
+In molte delle nostre applicazioni viene archiviato nel volume sia un valore di intensità RAW che un "indice di segmentazione" (per segmentare parti diverse, ad esempio Skin e Bone). questi segmenti vengono in genere creati dagli esperti in strumenti dedicati. Questa operazione può essere combinata con l'approccio precedente per inserire un colore diverso o persino una rampa di colore diversa per ogni indice di segmento:
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -122,7 +122,7 @@ Il primo passaggio consiste nel creare un "piano di sezionamento" che può spost
 
 ## <a name="volume-tracing-in-shaders"></a>Traccia del volume in shader
 
-Come usare la GPU per eseguire la traccia dei sottovolumi (si tratta di un numero ridotto di voxel, quindi i livelli sui dati da una parte all'altra):
+Come usare la GPU per eseguire la traccia dei sottovolumi (voxel approfondimenti, quindi i livelli sui dati da un ritorno all'inizio):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>Rendering intero del volume
 
-Modificando il codice del sottovolume precedente si ottiene:
+Modificando il codice del sottovolume riportato sopra, si ottiene:
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 Come eseguire il rendering di una parte della scena con una risoluzione bassa e inserirla di nuovo:
 1. Configurare due fotocamere fuori schermo, una per seguire ogni occhio che aggiorna ogni frame
-2. Configurare due destinazioni di rendering a bassa risoluzione (ad ogni 200x200), in cui viene eseguito il rendering delle fotocamere
+2. Configurare due destinazioni di rendering a bassa risoluzione, ad esempio 200x200 ognuna, in cui vengono sottoposte a rendering le fotocamere
 3. Configurare un quad che si sposta davanti all'utente
 
 Ogni frame:
 1. Disegnare le destinazioni di rendering per ogni occhio a bassa risoluzione (dati del volume, shader costosi e così via)
 2. Creare la scena normalmente come risoluzione completa (mesh, interfaccia utente e così via)
-3. Disegnare un quad davanti all'utente, sulla scena e proiettare i rendering a bassa risoluzione su tale oggetto.
-4. Risultato: combinazione visiva di elementi a risoluzione completa con dati di volume a bassa risoluzione ma ad alta densità.
+3. Disegnare un quad davanti all'utente, sulla scena e proiettare i rendering a bassa risoluzione su tale
+4. Risultato: combinazione visiva di elementi a risoluzione completa con dati di volume a bassa risoluzione ma a densità elevata

@@ -1,23 +1,23 @@
 ---
 title: Pulsante
-description: ''
+description: Un pulsante offre all'utente un modo per attivare un'azione immediata. È uno dei componenti più fondamentali in realtà mista.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: c3fed3b7301c907a657796da7fc83bab146e2df1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 5b6ee85b6ac7da039ad9975437fa164b579a7167
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143165"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694005"
 ---
 # <a name="button"></a>Pulsante
 
 ![Pulsante](images/UX/UX_Hero_Button.jpg)
 
-Un pulsante offre all'utente un modo per attivare un'azione immediata. È uno dei componenti più fondamentali in realtà mista. In HoloLens 2 il pulsante presenta molti indicatori visivi e affordances per aumentare la confidenza dell'utente sull'interazione. 
+Un pulsante offre all'utente un modo per attivare un'azione immediata. È uno dei componenti più fondamentali in realtà mista. In HoloLens 2, un pulsante presenta molti suggerimenti visivi e affordances per aumentare la confidenza dell'interazione dell'utente. 
 
 
 :::row:::
@@ -48,7 +48,7 @@ Un pulsante offre all'utente un modo per attivare un'azione immediata. È uno de
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>Pulsante in MRTK (Mixed Reality Toolkit) per Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce vari tipi di prefabbricati di pulsanti. È possibile trovare i pulsanti di tipo Shell per HoloLens 2 e HoloLens 1st Gen, oltre ad esempi personalizzati. Il prefabbricato HoloLens 2 Button contiene una grande quantità di affordances dettagliati che migliora la confidenza dell'utente. Include evidenziazione basata sulla prossimità, compressione della gabbia anteriore e effetto di impulso sul trigger.
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce vari tipi di prefabbricati di pulsanti. È possibile trovare i pulsanti di tipo Shell per HoloLens 2 e HoloLens (1st Gen), oltre ad esempi personalizzati. La precostruzione HoloLens 2 Button contiene una grande quantità di affordances dettagliata che consentono di migliorare la confidenza dell'utente. Include evidenziazione basata sulla prossimità, compressione della gabbia anteriore e effetto di impulso sul trigger.
 
 * [Pulsante di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
 

@@ -5,13 +5,13 @@ author: rwinj
 ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
-keywords: nessuno
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+keywords: Nessuno
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439552"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694015"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Titolo (per quanto possibile, usare i termini umani) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "73439552"
 </tr>
 <tr>
      <td>Argomento o titolo dell'articolo</td>
-     <td>❌ non supportato</td>
+     <td>❌ Non supportata</td>
      <td>✔️ Consigliata</td>
      <td>✔️ Consigliata</td>
 </tr>
@@ -237,7 +237,4 @@ Impostare iframe su Width = "940" height = "530".
 
 * [Nome dell'articolo correlato 1](design.md)
 * [Nome dell'articolo 2 correlato](design.md)
-* [Nome dell'articolo 3 correlato](design.md)
-
-
-
+* [Nome articolo 3 correlato-collegamento a una sezione specifica](design.md#what-are-the-core-concepts-of-an-experience)
