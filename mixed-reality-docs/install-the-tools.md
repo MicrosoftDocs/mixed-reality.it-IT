@@ -7,12 +7,12 @@ ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: informazioni aggiornate, strumenti, inizio, nozioni di base, unity, visual studio, toolkit
-ms.openlocfilehash: 7687576eb0c786a12bd0e14fa81f66c9918653e7
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7dde2e90a3e1057a0b5ac33be1ddeed70bf79788
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940879"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597644"
 ---
 # <a name="install-the-tools"></a>Installare gli strumenti
 
@@ -32,12 +32,12 @@ Il modo più semplice per iniziare a creare app di realtà mista consiste nell'i
 ## <a name="installation-checklist"></a>Elenco di controllo per l'installazione
 
 
-| Strumento | Descrizione | Note |
+| Strumento | Description | Note |
 |---------|---------|---------|
-| ![Logo Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**<br>(collegamento per l'installazione manuale)</a> | Installa la versione di Windows 10 più recente in modo che il sistema operativo del PC corrisponda alla piattaforma per cui stai creando applicazioni di realtà mista. | **Installazione di Windows 10** <br> <ul><li>Puoi installare la versione di Windows 10 più recente tramite Windows Update in Impostazioni oppure creando supporti di installazione, usando il collegamento nella colonna sinistra.<li>Vedi le [note sulla versione aggiornate](release-notes-october-2018.md) per informazioni sulle funzionalità di realtà mista più recenti disponibili con ogni versione di Windows 10.</ul> **Abilita la modalità sviluppatore nel PC** in Impostazioni > Aggiornamento e sicurezza > Per sviluppatori. <br><br> **Nota per computer aziendali e gestiti dall'organizzazione:** se il computer è gestito dal reparto IT dell'organizzazione, potrebbe essere necessario contattarlo per l'aggiornamento. <br><br> **Versioni 'N' di Windows:** i visori VR immersive di Windows Mixed Reality non sono supportati nelle versioni "N" di Windows. |
-| ![Logo di Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019 (16.2 o versione successiva)**<br>(collegamento per l'installazione)</a> | Ambiente di sviluppo integrato con funzionalità complete per Windows e altro ancora. Visual Studio verrà usato per scrivere il codice ed eseguire il debug, i test e la distribuzione. | **Carichi di lavoro da installare:** <ul><li>Sviluppo per desktop con C++</li><li>Sviluppo di app UWP (Universal Windows Platform)</li></ul>**Nota su Unity:** a meno che non stia intenzionalmente tentando di installare una versione più recente (non LTS) di Unity per uno scopo specifico, è consigliabile *non* installare il carico di lavoro Unity come parte dell'installazione di Visual Studio e installare invece il flusso 2018.4 LTS di Unity come indicato di seguito.<br> <br>**Nota:** esistono alcuni problemi noti relativi al debug di app di realtà mista in Visual Studio 2019 versione 16.0.  Assicurati di aggiornare Visual Studio 2019 alla versione 16.2 o successiva. |
-| ![Logo Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK (10.0.18362.0)**<br>(collegamento per l'installazione manuale)</a> | Include le intestazioni, le librerie, i metadati e gli strumenti più recenti per la creazione di app di Windows 10 in HoloLens 2. | Per creare app di HoloLens 2, devi installare l'SDK di Windows, build 18362 o versione successiva.<br> <br> Se sviluppi solo applicazioni per visori VR di Windows Mixed Reality desktop o per HoloLens (prima generazione), puoi usare Windows SDK installato da Visual Studio 2017. |
-| ![Logo di Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2112589" target="_blank">**Emulatore HoloLens 2 (aggiornamento di dicembre 2019)**<br>(collegamento per l'installazione: 10.0.18362.1042)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulatore di HoloLens (prima generazione)**<br>(collegamento per l'installazione: 10.0.17763.134)</a> | L'emulatore permette di eseguire le applicazioni in un'immagine di macchina virtuale HoloLens senza un dispositivo HoloLens fisico.<br> <br> | Vedi [Uso dell'emulatore di HoloLens](using-the-hololens-emulator.md) per altre informazioni su come iniziare a usare l'emulatore.<br> <br> **Il sistema deve supportare Hyper-V** per garantire un'installazione corretta dell'emulatore. Vedi più avanti la sezione relativa ai requisiti di sistema per i dettagli. <br>|
+| ![Logo di Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10** (collegamento per l'installazione manuale)</a> | Installa la versione di Windows 10 più recente in modo che il sistema operativo del PC corrisponda alla piattaforma per cui stai creando applicazioni di realtà mista. | **Installazione di Windows 10** <br> <ul><li>Puoi installare la versione di Windows 10 più recente tramite Windows Update in Impostazioni oppure creando supporti di installazione, usando il collegamento nella colonna sinistra.<li>Vedi le [note sulla versione aggiornate](release-notes-october-2018.md) per informazioni sulle funzionalità di realtà mista più recenti disponibili con ogni versione di Windows 10.</ul> **Abilita la modalità sviluppatore nel PC** in Impostazioni > Aggiornamento e sicurezza > Per sviluppatori. <br><br> **Nota per computer aziendali e gestiti dall'organizzazione:** se il computer è gestito dal reparto IT dell'organizzazione, potrebbe essere necessario contattarlo per l'aggiornamento. <br><br> **Versioni 'N' di Windows:** i visori VR immersive di Windows Mixed Reality non sono supportati nelle versioni "N" di Windows. |
+| ![Logo di Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019 (16.2 o versione successiva)** (collegamento per l'installazione)</a> | Ambiente di sviluppo integrato con funzionalità complete per Windows e altro ancora. Visual Studio verrà usato per scrivere il codice ed eseguire il debug, i test e la distribuzione. | **Carichi di lavoro da installare:** <ul><li>Sviluppo per desktop con C++</li><li>Sviluppo di app UWP (Universal Windows Platform)</li></ul>**Nota su Unity:** a meno che non stia intenzionalmente tentando di installare una versione più recente (non LTS) di Unity per uno scopo specifico, è consigliabile *non* installare il carico di lavoro Unity come parte dell'installazione di Visual Studio e installare invece il flusso 2018.4 LTS di Unity come indicato di seguito.<br> <br>**Nota:** esistono alcuni problemi noti relativi al debug di app di realtà mista in Visual Studio 2019 versione 16.0.  Assicurati di aggiornare Visual Studio 2019 alla versione 16.2 o successiva. |
+| ![Logo di Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK (10.0.18362.0)** (collegamento per l'installazione manuale)</a> | Include le intestazioni, le librerie, i metadati e gli strumenti più recenti per la creazione di app di Windows 10 in HoloLens 2. | Per creare app di HoloLens 2, devi installare l'SDK di Windows, build 18362 o versione successiva.<br> <br> Se sviluppi solo applicazioni per visori VR di Windows Mixed Reality desktop o per HoloLens (prima generazione), puoi usare Windows SDK installato da Visual Studio 2017. |
+| ![Logo di Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2112589" target="_blank">**Emulatore HoloLens 2 (aggiornamento di dicembre 2019)** (collegamento per l'installazione: 10.0.18362.1042)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulatore HoloLens (prima generazione)** (collegamento per l'installazione: 10.0.17763.134)</a> | L'emulatore permette di eseguire le applicazioni in un'immagine di macchina virtuale HoloLens senza un dispositivo HoloLens fisico.<br> <br> | Vedi [Uso dell'emulatore di HoloLens](using-the-hololens-emulator.md) per altre informazioni su come iniziare a usare l'emulatore.<br> <br> **Il sistema deve supportare Hyper-V** per garantire un'installazione corretta dell'emulatore. Vedi più avanti la sezione relativa ai requisiti di sistema per i dettagli. <br>|
 
 ## <a name="choose-your-engine"></a>Scegli il motore
 
@@ -94,7 +94,7 @@ Esistono attualmente [problemi noti](https://docs.microsoft.com/windows/mixed-re
 
 <table>
 <tr>
-<th></th><th> Minimo</th><th> Consigliato</th>
+<th></th><th> Minimo</th><th> Implementazione consigliata</th>
 </tr><tr>
 <td> Processore</td><td> <b>Notebook:</b> CPU Intel Mobile Core i5 settima generazione, dual-core con hyperthreading <b>Desktop:</b> CPU Intel Desktop i5 sesta generazione, dual-core con hyperthreading <b>OPPURE</b> equivalente quad-core 4,2 GHz AMD FX4350</td><td> <b>Desktop:</b> Intel Desktop i7 sesta generazione (6 core) <b>OPPURE</b> AMD Ryzen 5 1600 (6 core, 12 thread)</td>
 </tr><tr>
@@ -106,11 +106,11 @@ Esistono attualmente [problemi noti](https://docs.microsoft.com/windows/mixed-re
 </tr><tr>
 <td> Porte per scheda video</td><td colspan="2"> Porta per scheda video disponibile 1x per&#160;visore VR (HDMI 1.4 o DisplayPort 1.2 per visori VR 60 Hz, HDMI 2.0 o DisplayPort 1.2 per visori VR 90 Hz)</td>
 </tr><tr>
-<td> Risoluzione dello schermo</td><td colspan="2"> Soluzione: SVGA (800 x 600) o superiore Intensità in bit: 32 bit di colore per pixel</td>
+<td> Risoluzione dello schermo</td><td colspan="2"> Risoluzione: SVGA (800 x 600) o superiore Intensità in bit: 32 bit di colore per pixel</td>
 </tr><tr>
-<td> Memoria</td><td> Almeno 8 GB di RAM</td><td> Almeno 16 GB di RAM</td>
+<td> Memory</td><td> Almeno 8 GB di RAM</td><td> Almeno 16 GB di RAM</td>
 </tr><tr>
-<td> Archiviazione</td><td colspan="2"> &gt;10 GB di spazio disponibile aggiuntivo</td>
+<td> Archiviazione:</td><td colspan="2"> &gt;10 GB di spazio disponibile aggiuntivo</td>
 </tr><tr>
 <td> Porte USB</td><td colspan="2"> Porta USB disponibile 1x per visore VR (USB 3.0 Tipo A) <b>Nota: USB deve fornire un minimo di 900mA</b></td>
 </tr><tr>
@@ -118,7 +118,7 @@ Esistono attualmente [problemi noti](https://docs.microsoft.com/windows/mixed-re
 </tr>
 </table>
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Cenni preliminari sullo sviluppo](development.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)

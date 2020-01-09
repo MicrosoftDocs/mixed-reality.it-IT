@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, interazione, progettazione, HoloLens, mani, da lontano, puntamento e commit
-ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105992"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334062"
 ---
 # <a name="point-and-commit-with-hands"></a>Puntamento e commit con le mani
 
@@ -76,7 +76,7 @@ Tale comando gestuale di base viene attivato usando il pollice e il dito indice 
 
 ## <a name="transition-between-near-and-far"></a>Transizione dall'interazione da vicino all'interazione da lontano
 
-Invece di usare movimenti specifici, come il "puntamento con il dito indice" per indirizzare il raggio, abbiamo progettato il raggio proveniente dal centro del palmo, in modo da lasciare le cinque dita libere per eseguire movimenti più finalizzati alla manipolazione, ad esempio l'avvicinamento delle dita e la cattura. Grazie a tale progettazione, viene creato un unico modello mentale che usa esattamente la stessa serie di movimenti della mano per l'interazione da vicino e da lontano. Puoi usare lo stesso movimento di cattura per manipolare oggetti a distanze diverse. I raggi vengono richiamati automaticamente in base alla prossimità, come indicato di seguito:
+Invece di usare movimenti specifici, come il "puntamento con il dito indice" per indirizzare il raggio, abbiamo progettato il raggio in modo che esca dal centro del palmo, lasciando le cinque dita libere di eseguire movimenti più finalizzati alla manipolazione, ad esempio l'avvicinamento delle dita e la cattura. Grazie a tale progettazione, viene creato un unico modello mentale che usa esattamente la stessa serie di movimenti della mano per l'interazione da vicino e da lontano. Puoi usare lo stesso movimento di cattura per manipolare oggetti a distanze diverse. I raggi vengono richiamati automaticamente in base alla prossimità, come indicato di seguito:
 
 :::row:::
     :::column:::
@@ -139,15 +139,15 @@ Gli utenti usano i raggi mano per puntare e vedere il cubo di delimitazione e gl
 :::row:::
     :::column:::
        ![Manipolazione di un oggetto 3D - spostamento da lontano](images/3d-object-manipulation-far-move.jpg)<br>
-       **Sposta**<br>
+       **Spostamento**<br>
     :::column-end:::
     :::column:::
        ![Manipolazione di un oggetto 3D - rotazione da lontano](images/3d-object-manipulation-far-rotate.jpg)<br>
-        **Ruota**<br>
+        **Rotazione**<br>
     :::column-end:::
     :::column:::
        ![Manipolazione di un oggetto 3D - ridimensionamento da lontano](images/3d-object-manipulation-far-scale.jpg)<br>
-       **Ridimensiona**<br>
+       **Ridimensionamento**<br>
     :::column-end:::
 :::row-end:::
 
@@ -211,7 +211,7 @@ Per impostazione predefinita, MRTK fornisce un file prefab relativo al raggio de
 
 ---
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Manipolazione diretta con le mani](direct-manipulation.md)
 * [Sguardo fisso e commit](gaze-and-commit.md)
 * [Mani - Manipolazione diretta](direct-manipulation.md)

@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, sguardo fisso, selezione della destinazione con lo sguardo, interazione, progettazione, a portata di mano, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105939"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694175"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipolazione diretta con le mani
 
@@ -178,7 +178,7 @@ Dotati di punta del dito di collisione, gli utenti sono ora pronti per interagir
 
 ## <a name="2d-slate-interaction"></a>Interazione con uno slate 2D
 
-Uno slate 2D è un contenitore olografico che ospita contenuti di app 2D, ad esempio un Web browser. Il concetto di progettazione per l'interazione con uno slate 2D tramite manipolazione diretta consiste nello sfruttare il modello mentale di interazione con un touchscreen fisico.
+Uno [slate](slate.md) 2D è un contenitore olografico usato per ospitare contenuti di app 2D, ad esempio un Web browser. Il concetto di progettazione per l'interazione con uno slate 2D tramite manipolazione diretta consiste nello sfruttare il modello mentale di interazione con un touchscreen fisico.
 
 ### <a name="to-interact-with-the-slate-contact"></a>Per interagire con il contatto tramite slate
 
@@ -205,13 +205,13 @@ Uno slate 2D è un contenitore olografico che ospita contenuti di app 2D, ad ese
 
 :::row:::
     :::column:::
-       ![Sposta](images/manipulate-2d-slate-move.jpg)<br>
-       **Sposta**<br>
+       ![Spostamento](images/manipulate-2d-slate-move.jpg)<br>
+       **Spostamento**<br>
        Sposta le mani verso angoli e i bordi per rivelare gli inviti di manipolazione più vicini. Afferra la barra dell'ologramma nella parte superiore dello slate 2D per spostare l'intero slate.
     :::column-end:::
     :::column:::
-       ![Ridimensiona](images/manipulate-2d-slate-scale.jpg)<br>
-        **Ridimensiona**<br>
+       ![Ridimensionamento](images/manipulate-2d-slate-scale.jpg)<br>
+        **Ridimensionamento**<br>
         Afferra gli inviti di manipolazione ed esegui un ridimensionamento uniforme tramite gli inviti degli angoli.
     :::column-end:::
     :::column:::
@@ -236,18 +236,18 @@ Permette di manipolare l'oggetto 3D tramite un cubo di delimitazione e gli invit
 
 :::row:::
     :::column:::
-       ![Sposta](images/3d-object-manipulation-move.jpg)<br>
-       **Sposta**<br>
+       ![Spostamento](images/3d-object-manipulation-move.jpg)<br>
+       **Spostamento**<br>
        Nel momento in cui la mano di un utente è vicina a un oggetto 3D, diventano visibili il cubo di delimitazione e l'invito più vicino. Gli utenti possono afferrare il cubo di delimitazione per spostare l'intero oggetto.
     :::column-end:::
     :::column:::
-       ![Ruota](images/3d-object-manipulation-rotate.jpg)<br>
-        **Ruota**<br>
+       ![Rotazione](images/3d-object-manipulation-rotate.jpg)<br>
+        **Rotazione**<br>
         Gli utenti possono afferrare gli inviti dei bordi per eseguire la rotazione.
     :::column-end:::
     :::column:::
-       ![Ridimensiona](images/3d-object-manipulation-scale.jpg)<br>
-       **Ridimensiona**<br>
+       ![Ridimensionamento](images/3d-object-manipulation-scale.jpg)<br>
+       **Ridimensionamento**<br>
        Gli utenti possono afferrare gli inviti degli angoli per eseguire un ridimensionamento uniforme.
     :::column-end:::
 :::row-end:::
@@ -275,15 +275,15 @@ Se ad esempio un oggetto o un punto di controllo deve essere afferrato avvicinan
 
 :::row:::
     :::column:::
-       ![Sposta](images/instinctual-gestures-smallobject.jpg)<br>
+       ![Spostamento](images/instinctual-gestures-smallobject.jpg)<br>
        **Oggetto piccolo**<br>
     :::column-end:::
     :::column:::
-       ![Ruota](images/instinctual-gestures-mediumobject.jpg)<br>
+       ![Rotazione](images/instinctual-gestures-mediumobject.jpg)<br>
         **Oggetto medio**<br>
     :::column-end:::
     :::column:::
-       ![Ridimensiona](images/instinctual-gestures-largeobject.jpg)<br>
+       ![Ridimensionamento](images/instinctual-gestures-largeobject.jpg)<br>
        **Oggetto grande**<br>
     :::column-end:::
 :::row-end:::
@@ -334,7 +334,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** puoi faci
 
 ---
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Puntamento e commit con le mani](point-and-commit.md)
