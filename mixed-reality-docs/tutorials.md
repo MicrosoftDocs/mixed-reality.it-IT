@@ -8,22 +8,22 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, academy, esercitazione
-ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539640"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334464"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
 ![Utente HoloLens 2](images/08_Tutorials.png)
 
-Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity.  Man mano che vengono sviluppati contenuti per altri motori e piattaforme, potrai trovarli sotto l'intestazione pertinente nel Sommario.
+Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity. Man mano che vengono sviluppati contenuti per altri motori e piattaforme, potrai trovarli sotto l'intestazione pertinente nel Sommario.
 
 ## <a name="hololens-2-tutorials"></a>Esercitazioni su HoloLens 2
 
-Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista.  Le esercitazioni sono basate su [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista. Le esercitazioni sono basate su [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
 * Esercitazioni introduttive: [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
 * Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 3 Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
@@ -48,7 +48,7 @@ Mixed Reality Academy è un set di esercitazioni dettagliate online con i file d
 * Un PC Windows 10 con gli [strumenti installati](install-the-tools.md) corretti è un prerequisito comune per completare ogni esercitazione.
 
 >[!NOTE]
->Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista.  Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
+>Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista. Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi. Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2. Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -158,7 +158,7 @@ Mixed Reality Academy è un set di esercitazioni dettagliate online con i file d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Input MR 212: Comandi vocali</h3>
+                                              <h3>Input MR 212: Voce</h3>
                                               <p>La voce consente di interagire con gli ologrammi in modo semplice e naturale. In questo corso apprenderai come rendere gli utenti consapevoli dei comandi vocali disponibili, fornire feedback su un comando vocale e usare la dettatura per capire cosa sta dicendo l'utente.</p>
                                           </div>
                                       </div>
@@ -265,7 +265,7 @@ Mixed Reality Academy è un set di esercitazioni dettagliate online con i file d
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Esercitazioni per realtà mista e servizi di Azure
 
-Queste esercitazioni autonome sono molto utili per imparare a implementare diversi servizi di Azure nel progetto Unity.  Tutte le esercitazioni sono basate su HoloLens (prima generazione) o sui visori VR immersive, ma le lezioni sull'uso dei servizi dovrebbero essere applicabili alla maggior parte dei dispositivi.
+Queste esercitazioni autonome sono molto utili per imparare a implementare diversi servizi di Azure nel progetto Unity. Tutte le esercitazioni sono basate su HoloLens (prima generazione) o sui visori VR immersive, ma le lezioni sull'uso dei servizi dovrebbero essere applicabili alla maggior parte dei dispositivi.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -279,7 +279,7 @@ Queste esercitazioni autonome sono molto utili per imparare a implementare diver
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR e Azure 301: Traduzioni</h3>
+                                              <h3>MR e Azure 301: Traduzione</h3>
                                               <p>Usando l'API Traduzione testuale di Azure, la tua app di realtà mista può convertire la voce in un testo tradotto in un'altra lingua. Segui questo corso per scoprire come fare.</p>
                                           </div>
                                       </div>
@@ -375,7 +375,7 @@ Queste esercitazioni autonome sono molto utili per imparare a implementare diver
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 305: Funzioni e archiviazione</h3>
-                                              <p>In questo corso imparerai a creare e usare Funzioni di Azure e ad archiviare i dati in Archiviazione di Azure, dall'interno di un'app di realtà mista.</p>
+                                              <p>In questo corso imparerai a creare e usare Funzioni di Azure e ad archiviare i dati in Archiviazione di Azure dall'interno di un'app di realtà mista.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -413,7 +413,7 @@ Queste esercitazioni autonome sono molto utili per imparare a implementare diver
                                           </div>
                                           <div class="cardText">
                                               <h3>MR e Azure 307: Machine Learning</h3>
-                                              <p>Sfrutta i vantaggi di Azure Machine Learning Studio all'interno dell'app di realtà mista per distribuire una vasta serie di algoritmi di Machine Learning (ML).</p>
+                                              <p>Sfrutta i vantaggi di Azure Machine Learning Studio (versione classica) all'interno dell'app di realtà mista per distribuire una vasta serie di algoritmi di Machine Learning (ML).</p>
                                           </div>
                                       </div>
                                   </div>

@@ -1,18 +1,14 @@
-# Quali sono le novità? 
+# Novità 
 ## [Ultime novità](news.md)
 ## [Preparare l'app per HL2](mrtk-porting-guide.md)
 ## [Informazioni sui servizi di Azure](azure-services.md)
 ## Programmi ed eventi
-### [Mixed Reality Dev Days](mr-dev-days.md)
-#### [Sessioni Mixed Reality Dev Days](mr-dev-days-sessions.md)
-#### [Domande frequenti per Mixed Reality Dev Days](mr-dev-days-faq.md)
 ### [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
-### [CVPR 2018 - Sessione sulla modalità ricerca HoloLens](cvpr-2018.md)
-### [ECCV 2018 - HoloLens come strumento per la ricerca nell'ambito della visione artificiale](eccv-2018.md)
 ### [CVPR 2019 - Workshop sulla realtà mista](cvpr-2019.md)
 ## [Note sulla versione corrente di Realtà mista](release-notes-may-2019.md)
+## [Risorse della community](community.md)
 ## [Invio di contributi per questa documentazione](CONTRIBUTING.md)
-# Rileva
+# Rilevazione
 ## [Informazioni di base sulla realtà mista](index.md)
 ## [Espandere il processo di progettazione](case-study-expanding-the-design-process-for-mixed-reality.md)
 ## [Raccolta di case study](case-studies-overview.md)
@@ -24,6 +20,7 @@
 ### [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guida per appassionati](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Intrattenimento basato sulla posizione](location-based-experiences.md)
+## [Risorse della community](community.md)
 # Progettazione
 ## [Iniziare a progettare e creare prototipi](design.md)
 ## [Informazioni su queste linee guida per la progettazione](about-this-design-guidance.md)
@@ -57,7 +54,7 @@
 #### [Sguardo fisso e attesa](gaze-and-dwell.md)
 ##### [Sguardo fisso e attesa](gaze-and-dwell-eyes.md)
 ##### [Puntamento con la testa e attesa](gaze-and-dwell-head.md)
-### [Sguardo fisso e commit](gaze-and-commit.md)
+### [Sguardo e commit](gaze-and-commit.md)
 #### [Sguardo fisso e commit](gaze-and-commit-eyes.md)
 #### [Puntamento con la testa e commit](gaze-and-commit-head.md)
 ### [Interazione basata su sguardo fisso](eye-gaze-interaction.md)
@@ -65,7 +62,7 @@
 ### [Panoramica](app-patterns-landingpage.md)
 ### Stile
 #### [Colore, luce e materiali](color-light-and-materials.md)
-#### [Ridimensiona](scale.md)
+#### [Ridimensionamento](scale.md)
 #### [Tipografia](typography.md)
 ### Audio spaziale
 #### [Progettazione dell'audio spaziale](spatial-sound-design.md)
@@ -93,7 +90,7 @@
 #### [Magnetismo di superficie](surface-magnetism.md)
 ## Risorse
 ### [Informazioni su Unity](https://learn.unity.com/)
-### [Toolkit per realtà mista](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
 ### [Laboratori di progettazione di realtà mista](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [Processo di creazione degli asset](asset-creation-process.md)
@@ -168,7 +165,7 @@
 ##### [MR e Azure 313: Servizio hub IoT](mr-azure-313.md)
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
-### Attività iniziali
+### Guida introduttiva
 #### [Introduzione a Mixed Reality Toolkit v2](mrtk-getting-started.md)
 #### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
 #### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
@@ -203,7 +200,7 @@
 ### [Uso di WebVR in Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## Nativa
 ### [Panoramica dello sviluppo nativo](directx-development-overview.md)
-### Attività iniziali
+### Guida introduttiva
 #### [Creazione di un progetto olografico nativo](creating-a-holographic-directx-project.md)
 #### [Ottenere un HolographicSpace](getting-a-holographicspace.md)
 #### [Rendering nativo](rendering-in-directx.md)
