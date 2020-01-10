@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, input
-ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105775"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723190"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -121,7 +121,7 @@ Anche senza aggiungere in modo specifico il supporto vocale all'app, gli utenti 
         *Image: un utente può pronunciare il comando "Adjust" visualizzato nella barra dell'app per modificare la posizione dell'app*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
         ![quando si esamina una finestra o un ologramma dell'app, un utente può pronunciare il comando "Adjust" visualizzato nella barra dell'app per modificare la posizione dell'app nel mondo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -171,7 +171,7 @@ Se si desidera un elenco completo, è sufficiente indicare "Mostra tutti i coman
 
 ## <a name="dictation"></a>Dettatura
 
-Invece di digitare con le scelte [aeree](gaze-and-commit.md#composite-gestures), la dettatura vocale può essere più efficiente per inserire il testo in un'app. Questo può accelerare significativamente l'input con minore impegno per l'utente.
+Invece di digitare con le [scelte aeree](gaze-and-commit.md#composite-gestures), la dettatura vocale può essere più efficiente per inserire il testo in un'app. Questo può accelerare significativamente l'input con minore impegno per l'utente.
 
 ![la dettatura vocale inizia selezionando il pulsante del microfono](images/micbuttonfordictation.png)<br>
 *La dettatura vocale inizia selezionando il pulsante del microfono sulla tastiera*
@@ -296,7 +296,7 @@ Per la versione 2017 di Windows Mixed Reality Developer Edition, la logica di ge
 
 ---
 
-## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Input vocale in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Input vocale in MRTK (Mixed Reality Toolkit) per Unity
 Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , è possibile assegnare facilmente il comando Voice a tutti gli oggetti. Usare **il profilo di input vocale** di MRTK per definire le parole chiave. Assegnando lo script **SpeechInputHandler** , è possibile fare in modo che qualsiasi oggetto risponda alle parole chiave definite nel profilo di input vocale. SpeechInputHandler fornisce anche un'etichetta di conferma vocale per migliorare la confidenza dell'utente.
 
 * [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
@@ -305,7 +305,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , è poss
 ---
 
 ## <a name="see-also"></a>Vedi anche
-* [Sguardo e commit](gaze-and-commit.md)
+* [Sguardo fisso e commit](gaze-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Input di MR 212: Voice](holograms-212.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)

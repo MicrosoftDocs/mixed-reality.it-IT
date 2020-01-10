@@ -6,25 +6,25 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 15116a01845ea58b8664ed3f64e668854bb2ecb7
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: a16d0a2a8dddf1d9a338cdaff3247e8955c47029
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143240"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723170"
 ---
 # <a name="keyboard"></a>Tastiera
 
 ![Tastiera](images/UX/UX_Hero_Keyboard.jpg)
 
-L'applicazione di realtà mista può richiamare la tastiera di sistema in qualsiasi momento. Si noti che la tastiera di sistema si comporterà in base alle funzionalità della piattaforma di destinazione, ad esempio la tastiera in HoloLens 2 supporterà le interazioni con la mano diretta, mentre la tastiera su HoloLens (1a generazione) supporterà lo sguardo e l'input del gesto d'aria.
+L'applicazione di realtà mista può richiamare la tastiera di sistema in qualsiasi momento. Si noti che la tastiera di sistema si comporterà in base alle funzionalità della piattaforma di destinazione, ad esempio la tastiera in HoloLens 2 supporta le interazioni con la mano diretta, mentre la tastiera su HoloLens (1a generazione) supporta lo sguardo e l'input del movimento del tocco aereo.
 
 
 <br>
 
 ---
 
-## <a name="system-keyboard-in-mrtkmixed-reality-toolkit-for-unity"></a>Tastiera di sistema in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>Tastiera di sistema in MRTK (Mixed Reality Toolkit) per Unity
 
 * [MRTK-tastiera di sistema](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
 

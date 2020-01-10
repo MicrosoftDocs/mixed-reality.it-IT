@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menu, pulsante, accesso rapido, layout
-ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143184"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723260"
 ---
 # <a name="hand-menu"></a>Menu a mano
 
@@ -26,15 +26,15 @@ Di seguito sono riportate le procedure consigliate per i menu a mano. È anche p
 ---
 
 ## <a name="behavior-best-practices"></a>Procedure consigliate per il comportamento
-**A. tenere il numero di pulsanti piccoli:** a causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), è consigliabile mantenendo il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando gli utenti spostano le mani al centro del FOV. 
+**A. mantenere il numero di pulsanti piccoli:** a causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), si consiglia di mantenere il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando gli utenti spostano le mani al centro del FOV. 
 
 **B. utilizzare il menu a mano per un'azione rapida:** la generazione di un ARM e la gestione della posizione possono causare un facile affaticamento dell'ARM. Usare un metodo con blocco manuale per il menu che richiede una breve interazione. Se il menu è complesso e richiede tempi di interazione estesi, prendere in considerazione l'uso di un blocco globale o del corpo. 
 
-**C. angolo del pulsante o del pannello:** i menu devono essere posizionati verso la parte opposta e al centro della parte principale: ciò consente uno spostamento naturale per interagire con il menu con la mano opposta ed evitare eventuali posizioni scomode o scomode quando si tocca pulsanti. 
+**C. angolo del pulsante/pannello:** i menu devono essere posizionati nella parte opposta e al centro della testa: ciò consente a una mano naturale di interagire con il menu con la mano opposta, evitando posizioni scomode o scomode quando si toccano i pulsanti. 
 
 **D. provare a supportare il supporto di una sola mano o di un'operazione senza mani:** non presupporre che entrambe le mani dell'utente siano sempre disponibili. Prendere in considerazione una vasta gamma di contesti quando una o entrambe le mani non sono disponibili e assicurarsi che gli account di progettazione per tali situazioni. Per supportare un menu a mano singola, è possibile provare a eseguire la transizione della posizione del menu da Hand-locked a blocco globale quando viene eseguito il capovolgimento della mano (passa a una Palma). Per gli scenari pratici, provare a usare un comando vocale per richiamare i pulsanti del menu a forma di mano.
 
-**E. chiamata in due passaggi:** se si usa solo il Palm-up come un evento per attivare il menu a mano, è possibile che venga visualizzato accidentalmente quando non è necessario (falso positivo), perché le persone spostano le mani molto intenzionalmente (per la manipolazione delle comunicazioni e degli oggetti) e non intenzionalmente. Se si verificano falsi positivi nell'app, è consigliabile aggiungere un passaggio aggiuntivo oltre all'evento di backup per richiamare il menu a mano, ad esempio le dita completamente aperte.
+**E. chiamata in due passaggi:** se si usa solo il palmare come evento per attivare il menu a mano, è possibile che venga visualizzato accidentalmente quando non è necessario (falso positivo), perché le persone spostano le mani molto intenzionalmente (per la manipolazione delle comunicazioni e degli oggetti) e non intenzionalmente. Se si verificano falsi positivi nell'app, è consigliabile aggiungere un passaggio aggiuntivo oltre all'evento di backup per richiamare il menu a mano, ad esempio le dita completamente aperte.
 
 **F. evitare di aggiungere pulsanti vicino al polso (pulsante Home System):** se i pulsanti del menu a mano sono posizionati troppo vicino al pulsante Home, è possibile che venga accidentalmente attivato durante l'interazione con il menu a mano.
 
@@ -127,7 +127,7 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 
 ---
 
-## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Menu a mano in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menu a mano in MRTK (Mixed Reality Toolkit) per Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce gli script e le scene di esempio per il menu a mano. Lo script del Risolutore HandConstraintPalmUp consente di associare facilmente tutti gli oggetti alle mani con diverse opzioni configurabili.
 
 * [Menu a MRTK con HandConstraint e HandConstraintPalmUp](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)

@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Realtà mista di Windows, barra dell'app, rettangolo di delimitazione
-ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: dab41207c2558fe8bb3fe07fca666cb2668f4e45
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143169"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723200"
 ---
 # <a name="bounding-box-and-app-bar"></a>Rettangolo di delimitazione e barra dell'app
 ![delimitatore è l'interfaccia standard per la manipolazione degli oggetti in realtà mista.](images/UX/UX_Hero_BoundingBox.jpg)<br>
@@ -29,7 +29,7 @@ Il delimitatore è l'interfaccia standard per la manipolazione di oggetti in rea
         *Ciclo video: ridimensionamento di un oggetto tramite il rettangolo di delimitazione*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![punto di visualizzazione HoloLens di ridimensionamento di un oggetto tramite il rettangolo di delimitazione](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ Il delimitatore è l'interfaccia standard per la manipolazione di oggetti in rea
         *Ciclo video: rotazione di un oggetto tramite il rettangolo di delimitazione*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![punto di visualizzazione HoloLens della rotazione di un oggetto tramite il rettangolo di delimitazione](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ Il delimitatore è l'interfaccia standard per la manipolazione di oggetti in rea
         *Ciclo video: esempio di feedback visivo basato sulla prossimità a un rettangolo di delimitazione*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![commenti e suggerimenti visivi sulla prossimità della mano](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ La barra dell'app è un menu a livello di oggetto contenente una serie di pulsan
         *Ciclo video: aggirare un ologramma, la barra dell'app segue*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![aggirare un ologramma. Segue la barra dell'app.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -92,7 +92,7 @@ La barra dell'app è un menu a livello di oggetto contenente una serie di pulsan
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Rettangolo di delimitazione in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Rettangolo di delimitazione in MRTK (Mixed Reality Toolkit) per Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce script e prefabbricati per il rettangolo di delimitazione e la barra dell'app. È possibile aggiungere un rettangolo di delimitazione semplicemente assegnando lo script BoundingBox.cs su qualsiasi oggetto.
 
 * [MRTK-rettangolo di delimitazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)

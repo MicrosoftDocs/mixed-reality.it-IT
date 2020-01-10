@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, controlli, progettazione
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723220"
 ---
 # <a name="object-collection"></a>Raccolta di oggetti
 
@@ -48,7 +48,7 @@ La raccolta di oggetti è un controllo di layout che consente di disporre una ma
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Raccolta di oggetti in MRTK (Mixed Reality Toolkit) per Unity
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Raccolta di oggetti in MRTK (Mixed Reality Toolkit) per Unity
 
 * [MRTK-raccolta di oggetti](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 

@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 87979d2d7b7de4a384b42b5059239e9b830a92e8
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143264"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723230"
 ---
 # <a name="interactable-object"></a>Oggetto interagibile
 
@@ -140,8 +140,8 @@ Un [pulsante in HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unit
 
 :::row:::
     :::column:::
-        ![](images/640px-interactibleobject-pressablebutton-default.jpg) predefinito<br>
-        **Predefinita**<br>
+        ![Impostazione predefinita](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
+        **Impostazione predefinita**<br>
     :::column-end:::
     :::column:::
         ![](images/640px-interactibleobject-pressablebutton-hover.jpg) hover<br>
@@ -157,7 +157,7 @@ Un [pulsante in HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unit
         Mostra effetto Ripple.
     :::column-end:::
     :::column:::
-        ![premere](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
+        ![Premere](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
         **Premere**<br>
         Spostare il pannello anteriore.
     :::column-end:::
@@ -175,7 +175,7 @@ Un [pulsante in HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unit
         *Ciclo video: esempio di feedback visivo basato sulla prossimità a un rettangolo di delimitazione*
     :::column-end:::
         :::column:::
-        spazio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![commenti e suggerimenti visivi sulla prossimità della mano](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -216,7 +216,7 @@ Per le interazioni dirette, il feedback audio appropriato può migliorare notevo
 ---
 
 
-## <a name="sizing-recommendations"></a>Indicazioni sul dimensionamento 
+## <a name="sizing-recommendations"></a>Consigli sul ridimensionamento 
 
 Per garantire che tutti gli oggetti interagibili possano essere facilmente modificati dagli utenti, si consiglia di assicurarsi che l'interoperabilità soddisfi le dimensioni minime (l'angolo visivo spesso misurato in gradi di arco visivo) in base alla distanza in base alla quale viene posizionata dall'utente. L'angolo visivo è basato sulla distanza tra gli occhi dell'utente e l'oggetto e rimane costante, mentre la dimensione fisica della destinazione può variare a seconda della distanza tra le modifiche apportate dall'utente. Per determinare le dimensioni fisiche necessarie di un oggetto in base alla distanza dall'utente, provare a usare un calcolo dell'angolo visivo come [questo](https://elvers.us/perception/visualAngle/).
 
@@ -261,7 +261,7 @@ dimensioni di destinazione ![per i pulsanti](images/TargetSizingButtons.png)<br>
 ---
 
 
-## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>Oggetto interactabile in MRTK (Mixed Reality Toolkit) per unit
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Oggetto interactabile in MRTK (Mixed Reality Toolkit) per Unity
 
 In **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** è possibile usare lo script [**interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) per fare in modo che gli oggetti rispondano a diversi tipi di Stati di interazione di input. Supporta vari tipi di temi che consentono di definire gli Stati di visualizzazione controllando le proprietà dell'oggetto, ad esempio colore, dimensioni, materiale e shader.
 
