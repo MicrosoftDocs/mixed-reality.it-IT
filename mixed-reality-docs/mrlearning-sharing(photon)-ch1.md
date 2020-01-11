@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 57a23e34404e4bff653d74b7f6afc65adff8b19c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334338"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901479"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. configurazione della rete di Photon Unity
 
@@ -28,7 +28,7 @@ In questa esercitazione si apprenderà come preparare la creazione di un'esperie
 ## <a name="prerequisites"></a>Prerequisiti
 
 >[!TIP]
->Se non è ancora stata completata la serie di [esercitazioni introduttive](mrlearning-base.md) , è consigliabile completare prima queste esercitazioni.
+>Se non sono ancora state completate [le esercitazioni introduttive](mrlearning-base.md) e le [esercitazioni di Azure Spatial Anchor avviate](mrlearning-asa-ch1.md) , è consigliabile completare prima queste esercitazioni.
 
 * Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md)
 * Windows 10 SDK 10.0.18362.0 o versione successiva

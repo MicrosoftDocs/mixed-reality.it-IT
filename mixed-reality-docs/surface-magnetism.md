@@ -1,23 +1,23 @@
 ---
 title: Magnetismo di superficie
-description: Usando la tecnica di magnetismo di Surface, è possibile posizionare gli oggetti olografici in una superficie fisica reale.
+description: Usando la tecnica di magnetismo di Surface, è possibile inserire un oggetto olografico in una superficie fisica reale.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694145"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901431"
 ---
 # <a name="surface-magnetism"></a>Magnetismo di superficie
 
 ![Magnetismo di superficie](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Usando la tecnica di magnetismo di Surface, è possibile posizionare gli oggetti olografici in una superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale.
+Usando la tecnica di magnetismo di Surface, è possibile inserire un oggetto olografico in una superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale.
 
 <br>
 

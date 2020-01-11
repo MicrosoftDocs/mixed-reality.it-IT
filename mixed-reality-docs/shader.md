@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: 4d95e335b3f7020766beae916423d0588ee66572
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: 8d0e01bb26347d95a80703884c4e9408653e03ed
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694165"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901453"
 ---
 # <a name="shader"></a>Shader
 
 ![Shader](images/UX/UX_Hero_StandardShader.jpg)
 
-Poiché gli oggetti olografici sono combinati con quelli fisici nell'ambiente, è importante fornire segnali visivi in realtà mista. Lo shader standard MRTK fornisce vari tipi di effetti visivi che possono essere usati con gli ologrammi. Il sistema di ombreggiatura standard di MRTK usa un unico shader flessibile che può ottenere oggetti visivi simili allo shader standard di Unity, implementa i [principi del sistema di progettazione Fluent](https://www.microsoft.com/design/fluent/#/)e mantiene le prestazioni nei dispositivi a realtà mista.
+Poiché gli oggetti olografici sono combinati con quelli fisici nell'ambiente reale, è importante fornire segnali visivi all'utente. Lo shader standard MRTK fornisce vari tipi di effetti visivi che possono essere usati con gli ologrammi. Il sistema di ombreggiatura standard MRTK usa un unico shader flessibile che può ottenere oggetti visivi simili allo shader standard di Unity, implementa i [principi del sistema di progettazione Fluent](https://www.microsoft.com/design/fluent/#/)e continua a funzionare sui dispositivi di realtà mista.
 <br>
 
 ## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>Esempi di effetti visivi con MRTK standard shader 

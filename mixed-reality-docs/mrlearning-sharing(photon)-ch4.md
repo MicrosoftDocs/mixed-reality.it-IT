@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: f523aabd74b9267b3f7f5024d8af46110e43c32a
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334285"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901485"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. condivisione di movimenti di oggetti con più utenti
 
@@ -74,10 +74,6 @@ In questa esercitazione si apprenderà come condividere i movimenti degli oggett
 11. Dal pannello progetto nella cartella prefabbricati trascinare la tabella prefabbricata nell'oggetto figlio "TableAnchor" appena creato.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
-
-12. Nell'oggetto DebugWindow, impostare la larghezza su 50 e l'altezza su 20.
-
-    ![Module3Chapter4step9im](images/module3chapter4step11im.PNG)
 
 ## <a name="congratulations"></a>Lezione completata
 
