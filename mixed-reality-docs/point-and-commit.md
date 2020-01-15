@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, interazione, progettazione, HoloLens, mani, da lontano, puntamento e commit
-ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334062"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901533"
 ---
 # <a name="point-and-commit-with-hands"></a>Puntamento e commit con le mani
 
@@ -201,8 +201,8 @@ Il concetto alla base del puntamento e commit per un'interazione da lontano iniz
 
 ---
 
-## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Raggio della mano in MRTK (Mixed Reality Toolkit) per Unity
-Per impostazione predefinita, MRTK fornisce un file prefab relativo al raggio della mano ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) con lo stesso stato di visualizzazione del raggio della mano di sistema della shell. Tale file viene assegnato in Pointers (Puntatori) nel profilo di input di MRTK. Nel visore VR immersive di Windows Mixed Reality gli stessi raggi vengono usati anche per i controller del movimento.
+## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Raggio della mano in MRTK (Mixed Reality Toolkit) per Unity
+Per impostazione predefinita, MRTK fornisce un file prefab relativo al raggio della mano ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) con lo stesso stato di visualizzazione del raggio della mano di sistema della shell. Tale file viene assegnato in Pointers (Puntatori) nel profilo di input di MRTK. In un visore VR immersive gli stessi raggi vengono usati per i controller del movimento.
 
 * [MRTK - Profilo del puntatore](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
 * [MRTK - Sistema di input](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
