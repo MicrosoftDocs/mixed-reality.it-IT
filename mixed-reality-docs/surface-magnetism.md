@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realtà mista, controlli, interazione, interfaccia utente, UX
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901431"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036376"
 ---
 # <a name="surface-magnetism"></a>Magnetismo di superficie
 
 ![Magnetismo di superficie](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Usando la tecnica di magnetismo di Surface, è possibile inserire un oggetto olografico in una superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale.
+Usando la tecnica di magnetismo di Surface, è possibile inserire un oggetto olografico in una superficie fisica reale. Allineando l'orientamento dell'oggetto alla superficie del mondo reale, è possibile creare un'esperienza più coinvolgente e naturale per l'utente.
 
 <br>
 
