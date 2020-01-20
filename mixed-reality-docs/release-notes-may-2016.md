@@ -43,7 +43,7 @@ Per eseguire l'aggiornamento alla versione corrente, aprire l'app *Impostazioni*
   La barra dell'app può essere nascosta per le app con una visualizzazione 2D, ad esempio Photos
   
 * Il selettore **file** funziona come previsto in HoloLens.
-* Aggiornamento del **browser Edge** per il mapping dell'esperienza utente unificata con desktop e telefono. Sono state abilitate più istanze del browser, una nuova scheda HoloLens personalizzata, una nuova scheda e un'apertura in nuove finestre, oltre ai miglioramenti delle prestazioni di Power &.
+* Aggiornamento del **browser Microsoft Edge** per il mapping dell'esperienza utente unificata con desktop e telefono. Sono state abilitate più istanze del browser, una nuova scheda HoloLens personalizzata, una nuova scheda e un'apertura in nuove finestre, oltre ai miglioramenti delle prestazioni di Power &.
 * L'app **Groove Music** è ora disponibile in HoloLens. Visita lo Store per scaricarlo e provare a giocare in background.
 * Puoi personalizzare facilmente il modo in cui le app vengono organizzate in tutto il mondo. Provare a **ruotare gli ologrammi** in modalità di regolazione semplicemente facendo clic e trascinando il cerchio nei wireframe centrali verticali. È possibile notare che gli ologrammi dispongono di caselle di delimitazione più **strette** per garantire l'interazione ingrandita. È anche possibile ridimensionare tutte le app Flat verticalmente (eccetto le foto e le app olografiche).
 

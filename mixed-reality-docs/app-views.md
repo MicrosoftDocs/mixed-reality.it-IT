@@ -41,7 +41,7 @@ In una cuffia desktop è possibile eseguire le app piattaforma UWP (Universal Wi
 
 Un utilizzo chiave delle visualizzazioni 2D consiste nel mostrare un modulo di immissione di testo che può utilizzare la tastiera di sistema. Poiché non è possibile eseguire il rendering della shell sopra una visualizzazione immersiva, l'app deve passare a una visualizzazione 2D per visualizzare la tastiera di sistema. Le app che vogliono accettare input di testo possono passare a una visualizzazione 2D con una casella di testo. Quando tale casella di testo ha lo stato attivo, il sistema Visualizza la tastiera di sistema, consentendo all'utente di immettere testo.
 
-Si noti che in un PC desktop un'app può avere visualizzazioni 2D sia sul monitor desktop che su una cuffia collegata. È possibile, ad esempio, esplorare Edge sul monitor desktop usando la visualizzazione 2D principale per trovare un video di 360 gradi. Quando si riproduce il video, Edge avvierà una visualizzazione immersiva secondaria all'interno dell'auricolare per visualizzare il contenuto video immersivo.
+Si noti che in un PC desktop un'app può avere visualizzazioni 2D sia sul monitor desktop che su una cuffia collegata. È possibile, ad esempio, esplorare Microsoft Edge sul monitor desktop usando la visualizzazione 2D principale per trovare un video di 360 gradi. Quando si riproduce il video, Microsoft Edge avvierà una visualizzazione immersiva secondaria all'interno dell'auricolare per visualizzare il contenuto video immersivo.
 
 ## <a name="see-also"></a>Vedi anche
 

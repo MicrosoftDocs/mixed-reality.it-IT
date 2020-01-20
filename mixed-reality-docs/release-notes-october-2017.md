@@ -86,8 +86,8 @@ Abbiamo lavorato duramente per offrire un'eccezionale esperienza di realtà mist
 * Se è stato inserito un numero elevato di ologrammi nella Home page della realtà mista di Windows, alcuni possono scomparire e riapparire durante l'aspetto. Per evitare questo problema, rimuovere alcuni degli ologrammi in quell'area della Home realtà mista di Windows.
 
 ### <a name="motion-controllers"></a>Controller di movimento
-* In alcuni casi, se si fa clic su una pagina Web in Edge, il contenuto viene ingrandito anziché fare clic su.
-* In alcuni casi, quando si fa clic su un collegamento in Edge, la selezione non funzionerà.
+* In alcuni casi, se si fa clic su una pagina Web in Microsoft Edge, il contenuto viene ingrandito anziché fare clic su.
+* In alcuni casi, quando si fa clic su un collegamento in Microsoft Edge, la selezione non funzionerà.
 
 ## <a name="prior-release-notes"></a>Note sulla versione precedente
 * [Note sulla versione - agosto 2016](release-notes-august-2016.md)
