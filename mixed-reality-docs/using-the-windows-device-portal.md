@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale per dispositivi Windows, HoloLens
-ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
+ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623324"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76521692"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portale per dispositivi Windows
 
@@ -19,7 +19,7 @@ ms.locfileid: "75623324"
 <tr>
 <th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (prima generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Portale di dispositivi di Windows</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -51,7 +51,7 @@ Questa documentazione è specifica del portale per dispositivi Windows per HoloL
 ## <a name="connecting-over-usb"></a>Connessione su USB
 
 1. [Installare gli strumenti](install-the-tools.md) per assicurarsi di avere installato Visual Studio Update 1 con gli strumenti di sviluppo di Windows 10 installati nel PC. In questo modo, viene abilitata la connettività USB.
-2. Collega HoloLens al PC usando un cavo USB micro.
+2. Connettere la HoloLens al PC con un cavo micro-USB per HoloLens (1a generazione) o USB-C per HoloLens 2.
 3. Da un Web browser nel computer, passare a [https://127.0.0.1:10080](https://127.0.0.1:10080).
 
 ## <a name="connecting-to-an-emulator"></a>Connessione a un emulatore
