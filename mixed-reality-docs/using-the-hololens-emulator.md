@@ -3,16 +3,16 @@ title: Uso dell'emulatore HoloLens
 description: Uso dell'emulatore HoloLens per testare le app di realtà mista nel PC senza un dispositivo HoloLens fisico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulatore
-ms.openlocfilehash: 49b67530d46edda3c38efd74f03f730c2b2247bd
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940889"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036459"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso dell'emulatore HoloLens
 
@@ -25,7 +25,7 @@ Se intendi sviluppare applicazioni per visori VR immersive per Windows Mixed Rea
 Scarica l'emulatore HoloLens.
 
 Versioni: 
-* [Emulatore HoloLens 2 (aggiornamento di dicembre 2019)](https://go.microsoft.com/fwlink/?linkid=2112589).
+* [Emulatore HoloLens 2 (aggiornamento di gennaio 2020)](https://go.microsoft.com/fwlink/?linkid=2114824).
 * [Emulatore HoloLens (prima generazione) e modelli di progetti olografici](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Nella pagina relativa all'[archivio dell'emulatore HoloLens](hololens-emulator-archive.md) puoi trovare le note sulla versione e le build meno recenti dell'emulatore.
@@ -42,7 +42,7 @@ L'emulatore HoloLens usa Hyper-V con RemoteFx (emulatore di prima generazione) o
 * Almeno 8 GB di RAM
 * Nel BIOS devono essere [supportate e abilitate](https://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx) le funzionalità seguenti:
    * Virtualizzazione basata su hardware
-   * SLAT (Second Level Address Translation)
+   * Conversione indirizzi di secondo livello (SLAT)
    * Protezione esecuzione programmi basata su hardware
 * Requisiti per la GPU
    * DirectX 11.0 o versioni successive
@@ -85,14 +85,14 @@ Il cursore in HoloLens (prima generazione) segue il movimento e la rotazione del
 ### <a name="toolbar"></a>Barra degli strumenti
 
 A destra della finestra principale è presente la barra degli strumenti dell'emulatore. La barra degli strumenti contiene i pulsanti seguenti:
-* ![Icona di chiusura](images/emulator-close.png) **Close** (Chiudi): chiude l'emulatore.
-* ![Icona di riduzione a icona](images/emulator-minimize.png) **Minimize** (Riduci a icona): riduce a icona la finestra dell'emulatore.
-* ![Simulation_icon](images/emulator-simulation-panel.png) **Simulation control panel** (Pannello di controllo simulazione): mostra o nasconde il [pannello di controllo simulazione](#simulation-control-panel) per configurare e controllare l'[input per l'emulatore](#basic-emulator-input).
-* ![Icona di adattamento allo schermo](images/emulator-fit.png) **Fit to screen** (Adatta allo schermo): adatta l'emulatore allo schermo.
-* ![Icona dello zoom](images/emulator-zoom.png) **Zoom**: ingrandisce o riduce l'emulatore.
-* ![Icona della Guida](images/emulator-help.png) **Help** (Guida): apre la Guida dell'emulatore.
-* ![Icona di apertura del Portale di dispositivi](images/emulator-deviceportal.png) **Open Device Portal** (Apri Portale di dispositivi): apre il Portale di dispositivi di Windows per il sistema operativo di HoloLens nell'emulatore.
-* ![Icona degli strumenti](images/emulator-tools.png) **Tools** (Strumenti): apre il riquadro **Additional tools** (Strumenti aggiuntivi).
+* ![Icona Chiudi](images/emulator-close.png) **Chiudi**: chiude l'emulatore.
+* ![Icona Riduzione a icona](images/emulator-minimize.png) **Riduzione a icona**: riduce a icona la finestra dell'emulatore.
+* ![Icona di simulazione](images/emulator-simulation-panel.png) **Pannello di controllo simulazione**: mostra o nasconde il [pannello di controllo simulazione](#simulation-control-panel) per configurare e controllare l'[input per l'emulatore](#basic-emulator-input).
+* ![Icona Adatta allo schermo](images/emulator-fit.png) **Adatta allo schermo**: adatta l'emulatore allo schermo.
+* ![Icona Zoom](images/emulator-zoom.png) **Zoom**: ingrandisce o riduce l'emulatore.
+* ![Icona Guida](images/emulator-help.png) **Guida**: apre la Guida dell'emulatore.
+* ![Icona Apri Portale di dispositivi](images/emulator-deviceportal.png) **Apri Portale di dispositivi**: apre il Portale di dispositivi di Windows per il sistema operativo di HoloLens nell'emulatore.
+* ![Icona Strumenti](images/emulator-tools.png) **Strumenti**: apre il riquadro **Additional tools** (Strumenti aggiuntivi).
 
 ### <a name="simulation-control-panel"></a>Simulation Control Panel (Pannello di controllo simulazione)
 
@@ -173,15 +173,15 @@ Quando l'emulatore viene avviato, viene visualizzata una finestra con il sistema
 ### <a name="toolbar"></a>Barra degli strumenti
 
 A destra della finestra principale è presente la barra degli strumenti dell'emulatore. La barra degli strumenti contiene i pulsanti seguenti:
-* ![Icona di chiusura](images/emulator-close.png) **Close** (Chiudi): chiude l'emulatore.
-* ![Icona di riduzione a icona](images/emulator-minimize.png) **Minimize** (Riduci a icona): riduce a icona la finestra dell'emulatore.
-* ![Icona dell'input umano](images/emulator-control.png) **Human input** (Input umano): il mouse e la tastiera vengono usati per simulare l'[input per l'emulatore](#basic-emulator-input) da parte di una persona.
-* ![Icona dell'input da tastiera e mouse](images/emulator-input.png) **Keyboard and mouse input** (Input da tastiera e mouse): gli input da tastiera e da mouse vengono passati direttamente al sistema operativo di HoloLens sotto forma di eventi della tastiera e del mouse come se avessi collegato una tastiera e un mouse Bluetooth.
-* ![Icona di adattamento allo schermo](images/emulator-fit.png) **Fit to screen** (Adatta allo schermo): adatta l'emulatore allo schermo.
-* ![Icona dello zoom](images/emulator-zoom.png) **Zoom**: ingrandisce o riduce l'emulatore.
-* ![Icona della Guida](images/emulator-help.png) **Help** (Guida): apre la Guida dell'emulatore.
-* ![Icona di apertura del Portale di dispositivi](images/emulator-deviceportal.png) **Open Device Portal** (Apri Portale di dispositivi): apre il Portale di dispositivi di Windows per il sistema operativo di HoloLens nell'emulatore.
-* ![Icona degli strumenti](images/emulator-tools.png) **Tools** (Strumenti): apre il riquadro **Additional tools** (Strumenti aggiuntivi).
+* ![Icona Chiudi](images/emulator-close.png) **Chiudi**: chiude l'emulatore.
+* ![Icona Riduzione a icona](images/emulator-minimize.png) **Riduzione a icona**: riduce a icona la finestra dell'emulatore.
+* ![Icona dell'input umano](images/emulator-control.png) **Input umano**: il mouse e la tastiera vengono usati per simulare l'[input per l'emulatore](#basic-emulator-input) da parte di una persona.
+* ![Icona dell'input da tastiera e mouse](images/emulator-input.png) **Input da tastiera e mouse**: gli input da tastiera e da mouse vengono passati direttamente al sistema operativo di HoloLens sotto forma di eventi della tastiera e del mouse come se avessi collegato una tastiera e un mouse Bluetooth.
+* ![Icona Adatta allo schermo](images/emulator-fit.png) **Adatta allo schermo**: adatta l'emulatore allo schermo.
+* ![Icona Zoom](images/emulator-zoom.png) **Zoom**: ingrandisce o riduce l'emulatore.
+* ![Icona Guida](images/emulator-help.png) **Guida**: apre la Guida dell'emulatore.
+* ![Icona Apri Portale di dispositivi](images/emulator-deviceportal.png) **Apri Portale di dispositivi**: apre il Portale di dispositivi di Windows per il sistema operativo di HoloLens nell'emulatore.
+* ![Icona Strumenti](images/emulator-tools.png) **Strumenti**: apre il riquadro **Additional tools** (Strumenti aggiuntivi).
 
 ### <a name="simulation-tab"></a>Scheda Simulation (Simulazione)
 
@@ -243,7 +243,7 @@ Se l'elenco delle destinazioni di debug in Visual Studio è vuoto (ad esempio, S
 Se il sistema si blocca all'avvio dell'emulatore, disabilita l'accelerazione hardware per la grafica dell'emulatore.
 * Nel Registro di sistema crea un valore DWORD denominato "DisableGPU" in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0 e impostalo su 1.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Emulatore HoloLens avanzato e input per il simulatore di realtà mista](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [Cronologia del software dell'emulatore HoloLens](hololens-emulator-archive.md)
 * [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
