@@ -7,12 +7,12 @@ ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulatore
-ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
-ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
+ms.openlocfilehash: 3d358cf72e8481d27ca41784bbc059c45e0da7ff
+ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036459"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76521682"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso dell'emulatore HoloLens
 
@@ -220,7 +220,7 @@ Nell'emulatore vedrai solo gli ologrammi di cui esegui il rendering. Ma non vedr
 
 Durante l'installazione dell'emulatore, può venire visualizzato un messaggio di errore che indica che sono necessari *"Visual Studio 2015 Update 1 e gli strumenti UWP versione 1.2"* . Questo errore può avere tre cause:
 * Non disponi di una versione sufficientemente recente di Visual Studio (Visual Studio 2019, Visual Studio 2017 oppure Visual Studio 2015 Update 1 o versioni successive). Per correggere l'errore, installa la versione più recente di Visual Studio.
-* Hai una versione di Visual Studio recente, ma non sono installati gli strumenti UWP (Universal Windows Platform). Si tratta di una funzionalità facoltativa di Visual Studio.
+* Hai una versione di Visual Studio recente, ma non sono installati gli strumenti UWP (Universal Windows Platform). Si tratta di una funzionalità facoltativa di Visual Studio. Per HoloLens (prima generazione) sono necessari gli strumenti UWP per Visual Studio 2015 o Visual Studio 2017.
 
 Può essere visualizzato un errore anche se installi l'emulatore in uno SKU non Pro/Enterprise/Education di Windows o se la funzionalità Hyper-V non è abilitata.
 * Per un elenco completo, leggi più sopra la sezione relativa ai [requisiti di sistema](#hololens-emulator-system-requirements).
