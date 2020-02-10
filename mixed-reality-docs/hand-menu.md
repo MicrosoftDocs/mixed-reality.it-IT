@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menu, pulsante, accesso rapido, layout
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723260"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092055"
 ---
 # <a name="hand-menu"></a>Menu a mano
 
@@ -26,7 +26,7 @@ Di seguito sono riportate le procedure consigliate per i menu a mano. È anche p
 ---
 
 ## <a name="behavior-best-practices"></a>Procedure consigliate per il comportamento
-**A. mantenere il numero di pulsanti piccoli:** a causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), si consiglia di mantenere il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando gli utenti spostano le mani al centro del FOV. 
+**A. mantenere il numero di pulsanti piccoli:** a causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), si consiglia di mantenere il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando un utente sposta le mani al centro di FOV. 
 
 **B. utilizzare il menu a mano per un'azione rapida:** la generazione di un ARM e la gestione della posizione possono causare un facile affaticamento dell'ARM. Usare un metodo con blocco manuale per il menu che richiede una breve interazione. Se il menu è complesso e richiede tempi di interazione estesi, prendere in considerazione l'uso di un blocco globale o del corpo. 
 
@@ -88,8 +88,8 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
     :::column:::
         ![sopra le dita](images/AboveFingers.gif)<br>
         **Sopra le dita**<br>
-        affaticamento a una mano dovuta a un periodo di tempo prolungato<br>
-        problemi di rilevamento a due mani sull'indice e sul dito medio
+        affaticamento a 1 mano dovuto alla conservazione della mano da molto tempo<br>
+        problemi di rilevamento a due mani sull'indice e le dita centrali
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
     :::column:::
         ![parte superiore](images/TopFingerTip.gif) a **portata di mano**<br>
         problemi di rilevamento a una mano<br>
-        2-mano di mano che si tiene sotto la postura normale<br>
+        un affaticamento a 2 mano da tenere sotto la postura normale<br>
         3-problemi durante la pressione di pulsanti con altre dita per errore a causa dello spazio limitato tra le dita
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
         ![back of the ARM](images/BackOfTheArm.gif)<br>
         **Back of the ARM**<br>
         1-è possibile attivare il pulsante Home per errore<br>
-        2-posizione naturale o comoda per gli utenti
+        2-posizione naturale o comoda
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -138,7 +138,7 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 ---
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Cursori](cursors.md)
 * [Raggio della mano](point-and-commit.md)
