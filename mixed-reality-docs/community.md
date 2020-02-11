@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Realtà mista, community, MVP, Meetup
-ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
-ms.translationtype: MT
+ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
+ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092071"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125200"
 ---
 # <a name="mixed-reality-community"></a>Community di realtà mista
 
@@ -19,7 +19,7 @@ Microsoft ritiene che l'accesso a community complesse sia essenziale per la cres
 
 ## <a name="online-communities"></a>Community online
 
-|Nome community  |Link  |Descrizione  |
+|Nome community  |Collegamento  |Descrizione  |
 |---------|---------|---------|
 |**HoloDevelopers Slack**|[Unisciti qui](https://aka.ms/holodevelopers)|Il HoloDevelopers Slack è stato inizialmente creato per gli sviluppatori che esplorano HoloLens per conoscerne l'altro, formare amicizie, ottenere un trust di compilazione e ottenere assistenza tra loro.  È cresciuta in una community fiorente che è ancora incentrata su questi aspetti, ma le conversazioni che si verificano coprono la gamma di realtà mista in molte piattaforme, dispositivi e società.|
 |**Stack Overflow**|[Domande e risposte](https://stackoverflow.com/questions/tagged/windows-mixed-reality)||
@@ -31,11 +31,11 @@ Microsoft ritiene che l'accesso a community complesse sia essenziale per la cres
 ## <a name="local-communities"></a>Community locali
 Se si esegue una community che si desidera includere in questa pagina, inviare un messaggio di [posta elettronica](mailto:jemccull@microsoft.com) con i dettagli
 
-|Nome community|Paese|Città|Link|
+|Nome community|Paese|Città|Collegamento|
 |---------|---------|---------|---------|
 |**Chicago AWE Nite**|USA|Chicago|[Collegamento](https://www.meetup.com/AWENiteChicago/)|
-<!-- 
-|Row2     |         |         |         |
+|**VR Filippine**|Philoppines|N/D|[Collegamento](https://www.facebook.com/vrphilippines/)|
+<!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
 |Row5     |         |         |         |
@@ -90,6 +90,7 @@ Microsoft Most Valuable Professionals, o MVP, sono esperti di tecnologia che con
 |---------|---------|---------|
 |![Aleksandr Kudishov](images/BiographyImages/aleksandr_kudishov_270_270.png)</br>**Aleksandr Kudishov**</br>*Russia*|MVP dedicato allo sviluppo di giochi & sviluppo per Windows, VR/AR/MR. Game Producer, Tech Evangelist, sviluppatore olografico, responsabile dello sviluppo di giochi.|[Posta elettronica](mailto:draconifore@gmail.com)|
 |![Alexander Meijers](images/BiographyImages/AlexanderMeijers_270x270.png)</br>**Alexander Meijers**</br>*Paesi Bassi, Rijswijk*|Un professionista che ispira, motiva e istruisce le aziende a sfruttare le tecnologie emergenti con la realtà virtuale, aumentata e mista nel proprio percorso di innovazione digitale. Ha uno sfondo forte su SharePoint, Office 365 e Microsoft Azure e sta lavorando con machine learning, intelligenza artificiale e servizi cognitivi.</br></br>Principalmente incentrato sulla produzione, la costruzione, il settore, la logistica e marittima/offshore, il suo obiettivo è aiutare le aziende a ottenere più informazioni sulla creazione, il miglioramento, il smartening e l'abbreviazione di processi aziendali tramite servizi, app e dispositivi come HoloLens e Kinect per Azure.|[Posta elettronica](mailto:alexander@appzinside.com)|
+|![Bronwen Zande](images/BiographyImages/BronwenZande_270x270.png)</br>**Zande Bronwen**</br>*Brisbane, Australia*|Bronwen Zande è un direttore di soluzioni Soul, che ha dedicato più di una vita a uno sviluppatore.</br></br>È a lungo termine Microsoft Most Valuable Professional (MVP) che ha ricevuto lo stato MVP per lo sviluppo Windows, le esperienze emergenti, Kinect, Bing Maps e i servizi Live.</br></br>Bronwen è un membro della community attivo che promuove la promozione IT come carriera con la sua partecipazione a giudicare Imagine Cup, i giovani esploratori e la tecnologia di ICT si trovano ovunque. Bronwen è stato un membro fondatore di Brisbane Girl Geek Dinners, Organizer of Developer, Developer, Developer Brisbane (ora DDD Brisbane) e un attivatore australiano multianno per SheEO.</br></br>Si tratta di un viaggiatore accanito e, quando non è dietro la lente di una fotocamera, può spesso essere presente in un gruppo di utenti o un Meetup locale durante i suoi viaggi.|[Posta elettronica](mailto:bronwen@soulsolutions.com.au)
 |![Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*Brasile*|Responsabile dell'innovazione, lavorare alla gestione e all'architettura dei progetti di innovazione di pagine digitali, con esperienza per la realtà aumentata da XR, le piattaforme di realtà miste e virtuali. Microsoft MVP nella realtà mista 2020-2021 in realtà mista, lavoro come esperto nello sviluppo e nella pianificazione di soluzioni di realtà mista, concentrandosi su Microsoft HoloLens. Esperienza con lo sviluppo di giochi e applicazioni, nonché la creazione di asset e contenuto multimediale.|[Posta elettronica](mailto:brunof.anjos@outlook.com)|
 |![Clemente Giorio](images/BiographyImages/ClementeGiorio_270x270.png)</br>**Clemente Giorio**</br>*Torino, Italia*|"Hacker, geek, Maker, Researcher, Innovator, trainer, Developer...</br>Ha reso la scienza e la tecnologia la sua passione a parte il suo lavoro.</br>Segue molte community ed è spesso coinvolti attivamente come speaker e organizzatori di eventi in particolare con: codifica di gym, DotNetPodcast, FabLabNapoli, DotNetCampania e HoloLens Developers.</br>I suoi piatti di firma, lontano dal fornello, sono: intelligenza artificiale, Visione artificiale, Internet delle cose, interfaccia utente naturale e realtà mista.</br>Microsoft MVP e Intel Software Innovator operano come Senior Research & Developer Engineer per Deltatre, dove sviluppa i prototipi software.|[Posta elettronica](mailto:tinuxnet@hotmail.com)|
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, Paesi Bassi*|Dave Smits è Microsoft MVP dalla 2014 e lavora con il HoloLens a partire dalla prima versione avviata. Diversi progetti per i clienti iniziano con modelli semplici per le applicazioni che includono sensori di rilevamento del movimento da usare sugli ologrammi.|[Posta elettronica](mailto:dave@familie-smits.com)|
@@ -106,3 +107,5 @@ Microsoft Most Valuable Professionals, o MVP, sono esperti di tecnologia che con
 |![Takahiro Miyaura](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Miyaura Takahiro**</br>*Nara, Giappone*|Sto lavorando come ingegnere del software e sviluppatore nel settore IT. In particolare, ho fatto la ricerca XR (VR/AR/MR e così via). ) e diverse tecnologie (AI, Internet e così via) che possono trarre vantaggio da XR.|[Posta elettronica](mailto:cafe.kobe@gmail.com)|
 |![demo](images/BiographyImages/tamasdeme_270.png)</br>**Demo di Torre**</br>*Budapest, Ungheria*|Si tratta di un ingegnere della realtà mista che lavora a VIM basato su Atlanta, dove sviluppa soluzioni per i dispositivi che spaziano da server a un auricolare che Mostra gli ologrammi. Si tratta di un 5 volte Microsoft MVP per lo sviluppo di Windows, interessato a progetti open source, insegnamento e mentoring. È possibile trovarlo online in [https://tomzorz.me](https://tomzorz.me) o su twitter al [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_).|[Posta elettronica](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, Giappone*|MR Educator of Physics in 5 paesi, tra cui Afrika, President of Side of Physics|[Posta elettronica](mailto:tatsuro.ueda@feel-physics.jp)|
+|![Vincent Guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent Guigui**</br>*Parigi, Francia*|Il responsabile della divisione delle interazioni innovative alla tecnologia OCTO consente ai clienti di sviluppare nuove interazioni tra il mondo umano e quello digitale.</br></br>Sono un docente di argomenti sull'innovazione e sulle interfacce utente naturali, che parlano di esperienze immersive (VR/AR/MR), interfacce di conversazione (bot) e potenziali future delle interfacce utente...</br></br>Dal 2013, ho ricevuto da Microsoft come uno dei principali esperti europei su Kinect, interfacce utente naturali e HoloLens (il più prezioso premio professionale).|[Posta elettronica](mailto:vincent@guigui.fr)|
+
