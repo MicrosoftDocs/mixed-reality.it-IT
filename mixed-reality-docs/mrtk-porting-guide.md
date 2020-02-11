@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, testare, MRTK, MRTK versione 2, HoloLens 2
-ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926207"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092035"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparare un'app esistente per HoloLens 2
 
@@ -22,7 +22,7 @@ Le sezioni seguenti forniscono informazioni dettagliate per ogni fase:
 
 | Passaggio 1 | Passaggio 2 | Passaggio 3 | Passaggio 4 |
 |----------|-------------------|-------------------|-------------------|
-| ![Logo di Visual Studio](images/visualstudio_logo.png) | ![Logo di Unity](images/unity_logo.png)| ![Icona di Unity](images/hololens2_icon.jpg) | ![Logo di MRTK](images/MRTKIcon.jpg) |
+| ![Logo di Visual Studio](images/visualstudio_logo.png) | ![Logo di Unity](images/final_unity_logo.png)| ![Icona di Unity](images/hololens2_icon.jpg) | ![Logo di MRTK](images/final_mrtk-small_logo.png) |
 | Scaricare gli strumenti più recenti | Aggiornare un progetto Unity | Eseguire la compilazione per ARM | Eseguire la migrazione a MRTK v2
 
 Prerequisiti:
@@ -141,7 +141,7 @@ Ogni applicazione e ogni scenario hanno caratteristiche diverse e si proseguirà
 
 - Il compilatore dello shader in ARM viene eseguito durante la prima chiamata di disegno dopo il caricamento dello shader o dopo che è cambiato qualcosa su cui si basa lo shader, non in fase di caricamento dello shader. L'impatto sulla frequenza dei fotogrammi può essere notevole, a seconda di quanti shader devono essere compilati. Questo comporta diverse implicazioni perché gli shader devono essere gestiti, inclusi in pacchetti o aggiornati in modo diverso in HoloLens 2 rispetto a HoloLens (prima generazione).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Installare gli strumenti](install-the-tools.md)
 * [Guida introduttiva a MRTK versione 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 * [Aggiornamento dalle API HTK alle API MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)
