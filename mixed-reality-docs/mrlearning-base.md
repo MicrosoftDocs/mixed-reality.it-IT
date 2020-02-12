@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: dbae7545edb6515b5cf148fbbfb6652595d2fc0d
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334340"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129262"
 ---
 # <a name="1-overview-and-objectives"></a>1. Panoramica e obiettivi
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -46,8 +46,9 @@ ms.locfileid: "75334340"
 * Windows 10 SDK 10.0.18362.0 o versione successiva
 * Funzionalità di C# programmazione di base
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub Unity</a> con Unity 2019.2. X installato e aggiunta del modulo di supporto piattaforma UWP (Universal Windows Platform) Build
 
->[!IMPORTANT]
->Questa serie di esercitazioni richiede <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e la versione consigliata è Unity 2019.1.14. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
+> [!IMPORTANT]
+> La versione consigliata di Unity per questa serie di esercitazioni è Unity 2019.2. X. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
 
 [Lezione successiva: 2. inizializzazione del progetto e della prima applicazione](mrlearning-base-ch1.md)

@@ -6,222 +6,284 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: a1b26d56b4693ef23f2d77ba53e0961693489a3a
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334384"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130282"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interazione con oggetti 3D
 
-In questa esercitazione vengono fornite informazioni sul contenuto 3D di base e sull'esperienza utente, ad esempio:
-
-* Organizzazione di oggetti 3D come parte di una raccolta
-* Caselle di delimitazione per la manipolazione di base
-* Interazione quasi e lontano
-* Movimenti di tocco e controllo con il rilevamento manuale
+In questa esercitazione si apprenderanno informazioni sul contenuto 3D di base e sull'esperienza utente, ad esempio l'organizzazione di oggetti 3D come parte di una raccolta, i riquadri per la manipolazione di base, l'interazione quasi e la distanza e i movimenti di tocco e di manipolazione con il rilevamento manuale.
 
 ## <a name="objectives"></a>Obiettivi
 
-* Informazioni su come organizzare il contenuto 3D con la raccolta di oggetti Grid di MRTK
+* Creare un pannello di oggetti 3D che verrà usato per gli altri obiettivi di apprendimento
 * Implementare i cubi di delimitazione
-* Configurare gli oggetti 3D per la manipolazione di base-spostare, ruotare e ridimensionare
+* Configurare gli oggetti 3D per la manipolazione di base, ad esempio spostare, ruotare e ridimensionare
 * Esplorare l'interazione da vicino e da lontano
 * Informazioni sugli altri movimenti di rilevamento della mano, ad esempio la cattura e il tocco
 
+## <a name="importing-the-tutorial-assets"></a>Importazione delle risorse dell'esercitazione
+
+Scaricare e importare il pacchetto personalizzato Unity:
+
+* [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.2.0.0. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.0.unitypackage)
+
+Dopo aver importato le risorse dell'esercitazione, la finestra del progetto avrà un aspetto simile al seguente:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section1-step1-1.png)
+
+> [!TIP]
+> Per un promemoria su come importare un pacchetto personalizzato Unity, è possibile fare riferimento alle istruzioni [Import the Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
+
+## <a name="decluttering-the-scene-view"></a>Disordine della visualizzazione scena
+
+Per semplificare l'uso della scena, impostare la **visibilità della scena** per il cubo e gli oggetti buttoncollection su off facendo clic sull'icona a forme di **occhio** a sinistra degli oggetti. In questo modo l'oggetto viene nascosto nella finestra della scena senza modificarne la visibilità nel gioco:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section2-step1-1.png)
+
+> [!TIP]
+> Per altre informazioni sui controlli di visibilità della scena e su come usarli per ottimizzare la visualizzazione scena e il flusso di lavoro, è possibile visitare la documentazione relativa alla <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilità della scena</a> di Unity.
+
 ## <a name="organizing-3d-objects-in-a-collection"></a>Organizzazione di oggetti 3D in una raccolta
 
-1. Fare clic con il pulsante destro del mouse sulla gerarchia e selezionare Crea vuoto per creare un oggetto gioco vuoto, rinominarlo in 3DObjectCollection e verificare che sia posizionato in corrispondenza di x = 0, y = 0 e z = 0.
+In questa sezione verrà creato un pannello di oggetti 3D che verrà usato per esplorare varie modalità di interazione con gli oggetti 3D nelle sezioni seguenti di questa esercitazione. In particolare, gli oggetti 3D verranno configurati in modo da essere posizionati in una griglia 3 x 3.
 
-    ![mrlearning-base-CH4-1-Step1. png](images/mrlearning-base-ch4-1-step1.png)
+Analogamente a quando è [stato creato un pannello di pulsanti](mrlearning-base-ch2.md#creating-a-panel-of-buttons-using-mrtks-grid-object-collection), i passaggi principali da eseguire sono:
 
-2. Scaricare il pacchetto Unity [. HoloLens2. GettingStarted. Tutorials. asset. 2.1.0.0](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) e importarlo usando le stesse istruzioni per importare i pacchetti personalizzati descritti in [dalla lezione 1](mrlearning-base-ch1.md). Questo pacchetto include modelli 3D e altre risorse utili che vengono usate in questa esercitazione.
+1. Padre degli oggetti 3D in un oggetto padre
+2. Aggiungere e configurare il componente Grid Object Collection (script)
 
-3. Nel pannello del progetto passare a Asset > BaseModuleAssets > modulo di base prefabbricati e cercare "incompleto". si utilizzeranno alcuni di questi prefabbricati.
+### <a name="1-parent-the-3d-objects-to-a-parent-object"></a>1. padre degli oggetti 3D in un oggetto padre
 
-    ![mrlearning-base-CH4-1-step3. png](images/mrlearning-base-ch4-1-step3.png)
+Nella finestra gerarchia **creare un oggetto vuoto**, assegnargli un nome appropriato, ad esempio **3DObjectCollection**, e posizionarlo in una posizione appropriata, ad esempio X = 0, Y =-0,2, Z = 2.
 
-4. Trascinare Coffee Cup nell'oggetto gioco 3DObjectCollection del passaggio 1. CoffeeCup è ora un elemento figlio della raccolta.
+Nella finestra del progetto passare a **assets** > **MRTK. Tutorials. GettingStarted** > **prefabbricati** **, quindi i** prefabbricati seguenti in **3DObjectCollection**:
 
-    ![mrlearning-base-CH4-1-step4. png](images/mrlearning-base-ch4-1-step4.png)
+* Cheese
+* CoffeeCup
+* EarthCore
+* Octa
+* Platonico
+* TheModule
 
-5. Successivamente, si aggiungeranno altri oggetti 3D nella scena seguendo lo stesso processo del passaggio precedente. Di seguito è riportato un elenco di oggetti da aggiungere in questo esempio. Quando si aggiungono gli oggetti, è possibile che vengano visualizzati nella scena in diverse dimensioni. Modificare la scala di ogni modello 3D in impostazioni di trasformazione nel pannello di controllo. Le modifiche consigliate per questo esempio sono elencate con gli oggetti seguenti.
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-1.png)
 
-    * Cheese_BaseModuleIncomplete. Scala: x = 0,05, y = 0,05, z = 0,05.
-    * CoffeeCup_BaseModuleIncomplete. Scala: x = 0,1, y = 0,1, z = 0,1.
-    * EarthCore_BaseModuleIncomplete. Scala: x = 50,0 y = 50,0, z = 50,0.
-    * Model_Platonic_BaseModuleIncomplete. Scala: x = 0,13, y = 0,13, z = 0,13.
-    * Octa_BaseModuleIncomplete. Scala: x = 0,13. y = 0.13 e z =0.13.
-    * TheModule_BaseModuleIncomplete. Scala: x = 0,03, y = 0,03, z = 0,03.
+Nella finestra gerarchia **creare tre cubi** come oggetti figlio di **3DObjectCollection** e impostare la relativa **scala** di trasformazione su X = 0,15, Y = 0,15, Z = 0,15:
 
-    ![mrlearning-base-CH4-1-STEP5. png](images/mrlearning-base-ch4-1-step5.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-2.png)
 
-6. Aggiungere tre cubi alla scena. Fare clic con il pulsante destro del mouse sull'oggetto 3DObjectCollection, scegliere oggetto 3D, quindi cubo. Imposta i valori di ridimensionamento su x = 0.14, y = 0.14 e z = 0.14. Ripetere questo passaggio altre due volte per creare un totale di tre cubi. In alternativa, è possibile duplicare il cubo due volte per un totale di tre cubi. Puoi anche scegliere di usare i tre prefab cubo predefiniti in Assets>BaseModuleAssets>Base Module Prefabs e selezionare GreenCube_BaseModuleIncomplete, BlueCube_BaseModuleIncomplete e OrangeCube_BaseModuleIncomplete.
+<!-- TODO: Finish -->
+> [!TIP]
+> Per un promemoria su come eseguire i passaggi elencati in precedenza, è possibile fare riferimento all'esercitazione relativa alla [creazione dell'interfaccia utente e alla configurazione del Toolkit di realtà mista](mrlearning-base-ch2.md) .
 
-    ![mrlearning-base-CH4-1-step6. png](images/mrlearning-base-ch4-1-step6.png)
+Riposizionare i cubi in modo che sia possibile visualizzare ogni cubo:
 
-7. Organizzare la raccolta di oggetti per formare una griglia, tramite la procedura descritta nella [lezione 2](mrlearning-base-ch2.md), usando la raccolta di oggetti Grid di MRTK. Per un esempio di configurazione degli oggetti in una griglia 3x3, vedere l'immagine seguente.
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-3.png)
 
-    ![mrlearning-base-CH4-1-STEP7. png](images/mrlearning-base-ch4-1-step7.png)
+Nella finestra del progetto passare a **assets** > **MixedRealityToolkit. SDK** > **StandardAssets** > **Materials** per visualizzare i materiali forniti con MRTK.
 
-    >[!NOTE]
-    >È possibile notare che alcuni oggetti sono fuori centro, ad esempio gli oggetti nell'immagine precedente. Questo avviene perché i prefab o gli oggetti possono includere oggetti figlio non allineati. Puoi apportare le modifiche necessarie alla posizione dell'oggetto o dell'oggetto figlio per ottenere una griglia ben allineata.
+**Fare clic su e trascinare** un materiale appropriato nella proprietà elemento 0 di **materiali** renderer mesh del cubo, ad esempio:
+
+* MRTK_Standard_GlowingCyan
+* MRTK_Standard_GlowingOrange
+* MRTK_Standard_Green:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-4.png)
+
+### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. aggiungere e configurare il componente Grid Object Collection (script)
+
+Aggiungere un componente **Grid Object Collection (script)** all'oggetto 3DObjectCollection e configurarlo come segue:
+
+* Modificare il **tipo di ordinamento** in ordine figlio per assicurarsi che gli oggetti figlio siano ordinati nell'ordine in cui sono stati inseriti nell'oggetto padre.
+
+Quindi fare clic sul pulsante **Aggiorna raccolta** per applicare la nuova configurazione:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step2-1.png)
 
 ## <a name="manipulating-3d-objects"></a>Manipolazione di oggetti 3D
 
-1. Aggiungi la capacità di manipolare un cubo. Per aggiungere la possibilità di modificare gli oggetti 3D, eseguire le operazioni seguenti:
-    * Selezionare l'oggetto 3D che si desidera modificare nella gerarchia (ad esempio, uno dei cubi).
-    * Fare clic su Aggiungi componente
-    * Cercare "manipolazione"
-    * Seleziona gestore di manipolazione
-    * Ripetere l'applicazione per tutti gli oggetti 3D nell'oggetto 3DObjectCollection, ma non con il 3DObjectCollection stesso.
-    * Verificare che tutti gli oggetti 3D includano un Collider o box Collider (Add Component > Box Collider).
+In questa sezione verrà aggiunta la possibilità di modificare tutti gli oggetti 3D nel pannello creato nella sezione precedente. Inoltre, per gli oggetti prefabbricati, si consentirà agli utenti di raggiungere e acquisire questi oggetti con le mani tracciate. Si esamineranno quindi alcuni comportamenti di manipolazione che è possibile applicare agli oggetti.
 
-    ![Immagine lezione 4 capitolo 2 passaggio 1](images/Lesson4_chapter2_step1im.PNG)
+Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
 
-    >[!NOTE]
-    >Il gestore di manipolazione è un componente che consente di modificare le impostazioni relative al comportamento degli oggetti quando vengono modificate. Sono incluse la rotazione, il ridimensionamento, lo spostamento e il vincolo di spostamento su un asse specifico.
+1. Aggiungere il componente gestore modifiche (script) a tutti gli oggetti
+2. Aggiungere il componente near interactionable (script) a oggetti prefabbricati
+3. Configurare il componente di gestione della manipolazione (script)
 
-2. Limita un cubo in modo che possa solo essere ridimensionato. Selezionare un cubo nell'oggetto 3DObjectCollection. Nel pannello Inspector, accanto a due tipi di manipolazione gestiti, fare clic sul menu a discesa e selezionare Ridimensiona. In questo modo, l'utente può modificare solo le dimensioni del cubo.
+> [!IMPORTANT]
+> Per poter **modificare un oggetto**, l'oggetto deve disporre dei componenti seguenti:
+>
+> * Componente **Collider** , ad esempio, box Collider
+> * Componente **gestione manipolazione (script)**
+>
+> Per poter **modificare** e **acquisire un oggetto con le lancette rilevate**, l'oggetto deve disporre dei componenti seguenti:
+>
+> * Componente **Collider** , ad esempio, box Collider
+> * Componente **gestione manipolazione (script)**
+> * Componente **near Interaction (script)**
 
-    ![Immagine lezione 4 capitolo 2 passaggio 2](images/Lesson4_Chapter2_step2im.PNG)
+### <a name="1-add-the-manipulation-handler-script-component-to-all-the-objects"></a>1. aggiungere il componente gestore modifiche (script) a tutti gli oggetti
 
-3. Modifica il colore di ogni cubo, in modo che sia possibile distinguerli.
-    * Passare al pannello del progetto e scorrere verso il basso fino a visualizzare MixedRealityToolkit. SDK, quindi selezionarlo.
-    * Selezionare la cartella asset standard.
-    * Fare clic sulla cartella materiali.
-    * Trascina un materiale diverso in ogni cubo.
+Nella finestra gerarchia selezionare l'oggetto **Cheese** , tenere premuto il tasto **MAIUSC** , quindi selezionare l'oggetto **Cube ()** e aggiungere il componente **handler (script) di manipolazione** a tutti gli oggetti:
 
-    >[!NOTE]
-    >puoi scegliere un colore qualsiasi per i cubi. Per questo esempio vengono usati glowingcyan, glowingorange e Green. Puoi provare a usare colori diversi. Per aggiungere il colore al cubo, fare clic sul cubo che si desidera modificare, quindi trascinare il materiale nel campo Material del renderer mesh nel pannello Inspector del cubo.
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step1-1.png)
 
-    ![Immagine lezione 4 capitolo 2 passaggio 3](images/Lesson4_Chapter2_step3im.PNG)
+> [!NOTE]
+> Ai fini di questa esercitazione, i Collider sono già stati aggiunti ai prefabbricati. Per le primitive Unity, ad esempio gli oggetti cubo, il componente Collider viene aggiunto automaticamente quando viene creato l'oggetto. Nell'immagine precedente, i Collider sono rappresentati dai profili verdi. Per ulteriori informazioni sui Collider, è possibile visitare la documentazione di Unity <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">Collider</a> .
 
-4. Selezionare un altro cubo nell'oggetto 3DObjectCollection e impostarlo in modo che lo spostamento sia vincolato a una distanza fissa dalla testa. A tale scopo, a destra di vincolo sull'etichetta di spostamento, fare clic sul menu a discesa e selezionare Correggi distanza dall'inizio. In questo modo il cubo verrà modificato in base al campo della visione.
+### <a name="2-add-the-near-interaction-grabbable-script-component-to-the-prefab-objects"></a>2. aggiungere il componente near Interaction (script) a oggetti prefabbricati
 
-    ![Immagine lezione 4 capitolo 2 passaggio 4](images/Lesson4_chapter2_step4im.PNG)
+Nella finestra gerarchia selezionare l'oggetto **Cheese** , tenere premuto il tasto **MAIUSC** , quindi selezionare l'oggetto **TheModule** e aggiungere il componente **near interactionable (script)** a tutti gli oggetti:
 
-    L'obiettivo dei pochi passaggi seguenti consiste nell'abilitare l'acquisizione e l'interazione con gli oggetti 3D e l'applicazione di impostazioni di manipolazione diverse.
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step2-1.png)
 
-5. Selezionare l'oggetto Cheese, quindi fare clic su Add Component nel pannello Inspector.
+### <a name="3-configure-the-manipulation-handler-script-component"></a>3. configurare il componente di gestione della manipolazione (script)
 
-6. Eseguire una ricerca nella casella di ricerca di near interactionable e selezionare lo script. Questo componente consente agli utenti di raggiungere e acquisire oggetti con le mani tracciate. Gli oggetti possono anche essere modificati a distanza, a meno che la casella di controllo Consenti disparità non sia selezionata come indicato da un cerchio verde nell'immagine seguente.
+#### <a name="default-manipulation"></a>Manipolazione predefinita
 
-    ![Immagine lezione 4 capitolo 2 passaggio 6](images/Lesson4_Chapter2_step6im.PNG)
+Per l'oggetto **cubo** , lasciare tutte le proprietà predefinite per verificare il comportamento di manipolazione predefinito:
 
-7. Aggiungere near interactionable all'oggetto Octa, all'oggetto Platonic, a Earth Core, al modulo Lunar e a Coffee Cup ripetendo i passaggi 5 e 6 in tali oggetti.
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-1.png)
 
-8. Rimuovi la capacità di manipolazione da lontano dall'oggetto ottaedro. A tale scopo, selezionare il Octa nella gerarchia e deselezionare la casella di controllo Consenti modifiche a distanza (contrassegnato da un cerchio verde). In questo modo gli utenti possono interagire solo con il Octa direttamente usando le mani tracciate.
+> [!TIP]
+> Per reimpostare i valori predefiniti di un componente, è possibile selezionare l'icona delle impostazioni del componente e selezionare Reimposta.
 
-    >[!NOTE]
-    >Per la documentazione completa del componente handler di manipolazione e le impostazioni associate, vedere la documentazione di [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html).
+#### <a name="restrict-manipulation-to-scale-only"></a>Limitazione della manipolazione solo per la scalabilità
 
-9. Verificare che sia stato aggiunto il componente near interactionable interactionable a Earth Core, il modulo Lunar e il caffè Cup (vedere il passaggio 7).
+Per l'oggetto **Cube (1)** , modificare **due tipi di manipolazione gestiti** in scale in modo da consentire solo all'utente di modificare le dimensioni dell'oggetto:
 
-10. Per il modulo Lunar, modificare le impostazioni del gestore delle modifiche in modo che ruoti intorno al centro dell'oggetto per l'interazione sia quasi che lontano, come illustrato nell'immagine seguente.
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-2.png)
 
-    ![Immagine lezione 4 capitolo 2 passaggio 10](images/Lesson4_chapter2_step10im.PNG)
+#### <a name="constrain-the-movement-to-a-fixed-distance-from-the-user"></a>Vincolare lo spostamento a una distanza fissa dall'utente
 
-11. Per Earth Core, modificare il comportamento della versione in Nothing. In questo modo, quando il nucleo di terra viene rilasciato dalla stretta dell'utente, non continua a spostarsi.
+Per l'oggetto **Cube (2)** , modificare il **vincolo on Movement** per correggere la distanza dall'Head in modo che, quando l'oggetto viene spostato, rimanga alla stessa distanza dall'utente:
 
-    ![Immagine lezione 4 capitolo 2 passaggio 11](images/Lesson4_Chapter2_step11im.PNG)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-3.png)
 
-    >[!NOTE]
-    >Questa impostazione è utile per gli scenari, ad esempio la creazione di una palla che è possibile generare. Mantenendo la velocità e la velocità angolari appropriate per garantire che una volta rilasciata la palla continuerà a spostarsi alla velocità in cui è stata rilasciata; in modo analogo al comportamento di una palla fisica.
+#### <a name="default-grabbable-manipulation"></a>Manipolazione predefinita
 
-## <a name="adding-bounding-boxes"></a>Aggiunta di cubi di delimitazione
+Per gli oggetti **Cheese**, **CoffeCup**e **EarthCore** , lasciare tutte le proprietà predefinite per poter provare il comportamento predefinito di manipolazione.
 
-I rettangoli di delimitazione rendono più semplice e intuitivo manipolare gli oggetti con una sola mano per la manipolazione diretta (near Interaction) e la manipolazione basata su Ray (di gran lunga interazione). I rettangoli di delimitazione forniscono handle che possono essere recuperati per la scala e la rotazione di oggetti lungo un asse specifico.
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-4.png)
 
->[!NOTE]
->Prima di poter aggiungere un rettangolo di delimitazione a un oggetto, è necessario innanzitutto disporre di un collider sull'oggetto (ad esempio, un box Collider), come è stato analizzato in precedenza in questa lezione. È possibile aggiungere i Collider selezionando l'oggetto e nel pannello Inspector dell'oggetto selezionando Aggiungi componente > Box Collider.
+#### <a name="remove-the-ability-of-far-manipulation"></a>Rimuovere la capacità di manipolazione
 
-1. Aggiungere un Collider box all'oggetto Earth Core, se non ne esiste già uno. La finestra Collider e il programma di installazione non sono necessari se si usa la prefabbricata fornita nella cartella asset del modulo di base per le istruzioni fornite. Nel caso di Earth Core, è stato aggiunto il box Collider all'oggetto, node_id30, sotto il nucleo terrestre, come illustrato nell'immagine seguente. Selezionare node_id30 dalla scheda controllo dell'oggetto, fare clic su Aggiungi componente e cercare box Collider.
+Per l'oggetto **Octa** , deselezionare la casella di controllo **Consenti modifiche a lungo** per fare in modo che l'utente possa interagire direttamente con l'oggetto usando le mani rilevate:
 
-    ![Immagine lezione 4 capitolo 3 passaggio 1](images/Lesson4_Chapter3_step1im.PNG)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-5.png)
 
-    ![Immagine lezione 4 capitolo 3 passaggio 2](images/Lesson4_chapter3_step2im.PNG)
+#### <a name="make-an-object-rotate-around-its-center"></a>Far ruotare un oggetto intorno al centro
 
-    >[!NOTE]
-    >Assicurarsi di ridimensionare il box Collider in modo che non sia troppo grande o troppo piccolo. Le dimensioni devono essere più o meno analoghe a quelle dell'oggetto circostante (in questo esempio, l'oggetto nucleo terrestre). Modificare la casella Collider in base alle esigenze selezionando l'opzione modifica Collider in box Collider. È possibile modificare i valori x, y e z o trascinare i gestori del riquadro delimitatore nella finestra della scena dell'editor.
+Per l'oggetto **Platonic** modificare **una modalità di rotazione della mano vicino** a una modalità di rotazione della **mano** , per ruotare l'oggetto in modo da fare in modo che, quando l'utente ruota l'oggetto con una sola mano, ruoti intorno al centro dell'oggetto:
 
-    ![Immagine lezione 4 capitolo 3 nota](images/Lesson4_Chapter3_noteim.PNG)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-6.png)
 
-2. Aggiungere un rettangolo di delimitazione all'oggetto node_id30 di Earth Core. A tale scopo, selezionare il node_id30 oggetto da 3DObjectCollection. Nella scheda controllo fare clic su Aggiungi componente e cercare il rettangolo di delimitazione. Assicurati che cubo di delimitazione, collisore cubico e script di manipolazione, Manipulation Handler (Gestore di modifica) e Near Interaction Grabbable (Afferrabile con interazione da vicino), si trovino tutti nello stesso oggetto gioco.
+#### <a name="prevent-movement-after-object-is-released"></a>Impedisci spostamento dopo il rilascio dell'oggetto
 
-3. Nella sezione comportamento del riquadro delimitatore selezionare Activate on Start dall'elenco a discesa Activation. Per esaminare i dettagli aggiuntivi relativi alle varie opzioni di attivazione e ad altre opzioni del riquadro, vedere la [documentazione relativa al rettangolo di delimitazione di MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html>)
+Per l'oggetto **TheModule** , modificare il **comportamento della versione** in modo che, una volta rilasciato l'oggetto dall'utente, non continui a muoversi:
 
-    *Nei passaggi successivi verrà modificato anche il modo in cui il rettangolo di delimitazione viene visualizzato regolando il materiale predefinito della casella, il materiale mentre viene afferrato, nonché la visualizzazione dell'angolo e degli handle laterali. Il MRTK contiene diverse opzioni per personalizzare il rettangolo di delimitazione.*
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-7.png)
 
-4. Nel pannello progetto cercare "BoundingBox" per visualizzare un elenco di materiali indicati da una sfera blu nei risultati della ricerca, come illustrato nell'immagine seguente.
+Per ulteriori informazioni sul componente del gestore della manipolazione e sulle proprietà associate, è possibile visitare la guida del [gestore della manipolazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) nel portale della [documentazione di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-5. Trascinare il materiale BoundingBox nello slot del materiale della casella sul componente del rettangolo di delimitazione. Estrarre anche il materiale boundingboxgrabbed e inserirlo nello slot del materiale afferrato nella casella nel componente del rettangolo di delimitazione.
+## <a name="adding-bounding-boxes"></a>Aggiunta di rettangoli di delimitazione
 
-    ![mrlearning-base-CH4-3-STEP5. png](images/mrlearning-base-ch4-3-step5.png)
+I rettangoli di delimitazione rendono più semplice e intuitivo manipolare gli oggetti con una sola mano, sia per l'interazione vicina che per quella più lunga, fornendo handle che possono essere utilizzati per la scalabilità e la rotazione.
 
-6. Trascinare la prefabbricazione di MRTK_BoundingBox_ScaleHandle nello slot per la prefabbricazione del handle di scala e il MRTK_BoundingBox_RotateHandle prefabbricato nello slot dell'handle di rotazione sul componente del riquadro di collegamento.
+In questo esempio si aggiungerà un rettangolo di delimitazione all'oggetto EarthCore in modo che questo oggetto possa ora interagire con la manipolazione degli oggetti configurata nella sezione precedente, nonché ridimensionata e ruotata usando gli handle del rettangolo di delimitazione.
 
-    ![mrlearning-base-CH4-3-step6. png](images/mrlearning-base-ch4-3-step6.png)
+> [!IMPORTANT]
+> Per poter utilizzare un rettangolo di **delimitazione**, è necessario che nell'oggetto siano presenti i componenti seguenti:
+>
+> * Componente **Collider** , ad esempio, box Collider
+> * Componente del rettangolo di **delimitazione (script)**
 
-7. Assicurati che il cubo di delimitazione punti all'oggetto corretto. Nel componente del rettangolo di selezione è presente l'oggetto di destinazione e gli script di override dei limiti. Trascinare l'oggetto con il rettangolo di delimitazione in entrambi gli slot. In questo esempio trascinare l'oggetto node_id30 in entrambi gli slot, come illustrato nell'immagine seguente.
+### <a name="1-add-the-bounding-box-script-component-to-the-earthcore-object"></a>1. aggiungere il componente del rettangolo di delimitazione (script) all'oggetto EarthCore
 
-    ![mrlearning-base-CH4-3-STEP7. png](images/mrlearning-base-ch4-3-step7.png)
+Nella finestra di controllo selezionare l'oggetto **EarthCore** e aggiungere il componente **(script) del rettangolo** di selezione all'oggetto EarthCore:
 
-    >[!NOTE]
-    >Quando si avvia o si riproduce l'applicazione, l'oggetto sarà racchiuso da una cornice blu. Puoi trascinare gli angoli del riquadro per ridimensionare l'oggetto. Se si desidera che i quadratini di ridimensionamento e di rotazione siano più grandi e più visibili, è consigliabile utilizzare le impostazioni predefinite del riquadro (evitando i passaggi da 4 a 6).
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step1-1.png)
 
-8. Per tornare alla visualizzazione predefinita del riquadro delimitatore, nel pannello Inspector dell'oggetto del rettangolo di selezione selezionare il quadratino di rotazione e premere CANC per rimuoverlo. Quando si entra in modalità di riproduzione, Wou visualizzerà una visualizzazione del riquadro delimitatore simile all'immagine seguente.
+> [!NOTE]
+> Le visualizzazioni del rettangolo di delimitazione vengono create in fase di esecuzione e pertanto non sono visibili prima di passare alla modalità di gioco.
 
-    ![mrlearning-base-CH4-3-Step8. png](images/mrlearning-base-ch4-3-step8.png)
+### <a name="2-visualize-and-test-the-bounding-box-using-the-in-editor-simulation"></a>2. visualizzare e testare il rettangolo di delimitazione usando la simulazione in-Editor
 
-    >[!NOTE]
-    >Le visualizzazioni del rettangolo di delimitazione vengono visualizzate solo in modalità di riproduzione.
+Premere il pulsante Riproduci per attivare la modalità di gioco. Quindi tenere premuto la barra spaziatrice per visualizzare la mano e usare il mouse per interagire con il rettangolo di delimitazione:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step2-1.png)
+
+Per ulteriori informazioni sul componente del riquadro e sulle proprietà associate, è possibile visitare la guida del rettangolo di [delimitazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) nel [portale della documentazione di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="adding-touch-effects"></a>Aggiunta degli effetti tocco
 
-In questo esempio riprodurremo un effetto sonoro quando si tocca un oggetto con la mano.
+In questo esempio verranno abilitati gli eventi da attivare quando si tocca un oggetto con la mano. In particolare, l'oggetto Octa verrà configurato per riprodurre un effetto acustico quando l'utente lo tocca.
 
-1. Aggiungi un componente di origine audio all'oggetto gioco. Selezionare l'oggetto Octa nella gerarchia della scena. Nel pannello di controllo fare clic sul pulsante Aggiungi componente, cercare e selezionare origine audio. Useremo questa origine audio per riprodurre un effetto sonoro in un passaggio successivo.
+Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
 
-    >[!NOTE]
-    >Verificare che l'oggetto Octa disponga di un Collider di box.
+1. Aggiungere un componente di origine audio all'oggetto
+2. Aggiungere il componente near Interaction (script) per l'interazione all'oggetto
+3. Aggiungere il componente tocco interazione mano (script) all'oggetto
+4. Implementare l'evento on touch Started
+5. Testare l'interazione con il tocco usando la simulazione in-Editor
 
-2. Aggiungere il componente ritoccabile near Interaction. Fare clic sul pulsante Aggiungi componente nel pannello di controllo e cercare near Interaction touchable. Seleziona questa opzione per aggiungere il componente.
+> [!IMPORTANT]
+> Per poter **attivare gli eventi di tocco**, l'oggetto deve disporre dei componenti seguenti:
+>
+> * Componente **Collider** , preferibilmente box Collider
+> * Componente **near Interaction touchable (script)**
+> * Componente **tocco interazione mano (script)**
 
-    >[!NOTE]
-    >In precedenza, abbiamo aggiunto Near interactionable. La differenza tra questa e l'interazione quasi toccabile consiste nel fatto che l'interazione acquisibile è progettata per l'acquisizione e l'interazione di un oggetto. Il componente toccabile è concepito per l'oggetto da toccare. I due componenti possono essere usati insieme per combinare le interazioni.
+> [!NOTE]
+> Il componente script (Hand Interaction touch) non fa parte di MRTK. È stato importato con le risorse di questa esercitazione ed è stato originariamente incluso negli esempi di Unity Toolkit MixedReality.
 
-    ![Immagine lezione 4 capitolo 4 passaggi 1-2](images/Lesson4_chapter4_step1-2im.PNG)
+### <a name="1-add-an-audio-source-component-to-the-object"></a>1. aggiungere un componente di origine audio all'oggetto
 
-3. Aggiungere lo script tocco interazione mano. Analogamente al passaggio precedente, fare clic su Aggiungi componente e cercare tocco interazione mano per aggiungerlo.
+Nella finestra gerarchia selezionare l'oggetto **Octa** , aggiungere un componente di **origine audio** all'oggetto OCTA e quindi modificare **Blend spaziale** in 1 per abilitare l'audio spaziale:
 
-    Si noti che sono disponibili tre opzioni con lo script:
-    * Al tocco completato: trigger quando si tocca e rilascia l'oggetto
-    * All'avvio del tocco: viene attivato quando viene toccato l'oggetto
-    * Al tocco aggiornato: attiva periodicamente quando la mano tocca l'oggetto
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step1-1.png)
 
-    Per questo esempio verrà utilizzata l'impostazione on touch started.
+### <a name="2-add-the-near-interaction-touchable-script-component-to-the-object"></a>2. aggiungere il componente di prossimità interazione (script) per l'oggetto
 
-    >[!NOTE]
-    >Questo script è incluso nel pacchetto BaseModuleAssets Unity che è stato importato all'inizio di questa esercitazione e non è incluso nella MRTK originale.
+Se l'oggetto **Octa** è ancora selezionato, aggiungere il componente **near Interaction (script)** per l'oggetto Octa, quindi fare clic sui pulsanti **Correggi limiti** e **Correggi centro** per aggiornare le proprietà del centro locale e dei limiti di near Interaction touchable (script) in modo che corrispondano a BoxCollider:
 
-4. Fare clic sul pulsante + nell'opzione on touch Started e trascinare l'oggetto Octa nel campo Empty.
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step2-1.png)
 
-    ![mrlearning-base-CH4-4-step4. png](images/mrlearning-base-ch4-4-step4.png)
+### <a name="3-add-the-hand-interaction-touch-script-component-to-the-object"></a>3. aggiungere il componente script (Hand Interaction touch) all'oggetto
 
-5. Nell'elenco a discesa che indica nessuna funzione selezionare AudioSource > PlayOneShot. Verrà aggiunto un clip audio a questo campo usando i concetti seguenti:
+Con l'oggetto **Octa** ancora selezionato, aggiungere il componente **script (Hand Interaction touch)** all'oggetto Octa:
 
-    * In MRTK è disponibile un breve elenco di clip audio. È possibile esplorarli nel pannello del progetto. Queste informazioni sono disponibili nella cartella assets > MixedRealityToolkit. SDK > risorse standard > audio.
-    * Per questo esempio verrà usato il clip audio MRTK_Gem.
-    * Per aggiungere un clip audio, è sufficiente trascinare il clip desiderato dal pannello del progetto nel campo AudioSource. PlayOneShot.
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step3-1.png)
 
-    ![mrlearning-base-CH4-4-STEP5. png](images/mrlearning-base-ch4-4-step5.png)
+### <a name="4-implement-the-on-touch-started-event"></a>4. implementare l'evento on touch Started
 
-   A questo punto, quando l'utente raggiunge e tocca l'oggetto Octa, la traccia audio MRTK_Gem verrà riprodotto. Lo script di tocco interazione mano modifica anche il colore dell'oggetto, quando viene toccato.
+Sul componente tocco interazione mano (script), fare clic sull'icona del piccolo **+** per creare un nuovo evento per **tocco avviato ()** . Configurare quindi l'oggetto **Octa** per ricevere l'evento e definire **audiosource. PlayOneShot** come azione da attivare:
 
-## <a name="congratulations"></a>Lezione completata
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
-In questa esercitazione si è appreso come organizzare gli oggetti 3D in una raccolta di griglie e come manipolare questi oggetti (ridimensionamento, rotazione e movimento) usando near Interaction (cattura diretta con le mani rilevate) e un'interazione di gran lunga (usando raggi di sguardi o raggi mano). Si è inoltre appreso come inserire le caselle di delimitazione intorno agli oggetti 3D e come usare e personalizzare i gizmo nei rettangoli di delimitazione. Hai infine appreso come attivare eventi nel momento in cui viene toccato un oggetto.
+Passare a **asset** > **MixedRealityToolkit. SDK** > **StandardAssets** > Materials per visualizzare le clip audio fornite con MRTK e quindi assegnare una clip audio adatta al campo **clip** audio, ad esempio il clip audio MRTK_Gem:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
+
+> [!TIP]
+> Per un promemoria su come implementare gli eventi, è possibile fare riferimento alle istruzioni per i [movimenti di rilevamento della mano e i pulsanti interagiscono](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) .
+
+### <a name="5-test-the-touch-interaction-using-the-in-editor-simulation"></a>5. testare l'interazione con il tocco usando la simulazione in-Editor
+
+Premere il pulsante Riproduci per attivare la modalità di gioco. Quindi tenere premuto la barra spaziatrice per visualizzare la mano e usare il mouse per toccare l'oggetto OCTA e attivare l'effetto audio:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step5-1.png)
+
+> [!NOTE]
+> Come è stato osservato durante il test dell'interazione del tocco e come illustrato nell'immagine precedente, il colore dell'oggetto Octa pulsava durante il suo tocco. Questo effetto è hardcoded nel componente tocco interazione mano (script) e non è il risultato della configurazione degli eventi completata nei passaggi precedenti.
+>
+> Se si vuole disabilitare questo effetto, è possibile, ad esempio, impostare come commento o la riga 32' TargetRenderer = GetComponentInChildren<Renderer>();' che restituirà il valore null rimanente di TargetRenderer e il colore non pulsa.
+
+## <a name="congratulations"></a>Complimenti
+
+In questa esercitazione si è appreso come organizzare gli oggetti 3D in una raccolta di griglie e come manipolare questi oggetti (ridimensionamento, rotazione e movimento) usando near Interaction (cattura diretta con le mani rilevate) e un'interazione di gran lunga (usando raggi di sguardi o raggi mano). Si è inoltre appreso come inserire le caselle di delimitazione intorno agli oggetti 3D e come usare e personalizzare gli handle nei rettangoli di delimitazione. Hai infine appreso come attivare eventi nel momento in cui viene toccato un oggetto.
 
 [Lezione successiva: 6. esplorazione delle opzioni di input avanzate](mrlearning-base-ch5.md)

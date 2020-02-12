@@ -1,82 +1,119 @@
 ---
 title: Esercitazione introduttiva-4. Inserimento di contenuto dinamico e utilizzo di risolutori
-description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334364"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129327"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. posizionamento del contenuto dinamico e utilizzo dei risolutori
+<!-- Consider renaming to 'Placing dynamic content using Solvers' -->
 
-Gli ologrammi entrano a far parte di HoloLens 2 quando seguono in modo intuitivo l'utente e vengono inseriti nell'ambiente fisico in modo da rendere l'interazione semplice ed elegante. In questa esercitazione vengono illustrate le modalità per posizionare in modo dinamico gli ologrammi usando gli strumenti di posizionamento disponibili di MRTK (noti come risolutori) per risolvere scenari di posizionamento spaziali complessi. In MRTK, i risolutori sono un sistema di script e comportamenti usati per consentire agli elementi dell'interfaccia utente di seguire l'utente, l'utente o altri oggetti del gioco nella scena. Possono anche essere usati per l'ancoraggio rapido a determinate posizioni, rendendo così più intuitiva l'applicazione.
+Gli ologrammi entrano a far parte di HoloLens 2 quando seguono in modo intuitivo l'utente e vengono inseriti nell'ambiente fisico in modo da rendere l'interazione semplice ed elegante. In questa esercitazione vengono illustrate le modalità per posizionare in modo dinamico gli ologrammi usando gli strumenti di posizionamento disponibili di MRTK, noti come risolutori, per risolvere scenari di posizionamento spaziali complessi. In MRTK, i risolutori sono un sistema di script e comportamenti usati per consentire agli elementi dell'interfaccia utente di seguire l'utente, l'utente o altri oggetti del gioco nella scena. Possono anche essere usati per l'ancoraggio rapido a determinate posizioni, rendendo così più intuitiva l'applicazione.
 
 ## <a name="objectives"></a>Obiettivi
 
 * Introdurre i risolutori di MRTK
-* Usare i risolutori per fare in modo che una raccolta di pulsanti segua l'utente
-* Usare i risolutori per fare in modo che un oggetto gioco segua le mani tracciate dell'utente
+* Usare i resolver per avere una raccolta di pulsanti che seguono l'utente
+* Usare i resolver per fare in modo che un oggetto gioco segua le lancette rilevate dall'utente
 
-## <a name="location-of-solvers-in-the-mrtk"></a>Posizione dei risolutori in MRTK
+## <a name="location-of-solvers-in-the-mrtk"></a>Percorso dei risolutori in MRTK
 
- Per trovare i resolver disponibili nel progetto, cercare nella cartella MRTK SDK (cartella MixedRealityToolkit. SDK). Nella cartella Utilities viene visualizzata la cartella solvers, come illustrato nell'immagine seguente.
+ I risolutori di MRTK si trovano nella cartella SDK di MRTK. Per visualizzare i resolver disponibili nel progetto, nella finestra del progetto passare a **assets** > **MixedRealityToolkit. SDK** > **features** > **Utilities** > **Resolvers**:
 
-![Risolutori](images/lesson3_chapter1_step1im.PNG)
+![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
->[!NOTE]
->In questa lezione, verrà esaminata solo l'implementazione del Risolutore di Orbital e del Risolutore RadialView. Per altre informazioni sull'intera gamma di risolutori disponibili in MRTK, vedere: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
+In questa esercitazione verrà esaminata l'implementazione del Risolutore orbitale e del Risolutore di viste radiali. Per altre informazioni sull'intera gamma di resolver disponibili in MRTK, vedere la guida per i [risolutori](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) nel portale della documentazione di [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-## <a name="use-a-solver-to-follow-the-user"></a>Usare un risolutore per seguire l'utente
+## <a name="use-a-solver-to-follow-the-user"></a>Usare un Risolutore per seguire l'utente
+<!-- Consider renaming to 'Use a Solver to have an object follow the user' -->
 
-L'obiettivo di questo capitolo è quello di migliorare la raccolta dei pulsanti creata in precedenza in modo che segua la direzione dello sguardo dell'utente. Nella versione precedente di MRTK e HoloToolkit è stato definito funzionalità Tagalong.
+In questa sezione verrà migliorata la raccolta dei pulsanti creata nell'esercitazione precedente in modo che segua la direzione dello sguardo dell'utente. Inoltre, verrà configurato anche il Risolutore, in modo che la raccolta dei pulsanti sia sempre:
 
-1. Seleziona l'oggetto padre Button Collection (Raccolta pulsanti) della lezione precedente.
+* Ruotato in parallelo alla direzione di lettura dell'utente, per la lettura naturale da sinistra a destra
+* Posizionato leggermente sotto la direzione degli sguardi orizzontali dell'utente, quindi non ostruisce gli altri oggetti che verrà aggiunto più avanti in questa esercitazione
+* Posizionato approssimativamente a metà del braccio dall'utente, quindi è possibile premere facilmente i pulsanti
 
-    ![Immagine lezione 3 capitolo 2 passaggio 1](images/Lesson3_chapter2_step1im.PNG)
+A tale scopo, si utilizzerà il **Risolutore orbitale** che blocca l'oggetto in una posizione e un offset specificati dall'oggetto a cui si fa riferimento.
 
-2. Nel pannello di controllo fare clic sul pulsante Aggiungi componente e cercare Orbital. Verrà visualizzato il componente orbitale. Selezionarlo per aggiungere il componente orbitale all'oggetto del gioco della raccolta dei pulsanti.
+### <a name="1-add-the-orbital-solver"></a>1. aggiungere il Risolutore orbitale
 
-    ![Immagine lezione 3 capitolo 2 passaggio 2](images/Lesson3_Chapter2_step2im.PNG)
+Nella finestra gerarchia selezionare l'oggetto **buttoncollection** , quindi nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere il componente **Orbital (script)** all'oggetto buttoncollection.
 
-    >[!NOTE]
-    >Quando si aggiunge il componente Orbital si noterà che il sistema aggiunge anche il componente SolverHandler, che è un componente obbligatorio.
+> [!NOTE]
+> Quando si aggiunge un Risolutore, in questo caso il componente Orbital (script), il componente di gestione del Risolutore (script) viene aggiunto automaticamente perché è necessario per il Risolutore.
 
-3. Per configurare la raccolta di pulsanti in modo che segua l'utente, è necessario implementare le regolazioni seguenti (vedere l'immagine seguente):
+### <a name="2-configure-the-orbital-solver"></a>2. configurare il Risolutore di orbitali
 
-    * Nello script Orbital impostare l'elenco a discesa tipo orientamento su solo imbardata. In questo modo, un solo asse dell'oggetto ruota seguendo l'utente.
-    * Imposta l'offset locale su 0 in tutti gli assi. Impostare offset globale su x = 0, y =-0,1 e z = 0,6. Questo blocca lo spostamento dell'oggetto in modo che, quando l'utente cambia l'altezza, l'oggetto rimanga a un'altezza fissa nell'ambiente fisico, consentendo allo stesso tempo di seguire l'utente mentre l'utente si sposta sull'ambiente. Questi valori possono essere modificati per ottenere un'ampia varietà di comportamenti.
-    * Per un comportamento successivo, in base al quale i pulsanti seguono solo la visualizzazione dell'utente dopo che l'utente ha trasformato la propria intestazione in modo sufficientemente lungo, è possibile selezionare la casella di controllo Usa angolo di avanzamento per l'offset globale (Nota: questo titolo può essere troncato in alcune schermate, come nell'immagine seguente). Ad esempio, per fare in modo che l'oggetto segua l'utente solo ogni 90 gradi, impostare il numero di passaggi uguale a 4 (contrassegnato da una freccia verde nell'esempio seguente).
+Configurare il componente **gestore Risolutore (script)** :
 
-    ![Immagine lezione 3 capitolo 2 passaggio 3](images/Lesson3_chapter2_step3im.PNG)
+* Verificare che il **tipo di destinazione rilevata** sia impostato su **Head**
+
+Configurare il componente **Orbital (script)** :
+
+* Modificare il **tipo di orientamento** per seguire l' **oggetto rilevato**
+* Reimposta **offset locale** su X = 0, Y = 0, Z = 0
+* Imposta **offset globale** su X = 0, Y =-0,4, Z = 0,3
+
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
+
+### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. testare il Risolutore Orbital usando la simulazione in-Editor
+
+Premere il pulsante Riproduci per attivare la modalità di gioco e premere e tenere premuto il pulsante destro del mouse per ruotare la direzione dello sguardo e notare quanto segue:
+
+* La posizione di trasformazione di Buttoncollection è ora determinata dalle impostazioni del Risolutore
+* Il cubo, che non è influenzato dal Risolutore, rimane nella stessa posizione
+
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
+
+> [!TIP]
+> Se il raggio della fotocamera non è visibile nella finestra della scena, verificare che il menu gizmos sia abilitato. Per altre informazioni sul menu gizmos e su come usarlo per ottimizzare la visualizzazione della scena, è possibile visitare la documentazione del <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menu dei gizmo</a> di Unity.
+>
+> Per visualizzare la scena e la finestra di gioco affiancata, come illustrato nell'immagine precedente, trascinare semplicemente la finestra del gioco sul lato destro della finestra della scena. Per ulteriori informazioni sulla personalizzazione dell'area di lavoro, è possibile visitare la pagina relativa alla <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">personalizzazione dell'area di lavoro</a> di Unity.
 
 ## <a name="enabling-objects-to-follow-tracked-hands"></a>Abilitazione degli oggetti per seguire le mani tracciate
 
-In questa sezione si configurerà l'oggetto Game Cube creato in precedenza per seguire le mani rilevate dall'utente usando il Risolutore RadialView.
+In questa sezione si configurerà l'oggetto cubo creato nell'esercitazione precedente, in modo che segua le mani rilevate dall'utente, in particolare il polso destro. Inoltre, il Risolutore viene configurato in modo che il cubo:
 
-1. Consente di selezionare l'oggetto cubo nella gerarchia BaseScene. Fare clic su Aggiungi componente nel pannello di controllo. Digitare RadialView nella casella di ricerca e selezionare il componente RadialView per aggiungerlo al cubo. Il componente SolverHandler verrà inoltre aggiunto automaticamente al cubo.
+* Modifica l'orientamento con la rotazione a mano dell'utente
+* Posizionato sul polso dell'utente
 
-    ![mrlearning-base-CH3-3-step3. png](images/mrlearning-base-ch3-3-step1.png)
+A tale scopo, si utilizzerà il **Risolutore di viste radiali** , che consente di mantenere l'oggetto all'interno di un cono di visualizzazione di cui viene eseguito il cast dall'oggetto
 
-2. Per modificare il RadialView in modo che segua una mano anziché l'intestazione, selezionare il menu a discesa accanto all'opzione tipo di destinazione rilevata e selezionare Hand Joint dal menu.
+### <a name="1-add-the-radial-view-solver"></a>1. aggiungere il Risolutore di visualizzazione radiale
 
-    ![mrlearning-base-CH3-3-Step2. png](images/mrlearning-base-ch3-3-step2a.png)
+Nella finestra gerarchia selezionare l'oggetto **cubo** , quindi nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere l'oggetto del cubo del componente di **visualizzazione radiale (script)** .
 
-    Verranno ora visualizzate due nuove opzioni, il tipo di mano rilevata e il giunto della mano rilevata. Per questo esempio, il RadialView deve essere seguito dal polso della mano sinistra, come illustrato nell'immagine seguente.
+### <a name="2-configure-the-radial-view-solver"></a>2. configurare il Risolutore di viste radiali
 
-    ![mrlearning-base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
+Configurare il componente **gestore Risolutore (script)** :
 
-3. Impostare le distanze massime e minime della visualizzazione radiale su 0, in modo che il cubo non abbia alcuna distanza tra l'oggetto e il polso dell'utente. Una volta impostato, il cubo sarà perfettamente allineato al polso. È inoltre possibile modificare il campo direzione riferimento per regolare il comportamento di orientamento del cubo, ad esempio se si desidera consentire all'oggetto di ruotare con il polso dell'utente impostando la direzione di riferimento su orientata a oggetti.
+* Modificare il **tipo di destinazione rilevata** in **join a mano**
+* Modificare la **mano rilevata** a **destra**
+* Modificare la **giunzione della mano registrata** fino al **polso**
 
-    ![mrlearning-base-CH3-3-step3. png](images/mrlearning-base-ch3-3-step3.png)
+Configurare il componente **visualizzazione radiale (script)** :
 
-## <a name="congratulations"></a>Lezione completata
+* Modificare la **direzione di riferimento** in **orientata a oggetti**, quindi selezionare la casella di controllo **Orient to Reference Direction**
+* Modificare la distanza **minima** e la **distanza massima** con 0
 
-In questa esercitazione si è appreso come usare i resolver di MRTK per fare in modo che un'interfaccia utente segua in modo intuitivo l'utente. Hai anche appreso come collegare un risolutore a un oggetto gioco (ad esempio un cubo) in modo che segua le mani tracciate dell'utente. Per altre informazioni su questi e altri risolutori inclusi in MRTK, visita la [pagina della documentazione dei risolutori di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html).
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
-[Lezione successiva: 5. interazione con oggetti 3D](mrlearning-base-ch4.md)
+### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. testare il Risolutore di viste radiali usando la simulazione in-Editor
+
+Premere il pulsante Riproduci per attivare la modalità di gioco e quindi tenere premuto la barra spaziatrice per visualizzare la mano. Spostare il cursore del mouse per spostare la mano, quindi fare clic e tenendo premuto il pulsante sinistro del mouse per ruotare la mano:
+
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
+
+## <a name="congratulations"></a>Complimenti
+
+In questa esercitazione si è appreso come usare i resolver di MRTK per fare in modo che un'interfaccia utente segua in modo intuitivo l'utente. Si è inoltre appreso come alleghire un risolutore a un oggetto, ad esempio Cube, per seguire le mani rilevate dall'utente. Per ulteriori informazioni su questi e altri risolutori inclusi in MRTK, è possibile visitare la guida per i [risolutori](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) nel [portale della documentazione di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+
+[Esercitazione successiva: 5. interazione con oggetti 3D](mrlearning-base-ch4.md)
