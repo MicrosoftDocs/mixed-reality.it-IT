@@ -50,7 +50,7 @@ Per ottenere la migliore esperienza Microsoft Edge nella Home realtà mista, è 
 
 -   I siti Web aperti in realtà mista di Windows andranno perduti quando si chiude il portale di realtà mista, anche se le finestre Microsoft Edge rimarranno nella posizione in cui sono state inserite nella Home realtà mista.
 -   L'audio da Microsoft Edge Windows non è spaziale.
--   **Correzione della versione dell'estensione del visualizzatore 360 2.3.8**: l'apertura di un video 360 da YouTube in realtà mista di Windows può comportare la distorsione del video nell'auricolare. Il riavvio di Edge dovrebbe aggiornare in modo invisibile l'estensione del Visualizzatore 360 per risolvere il problema. È possibile verificare la versione dell'estensione immettendo `edge://system/` nella barra degli indirizzi e selezionando il pulsante **Espandi** accanto a "estensioni".
+-   **Correzione della versione dell'estensione del visualizzatore 360 2.3.8**: l'apertura di un video 360 da YouTube in realtà mista di Windows può comportare la distorsione del video nell'auricolare. Il riavvio di Microsoft Edge dovrebbe aggiornare in modo invisibile l'estensione del Visualizzatore 360 per risolvere il problema. È possibile verificare la versione dell'estensione immettendo `edge://system/` nella barra degli indirizzi e selezionando il pulsante **Espandi** accanto a "estensioni".
 -   Durante le sessioni di realtà mista di Windows, i monitoraggi virtuali verranno visualizzati come monitoraggi fisici generici nelle impostazioni > Visualizzazione > di sistema.
 
 
