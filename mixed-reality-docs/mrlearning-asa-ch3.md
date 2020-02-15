@@ -1,54 +1,58 @@
 ---
 title: Esercitazioni sugli ancoraggi spaziali di Azure-3. Visualizzazione del feedback di ancoraggio spaziale di Azure
-description: Completa questo corso per apprendere come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
+description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 19529cbfebd74938395545c329097d42b5af9ff9
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
+ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334405"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250696"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualizzazione del feedback di ancoraggio spaziale di Azure
 
-In questa lezione si apprenderà come fornire agli utenti feedback sull'individuazione di ancoraggio, sugli eventi e sullo stato quando si usano gli ancoraggi spaziali di Azure.
+In questa esercitazione si apprenderà come fornire agli utenti feedback sull'individuazione, sugli eventi e sullo stato di ancoraggio quando si usano gli ancoraggi di Azure Spatial (ASA).
 
 ## <a name="objectives"></a>Obiettivi
 
 * Informazioni su come configurare un pannello dell'interfaccia utente che visualizza informazioni importanti sulla sessione ASA corrente
-
 * Comprendere ed esplorare gli elementi di feedback che l'SDK ASA rende disponibili agli utenti
 
 ## <a name="set-up-asa-feedback-ui-panel"></a>Configurare il pannello dell'interfaccia utente del feedback ASA
 
-1. In questa lezione non verranno usati i pulsanti "SaveAnchorToDisk" e "ShareAnchor", quindi selezionare entrambi i pulsanti e deselezionare la casella di controllo nel pannello Inspector (come illustrato di seguito) per nascondere questi pulsanti.
+Nella finestra gerarchia, fare clic con il pulsante destro del mouse sulle **istruzioni** > oggetto **textContent** e selezionare **oggetto 3D** > **Text-TextMeshPro** per creare un oggetto di testo TextMeshPro come figlio delle istruzioni > oggetto TextContent e assegnargli un nome appropriato, ad esempio, **feedback**:
 
-    ![module2chapter3step1im](images/module2chapter3step1im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
-2. Creare il pannello di istruzioni. Per iniziare, fare clic con il pulsante destro del mouse sul pulsante "istruzioni", passare il puntatore su "oggetto 3D" e selezionare "textmeshpro-Text".
+> [!TIP]
+> Per semplificare l'uso della scena, impostare la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilità della scena</a> per l'oggetto ParentAnchor su off facendo clic sull'icona a occhi a sinistra dell'oggetto. In questo modo, l'oggetto viene nascosto nella finestra della scena senza modificare la visibilità del gioco.
 
-    ![module2chapter3step2im](images/module2chapter3step2im.PNG)
+Con l'oggetto **feedback** ancora selezionato, nella finestra di controllo modificare la posizione e le dimensioni in modo che venga posizionato perfettamente sotto il testo dell'istruzione, ad esempio:
 
-3. Modificare la scala e il posizionamento del testo, in modo che corrisponda alle istruzioni della scena. Assicurarsi inoltre che l'allineamento per tutto il testo sia centrato. Eliminare quindi il testo di esempio dall'editor di testo, come illustrato nell'immagine seguente.
+* Modificare la trasformazione Rect **pos Y** in-0,24
+* Modificare la **larghezza** della trasformazione Rect in 0,555
+* Modificare l' **altezza** di trasformazione Rect in 0,1
 
-    ![module2chapter3step3im](images/module2chapter3step3im.PNG)
+Quindi scegliere Proprietà carattere in modo che il testo si trovi perfettamente all'interno dell'area di testo, ad esempio:
 
-4. Modificare il nome dell'oggetto TextMeshPro in "FeedbackPanel".
+* Modificare lo **stile del tipo di carattere** text mesh Pro (script) in grassetto
+* Modificare le **dimensioni del tipo di carattere** text mesh Pro (script) in 0,17
+* Modificare l' **allineamento** di Text mesh Pro (script) in centro e al centro
 
-    ![module2chapter3step4im](images/module2chapter3step4im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-5. Verificare che nel ASA_feedback gerarchia sia selezionato il testo "feedbackpanel", fare clic su "Aggiungi componente" e aggiungere lo script per il feedback di ancoraggio cercandolo e selezionando il testo quando viene visualizzato.
+Con l'oggetto **feedback** ancora selezionato, nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere il componente script di **ancoraggio feedback (script)** all'oggetto feedback:
 
-    ![module2chapter3step8im](images/module2chapter3step8im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-6. Trascinare l'oggetto testo "feedbackPanel" dalla gerarchia di ASA_Feedback nello slot vuoto sotto lo script, come illustrato nell'immagine seguente.
+Assegnare l'oggetto **feedback** al campo **testo feedback** **dello script di ancoraggio (script)** del componente:
 
-    ![module2chapter3step9im](images/module2chapter3step9im.PNG)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
-## <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Complimenti
 
-In questa lezione è stato illustrato come creare un pannello dell'interfaccia utente per visualizzare lo stato corrente dell'esperienza di ancoraggio spaziale di Azure per fornire agli utenti il feedback in tempo reale.
+In questa esercitazione si è appreso come creare un pannello dell'interfaccia utente per visualizzare lo stato corrente dell'esperienza di ancoraggio spaziale di Azure per fornire agli utenti il feedback in tempo reale.
