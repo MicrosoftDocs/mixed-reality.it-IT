@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901479"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553819"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. configurazione della rete di Photon Unity
 
@@ -30,13 +30,13 @@ In questa esercitazione si apprenderà come preparare la creazione di un'esperie
 >[!TIP]
 >Se non sono ancora state completate [le esercitazioni introduttive](mrlearning-base.md) e le [esercitazioni di Azure Spatial Anchor avviate](mrlearning-asa-ch1.md) , è consigliabile completare prima queste esercitazioni.
 
-* Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 o versione successiva
-* Funzionalità di C# programmazione di base
+* Un PC Windows 10 configurato in cui siano [installati gli strumenti](install-the-tools.md) corretti
+* Windows 10 SDK 10.0.18362.0 o versioni successive
+* Alcune funzionalità di programmazione C# di base
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Questa serie di esercitazioni richiede <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e la versione consigliata è Unity 2019.1.14. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
+> La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.2.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
 
 ## <a name="setting-up-photon"></a>Configurazione di Photon
 
@@ -76,7 +76,7 @@ In questa esercitazione si apprenderà come preparare la creazione di un'esperie
 
     ![module3chapter1step13im](images/module3chapter1step13im.PNG)
 
-## <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Complimenti
 
 È stato creato un account Photon, configurato un server Photon locale e il PUN è stato importato in Unity. Il passaggio successivo consiste nell'impostare il progetto e consentire le connessioni con altri utenti in modo che più utenti possano visualizzare il lavoro.
 

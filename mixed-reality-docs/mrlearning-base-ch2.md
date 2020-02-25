@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 067832a130f130ffbaa8d455007b8e77e1b13671
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: f1d042150d1c81940e672b174c6c02ac71e05883
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130533"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554882"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. creazione dell'interfaccia utente e configurazione del Toolkit per la realtà mista
 <!-- TODO: Consider renaming to 'Configuring Mixed Reality Toolkit profiles and creating user interfaces' -->
@@ -47,17 +47,21 @@ I passaggi principali da eseguire per nascondere la mesh di riconoscimento spazi
 > [!NOTE]
 > Il profilo di configurazione è il profilo di primo livello. Di conseguenza, per poter modificare altri profili, è necessario prima clonare il profilo di configurazione.
 
-Con l'oggetto **MixedRealityToolkit** selezionato nella finestra gerarchia, nella finestra di controllo fare clic sul pulsante **copia & Personalizza** per aprire la finestra profilo Clone:
+Con l'oggetto **MixedRealityToolkit** selezionato nella finestra gerarchia, nella finestra Inspector modificare il **profilo di configurazione** del Toolkit di realtà mista in **DefaultHoloLens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-1.png)
 
-Nella finestra profilo clone fare clic sul pulsante **clona** per creare una copia modificabile di **DefaultHololens2ConfigurationProfile**:
+Con l'oggetto **MixedRealityToolkit** ancora selezionato, nella finestra di controllo fare clic sul pulsante **copia & Personalizza** per aprire la finestra profilo Clone:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-2.png)
 
-Il profilo di configurazione appena creato viene ora assegnato come profilo di configurazione per la scena:
+Nella finestra profilo clone fare clic sul pulsante **clona** per creare una copia modificabile di **DefaultHololens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-3.png)
+
+Il profilo di configurazione appena creato viene ora assegnato come profilo di configurazione per la scena:
+
+![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-4.png)
 
 Nel menu Unity selezionare **File** > **Salva** per salvare la scena.
 
@@ -142,7 +146,7 @@ Nei risultati della **ricerca** selezionare la prefabbricata **PressableButtonHo
 > [!TIP]
 > Per visualizzare la scena come illustrato nell'immagine seguente, fare doppio clic sull'oggetto PressableButtonHoloLens2 nella finestra della gerarchia per attivarlo, quindi usare il <a href="https://docs.unity3d.com/Manual/SceneViewNavigation.html" target="_blank">Gizmo della scena</a>, situato nell'angolo superiore destro della finestra della scena, per regolare l'angolo di visualizzazione in modo che sia lungo l'asse Z successivo.
 
-Con l'oggetto PressableButtonHoloLens2 ancora selezionato, nella finestra di **controllo** :
+Con l'oggetto **PressableButtonHoloLens2** ancora selezionato, nella finestra di **controllo** :
 
 * Modificare la **posizione** di trasformazione in modo che sia posizionata davanti alla fotocamera, posizionata in corrispondenza dell'origine, ad esempio x = 0, y = 0 e z = 0,5
 
@@ -157,7 +161,7 @@ Fare clic con il pulsante destro del mouse su un punto vuoto all'interno della f
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step2-1.png)
 
-Con l'oggetto cubo ancora selezionato, nella finestra di **controllo** :
+Con l'oggetto **cubo** ancora selezionato, nella finestra di **controllo** :
 
 * Modificare la **posizione** di trasformazione in modo che sia posizionata vicino al pulsante stampabile, ma non sovrapposta, ad esempio x = 0, y = 0,04 e z = 0,5
 * Modificare la **scala** di trasformazione in base alle dimensioni appropriate, ad esempio x = 0,02, y = 0,02 e z = 0,02
@@ -166,7 +170,7 @@ Con l'oggetto cubo ancora selezionato, nella finestra di **controllo** :
 
 ### <a name="3-configure-the-interactableonpressreceiver-event-type"></a>3. configurare il tipo di evento InteractableOnPressReceiver
 
-Con l'oggetto PressableButtonHoloLens2 selezionato nella finestra gerarchia, selezionare comprime **tutti i componenti** dal **menu hamburger**della finestra di **controllo** per ottenere una panoramica di tutti i componenti dell'oggetto:
+Nella finestra gerarchia selezionare l'oggetto **PressableButtonHoloLens2** , quindi nel **menu hamburger**della finestra di **controllo** Selezionare **Comprimi tutti i componenti** per ottenere una panoramica di tutti i componenti in questo oggetto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-1.png)
 
@@ -174,12 +178,16 @@ Espandere il componente **interactable (script)** , quindi individuare ed espand
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-2.png)
 
-Per il tipo di ricevitore di eventi **InteractableOnPressReceiver**, modificare il **filtro interazione** in **near e lontano**:
+Fare clic sul pulsante **Aggiungi evento** per creare un nuovo ricevitore di eventi di tipo **InteractableOnPressReceiver**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-3.png)
 
 > [!NOTE]
 > Il tipo di ricevitore di eventi denominato InteractableOnPressReceiver consente al pulsante di rispondere a un evento premuto quando una mano rilevata preme il pulsante.
+
+Per il ricevitore di eventi appena creato, modificare il **filtro interazione** in **near e lontano**:
+
+![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-4.png)
 
 ### <a name="4-configure-the-cube-to-receive-the-on-press-event"></a>4. configurare il cubo per la ricezione dell'evento di stampa
 
@@ -203,7 +211,7 @@ Nella finestra Seleziona materiale **cercare** **MRTK_Standard** e selezionare u
 
 ### <a name="6-configure-the-cube-to-receive-the-on-release-event"></a>6. configurare il cubo per la ricezione dell'evento on release
 
-**Ripeti** Passaggio 4 per l'evento on release per assegnare il cubo come ricevitore dell'evento on release ().
+**Ripeti** Passaggio 4 per l'evento on release per assegnare il **cubo** come ricevitore dell'evento **on release ()** .
 
 ### <a name="7-define-the-action-to-be-triggered-by-the-on-release-event"></a>7. definire l'azione che deve essere attivata dall'evento on release
 

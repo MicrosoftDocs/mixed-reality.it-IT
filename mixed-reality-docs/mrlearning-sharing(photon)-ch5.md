@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: a3b136023b0beea7cf6eecd52a9a21447576d482
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: c1b64b9d32409d61284f21ca216417ece4767d1b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901462"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553809"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrazione di ancoraggi spaziali di Azure in un'esperienza condivisa
 
@@ -42,12 +42,18 @@ In questa lezione si apprenderà come integrare Azure Spatial Anchors (ASA) nell
 
     ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Per testare il modulo di condivisione, fare clic sul pulsante "Avvia sessione di Azure ASA" che avvierà la sessione di ancoraggi spaziali di Azure e quindi creare l'ancoraggio di Azure facendo clic sul pulsante "Crea ancoraggio Azure". Attendere che l'ancoraggio di Azure venga creato. Dopo aver creato l'ancoraggio di Azure, fare clic sul pulsante "Condividi Azure Anchor" per condividere l'ancoraggio Azure creato dal HoloLens.
+6. Ripetere il passaggio 4 per collegare la funzione StartAzureSession () a StartAzureSessionButton.
 
-7. Per ricevere l'ancoraggio Azure condiviso in un altro HoloLens, fare clic su "Avvia sessione di Azure ASA" per avviare e ottenere la sessione ASA corrente
+7. Ripetere il passaggio 4 per collegare la funzione CreateAzureAnchor () a CreateAzureAnchorButton e verificare che l'oggetto TableAnchor sia assegnato al campo ' oggetto gioco ' del parametro della funzione.
 
-8. Fare clic sul pulsante "Get Azure Anchor" per ottenere l'ancoraggio Azure condiviso dall'altro HoloLens.
+8. Seguire le istruzioni per la [connessione della scena alle risorse di Azure](mrlearning-asa-ch1.md#4-connect-the-scene-to-the-azure-resource) per aggiungere le credenziali del servizio ancoraggi spaziali di Azure.
 
-## <a name="congratulations"></a>Lezione completata
+9. Per testare il modulo di condivisione, fare clic sul pulsante "Avvia sessione di Azure ASA" che avvierà la sessione di ancoraggi spaziali di Azure e quindi creare l'ancoraggio di Azure facendo clic sul pulsante "Crea ancoraggio Azure". Attendere che l'ancoraggio di Azure venga creato. Dopo aver creato l'ancoraggio di Azure, fare clic sul pulsante "Condividi Azure Anchor" per condividere l'ancoraggio Azure creato dal HoloLens.
+
+10. Per ricevere l'ancoraggio Azure condiviso in un altro HoloLens, fare clic su "Avvia sessione di Azure ASA" per avviare e ottenere la sessione ASA corrente
+
+11. Fare clic sul pulsante "Get Azure Anchor" per ottenere l'ancoraggio Azure condiviso dall'altro HoloLens.
+
+## <a name="congratulations"></a>Complimenti
 
 In questa lezione si è appreso come integrare i nuovi ancoraggi spaziali avanzati di Azure per allineare i dispositivi con percorso condiviso in un'esperienza condivisa. Si conclude anche il modulo sharing. Si è appreso come configurare un nuovo account Photon, integrare Photon e PUN in una nuova applicazione Unity, configurare avatar e oggetti condivisi e infine allineare più partecipanti usando ASA.

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: a1b26d56b4693ef23f2d77ba53e0961693489a3a
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 7eb38e205237257e400550299fdeebb73ba746f1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130282"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555500"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interazione con oggetti 3D
 
@@ -29,7 +29,7 @@ In questa esercitazione si apprenderanno informazioni sul contenuto 3D di base e
 
 Scaricare e importare il pacchetto personalizzato Unity:
 
-* [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.2.0.0. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.0.unitypackage)
+* [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.3.0.2. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
 
 Dopo aver importato le risorse dell'esercitazione, la finestra del progetto avrà un aspetto simile al seguente:
 
@@ -40,7 +40,7 @@ Dopo aver importato le risorse dell'esercitazione, la finestra del progetto avr�
 
 ## <a name="decluttering-the-scene-view"></a>Disordine della visualizzazione scena
 
-Per semplificare l'uso della scena, impostare la **visibilità della scena** per il cubo e gli oggetti buttoncollection su off facendo clic sull'icona a forme di **occhio** a sinistra degli oggetti. In questo modo l'oggetto viene nascosto nella finestra della scena senza modificarne la visibilità nel gioco:
+Per semplificare l'uso della scena, impostare la **visibilità della scena** per il **cubo** e gli oggetti **buttoncollection** su off facendo clic sull'icona a forme di **occhio** a sinistra degli oggetti. In questo modo l'oggetto viene nascosto nella finestra della scena senza modificarne la visibilità nel gioco:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section2-step1-1.png)
 
@@ -75,7 +75,6 @@ Nella finestra gerarchia **creare tre cubi** come oggetti figlio di **3DObjectCo
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-2.png)
 
-<!-- TODO: Finish -->
 > [!TIP]
 > Per un promemoria su come eseguire i passaggi elencati in precedenza, è possibile fare riferimento all'esercitazione relativa alla [creazione dell'interfaccia utente e alla configurazione del Toolkit di realtà mista](mrlearning-base-ch2.md) .
 
@@ -89,15 +88,15 @@ Nella finestra del progetto passare a **assets** > **MixedRealityToolkit. SDK** 
 
 * MRTK_Standard_GlowingCyan
 * MRTK_Standard_GlowingOrange
-* MRTK_Standard_Green:
+* MRTK_Standard_Green
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-4.png)
 
 ### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. aggiungere e configurare il componente Grid Object Collection (script)
 
-Aggiungere un componente **Grid Object Collection (script)** all'oggetto 3DObjectCollection e configurarlo come segue:
+Aggiungere un componente **Grid Object Collection (script)** all'oggetto **3DObjectCollection** e configurarlo come segue:
 
-* Modificare il **tipo di ordinamento** in ordine figlio per assicurarsi che gli oggetti figlio siano ordinati nell'ordine in cui sono stati inseriti nell'oggetto padre.
+* Modificare il **tipo di ordinamento** in **ordine figlio** per assicurarsi che gli oggetti figlio siano ordinati nell'ordine in cui sono stati inseriti nell'oggetto padre.
 
 Quindi fare clic sul pulsante **Aggiorna raccolta** per applicare la nuova configurazione:
 
@@ -127,7 +126,7 @@ Di seguito sono riportati i passaggi principali da eseguire per ottenere questo 
 
 ### <a name="1-add-the-manipulation-handler-script-component-to-all-the-objects"></a>1. aggiungere il componente gestore modifiche (script) a tutti gli oggetti
 
-Nella finestra gerarchia selezionare l'oggetto **Cheese** , tenere premuto il tasto **MAIUSC** , quindi selezionare l'oggetto **Cube ()** e aggiungere il componente **handler (script) di manipolazione** a tutti gli oggetti:
+Nella finestra gerarchia selezionare l'oggetto **Cheese** , tenere premuto il tasto **MAIUSC** , quindi selezionare l'oggetto **Cube () 2** e aggiungere il componente **handler (script) di manipolazione** a tutti gli oggetti:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section4-step1-1.png)
 
@@ -153,13 +152,13 @@ Per l'oggetto **cubo** , lasciare tutte le proprietà predefinite per verificare
 
 #### <a name="restrict-manipulation-to-scale-only"></a>Limitazione della manipolazione solo per la scalabilità
 
-Per l'oggetto **Cube (1)** , modificare **due tipi di manipolazione gestiti** in scale in modo da consentire solo all'utente di modificare le dimensioni dell'oggetto:
+Per l'oggetto **Cube (1)** , modificare **due tipi di manipolazione gestiti** in **scale** in modo da consentire solo all'utente di modificare le dimensioni dell'oggetto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-2.png)
 
 #### <a name="constrain-the-movement-to-a-fixed-distance-from-the-user"></a>Vincolare lo spostamento a una distanza fissa dall'utente
 
-Per l'oggetto **Cube (2)** , modificare il **vincolo on Movement** per correggere la distanza dall'Head in modo che, quando l'oggetto viene spostato, rimanga alla stessa distanza dall'utente:
+Per l'oggetto **Cube (2)** , modificare il **vincolo on Movement** per **correggere la distanza dall'Head** in modo che, quando l'oggetto viene spostato, rimanga alla stessa distanza dall'utente:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-3.png)
 
@@ -177,15 +176,19 @@ Per l'oggetto **Octa** , deselezionare la casella di controllo **Consenti modifi
 
 #### <a name="make-an-object-rotate-around-its-center"></a>Far ruotare un oggetto intorno al centro
 
-Per l'oggetto **Platonic** modificare **una modalità di rotazione della mano vicino** a una modalità di rotazione della **mano** , per ruotare l'oggetto in modo da fare in modo che, quando l'utente ruota l'oggetto con una sola mano, ruoti intorno al centro dell'oggetto:
+Per l'oggetto **Platonic** modificare **una modalità di rotazione della mano vicino** a una modalità di rotazione della **mano** , per **ruotare** l'oggetto in modo da fare in modo che, quando l'utente ruota l'oggetto con una sola mano, ruoti intorno al centro dell'oggetto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-6.png)
 
-#### <a name="prevent-movement-after-object-is-released"></a>Impedisci spostamento dopo il rilascio dell'oggetto
+#### <a name="keep-movement-after-object-is-released"></a>Mantieni lo spostamento dopo il rilascio dell'oggetto
 
-Per l'oggetto **TheModule** , modificare il **comportamento della versione** in modo che, una volta rilasciato l'oggetto dall'utente, non continui a muoversi:
+Per l'oggetto **TheModule** , aggiungere un componente **Rigidbody** per abilitare la fisica e quindi deselezionare la casella di controllo **USA gravità** in modo che l'oggetto non venga influenzato dalla gravità:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-7.png)
+
+Tornare al componente del gestore di manipolazione (script), verificare che il **comportamento della versione** sia impostato su **Mantieni velocità** e **Mantieni velocità angolare** , in modo che una volta rilasciato l'oggetto dall'utente, lo spostamento continua:
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-8.png)
 
 Per ulteriori informazioni sul componente del gestore della manipolazione e sulle proprietà associate, è possibile visitare la guida del [gestore della manipolazione](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) nel portale della [documentazione di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -260,7 +263,7 @@ Con l'oggetto **Octa** ancora selezionato, aggiungere il componente **script (Ha
 
 ### <a name="4-implement-the-on-touch-started-event"></a>4. implementare l'evento on touch Started
 
-Sul componente tocco interazione mano (script), fare clic sull'icona del piccolo **+** per creare un nuovo evento per **tocco avviato ()** . Configurare quindi l'oggetto **Octa** per ricevere l'evento e definire **audiosource. PlayOneShot** come azione da attivare:
+Sul componente **tocco interazione mano (script)** , fare clic sull'icona del piccolo **+** per creare un nuovo evento per **tocco avviato ()** . Configurare quindi l'oggetto **Octa** per ricevere l'evento e definire **audiosource. PlayOneShot** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 

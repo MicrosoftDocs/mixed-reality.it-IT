@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 6abf4fa8fc87afc7007d6f7c76becfbd88ed7a12
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 2bcec7e70949186c6e711120c36ee8649c006ec7
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901510"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553839"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. recupero di Unity pronto per lo sviluppo
 
@@ -25,31 +25,37 @@ In questa esercitazione si apprenderà come preparare e configurare Unity per lo
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Scaricare e salvare il pacchetto Mixed Reality Toolkit Foundation Unity facendo clic [qui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage)
+1. Scaricare e salvare il pacchetto Mixed Reality Toolkit Foundation Unity facendo clic [qui.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage)
 
 2. In Unity fare clic sul menu assets e selezionare Import Package, quindi fare clic su Custom Package.
 
     ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. Selezionare il pacchetto Unity appena scaricato dal collegamento fornito nel passaggio 1. Una volta visualizzata la finestra popup importa in Unity, fare clic sul pulsante Import (importa) per avviare l'importazione del MRTK. Questa operazione può richiedere alcuni minuti.
+3. Selezionare il pacchetto Unity appena scaricato dal collegamento fornito nel passaggio 1. Una volta visualizzata la finestra popup importa in Unity, fare clic sul pulsante Import (importa) per avviare l'importazione del MRTK. L'operazione potrebbe richiedere alcuni minuti.
 
     ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
     >[!NOTE]
     >Il pacchetto scaricato si trova nella cartella locale in cui è stato salvato il file. L'immagine precedente non rappresenta la posizione in cui si troverà il pacchetto.
 
-4. Creare una nuova scena. Questa operazione può essere eseguita facendo clic su file e selezionando nuova scena. Salvarlo come HLSharedProjectMain.
+    Dopo che il pacchetto è stato importato, dovrebbe venire visualizzata la finestra MRTK Project Configurator (Configuratore del progetto MRTK). In caso contrario, aprirlo selezionando il Toolkit di realtà misto > Utilities > configurare il progetto Unity nel menu di Unity.
 
-    È possibile che venga visualizzato un popup simile all'immagine seguente. Per il momento, fare clic su No.
-    ![Module3Chapter2note1im](images/module3chapter2note1im.PNG)
+    Nella finestra di configurazione del progetto MRTK espandere la sezione Modifica configurazioni, deselezionare la casella di controllo Abilita MSBuild per Unity, verificare che tutte le altre opzioni siano selezionate e fare clic sul pulsante Applica per applicare le impostazioni.
+
+    ![Module3Chapter2note1im](images/module3chapter2note1im-missing01.png)
+
+    > [!CAUTION]
+    > MSBuild per Unity potrebbe non supportare tutti gli SDK che userai ed essere difficile da disabilitare dopo che è stato abilitato. Di conseguenza, è consigliabile non abilitare MSBuild per Unity.
+    
+4. Creare una nuova scena. Questa operazione può essere eseguita facendo clic su file e selezionando nuova scena. Salvarlo come HLSharedProjectMain.
 
 5. In Mixed Reality Toolkit fare clic su Aggiungi a scena e configurare.
 
     ![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
 
-6. Una volta completato, viene visualizzato un nuovo file di configurazione che consente di scegliere di personalizzare il profilo.
+6. Al termine, selezionare Mixed-Reality Toolkit (MRTK) dalla gerarchia. Nel pannello Inspector modificare il profilo di configurazione MRTK in DefaultHoloLens2ConfigurationProfile.
 
-    ![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
+    ![Module2Chapter1step4ima](images/Module2Chapter1step4ima-missing01.png)
 
 7. Selezionare il Toolkit di realtà mista (MRTK) dalla gerarchia. Nel pannello Inspector cercare lo script Mixed Reality Toolkit e premere il pulsante "copy & Customize", come illustrato nella figura seguente.  Un pop verrà visualizzato dopo questo e selezionare l'opzione Clona nel menu a comparsa.
 
@@ -75,18 +81,14 @@ In questa esercitazione si apprenderà come preparare e configurare Unity per lo
 
 12. Importare i pacchetti personalizzati elencati:
 
-    a. [AzureSpatialAnchors. file unitypackage Tools](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.0.0/AzureSpatialAnchors.unitypackage) (versione 2.0.0)
-
-    b. [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.1.0.1. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.1.0.1.unitypackage)
-
-    c. [MRTK. HoloLens2. Unity. Esercitations. assets. AzureSpatialAnchors. 2.1.0.1. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.1.0.1.unitypackage)
-
-    d. [MRTK. HoloLens2. Unity. Esercitations. assets. MultiUserCapabilities. 2.1.0.1. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.1.0.1.unitypackage)
+    * [AzureSpatialAnchors. file unitypackage Tools](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (versione 2.1.1)
+    * [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.3.0.2. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [MRTK. HoloLens2. Unity. Esercitations. assets. AzureSpatialAnchors. 2.3.0.0. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
+    * [MRTK. HoloLens2. Unity. Esercitations. assets. MultiUserCapabilities. 2.1.0.1. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.1.0.1.unitypackage)
 
     >[!TIP]
     >Per un promemoria su come configurare un progetto Unity per gli ancoraggi spaziali di Azure, è possibile fare riferimento all'esercitazione [Introduzione all'ancoraggio spaziale](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1) di Azure che fa parte della serie di esercitazioni sugli [ancoraggi spaziali di Azure](https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1) .
 
-    ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
 13. Nel pannello progetto passare alla cartella prefabbricates. Nei passaggi seguenti vengono implementati alcuni prefabbricati nella scena. Nella cartella prefabbricati, fare clic e trascinare la finestra prefabbricata, debug nella gerarchia. Al termine, salvare il progetto facendo clic su file, quindi su Salva o premere CTRL + S.
 
@@ -96,7 +98,7 @@ In questa esercitazione si apprenderà come preparare e configurare Unity per lo
 
     ![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
-## <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Complimenti
 
 Il progetto Unity è ora pronto per Photon. Nelle esercitazioni riportate di seguito verrà creata questa scena e il progetto Unity per un'esperienza condivisa completa.
 

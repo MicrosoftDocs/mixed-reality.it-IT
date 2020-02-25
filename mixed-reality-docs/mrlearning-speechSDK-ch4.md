@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003210"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553999"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. configurazione della finalità e della comprensione del linguaggio naturale
 
@@ -33,7 +33,7 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. Accedere al [portale di Azure](https://portal.azure.com/). Una volta effettuato l'accesso, fare clic su Crea una risorsa, cercare "Language Understanding" e premere INVIO.
+2. Accedere al portale di [Azure](https://portal.azure.com/). Una volta effettuato l'accesso, fare clic su Crea una risorsa, cercare "Language Understanding" e premere INVIO.
 
     ![mrlearning-Speech-CH4-1-Step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -147,20 +147,28 @@ In questa lezione verrà illustrata la funzionalità finalità del servizio rico
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. Nel campo Luis endpoint di "LunarcomIntentRecognizer" nel pannello Inspector immettere l'URL dell'endpoint salvato nel passaggio 22.
+23. Nel campo Luis endpoint di "LunarcomIntentRecognizer" nel pannello Inspector immettere l'URL dell'endpoint salvato nel passaggio 21.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >Nel componente "LunarcomOfflineRecognizer" del pannello Inspector verificare che sia selezionata l'opzione "Disabilita" per "SimulateOfflineMode". in caso contrario, il test del programma non funzionerà.
 
-24. Premere il pulsante Play nell'editor di Unity e fare clic sul pulsante Rocket per avviare il riconoscimento preventivo. Pronunciare la frase "selezionare il pulsante Launch Rocket".
+24. Nella finestra del progetto passare al Asset > MRTK. Esercitazioni. GettingStarted > prefabbricati > cartella RocketLauncher, trascinare il RocketLauncher_Complete prefabbricato nella finestra della gerarchia e posizionarlo davanti all'oggetto Lunarcom_Base.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. Nella finestra gerarchia selezionare l'oggetto Lunarcom_Base e individuare il componente Lunarcom Intent Recognizer (script), quindi espandere l'oggetto RocketLauncher_Complete > Button e assegnare ciascuno degli oggetti Button ai pulsanti di avvio Lunar corrispondenti campo.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Premere il pulsante Play nell'editor di Unity e fare clic sul pulsante Rocket per avviare il riconoscimento preventivo. Pronunciare la frase "selezionare il pulsante Launch Rocket".
 
     >[!NOTE]
     >L'app ha riconosciuto la funzione desiderata e attivato il pulsante Rocket.
     >
     >![Module4Chapter4step24im](images/module4chapter4note2im.PNG)
 
-## <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Complimenti
 
 In questa lezione si è appreso come aggiungere comandi vocali basati su intelligenza artificiale. A questo punto il programma è in grado di riconoscere le finalità degli utenti, anche se non comunicano comandi vocali precisi.

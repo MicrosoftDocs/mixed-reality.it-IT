@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: b5b1bd0115822449bd6098f78cfc94d909169737
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 3a557be91bee9b98e750ae1546ea1c4b3103298e
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129451"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555280"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. creazione di un'applicazione di esempio del modulo Lunar
 <!-- TODO: Rename to 'Creating a Rocket Launcher sample application' -->
@@ -55,8 +55,8 @@ Nella finestra del progetto passare al **asset** > **MRTK. Esercitazioni. Gettin
 
 Nella finestra gerarchia individuare l'oggetto RocketLauncher > **LunarModuleParts** e selezionare tutti gli **oggetti figlio**, aggiungere il componente **gestione manipolazione (script)** e il componente **near Interaction (script** ), quindi configurare il gestore di manipolazione (script) come indicato di seguito:
 
-* Modificare il **tipo di manipolazione a due passi** per spostare la rotazione in modo che la scalabilità sia disabilitata
 * Deselezionare la casella di controllo **Consenti modifiche a distanza** per consentire solo l'interazione near
+* Modificare il **tipo di manipolazione a due passi** per **spostare la rotazione** in modo che la scalabilità sia disabilitata
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section1-step1-2.png)
 
@@ -79,10 +79,10 @@ Con tutti gli oggetti figlio LunarModuleParts ancora selezionati, aggiungere il 
 
 Nella finestra gerarchia selezionare l'oggetto **RoverEnclosure** e configurare il componente **demo assembly parte (script)** come indicato di seguito:
 
-* All'oggetto **da inserire** nel campo, assegnare l'oggetto stesso, in questo caso l'oggetto **RoverEnclosure**
-* Per il campo **percorso da inserire** , assegnare l'oggetto PlacementHints corrispondente, in questo caso l'oggetto **RoverEnclosure_PlacementHints**
-* Al campo **oggetto descrizione** comando assegnare il ToolTipObject corrispondente, in questo caso l'oggetto **RoverEnclosure_ToolTip**
-* Nel campo **origine audio** assegnare l'oggetto stesso, in questo caso l'oggetto **RoverEnclosure**
+* All'oggetto **da inserire** nel campo, assegnare l'oggetto **stesso**, in questo caso l'oggetto RoverEnclosure
+* Per il campo **percorso da inserire** , assegnare l'oggetto **PlacementHints** corrispondente, in questo caso l'oggetto RoverEnclosure_PlacementHint
+* Nel campo dell' **oggetto** descrizione comando assegnare la **Descrizione comando**corrispondente, in questo caso l'oggetto RoverEnclosure_ToolTip
+* Nel campo **origine audio** assegnare l'oggetto **stesso**, in questo caso l'oggetto RoverEnclosure
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section1-step2-3.png)
 
@@ -105,7 +105,7 @@ In questa sezione si aggiungeranno altre funzionalità all'applicazione di avvio
 
 * Interagire con il modulo Lunar
 * Avviare il modulo Lunar nello spazio e riprodurre un suono quando viene avviato
-* Reimpostare l'applicazione in modo che il modulo Lunar e tutte le parti vengano riposizionati nella posizione originale
+* Reimpostare l'applicazione in modo che il modulo Lunar e tutte le parti vengano nuovamente posizionate nella posizione originale
 * Nascondere gli hint di selezione host per rendere più difficile la verifica dell'assembly della parte.
 
 Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
@@ -123,14 +123,14 @@ Di seguito sono riportati i passaggi principali da eseguire per ottenere questo 
 
 Nella finestra gerarchia selezionare l'oggetto RocketLauncher > **LunarModule** , aggiungere il componente **gestore di manipolazione (script)** e il componente **near Interaction (script)** , quindi configurare il gestore di manipolazione (script) come indicato di seguito:
 
-* Modificare il **tipo di manipolazione a due passi** per spostare la rotazione in modo che la scalabilità sia disabilitata
 * Deselezionare la casella di controllo **Consenti modifiche a distanza** per consentire solo l'interazione near
+* Modificare il **tipo di manipolazione a due passi** per spostare la rotazione in modo che la scalabilità sia disabilitata
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section2-step1-1.png)
 
 ### <a name="2-enable-physics"></a>2. abilitare la fisica
 
-Con l'oggetto RocketLauncher > **LunarModule** ancora selezionato, aggiungere un componente Rigidbody e quindi configurarlo come segue:
+Con l'oggetto RocketLauncher > **LunarModule** ancora selezionato, aggiungere un componente **Rigidbody** e quindi configurarlo come segue:
 
 * Deselezionare la casella di controllo **USA gravità** per evitare che il modulo Lunar venga influenzato dalla gravità
 * Controllare la casella di controllo **è cinematica** , in modo che il modulo Lunar inizialmente non sia influenzato dalle forze fisiche
@@ -158,7 +158,7 @@ Con l'oggetto RocketLauncher > **LunarModule** ancora selezionato, aggiungere il
 Con l'oggetto RocketLauncher > **LunarModule** ancora selezionato, aggiungere il componente **interruttore selezione host (script)** e quindi configurarlo come segue:
 
 * Impostare la proprietà **dimensione** matrice oggetto gioco su 5
-* Assegnare ciascuno degli **oggetti figlio** dell'oggetto **PlacementHints** al campo di un **elemento** nella matrice di oggetti del gioco:
+* Assegnare ognuno degli **oggetti figlio** dell'oggetto RocketLauncher > LunarModule > **PlacementHints** al campo di un **elemento** nella matrice di oggetti del gioco:
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section2-step5-1.png)
 
@@ -175,7 +175,7 @@ Con i pulsanti di > RocketLauncher > oggetto **LaunchButton** ancora selezionato
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section3-step1-2.png)
 
-Con i pulsanti di > RocketLauncher > oggetto **LaunchButton** ancora selezionato, nel componente **pulsante stampabile (script)** , creare un nuovo evento **touch ended ()** , configurare l'oggetto **LunarModule** per ricevere l'evento e definire **LaunchLunarModule. StopThruster** come azione da attivare:
+Con i pulsanti di > RocketLauncher > oggetto **LaunchButton** ancora selezionato, nel componente **pulsante stampabile (script)** , creare un nuovo evento **touch end ()** , configurare l'oggetto **LunarModule** per ricevere l'evento e definire **LaunchLunarModule. StopThruster** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section3-step1-3.png)
 
@@ -196,14 +196,14 @@ Con i pulsanti di > RocketLauncher > oggetto **ResetButton** ancora selezionato,
 > [!TIP]
 > L'azione GameObject. BroadcastMessage invia il messaggio ResetPlacement dall'oggetto RocketLauncher a tutti i relativi oggetti figlio. Qualsiasi oggetto figlio con la funzione ResetPlacement, definito nel componente Demo assembly parti (script) aggiunto a tutti gli oggetti figlio LunarModuleParts, richiama la funzione ResetPlacement che reimposta la posizione dell'oggetto figlio.
 
-Se si immette la modalità di gioco e si preme il pulsante Reimposta, il clip audio riprodotto verrà visualizzato e il modulo lunare verrà avviato nello spazio:
+Se si immette la modalità di gioco, spostare alcune parti e/o avviare il modulo lunare, quindi premere il pulsante Reimposta per visualizzare le parti e/o il modulo lunare da ripristinare nella posizione originale:
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section4-step1-3.png)
 
 ## <a name="configuring-the-placement-hints-button"></a>Configurazione del pulsante degli hint di selezione host
 <!-- TODO: Rename to 'Configuring the Hints button'-->
 
-Nella finestra gerarchia selezionare i pulsanti RocketLauncher > > oggetto **HintsButton** , quindi, nel componente **pulsante stampabile (script)** , creare un nuovo **pulsante premuto ()** , configurare l'oggetto **LunarModule** per ricevere l'evento e definire **TogglePlacementHints. ToggleGameObjects** l'azione da attivare:
+Nella finestra gerarchia selezionare i pulsanti RocketLauncher > > oggetto **HintsButton** , quindi, nel componente **pulsante stampabile (script)** , creare un nuovo evento **premuto ()** , configurare l'oggetto **LunarModule** per ricevere l'evento e definire **TogglePlacementHints. ToggleGameObjects** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section5-step1-1.png)
 

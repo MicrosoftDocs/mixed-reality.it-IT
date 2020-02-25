@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 05728cf090b2e998e92980816943a2c3bef18dfb
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334298"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553974"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrazione e utilizzo del riconoscimento vocale e della trascrizione
 
@@ -30,13 +30,13 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 >[!TIP]
 >Se non è ancora stata completata la serie di [esercitazioni introduttive](mrlearning-base.md) , è consigliabile completare prima queste esercitazioni.
 
-* Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 o versione successiva
-* Funzionalità di C# programmazione di base
+* Un PC Windows 10 configurato in cui siano [installati gli strumenti](install-the-tools.md) corretti
+* Windows 10 SDK 10.0.18362.0 o versioni successive
+* Alcune funzionalità di programmazione C# di base
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Questa serie di esercitazioni richiede <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> e la versione consigliata è Unity 2019.1.14. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
+> La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.2.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
 
 ## <a name="getting-started"></a>Guida introduttiva
 
@@ -47,7 +47,7 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
     >[!NOTE]
     >Verificare che il modello sia impostato su 3D, come illustrato nell'immagine precedente.
 
-2. Scarica il [pacchetto della versione 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) di [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity Foundation e salvalo in una cartella nel PC. Importare il pacchetto nel progetto Unity. Per istruzioni dettagliate su come eseguire questa operazione, vedere le [esercitazioni introduttive-lezione 2. Inizializzazione del progetto e della prima applicazione](mrlearning-base-ch1.md).
+2. Scaricare la versione del pacchetto di [reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [Foundation 2.3.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) e salvarla in una cartella del computer. Importare il pacchetto nel progetto Unity. Per istruzioni dettagliate su come eseguire questa operazione, vedere le [esercitazioni introduttive-lezione 2. Inizializzazione del progetto e della prima applicazione](mrlearning-base-ch1.md).
 
 3. Scaricare e importare Azure [Speech SDK](https://aka.ms/csspeech/unitypackage) per il pacchetto di asset di Unity. Importare il pacchetto di riconoscimento vocale facendo clic su asset, selezionare Importa pacchetto, quindi selezionare pacchetto personalizzato. Trovare il pacchetto SDK per la sintesi vocale scaricato in precedenza e aprirlo per avviare il processo di importazione.
 
@@ -59,9 +59,13 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
     ![mrlearning-Speech-CH1-1-step4. png](images/mrlearning-speech-ch1-1-step4.png)
 
-5. Scaricare l'asset Pack del modulo Speech SDK, noto anche come pacchetto Lunarcom, facendo clic su [questo collegamento](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2). Il pacchetto di asset Lunarcom è una raccolta di asset e script sviluppati per questa serie di lezioni che illustrano un uso pratico di Azure Speech SDK. Si tratta di un terminale del comando vocale che, infine, si interfaccia con l'esperienza degli assembly dei moduli lunari sviluppata nelle [esercitazioni introduttive-lezione 7. Creazione di un'applicazione di esempio Lunar Module](mrlearning-base-ch6.md).
+5. Scaricare gli asset dell'esercitazione:
+    * [MRTK. HoloLens2. Unity. Esercitations. assets. GettingStarted. 2.3.0.2. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [SpeechSDKAssets. file unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (versione 1,2)
 
-6. Importare il pacchetto di asset Lunarcom nel progetto Unity seguendo una procedura analoga a quella impiegata per importare il Toolkit di realtà mista e l'SDK di riconoscimento vocale.
+    Il pacchetto di asset SpeechSDKAssets è una raccolta di asset e script sviluppati per questa serie di esercitazioni per illustrare l'uso pratico di Azure Speech SDK. Si tratta di un terminale del comando vocale che, infine, si interfaccia con l'esperienza di assembly di lanciarazzi sviluppata nelle [esercitazioni introduttive-lezione 7. Creazione di un'applicazione di esempio Lunar Module](mrlearning-base-ch6.md).
+
+6. Importare i due pacchetti di asset dell'esercitazione nel progetto Unity seguendo la procedura descritta in modo analogo per importare il Toolkit di realtà mista e l'SDK di riconoscimento vocale.
 
 7. Configurare il Toolkit di realtà mista (MRTK).
 
@@ -69,7 +73,7 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
     ![mrlearning-Speech-CH1-1-step7a. png](images/mrlearning-speech-ch1-1-step7a.png)
 
-    Nella finestra popup visualizzata selezionare DefaultHoloLens2ConfigurationProfile per impostarlo come profilo attivo per il Toolkit di realtà mista.
+    Con l'oggetto MixedRealityToolkit selezionato nella gerarchia della scena, nella finestra Inspector selezionare DefaultHoloLens2ConfigurationProfile per impostarlo come profilo attivo per il Toolkit di realtà mista.
 
     ![mrlearning-Speech-CH1-1-step7b. png](images/mrlearning-speech-ch1-1-step7b.png)
 
@@ -187,8 +191,8 @@ Questa esercitazione consente di creare un'applicazione di realtà mista che Esp
 
     ![mrlearning-Speech-CH1-2-STEP11. JPG](images/mrlearning-speach-ch1-2-step11.jpg)
 
-## <a name="congratulations"></a>Lezione completata
+## <a name="congratulations"></a>Complimenti
 
-Il riconoscimento vocale è stato configurato nell'applicazione, con tecnologia Azure. Eseguire l'applicazione per verificare il corretto funzionamento di tutte le funzioni e funzionalità. Iniziare a indicare la parola di riattivazione digitata nel passaggio 22, attivare il terminale. Selezionare il pulsante del microfono per avviare il riconoscimento vocale. Inizia a pronunciare. Si noterà che le parole sono state trascritte nel terminale mentre si parla. Premere il pulsante microfono una seconda volta per arrestare il riconoscimento vocale. Per nascondere il terminale Lunarcom, è possibile ignorare il terminale. Nella lezione successiva si apprenderà come passare in modo dinamico all'uso del riconoscimento vocale basato su dispositivo per le situazioni in cui l'SDK di sintesi vocale di Azure non è disponibile perché HoloLens 2 è offline.
+Il riconoscimento vocale è stato configurato nell'applicazione, con tecnologia Azure. Eseguire l'applicazione per verificare il corretto funzionamento di tutte le funzioni e funzionalità. Iniziare a indicare la parola di riattivazione digitata nel passaggio 25, attivare il terminale. Selezionare il pulsante del microfono per avviare il riconoscimento vocale. Inizia a pronunciare. Si noterà che le parole sono state trascritte nel terminale mentre si parla. Premere il pulsante microfono una seconda volta per arrestare il riconoscimento vocale. Per nascondere il terminale Lunarcom, è possibile ignorare il terminale. Nella lezione successiva si apprenderà come passare in modo dinamico all'uso del riconoscimento vocale basato su dispositivo per le situazioni in cui l'SDK di sintesi vocale di Azure non è disponibile perché HoloLens 2 è offline.
 
 [Esercitazione successiva: 2. aggiunta di una modalità offline per la traduzione vocale locale](mrlearning-speechSDK-ch2.md)

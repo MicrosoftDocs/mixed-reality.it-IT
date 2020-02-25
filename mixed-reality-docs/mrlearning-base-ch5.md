@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 18bcbc95746a2e66b88d83f279603aa7f171bbcb
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: aaa02ce118fd051d94311e837b143affc96ff72b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129662"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554257"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. esplorazione delle opzioni di input avanzate
 
@@ -68,16 +68,20 @@ Nella finestra gerarchia selezionare l'oggetto **Octa** e aggiungere il componen
 
 ### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implementare l'evento di risposta per il comando vocale
 
-Nel componente gestore di input vocale (script) fare clic sul pulsante **+** piccolo per aggiungere una parola chiave e quindi, dall'elenco a discesa **parola chiave** , scegliere la parola chiave **Play Music** creata in precedenza:
+Nel componente gestore di input vocale (script) fare clic sul pulsante **+** piccolo per aggiungere un elemento Keyword all'elenco di parole chiave:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-1.png)
+
+Fare clic sull'elemento appena creato **0** per espanderlo, quindi, dall'elenco a discesa **parola chiave** , scegliere la parola chiave **Play Music** creata in precedenza:
+
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
 > [!NOTE]
 > Le parole chiave nell'elenco a discesa della parola chiave vengono popolate in base alle parole chiave definite nell'elenco dei comandi vocali nel profilo dei comandi vocali.
 
 Creare un nuovo evento **Response ()** , configurare l'oggetto **Octa** per ricevere l'evento, definire **audiosource. PlayOneShot** come azione da attivare e assegnare una clip audio adatta al campo **clip** audio, ad esempio, il MRTK_Gem clip audio:
 
-![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-3.png)
 
 > [!TIP]
 > Per un promemoria sulla modalità di implementazione degli eventi e sull'assegnazione di un clip audio, è possibile fare riferimento alle istruzioni per l'esecuzione di per l' [evento Touch started](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) .
@@ -145,11 +149,11 @@ Se si immette la modalità di gioco, è possibile eseguire il test dello scorrim
 
 ### <a name="5-add-3d-content-to-be-scrolled"></a>5. aggiungere il contenuto 3D da scorrere
 
-Nella finestra gerarchia **creare quattro cubi** come oggetti figlio di **PanContent** e impostare la relativa **scala** di trasformazione su X = 0,15, Y = 0,15, Z = 0,15:
+Nella finestra gerarchia **creare quattro cubi** come oggetti figlio dell'oggetto **PanGesture** e impostare la relativa **scala** di trasformazione su X = 0,15, Y = 0,15, Z = 0,15:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-Per spaziare i cubi in modo uniforme e risparmiare tempo, aggiungere il componente Grid Object Collection (script) all'oggetto padre Cubes, ad esempio l'oggetto PanGesture, e configurare la raccolta di oggetti Grid (script) come indicato di seguito:
+Per spaziare i cubi in modo uniforme e risparmiare tempo, aggiungere il componente **Grid Object Collection (script)** all'oggetto padre Cubes, ad esempio l'oggetto **PanGesture** , e configurare la raccolta di oggetti Grid (script) come indicato di seguito:
 
 * Modificare **num Rows** su 1 in modo che tutti i cubi siano allineati in una singola riga
 * Modificare la **larghezza della cella** a 0,25 per spaziare i cubi all'interno della riga
@@ -230,7 +234,7 @@ Nella finestra gerarchia selezionare l'oggetto **Cheese** , quindi creare un nuo
 
 ### <a name="4-implement-the-on-selected-event"></a>4. implementare nell'evento selezionato
 
-Nella finestra gerarchia selezionare l'oggetto **Cheese** , quindi creare un nuovo evento **on Selected ()** , configurare l'oggetto **Cheese** per ricevere l'evento e definire **EyeTrackingTutorialDemo. RotateTarget** come azione da attivare:
+Nella finestra gerarchia selezionare l'oggetto **Cheese** , quindi creare un nuovo evento **on Selected ()** , configurare l'oggetto **Cheese** per ricevere l'evento e definire **EyeTrackingTutorialDemo. BlipTarget** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step4-1.png)
 

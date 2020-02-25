@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, audio spaziale, HRTF, dimensioni della stanza
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181991"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553699"
 ---
 # <a name="spatial-sound-in-unity"></a>Audio spaziale in Unity
 
@@ -34,6 +34,7 @@ Usare [NuGet per Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/lat
 * Alleghi un' **origine audio** a un oggetto nella gerarchia
 * Selezionare la casella di controllo **Abilita spazializzazione**
 * Spostare il dispositivo di scorrimento di **Blend spaziale** su "1"
+* Verificare che l'audio spaziale sia abilitato nella workstation per sviluppatori. Per abilitarla, fare clic con il pulsante destro del mouse sull'icona del volume sulla barra delle applicazioni e verificare che l'audio spaziale sia impostato su un valore diverso da "off". Per ottenere la migliore rappresentazione delle informazioni su HoloLens 2, scegliere **Windows Sonic per le cuffie**.
 
 Per altri dettagli, vedi:
 * [Repository GitHub Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity)
@@ -41,7 +42,7 @@ Per altri dettagli, vedi:
 * [Documentazione dell'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
 * [Documentazione di Unity Spatializer](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="distance-based-attenuation"></a>Attenuazione basate sulla distanza
+## <a name="distance-based-attenuation"></a>Attenuazione basata sulla distanza
 Il decadimento basato sulla distanza predefinito di Unity ha una distanza minima di 1 metro e una distanza massima di 500 metri, con un attenuazione logaritmico. Queste impostazioni possono essere usate per lo scenario in uso oppure è possibile che le origini siano attenuate troppo rapidamente o troppo lentamente. Per altri dettagli, vedi:
 * [Progettazione audio in realtà mista](spatial-sound-design.md) per le impostazioni consigliate.
 * [Documentazione dell'origine audio di Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) per istruzioni sull'impostazione di queste curve.

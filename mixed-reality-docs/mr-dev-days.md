@@ -4,35 +4,24 @@ title: Giorni di sviluppo della realtà mista
 description: Scopri come creare esperienze in realtà mista per HoloLens e visori VR immersive.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/25/2019
+ms.date: 02/21/2020
 ms.topic: article
 keywords: Realtà mista, conferenza, Summit, sviluppatore, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: baf6e7a6f046190e15e1b228eb4a3814255404b9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be3b09e177b04cd7d163994d1a3ed1448b4179ee
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525083"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555189"
 ---
-# <a name="mixed-reality-dev-days"></a>Giorni di sviluppo della realtà mista
+# <a name="mixed-reality-dev-days--tour-2020"></a>Giorni di sviluppo per la realtà mista & Tour 2020
 
-Le applicazioni sono attualmente chiuse. Grazie per il tuo interesse.
+Il piano per i giorni di sviluppo 2020 è in corso, ma non sono disponibili dettagli da condividere oltre alla data e alla località dell'evento Redmond.
 
-Con gli [annunci](https://blogs.microsoft.com/blog/2019/02/24/microsoft-at-mwc-barcelona-introducing-microsoft-hololens-2/) Microsoft recentemente realizzati nella realtà mista e nello spazio cloud, siamo lieti di aprire applicazioni per i **giorni di sviluppo di realtà mista**, la possibilità di creare le competenze, la rete e le idee necessarie per sfruttare le applicazioni in realtà mista al livello successivo. I giorni di sviluppo della realtà mista offriranno ai partecipanti la possibilità di scrivere codice insieme ai team di progettazione, di apprendere e testare le ultime novità nel portfolio e di mettersi in contatto con una community di sviluppatori che si occupano di una nuova era di applicazioni in realtà mista.  </br>
+Quest'anno il giorno di sviluppo di Redmond è stato tenuto presso Microsoft Conference Center il 16 maggio & 17, 2020.
 
-Verranno inoltre tenute le [sessioni](mr-dev-days-sessions.md) riportate dai team per approfondire le novità e condividere i suggerimenti per iniziare. </br>
+Ulteriori dettagli da ottenere a breve, incluse le informazioni di registrazione.  Per gli aggiornamenti più recenti, assicurarsi di essere iscritti al programma per sviluppatori all' [https://aka.ms/IWantMR](https://aka.ms/IWantMR).
 
-Il nostro elenco provvisorio di sessioni è disponibile [qui](mr-dev-days-sessions.md).
-
-I partecipanti avranno anche la possibilità di acquisire dimestichezza con la nostra tecnologia nei nostri laboratori pratici e nelle nostre stazioni dimostrative.
-</br>
-
-## <a name="details"></a>Dettagli
-
-*   **Data: 2-3 maggio, 2019**
-* **Percorso:** Microsoft Building 92 5010 NE 36 St Redmond, WA 98052
-* **Ricezione rete serale:** Giovedi sera, 6-20.00
-* **Costo Questo evento può essere partecipato gratuitamente. L'utente è responsabile delle spese di viaggio.**
 
 
 </br>
