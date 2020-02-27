@@ -49,7 +49,7 @@ Il modo più semplice per iniziare a creare app di realtà mista consiste nell'i
         [![MRTK](images/final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)<br>**[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)**<br>Mixed Reality Toolkit (MRTK) v2 per Unity è un kit di sviluppo multipiattaforma open source per applicazioni di realtà mista.<br><br> Permette di accelerare lo sviluppo di applicazioni destinate a Microsoft HoloLens, visori VR immersive di Windows Mixed Reality e la piattaforma OpenVR. Il progetto mira a ridurre le barriere di accesso alla creazione di applicazioni di realtà mista offrendo inoltre un contributo alla community quando si realizzano progressi.
     :::column-end:::
     :::column:::
-        [Unreal![](images/Unreal_logo.png)](https://docs.unrealengine.com//GettingStarted/Installation/index.html)<br>
+        [![Unreal](images/Unreal_logo.png)](https://docs.unrealengine.com//GettingStarted/Installation/index.html)<br>
         **[Unreal](https://docs.unrealengine.com//GettingStarted/Installation/index.html)**<br>
         Unreal Engine 4 è un potente motore di creazione open source con supporto completo per la realtà mista sia in C++ che nei progetti.<br> <br>Il supporto di HoloLens per Unreal Engine 4.23 attualmente è in versione beta.
     :::column-end:::
