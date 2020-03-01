@@ -1,19 +1,19 @@
 ---
-title: Guida alla progettazione di MRTK Hand Coach
+title: Coach mano
 description: le mani 3D attivate quando il sistema non rileva le mani dell'utente per assisterle.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, Coach mano, auricolare immersivo, MRTK, Hands, assistenza
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373522"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202737"
 ---
-# <a name="hand-coach-design-guidance"></a>Guida alla progettazione di Hand Coach
+# <a name="hand-coach"></a>Coach mano
 
 Hand Coach è un modello 3D che viene attivato quando il sistema non rileva le mani dell'utente. Viene implementato come componente "didattico" che aiuta a guidare l'utente quando il movimento non è stato insegnato. Se gli utenti non hanno eseguito il movimento specificato per un periodo, il ciclo passa con un ritardo. Il coach della mano può essere usato per rappresentare la pressione di un pulsante o la selezione di un ologramma.  
 

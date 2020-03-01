@@ -6,20 +6,20 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale per dispositivi Windows, HoloLens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521692"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202721"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portale per dispositivi Windows
 
 <table>
 <tr>
-<th>Funzionalità</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (prima generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
+<th>Caratteristica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (prima generazione)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td> Portale di dispositivi di Windows</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -81,6 +81,8 @@ Ogni dispositivo HoloLens genera un certificato autofirmato univoco per la conne
 1. **Assicurarsi di trovarsi in una rete sicura (USB o rete Wi-Fi considerata attendibile).**
 2. Scaricare il certificato del dispositivo dalla pagina "sicurezza" nel portale del dispositivo.
    * Passare a: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * Aprire il nodo per preferenze di sistema >. 
+   * Scorrere verso il basso fino a sicurezza del dispositivo, fare clic sul pulsante "Scarica il certificato del dispositivo".
 3. Installare il certificato nell'archivio "autorità di certificazione radice attendibili" nel PC.
    * Dal menu Windows digitare: Manage computer certificates e avviare l'applet.
    * Espandere la cartella **autorità di certificazione radice attendibile** .
@@ -88,6 +90,10 @@ Ogni dispositivo HoloLens genera un certificato autofirmato univoco per la conne
    * Dal menu Azione scegli Tutte le attività &gt; Importa...
    * Completa l'Importazione guidata certificati usando il file di certificato che hai scaricato da Device Portal.
 4. Riavvia il browser.
+
+>[!NOTE]
+> Questo certificato sarà considerato attendibile solo per il dispositivo e l'utente dovrà eseguire di nuovo il processo se il dispositivo è con Flash.
+
 
 ## <a name="device-portal-pages"></a>Pagine di Device Portal
 
@@ -238,7 +244,7 @@ Usare Esplora file per esplorare, caricare e scaricare i file. È possibile usar
 
 Vedere l'articolo [configurare HoloLens in modalità](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) tutto schermo in Windows IT Pro Center per istruzioni aggiornate sull'abilitazione della modalità tutto schermo tramite il portale per dispositivi Windows.
 
-### <a name="logging"></a>Logging
+### <a name="logging"></a>Registrazione
 
 ![la pagina di registrazione nel portale per dispositivi Windows in Microsoft HoloLens](images/windows-device-portal-logging-page-1000px.png)<br>
 *Pagina di registrazione nel portale per dispositivi Windows in Microsoft HoloLens*
@@ -249,7 +255,7 @@ Selezionare **Nascondi provider** per visualizzare solo l'elenco di **eventi** .
 * **Registered providers**: consente di selezionare il provider ETW e il livello di traccia. Il valore del livello di traccia può indicare una delle situazioni seguenti:
    1. Chiusura o terminazione anomala
    2. Errori gravi
-   3. Avvisi
+   3. Warnings
    4. Avvisi non di errore
 
 Tocca o fai clic su **Enable** per avviare la traccia. Il provider viene aggiunto all'elenco a discesa **Enabled Providers**.
@@ -274,7 +280,7 @@ Ti permette di registrare e riprodurre dati di input per il testing.
 * **Riproduzione**: toccare o fare clic su **carica registrazione** per selezionare un file XEF dal PC e inviare i dati al HoloLens.
 * **Modalità di controllo**: selezionare la **simulazione** o l' **impostazione predefinita** nell'elenco a discesa e fare clic o toccare il pulsante **imposta** per selezionare la modalità in HoloLens. Scegliendo "Simulation" vengono disabilitati i sensori reali in HoloLens e al loro posto vengono usati i dati di simulazione caricati. Se passi a "Simulation", HoloLens non risponde all'utente reale fino a quando non torni a "Default".
 
-### <a name="networking"></a>Funzionalità di rete di
+### <a name="networking"></a>Rete
 
 pagina rete ![nel portale per dispositivi Windows in Microsoft HoloLens](images/windows-device-portal-networking-page-1000px.png)<br>
 *Pagina rete nel portale per dispositivi Windows in Microsoft HoloLens*
