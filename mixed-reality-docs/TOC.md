@@ -86,6 +86,7 @@
 #### [Slate](slate.md)
 #### [Dispositivo di scorrimento](slider.md)
 #### [Shader](shader.md)
+#### [Coach mano](hand-coach.md)
 #### [Billboarding e tag-along](billboarding-and-tag-along.md)
 #### [Visualizzazione dello stato](progress.md)
 #### [Magnetismo di superficie](surface-magnetism.md)
