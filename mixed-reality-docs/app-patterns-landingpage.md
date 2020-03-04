@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Realtà mista di Windows, progettazione, modelli di app, controlli, stile, HoloLens, interazione, elementi UX, comportamenti, blocchi predefiniti
-ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 9e2173e55a8c37ae4333d459ffe37fc01389b143
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334212"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202751"
 ---
 # <a name="ux-elements-overview"></a>Cenni preliminari sugli elementi UX
 
@@ -25,16 +25,16 @@ ms.locfileid: "75334212"
        colore [![, luce e materiali](images/640px-fragments.png)](color,-light-and-materials.md)  **[, luce e materiali](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[scalabilità](scale.md)![**
+       [![Scalabilità](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md) **[Scalabilità](scale.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [](images/text_in_unity_viewingangle.png)](typography.md)  **[tipografia](typography.md) tipografica![**
+       [![Tipografia](images/text_in_unity_viewingangle.png)](typography.md) **[Tipografia](typography.md)**
     :::column-end:::
     :::column:::
-       [](images/spatialaudio.png)](spatial-sound.md)  **[audio](spatial-sound.md)![**
+       [![Audio](images/spatialaudio.png)](spatial-sound.md) **[Audio](spatial-sound.md)**
     :::column-end:::
 :::row-end:::
 
@@ -44,61 +44,61 @@ ms.locfileid: "75334212"
 
 :::row:::
     :::column:::
-       [](images/UX/UX_Hero_Cursor.jpg)](cursors.md)  **[cursore](cursors.md)![cursore**
+       [![Cursore](images/UX/UX_Hero_Cursor.jpg)](cursors.md)  **[Cursore](cursors.md)**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_HandRay.jpg)](point-and-commit.md)  **[raggio](point-and-commit.md)![mano**
+       [![Raggio della mano](images/UX/UX_Hero_HandRay.jpg)](point-and-commit.md) **[Raggio della mano](point-and-commit.md)**
     :::column-end:::
     :::column:::
-       [pulsante![pulsante](images/UX/UX_Hero_Button.jpg)](button.md)  **[](button.md)**
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-       [](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md) rettangolo di  **[delimitazione](app-bar-and-bounding-box.md)![rettangolo di delimitazione**
-    :::column-end:::
-    :::column:::
-       oggetto interactabile [![oggetto interactabile](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md)  **[](interactable-object.md)**
-    :::column-end:::
-    :::column:::
-       [](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md)  **[manipolazione](direct-manipulation.md)![manipolazione**
+       [![Pulsante](images/UX/UX_Hero_Button.jpg)](button.md) **[Pulsante](button.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       menu a mano [menu![](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md)  **[](hand-menu.md)**
+       [![Rettangolo di delimitazione](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md) **[Rettangolo di delimitazione](app-bar-and-bounding-box.md)**
     :::column-end:::
     :::column:::
-       menu di [![near menu](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md)  **[](near-menu.md) vicino**
+       [![Oggetto interactable](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md) **[Oggetto interactable](interactable-object.md)**
     :::column-end:::
     :::column:::
-       raccolta di oggetti della [raccolta di oggetti![](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md)  **[](object-collection.md)**
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-       comando Voice del [comando![Voice](images/UX/UX_Hero_VoiceCommand.jpg)](voice-input.md)  **[](voice-input.md)**
-    :::column-end:::
-    :::column:::
-       [](images/UX/UX_Hero_Keyboard.jpg)](keyboard.md)  **[tastiera](keyboard.md) tastiera![**
-    :::column-end:::
-    :::column:::
-       Descrizione comando [![descrizione comando](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md)  **[](tooltip.md)**
+       [![Manipolazione](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md) **[Manipolazione](direct-manipulation.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ardesia [ardesia![](images/UX/UX_Hero_Slate.jpg)](slate.md)  **[](slate.md)**
+       [![Menu Hand](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md) **[Menu Hand](hand-menu.md)**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_Slider.jpg)](slider.md)  **[dispositivo di scorrimento](slider.md) del dispositivo di![**
+       [![Menu Near](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md) **[Menu Near](near-menu.md)**
     :::column-end:::
     :::column:::
-        [](images/UX/UX_Hero_StandardShader.jpg)](shader.md)  **[shader](shader.md) shader![**
+       [![Raccolta di oggetti](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md) **[Raccolta di oggetti](object-collection.md)**
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+       [![Comando vocale](images/UX/UX_Hero_VoiceCommand.jpg)](voice-input.md) **[Comando vocale](voice-input.md)**
+    :::column-end:::
+    :::column:::
+       [![Tastiera](images/UX/UX_Hero_Keyboard.jpg)](keyboard.md) **[Tastiera](keyboard.md)**
+    :::column-end:::
+    :::column:::
+       [![Descrizione comando](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md) **[Descrizione comando](tooltip.md)**
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+       [![Finestra](images/UX/UX_Hero_Slate.jpg)](slate.md) **[Finestra](slate.md)**
+    :::column-end:::
+    :::column:::
+       [![Dispositivo di scorrimento](images/UX/UX_Hero_Slider.jpg)](slider.md) **[Dispositivo di scorrimento](slider.md)**
+    :::column-end:::
+    :::column:::
+        [![Shader](images/UX/UX_Hero_StandardShader.jpg)](shader.md) **[Shader](shader.md)**
     :::column-end:::
 :::row-end:::
 
@@ -107,13 +107,22 @@ ms.locfileid: "75334212"
         [![Billboard e tag-along](images/UX/MRTK_TagAlong.gif)](billboarding-and-tag-along.md)  **[e tag-along](billboarding-and-tag-along.md)**
     :::column-end:::
     :::column:::
-       [](images/UX/MRTK_ProgressIndicator.gif)](progress.md)  **[indicatore di stato](progress.md)![indicatore di stato**
+       [![Indicatore di avanzamento](images/UX/MRTK_ProgressIndicator.gif)](progress.md) **[Indicatore di avanzamento](progress.md)**
     :::column-end:::
     :::column:::
-       [](images/UX/MRTK_SurfaceMagnetism.gif)](surface-magnetism.md)  **[magnetismo di superficie](surface-magnetism.md) del magnetismo di![**
+       [![Magnetismo di superficie](images/UX/MRTK_SurfaceMagnetism.gif)](surface-magnetism.md) **[Magnetismo di superficie](surface-magnetism.md)**
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column:::
+       [![Hand Coach](images/HandCoach/MRTK_handCoach.jpg)](hand-coach.md) **[Hand Coach](hand-coach.md)**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 <br>
 
