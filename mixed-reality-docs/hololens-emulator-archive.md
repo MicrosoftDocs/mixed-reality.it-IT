@@ -3,15 +3,15 @@ title: Archivio emulatore di HoloLens
 description: Elenco delle build rilasciate dell'emulatore di Microsoft HoloLens.
 author: hamalawi
 ms.author: moelhama
-ms.date: 2/12/2020
+ms.date: 3/10/2020
 ms.topic: article
 keywords: HoloLens, emulatore, Build, versioni
-ms.openlocfilehash: 4696330e62d2b7b5d58c73e13713e0731f5ec3bc
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250666"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031768"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivio emulatore HoloLens 2
 
@@ -19,6 +19,7 @@ HoloLens Emulator (1st Gen) e HoloLens 2 Emulator Builds install side-by-side. �
 
 |  Compila |  Data di rilascio |  Note | 
 |----------|----------|----------|
+|  [10.0.18362.1056 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 marzo 2020 | HoloLens di marzo 2020 2.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 febbraio 2020 | Febbraio 2020 HoloLens 2 compilazione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | 13 gennaio, 2020 | Gennaio 2020 HoloLens 2 compilazione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1042 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2112589) | 6 dicembre 2019 | Dicembre 2019 HoloLens 2 compilazione.  Risolve un problema per cui un'app olografica in esecuzione nell'emulatore verrà sospesa in modo imprevisto quando viene visualizzato il pannello dei pin.  Consente la connettività a un emulatore remoto quando si usa l'API di simulazione della percezione o l'app di controllo della simulazione della percezione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
