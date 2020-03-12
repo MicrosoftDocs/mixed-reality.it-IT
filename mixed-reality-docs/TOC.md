@@ -1,5 +1,4 @@
 # Novità 
-## [Ultime novità](news.md)
 ## [Preparare l'app per HL2](mrtk-porting-guide.md)
 ## [Informazioni sui servizi di Azure](azure-services.md)
 ## [Prepararsi al nuovo Microsoft Edge](new-microsoft-edge.md)
