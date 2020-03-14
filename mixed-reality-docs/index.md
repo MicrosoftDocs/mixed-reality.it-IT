@@ -9,11 +9,11 @@ ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
 ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539621"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375568"
 ---
 # <a name="get-started-with-mixed-reality"></a>Informazioni di base sulla realtà mista
 
@@ -60,13 +60,13 @@ Se non hai familiarità con la realtà mista, scoprirai che cos'è e quali funzi
 ## <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
 
 
-### <a name="mixed-reality-is-a-spectrummixed-realitymd"></a>[La realtà mista è uno spettro](mixed-reality.md)
+### <a name="mixed-reality-is-a-spectrum"></a>[La realtà mista è uno spettro](mixed-reality.md)
 La realtà mista è il risultato della fusione del mondo fisico con il mondo digitale. Rappresenta l'evoluzione successiva nell'interazione tra uomo, computer e ambiente e apre la strada a possibilità che finora potevano essere solo immaginate.
 
 <br>
 
 
-### <a name="what-is-a-hologramhologrammd"></a>[Che cos'è un ologramma?](hologram.md)
+### <a name="what-is-a-hologram"></a>[Che cos'è un ologramma?](hologram.md)
 HoloLens ti consente di creare ologrammi, ovvero oggetti costituiti da luce e suono che vengono visualizzati nell'ambiente circostante proprio come se fossero oggetti reali. Gli ologrammi rispondono al tuo sguardo, ai movimenti e ai comandi vocali e possono interagire con le superfici reali che ti circondano. Con gli ologrammi puoi creare oggetti digitali che fanno parte del tuo mondo.
 
 <br>
@@ -80,12 +80,12 @@ HoloLens ti consente di creare ologrammi, ovvero oggetti costituiti da luce e su
 
 ## <a name="what-can-you-do-with-mixed-reality"></a>Cosa puoi fare con la realtà mista?
 
-### <a name="a-new-vision-for-workhttpsdynamicsmicrosoftcommixed-realityoverview"></a>[Una nuova visione del lavoro](https://dynamics.microsoft.com//mixed-reality/overview/)
+### <a name="a-new-vision-for-work"></a>[Una nuova visione del lavoro](https://dynamics.microsoft.com//mixed-reality/overview/)
 Microsoft sta creando applicazioni di realtà mista per offrire maggiori opportunità ai dipendenti e ottimizzare le operazioni. Il team di Dynamics 365 ha lavorato a una serie di progetti che illustrano le possibilità: Remote Assist, Layout e Guides.
 
 <br>
 
-### <a name="the-pursuit-of-more-personal-computingcase-study-the-pursuit-of-more-personal-computingmd"></a>[La ricerca di un'esperienza di uso del computer più personale](case-study-the-pursuit-of-more-personal-computing.md)
+### <a name="the-pursuit-of-more-personal-computing"></a>[La ricerca di un'esperienza di uso del computer più personale](case-study-the-pursuit-of-more-personal-computing.md)
 Le opportunità di domani diventano possibili creando prodotti oggi. Le soluzioni fornite da questi prodotti rivelano ciò che è necessario per anticipare il futuro. Con la realtà mista questo è particolarmente vero. La vera comprensione si ottiene con la pratica partecipando a lavori reali, ovvero con dispositivi reali, clienti reali e problemi reali.
 
 
@@ -101,7 +101,7 @@ Le opportunità di domani diventano possibili creando prodotti oggi. Le soluzion
        [![Bentley](images/Bentley-Synchro1.jpg)](https://binged.it/31AR3kP)
     :::column-end:::
     :::column span="2":::
-        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-softwarehttpsbingedit31ar3kp"></a>[Software di costruzione digitale di Bentley per visualizzare progetti di costruzione complessi](https://binged.it/31AR3kP)
+        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-software"></a>[Software di costruzione digitale di Bentley per visualizzare progetti di costruzione complessi](https://binged.it/31AR3kP)
         Synchro è un software per la costruzione digitale che consente di visualizzare progetti di costruzione complessi in realtà mista. La piattaforma di costruzione digitale 4D combina la tradizionale pianificazione CPM dei diagrammi di Gantt con funzionalità di visualizzazione 4D integrate in tempo reale.
     :::column-end:::
 :::row-end:::
@@ -113,7 +113,7 @@ Le opportunità di domani diventano possibili creando prodotti oggi. Le soluzion
        [![Vuforia Studio di PTC](images/PTC-Vuforia-Studio1.jpg)](https://binged.it/31ARrjh)
     :::column-end:::
     :::column span="2":::
-        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safetyhttpsbingedit31arrjh"></a>[Vuforia Studio di PTC, una soluzione di creazione per promuovere la produttività e la sicurezza dei lavoratori](https://binged.it/31ARrjh)
+        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safety"></a>[Vuforia Studio di PTC, una soluzione di creazione per promuovere la produttività e la sicurezza dei lavoratori](https://binged.it/31ARrjh)
         La soluzione per la creazione efficiente di realtà mista Vuforia Studio promuove la produttività e la sicurezza della forza lavoro, fornendo informazioni quando e dove i lavoratori ne hanno più bisogno, ovvero nel contesto reale dell'ambiente di lavoro quotidiano.
     :::column-end:::
 :::row-end:::
@@ -125,7 +125,7 @@ Le opportunità di domani diventano possibili creando prodotti oggi. Le soluzion
        [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
     :::column-end:::
     :::column span="2":::
-        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedureshttpsbingedit31b1rir"></a>[Philips sta introducendo l'utilizzo di HoloLens nel dominio delle procedure a bassissima invasività guidate da immagini](https://binged.it/31B1RiR)
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedures"></a>[Philips sta introducendo l'utilizzo di HoloLens nel dominio delle procedure a bassissima invasività guidate da immagini](https://binged.it/31B1RiR)
         Philips sta introducendo l'utilizzo di HoloLens nel dominio delle procedure a bassissima invasività guidate da immagini, nell'ambito delle quali i medici usano le radiografie in diretta, gli ultrasuoni e altre fonti di informazioni, per "vedere" dentro il paziente e determinare le azioni da intraprendere.
     :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ Le opportunità di domani diventano possibili creando prodotti oggi. Le soluzion
 
 ## <a name="what-are-the-capabilities-of-hololens"></a>Quali sono le funzionalità di HoloLens?
 
-### <a name="immersive-ergonomic-instinctual-and-untetheredhttpswwwmicrosoftcomhololenshardware"></a>[Coinvolgente, ergonomico, istintivo e senza cavi](https://www.microsoft.com//hololens/hardware)
+### <a name="immersive-ergonomic-instinctual-and-untethered"></a>[Coinvolgente, ergonomico, istintivo e senza cavi](https://www.microsoft.com//hololens/hardware)
 
 HoloLens 2 offre l'esperienza di realtà mista più comoda e coinvolgente disponibile, con soluzioni leader del settore in grado di offrire valore velocemente, il tutto potenziato dall'affidabilità, dalla sicurezza e dalla scalabilità del cloud e dei servizi di intelligenza artificiale di Microsoft.
 
@@ -156,22 +156,22 @@ HoloLens 2 offre l'esperienza di realtà mista più comoda e coinvolgente dispon
 
 ## <a name="what-are-the-core-concepts-of-an-experience"></a>Quali sono i concetti di base di un'esperienza?
 
-### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Fare in modo che l'utente possa operare comodamente (comfort)](comfort.md)
+### <a name="keep-the-user-comfortable---comfort"></a>[Fare in modo che l'utente possa operare comodamente (comfort)](comfort.md)
 Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale.
 
 <br>
 
-### <a name="how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Considerare il modo in cui l'utente vede il mondo (frame olografico)](holographic-frame.md)
+### <a name="how-the-user-sees-the-world---holographic-frame"></a>[Considerare il modo in cui l'utente vede il mondo (frame olografico)](holographic-frame.md)
 Gli utenti vedono il mondo della realtà mista attraverso un riquadro di visualizzazione rettangolare controllato tramite il visore VR. In HoloLens quest'area rettangolare è detta frame olografico e consente agli utenti di visualizzare il contenuto digitale sovrapposto al mondo reale circostante.
 
 <br>
 
-### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Far sembrare reali gli oggetti olografici (mapping spaziale)](spatial-mapping.md)
+### <a name="making-holographic-objects-feel-real---spatial-mapping"></a>[Far sembrare reali gli oggetti olografici (mapping spaziale)](spatial-mapping.md)
 Il mapping spaziale consente di posizionare gli oggetti su superfici reali. In questo modo è possibile ancorare gli oggetti nel mondo dell'utente, sfruttando i segnali di profondità del mondo reale.
 
 <br>
 
-### <a name="suggesting-the-scale-of-an-object---scalescalemd"></a>[Suggerire la scala di un oggetto (scala)](scale.md)
+### <a name="suggesting-the-scale-of-an-object---scale"></a>[Suggerire la scala di un oggetto (scala)](scale.md)
 Per visualizzare contenuto che sembri realistico in forma olografica, è importante simulare quanto più possibile le statistiche visive del mondo reale. Ciò significa incorporare il maggior numero possibile di segnali visivi utili (nel mondo reale) per comprendere dove si trovino gli oggetti, quanto siano grandi e di cosa siano fatti.
 
 
@@ -196,7 +196,7 @@ Per visualizzare contenuto che sembri realistico in forma olografica, è importa
     :::column:::
         [![Partecipa a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
         **[Partecipa a un evento](sf-academy-events.md)**<br>
-        Vieni a vedere l'hardware e partecipa all'esercitazione pratica per creare la tua prima applicazione HoloLens 2.
+        Vieni a vedere l'hardware e partecipa a un'esercitazione pratica per creare la tua prima applicazione HoloLens 2.
     :::column-end:::
     :::column:::
         [![Inizia a sviluppare](images/icon-developer.jpg)](development.md)<br>
