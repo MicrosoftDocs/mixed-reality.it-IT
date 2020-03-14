@@ -7,31 +7,31 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate spaziali, solo orientamento, scalabilità verticale, scalabilità, scalabilità, scalabilità, scala globale, 360 gradi, seduto, in piedi, stanza, mondo, scala, posizione, orientamento, Unity, ancoraggio, ancoraggio spaziale, ancoraggio globale, con blocco globale, blocco globale, con blocco del corpo, blocco del corpo, perdita di rilevamento, locatability, limiti, recenter
 ms.openlocfilehash: 36d74488b23587e5c89b40faf97921a10be7473b
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525969"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375768"
 ---
 # <a name="coordinate-systems-in-unity"></a>Sistemi di coordinate in Unity
 
 La realtà mista di Windows supporta le app in un'ampia gamma di [scale di esperienza](coordinate-systems.md), da app di solo orientamento e scalabilità verticale fino ad app a scalabilità. In HoloLens è possibile proseguire e creare app su scala mondiale che consentono agli utenti di superare i 5 metri, esplorando un'intera superficie di un edificio e oltre.
 
-Il primo passaggio per creare un'esperienza di realtà mista in Unity consiste nel determinare quale scalabilità dell' [esperienza](coordinate-systems.md) sarà destinata all'app.
+Il primo passaggio per creare un'esperienza di realtà mista in Unity consiste nel determinare quale [scalabilità dell'esperienza](coordinate-systems.md) sarà destinata all'app.
 
 ## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Creazione di un'esperienza di solo orientamento o con scalabilità verticale
 
 **Spazio dei nomi:** *UnityEngine. XR*<br>
-**Tipo** *XRDevice*
+**Tipo:** *XRDevice*
 
-Per creare un' **esperienza**di **solo orientamento** o di scalabilità verticale, è necessario impostare Unity sul tipo di spazio di rilevamento stazionario. In questo modo si imposta il sistema di coordinate globale di Unity per tenere traccia del [frame di riferimento fisso](coordinate-systems.md#spatial-coordinate-systems). Nella modalità di rilevamento fisso, il contenuto inserito nell'editor appena davanti alla posizione predefinita della fotocamera (avanti è-Z) verrà visualizzato davanti all'utente all'avvio dell'app.
+Per creare un'esperienza di **solo orientamento** o di **scalabilità**verticale, è necessario impostare Unity sul tipo di spazio di rilevamento stazionario. In questo modo si imposta il sistema di coordinate globale di Unity per tenere traccia del [frame di riferimento fisso](coordinate-systems.md#spatial-coordinate-systems). Nella modalità di rilevamento fisso, il contenuto inserito nell'editor appena davanti alla posizione predefinita della fotocamera (avanti è-Z) verrà visualizzato davanti all'utente all'avvio dell'app.
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 ```
 
-**Namespace** *UnityEngine. XR*<br>
-**Tipo** *InputTracking*
+**Spazio dei nomi:** *UnityEngine. XR*<br>
+**Tipo:** *InputTracking*
 
 Per un' **esperienza solo con orientamento** puro, ad esempio un visualizzatore video di 360 gradi (dove gli aggiornamenti delle intestazioni posizionali potrebbero rovinare l'illusione), è possibile impostare [XR. InputTracking. disablePositionalTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) su true:
 
@@ -47,10 +47,10 @@ InputTracking.Recenter();
 
 ## <a name="building-a-standing-scale-or-room-scale-experience"></a>Creazione di un'esperienza di scalabilità o scalabilità in base all'ambiente
 
-**Namespace** *UnityEngine. XR*<br>
-**Tipo** *XRDevice*
+**Spazio dei nomi:** *UnityEngine. XR*<br>
+**Tipo:** *XRDevice*
 
-Per un' esperienza di scalabilitào scalabilità, è necessario inserire il contenuto relativo alla superficie. Si ragiona sul pavimento dell'utente usando la **[fase spaziale](coordinate-systems.md#spatial-coordinate-systems)** , che rappresenta l'origine di livello del piano definita dall'utente e il limite di spazio facoltativo, configurato durante la prima esecuzione.
+Per un'esperienza **di scalabilità o** **scalabilità**, è necessario inserire il contenuto relativo alla superficie. Si ragiona sul pavimento dell'utente usando la **[fase spaziale](coordinate-systems.md#spatial-coordinate-systems)** , che rappresenta l'origine di livello del piano definita dall'utente e il limite di spazio facoltativo, configurato durante la prima esecuzione.
 
 Per assicurarsi che Unity stia operando con il sistema di coordinate globale a livello di piano, è possibile impostare Unity sul tipo di spazio di rilevamento RoomScale e assicurarsi che il set abbia esito positivo:
 
@@ -69,10 +69,10 @@ else
 
 Quando l'app imposta correttamente il tipo di spazio di rilevamento RoomScale, il contenuto inserito sul piano y = 0 verrà visualizzato sul pavimento. L'origine in (0, 0, 0) sarà la posizione specifica del piano in cui l'utente si trovava durante l'installazione della chat room, con-Z che rappresenta la direzione in avanti durante l'installazione.
 
-**Namespace** *UnityEngine. Experimental. XR*<br>
-**Tipo** *Confine*
+**Spazio dei nomi:** *UnityEngine. EXPERIMENTal. XR*<br>
+**Tipo:** *limite*
 
-Nel codice di script è quindi possibile chiamare il metodo TryGetGeometry sul tipo UnityEngine. Experimental. XR. Boundary per ottenere un poligono di limiti, specificando un tipo di limite di TrackedArea. Se l'utente ha definito un limite (si ottiene un elenco di vertici), si sa che è sicuro fornire un'esperienza di scalabilità della **stanza** all'utente, in cui è possibile aggirare la scena creata.
+Nel codice di script è quindi possibile chiamare il metodo TryGetGeometry sul tipo UnityEngine. Experimental. XR. Boundary per ottenere un poligono di limiti, specificando un tipo di limite di TrackedArea. Se l'utente ha definito un limite (si ottiene un elenco di vertici), si sa che è sicuro fornire un' **esperienza di scalabilità della stanza** all'utente, in cui è possibile aggirare la scena creata.
 
 Si noti che il sistema eseguirà automaticamente il rendering del limite quando l'utente si avvicina. L'app non deve usare questo poligono per eseguire il rendering del limite. Tuttavia, è possibile scegliere di disporre gli oggetti della scena utilizzando questo poligono di limiti, per garantire che l'utente possa raggiungere fisicamente tali oggetti senza effettuare il Teleporting:
 
@@ -87,15 +87,15 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 ## <a name="building-a-world-scale-experience"></a>Creazione di un'esperienza su scala globale
 
 **Spazio dei nomi:** *UnityEngine. XR. WSA*<br>
-**Tipo** *WorldAnchor*
+**Tipo:** *WorldAnchor*
 
-Per esperienze reali su **scala mondiale** su HoloLens che consentono agli utenti di superare i 5 metri, sono necessarie nuove tecniche oltre a quelle usate per le esperienze su scala. Una tecnica chiave da usare consiste nel creare un [ancoraggio spaziale](coordinate-systems.md#spatial-anchors) per bloccare un cluster di ologrammi con precisione sul posto nel mondo fisico, indipendentemente dalla distanza di roaming dell'utente e quindi ritrovare [gli ologrammi nelle sessioni successive](coordinate-systems.md#spatial-anchor-persistence).
+Per esperienze reali su **scala mondiale** su HoloLens che consentono agli utenti di superare i 5 metri, sono necessarie nuove tecniche oltre a quelle usate per le esperienze su scala. Una tecnica chiave da usare consiste nel creare un [ancoraggio spaziale](coordinate-systems.md#spatial-anchors) per bloccare un cluster di ologrammi con precisione sul posto nel mondo fisico, indipendentemente dalla distanza di roaming dell'utente e quindi [ritrovare gli ologrammi nelle sessioni successive](coordinate-systems.md#spatial-anchor-persistence).
 
 In Unity si crea un ancoraggio spaziale aggiungendo il componente **WorldAnchor** Unity a un GameObject.
 
 ### <a name="adding-a-world-anchor"></a>Aggiunta di un ancoraggio globale
 
-Per aggiungere un ancoraggio globale, chiamare addComponent<WorldAnchor>() sull'oggetto Game con la trasformazione che si vuole ancorare nel mondo reale.
+Per aggiungere un ancoraggio globale, chiamare AddComponent<WorldAnchor>() sull'oggetto gioco con la trasformazione che si vuole ancorare nel mondo reale.
 
 ```cs
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
@@ -154,7 +154,7 @@ private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
 }
 ```
 
-Talvolta gli ancoraggi si trovano immediatamente. In questo caso, la proprietà individuata dell'ancoraggio verrà impostata su true quando addComponent<WorldAnchor>() restituisce. Di conseguenza, l'evento OnTrackingChanged non verrà attivato. Un modello pulito consiste nel chiamare il gestore OnTrackingChanged con lo stato individuato iniziale dopo aver collegato un ancoraggio.
+Talvolta gli ancoraggi si trovano immediatamente. In questo caso, la proprietà individuata dell'ancoraggio verrà impostata su true quando AddComponent<WorldAnchor>() restituisce. Di conseguenza, l'evento OnTrackingChanged non verrà attivato. Un modello pulito consiste nel chiamare il gestore OnTrackingChanged con lo stato individuato iniziale dopo aver collegato un ancoraggio.
 
 ```cs
 Anchor_OnTrackingChanged(anchor, anchor.isLocated);

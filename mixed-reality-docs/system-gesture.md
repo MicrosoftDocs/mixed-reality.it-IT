@@ -7,17 +7,17 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: Realtà mista, movimenti, interazione, progettazione
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182001"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375908"
 ---
 # <a name="system-gesture"></a>Movimento di sistema
 
 Il gesto del sistema è un movimento della mano usato per richiamare il menu Start. È l'equivalente di premere il tasto Windows sulla tastiera, il pulsante Xbox su un controller Xbox o il pulsante Windows sul controller di movimento per le cuffie immersive. È importante comprendere quali movimenti sono riservati per il sistema in ogni dispositivo di realtà mista per evitare conflitti durante la progettazione delle interazioni.
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ Il gesto del sistema è un movimento della mano usato per richiamare il menu Sta
         <td><a href="immersive-headset-hardware-details.md"><strong>Visori VR immersive</strong></a></td>
     </tr>
      <tr>
-        <td>Fioritura</td>
+        <td>Bloom</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Il gesto del sistema è un movimento della mano usato per richiamare il menu Sta
     </tr>
 </table>
 
-## <a name="bloom"></a>Fioritura
+## <a name="bloom"></a>Bloom
 Per visualizzare il menu Start in HoloLens (1st Gen), abbiamo progettato "Bloom", un gesto simbolico che simula il fiore fiorito. È distinto per l'interazione surefooted, facile da eseguire e rapido da richiamare. Per eseguire il gesto di fioritura su HoloLens (1 ° gen), è necessario passare a un palmo e a una mano insieme, quindi aprire la mano diffondendo le dita.
 
 :::row:::
@@ -113,7 +113,7 @@ In HoloLens 2, il movimento Bloom è stato sostituito con un pulsante di polso v
 
 ---
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Sguardo fisso](eye-tracking.md)

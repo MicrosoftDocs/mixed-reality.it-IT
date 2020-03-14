@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: movimenti, controller di movimento, Unity, sguardo, input
 ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926566"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375648"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Movimenti e controller di movimento in Unity
 
@@ -118,9 +118,9 @@ Le app che desiderano gestire le posizioni in modo diverso in base allo stato di
 <tr>
 <th> Stato di rilevamento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td>   di <b>accuratezza elevata</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td>   di <b>accuratezza elevata</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Accuratezza elevata (a rischio di perdita)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Accuratezza elevata (a rischio di perdita)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Accuratezza approssimativa</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
@@ -305,7 +305,7 @@ Questo significa che il polling fornisce una posizione di origine o una posizion
 Per definire la destinazione in modo accurato in base all'intento originale dell'utente per la pressione di un controller o una mano, è necessario usare la funzione di origine o di intestazione di origine cronologica da tale evento di input *InteractionSourcePressed* o *InteractionSourceReleased* .
 
 È possibile fare riferimento a una stampa o a una versione con dati di posa cronologici dall'Head dell'utente o dal controller:
-* Il primo posto nel momento in cui si è verificato un movimento o un controller, che può essere usato per **definire** la [scelta](gaze-and-commit.md) dell'utente:
+* Il primo posto nel momento in cui [si è verificato](gaze-and-commit.md) un movimento o un controller, che può essere **usato per definire** la scelta dell'utente:
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -525,7 +525,7 @@ Le esercitazioni dettagliate, con esempi di personalizzazione più dettagliati, 
 [![MR input 213-controller di movimento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Input MR 213-controller di movimento*
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Puntamento con la testa e commit](gaze-and-commit.md)
 * [Controller del movimento](motion-controllers.md)

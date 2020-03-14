@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mapping spaziale, HoloLens, realtà mista, ricostruzione della superficie, mesh
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926742"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375828"
 ---
 # <a name="spatial-mapping"></a>Mapping spaziale
 
@@ -21,7 +21,7 @@ Il mapping spaziale fornisce una rappresentazione dettagliata delle superfici re
 
 >[!VIDEO https://www.youtube.com/embed/zff2aQ1RaVo]
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -83,7 +83,7 @@ Diversi fattori [, descritti in](environment-considerations-for-hololens.md)dett
 
 ![Illustrazioni degli scenari comuni di utilizzo del mapping spaziale: posizionamento, occlusione, fisica e navigazione](images/sm-concepts-1000px.png)
 
-### <a name="placement"></a>Posizionamento
+### <a name="placement"></a>Posizione
 
 Il mapping spaziale offre alle applicazioni l'opportunità di presentare forme di interazione naturale e familiare con l'utente; che cosa potrebbe essere più naturale rispetto all'inserimento del telefono sulla scrivania?
 
@@ -245,7 +245,7 @@ Affinché un'API fisica, ad esempio [Havok](https://www.havok.com/), fornisca un
 
 Quando si eseguono raycasts in base alle superfici spaziali, tenere presente che queste superfici sono spesso complesse e ingombranti di dettagli, come la propria scrivania. Ciò significa che un singolo Raycast è spesso insufficiente per fornire informazioni sufficienti sulla forma della superficie e sulla forma dello spazio vuoto vicino. È in genere consigliabile eseguire molti raycasts all'interno di una piccola area e usare i risultati di aggregazione per derivare una conoscenza più affidabile della superficie. Ad esempio, l'uso della media di 10 raycasts per guidare la posizione degli ologrammi su una superficie produrrà un risultato molto più semplice e meno "nervosa" che usa solo un singolo raycast.
 
-Tuttavia, tenere presente che ogni Raycast può avere un elevato costo computazionale. Quindi, a seconda dello scenario di utilizzo, è consigliabile ridurre il costo di calcolo di raycasts aggiuntivi (eseguiti ogni frame) rispetto al costo computazionale dell' [elaborazione della rete](spatial-mapping.md#mesh-processing) per smussare e rimuovere i buchi nelle superfici spaziali (eseguite quando lo spazio le mesh sono aggiornate.
+Tuttavia, tenere presente che ogni Raycast può avere un elevato costo computazionale. Quindi, a seconda dello scenario di utilizzo, è consigliabile ridurre il costo di calcolo di raycasts aggiuntivi (eseguiti ogni frame) rispetto al costo computazionale dell' [elaborazione della rete](spatial-mapping.md#mesh-processing) per smussare e rimuovere i buchi nelle superfici spaziali (eseguite quando vengono aggiornate le mesh spaziali).
 
 ## <a name="the-environment-scanning-experience"></a>Esperienza di analisi dell'ambiente
 
@@ -369,7 +369,7 @@ Di seguito sono riportati alcuni esempi di diversi tipi di elaborazione di mesh 
 * Affinché le mesh della superficie siano orientate correttamente, ogni GameObject deve essere attivo prima di essere inviato al SurfaceObserver per costruire la mesh. In caso contrario, le maglie vengono visualizzate nello spazio, ma ruotate a angoli strani.
 * Il GameObject che esegue lo script che comunica con il SurfaceObserver deve essere impostato sull'origine. In caso contrario, tutte le GameObject create e inviate al SurfaceObserver per la costruzione delle mesh avranno un offset uguale all'offset dell'oggetto del gioco padre. In questo modo, le mesh possono visualizzare diversi metri che rendono molto difficile eseguire il debug di ciò che accade.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Mapping spaziale in DirectX](spatial-mapping-in-directx.md)
 * [Mapping spaziale in Unity](spatial-mapping-in-unity.md)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, mapping spaziale, ambiente, interazione, DirectX, WinRT, API, codice di esempio, UWP, SDK, procedura dettagliata
 ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437451"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375818"
 ---
 # <a name="spatial-mapping-in-directx"></a>Mapping spaziale in DirectX
 
@@ -22,7 +22,7 @@ Questo argomento usa il codice dell'esempio di codice UWP di [HolographicSpatial
 >[!NOTE]
 >I frammenti di codice in questo articolo illustrano attualmente l' C++uso di/CX, invece di/WinRT conformi C++a C + 17 come usato nel modello di [ C++ progetto olografico](creating-a-holographic-directx-project.md).  I concetti sono equivalenti per C++un progetto/WinRT, anche se sarà necessario tradurre il codice.
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -85,7 +85,7 @@ A questo punto, viene illustrato come aggiungere la funzionalità di mapping del
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurare l'app per l'uso della funzionalità spatialPerception
 
-L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa operazione è necessaria perché la mesh spaziale è una rappresentazione dell'ambiente dell'utente, che può essere considerato dati privati. Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco un esempio:
+L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa operazione è necessaria perché la mesh spaziale è una rappresentazione dell'ambiente dell'utente, che può essere considerato dati privati. Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
 
 ```xml
 <Capabilities>
@@ -93,7 +93,7 @@ L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa
 </Capabilities>
 ```
 
-La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Ecco un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Di seguito è riportato un esempio:
 
 ```xml
 <Package
@@ -216,7 +216,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-Se l'app deve eseguire operazioni in modo diverso quando i dati di mapping di superficie non sono disponibili, è possibile scrivere codice per rispondere al caso in cui il [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) non è **consentito** , ad esempio, non sarà consentito nei PC con immersive dispositivi collegati perché i dispositivi non hanno hardware per il mapping spaziale. Per questi dispositivi, è invece necessario basarsi sulla fase spaziale per ottenere informazioni sull'ambiente e la configurazione del dispositivo dell'utente.
+Se l'app deve eseguire operazioni in modo diverso quando i dati di mapping di superficie non sono disponibili, è possibile scrivere codice per rispondere al caso in cui [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) non è **consentito** , ad esempio, non sarà consentito nei PC con dispositivi immersivi collegati perché i dispositivi non hanno hardware per il mapping spaziale. Per questi dispositivi, è invece necessario basarsi sulla fase spaziale per ottenere informazioni sull'ambiente e la configurazione del dispositivo dell'utente.
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>Inizializzare e aggiornare la raccolta Surface Mesh
 
@@ -673,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Creazione di un progetto DirectX olografico](creating-a-holographic-directx-project.md)
 * [API Windows. Perception. Spatial](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: ologrammi, stabilità, hololens
 ms.openlocfilehash: ad48d057ee55d4d0d9ae3080d8030a481aef130f
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623315"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375778"
 ---
 # <a name="hologram-stability"></a>Stabilità olografica
 
@@ -91,7 +91,7 @@ Le applicazioni devono eseguire azioni specifiche per abilitare i diversi tipi d
 
 Tipo di stabilizzazione |    Auricolari immersivi |    HoloLens generazione 1 | HoloLens 2
 --- | --- | --- | ---
-Riproiezione profondità |    Implementazione consigliata |   N/D |   Implementazione consigliata<br/><br/>Le applicazioni Unity devono usare Unity 2018.4.12 o versione successiva o Unity 2019,3 o versione successiva. In caso contrario, usare la riproiezione piana automatica.
+Riproiezione profondità |    Consigliato |   N/D |   Consigliato<br/><br/>Le applicazioni Unity devono usare Unity 2018.4.12 o versione successiva o Unity 2019,3 o versione successiva. In caso contrario, usare la riproiezione piana automatica.
 Riproiezione piana automatica | N/D |   Impostazione predefinita consigliata |   Consigliato se la riproiezione di profondità non fornisce i risultati migliori<br/><br/>Le applicazioni Unity sono consigliate per usare Unity 2018.4.12 o versione successiva o Unity 2019,3 o versione successiva.  Le versioni precedenti di Unity funzioneranno con risultati di riproiezione leggermente ridotti.
 Riproiezione planare |   Non consigliato |   Consigliato se il Planar automatico non fornisce i risultati migliori |    Usare se nessuna delle opzioni di profondità fornisce i risultati desiderati    
 
@@ -137,7 +137,7 @@ La cosa più importante che uno sviluppatore può eseguire per stabilizzare gli 
 
 **Procedure consigliate** Non esiste un modo universale per configurare il piano di stabilizzazione ed è specifico dell'app, quindi la raccomandazione principale è sperimentare e vedere cosa funziona meglio per gli scenari. Tuttavia, provare a allineare il piano di stabilizzazione con il maggior volume possibile di contenuto, perché tutto il contenuto di questo piano è perfettamente stabilizzato.
 
-Ad esempio:
+Ad esempio,
 * Se si dispone solo di contenuto planare (lettura di app, app per la riproduzione video), allineare il piano di stabilizzazione al piano con il contenuto.
 * Se sono presenti tre piccole sfere bloccate a livello globale, il piano di stabilizzazione viene tagliato anche se i centri di tutte le sfere attualmente presenti nella visualizzazione dell'utente.
 * Se la scena include contenuto con profondità notevolmente diverse, prediligere ulteriori oggetti.
@@ -174,7 +174,7 @@ Sebbene sia difficile evitare completamente la separazione dei colori, sono disp
 
 Come in precedenza, il rendering a 60 FPS e l'impostazione del piano di stabilizzazione sono le tecniche più importanti per la stabilità degli ologrammi. Se si verifica la separazione dei colori evidente, verificare innanzitutto che la frequenza dei fotogrammi soddisfi le aspettative.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
 * [Colore, luce e materiali](color,-light-and-materials.md)
 * [Interazioni istintive](interaction-fundamentals.md)

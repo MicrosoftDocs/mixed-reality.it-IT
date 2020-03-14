@@ -7,14 +7,14 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: realtà mista, realtà mista di Windows, HoloLens, immersiva, VR, Mr, introduzione, ologramma, Accademia, esercitazione
 ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926638"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375598"
 ---
 >[!NOTE]
->Le esercitazioni miste di reality Academy sono state progettate con i HoloLens (1st Gen) e gli auricolari immersivi a realtà mista.  Di conseguenza, si ritiene che sia importante lasciare queste esercitazioni per gli sviluppatori che cercano ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Verranno mantenuti per continuare a usare i dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md) .
+>Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista.  Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
 
 <br>
 
@@ -22,7 +22,7 @@ ms.locfileid: "73926638"
 
 Questa esercitazione illustra come creare un'app di base per realtà mista compilata con Unity.
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
 <tr>
@@ -81,7 +81,7 @@ In terzo luogo, consideriamo il piano di ritaglio vicino in Unity, evitando che 
 
 **Per le applicazioni HoloLens**, il piano di ritaglio vicino può essere impostato su HoloLens 0,85 metri [consigliati](camera-in-unity.md#clip-planes) .
 
-1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e modificare il campo **near clip Plane** dal valore predefinito **0,3** alla HoloLens consigliata **0,85** .
+1. Con la **fotocamera principale** ancora selezionata nel pannello **gerarchia** , trovare il componente della **fotocamera** nel pannello **Inspector** e modificare il campo **near Clip Plane** dal valore predefinito **0,3** a HoloLens consigliato **0,85**.
 
 **Per le applicazioni di realtà miste destinate a auricolari immersivi**, è possibile usare l'impostazione predefinita fornita da Unity.
 
@@ -164,7 +164,7 @@ A questo punto, dopo aver creato il cubo, è possibile eseguire un controllo rap
 2. Aprire la **finestra > XR > emulazione olografica**.
 3. Modificare la **modalità di emulazione** da **Nessuna** a **remota a dispositivo**.
 4. In **computer remoto**, immettere l'indirizzo IP della HoloLens annotata in precedenza.
-5. Fai clic su **Connetti**.
+5. Fare clic su **Connetti**.
 6. Verificare che lo **stato della connessione** venga modificato in verde **connesso**.
 7. A questo punto è possibile fare clic su **Play** nell'editor di Unity.
 
@@ -194,7 +194,7 @@ A questo punto è possibile compilare il progetto in Visual Studio e distribuirl
 6.  Il **tipo di compilazione UWP** deve essere **D3D**.
 7.  L' **SDK di UWP** potrebbe essere rimasto **installato più di recente**.
 8.  Controllare **i C# progetti Unity** in fase di debug.
-9.  Fai clic su **Compila**.
+9.  Fare clic su **Compila**.
 10. In Esplora file fare clic su **nuova cartella** e denominare la cartella **"app"** .
 11. Con la cartella **app** selezionata, fare clic sul pulsante **Seleziona cartella** .
 12. Al termine della compilazione di Unity, viene visualizzata una finestra Esplora file di Windows.
@@ -234,7 +234,7 @@ Verificare che il dispositivo sia collegato tramite il cavo USB.
 
 Ora che l'app è stata distribuita, provare a spostarsi in tutto il cubo e osservare che rimane nel mondo davanti all'utente.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 * [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)

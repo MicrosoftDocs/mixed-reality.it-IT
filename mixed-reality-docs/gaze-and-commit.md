@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: Realtà mista, sguardo, targeting, interazione, progettazione, rilevamento degli sguardi, rilevamento Head
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441126"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375848"
 ---
 # <a name="gaze-and-commit"></a>Sguardo e commit
 
@@ -33,7 +33,7 @@ Di seguito sono riportati alcuni esempi di come uno sviluppatore di realtà mist
 <br>
 
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -50,7 +50,7 @@ Di seguito sono riportati alcuni esempi di come uno sviluppatore di realtà mist
     </tr>
      <tr>
         <td>Puntamento con la testa e commit</td>
-        <td>✔️ Consigliata</td>
+        <td>✔️ Consigliato</td>
         <td>✔️ Consigliato (terza scelta - <a href="interaction-fundamentals.md">Vedi le altre opzioni</a>)</td>
         <td>➕ Opzione alternativa</td>
     </tr>
@@ -114,7 +114,7 @@ Indipendentemente dal fatto che il modello di input con sguardo e commit venga u
 
 ---
 
-### <a name="cursor"></a>Cursor
+### <a name="cursor"></a>Cursore
 
 :::row:::
     :::column:::
@@ -253,7 +253,7 @@ Il gesto del rubinetto d'aria, così come gli altri movimenti riportati di segui
 La pressione prolungata consiste nel mantenere la posizione del dito abbassato della simulazione del tocco. La combinazione di tocco e mantenimento dell'aria permette una serie di interazioni di tipo "clic e trascinamento" più complesse in combinazione con lo spostamento ARM, ad esempio la selezione di un oggetto anziché l'attivazione di interazioni secondarie MouseDown, ad esempio la visualizzazione di un menu di scelta rapida.
 È tuttavia consigliabile prestare attenzione durante la progettazione di questo movimento perché gli utenti possono avere la tendenza ad allentare la posizione della mano durante l'esecuzione di un movimento esteso.
 
-### <a name="manipulation"></a>Manipolazione
+### <a name="manipulation"></a>Manipulation
 I movimenti di manipolazione possono essere usati per spostare, ridimensionare o ruotare un ologramma quando si vuole che l'ologramma reagisca 1:1 ai movimenti della mano dell'utente. Uno degli usi possibili di tali movimenti 1:1 è quello di consentire all'utente di disegnare o dipingere nel mondo.
 La selezione iniziale della destinazione per un movimento di manipolazione dovrebbe avvenire mediante sguardo fisso o puntamento. Una volta avviato il tocco e l'attesa, qualsiasi modifica dell'oggetto viene gestita da movimenti mano, liberando l'utente per l'aspetto durante la modifica.
 
@@ -290,13 +290,13 @@ Sono tre gli aspetti da considerare:
 
 
 
-## <a name="see-also"></a>Vedi anche
-* [Interazione basata sull'occhio](eye-gaze-interaction.md)
-* [Rilevamento degli occhi su HoloLens 2](eye-tracking.md)
+## <a name="see-also"></a>Vedere anche
+* [Interazione basata sullo sguardo](eye-gaze-interaction.md)
+* [Tracciamento oculare in HoloLens 2](eye-tracking.md)
 * [Sguardo fisso e attesa](gaze-and-dwell.md)
-* [Manipolazione diretta](direct-manipulation.md)
-* [Movimenti pratici](gaze-and-commit.md#composite-gestures)
-* [Hand-point e commit](point-and-commit.md)
+* [Mani - Manipolazione diretta](direct-manipulation.md)
+* [Mani - Movimenti](gaze-and-commit.md#composite-gestures)
+* [Mani - Puntamento e commit](point-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Input vocale](voice-input.md)
 

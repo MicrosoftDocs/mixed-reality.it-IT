@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, video, acquisizione, fotocamera
 ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926794"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375968"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Acquisizione di realtà mista per gli sviluppatori
 
@@ -197,26 +197,26 @@ Le applicazioni hanno due opzioni per aggiungere l'effetto:
 
 Effetto video MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nome proprietà  |  Digita  |  Valore predefinito  |  Descrizione | 
+|  Nome proprietà:  |  Type  |  Default Value  |  Descrizione | 
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Descrivere il flusso di acquisizione per cui viene usato questo effetto. L'audio non è disponibile. | 
-|  HologramCompositionEnabled  |  booleano  |  TRUE  |  Flag per abilitare o disabilitare gli ologrammi nell'acquisizione video. | 
-|  RecordingIndicatorEnabled  |  booleano  |  TRUE  |  Flag per abilitare o disabilitare l'indicatore di registrazione sullo schermo durante l'acquisizione di ologrammi. | 
-|  VideoStabilizationEnabled  |  booleano  |  FALSE  |  Flag per abilitare o disabilitare la stabilizzazione video con tecnologia HoloLens Tracker. | 
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  Flag per abilitare o disabilitare gli ologrammi nell'acquisizione video. | 
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  Flag per abilitare o disabilitare l'indicatore di registrazione sullo schermo durante l'acquisizione di ologrammi. | 
+|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  Flag per abilitare o disabilitare la stabilizzazione video con tecnologia HoloLens Tracker. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Consente di impostare il numero di frame cronologici utilizzati per la stabilizzazione del video. 0 è 0: latenza e quasi "Free" da un punto di vista dell'alimentazione e delle prestazioni. 15 è consigliato per la massima qualità (a costo di 15 fotogrammi di latenza e memoria). | 
 |  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (auricolare immersivo)  |  Impostare il coefficiente di opacità globale di un ologramma compreso tra 0,0 (completamente trasparente) e 1,0 (completamente opaco). | 
-|  BlankOnProtectedContent  |  booleano  |  FALSE  |  Flag per abilitare o disabilitare la restituzione di un frame vuoto se è presente un'app UWP 2D che mostra il contenuto protetto. Se questo flag è false e un'app UWP 2D Visualizza contenuto protetto, l'app UWP 2D verrà sostituita da una trama di contenuto protetta sia nell'auricolare che nell'acquisizione di realtà mista. |
-|  ShowHiddenMesh  |  booleano  |  FALSE  |  Flag per abilitare o disabilitare la visualizzazione della mesh di area nascosta e del contenuto adiacente della fotocamera olografica. |
-| OutputSize | Dimensioni | 0, 0 | Imposta la dimensione di output desiderata dopo il ritaglio per la stabilizzazione del video. Viene scelta una dimensione di ritaglio predefinita se si specifica 0 o una dimensione di output non valida. |
+|  BlankOnProtectedContent  |  boolean  |  FALSE  |  Flag per abilitare o disabilitare la restituzione di un frame vuoto se è presente un'app UWP 2D che mostra il contenuto protetto. Se questo flag è false e un'app UWP 2D Visualizza contenuto protetto, l'app UWP 2D verrà sostituita da una trama di contenuto protetta sia nell'auricolare che nell'acquisizione di realtà mista. |
+|  ShowHiddenMesh  |  boolean  |  FALSE  |  Flag per abilitare o disabilitare la visualizzazione della mesh di area nascosta e del contenuto adiacente della fotocamera olografica. |
+| OutputSize | Dimensione | 0, 0 | Imposta la dimensione di output desiderata dopo il ritaglio per la stabilizzazione del video. Viene scelta una dimensione di ritaglio predefinita se si specifica 0 o una dimensione di output non valida. |
 | PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | Enumerazione utilizzata per indicare la configurazione della visualizzazione della fotocamera olografica da acquisire. L'impostazione 0 (display) indica che all'app non verrà richiesto di eseguire il rendering dalla fotocamera foto/video |
 
 Effetto audio MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 <table>
 <tr>
-<th>Nome proprietà</th>
-<th>Digita</th>
-<th>Valore predefinito</th>
+<th>Nome proprietà:</th>
+<th>Type</th>
+<th>Default Value</th>
 <th>Descrizione</th>
 </tr>
 <tr>
@@ -267,6 +267,6 @@ Con l'aggiornamento di Windows 10 aprile 2018, non esiste più una limitazione p
 
 In precedenza all'aggiornamento di Windows 10 aprile 2018, il registratore MRC personalizzato di un'app si escludono a vicenda con il sistema MRC (acquisizione di foto, acquisizione di video o flusso dal portale per dispositivi Windows).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Acquisizione realtà mista](mixed-reality-capture.md)
 * [Visualizzazione spettatore](spectator-view.md)

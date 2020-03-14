@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, input
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723190"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375988"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -32,7 +32,7 @@ Quando si usano i comandi vocali, lo sguardo (Head o Eye) viene in genere usato 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/eHMkOpNUtR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -121,7 +121,7 @@ Anche senza aggiungere in modo specifico il supporto vocale all'app, gli utenti 
         *Image: un utente può pronunciare il comando "Adjust" visualizzato nella barra dell'app per modificare la posizione dell'app*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        spazio ![](images/spacer-20x582.png)<br>
         ![quando si esamina una finestra o un ologramma dell'app, un utente può pronunciare il comando "Adjust" visualizzato nella barra dell'app per modificare la posizione dell'app nel mondo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -171,7 +171,7 @@ Se si desidera un elenco completo, è sufficiente indicare "Mostra tutti i coman
 
 ## <a name="dictation"></a>Dettatura
 
-Invece di digitare con le [scelte aeree](gaze-and-commit.md#composite-gestures), la dettatura vocale può essere più efficiente per inserire il testo in un'app. Questo può accelerare significativamente l'input con minore impegno per l'utente.
+Invece di digitare con le scelte [aeree](gaze-and-commit.md#composite-gestures), la dettatura vocale può essere più efficiente per inserire il testo in un'app. Questo può accelerare significativamente l'input con minore impegno per l'utente.
 
 ![la dettatura vocale inizia selezionando il pulsante del microfono](images/micbuttonfordictation.png)<br>
 *La dettatura vocale inizia selezionando il pulsante del microfono sulla tastiera*
@@ -282,7 +282,7 @@ Per le applicazioni che vogliono sfruttare le opzioni di elaborazione dell'input
 
 Questa elaborazione audio è accelerata dall'hardware, il che significa che le funzionalità svuotano molto meno energia rispetto a quando la stessa elaborazione è stata eseguita sulla CPU HoloLens. Evitare di eseguire altre elaborazioni di input audio sulla CPU per ottimizzare la durata della batteria del sistema e sfruttare i vantaggi dell'elaborazione dell'input audio con offload incorporato.
 
-## <a name="languages"></a>Lingue
+## <a name="languages"></a>Linguaggi
 
 HoloLens 2 supporta inoltre lingue aggiuntive. Tenere presente che i comandi vocali verranno sempre eseguiti nella lingua di visualizzazione del sistema anche se sono installate più tastiere o se le app tentano di creare un riconoscimento vocale in una lingua diversa.
 
@@ -304,8 +304,8 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , è poss
 
 ---
 
-## <a name="see-also"></a>Vedi anche
-* [Sguardo fisso e commit](gaze-and-commit.md)
+## <a name="see-also"></a>Vedere anche
+* [Sguardo e commit](gaze-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Input di MR 212: Voice](holograms-212.md)
 * [Input vocale in DirectX](voice-input-in-directx.md)

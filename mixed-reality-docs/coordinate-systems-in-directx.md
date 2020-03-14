@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Realtà mista, localizzatore spaziale, frame di riferimento spaziale, sistema di coordinate spaziali, fase spaziale, codice di esempio, stabilizzazione dell'immagine, ancoraggio spaziale, archivio di ancoraggio spaziale, perdita di tracce, procedura dettagliata
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436231"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375618"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemi di coordinate in DirectX
 
@@ -574,7 +574,7 @@ Per il rendering, è spesso possibile ottenere risultati migliori raggruppando g
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Creare ologrammi usando un frame di riferimento collegato al dispositivo
 
-In alcuni casi si desidera eseguire il rendering di un ologramma che [rimane collegato](coordinate-systems.md#attached-frame-of-reference) alla posizione del dispositivo, ad esempio un pannello con informazioni di debug o un messaggio informativo quando il dispositivo è in grado di determinare solo l'orientamento e non la posizione in spazio. A tale scopo, viene usato un frame di riferimento allegato.
+In alcuni casi si vuole eseguire il rendering di un ologramma che [rimane collegato](coordinate-systems.md#attached-frame-of-reference) alla posizione del dispositivo, ad esempio un pannello con informazioni di debug o un messaggio informativo quando il dispositivo è in grado di determinare solo l'orientamento e non la posizione nello spazio. A tale scopo, viene usato un frame di riferimento allegato.
 
 La classe SpatialLocatorAttachedFrameOfReference definisce i sistemi di coordinate relativi al dispositivo anziché al mondo reale. Questo frame dispone di un'intestazione fissa rispetto all'area circostante dell'utente che punta alla posizione in cui l'utente si trovava al momento della creazione del frame di riferimento. Da questo punto in poi, tutti gli orientamenti in questo frame di riferimento sono relativi a tale intestazione fissa, anche quando l'utente ruota il dispositivo.
 
@@ -730,7 +730,7 @@ Da **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-Ecco fatto! L'ologramma ora "inseguisce" una posizione che è di 2 metri davanti alla direzione dello sguardo dell'utente.
+La procedura è terminata. L'ologramma ora "inseguisce" una posizione che è di 2 metri davanti alla direzione dello sguardo dell'utente.
 
 >[!NOTE]
 >Questo esempio carica anche contenuto aggiuntivo. vedere StationaryQuadRenderer. cpp.
@@ -794,7 +794,7 @@ Da **AppMain. cpp:**
 
 Le API di [mapping spaziale](spatial-mapping-in-directx.md) utilizzano i sistemi di coordinate per ottenere le trasformazioni del modello per le mesh di superficie.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Sistemi di coordinate](coordinate-systems.md)
 * [Ancoraggi nello spazio](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancoraggi nello spazio di Azure</a>

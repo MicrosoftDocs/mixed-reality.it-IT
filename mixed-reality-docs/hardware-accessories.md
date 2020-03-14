@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: procedure, accessori, Bluetooth, BT, controller, gamepad, clicker, Xbox
 ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435142"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375698"
 ---
 # <a name="hardware-accessories"></a>Accessori hardware
 
@@ -31,7 +31,7 @@ L'associazione di una periferica Bluetooth con Microsoft HoloLens è simile all'
 5. Attendere che il nome del dispositivo venga visualizzato nell'elenco dei dispositivi Bluetooth. In tal caso, selezionare il dispositivo e quindi fare clic sul pulsante **associa** . Se sono presenti molti dispositivi Bluetooth nelle vicinanze, potrebbe essere necessario scorrere fino alla fine dell'elenco dei dispositivi Bluetooth per visualizzare il dispositivo che si sta tentando di associare.
 6. Quando si abbinano periferiche Bluetooth con funzionalità di input (ad esempio, tastiere Bluetooth), è possibile che venga visualizzato un pin di 6 o 8 cifre. Assicurarsi di digitare il pin sulla periferica e quindi premere INVIO per completare l'associazione con Microsoft HoloLens.
 
-## <a name="motion-controllers"></a>Controller di movimento
+## <a name="motion-controllers"></a>Controller del movimento
 
 I controller di [movimento](motion-controllers.md) di realtà mista di Windows sono supportati da auricolari immersivi, ma non da HoloLens. Questi controller offrono un tracking preciso e reattivo del movimento nel campo della visualizzazione usando i sensori nell'auricolare immersiva, ovvero non è necessario installare hardware nei muri dello spazio. Ogni controller presenta diversi metodi di input.
 

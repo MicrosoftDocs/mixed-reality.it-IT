@@ -7,11 +7,11 @@ ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, stile, carattere, tipografia, interfaccia utente, UX
 ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437410"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375798"
 ---
 # <a name="typography"></a>Tipografia
 
@@ -111,9 +111,9 @@ Angolo di visualizzazione ![](images/Text_In_Unity_ViewingAngle.jpg)
 
 :::row:::
     :::column:::
-    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Tipi di carattere Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    ### <a name="segoe-fontsbr"></a>[Tipi di carattere Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
     (File zip)<br>
-    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[Tipo di carattere HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    ### <a name="hololens-fontbr"></a>[Tipo di carattere HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
     (File zip)<br>
     <br>
     *Image: il tipo di carattere HoloLens fornisce i glifi dei simboli usati nella realtà mista di Windows.*
@@ -129,6 +129,6 @@ Angolo di visualizzazione ![](images/Text_In_Unity_ViewingAngle.jpg)
 ---
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Testo in Unity](text-in-unity.md)
 * [Colore, luce e materiali](color,-light-and-materials.md)

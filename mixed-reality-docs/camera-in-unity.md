@@ -7,15 +7,15 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, rendering olografico, olografico, immersivo, punto di messa a fuoco, buffer di profondità, solo orientamento, posizionale, opaco, trasparente, clip
 ms.openlocfilehash: 1a2e66d5c028109a58ea8682668521f50158add9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436952"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375588"
 ---
 # <a name="camera-in-unity"></a>Fotocamera in Unity
 
-Quando si usa una cuffia a realtà mista, diventa il centro del mondo olografico. Il componente della [fotocamera](https://docs.unity3d.com/Manual/class-Camera.html) Unity gestirà automaticamente il rendering stereoscopico e seguirà lo spostamento e la rotazione delle intestazioni quando il progetto ha selezionato "realtà virtuale supportata" con "realtà mista di Windows" come dispositivo (nelle altre impostazioni sezione delle impostazioni di Windows Store Player). Questo può essere elencato come "Windows olografico" nelle versioni precedenti di Unity.
+Quando si usa una cuffia a realtà mista, diventa il centro del mondo olografico. Il componente della [fotocamera](https://docs.unity3d.com/Manual/class-Camera.html) Unity gestirà automaticamente il rendering stereoscopico e seguirà lo spostamento e la rotazione delle intestazioni quando il progetto ha selezionato "realtà virtuale supportata" con "realtà mista di Windows" come dispositivo (nella sezione altre impostazioni delle impostazioni di Windows Store Player). Questo può essere elencato come "Windows olografico" nelle versioni precedenti di Unity.
 
 Tuttavia, per ottimizzare completamente la qualità visiva e la [stabilità dell'ologramma](hologram-stability.md), è necessario impostare le impostazioni della fotocamera descritte di seguito.
 
@@ -76,7 +76,7 @@ Per impostazione predefinita:
 * Gli **auricolari immersivi** eseguiranno una riproiezione posizionale, modificando gli ologrammi per la stima errata nella posizione e nell'orientamento, se l'app fornisce un buffer di profondità per un determinato frame.  Se non viene fornito un buffer di profondità, il sistema correggerà solo le stime errate all'orientamento.
 * Gli **auricolari olografici** come HoloLens eseguiranno la riproiezione posizionale se l'app fornisce o meno il buffer di profondità.  La riproiezione posizionale è possibile senza buffer di profondità su HoloLens perché il rendering è spesso di tipo sparse con uno sfondo stabile fornito dal mondo reale.
 
-Se si è certi che si sta compilando un' [esperienza di solo orientamento](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenuto con blocco del corpo rigido (ad esempio, il contenuto video di 360 gradi), è possibile impostare in modo esplicito la modalità di riprogettazione in modo che sia l'orientamento solo impostando [ HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) a [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Se si è certi che si sta compilando un' [esperienza di solo orientamento](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenuto con blocco del corpo rigido (ad esempio, il contenuto video di 360 gradi), è possibile impostare in modo esplicito la modalità di riprogettazione in modo che sia l'orientamento solo impostando [HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) su [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Condivisione dei buffer di profondità con Windows
 
@@ -93,7 +93,7 @@ Per specificare se l'app Unity fornirà un buffer di profondità a Windows:
 
 Fornire un buffer di profondità a Windows può migliorare la qualità visiva, purché Windows possa mappare accuratamente i valori di profondità per pixel normalizzati nel buffer di profondità a distanza in metri, usando i piani vicini e lontani impostati in Unity sulla fotocamera principale.  Se il rendering passa i valori di profondità di gestione in modi tipici, in genere è opportuno eseguire questa procedura, sebbene i passaggi di rendering traslucidi che scrivono nel buffer di profondità durante la visualizzazione dei pixel di colore esistenti possano confondere la riproiezione.  Se si è certi che i passaggi di rendering lasceranno molti dei pixel di profondità finali con valori di profondità non corretti, è probabile che si ottenga una qualità visiva migliore deselezionando "Abilita condivisione buffer di profondità".
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [MixedRealityToolkit fotocamera principale. prefabbricata](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

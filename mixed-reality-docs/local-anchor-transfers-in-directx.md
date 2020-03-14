@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Synchronize, ancoraggio spaziale, trasferimento, multiplayer, visualizzazione, scenario, procedura dettagliata, codice di esempio, trasferimento, trasferimento di ancoraggio locale, esportazione di ancoraggio, importazione di ancoraggio
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437960"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376028"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Trasferimenti di ancoraggio locali in DirectX
 
@@ -33,7 +33,7 @@ Si noti che gli ancoraggi spaziali non sono in grado di trasferire tra tipi di d
 
 È necessario concedere all'app l'autorizzazione per usare la funzionalità spatialPerception prima di poter usare [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa operazione è necessaria perché il trasferimento di un ancoraggio spaziale comporta la condivisione delle immagini del sensore raccolte nel tempo in prossimità di tale ancoraggio, che potrebbero includere informazioni riservate.
 
-Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco un esempio:
+Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco u
 </Capabilities>
 ```
 
-La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Ecco un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Di seguito è riportato un esempio:
 
 ```
 <Package
@@ -284,7 +284,7 @@ Il BLOB contiene una rappresentazione dell'ambiente nella vicinanza del SpatialA
 
 ### <a name="export-of-multiple-spatialanchors"></a>Esportazione di più SpatialAnchors
 
-Analogamente all'esportazione di un singolo SpatialAnchor, il BLOB contiene una rappresentazione dell'ambiente in prossimità di tutti i SpatialAnchors specificati. Inoltre, il BLOB contiene informazioni sulle connessioni tra il SpatialAnchors incluso, se si trovano nello stesso spazio fisico. Ciò significa che se vengono importati due SpatialAnchors adiacenti, un ologramma collegato alla *seconda* SpatialAnchor sarà locatable anche se il dispositivo riconosce solo l'ambiente intorno al *primo* SpatialAnchor, perché i dati sono sufficienti per la trasformazione di calcolo tra i due SpatialAnchors è stata inclusa nel BLOB. Se i due SpatialAnchors sono stati esportati singolarmente (due chiamate separate a TryExportSpatialAnchors), potrebbero non essere disponibili dati sufficienti nel BLOB per gli ologrammi collegati al secondo SpatialAnchor per essere locatable quando il primo si trova.
+Analogamente all'esportazione di un singolo SpatialAnchor, il BLOB contiene una rappresentazione dell'ambiente in prossimità di tutti i SpatialAnchors specificati. Inoltre, il BLOB contiene informazioni sulle connessioni tra il SpatialAnchors incluso, se si trovano nello stesso spazio fisico. Ciò significa che se vengono importati due SpatialAnchors adiacenti, un ologramma collegato alla *seconda* SpatialAnchor sarà locatable anche se il dispositivo riconosce solo l'ambiente intorno al *primo* SpatialAnchor, perché i dati necessari per il calcolo della trasformazione tra i due SpatialAnchors sono stati inclusi nel BLOB. Se i due SpatialAnchors sono stati esportati singolarmente (due chiamate separate a TryExportSpatialAnchors), potrebbero non essere disponibili dati sufficienti nel BLOB per gli ologrammi collegati al secondo SpatialAnchor per essere locatable quando il primo si trova.
 
 ![Più ancoraggi esportati con una singola chiamata TryExportAnchorsAsync](images/multipleanchors.png) ![Più ancoraggi esportati con una chiamata TryExportAnchorsAsync separata per ogni ancoraggio](images/separateanchors.png)
 
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Ecco fatto! A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
+La procedura è terminata. A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [PPL (Parallel Patterns Library)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

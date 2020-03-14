@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: realtà mista, olografica, AR, VR, Mr, XR, realtà aumentata, realtà virtuale, spiegazione
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334029"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376038"
 ---
 # <a name="what-is-mixed-reality"></a>Ce cos'è la realtà mista?
 
@@ -89,7 +89,7 @@ Esistono due tipi principali di dispositivi che offrono esperienze di realtà mi
 </tr><tr>
 <td><strong>Dispositivo di esempio</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>Display</strong> (Schermo)</td><td> Visualizza-fino alla visualizzazione. Consente all'utente di visualizzare l'ambiente fisico indossando la cuffia.</td><td> Visualizzazione opaca. Blocca l'ambiente fisico mentre è in uso l'auricolare.</td>
+<td><strong>Visualizzare</strong></td><td> Visualizza-fino alla visualizzazione. Consente all'utente di visualizzare l'ambiente fisico indossando la cuffia.</td><td> Visualizzazione opaca. Blocca l'ambiente fisico mentre è in uso l'auricolare.</td>
 </tr><tr>
 <td><strong>Spostamento</strong></td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td><td> Spostamento completo di sei gradi di libertà, rotazione e conversione.</td>
 </tr>
@@ -113,7 +113,7 @@ Spesso è preferibile pensare al tipo di esperienza che uno sviluppatore di appl
 * **Verso destra (quasi la realtà digitale).** Gli utenti sperimentano un ambiente completamente digitale e non sono consapevoli di ciò che accade nell'ambiente fisico.
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Che cos'è un ologramma?](hologram.md)
 * [Informazioni sulle nozioni di base della realtà mista](index.md#understand-the-basics)

@@ -7,21 +7,21 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate spaziali, solo orientamento, scalabilità verticale, scalabilità, scalabilità, scalabilità globale, 360 gradi, seduto, in piedi, stanza, mondo, scala, posizione, orientamento, fermo, allegato, fase, ancoraggio, ancoraggio spaziale, blocco globale, blocco globale, con blocco del corpo, blocco del corpo, limiti, persistenza, condivisione, perdita di rilevamento, ancoraggio spaziale cloud
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436150"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375638"
 ---
 # <a name="coordinate-systems"></a>Sistemi di coordinate
 
-Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md) nel mondo che sembrano e suonino come oggetti reali. Questo implica il posizionamento e l'orientamento accurati degli ologrammi in luoghi del mondo che sono significativi per l'utente, indipendentemente dal fatto che il mondo sia la stanza fisica o un'area di autenticazione virtuale creata. Quando ragionano sulla posizione e sull'orientamento degli ologrammi o su qualsiasi altra geometria, ad esempio il raggio di [sguardi](gaze-and-commit.md) o le [posizioni della mano](hands-and-tools.md), Windows fornisce vari sistemi di coordinate reali in cui è possibile esprimere la geometria, nota come  **sistemi di coordinate spaziali**.
+Alle loro core, le app per la realtà mista inseriscono [ologrammi](hologram.md) nel mondo che sembrano e suonino come oggetti reali. Questo implica il posizionamento e l'orientamento accurati degli ologrammi in luoghi del mondo che sono significativi per l'utente, indipendentemente dal fatto che il mondo sia la stanza fisica o un'area di autenticazione virtuale creata. Quando ragionano sulla posizione e sull'orientamento degli ologrammi o su qualsiasi altra geometria, ad esempio il raggio di [sguardi](gaze-and-commit.md) o le [posizioni della mano](hands-and-tools.md), Windows fornisce vari sistemi di coordinate reali in cui è possibile esprimere la geometria, nota come **sistemi di coordinate spaziali**.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -227,7 +227,7 @@ In alcuni casi, quando si inizia a usare una cuffia in un ambiente in cui sono s
 
 In alcuni casi, una casa o un altro spazio può avere due aree identiche. Ad esempio, due sale riunioni identiche, due aree d'angolo identiche, due manifesti identici di grandi dimensioni che coprono il campo di visualizzazione del dispositivo. In questi scenari, il dispositivo può, a volte, essere confuso tra le parti identiche e contrassegnarle come la stessa rappresentazione interna. Ciò può causare la visualizzazione degli ologrammi da alcune aree in altre posizioni. Il dispositivo può iniziare a perdere il rilevamento spesso perché la relativa rappresentazione interna dell'ambiente è danneggiata. In questo caso, è consigliabile reimpostare la comprensione ambientale del sistema. Si noti che la reimpostazione della mappa comporta la perdita di tutti i posti di ancoraggio spaziali. In questo modo l'auricolare si rileverà correttamente nelle aree univoche dell'ambiente. È tuttavia possibile che il problema si verifichi di nuovo se il dispositivo viene confuso tra le aree identiche.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Presentazione GDC 2017 su sistemi di coordinate spaziali e rendering olografico](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemi di coordinate in Unity](coordinate-systems-in-unity.md)
 * [Sistemi di coordinate in DirectX](coordinate-systems-in-directx.md)

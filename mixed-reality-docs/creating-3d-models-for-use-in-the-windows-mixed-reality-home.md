@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modellazione, linee guida per la modellazione, requisiti delle risorse, linee guida per la creazione, avvio, avvio 3D, trama, materiali, complessità, triangoli, mesh, poligoni, policount, limiti
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926575"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375628"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Creare modelli 3D da usare nella Home page
 
@@ -53,14 +53,14 @@ La Home realtà mista di Windows non supporta i modelli con più di 10.000 trian
 
 |  Livello LOD  |  Conteggio triangolo consigliato  |  Numero massimo di triangolo | 
 |------|------|------|
-|  LOD 0 |  10.000 |  10.000 | 
-|  LOD 1 |  5\.000  |  10.000 | 
-|  LOD 2 |  2\.500  |  10.000 | 
+|  LOD 0 |  10,000 |  10,000 | 
+|  LOD 1 |  5\.000  |  10,000 | 
+|  LOD 2 |  2\.500  |  10,000 | 
 
 ### <a name="node-counts-and-submesh-limits"></a>Conteggi dei nodi e limiti di sottomesh
 La Home realtà mista di Windows non supporta i modelli con più di 64 nodi o sottomesh 32 per LOD. I nodi sono un concetto nella [specifica glTF](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) che definiscono gli oggetti nella scena. Le sottomesh sono definite nella matrice di [primitive](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) sulla mesh nell'oggetto. 
 
-|  Funzionalità |  Descrizione  |  Massimo supportato | Documentazione |
+|  Caratteristica |  Descrizione  |  Massimo supportato | Documentazione |
 |------|------|------|------|
 |  Nodi |  Oggetti nella scena glTF |  64 per LOD | [Qui](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
 |  Sottomesh |  Somma delle primitive in tutte le mesh |  32 per LOD | [Qui](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)|
@@ -166,9 +166,9 @@ Windows MR usa il nodo Geometry LODs per eseguire il rendering di modelli 3D con
 
 |  Livello LOD  |  Conteggio triangolo consigliato  |  Numero massimo di triangolo | 
 |-------|-------|-------|
-|  LOD 0 |  10.000 |  10.000 | 
-|  LOD 1 |  5\.000  |  10.000 | 
-|  LOD 2 |  2\.500  |  10.000 | 
+|  LOD 0 |  10,000 |  10,000 | 
+|  LOD 1 |  5\.000  |  10,000 | 
+|  LOD 2 |  2\.500  |  10,000 | 
 
 Quando si usa LODs, specificare sempre 3 livelli LOD. LODs mancanti provocheranno il rendering imprevisto del modello perché il sistema LOD passa al livello di LOD mancante. glTF 2,0 non supporta attualmente LODs come parte della specifica di base. LODs deve pertanto essere definito utilizzando l' [estensione MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
 
@@ -235,10 +235,10 @@ Dopo aver apportato le modifiche al modello glTF, è possibile salvarlo direttam
 ### <a name="restrictions"></a>Restrizioni
 Le animazioni non possono essere più lunghe di 20 minuti e non possono contenere più di 36.000 fotogrammi chiave (20 minuti a 30 FPS). Inoltre, quando si usano le animazioni basate su morph target, non devono superare 8192 vertici di destinazione morph o meno. Il superamento di questi conteggi farà sì che l'asset animato non sia supportato nella Home realtà mista di Windows. 
 
-|Funzionalità|Valore massimo|
+|Caratteristica|Massimo|
 |-----|-----|
 |Durata|20 minuti|
-|KeyFrames|36.000| 
+|KeyFrames|36,000| 
 |Vertici di destinazione morph|8192|
 
 ## <a name="gltf-implementation-notes"></a>Note sull'implementazione di glTF
@@ -277,7 +277,7 @@ Windows non supporta le linee e i punti della modalità primitive.
 * [HoloLens Mixed Reality texture Packaging Extensions Specification](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Specifica delle estensioni di Microsoft DDS Textures glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)
 * [Implementare utilità di avvio per app 3D (app Win32)](implementing-3d-app-launchers-win32.md)

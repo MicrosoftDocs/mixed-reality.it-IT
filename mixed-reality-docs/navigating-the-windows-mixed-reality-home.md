@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, sistema operativo, piattaforma, scogliera, casa, casa, ambiente, avvio, menu Start, menu Home, pin, app, avvia app, Inserisci app, Teleport, sposta, naviga
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438157"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375898"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Esplorazione della Home realtà mista di Windows
 
@@ -85,7 +85,7 @@ Con le **cuffie immersive**, è possibile ottenere in modo analogo le playspace 
 
 Gli [auricolari immersivi a realtà mista di Windows](immersive-headset-hardware-details.md) supportano più tipi di input per lo spostamento nella Home realtà mista di Windows. HoloLens non supporta gli input accessori per la navigazione, perché si esplorano fisicamente l'ambiente in uso. Tuttavia, HoloLens [supporta gli input](hardware-accessories.md) per l'interazione con le app.
 
-### <a name="motion-controllers"></a>Controller di movimento
+### <a name="motion-controllers"></a>Controller del movimento
 
 L'esperienza di realtà mista di Windows migliore sarà con i [controller di movimento](motion-controllers.md) per la realtà mista di Windows che supportano il rilevamento di 6 gradi di libertà usando solo i sensori presenti nell'auricolare. non sono richiesti fotocamere o marcatori esterni.
 
@@ -134,7 +134,7 @@ La realtà mista di Windows include diverse app predefinite, ad esempio:
 * **Desktop** (auricolari immersivi) per la visualizzazione di monitor desktop in un auricolare immersivo
 * **Esplora file** Accedere a file e cartelle che si trovano nel dispositivo
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Visualizzazioni delle app](app-views.md)
 * [Controller del movimento](motion-controllers.md)
 * [Accessori hardware](hardware-accessories.md)
