@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Realtà mista di Windows, realtà mista, realtà virtuale, VR, MR, prestazioni, ottimizzazione, CPU, GPU
-ms.openlocfilehash: 7d8a0c95d59ec7e42e11bc1e1b6b40c702e01529
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
+ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438241"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79479574"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Informazioni sulle prestazioni per la realtà mista
 
@@ -19,7 +19,7 @@ Questo articolo è un'introduzione alla comprensione del significato delle prest
 
 Di seguito sono elencati i valori di framerate a prestazioni per ogni piattaforma di destinazione.
 
-| Piattaforma | Frequenza fotogrammi di destinazione |
+| Platform | Frequenza fotogrammi di destinazione |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
 | [Windows reality Ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
@@ -98,7 +98,8 @@ La velocità di riempimento si concentra sulla riduzione del numero di operazion
 4) Numero di pixel di cui eseguire il rendering (risoluzione dello schermo)
 
 #### <a name="reduce-polygon-count"></a>Ridurre il numero di poligoni
-I conteggi di poligoni più elevati generano più operazioni per la GPU; riducendo il numero di poligoni nella scena si riduce il tempo di rendering. Ci sono altri fattori che interessano l'ombreggiatura della geometria che può essere costosa, ma il conteggio dei poligoni è la metrica più semplice per determinare il costo di rendering di una scena.
+
+I conteggi di poligoni più elevati generano più operazioni per la GPU; [riducendo il numero di poligoni](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) nella scena si riduce il tempo di rendering. Ci sono altri fattori che interessano l'ombreggiatura della geometria che può essere costosa, ma il conteggio dei poligoni è la metrica più semplice per determinare il costo di rendering di una scena.
 
 #### <a name="limit-overdraw"></a>Limite di sovralievo
 
@@ -123,15 +124,20 @@ In genere, gli shader eseguono numerose trasformazioni e calcoli di illuminazion
     - In genere, il numero di vertici è molto più piccolo del numero di pixel (720p è 921.600 pixel, 1080p è 2.073.600 pixel e così via)
 
 #### <a name="remove-gpu-stages"></a>Rimuovi fasi GPU
+
 Gli effetti di post-elaborazione possono essere molto costosi e aumentare la velocità di riempimento dell'applicazione. Sono incluse tecniche di anti-aliasing, ad esempio MSAA. In HoloLens è consigliabile evitare completamente queste tecniche, oltre ad altre fasi dello shader, ad esempio geometria, scafo e compute shader.
 
 ## <a name="memory-recommendations"></a>Consigli sulla memoria
+
 Un numero eccessivo di operazioni di allocazione e deallocazione della memoria può comportare prestazioni incoerenti, frame bloccati e altro comportamento dannoso. È particolarmente importante comprendere le considerazioni sulla memoria durante lo sviluppo in Unity, perché la gestione della memoria è controllata dal Garbage Collector.
 
 #### <a name="object-pooling"></a>Pool di oggetti
 
 Il pool di oggetti è una tecnica comune per ridurre i costi delle allocazioni e delle deallocazioni continue degli oggetti. Questa operazione viene eseguita allocando un pool di grandi dimensioni di oggetti identici e riutilizzando le istanze disponibili inattive da questo pool invece di generare ed eliminare costantemente gli oggetti nel tempo. I pool di oggetti sono ottimi per i componenti riutilizzabili con durata variabile durante un'app.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 - [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)
 - [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
+- [Ottimizzare i modelli 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [Procedure consigliate per la conversione e l'ottimizzazione di modelli 3D in tempo reale](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+
