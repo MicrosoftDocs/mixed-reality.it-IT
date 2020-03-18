@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, progettazione, comfort, HoloLens 2, HoloLens (prima generazione)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491152"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376068"
 ---
 # <a name="comfort"></a>Comfort
 
@@ -173,7 +173,7 @@ L'angolo dello sguardo considerato ottimale (condizione di riposo) è compreso t
 
 L'affaticamento muscolare può aumentare quando gli utenti devono tenere una mano alzata per tutta la durata di un'esperienza. Può anche essere faticoso per l'utente dover effettuare ripetutamente movimenti di simulazione del tocco con un dito per periodi prolungati. Consigliamo pertanto di evitare di richiedere movimenti ripetuti e costanti. Questo obiettivo può essere raggiunto incorporando brevi interruzioni oppure offrendo la possibilità di interagire con l'app con una combinazione di gesti e input vocale.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Sguardo fisso](gaze-and-commit.md)
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [Interazioni istintive](interaction-fundamentals.md)

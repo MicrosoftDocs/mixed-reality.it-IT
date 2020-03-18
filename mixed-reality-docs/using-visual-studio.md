@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realtà mista, debug, distribuzione
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830835"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376108"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso di Visual Studio per la distribuzione e il debug
 
@@ -136,7 +136,7 @@ Puoi usare Visual Studio per eseguire il debug di un'app di Windows universale i
 6. Scegli il tipo di codice di cui eseguire il debug (gestito, nativo, misto)
 7. Fai clic su **Associa** o **Avvia**
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Installare gli strumenti](install-the-tools.md)
 * [Uso dell'emulatore HoloLens](using-the-hololens-emulator.md)
 * [Distribuzione e debug delle app UWP (Universal Windows Platform)](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
