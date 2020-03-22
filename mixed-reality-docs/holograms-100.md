@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realtà mista, realtà mista di Windows, HoloLens, immersiva, VR, Mr, introduzione, ologramma, Accademia, esercitazione
-ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
+ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375598"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082055"
 ---
 >[!NOTE]
 >Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista.  Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
