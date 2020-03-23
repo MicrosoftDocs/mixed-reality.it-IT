@@ -1,45 +1,57 @@
 ---
-title: Esercitazioni su servizi vocali di Azure-2. Aggiunta di una modalità offline per la traduzione vocale locale
-description: Completare questo corso per apprendere come implementare Azure Speech SDK in un'applicazione di realtà mista.
+title: Esercitazioni sui servizi vocali di Azure - 2. Aggiunta di una modalità offline per la traduzione locale da voce a testo
+description: Completa questo corso per imparare a implementare Azure Speech SDK in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913216"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031604"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a><span data-ttu-id="0f86e-105">2. aggiunta di una modalità offline per la traduzione vocale locale</span><span class="sxs-lookup"><span data-stu-id="0f86e-105">2. Adding an offline mode for local speech-to-text translation</span></span>
+# <a name="2-using-speech-recognition-to-execute-commands"></a><span data-ttu-id="ea6da-105">2. Uso del riconoscimento vocale per l'esecuzione di comandi</span><span class="sxs-lookup"><span data-stu-id="ea6da-105">2. Using speech recognition to execute commands</span></span>
 
-<span data-ttu-id="0f86e-106">In questa esercitazione verrà aggiunta una modalità offline che consente di eseguire la traduzione vocale locale quando non è possibile connettersi al servizio di Azure.</span><span class="sxs-lookup"><span data-stu-id="0f86e-106">In this tutorial, we'll add an offline mode that lets you perform local speech-to-text translation when we are unable to connect to the Azure service.</span></span> <span data-ttu-id="0f86e-107">Si *simula* anche uno stato disconnesso.</span><span class="sxs-lookup"><span data-stu-id="0f86e-107">We will also *simulate* a disconnected state.</span></span>
+<span data-ttu-id="ea6da-106">In questa esercitazione aggiungerai la possibilità di eseguire comandi con il riconoscimento vocale di Azure, che consentirà di eseguire un evento in base alla parola o alla frase definita.</span><span class="sxs-lookup"><span data-stu-id="ea6da-106">In this tutorial, you will add the ability to execute commands using Azure speech recognition which will allow you to make something happen based on the word or phrase you define.</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="0f86e-108">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="0f86e-108">Instructions</span></span>
+## <a name="objectives"></a><span data-ttu-id="ea6da-107">Obiettivi</span><span class="sxs-lookup"><span data-stu-id="ea6da-107">Objectives</span></span>
 
-1. <span data-ttu-id="0f86e-109">Consente di selezionare l'oggetto Lunarcom_Base nella gerarchia.</span><span class="sxs-lookup"><span data-stu-id="0f86e-109">Select the Lunarcom_Base object in the hierarchy.</span></span>
+* <span data-ttu-id="ea6da-108">Imparare a usare il riconoscimento vocale di Azure per eseguire comandi</span><span class="sxs-lookup"><span data-stu-id="ea6da-108">Learn how Azure speech recognition can be used to execute commands</span></span>
 
-2. <span data-ttu-id="0f86e-110">Fare clic su Aggiungi componente nel pannello di controllo.</span><span class="sxs-lookup"><span data-stu-id="0f86e-110">Click Add Component in the Inspector panel.</span></span> <span data-ttu-id="0f86e-111">Cercare e selezionare il riconoscimento Lunarcom offline.</span><span class="sxs-lookup"><span data-stu-id="0f86e-111">Search for and select the Lunarcom Offline Recognition.</span></span>
+## <a name="instructions"></a><span data-ttu-id="ea6da-109">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="ea6da-109">Instructions</span></span>
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+<span data-ttu-id="ea6da-110">Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **Lunarcom** e quindi nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Lunarcom Wake Word Recognizer (Script)** (Riconoscimento parola di attivazione Lunarcom - Script) all'oggetto Lunarcom e configuralo come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="ea6da-110">In the Hierarchy window, select the **Lunarcom** object, then in the Inspector window, use the **Add Component** button to add the **Lunarcom Wake Word Recognizer (Script)** component to the Lunarcom object and configure it as follows:</span></span>
 
-3. <span data-ttu-id="0f86e-113">Fare clic sull'elenco a discesa in LunarcomOfflineRecognizer e selezionare abilitato.</span><span class="sxs-lookup"><span data-stu-id="0f86e-113">Click the drop-down in the LunarcomOfflineRecognizer and select Enabled.</span></span> <span data-ttu-id="0f86e-114">Questo programma consente di eseguire il progetto per agire come l'utente non dispone di una connessione.</span><span class="sxs-lookup"><span data-stu-id="0f86e-114">This programs the project to act like the user doesn't have a connection.</span></span>
+* <span data-ttu-id="ea6da-111">Nel campo **Wake Word** (Parola di attivazione) immetti una frase appropriata, ad esempio _Activate Terminal_.</span><span class="sxs-lookup"><span data-stu-id="ea6da-111">In the **Wake Word** field, enter a suitable phrase, for example, _Activate terminal_.</span></span>
+* <span data-ttu-id="ea6da-112">Nel campo **Dismiss Word** (Parola di eliminazione) immetti una frase appropriata, ad esempio _Dismiss Terminal_.</span><span class="sxs-lookup"><span data-stu-id="ea6da-112">In the **Dismiss Word** field, enter a suitable phrase, for example, _Dismiss terminal_.</span></span>
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-4. <span data-ttu-id="0f86e-116">Premere Riproduci nell'editor di Unity e testarlo.</span><span class="sxs-lookup"><span data-stu-id="0f86e-116">Press Play in Unity Editor, and test it.</span></span> <span data-ttu-id="0f86e-117">Premere il microfono nell'angolo in basso a sinistra della scena e iniziare a pronunciare.</span><span class="sxs-lookup"><span data-stu-id="0f86e-117">Press the microphone in the bottom-left corner in the scene and begin speaking.</span></span>
+> [!NOTE]
+> <span data-ttu-id="ea6da-114">Il componente Lunarcom Wake Word Recognizer (Script) (Riconoscimento parola di attivazione Lunarcom - Script) non fa parte di MRTK.</span><span class="sxs-lookup"><span data-stu-id="ea6da-114">The Lunarcom Wake Word Recognizer (Script) component is not part of MRTK.</span></span> <span data-ttu-id="ea6da-115">È stato fornito con gli asset dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="ea6da-115">It was provided with this tutorial's assets.</span></span>
 
-    >[!NOTE]
-    ><span data-ttu-id="0f86e-118">Poiché è offline, la funzionalità di riattivazione delle parole è stata disabilitata.</span><span class="sxs-lookup"><span data-stu-id="0f86e-118">Because we’re offline, wake word functionality has been disabled.</span></span> <span data-ttu-id="0f86e-119">È necessario fare clic fisicamente sul microfono ogni volta che si desidera che il riconoscimento vocale venga riconosciuto quando è offline.</span><span class="sxs-lookup"><span data-stu-id="0f86e-119">You'll need to physically click the microphone every time you wish to have your speech recognized when offline.</span></span>
+<span data-ttu-id="ea6da-116">Se ora attivi la modalità gioco, come nell'esercitazione precedente, il pannello del terminale viene abilitato per impostazione predefinita. Tuttavia, puoi ora disabilitarlo pronunciando la parola di eliminazione **Dismiss terminal**:</span><span class="sxs-lookup"><span data-stu-id="ea6da-116">If you now enter Game mode, as in the previous tutorial, the terminal panel is enabled by default, but you can now disable it by saying the Dismiss Word, **Dismiss terminal**:</span></span>
 
-    <span data-ttu-id="0f86e-120">Di seguito è riportato un esempio di come potrebbe apparire la scena.</span><span class="sxs-lookup"><span data-stu-id="0f86e-120">Below is an example of what your scene could look like.</span></span>
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+<span data-ttu-id="ea6da-118">Puoi anche riabilitarlo pronunciando la parola di attivazione **Activate terminal**:</span><span class="sxs-lookup"><span data-stu-id="ea6da-118">And enable it again by saying the Wake Word, **Activate terminal**:</span></span>
 
-## <a name="congratulations"></a><span data-ttu-id="0f86e-122">Lezione completata</span><span class="sxs-lookup"><span data-stu-id="0f86e-122">Congratulations</span></span>
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-<span data-ttu-id="0f86e-123">La modalità offline è stata abilitata.</span><span class="sxs-lookup"><span data-stu-id="0f86e-123">The offline mode has been enabled.</span></span> <span data-ttu-id="0f86e-124">A questo punto, quando si è offline, è possibile continuare a lavorare sul progetto con l'SDK di riconoscimento vocale.</span><span class="sxs-lookup"><span data-stu-id="0f86e-124">Now, when you're offline, you can still work on your project with the speech-SDK!</span></span>
+> [!CAUTION]
+> <span data-ttu-id="ea6da-120">Poiché l'applicazione deve connettersi ad Azure, assicurati che il computer o il dispositivo sia connesso a Internet.</span><span class="sxs-lookup"><span data-stu-id="ea6da-120">The application needs to connect to Azure, so make sure your computer/device is connected to the internet.</span></span>
 
-[<span data-ttu-id="0f86e-125">Esercitazione successiva: 3. aggiunta del componente di traduzione vocale dei servizi cognitivi di Azure</span><span class="sxs-lookup"><span data-stu-id="0f86e-125">Next Tutorial: 3. Adding the Azure Cognitive Services speech translation component</span></span>](mrlearning-speechSDK-ch3.md)
+> [!TIP]
+> <span data-ttu-id="ea6da-121">Se prevedi di non essere spesso in grado di connetterti ad Azure, puoi implementare i comandi vocali anche con MRTK seguendo le istruzioni contenute in [Abilitazione dei comandi vocali](mrlearning-base-ch5.md#enabling-voice-commands).</span><span class="sxs-lookup"><span data-stu-id="ea6da-121">If you anticipate frequently not being able to connect to Azure, you can also implement speech commands using MRTK by following the [Enabling Voice Commands](mrlearning-base-ch5.md#enabling-voice-commands) instructions.</span></span>
+
+## <a name="congratulations"></a><span data-ttu-id="ea6da-122">Lezione completata</span><span class="sxs-lookup"><span data-stu-id="ea6da-122">Congratulations</span></span>
+
+<span data-ttu-id="ea6da-123">Hai implementato i comandi vocali basati su Azure.</span><span class="sxs-lookup"><span data-stu-id="ea6da-123">You have implemented speech commands powered by Azure.</span></span> <span data-ttu-id="ea6da-124">Esegui l'applicazione nel dispositivo per verificare che la funzionalità venga eseguita correttamente.</span><span class="sxs-lookup"><span data-stu-id="ea6da-124">Run the application on your device to ensure the feature is working properly.</span></span>
+
+<span data-ttu-id="ea6da-125">Nell'esercitazione successiva apprenderai come tradurre il parlato con la traduzione vocale di Azure.</span><span class="sxs-lookup"><span data-stu-id="ea6da-125">In the next tutorial, you will learn how to translate speech using Azure speech translation.</span></span>
+
+[<span data-ttu-id="ea6da-126">Esercitazione successiva: 3. Aggiunta del componente di traduzione vocale di Servizi cognitivi di Azure</span><span class="sxs-lookup"><span data-stu-id="ea6da-126">Next Tutorial: 3. Adding the Azure Cognitive Services speech translation component</span></span>](mrlearning-speechSDK-ch3.md)
