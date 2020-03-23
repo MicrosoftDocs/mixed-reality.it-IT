@@ -1,58 +1,59 @@
 ---
-title: Esercitazioni sugli ancoraggi spaziali di Azure-3. Visualizzazione del feedback di ancoraggio spaziale di Azure
+title: Esercitazioni su Ancoraggi nello spazio di Azure - 3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure
 description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553939"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031257"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualizzazione del feedback di ancoraggio spaziale di Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure
 
-In questa esercitazione si apprenderà come fornire agli utenti feedback sull'individuazione, sugli eventi e sullo stato di ancoraggio quando si usano gli ancoraggi di Azure Spatial (ASA).
+In questa esercitazione apprenderai come fornire agli utenti feedback su individuazione, eventi e stato degli ancoraggi con Ancoraggi nello spazio di Azure (ASA).
 
 ## <a name="objectives"></a>Obiettivi
 
-* Informazioni su come configurare un pannello dell'interfaccia utente che visualizza informazioni importanti sulla sessione ASA corrente
-* Comprendere ed esplorare gli elementi di feedback che l'SDK ASA rende disponibili agli utenti
+* Imparare a configurare un riquadro dell'interfaccia utente in cui vengono visualizzate informazioni importanti sulla sessione ASA corrente
+* Comprendere ed esplorare gli elementi di feedback che l'SDK di ASA mette a disposizione degli utenti
 
-## <a name="set-up-asa-feedback-ui-panel"></a>Configurare il pannello dell'interfaccia utente del feedback ASA
+## <a name="set-up-asa-feedback-ui-panel"></a>Configurare il riquadro dell'interfaccia utente per il feedback ASA
 
-Nella finestra gerarchia, fare clic con il pulsante destro del mouse sulle **istruzioni** > oggetto **textContent** e selezionare **oggetto 3D** > **Text-TextMeshPro** per creare un oggetto di testo TextMeshPro come figlio delle istruzioni > oggetto TextContent e assegnargli un nome appropriato, ad esempio, **feedback**:
+Nella finestra Hierarchy (Gerarchia) fai clic con il pulsante destro del mouse su **Instructions** > **TextContent** (Istruzioni > TextContent) e scegli **3D Object** > **Text - TextMeshPro** (Oggetto 3D > Testo - TextMeshPro) per creare un oggetto di testo TextMeshPro come elemento figlio di Instructions > TextContent (Istruzioni > TextContent) e assegnargli un nome appropriato, ad esempio **Feedback**:
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
-> Per semplificare l'uso della scena, impostare la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilità della scena</a> per l'oggetto ParentAnchor su off facendo clic sull'icona a occhi a sinistra dell'oggetto. In questo modo, l'oggetto viene nascosto nella finestra della scena senza modificare la visibilità del gioco.
+> Per rendere più agevole l'uso della scena, disattiva la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilità</a> per l'oggetto ParentAnchor facendo clic sull'icona a forma di occhio a sinistra dell'oggetto. In questo modo, l'oggetto viene nascosto nella finestra Scene (Scena) senza effetti sulla sua visibilità nel gioco.
 
-Con l'oggetto **feedback** ancora selezionato, nella finestra di controllo modificare la posizione e le dimensioni in modo che venga posizionato perfettamente sotto il testo dell'istruzione, ad esempio:
+Mantenendo l'oggetto **Feedback** selezionato, modifica le relative dimensioni e posizione nella finestra Inspector (Controllo), in modo che tale oggetto venga posizionato perfettamente sotto il testo dell'istruzione, ad esempio:
 
-* Modificare la trasformazione Rect **pos Y** in-0,24
-* Modificare la **larghezza** della trasformazione Rect in 0,555
-* Modificare l' **altezza** di trasformazione Rect in 0,1
+* Modifica il valore di **Pos Y** per Rect Transform (Trasformazione rettangolo) impostandolo su -0.24
+* Modifica il valore di **Width** (Larghezza) per Rect Transform (Trasformazione rettangolo) impostandolo su 0.555
+* Modifica il valore di **Height** (Altezza) per Rect Transform (Trasformazione rettangolo) impostandolo su 0.1
 
-Quindi scegliere Proprietà carattere in modo che il testo si trovi perfettamente all'interno dell'area di testo, ad esempio:
+Scegli quindi le proprietà del tipo di carattere, in modo da adattare bene il testo all'interno dell'area di testo, ad esempio:
 
-* Modificare lo **stile del tipo di carattere** text mesh Pro (script) in grassetto
-* Modificare le **dimensioni del tipo di carattere** text mesh Pro (script) in 0,17
-* Modificare l' **allineamento** di Text mesh Pro (script) in centro e al centro
+* Modifica il valore di **Font Style** (Stile carattere) per Text Mesh Pro (Script) impostandolo su Bold (Grassetto)
+* Modifica il valore di **Font Size** (Dimensione carattere) per Text Mesh Pro (Script) impostandolo su 0.17
+* Modifica il valore di **Alignment** (Allineamento) impostandolo su Center (Al centro) e Middle (In mezzo)
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-Con l'oggetto **feedback** ancora selezionato, nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere il componente script di **ancoraggio feedback (script)** all'oggetto feedback:
+Con l'oggetto **Feedback** ancora selezionato, nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Anchor Feedback Script (Script)** (Script di feedback Ancoraggi - Script) all'oggetto Feedback:
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Assegnare l'oggetto **feedback** a se stesso al campo **testo feedback** **dello script di ancoraggio (script)** del componente:
+Assegna l'oggetto **Feedback** stesso al campo **Feedback Text** (Testo feedback) del componente **Anchor Feedback Script (Script)** (Script di feedback Ancoraggi - Script).
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
-## <a name="congratulations"></a>Complimenti
+## <a name="congratulations"></a>Lezione completata
 
-In questa esercitazione si è appreso come creare un pannello dell'interfaccia utente per visualizzare lo stato corrente dell'esperienza di ancoraggio spaziale di Azure per fornire agli utenti il feedback in tempo reale.
+In questa esercitazione hai appreso come creare un riquadro dell'interfaccia utente per visualizzare lo stato corrente dell'esperienza di Ancoraggi nello spazio di Azure e fornire agli utenti feedback in tempo reale.

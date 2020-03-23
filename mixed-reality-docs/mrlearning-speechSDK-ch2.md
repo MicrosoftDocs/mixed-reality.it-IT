@@ -1,45 +1,57 @@
 ---
-title: Esercitazioni su servizi vocali di Azure-2. Aggiunta di una modalità offline per la traduzione vocale locale
-description: Completare questo corso per apprendere come implementare Azure Speech SDK in un'applicazione di realtà mista.
+title: Esercitazioni sui servizi vocali di Azure - 2. Aggiunta di una modalità offline per la traduzione locale da voce a testo
+description: Completa questo corso per imparare a implementare Azure Speech SDK in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913216"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031604"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. aggiunta di una modalità offline per la traduzione vocale locale
+# <a name="2-using-speech-recognition-to-execute-commands"></a>2. Uso del riconoscimento vocale per l'esecuzione di comandi
 
-In questa esercitazione verrà aggiunta una modalità offline che consente di eseguire la traduzione vocale locale quando non è possibile connettersi al servizio di Azure. Si *simula* anche uno stato disconnesso.
+In questa esercitazione aggiungerai la possibilità di eseguire comandi con il riconoscimento vocale di Azure, che consentirà di eseguire un evento in base alla parola o alla frase definita.
+
+## <a name="objectives"></a>Obiettivi
+
+* Imparare a usare il riconoscimento vocale di Azure per eseguire comandi
 
 ## <a name="instructions"></a>Istruzioni
 
-1. Consente di selezionare l'oggetto Lunarcom_Base nella gerarchia.
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **Lunarcom** e quindi nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Lunarcom Wake Word Recognizer (Script)** (Riconoscimento parola di attivazione Lunarcom - Script) all'oggetto Lunarcom e configuralo come indicato di seguito:
 
-2. Fare clic su Aggiungi componente nel pannello di controllo. Cercare e selezionare il riconoscimento Lunarcom offline.
+* Nel campo **Wake Word** (Parola di attivazione) immetti una frase appropriata, ad esempio _Activate Terminal_.
+* Nel campo **Dismiss Word** (Parola di eliminazione) immetti una frase appropriata, ad esempio _Dismiss Terminal_.
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-3. Fare clic sull'elenco a discesa in LunarcomOfflineRecognizer e selezionare abilitato. Questo programma consente di eseguire il progetto per agire come l'utente non dispone di una connessione.
+> [!NOTE]
+> Il componente Lunarcom Wake Word Recognizer (Script) (Riconoscimento parola di attivazione Lunarcom - Script) non fa parte di MRTK. È stato fornito con gli asset dell'esercitazione.
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+Se ora attivi la modalità gioco, come nell'esercitazione precedente, il pannello del terminale viene abilitato per impostazione predefinita. Tuttavia, puoi ora disabilitarlo pronunciando la parola di eliminazione **Dismiss terminal**:
 
-4. Premere Riproduci nell'editor di Unity e testarlo. Premere il microfono nell'angolo in basso a sinistra della scena e iniziare a pronunciare.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >Poiché è offline, la funzionalità di riattivazione delle parole è stata disabilitata. È necessario fare clic fisicamente sul microfono ogni volta che si desidera che il riconoscimento vocale venga riconosciuto quando è offline.
+Puoi anche riabilitarlo pronunciando la parola di attivazione **Activate terminal**:
 
-    Di seguito è riportato un esempio di come potrebbe apparire la scena.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+> [!CAUTION]
+> Poiché l'applicazione deve connettersi ad Azure, assicurati che il computer o il dispositivo sia connesso a Internet.
+
+> [!TIP]
+> Se prevedi di non essere spesso in grado di connetterti ad Azure, puoi implementare i comandi vocali anche con MRTK seguendo le istruzioni contenute in [Abilitazione dei comandi vocali](mrlearning-base-ch5.md#enabling-voice-commands).
 
 ## <a name="congratulations"></a>Lezione completata
 
-La modalità offline è stata abilitata. A questo punto, quando si è offline, è possibile continuare a lavorare sul progetto con l'SDK di riconoscimento vocale.
+Hai implementato i comandi vocali basati su Azure. Esegui l'applicazione nel dispositivo per verificare che la funzionalità venga eseguita correttamente.
 
-[Esercitazione successiva: 3. aggiunta del componente di traduzione vocale dei servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
+Nell'esercitazione successiva apprenderai come tradurre il parlato con la traduzione vocale di Azure.
+
+[Esercitazione successiva: 3. Aggiunta del componente di traduzione vocale di Servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
