@@ -1,271 +1,272 @@
 ---
-title: Esercitazioni introduttive-6. Esplorazione delle opzioni di input avanzate
+title: Esercitazioni introduttive - 6. Esplorazione delle opzioni di input avanzate
 description: Completa questo corso per informazioni su come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: aaa02ce118fd051d94311e837b143affc96ff72b
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554257"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376088"
 ---
-# <a name="6-exploring-advanced-input-options"></a>6. esplorazione delle opzioni di input avanzate
+# <a name="6-exploring-advanced-input-options"></a>6. Esplorazione delle opzioni di input avanzate
 
-In questa esercitazione si esamineranno alcune opzioni di input avanzate per HoloLens 2, tra cui l'uso di comandi vocali, movimenti di panoramica e rilevamento degli occhi.
+In questa esercitazione esaminerai alcune opzioni di input avanzate per HoloLens 2, come l'uso di comandi vocali, il movimento di panoramica e il tracciamento oculare.
 
 ## <a name="objectives"></a>Obiettivi
 
-* Attivare eventi usando comandi vocali e parole chiave
-* Usare le mani tracciate per la panoramica delle trame e degli oggetti 3D con le mani rilevate
-* Sfruttare le funzionalità di rilevamento degli occhi di HoloLens 2 per selezionare gli oggetti
+* Attivare gli eventi usando comandi vocali e parole chiave
+* Usare le mani tracciate per fare una panoramica di trame e oggetti 3D
+* Sfruttare le funzionalità di tracciamento oculare di HoloLens 2 per selezionare gli oggetti
 
 ## <a name="enabling-voice-commands"></a>Abilitazione dei comandi vocali
 <!-- TODO: Consider changing to 'Enabling Speech Commands -->
 
-In questa sezione verrà implementato un comando vocale per consentire all'utente di riprodurre un suono nell'oggetto Octa. A tale scopo, si creerà un nuovo comando vocale e quindi si configurerà l'evento in modo da attivare l'azione desiderata quando la parola chiave del comando vocale viene pronunciata.
+In questa sezione implementerai un comando vocale per consentire all'utente di riprodurre un suono per l'oggetto Octa. A tale scopo, creerai un nuovo comando vocale e quindi configurerai l'evento in modo che attivi l'azione desiderata quando viene pronunciata la parola chiave del comando vocale.
 
 Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
 
 1. Clonare il profilo di sistema di input predefinito
-2. Clonare il profilo dei comandi vocali predefiniti
-3. Crea un nuovo comando vocale
-4. Aggiungere e configurare il componente gestore di input vocale (script)
-5. Implementare l'evento di risposta per il comando vocale
+2. Clonare il profilo dei comandi vocali predefinito
+3. Creare un nuovo comando vocale
+4. Aggiungere e configurare il componente Speech Input Handler (Script) (Gestore input vocale - Script)
+5. Implementare l'evento Response (Risposta) per il comando vocale
 
-### <a name="1-clone-the-default-input-system-profile"></a>1. clonare il profilo di sistema di input predefinito
+### <a name="1-clone-the-default-input-system-profile"></a>1. Clonare il profilo di sistema di input predefinito
 
-Nella finestra gerarchia selezionare l'oggetto **MixedRealityToolkit** , quindi nella finestra Inspector selezionare la scheda **input** e clonare il **DefaultHoloLens2InputSystemProfile** per sostituirlo con il proprio profilo di **sistema di input**personalizzabile:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **MixedRealityToolkit** e quindi nella finestra Inspector (Controllo) seleziona la scheda **Input** e clona **DefaultHoloLens2InputSystemProfile** per sostituirlo con il tuo **profilo di sistema di input** personalizzabile:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
 
 > [!TIP]
-> Per un promemoria su come clonare i profili MRTK, è possibile fare riferimento alle istruzioni [How to configure the Mixed Reality Toolkit Profiles](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) .
+> Per rivedere la procedura di clonazione dei profili MRTK, puoi fare riferimento alle istruzioni contenute in [Come configurare i profili di Mixed Reality Toolkit](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).
 
-### <a name="2-clone-the-default-speech-commands-profile"></a>2. clonare il profilo dei comandi vocali predefiniti
+### <a name="2-clone-the-default-speech-commands-profile"></a>2. Clonare il profilo dei comandi vocali predefinito
 
-Espandere la sezione **sintesi vocale** e clonare il **DefaultMixedRealitySpeechCommandsProfile** per sostituirlo con un **profilo di comandi vocale**personalizzabile:
+Espandi la sezione **Speech** (Voce) e clona **DefaultMixedRealitySpeechCommandsProfile** per sostituirlo con il tuo **profilo dei comandi vocali** personalizzabile:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step2-1.png)
 
-### <a name="3-create-a-new-speech-command"></a>3. creare un nuovo comando vocale
+### <a name="3-create-a-new-speech-command"></a>3. Creare un nuovo comando vocale
 
-Nella sezione **comandi vocali** fare clic sul pulsante **+ Aggiungi un nuovo riconoscimento** vocale per aggiungere un nuovo comando vocale nella parte inferiore dell'elenco dei comandi di riconoscimento vocale esistenti, quindi nel campo **parola chiave** immettere una parola o una frase appropriata, ad esempio **Play Music**:
+Nella sezione **Speech Commands** (Comandi vocali) fai clic sul pulsante **+ Add a New Speech Command** (+ Aggiungi un nuovo comando vocale) per aggiungere un nuovo comando vocale in fondo all'elenco dei comandi vocali esistenti e quindi nel campo **Keyword** (Parola chiave) immetti una parola o una frase appropriata, ad esempio **Play Music** (Riproduci musica):
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step3-1.png)
 
 > [!TIP]
-> Se il computer non dispone di un microfono e si vuole testare il comando vocale usando la simulazione in-Editor, è possibile assegnare un KeyCode al comando vocale che consente di attivarlo quando viene premuto il tasto corrispondente.
+> Se il computer non dispone di un microfono e vuoi provare il comando vocale usando la simulazione nell'editor, puoi assegnare un codice tasto (KeyCode) al comando vocale in modo che tale comando venga attivato quando viene premuto il tasto corrispondente.
 
-### <a name="4-add-and-configure-the-speech-input-handler-script-component"></a>4. aggiungere e configurare il componente gestore di input vocale (script)
+### <a name="4-add-and-configure-the-speech-input-handler-script-component"></a>4. Aggiungere e configurare il componente Speech Input Handler (Script) (Gestore input vocale - Script)
 
-Nella finestra gerarchia selezionare l'oggetto **Octa** e aggiungere il componente **gestore di input vocale (script)** all'oggetto Octa. Deselezionare quindi la casella di controllo **è stato attivo obbligatorio** in modo che l'utente non debba esaminare l'oggetto Octa per attivare il comando vocale:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **Octa** e aggiungigli il componente **Speech Input Handler (Script)** (Gestore input vocale - Script). Quindi deseleziona la casella di controllo **Is Focus Required** (È necessario lo stato attivo) in modo che l'utente non debba guardare l'oggetto Octa per attivare il comando vocale:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step4-1.png)
 
-### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implementare l'evento di risposta per il comando vocale
+### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. Implementare l'evento Response (Risposta) per il comando vocale
 
-Nel componente gestore di input vocale (script) fare clic sul pulsante **+** piccolo per aggiungere un elemento Keyword all'elenco di parole chiave:
+Nel componente Speech Input Handler (Script) (Gestore input vocale - Script) fai clic sul piccolo pulsante **+** per aggiungere un elemento parola chiave all'elenco delle parole chiave:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-1.png)
 
-Fare clic sull'elemento appena creato **0** per espanderlo, quindi, dall'elenco a discesa **parola chiave** , scegliere la parola chiave **Play Music** creata in precedenza:
+Fai clic sull'**Element 0** (Elemento 0) appena creato per espanderlo e quindi dall'elenco a discesa **Keyword** (Parola chiave) seleziona la parola chiave **Play Music** (Riproduci musica) creata in precedenza:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
 > [!NOTE]
-> Le parole chiave nell'elenco a discesa della parola chiave vengono popolate in base alle parole chiave definite nell'elenco dei comandi vocali nel profilo dei comandi vocali.
+> L'elenco a discesa Keyword (Parola chiave) viene popolato con le parole chiave definite nell'elenco Speech Commands (Comandi vocali) nel profilo dei comandi vocali.
 
-Creare un nuovo evento **Response ()** , configurare l'oggetto **Octa** per ricevere l'evento, definire **audiosource. PlayOneShot** come azione da attivare e assegnare una clip audio adatta al campo **clip** audio, ad esempio, il MRTK_Gem clip audio:
+Crea un nuovo evento **Response ()** (Risposta), configura l'oggetto **Octa** in modo che riceva l'evento, definisci **AudioSource.PlayOneShot** come azione da attivare e assegna un clip audio appropriato al campo **Audio Clip** (Clip audio), ad esempio MRTK_Gem:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-3.png)
 
 > [!TIP]
-> Per un promemoria sulla modalità di implementazione degli eventi e sull'assegnazione di un clip audio, è possibile fare riferimento alle istruzioni per l'esecuzione di per l' [evento Touch started](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) .
+> Per rivedere la procedura di implementazione degli eventi e di assegnazione di un clip audio, puoi fare riferimento alle istruzioni contenute in [Implementare l'evento On Touch Started (Avviato al tocco)](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event).
 
 ## <a name="the-pan-gesture"></a>Il movimento di panoramica
 
-Il gesto Pan è utile per lo scorrimento usando il dito o la mano per scorrere il contenuto. In questo esempio si apprenderà innanzitutto come scorrere un'interfaccia utente 2D e quindi espanderla in modo da poter scorrere una raccolta di oggetti 3D.
+Il movimento di panoramica è utile per le operazioni di scorrimento del contenuto tramite il dito o la mano. In questo esempio apprenderai innanzitutto come scorrere un'interfaccia utente 2D e quindi come espanderla in modo da poter scorrere una raccolta di oggetti 3D.
 
 Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
 
-1. Creare un oggetto Quad che può essere usato per la panoramica
-2. Aggiungere il componente near Interaction touchable (script)
-3. Aggiungere il componente zoom (script) per l'interazione della mano
-4. Aggiungere contenuto 2D da scorrere
-5. Aggiungi contenuto 3D da scorrere
-6. Aggiungere il componente Move with Pan (script)
+1. Creare un oggetto Quad utilizzabile per la panoramica
+2. Aggiungere il componente Near Interaction Touchable (Script) (Toccabile con interazione da vicino - Script)
+3. Aggiungere il componente Hand Interaction Pan Zoom (Script) (Zoom panoramica con interazione manuale - Script)
+4. Aggiungere il contenuto 2D da scorrere
+5. Aggiungere il contenuto 3D da scorrere
+6. Aggiungere il componente Move With Pan (Script) (Spostamento con panoramica - Script)
 
 > [!NOTE]
-> Il componente Move with Pan (script) non fa parte di MRTK. È stato fornito con le risorse dell'esercitazione.
+> Il componente Move With Pan (Script) (Spostamento con panoramica - Script) non fa parte di MRTK. È stato fornito con gli asset dell'esercitazione.
 
-### <a name="1-create-a-quad-object-that-can-be-used-for-panning"></a>1. creare un oggetto Quad che può essere usato per la panoramica
+### <a name="1-create-a-quad-object-that-can-be-used-for-panning"></a>1. Creare un oggetto Quad utilizzabile per la panoramica
 
-Nella finestra gerarchia, fare clic con il pulsante destro del mouse su un'area vuota e selezionare **oggetto 3d** > **Quad** per aggiungere un quad alla scena. Assegnare un nome appropriato, ad esempio **PanGesture**, e posizionarlo in una posizione appropriata, ad esempio X = 0, Y =-0,2, Z = 2.
+Nella finestra Hierarchy (Gerarchia) fai clic con il pulsante destro del mouse su un'area vuota e scegli **3D Object** (Oggetto 3D) > **Quad** per aggiungere un quadrilatero alla scena. Assegnagli un nome appropriato, ad esempio **PanGesture**, e collocalo in una posizione adatta, ad esempio X = 0, Y = -0.2, Z = 2.
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step1-1.png)
 
 > [!TIP]
-> Per un promemoria su come aggiungere alla scena le primitive Unity, ad esempio un Quad 3D, è possibile fare riferimento alle istruzioni [aggiungere un cubo alla scena](mrlearning-base-ch2.md#2-add-a-cube-to-the-scene) .
+> Per rivedere come aggiungere alla scena i primitivi di Unity, ad esempio un quadrilatero 3D, puoi fare riferimento alle istruzioni contenute in [Aggiungere un cubo alla scena](mrlearning-base-ch2.md#2-add-a-cube-to-the-scene).
 
-Come per qualsiasi altra interazione, il movimento Pan richiede anche un Collider. Per impostazione predefinita, un quad ha un Collider mesh. Tuttavia, il mesh Collider non è ideale perché è estremamente sottile. Per semplificare l'interazione dell'utente con il Collider, il mesh Collider viene sostituito con un Collider di box.
+Come qualsiasi altra interazione, anche il movimento di panoramica richiede un collisore. Per impostazione predefinita, un oggetto Quad ha un collisore mesh. Tuttavia, questo tipo di collisore non è ideale perché è estremamente sottile. Per facilitare l'interazione tra l'utente e il collisore, il collisore mesh verrà sostituito con un collisore cuboide.
 
-Con l'oggetto PanGesture ancora selezionato, fare clic sull'icona **delle impostazioni** del componente **mesh Collider** e selezionare **Rimuovi componente** per rimuovere il mesh Collider:
+Con l'oggetto PanGesture ancora selezionato, fai clic sull'icona delle **impostazioni** del componente **Mesh Collider** (Collisore mesh) e seleziona **Remove Component** (Rimuovi componente) per rimuovere il collisore mesh:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step1-2.png)
 
-Nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere un **Collider di box**, quindi modificare le **dimensioni** di box Collider da Z a 0,15 per aumentare lo spessore della casella Collider:
+Nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere un **Box Collider** (Collisore cuboide) e quindi imposta su 0.15 il valore Z di **Size** (Dimensioni) per rendere più spesso tale collisore:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step1-3.png)
 
-### <a name="2-add-the-near-interaction-touchable-script-component"></a>2. aggiungere il componente di prossimità interazione (script)
+### <a name="2-add-the-near-interaction-touchable-script-component"></a>2. Aggiungere il componente Near Interaction Touchable (Script) (Toccabile con interazione da vicino - Script)
 
-Se l'oggetto **PanGesture** è ancora selezionato, aggiungere il componente **near Interaction (script)** per l'oggetto PanGesture, quindi fare clic sui pulsanti **Correggi limiti** e **Correggi centro** per aggiornare le proprietà del centro locale e dei limiti di near Interaction touchable (script) in modo che corrispondano a BoxCollider:
+Con l'oggetto **PanGesture** ancora selezionato, aggiungigli il componente **Near Interaction Touchable (Script)** (Toccabile con interazione da vicino - Script) e quindi fai clic sui pulsanti **Fix Bounds** (Correggi limiti) e **Fix Center** (Correggi centro) per aggiornare le proprietà relative ai limiti e al centro in locale di tale componente in modo che corrispondano a BoxCollider:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step2-1.png)
 
-### <a name="3-add-the-hand-interaction-pan-zoom-script-component"></a>3. aggiungere il componente zoom (script) per l'interazione della mano
+### <a name="3-add-the-hand-interaction-pan-zoom-script-component"></a>3. Aggiungere il componente Hand Interaction Pan Zoom (Script) (Zoom panoramica con interazione manuale - Script)
 
-Con l'oggetto **PanGesture** ancora selezionato, aggiungere il componente **Zoom Pan (script)** per l'interazione con la mano all'oggetto PanGesture e quindi selezionare la casella di controllo **blocca orizzontalmente** per consentire solo lo scorrimento verticale:
+Con l'oggetto **PanGesture** ancora selezionato, aggiungigli il componente **Hand Interaction Pan Zoom (Script)** (Zoom panoramica con interazione manuale - Script) e quindi seleziona la casella di controllo **Lock Horizontal** (Blocca in orizzontale) per consentire solo lo scorrimento verticale:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step3-1.png)
 
-### <a name="4-add-2d-content-to-be-scrolled"></a>4. aggiungere contenuto 2D da scorrere
+### <a name="4-add-2d-content-to-be-scrolled"></a>4. Aggiungere il contenuto 2D da scorrere
 
-Nel pannello del progetto cercare il materiale **PanContent** , quindi fare clic su di esso e trascinarlo sulla proprietà elemento 0 del **materiale** renderer di mesh dell'oggetto **PanGesture** :
+Nel pannello Project (Progetto) cerca il materiale **PanContent** e quindi fai clic e trascinalo sulla proprietà Element 0 (Elemento 0) in **Materials** (Materiali) nella sezione Mesh Renderer (Renderer mesh) dell'oggetto **PanGesture**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step4-1.png)
 
-Nella finestra di controllo espandere il componente del materiale **PanContent** appena aggiunto e quindi modificare il valore di **affiancamento** Y in 0,5 in modo che corrisponda al valore X e i riquadri siano quadrati:
+Nella finestra Inspector (Controllo) espandi il componente materiale **PanContent** appena aggiunto e quindi imposta su 0.5 il valore Y di **Tiling** (Affiancamento) in modo che corrisponda al valore X e i riquadri risultino quadrati:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step4-2.png)
 
-Se si immette la modalità di gioco, è possibile eseguire il test dello scorrimento del contenuto 2D usando il gesto della panoramica nella simulazione dell'Editor:
+Se ora passi alla modalità di gioco, puoi provare lo scorrimento del contenuto 2D usando il movimento di panoramica nella simulazione nell'editor:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step4-3.png)
 
-### <a name="5-add-3d-content-to-be-scrolled"></a>5. aggiungere il contenuto 3D da scorrere
+### <a name="5-add-3d-content-to-be-scrolled"></a>5. Aggiungere il contenuto 3D da scorrere
 
-Nella finestra gerarchia **creare quattro cubi** come oggetti figlio dell'oggetto **PanGesture** e impostare la relativa **scala** di trasformazione su X = 0,15, Y = 0,15, Z = 0,15:
+Nella finestra Hierarchy (Gerarchia) **crea quattro cubi** come oggetti figlio dell'oggetto **PanGesture** e in Transform (Trasformazione) imposta **Scale** (Scala) su X = 0.15, Y = 0.15, Z = 0.15:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-Per spaziare i cubi in modo uniforme e risparmiare tempo, aggiungere il componente **Grid Object Collection (script)** all'oggetto padre Cubes, ad esempio l'oggetto **PanGesture** , e configurare la raccolta di oggetti Grid (script) come indicato di seguito:
+Per spaziare i cubi in modo uniforme e risparmiare tempo, aggiungi il componente **Grid Object Collection (Script)** (Raccolta oggetti griglia - Script) all'oggetto padre dei cubi, ovvero all'oggetto **PanGesture**, e configura il componente come segue:
 
-* Modificare **num Rows** su 1 in modo che tutti i cubi siano allineati in una singola riga
-* Modificare la **larghezza della cella** a 0,25 per spaziare i cubi all'interno della riga
+* Imposta **Num Rows** (Numero di righe) su 1 per avere tutti i cubi allineati in una sola riga
+* Imposta **Cell Width** (Larghezza cella) su 0.25 per spaziare i cubi all'interno della riga
 
-Quindi fare clic sul pulsante **Aggiorna raccolta** per applicare la nuova configurazione:
+Fai quindi clic sul pulsante **Update Collection** (Aggiorna raccolta) per applicare la nuova configurazione:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step5-2.png)
 
-### <a name="6-add-the-move-with-pan-script-component"></a>6. aggiungere il componente Move with Pan (script)
+### <a name="6-add-the-move-with-pan-script-component"></a>6. Aggiungere il componente Move With Pan (Script) (Spostamento con panoramica - Script)
 
-Nella finestra gerarchia selezionare tutti gli **oggetti figlio del cubo**, quindi nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere il componente **spostamento con panoramica (script)** a tutti i cubi:
+Nella finestra Hierarchy (Gerarchia) seleziona tutti gli **oggetti figlio Cube** e quindi nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Move With Pan (Script)** (Spostamento con panoramica - Script) a tutti i cubi:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step6-1.png)
 
 > [!TIP]
-> Per un promemoria sulla selezione di più oggetti nella finestra gerarchia, le condizioni possono fare riferimento al [componente Aggiungi il gestore di manipolazione (script) a tutte le istruzioni per gli oggetti](mrlearning-base-ch4.md#1-add-the-manipulation-handler-script-component-to-all-the-objects) .
+> Per rivedere la procedura di selezione di più oggetti nella finestra Hierarchy (Gerarchia), puoi fare riferimento alle istruzioni contenute in [Aggiungere il componente Manipulation Handler (Script) (Gestore manipolazione - Script) a tutti gli oggetti](mrlearning-base-ch4.md#1-add-the-manipulation-handler-script-component-to-all-the-objects).
 
-Con tutti i cubi ancora selezionati, fare clic e trascinare l'oggetto **PanGesture** nel campo **origine input Pan** :
+Con tutti i cubi selezionati, fai clic e trascina l'oggetto **PanGesture** sul campo **Pan Input Source** (Origine input panoramica):
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step6-2.png)
 
 > [!TIP]
-> Il componente spostamento con Pan (script) in ogni cubo è in ascolto dell'evento di aggiornamento della panoramica inviato dal componente HandInteractionPanZoom (script) nell'oggetto PanGesture, assegnato come origine di input Pan nel passaggio precedente, e aggiorna la posizione di ogni cubo. conseguenza.
+> Il component Move With Pan (Script) (Spostamento con panoramica - Script) di ogni cubo resta in ascolto dell'evento Pan Updated (Aggiornato con panoramica) inviato dal componente HandInteractionPanZoom (Script) nell'oggetto PanGesture, assegnato come origine input panoramica nel passaggio precedente, e aggiorna di conseguenza la posizione di ciascun cubo.
 
-Nella finestra gerarchia selezionare l'oggetto **PanGesture** , quindi nella casella di controllo **deseleziona** il **renderer mesh** per disabilitare il componente renderer mesh:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **PanGesture** e quindi nella finestra Inspector (Controllo) **deseleziona** la casella di controllo **Mesh Renderer** (Renderer mesh) per disabilitare tale renderer:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step6-3.png)
 
-Se si immette la modalità di gioco, è possibile eseguire il test dello scorrimento del contenuto 3D usando il gesto della panoramica nella simulazione dell'Editor:
+Se ora passi alla modalità di gioco, puoi provare lo scorrimento del contenuto 3D usando il movimento di panoramica nella simulazione nell'editor:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step6-4.png)
 
 ## <a name="eye-tracking"></a>Tracciamento oculare
 
-In questa sezione si esaminerà come abilitare il rilevamento degli occhi nel progetto. Per questo esempio, si implementerà la funzionalità per fare in modo che ogni oggetto nel 3DObjectCollection si avvii lentamente mentre viene esaminato dallo sguardo dell'utente, nonché attivare un effetto blip quando l'oggetto da esaminare è selezionato tramite il tocco di aria o il comando vocale.
+In questa sezione esaminerai come abilitare il tracciamento oculare nel tuo progetto. Per questo esempio, implementerai la funzionalità in modo da far ruotare lentamente ogni oggetto incluso nella raccolta 3DObjectCollection mentre l'utente posa su di esso uno sguardo fisso e in modo che venga attivato un effetto sonoro quando l'oggetto guardato viene selezionato tramite simulazione del tocco o comando vocale.
 
 Di seguito sono riportati i passaggi principali da eseguire per ottenere questo risultato:
 
-1. Aggiungere il componente della destinazione di rilevamento degli occhi (script) a tutti gli oggetti di destinazione
-2. Aggiungere il componente Demo dell'esercitazione per la verifica degli occhi (script) a tutti gli oggetti di destinazione
-3. Implementare l'oggetto durante la ricerca dell'evento di destinazione
-4. Implementa l'evento selezionato
-5. Abilitare la verifica degli occhi simulati per le simulazioni in-Editor
-6. Abilitare l'input dello sguardo nelle funzionalità dell'app del progetto di Visual Studio
+1. Aggiungere il componente Eye Tracking Target (Script) (Destinazione tracciamento oculare - Script) a tutti gli oggetti di destinazione
+2. Aggiungere il componente Eye Tracking Tutorial Demo (Script) (Demo esercitazione tracciamento oculare - Script) a tutti gli oggetti di destinazione
+3. Implementare l'evento While Looking At Target (Mentre viene guardata la destinazione)
+4. Implementare l'evento On Selected (Alla selezione)
+5. Abilitare il tracciamento oculare simulato per le simulazioni nell'editor
+6. Abilitare l'input sguardo fisso nelle funzionalità dell'app del progetto di Visual Studio
 
-### <a name="1-add-the-eye-tracking-target-script-component-to-all-target-objects"></a>1. aggiungere il componente della destinazione di rilevamento degli occhi (script) a tutti gli oggetti di destinazione
+### <a name="1-add-the-eye-tracking-target-script-component-to-all-target-objects"></a>1. Aggiungere il componente Eye Tracking Target (Script) (Destinazione tracciamento oculare - Script) a tutti gli oggetti di destinazione
 
-Nella finestra gerarchia espandere l'oggetto **3DObjectCollection** e selezionare tutti gli **oggetti figlio**, quindi nella finestra di controllo usare il pulsante **Aggiungi componente** per aggiungere il componente di **destinazione di rilevamento degli occhi (script)** a tutti gli oggetti figlio:
+Nella finestra Hierarchy (Gerarchia) espandi l'oggetto **3DObjectCollection** e seleziona tutti gli **oggetti figlio**, quindi nella finestra Inspector (Controllo) usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Eye Tracking Target (Script)** (Destinazione tracciamento oculare - Script) a tutti gli oggetti figlio:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step1-1.png)
 
-Con tutti gli **oggetti figlio** ancora selezionati, configurare il componente di **destinazione del rilevamento degli occhi (script)** come indicato di seguito:
+Con tutti gli **oggetti figlio** ancora selezionati, configura il componente **Eye Tracking Target (Script)** (Destinazione tracciamento oculare - Script) come segue:
 
-* Modificare selezionare l' **azione** da **selezionare**per definire l'azione di tocco aereo per questo oggetto come SELECT
-* Espandere **voce selezionare** e impostare le **dimensioni** dell'elenco dei comandi vocali su 1 e quindi, nell'elenco nuovo elemento visualizzato, modificare l' **elemento 0** in **Seleziona**per definire l'azione del comando vocale per questo oggetto come SELECT
+* Imposta **Select Action** (Seleziona azione) su **Select** (Seleziona) per definire la selezione come azione di simulazione del tocco per questo oggetto
+* Espandi **Voice Select** (Selezione vocale) e imposta su 1 il valore **Size** (Dimensioni) dell'elenco dei comandi vocali e quindi nel nuovo elenco di elementi che viene visualizzato imposta **Element 0** (Elemento 0) su **Select** (Seleziona) per definire la selezione come azione del comando vocale per questo oggetto
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step1-2.png)
 
-### <a name="2-add-the-eye-tracking-tutorial-demo-script-component--to-all-target-objects"></a>2. aggiungere il componente Demo dell'esercitazione per la verifica degli occhi (script) a tutti gli oggetti di destinazione
+### <a name="2-add-the-eye-tracking-tutorial-demo-script-component--to-all-target-objects"></a>2. Aggiungere il componente Eye Tracking Tutorial Demo (Script) (Demo esercitazione tracciamento oculare - Script) a tutti gli oggetti di destinazione
 
-Con tutti gli **oggetti figlio** ancora selezionati, usare il pulsante **Aggiungi componente** per aggiungere il componente Demo dell'esercitazione per la **Verifica degli occhi (script)** a tutti gli oggetti figlio:
+Con tutti gli **oggetti figlio** ancora selezionati, usa il pulsante **Add Component** (Aggiungi componente) per aggiungere il componente **Eye Tracking Tutorial Demo (Script)** (Demo esercitazione tracciamento oculare - Script) a tutti gli oggetti figlio:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step2-1.png)
 
 > [!NOTE]
-> Il componente della destinazione di rilevamento degli occhi (script) non fa parte di MRTK. È stato fornito con le risorse dell'esercitazione.
+> Il componente Eye Tracking Target (Script) (Destinazione tracciamento oculare - Script) non fa parte di MRTK. È stato fornito con gli asset dell'esercitazione.
 
-### <a name="3-implement-the-while-looking-at-target-event"></a>3. implementare durante la ricerca dell'evento di destinazione
+### <a name="3-implement-the-while-looking-at-target-event"></a>3. Implementare l'evento While Looking At Target (Mentre viene guardata la destinazione)
 
-Nella finestra gerarchia selezionare l'oggetto **Cheese** , quindi creare un nuovo oggetto durante la ricerca dell'evento **target ()** , configurare l'oggetto **Cheese** per ricevere l'evento e definire **EyeTrackingTutorialDemo. RotateTarget** come azione da attivare:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **Cheese** e quindi crea un nuovo evento **While Looking At Target ()** (Mentre viene guardata la destinazione), configura l'oggetto **Cheese** in modo che riceva l'evento e definisci **EyeTrackingTutorialDemo.RotateTarget** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step3-1.png)
 
-**Ripetere** per ogni oggetto figlio in 3DObjectCollection.
+**Ripeti** per ogni oggetto figlio incluso in 3DObjectCollection.
 
 > [!TIP]
-> Per un promemoria su come implementare gli eventi, è possibile fare riferimento alle istruzioni per i [movimenti di rilevamento della mano e i pulsanti interagiscono](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) .
+> Per rivedere la procedura di implementazione degli eventi, puoi fare riferimento alle istruzioni contenute in [Movimenti di tracciamento della mano e pulsanti con supporto per interazioni](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons).
 
-### <a name="4-implement-the-on-selected-event"></a>4. implementare nell'evento selezionato
+### <a name="4-implement-the-on-selected-event"></a>4. Implementare l'evento On Selected (Alla selezione)
 
-Nella finestra gerarchia selezionare l'oggetto **Cheese** , quindi creare un nuovo evento **on Selected ()** , configurare l'oggetto **Cheese** per ricevere l'evento e definire **EyeTrackingTutorialDemo. BlipTarget** come azione da attivare:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **Cheese** e quindi crea un nuovo evento **On Selected ()** (Alla selezione), configura l'oggetto **Cheese** in modo che riceva l'evento e definisci **EyeTrackingTutorialDemo.BlipTarget** come azione da attivare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step4-1.png)
 
-**Ripetere** per ogni oggetto figlio in 3DObjectCollection.
+**Ripeti** per ogni oggetto figlio incluso in 3DObjectCollection.
 
-### <a name="5-enable-simulated-eye-tracking-for-in-editor-simulations"></a>5. abilitare la verifica degli occhi simulati per le simulazioni in-Editor
+### <a name="5-enable-simulated-eye-tracking-for-in-editor-simulations"></a>5. Abilitare il tracciamento oculare simulato per le simulazioni nell'editor
 
-Nella finestra gerarchia selezionare l'oggetto **MixedRealityToolkit** , quindi nella finestra di controllo selezionare la scheda **input** , espandere la sezione provider di **dati di input** e quindi la sezione del **servizio di simulazione input** e clonare il **DefaultMixedRealityInputSimulationProfile** per sostituirlo con il profilo di **simulazione di input**personalizzabile:
+Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto **MixedRealityToolkit**, quindi nella finestra Inspector (Controllo) seleziona la scheda **Input**, espandi la sezione **Input Data Providers** (Provider di dati di input) e poi la sezione **Input Simulation Service** (Servizio di simulazione input) e infine clona **DefaultMixedRealityInputSimulationProfile** per sostituirlo con il tuo **profilo di simulazione input** personalizzabile:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step5-1.png)
 
 > [!TIP]
-> Per un promemoria su come clonare i profili MRTK, è possibile fare riferimento alle istruzioni [How to configure the Mixed Reality Toolkit Profiles](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) .
+> Per rivedere la procedura di clonazione dei profili MRTK, puoi fare riferimento alle istruzioni contenute in [Come configurare i profili di Mixed Reality Toolkit](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).
 
-Nella sezione **simulazione degli** occhi, selezionare la casella di controllo **simula la posizione degli** occhi per abilitare la simulazione di rilevamento degli occhi:
+Nella sezione **Eye Simulation** (Simulazione oculare) seleziona la casella di controllo **Simulate Eye Position** (Simula posizione oculare) per abilitare la simulazione del tracciamento oculare:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step5-2.png)
 
-Se si immette la modalità di gioco, è possibile testare gli effetti di rotazione e di selezione implementati regolando la visualizzazione in modo che il cursore raggiunga uno degli oggetti e usando il comando interazione mano o riconoscimento vocale per selezionare l'oggetto:
+Se ora passi alla modalità di gioco, puoi provare l'effetto di rotazione e quello sonoro implementati adattando la vista in modo che il cursore tocchi uno degli oggetti e usando l'interazione con la mano o il comando vocale per selezionare l'oggetto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step5-3.png)
 
 > [!NOTE]
-> Se non è stato usato DefaultHoloLens2ConfigurationProfile per clonare il profilo di configurazione MRTK personalizzabile, come indicato nelle istruzioni [configurare il Toolkit per la realtà mista](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) , la verifica degli occhi potrebbe non essere abilitata nel progetto e sarà necessario abilitarla. A tale proposito, è possibile fare riferimento alla [Guida introduttiva a Eye Tracking nelle istruzioni di MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html) .
+> Se non hai usato DefaultHoloLens2ConfigurationProfile per clonare il tuo profilo di configurazione MRTK personalizzabile, come illustrato in [Configurare Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit), il tracciamento oculare potrebbe non essere abilitato nel tuo progetto e dovrà essere abilitato. A tale scopo, puoi fare riferimento alle istruzioni contenute in [Introduzione al tracciamento oculare in MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html).
 
-### <a name="6-enable-gaze-input-in-the-visual-studio-projects-app-capabilities"></a>6. abilitare l'input dello sguardo nelle funzionalità dell'app del progetto di Visual Studio
+### <a name="6-enable-gaze-input-in-the-visual-studio-projects-app-capabilities"></a>6. Abilitare l'input sguardo fisso nelle funzionalità dell'app del progetto di Visual Studio
 
-Prima di compilare e distribuire l'app da Visual Studio al dispositivo, è necessario abilitare l'input dello sguardo nelle funzionalità dell'app del progetto. A tale proposito, è possibile seguire le istruzioni per [testare l'app Unity in un HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2) .
+Prima di compilare e distribuire l'app da Visual Studio nel dispositivo, è necessario abilitare l'input sguardo fisso nelle funzionalità dell'app del progetto. A tale scopo, puoi seguire le istruzioni contenute in [Test dell'app Unity su un dispositivo HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2).
 
-## <a name="congratulations"></a>Complimenti
+## <a name="congratulations"></a>Lezione completata
 
-Sono state aggiunte le funzionalità di base per la verifica degli occhi all'applicazione. Queste azioni sono solo l'inizio del vasto mondo di possibilità offerte dal tracciamento oculare. In questa esercitazione sono state illustrate anche altre funzionalità di input avanzate, ad esempio i comandi vocali e i movimenti di panoramica.
+Hai ora aggiunto alla tua applicazione le funzionalità di base per il tracciamento oculare. Queste azioni sono solo l'inizio del vasto mondo di possibilità offerte dal tracciamento oculare. In questa esercitazione hai anche avuto informazioni su altre funzionalità di input avanzate, ad esempio i comandi vocali e i movimenti di panoramica.
 
-[Lezione successiva: 7. creazione di un'applicazione di esempio del modulo Lunar](mrlearning-base-ch6.md)
+[Lezione successiva: 7. Creazione dell'applicazione di esempio Lunar Module](mrlearning-base-ch6.md)

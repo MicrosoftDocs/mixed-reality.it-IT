@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554401"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376208"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inizializzazione del progetto e prima applicazione
 
@@ -236,6 +236,9 @@ Configura Visual Studio per HoloLens 2 selezionando la configurazione **Master**
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> Se il dispositivo non è visibile come opzione, potrebbe essere necessario cambiare il progetto di avvio predefinito dal progetto IC2Lpp a un progetto UWP. In **Esplora soluzioni** fai clic con il pulsante destro del mouse su **nomeprogetto (Universal Windows)** e scegli **Imposta come progetto di avvio**. 
+
 Connetti il dispositivo HoloLens 2 al computer.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ Per distribuire l'applicazione nel dispositivo senza che venga avviata automatic
 A questo punto hai distribuito la tua prima applicazione per HoloLens 2. Esplorando, noterai una mesh di mapping spaziale che copre tutte le superfici percepite da HoloLens 2. Dovresti anche vedere indicatori sulle mani e sulle dita per il tracciamento delle mani e un contatore della frequenza dei fotogrammi per tenere sotto controllo le prestazioni dell'applicazione. Questi sono solo alcuni degli elementi fondamentali, inclusi per impostazione predefinita in Mixed Reality Toolkit. Nelle esercitazioni successive inizierai ad aggiungere più contenuti e interattività alla scena, in modo da poter esplorare completamente le funzionalità di HoloLens 2 e Mixed Reality Toolkit.
 
 > [!NOTE]
-> Nell'app puoi notare il profiler di diagnostica. Puoi disattivarne la visibilità tramite il comando vocale di **disattivazione diagnostica**. Tuttavia, in genere è consigliabile lasciare visibile il profiler in qualsiasi momento durante le attività di sviluppo per comprendere quando le modifiche apportate all'app possono aver avuto conseguenze sulle prestazioni, ad esempio l'applicazione HoloLens 2 deve essere [eseguita in modo continuo a 60 FPS](understanding-performance-for-mixed-reality.md).
+> Nell'app potrebbe essere visibile il profiler di diagnostica. Puoi nasconderlo o renderlo visibile tramite il comando vocale **Toggle Diagnostics** (Attiva/Disattiva diagnostica). Tuttavia, in genere è consigliabile lasciare visibile il profiler in qualsiasi momento durante le attività di sviluppo per comprendere quando le modifiche apportate all'app possono aver avuto conseguenze sulle prestazioni, ad esempio l'applicazione HoloLens 2 deve essere [eseguita in modo continuo a 60 FPS](understanding-performance-for-mixed-reality.md).
 
 [Esercitazione successiva: 3. Creazione dell'interfaccia utente e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
