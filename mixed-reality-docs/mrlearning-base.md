@@ -1,21 +1,22 @@
 ---
-title: Esercitazioni introduttive-1. Panoramica e obiettivi
-description: Questo corso illustra come implementare Azure Face Recognition in un'applicazione di realtà mista.
+title: Esercitazioni introduttive - 1 Panoramica e obiettivi
+description: Questo corso illustra come implementare il riconoscimento volto di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
-ms.openlocfilehash: dbae7545edb6515b5cf148fbbfb6652595d2fc0d
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 36c12d82759b8ac2ba24aa9af37a096e0faf5fb5
+ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129262"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082053"
 ---
 # <a name="1-overview-and-objectives"></a>1. Panoramica e obiettivi
 
-## <a name="device-support"></a>Supporto per i dispositivi
+## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
     <colgroup>
@@ -42,13 +43,13 @@ ms.locfileid: "77129262"
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-* Un PC Windows 10 configurato con gli [strumenti corretti installati](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 o versione successiva
-* Funzionalità di C# programmazione di base
+* Un PC Windows 10 configurato in cui siano [installati gli strumenti](install-the-tools.md) corretti
+* Windows 10 SDK 10.0.18362.0 o versioni successive
+* Alcune funzionalità di programmazione C# di base
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub Unity</a> con Unity 2019.2. X installato e aggiunta del modulo di supporto piattaforma UWP (Universal Windows Platform) Build
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X installato e il modulo di supporto delle compilazioni UWP (Universal Windows Platform) aggiunto
 
 > [!IMPORTANT]
-> La versione consigliata di Unity per questa serie di esercitazioni è Unity 2019.2. X. Questa operazione sostituisce i requisiti di versione di Unity o i consigli indicati nei prerequisiti collegati in precedenza.
+> La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.2.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
 
-[Lezione successiva: 2. inizializzazione del progetto e della prima applicazione](mrlearning-base-ch1.md)
+[Lezione successiva: 2. Inizializzazione del progetto e prima applicazione](mrlearning-base-ch1.md)
