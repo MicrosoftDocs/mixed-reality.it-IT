@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, nativo, app nativa, motore personalizzato, middleware, procedure consigliate, prestazioni, qualità, stabilità
-ms.openlocfilehash: 01ce2ac0a69ffdf5dd1f00b92f37f54964f4c30c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163355"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362021"
 ---
 # <a name="openxr-app-best-practices"></a>Procedure consigliate per le app OpenXR
 
-È possibile vedere un esempio delle procedure consigliate riportate di seguito nel file [OpenXRProgram. cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) di BasicXrApp. La funzione Run () all'inizio acquisisce un flusso di codice dell'app OpenXR tipico dall'inizializzazione all'evento e al ciclo di rendering.
+È possibile vedere un esempio delle procedure consigliate riportate di seguito nel file OpenXRProgram. cpp di <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a>. La funzione Run () all'inizio acquisisce un flusso di codice dell'app OpenXR tipico dall'inizializzazione all'evento e al ciclo di rendering.
 
 ## <a name="best-practices-for-visual-quality-and-stability"></a>Procedure consigliate per la qualità e la stabilità visive
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Windows Mixed Reality OpenXR Developer Portal, DirectX, native, Native App, Custom Engine, middleware, Getting Started, 101, Preview Extensions
-ms.openlocfilehash: 7a210ce25d1e7c22710f1029aca2ca7f55a8b71c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: db45308834f920413420f080a35b378f6a55fa49
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163335"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362025"
 ---
 # <a name="getting-started-with-openxr"></a>Introduzione a OpenXR
 
@@ -50,7 +50,7 @@ Se si usa l'emulatore, il modo più semplice per installare il portale per svilu
 
 Assicurarsi di [installare gli strumenti](install-the-tools.md) necessari per lo sviluppo di OpenXR, se non è già stato fatto.
 
-Il progetto <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> illustra un semplice esempio di OpenXR con due file di progetto di Visual Studio, uno per un'app desktop Win32 e uno per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto HoloLens UWP, è necessario che il [carico di lavoro di sviluppo piattaforma UWP (Universal Windows Platform)](install-the-tools.md#installation-checklist) installato in Visual Studio per aprirlo completamente.
+Il progetto <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> illustra un semplice esempio di OpenXR con due file di progetto di Visual Studio, uno per un'app desktop Win32 e uno per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto HoloLens UWP, è necessario che il [carico di lavoro di sviluppo piattaforma UWP (Universal Windows Platform)](install-the-tools.md#installation-checklist) installato in Visual Studio per aprirlo completamente.
 
 Si noti che, mentre i file di progetto Win32 e UWP sono separati a causa delle differenze nella creazione di pacchetti e distribuzione, il codice dell'app all'interno di ogni progetto è uguale al 100%.
 
@@ -77,7 +77,7 @@ Per aggiungere un riferimento al pacchetto NuGet OpenXR. loader alla soluzione d
 1. Fare clic su OK per accettare le modifiche apportate al progetto.
 1. Aggiungere `#include <openxr/openxr.h>` a un file di origine per iniziare a usare l'API OpenXR.
 
-Per un esempio dell'API OpenXR in azione, vedere l'app di esempio <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> .
+Per un esempio dell'API OpenXR in azione, vedere l'app di esempio <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> .
 
 ### <a name="include-official-openxr-loader-source"></a>Includi origine del caricatore OpenXR ufficiale
 
@@ -99,7 +99,7 @@ Per attivare quindi le estensioni di anteprima sulla destinazione HoloLens 2 o s
      * Se il dispositivo di destinazione è un PC desktop con una periferica di auricolare immersiva collegata, <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#set-up-device-portal-on-windows-desktop" target="_blank">seguire queste istruzioni</a> sul PC desktop di destinazione.
   1. Passare alla scheda **OpenXR** nel riquadro sinistro e abilitare l' **uso dell'ultima versione di anteprima OpenXR Runtime**.  In questo modo viene abilitato il runtime di anteprima nel dispositivo, in cui sono attivate le estensioni di anteprima.
 
-Vedere il <a href="https://github.com/Microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">repository di OpenXR per la realtà mista</a> per la documentazione di queste estensioni di anteprima ed esempi su come usarle.
+Vedere il <a href="https://github.com/microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">repository di OpenXR per la realtà mista</a> per la documentazione di queste estensioni di anteprima ed esempi su come usarle.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
