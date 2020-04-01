@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031217"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362037"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Inserimento di contenuto dinamico e uso dei risolutori
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -39,7 +39,7 @@ In questa esercitazione verrà esaminata l'implementazione dei risolutori Orbita
 In questa sezione verrà migliorata la raccolta di pulsanti creata nell'esercitazione precedente in modo che segua la direzione dello sguardo dell'utente. Inoltre, il risolutore verrà configurato in modo che la raccolta di pulsanti sia sempre:
 
 * Ruotata in parallelo rispetto alla direzione di lettura dell'utente, per la lettura naturale da sinistra a destra
-* Posizionata leggermente al di sotto della direzione dello sguardo orizzontale dell'utente in modo da non ostacolare gli altri oggetti che aggiungerai più avanti in questa esercitazione
+* Posizionata al di sotto della direzione dello sguardo orizzontale dell'utente in modo da non ostacolare gli altri oggetti che aggiungerai più avanti in questa esercitazione
 * Posizionata approssimativamente a metà della portata di braccio dell'utente, in modo che sia possibile selezionare facilmente i pulsanti
 
 A tale scopo, userai il **risolutore Orbital (Orbitale)** che blocca l'oggetto in una posizione e con un offset specifici rispetto all'oggetto di riferimento.

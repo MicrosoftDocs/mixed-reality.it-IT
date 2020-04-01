@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: grafica, cpu, gpu, rendering, garbage collection, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082071"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160017"
 ---
 # <a name="performance-recommendations-for-unity"></a>Consigli sulle prestazioni per Unity
 
 Questo articolo si basa sugli argomenti affrontati in [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md), ma tratta in particolare i concetti specifici dell'ambiente del motore Unity.
 
-È inoltre consigliabile che gli sviluppatori leggano l'[articolo sulle impostazioni dell'ambiente consigliate per Unity](Recommended-settings-for-unity.md). Tale articolo include contenuto con alcune delle configurazioni scena più importanti per la creazione di app di realtà mista ad alte prestazioni. Alcune di queste impostazioni consigliate sono poste in evidenza anche di seguito.
+## <a name="use-recommended-unity-project-settings"></a>Usare le impostazioni consigliate per il progetto Unity
+
+Il primo passaggio più importante per l'ottimizzazione delle prestazioni delle app di realtà mista in Unity è assicurarsi di usare le [impostazioni di ambiente consigliate per Unity](recommended-settings-for-unity.md). Questo articolo include contenuto con alcune delle configurazioni scena più importanti per la creazione di app di realtà mista ad alte prestazioni. Alcune di queste impostazioni consigliate sono poste in evidenza anche di seguito.
 
 ## <a name="how-to-profile-with-unity"></a>Come eseguire la profilatura con Unity
 

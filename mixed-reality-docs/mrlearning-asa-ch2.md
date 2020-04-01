@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 4de40bb0b66ed299fa4a571490b33a0454f25817
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031699"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362013"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvataggio, recupero e condivisione di ancoraggi nello spazio di Azure
 
@@ -54,6 +54,9 @@ Se compili l'applicazione aggiornata in HoloLens, ora puoi rendere permanenti gl
 7. Avvia la sessione di Azure.
 8. Trova l'ancoraggio di Azure. L'esperienza Rocket Launcher (Lanciamissili) viene collocata nella posizione del passaggio 3.
 
+> [!NOTE]
+> Per riavviare completamente l'applicazione, dopo aver chiuso la visualizzazione di app immersiva, devi chiudere la finestra dell'app nell'ambiente iniziale prima di eseguire il riavvio dal menu Start. Per altri dettagli, puoi fare riferimento alla documentazione sull'[uso di app in HoloLens](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens).
+
 ## <a name="share-azure-anchors-between-multiple-devices"></a>Condividere gli ancoraggi di Azure tra più dispositivi
 
 In questa sezione apprenderai come condividere l'ID ancoraggio di Azure tra più dispositivi. In questo modo, diversi dispositivi potranno eseguire query su Azure per ottenere lo stesso ID ancoraggio, consentendo l'allineamento spaziale degli ologrammi ancorati. L'allineamento spaziale, ovvero la visualizzazione degli stessi ologrammi nella stessa posizione fisica su più dispositivi, è fondamentale per le esperienze condivise locali in HoloLens 2.
@@ -75,7 +78,7 @@ Se compili l'applicazione aggiornata in due dispositivi HoloLens, ora puoi otten
 2. Sul dispositivo HoloLens 1 - Avvia la sessione di Azure.
 3. Sul dispositivo HoloLens 1 - Crea l'ancoraggio di Azure. Gli ancoraggi vengono creati nella posizione dell'esperienza Rocket Launcher (Lanciamissili).
 4. Sul dispositivo HoloLens 1 - Condividi l'ID ancoraggio di Azure sulla rete.
-5. Sul dispositivo HoloLens 2 - Riavvia l'applicazione.
+5. Sul dispositivo HoloLens 2 - Avvia l'applicazione.
 6. Sul dispositivo HoloLens 2 - Ottieni l'ID ancoraggio condiviso dalla rete. Dal dispositivo HoloLens 1 viene recuperato l'ID ancoraggio appena condiviso.
 7. Sul dispositivo HoloLens 2 - Avvia la sessione di Azure.
 8. Sul dispositivo HoloLens 2 - Trova l'ancoraggio di Azure. L'esperienza Rocket Launcher (Lanciamissili) viene collocata nella posizione del passaggio 3.
