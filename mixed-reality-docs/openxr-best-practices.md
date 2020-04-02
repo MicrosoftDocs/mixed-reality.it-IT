@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, nativo, app nativa, motore personalizzato, middleware, procedure consigliate, prestazioni, qualità, stabilità
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362021"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549363"
 ---
 # <a name="openxr-app-best-practices"></a>Procedure consigliate per le app OpenXR
 
@@ -25,8 +25,8 @@ Per ulteriori raccomandazioni sulle prestazioni specifiche per HoloLens 2, veder
 
 ### <a name="gamma-correct-rendering"></a>Rendering con correzione gamma
 
-È necessario prestare attenzione per assicurarsi che la pipeline di rendering sia corretta da gamma. Quando si esegue il rendering in un presentazione catena, il formato di visualizzazione della destinazione di rendering deve corrispondere al formato presentazione catena (ad esempio DXGI_FORMAT_B8G8R8A8_UNORM_SRGB sia per il formato presentazione catena che per la visualizzazione destinazione rendering).
-L'eccezione è rappresentata dal caso in cui la pipeline di rendering dell'app esegua una conversione manuale di sRGB nel codice dello shader, nel qual caso l'app deve richiedere un formato presentazione catena di sRGB, ma usare il formato lineare per la visualizzazione di destinazione di rendering (ad esempio, la richiesta DXGI_FORMAT_B8G8R8A8_UNORM_SRGB come presentazione catena, ma usa DXGI_FORMAT_B8G8R8A8_UNORM come visualizzazione di destinazione di rendering) per impedire che il contenuto venga corretto a seconda della gamma.
+È necessario prestare attenzione per assicurarsi che la pipeline di rendering sia corretta da gamma. Quando si esegue il rendering in un presentazione catena, il formato di visualizzazione della destinazione di rendering deve corrispondere al formato presentazione catena (ad esempio `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` sia per il formato presentazione catena che per la visualizzazione destinazione rendering).
+L'eccezione si verifica se la pipeline di rendering dell'app esegue una conversione manuale di sRGB nel codice dello shader, nel qual caso l'app deve richiedere un formato presentazione catena di sRGB, ma usare il formato lineare per la visualizzazione di destinazione di rendering (ad esempio, richiedere `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` come formato presentazione catena ma usare `DXGI_FORMAT_B8G8R8A8_UNORM` come visualizzazione di destinazione di rendering) per impedire che il contenuto venga corretto a seconda della gamma.
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>Invia buffer di profondità per i livelli di proiezione
 

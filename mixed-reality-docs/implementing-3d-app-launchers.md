@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icona, modellazione, avvio, utilità di avvio 3D, riquadro, cubo attivo, collegamento profondo, SecondaryTile, riquadro secondario, UWP
-ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 0a2e2177ffa7e381c461a58f373c818c9c5e72c4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926766"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549385"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementare i lanci di app 3D (app UWP)
 
@@ -42,12 +42,12 @@ Per prima cosa, individuare il manifesto del pacchetto dell'applicazione nel pro
 Nella parte superiore del manifesto aggiungere lo schema uap5 e includerlo come spazio dei nomi ignorabile:
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 Specificare quindi "MixedRealityModel" nel riquadro predefinito per l'applicazione:
@@ -85,13 +85,13 @@ Un rettangolo di delimitazione può essere utilizzato per aggiungere facoltativa
 Il supporto per l'attributo del rettangolo delimitatore verrà con l'aggiornamento di Windows RS4 come proprietà nell'elemento MixedRealityModel. Per definire innanzitutto un rettangolo di delimitazione nella parte superiore del manifesto dell'applicazione, aggiungere lo schema uap6 e includerlo come spazi dei nomi ignorabili:
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 Quindi, in MixedRealityModel impostare la proprietà SpatialBoundingBox per definire il rettangolo di delimitazione: 
 
@@ -118,7 +118,7 @@ Quando si lavora con Unity, il progetto deve essere compilato e aperto in Visual
 >[!IMPORTANT]
 >i collegamenti profondi 3D (secondaryTiles) funzionano solo con le app UWP 2D. È tuttavia possibile creare un utilità di [avvio delle app 3D](implementing-3d-app-launchers.md) per avviare un'app esclusiva dalla Home realtà mista di Windows.
 
-Le applicazioni 2D possono essere migliorate per la realtà mista di Windows grazie all'aggiunta della possibilità di inserire modelli 3D dall'app nella [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) come collegamenti profondi ai contenuti all'interno dell'app 2D, proprio come i [riquadri secondari 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) all'avvio di Windows menu. Ad esempio, è possibile creare fotosfere 360 ° che si collegano direttamente a un'app del Visualizzatore foto di 360 ° o consentire agli utenti di inserire contenuto 3D da una raccolta di asset che apre una pagina di dettagli sull'autore. Si tratta solo di un paio di modi per espandere la funzionalità dell'applicazione 2D con contenuto 3D.
+Le applicazioni 2D possono essere migliorate per la realtà mista di Windows aggiungendo la possibilità di inserire modelli 3D dall'app nella [Home realtà mista di Windows](navigating-the-windows-mixed-reality-home.md) come collegamenti profondi al contenuto all'interno dell'app 2D, proprio come i [riquadri secondari 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) nel menu Start di Windows. Ad esempio, è possibile creare fotosfere 360 ° che si collegano direttamente a un'app del Visualizzatore foto di 360 ° o consentire agli utenti di inserire contenuto 3D da una raccolta di asset che apre una pagina di dettagli sull'autore. Si tratta solo di un paio di modi per espandere la funzionalità dell'applicazione 2D con contenuto 3D.
 
 ### <a name="creating-a-3d-secondarytile"></a>Creazione di un "secondaryTile" 3D
 
@@ -202,7 +202,7 @@ Le notifiche dei riquadri attualmente non supportano l'invio di un aggiornamento
 
 Per altre informazioni sulle altre funzionalità e gli attributi dei riquadri e sul modo in cui vengono usati per i riquadri 2D, vedere la documentazione relativa ai [riquadri per le app UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Esempio di modello di realtà mista](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenente un utilità di avvio delle app 3D.
 * [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)
