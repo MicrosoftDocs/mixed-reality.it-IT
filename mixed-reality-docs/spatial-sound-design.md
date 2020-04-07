@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
 keywords: Realtà mista di Windows, audio spaziale, progettazione, stile
-ms.openlocfilehash: 34923e1ebfc8e46ea8e67a4444fe3c2691efd4db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 08844f6d837407d52ad2ab84b78440ce856151fc
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182011"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677990"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Come usare un suono in applicazioni in realtà mista
 
@@ -46,20 +46,20 @@ I tipi di interazione in realtà mista includono movimenti, manipolazione dirett
 
 ### <a name="gesture-interactions"></a>Interazioni tra movimenti
 In realtà mista, gli utenti possono interagire con i pulsanti usando il mouse. Le azioni dei pulsanti si verificano in genere quando l'utente rilascia invece di premere il pulsante per dare all'utente la possibilità di annullare l'interazione. Usare i suoni per rafforzare queste fasi. Per aiutare gli utenti a usare i pulsanti distanti, considerare anche l'uso di un suono del passaggio del puntatore.
-* Il pulsante-premere suoni dovrebbe essere un breve "clic" tattile.<br/>Esempio: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Il pulsante: i suoni "non stampati" devono avere un aspetto tattile simile. Un passo più elevato rispetto al suono della stampa rinforza il senso del completamento.<br/>Esempio: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* Il pulsante-premere suoni dovrebbe essere un breve "clic" tattile.<br/>Esempio: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Il pulsante: i suoni "non stampati" devono avere un aspetto tattile simile. Un passo più elevato rispetto al suono della stampa rinforza il senso del completamento.<br/>Esempio: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * Per i suoni del passaggio del mouse, provare a usare un suono sottile e non minaccioso, ad esempio un tonfo o un urto a bassa frequenza.
 
 ### <a name="direct-manipulation"></a>Manipolazione diretta
 In HoloLens 2, il rilevamento a mano articolata supporta la manipolazione diretta degli elementi dell'interfaccia utente. I suoni sono importanti quando non sono presenti altri commenti fisici.
 
 Un suono di pressione di un *pulsante* è importante nella manipolazione diretta perché l'utente non ottiene altre indicazioni quando raggiunge la fine del tratto della chiave. Gli indicatori audio del viaggio di chiave possono essere piccoli, sottili e bloccati. Come per le interazioni con i movimenti, le pressioni dei pulsanti dovrebbero avere un breve suono tattile come un clic. Le dispressioni dovrebbero avere un suono di clic simile ma con un passo elevato.
-* Esempio: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Esempio: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* Esempio: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Esempio: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 
 È difficile confermare visivamente un'azione di recupero o rilascio. Spesso l'utente sarà in grado di qualsiasi effetto visivo, mentre gli oggetti con corpo rigido non hanno un analogo strumento visivo reale di "grabbing". I suoni possono comunicare efficacemente le interazioni di recupero e rilascio.
-* Le azioni di recupero dovrebbero avere un breve suono tattile, leggermente ovattato, che evoca l'idea di una chiusura delle dita intorno a un oggetto. A volte è presente anche un suono "fruscio" che conduce al suono accattivante per comunicare il movimento della mano.<br/>Esempio: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* Le azioni di rilascio dovrebbero ottenere un suono simile breve e tattile. Si tratta in genere di un tono inferiore rispetto al suono della pinza e in ordine inverso, con un effetto e quindi un "fruscio" per comunicare che l'oggetto sta per essere risolto.<br/>Esempio: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* Le azioni di recupero dovrebbero avere un breve suono tattile, leggermente ovattato, che evoca l'idea di una chiusura delle dita intorno a un oggetto. A volte è presente anche un suono "fruscio" che conduce al suono accattivante per comunicare il movimento della mano.<br/>Esempio: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* Le azioni di rilascio dovrebbero ottenere un suono simile breve e tattile. Si tratta in genere di un tono inferiore rispetto al suono della pinza e in ordine inverso, con un effetto e quindi un "fruscio" per comunicare che l'oggetto sta per essere risolto.<br/>Esempio: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 Un'interazione di *disegno* deve ottenere un suono persistente di loop il cui volume è determinato dallo spostamento della mano dell'utente. Dovrebbe rimanere invisibile quando la mano dell'utente è ancora e più forte quando la mano si muove rapidamente.
 
@@ -70,7 +70,7 @@ Le interazioni vocali hanno spesso elementi visivi sottili. Usare i suoni per ra
 * Usare un tono più breve e meno positivo per gli *errori*dei comandi vocali. Evitare i suoni negativi. Usare invece un suono più a percussione, neutro per comunicare che l'applicazione sta procedendo dall'interazione.
 * Se l'applicazione ha una parola di riattivazione, usare un tono breve e gentile quando il dispositivo *inizia l'ascolto*. Usare un suono di loop delicato mentre l'applicazione *è* in ascolto.
 
-### <a name="notifications"></a>Notifications
+### <a name="notifications"></a>Notifiche
 Le notifiche comunicano le modifiche dello stato dell'applicazione e altri eventi che non vengono avviati dall'utente, ad esempio i completamenti dei processi, i messaggi e le chiamate telefoniche.
 
 In realtà mista, gli oggetti talvolta si spostano fuori dal campo di visualizzazione dell'utente. Accompagna lo spostamento di *oggetti animati* con un suono spaziale che dipende dal tipo di oggetto e dalla velocità di movimento.
