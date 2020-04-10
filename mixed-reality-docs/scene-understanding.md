@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
-ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
+ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/27/2019
-ms.locfileid: "75502672"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003337"
 ---
 # <a name="scene-understanding"></a>Comprensione della scena
 
@@ -43,7 +43,7 @@ Per informazioni dettagliate su come sviluppare per la comprensione della scena 
 ### <a name="sample"></a>Esempio
 
 
-## <a name="device-support"></a>Supporto di dispositivi
+## <a name="device-support"></a>Supporto per i dispositivi
 
 <table>
     <colgroup>
@@ -73,11 +73,11 @@ Per informazioni dettagliate su come sviluppare per la comprensione della scena 
 
 <br>
 
-Molti degli scenari principali per le applicazioni compatibili con l'ambiente (posizionamento, occlusione, fisica e così via) sono indirizzabili sia dal mapping spaziale che dalla comprensione della scena e in questa sezione vengono evidenziate queste differenze. Una differenza fondamentale tra la comprensione della scena e il mapping spaziale è un compromesso tra precisione massima e latenza alla struttura e alla semplicità. Se l'applicazione richiede la latenza più bassa possibile e i triangoli mesh che solo si vuole accedere direttamente al mapping spaziale ma si sta eseguendo un'elaborazione di livello superiore, è possibile passare al modello di comprensione della scena come dovrebbe fornire con un superset di funzionalità. Si noti inoltre che, poiché la comprensione della scena fornisce la mesh di mapping spaziale come parte della relativa rappresentazione, sarà sempre possibile accedere ai dati di mapping spaziali più completi e accurati.
+Molti degli scenari principali per le applicazioni compatibili con l'ambiente (posizionamento, occlusione, fisica e così via) sono indirizzabili sia dal mapping spaziale che dalla comprensione della scena e in questa sezione vengono evidenziate queste differenze. Una differenza fondamentale tra la comprensione della scena e il mapping spaziale è un compromesso tra precisione massima e latenza alla struttura e alla semplicità. Se l'applicazione richiede la latenza più bassa possibile e i triangoli mesh a cui si vuole accedere solo, usare direttamente il mapping spaziale. Se si sta eseguendo un'elaborazione di livello superiore, è possibile passare al modello di comprensione della scena in quanto dovrebbe fornire un superset di funzionalità. Si noti inoltre che, poiché la comprensione della scena fornisce uno snapshot della mesh di mapping spaziale come parte della relativa rappresentazione, sarà sempre possibile accedere ai dati di mapping spaziali più completi e accurati.
 
 Le sezioni seguenti rivisitano gli scenari di mapping spaziale principali nel contesto della nuova scena Understanding SDK.
 
-### <a name="placement"></a>Posizionamento
+### <a name="placement"></a>Posizione
 
 La comprensione della scena fornisce nuovi costrutti appositamente progettati per semplificare gli scenari di posizionamento. Una scena può calcolare le primitive denominate SceneQuads che descrivono le superfici piane in cui è possibile posizionare gli ologrammi. SceneQuads sono stati progettati in modo specifico per la selezione host e descrivono una superficie 2D e forniscono un'API per la selezione host su tale superficie. In precedenza, quando si utilizzava la mesh triangolare per eseguire la selezione host, era necessario analizzare tutte le aree del quad ed eseguire operazioni di riempimento/post-elaborazione dei fori per identificare posizioni valide per la posizione degli oggetti. Questa operazione non è sempre necessaria con i quad, perché la scena che comprende il runtime è in grado di dedurre le aree del quad che non sono state analizzate e di invalidare le aree del quad che non fanno parte della superficie.
 

@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Realtà mista di Windows, simulatore, test
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580697"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003297"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Uso del simulatore di realtà mista di Windows
 
@@ -22,8 +22,8 @@ Il simulatore di realtà mista di Windows consente di testare app per realtà mi
 1. **Abilitare la modalità sviluppatore** da impostazioni-> aggiornamento e > sicurezza per gli sviluppatori
 2. Avviare il **portale di realtà mista** dal desktop
 3. Se è la prima volta che si avvia il portale, è necessario eseguire l'installazione
-   1. Fare **clic su** inizia
-   2. Fare **clic** su Accetto per accettare il contratto
+   1. Fare **clic su inizia**
+   2. Fare **clic su Accetto per** accettare il contratto
    3. Fare clic su **Configura per la simulazione (per gli sviluppatori)** per procedere con l'installazione senza un dispositivo fisico
    4. Fare clic su **Configura** per confermare la scelta
 4. Fai clic sul pulsante **per sviluppatori** sul lato sinistro del portale per la realtà mista
@@ -32,13 +32,15 @@ Il simulatore di realtà mista di Windows consente di testare app per realtà mi
 
 A questo punto dovrebbe essere in esecuzione la simulazione.
 
+Se si vuole disabilitare la modalità sviluppatore nelle impostazioni, è necessario prima **di tutto attivare** l'opzione di attivazione della simulazione nella sezione **per sviluppatori** del portale per la realtà mista.
+
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>Distribuzione di app al simulatore di realtà mista
 
 Poiché il simulatore viene eseguito nel PC locale senza una macchina virtuale, è possibile distribuire semplicemente le app di Windows universali nel **computer locale** durante il debug.
 
 ## <a name="basic-simulator-input"></a>Input del simulatore Basic
 
-Il controllo del simulatore è molto simile a molti giochi video 3D comuni e l'emulatore di [HoloLens](using-the-hololens-emulator.md). Usando la tastiera, il mouse o il controller Xbox, sono disponibili diverse opzioni di input.
+Il controllo del simulatore è molto simile a molti giochi video 3D comuni e l' [emulatore di HoloLens](using-the-hololens-emulator.md). Usando la tastiera, il mouse o il controller Xbox, sono disponibili diverse opzioni di input.
 
 Per controllare il simulatore, è possibile indirizzare le azioni di un utente simulato con un headset immersivo. Le azioni spostano l'utente simulato e provocano interazioni con le app che rispondono come in un auricolare immersivo.
 * **Camminare avanti, indietro, verso sinistra e verso destra**: usa i tasti W, A, S e D della tastiera oppure il joystick sinistro di un controller Xbox.

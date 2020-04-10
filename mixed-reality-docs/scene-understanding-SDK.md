@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: f365b0444576e03acd8dba194d7f8f24175e7bee
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539517"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003327"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Panoramica dell'SDK per la comprensione della scena
 
-L'obiettivo della comprensione della scena consiste nel trasformare i dati dei sensori dell'ambiente non strutturati acquisiti dal dispositivo della realtà mista e convertirli in una rappresentazione potente ma astratta che è intuitiva e facile da sviluppare per. L'SDK funge da livello di comunicazione tra l'applicazione e la scena che comprende il Runtime. Ha lo scopo di simulare costrutti standard esistenti, ad esempio grafici della scena 3D per le rappresentazioni 3D e rettangoli/pannelli 2D per le applicazioni 2D. Mentre la scena dei costrutti che comprendono le simulazioni verrà mappata a Framework concreti che è possibile usare, in generale SceneUnderstanding è un Framework agnostico che consente l'interoperabilità tra diversi Framework che interagiscono con esso. Poiché la comprensione della scena evolve il ruolo dell'SDK è garantire che le nuove rappresentazioni e funzionalità continuino a essere esposte in un framework unificato. In questo documento vengono introdotti i concetti di alto livello che consentiranno di acquisire familiarità con l'ambiente di sviluppo e l'utilizzo e quindi fornire una documentazione più dettagliata per classi e costrutti specifici.
+L'obiettivo della comprensione della scena consiste nel trasformare i dati dei sensori dell'ambiente non strutturati acquisiti dal dispositivo della realtà mista e convertirli in una rappresentazione potente ma astratta che è intuitiva e facile da sviluppare per. L'SDK funge da livello di comunicazione tra l'applicazione e la scena che comprende il Runtime. Ha lo scopo di simulare costrutti standard esistenti, ad esempio grafici della scena 3D per le rappresentazioni 3D e rettangoli 2D e pannelli per le applicazioni 2D. Mentre la scena dei costrutti che comprendono le simulazioni verrà mappata a Framework concreti che è possibile usare, in generale SceneUnderstanding è un Framework agnostico che consente l'interoperabilità tra diversi Framework che interagiscono con esso. Poiché la comprensione della scena evolve il ruolo dell'SDK è garantire che le nuove rappresentazioni e funzionalità continuino a essere esposte in un framework unificato. In questo documento vengono introdotti i concetti di alto livello che consentiranno di acquisire familiarità con l'ambiente di sviluppo e l'utilizzo e quindi fornire una documentazione più dettagliata per classi e costrutti specifici.
 
 ## <a name="where-do-i-get-the-sdk"></a>Dove è possibile ottenere l'SDK?
 
@@ -31,7 +31,7 @@ SceneUnderstanding richiede Windows SDK versione 18362 o successiva.
 
 Se si usa l'SDK in un progetto Unity, usare [NuGet per Unity](https://github.com/GlitchEnzo/NuGetForUnity) per installare il pacchetto nel progetto.
 
-## <a name="conceptual-overview"></a>Panoramica concettuale
+## <a name="conceptual-overview"></a>Panoramica dei concetti
 
 ### <a name="the-scene"></a>Scena
 
@@ -58,7 +58,7 @@ Di seguito viene presentato un esempio di una struttura sia nel formato flat che
 <tr>
 <td>
 <ul>
-  Scena
+  Scene
   <ul>
   <li>SceneObject_1
     <ul>
@@ -119,13 +119,13 @@ SceneObjects può avere uno dei seguenti elementi:
 <tr>
 <th>SceneObjectKind</th> <th>Descrizione</th>
 </tr>
-<tr><td>Informazioni</td><td>Il SceneObject <b>non</b> è noto come uno degli altri tipi di oggetto scena riconosciuti. Questa classe non deve essere confusa con Unknown, in cui lo sfondo non è a parete/piano/soffitto e così via... mentre Unknown non è ancora stato categorizzato.</b></td></tr>
+<tr><td>Background</td><td>Il SceneObject <b>non</b> è noto come uno degli altri tipi di oggetto scena riconosciuti. Questa classe non deve essere confusa con Unknown, in cui lo sfondo non è a parete/piano/soffitto e così via... mentre Unknown non è ancora stato categorizzato.</b></td></tr>
 <tr><td>Parete</td><td>Una parete fisica. Si presuppone che i muri siano strutture ambientali non mobili.</td></tr>
 <tr><td>Floor</td><td>I piani sono superfici in cui è possibile spostarsi. Nota: le scale non sono piani. Si noti inoltre che le pavimentazioni presuppongono una superficie a cui è possibile spostarsi e pertanto non esiste alcun presupposto esplicito di un pavimento singolare. Strutture a più livelli, rampe e così via... deve essere classificata come floor.</td></tr>
 <tr><td>Ceiling</td><td>Superficie superiore di una stanza.</td></tr>
-<tr><td>Piattaforma</td><td>Una superficie piana grande su cui posizionare gli ologrammi. Che tendono a rappresentare tabelle, piani di ridimensionamento e altre superfici orizzontali di grandi dimensioni.</td></tr>
+<tr><td>Platform</td><td>Una superficie piana grande su cui posizionare gli ologrammi. Che tendono a rappresentare tabelle, piani di ridimensionamento e altre superfici orizzontali di grandi dimensioni.</td></tr>
 <tr><td>World</td><td>Etichetta riservata per i dati geometrici indipendenti dall'assegnazione di etichette. La mesh generata impostando il flag di aggiornamento EnableWorldMesh verrebbe classificato come World.</td></tr>
-<tr><td>Sconosciuta</td><td>Questo oggetto scena deve ancora essere classificato e assegnato un tipo. Questa operazione non deve essere confusa con lo sfondo, perché questo oggetto può essere qualsiasi cosa, il sistema non ha ancora una classificazione sufficientemente forte per il sistema.</td></tr>
+<tr><td>Sconosciuto</td><td>Questo oggetto scena deve ancora essere classificato e assegnato un tipo. Questa operazione non deve essere confusa con lo sfondo, perché questo oggetto può essere qualsiasi cosa, il sistema non ha ancora una classificazione sufficientemente forte per il sistema.</td></tr>
 </tr>
 </table>
 
@@ -151,7 +151,7 @@ SceneQuads definire una superficie rettangolare delimitata in 2D. Tuttavia, Scen
 
 La sezione seguente consente di acquisire familiarità con le nozioni di base di SceneUnderstanding. In questa sezione vengono fornite le nozioni di base, a questo punto è necessario disporre di un contesto sufficiente per esplorare le applicazioni di esempio per vedere come SceneUnderstanding viene usato in modo olistico.
 
-### <a name="initialization"></a>Inizializzazione
+### <a name="initialization"></a>Initialization
 
 Il primo passaggio per lavorare con SceneUnderstanding è che l'applicazione ottenga un riferimento a un oggetto scena. Questa operazione può essere eseguita in uno dei due modi seguenti, una scena può essere calcolata dal driver o una scena esistente calcolata in passato può essere deserializzata. Quest'ultimo è particolarmente utile per lavorare con SceneUnderstanding durante lo sviluppo, in cui le applicazioni e le esperienze possono essere prototipate rapidamente senza un dispositivo di realtà mista.
 
@@ -263,9 +263,9 @@ Si noti che si tratta del SceneObject con la trasformazione rispetto all'origine
 
 ### <a name="dealing-with-transforms"></a>Gestione delle trasformazioni
 
-La comprensione della scena ha effettuato un tentativo intenzionale di allinearsi alle rappresentazioni tradizionali della scena 3D quando si gestiscono le trasformazioni. Ogni scena è quindi confinata a un singolo sistema di coordinate, in modo analogo alla maggior parte delle rappresentazioni ambientali 3D. SceneObjects forniscono la posizione e l'orientamento all'interno del sistema di coordinate. Se l'applicazione sta affrontando scenari che estendono il limite di una singola origine, può ancorare SceneObjects a SpatialAnchors o generare diverse scene e unirle, ma per semplicità si presuppone che le scene stagne esistano nei propri origine localizzata da un NodeId definito da scene. OriginSpatialGraphNodeId.
+La comprensione della scena ha effettuato un tentativo intenzionale di allinearsi alle rappresentazioni tradizionali della scena 3D quando si gestiscono le trasformazioni. Ogni scena è quindi confinata a un singolo sistema di coordinate, in modo analogo alla maggior parte delle rappresentazioni ambientali 3D. SceneObjects forniscono la posizione e l'orientamento all'interno del sistema di coordinate. Se l'applicazione sta affrontando scenari che estendono il limite di una singola origine, può ancorare SceneObjects a SpatialAnchors o generare diverse scene e unirle, ma per semplicità si presuppone che esistano scene ermetiche nella propria origine localizzata da un NodeId definito da scene. OriginSpatialGraphNodeId.
 
-Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde a Unity ' s di origine, nonché il metodo di estensione `.ToUnity()` per la conversione tra `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
+Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde all'origine mondiale di Unity, nonché il metodo di estensione `.ToUnity()` per la conversione tra `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -380,7 +380,7 @@ Se non si ha un dispositivo HoloLens2 ma si vuole giocare con la comprensione de
 
 [Scene di esempio sulla comprensione della scena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Mapping spaziale](spatial-mapping.md)
 * [Informazioni sulle scene](scene-understanding.md)
