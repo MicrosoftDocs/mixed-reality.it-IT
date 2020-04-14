@@ -1,17 +1,17 @@
 ---
 title: Limitazioni e risoluzione dei problemi di comunicazione remota olografica
 description: Procedura di risoluzione dei problemi per la comunicazione remota olografica in HoloLens 2.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, comunicazione remota olografica, rendering remoto, rendering di rete, HoloLens, ologrammi remoti, risoluzione dei problemi, guida
-ms.openlocfilehash: 79258832d29741c56a1e7e89baeb7d728c806dd1
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c6d8333bf22c3abb254a9f1b6e30a785effa9999
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092362"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277349"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Risoluzione dei problemi di comunicazione remota olografica
 
@@ -22,7 +22,7 @@ ms.locfileid: "79092362"
 
 Per le app di esempio per la comunicazione remota olografica è stata abilitata la mitigazione Spectre (/Qspectre) nella configurazione
 
-Se viene visualizzato un errore irreversibile del linker che indica che non è possibile aprire ' vccorlib. lib ', verificare che il carico di lavoro di Visual Studio includa le librerie mitigate di Spectre. Per altre informazioni, vedere https://aka.ms/Ofhn4c.
+Se viene visualizzato un errore irreversibile del linker che indica che non è possibile aprire ' vccorlib. lib ', verificare che il carico di lavoro di Visual Studio includa le librerie mitigate di Spectre. Per ulteriori informazioni, vedere https://aka.ms/Ofhn4c.
 
 ## <a name="limitations"></a>Limitazioni
 
@@ -89,7 +89,7 @@ Le API seguenti **non** sono attualmente supportate quando si usa la comunicazio
 * [SpatialGraphInteropPreview.TryCreateFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
 * [SpatialInteractionSource. controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Cronologia delle versioni remota olografica](holographic-remoting-version-history.md)
 * [Scrittura di un'app remota olografica remota](holographic-remoting-create-host.md)
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)

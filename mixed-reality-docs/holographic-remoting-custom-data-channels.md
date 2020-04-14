@@ -1,17 +1,17 @@
 ---
 title: Canali di dati di comunicazione remota olografica personalizzati
 description: I canali di dati personalizzati possono essere usati per inviare dati utente tramite la connessione remota olografica già stabilita.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 8bfa19b7af0f3429130aabf70d9d11083bc56a52
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 12fa47b6b3a46521a9e6029cab61fa1c628c06e9
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278099"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Canali di dati di comunicazione remota olografica personalizzati
 
@@ -113,7 +113,7 @@ Per chiudere un canale di dati personalizzato, utilizzare il metodo ```IDataChan
 m_customDataChannel.Close();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app remota olografica remota](holographic-remoting-create-host.md)
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)

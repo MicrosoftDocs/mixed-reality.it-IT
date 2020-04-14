@@ -1,18 +1,18 @@
 ---
 title: Consigli sulle prestazioni per Unity
 description: Suggerimenti specifici per Unity per migliorare le prestazioni con le app di realtà mista.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: grafica, cpu, gpu, rendering, garbage collection, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160017"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277569"
 ---
 # <a name="performance-recommendations-for-unity"></a>Consigli sulle prestazioni per Unity
 

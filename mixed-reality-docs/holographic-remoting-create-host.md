@@ -1,17 +1,17 @@
 ---
 title: Scrittura di un'app remota olografica remota
 description: Creando un contenuto remoto dell'app remota olografica, di cui viene eseguito il rendering in un computer remoto, può essere trasmesso a HoloLens 2. Questo articolo descrive il modo in cui è possibile ottenere questo risultato.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 76e37499fd32a82e6846c6c7cac1a292ef6b553a
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 6c6da16d83f593d9987bf7e534f9f663f11abd01
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278119"
 ---
 # <a name="writing-a-holographic-remoting-remote-app"></a>Scrittura di un'app remota olografica remota
 
@@ -352,7 +352,7 @@ Per verificare se la riproiezione approfondita è siano che funziona in HoloLens
 
 I canali di dati personalizzati possono essere utilizzati per inviare dati utente tramite la connessione remota già stabilita. Per ulteriori informazioni, vedere [canali di dati personalizzati](holographic-remoting-custom-data-channels.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
 * [Stabilire una connessione sicura con la comunicazione remota olografica](holographic-remoting-secure-connection.md)

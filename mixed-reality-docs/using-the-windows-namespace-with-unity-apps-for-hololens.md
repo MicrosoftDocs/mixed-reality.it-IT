@@ -1,17 +1,17 @@
 ---
 title: API WinRT con Unity per HoloLens
 description: Illustra come usare le API WinRT (lo spazio dei nomi Windows) nel progetto Unity per HoloLens.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, WinRT, realtà mista di Windows, API, procedura dettagliata
-ms.openlocfilehash: 73764d191813f6dcae750e74ce3181af987c9e0e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 80f950d7571a936e93eb08490ad83dbb34a50b3a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277989"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>API WinRT con Unity per HoloLens
 
@@ -62,8 +62,8 @@ public class WinRTAPI : MonoBehaviour {
 
 ## <a name="edit-your-scripts-in-a-unity-c-project"></a>Modificare gli script in un progetto C# Unity
 
-Quando si fa doppio clic su uno script nell'editor di Unity, viene avviato per impostazione predefinita lo script in un progetto di editor. Le API di WinRT sembreranno sconosciute perché il progetto di Visual Studio non fa riferimento al Windows Runtime. Inoltre, la direttiva **ENABLE_WINMD_SUPPORT** non sarà definita e tutti i *#if* codice di cui è stato eseguito il wrapper verranno ignorati fino a quando non si compila il progetto in una soluzione UWP di Visual Studio.
+Quando si fa doppio clic su uno script nell'editor di Unity, viene avviato per impostazione predefinita lo script in un progetto di editor. Le API di WinRT sembreranno sconosciute perché il progetto di Visual Studio non fa riferimento al Windows Runtime. Inoltre, la direttiva **ENABLE_WINMD_SUPPORT** non sarà definita e tutti i *#if* codice con wrapper verranno ignorati fino a quando non si compila il progetto in una soluzione UWP di Visual Studio.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Unity support Windows Runtime](https://docs.unity3d.com/Manual/IL2CPP-WindowsRuntimeSupport.html)

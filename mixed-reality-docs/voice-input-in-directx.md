@@ -1,17 +1,17 @@
 ---
 title: Input vocale in DirectX
 description: Viene illustrato come implementare i comandi vocali e il riconoscimento di frasi e frasi brevi in un'app DirectX per la realtà mista di Windows.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: procedura dettagliata, comando vocale, frase, riconoscimento, sintesi vocale, DirectX, piattaforma, Cortana, realtà mista di Windows
-ms.openlocfilehash: c0a7ca85c24147e607603e733c9d191c64cbd927
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 2837a0fc42e8fdebb2e1facee118d20b5668cd43
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277969"
 ---
 # <a name="voice-input-in-directx"></a>Input vocale in DirectX
 
@@ -427,6 +427,6 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Progettazione di app vocali](https://msdn.microsoft.com/library/dn596121.aspx)
 * [Esempio SpeechRecognitionAndSynthesis](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

@@ -1,17 +1,17 @@
 ---
 title: Modalità di riproduzione Unity
 description: Uso della modalità di riproduzione nell'editor di Unity per visualizzare in anteprima le modifiche apportate a un dispositivo senza distribuire un'app.
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, comunicazione remota, comunicazione remota olografica, lettore di comunicazione remota olografica
-ms.openlocfilehash: 6164d7ae1bc2d9ac13135f17132aca089e63ecdf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: dca7ffba1270802fcabed8a88fe7428ef2981553
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277559"
 ---
 # <a name="unity-play-mode"></a>Modalità di riproduzione Unity
 
@@ -25,7 +25,7 @@ Con la comunicazione remota olografica è possibile sperimentare l'app in HoloLe
 3. In Unity, scegliere **emulazione olografica**dal menu **finestra** .
 4. Impostare la **modalità di emulazione** su da **remoto a dispositivo**.
 5. Per **computer remoto**, immettere l'indirizzo IP del HoloLens.
-6. Fai clic su **Connetti**. Si noterà che lo **stato della connessione è stato** modificato in **connesso** e la schermata è vuota in HoloLens.
+6. Fare clic su **Connetti**. Si noterà che lo **stato della connessione è stato** modificato in **connesso** e la schermata è vuota in HoloLens.
 7. Fare clic sul pulsante **Play (Riproduci** ) per avviare la modalità di riproduzione e sperimentare l'app nella HoloLens.
 
 La comunicazione remota olografica richiede un PC veloce e una connessione Wi-Fi. Per i dettagli completi, vedere [lettore remoto olografico](holographic-remoting-player.md) .

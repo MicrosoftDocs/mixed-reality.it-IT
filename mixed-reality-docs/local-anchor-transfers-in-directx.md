@@ -1,17 +1,17 @@
 ---
 title: Trasferimenti di ancoraggio locali in DirectX
 description: Viene illustrato come sincronizzare due dispositivi HoloLens trasferendo ancoraggi spaziali.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Synchronize, ancoraggio spaziale, trasferimento, multiplayer, visualizzazione, scenario, procedura dettagliata, codice di esempio, trasferimento, trasferimento di ancoraggio locale, esportazione di ancoraggio, importazione di ancoraggio
-ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e709f107e280f9c88a4f1af590cb62de301633fe
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376028"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278069"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Trasferimenti di ancoraggio locali in DirectX
 
@@ -33,7 +33,7 @@ Si noti che gli ancoraggi spaziali non sono in grado di trasferire tra tipi di d
 
 È necessario concedere all'app l'autorizzazione per usare la funzionalità spatialPerception prima di poter usare [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Questa operazione è necessaria perché il trasferimento di un ancoraggio spaziale comporta la condivisione delle immagini del sensore raccolte nel tempo in prossimità di tale ancoraggio, che potrebbero includere informazioni riservate.
 
-Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
+Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco un esempio:
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seg
 </Capabilities>
 ```
 
-La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Di seguito è riportato un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Ecco un esempio:
 
 ```
 <Package
@@ -672,7 +672,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-La procedura è terminata. A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
+Ecco fatto! A questo punto, è necessario disporre di informazioni sufficienti per provare a individuare gli ancoraggi ricevuti sulla rete. Anche in questo caso, si noti che il client deve disporre di un numero sufficiente di dati di rilevamento visivi per lo spazio per individuare correttamente l'ancoraggio. Se non funziona immediatamente, provare a spostarsi per un po'. Se ancora non funziona, fare in modo che il server invii più ancoraggi e usare le comunicazioni di rete per concordare su uno che funzioni per il client. È possibile provare a eseguire questa operazione scaricando HolographicSpatialAnchorTransferSample, configurando gli indirizzi IP del client e del server e distribuendo il server a dispositivi HoloLens client e server.
 
 ## <a name="see-also"></a>Vedere anche
 * [PPL (Parallel Patterns Library)](https://msdn.microsoft.com/library/dd492418.aspx)

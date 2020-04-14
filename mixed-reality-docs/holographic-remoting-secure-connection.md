@@ -1,17 +1,17 @@
 ---
 title: Stabilire una connessione sicura con la comunicazione remota olografica
 description: Questa pagina illustra come stabilire una connessione crittografata protetta quando si usa la comunicazione remota olografica.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 4006a317ed2ecfd7a1e67336a80a4e536d45e554
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092481"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278229"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Stabilire una connessione sicura con la comunicazione remota olografica
 
@@ -60,7 +60,7 @@ Inoltre, per consentire lo scambio di un token protetto, è necessario implement
 
 Una volta implementati questi oggetti ```ListenSecure``` necessario chiamare anziché ```Listen``` e ```ConnectSecure``` anziché ```Connect``` rispettivamente nel contesto remoto e nel contesto del lettore. ```ListenSecure``` richiede un provider di certificati e un ricevitore di autenticazione aggiuntivi su ```Listen```. ```ConnectSecure``` richiede un provider di autenticazione e un validator del certificato aggiuntivi su ```Connect```.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app remota olografica remota](holographic-remoting-create-host.md)
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)

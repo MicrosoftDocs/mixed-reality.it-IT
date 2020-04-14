@@ -1,17 +1,17 @@
 ---
 title: Creazione di un progetto DirectX olografico
 description: Viene illustrato come creare una nuova app olografica basata sul modello di app di realtà mista di Windows.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, app olografica, nuova app, app UWP, app modello, ologrammi, nuovo progetto, procedura dettagliata, download, codice di esempio
-ms.openlocfilehash: d99478a0d98d0593b7b82f25080d20913789cb6c
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 30f2c630b2919fbc304dc96d13cab74e22ed4adc
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277919"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Creazione di un progetto DirectX olografico
 
@@ -25,7 +25,7 @@ L'app per la realtà mista, tuttavia, presenta alcune funzionalità aggiuntive c
 * Gestire l'input di [sguardi](gaze-and-commit.md) e riconoscere un semplice [gesto](gaze-and-commit.md#composite-gestures).
 * Passa alla modalità di rendering stereo a schermo intero.
 
-## <a name="how-do-i-get-started"></a>Come posso iniziare a usare la soluzione?
+## <a name="how-do-i-get-started"></a>Ricerca per categorie iniziare?
 
 [Installare innanzitutto gli strumenti](install-the-tools.md)seguendo le istruzioni riportate in download di Visual Studio 2019 e dei modelli di app per la realtà mista di Windows. I modelli di app per la realtà mista sono disponibili in Visual Studio Marketplace come [download Web](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)oppure installarli come estensione tramite l'interfaccia utente di Visual Studio.
 
@@ -44,7 +44,7 @@ Per creare un nuovo progetto in Visual Studio 2019:
    *Modello di progetto C++di app UWP DirectX 11/WinRT olografico in Visual Studio 2019*
    >[!IMPORTANT]
    >Verificare che il nome del modello di progetto includa "C++(/WinRT)".  In caso contrario, è installata una versione precedente dei modelli di progetto olografici.  Per ottenere i modelli di progetto più recenti, [installarli](install-the-tools.md) come estensione di Visual Studio 2019.
-5. Fai clic su **Next**.
+5. Fare clic su **Avanti**.
 5. Immettere le caselle di testo **nome progetto** e **percorso** e quindi fare clic o toccare **Crea**. Il progetto di app olografico viene creato.
 6. Per lo sviluppo destinato solo a HoloLens 2, verificare che la versione di **destinazione** e la **versione minima** siano impostate su **Windows 10, versione 1903**.  Se si fa riferimento anche a HoloLens (1st Gen) o alle cuffie Desktop combinate di Windows desktop, è possibile impostare la **versione minima** su **Windows 10, versione 1809** , anche se questa operazione richiederà alcuni <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">controlli adattivi della versione</a> nel codice quando si usano le nuove funzionalità di HoloLens 2.
    ![screenshot dell'impostazione di Windows 10, versione 1903 come versione di destinazione e minima](images/new-uwp-project.png)<br>
@@ -54,7 +54,7 @@ Per creare un nuovo progetto in Visual Studio 2019:
 
 Per creare un nuovo progetto in Visual Studio 2017:
 1. Avviare **Visual Studio**.
-2. Scegliere **nuovo** dal menu **file** e scegliere **progetto** dal menu di scelta rapida. Verrà visualizzata la finestra di dialogo **nuovo progetto** .
+2. Scegliere **nuovo** dal menu **file** e scegliere **progetto** dal menu di scelta rapida. Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
 3. Espandere **installato** a sinistra ed espandere il nodo **linguaggio C++ visuale** .
 4. Passare al nodo **universale di Windows > olografico** e selezionare l' **app olografica DirectX 11 (WindowsC++universale) (/WinRT)** .
    ![screenshot del modello di progetto app C++UWP olografico DirectX 11/WinRT in Visual Studio 2017](images/holographic-directx-app-cpp-new-project.png)<br>
@@ -178,7 +178,7 @@ Il metodo **Render** in `AppMain.cpp` accetta <a href="https://docs.microsoft.co
 
 Il modello di app per la realtà mista di Windows supporta ora la compilazione con il flag di mitigazione Spectre abilitato (/Qspectre). Prima di compilare una configurazione con la mitigazione Spectre abilitata, assicurarsi C++ di installare le librerie di runtime di Microsoft Visual (MSVC) di Spectre. Per installare le C++ librerie di Spectre mitigate, avviare il programma di installazione di Visual Studio e selezionare **modifica**. Passare a **singoli componenti** e cercare "Spectre". Selezionare le caselle corrispondenti alle piattaforme di destinazione e alla versione di MSVC per cui è necessario compilare il codice con attenuazione Spectre per e fare clic su **modifica** per avviare l'installazione.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Ottenere un HolographicSpace](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [Rendering in DirectX](rendering-in-directx.md)

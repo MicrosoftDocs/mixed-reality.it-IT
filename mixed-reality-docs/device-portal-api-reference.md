@@ -1,17 +1,17 @@
 ---
 title: Informazioni di riferimento sull'API del portale del dispositivo
 description: Informazioni di riferimento sulle API per il portale per dispositivi Windows in HoloLens
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portale per dispositivi Windows, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694439"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278239"
 ---
 # <a name="device-portal-api-reference"></a>Informazioni di riferimento sull'API del portale del dispositivo
 
@@ -24,14 +24,14 @@ Tutti gli elementi del [portale per dispositivi Windows](using-the-windows-devic
 Disinstalla un'app
 
 Parametri
-* pacchetto Nome file del pacchetto da disinstallare.
+* Package: nome file del pacchetto da disinstallare.
 
 **/API/app/PackageManager/Package (POST)**
 
 Installa un'app
 
 Parametri
-* pacchetto Nome file del pacchetto da installare.
+* Package: nome file del pacchetto da installare.
 
 Payload
 * corpo HTTP conforme a più parti
@@ -40,7 +40,7 @@ Payload
 
 Recupera l'elenco delle app installate nel sistema con i dettagli
 
-Dati restituiti
+Restituisce i dati
 * Elenco dei pacchetti installati con i dettagli
 
 **/API/app/PackageManager/state (GET)**
@@ -86,14 +86,14 @@ Parametri
 * packageFullname: nome pacchetto
 * fileName: dump nome file
 
-Dati restituiti
+Restituisce i dati
 * File dump. Esaminare con WinDbg o Visual Studio
 
 **/API/debug/dump/usermode/Dumps (GET)**
 
 Restituisce l'elenco di tutti i dump di arresto anomalo del sistema per le app sideload
 
-Dati restituiti
+Restituisce i dati
 * Elenco dei dump di arresto anomalo del sistema per app caricata sul lato
 
 ## <a name="etw"></a>ETW
@@ -102,14 +102,14 @@ Dati restituiti
 
 Enumera i provider registrati
 
-Dati restituiti
+Restituisce i dati
 * Elenco di provider, nome descrittivo e GUID
 
 **/API/ETW/Session/realtime (GET/WebSocket)**
 
 Crea una sessione ETW in tempo reale. gestito tramite WebSocket.
 
-Dati restituiti
+Restituisce i dati
 * Eventi ETW dai provider abilitati
 
 ## <a name="holographic-os"></a>Sistema operativo olografico
@@ -131,7 +131,7 @@ Ottiene il dip archiviato (distanza interpupillare) in millimetri
 Imposta il dpi
 
 Parametri
-* IPD Nuovo valore di DPI da impostare in millimetri
+* dpi: nuovo valore di DPI da impostare in millimetri
 
 **/API/Holographic/OS/webmanagement/Settings/HTTPS (GET)**
 
@@ -191,7 +191,7 @@ Creare un flusso di controllo (priorità obbligatoria) o pubblicare i dati in un
 Eliminare una registrazione.
 
 Parametri
-* registrazione Nome della registrazione da eliminare.
+* registrazione: nome della registrazione da eliminare.
 
 **/API/Holographic/Simulation/playback/file (POST)**
 
@@ -206,21 +206,21 @@ Ottenere tutte le registrazioni.
 Ottenere lo stato di riproduzione corrente di una registrazione.
 
 Parametri
-* registrazione Nome della registrazione.
+* registrazione: nome della registrazione.
 
 **/API/Holographic/Simulation/playback/Session/file (DELETE)**
 
 Scaricare una registrazione.
 
 Parametri
-* registrazione Nome della registrazione da scaricare.
+* registrazione: nome della registrazione da scaricare.
 
 **/API/Holographic/Simulation/playback/Session/file (POST)**
 
 Caricare una registrazione.
 
 Parametri
-* registrazione Nome della registrazione da caricare.
+* registrazione: nome della registrazione da caricare.
 
 **/API/Holographic/Simulation/playback/Session/Files (GET)**
 
@@ -231,28 +231,28 @@ Ottenere tutte le registrazioni caricate.
 Sospendere la registrazione.
 
 Parametri
-* registrazione Nome della registrazione.
+* registrazione: nome della registrazione.
 
 **/API/Holographic/Simulation/playback/Session/Play (POST)**
 
 Riprodurre una registrazione.
 
 Parametri
-* registrazione Nome della registrazione.
+* registrazione: nome della registrazione.
 
 **/API/Holographic/Simulation/playback/Session/Stop (POST)**
 
 Arrestare una registrazione.
 
 Parametri
-* registrazione Nome della registrazione.
+* registrazione: nome della registrazione.
 
 **/API/Holographic/Simulation/playback/Session/types (GET)**
 
 Ottenere i tipi di dati in una registrazione caricata.
 
 Parametri
-* registrazione Nome della registrazione.
+* registrazione: nome della registrazione.
 
 ## <a name="perception-simulation-recording"></a>Registrazione della simulazione della percezione
 
@@ -261,12 +261,12 @@ Parametri
 Avviare una registrazione. Solo una singola registrazione può essere attiva in una sola volta. È necessario impostare una delle intestazioni Head, Hands, spatialMapping o Environment.
 
 Parametri
-* Head Impostare su 1 per registrare i dati Head.
-* mani Impostare su 1 per registrare i dati della mano.
-* spatialMapping : Impostare su 1 per registrare il mapping spaziale.
-* ambiente Impostare su 1 per registrare i dati dell'ambiente.
-* nome Nome della registrazione.
-* singleSpatialMappingFrame : Impostare su 1 per registrare un singolo frame di mapping spaziale.
+* Head: impostare su 1 per registrare i dati Head.
+* Hands: impostare su 1 per registrare i dati della mano.
+* spatialMapping: impostare su 1 per registrare il mapping spaziale.
+* ambiente: impostare su 1 per registrare i dati dell'ambiente.
+* Nome: nome della registrazione.
+* singleSpatialMappingFrame: impostare su 1 per registrare un singolo frame di mapping spaziale.
 
 **/API/Holographic/Simulation/Recording/status (GET)**
 
@@ -283,7 +283,7 @@ Arrestare la registrazione corrente. La registrazione verrà restituita come fil
 Scarica un file di realtà mista dal dispositivo. Usare il parametro di query op = Stream per il flusso.
 
 Parametri
-* filename Nome, hex64 codificato, del file video da ottenere
+* filename: Name, hex64 codificato del file video da ottenere
 * op: Stream
 
 **/API/Holographic/MRC/file (DELETE)**
@@ -291,7 +291,7 @@ Parametri
 Elimina una registrazione di realtà mista dal dispositivo.
 
 Parametri
-* filename Nome, hex64 codificato del file da eliminare
+* filename: Name, hex64 codificato del file da eliminare
 
 **/API/Holographic/MRC/Files (GET)**
 
@@ -304,7 +304,7 @@ Accetta una foto della realtà mista e crea un file nel dispositivo
 Parametri
 * Holo: Acquisisci ologrammi: true o false (il valore predefinito è false)
 * PV: Capture PV fotocamera: true o false (il valore predefinito è false)
-* RenderFromCamera : (Solo HoloLens 2) il rendering dal punto di vista della fotocamera Photo/video: true o false (il valore predefinito è true)
+* RenderFromCamera: (solo HoloLens 2) Render dal punto di vista della fotocamera Photo/video: true o false (il valore predefinito è true)
 
 **/API/Holographic/MRC/Settings (GET)**
 
@@ -323,7 +323,7 @@ Ottiene lo stato della realtà mista registrata (in esecuzione, arrestata)
 Ottiene l'immagine di anteprima per il file specificato.
 
 Parametri
-* filename Nome, hex64 codificato, del file per il quale viene richiesta l'anteprima
+* filename: Name, hex64 codificato, del file per il quale viene richiesta l'anteprima
 
 **/API/Holographic/MRC/video/Control/Start (POST)**
 
@@ -334,9 +334,9 @@ Parametri
 * PV: Capture PV fotocamera: true o false (il valore predefinito è false)
 * MIC: Acquisisci microfono: true o false (il valore predefinito è false)
 * loopback: Acquisisci audio dell'app: true o false (il valore predefinito è false)
-* RenderFromCamera : (Solo HoloLens 2) il rendering dal punto di vista della fotocamera Photo/video: true o false (il valore predefinito è true)
-* Vstab (Solo HoloLens 2) Abilita stabilizzazione video: true o false (il valore predefinito è true)
-* vstabbuffer: (Solo HoloLens 2) latenza buffer di stabilizzazione video: da 0 a 30 fotogrammi (il valore predefinito è 15 fotogrammi)
+* RenderFromCamera: (solo HoloLens 2) Render dal punto di vista della fotocamera Photo/video: true o false (il valore predefinito è true)
+* Vstab: (solo HoloLens 2) Abilita stabilizzazione video: true o false (il valore predefinito è true)
+* vstabbuffer: (solo HoloLens 2) latenza buffer di stabilizzazione video: da 0 a 30 fotogrammi (il valore predefinito è 15 fotogrammi)
 
 **/API/Holographic/MRC/video/Control/Stop (POST)**
 
@@ -364,15 +364,15 @@ Parametri facoltativi (solo HoloLens 2)
 
 Flusso di 5Mbit 1280x720p 30 fps.
 
-**/API/Holographic/Stream/live_high.mp4 (GET)**
+**/API/Holographic/Stream/live_high. mp4 (GET)**
 
 Flusso di 5Mbit 1280x720p 30 fps.
 
-**/API/Holographic/Stream/live_med.mp4 (GET)**
+**/API/Holographic/Stream/live_med. mp4 (GET)**
 
 Un flusso 854x480p 30 fps da 2 MB.
 
-**/API/Holographic/Stream/live_low.mp4 (GET)**
+**/API/Holographic/Stream/live_low. mp4 (GET)**
 
 Flusso 428x240p 15fps 0.6 Mbit.
 
@@ -397,7 +397,7 @@ Ottiene il nome del computer
 Imposta il nome del computer
 
 Parametri
-* nome Nome del nuovo computer, hex64 codificato, per impostare su
+* Nome: nome del nuovo computer, hex64 codificato, per impostare su
 
 ## <a name="performance-data"></a>Dati sulle prestazioni
 
@@ -405,14 +405,14 @@ Parametri
 
 Restituisce l'elenco dei processi in esecuzione con i dettagli
 
-Dati restituiti
+Restituisce i dati
 * JSON con elenco di processi e dettagli per ogni processo
 
 **/API/ResourceManager/systemperf (GET)**
 
 Restituisce le statistiche sulle prestazioni di sistema (lettura/scrittura di I/O, statistiche sulla memoria e così via.
 
-Dati restituiti
+Restituisce i dati
 * JSON con informazioni di sistema: CPU, GPU, memoria, rete, IO
 
 ## <a name="power"></a>Alimentazione
@@ -442,16 +442,16 @@ Arresta il dispositivo di destinazione
 Arresta un'app moderna
 
 Parametri
-* pacchetto Nome completo del pacchetto dell'app, codificato con hex64
-* forcestop : Forza l'arresto di tutti i processi (= Yes)
+* pacchetto: nome completo del pacchetto dell'app, codificato in hex64
+* forcestop: forza l'arresto di tutti i processi (= Yes)
 
 **/API/taskmanager/app (POST)**
 
 Avvia un'app moderna
 
 Parametri
-* AppID PRAID dell'app da avviare, codificato con hex64
-* pacchetto Nome completo del pacchetto dell'app, codificato con hex64
+* AppID: PRAID dell'app da avviare, hex64 codificato
+* pacchetto: nome completo del pacchetto dell'app, codificato in hex64
 
 ## <a name="wifi-management"></a>Gestione Wi-Fi
 
@@ -459,7 +459,7 @@ Parametri
 
 Enumera le interfacce di rete wireless
 
-Dati restituiti
+Restituisce i dati
 * Elenco di interfacce wireless con dettagli (GUID, descrizione e così via)
 
 **/API/WiFi/Network (DELETE)**
@@ -477,7 +477,7 @@ Enumera le reti wireless sull'interfaccia di rete specificata
 Parametri
 * interfaccia: GUID dell'interfaccia di rete
 
-Dati restituiti
+Restituisce i dati
 * Elenco di reti wireless disponibili nell'interfaccia di rete con i dettagli
 
 **/API/WiFi/Network (POST)**
@@ -500,21 +500,21 @@ Carica un profilo WPR e avvia la traccia usando il profilo caricato.
 Payload
 * corpo HTTP conforme a più parti
 
-Dati restituiti
+Restituisce i dati
 * Restituisce lo stato della sessione WPR.
 
 **/API/WPR/status (GET)**
 
 Recupera lo stato della sessione WPR
 
-Dati restituiti
+Restituisce i dati
 * Stato della sessione WPR.
 
 **/API/WPR/Trace (GET)**
 
 Arresta una sessione di traccia WPR (performance)
 
-Dati restituiti
+Restituisce i dati
 * Restituisce il file ETL di traccia
 
 **/API/WPR/Trace (POST)**
@@ -522,9 +522,9 @@ Dati restituiti
 Avvia una sessione di traccia WPR (performance)
 
 Parametri
-* profilo Nome del profilo. I profili disponibili sono archiviati in perfprofiles/Profiles. JSON
+* profilo: nome profilo. I profili disponibili sono archiviati in perfprofiles/Profiles. JSON
 
-Dati restituiti
+Restituisce i dati
 * All'avvio, restituisce lo stato della sessione WPR.
 
 ## <a name="see-also"></a>Vedere anche

@@ -1,17 +1,17 @@
 ---
 title: Input da tastiera, mouse e controller in DirectX
 description: Viene illustrato come creare un'app per la realtà mista di Windows che usa i controller di tastiera, mouse e gioco.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, tastiera, mouse, controller di gioco, Xbox Controller, HoloLens, desktop, procedura dettagliata, codice di esempio
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278089"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Input da tastiera, mouse e controller in DirectX
 
@@ -265,5 +265,5 @@ Esistono alcune differenze fondamentali nel modo in cui questo codice può esser
 * L'input da tastiera può essere un ottimo modo per controllare gli aspetti di debug dell'app o del motore di gioco, soprattutto perché l'utente non dovrà usare la tastiera. Il cablaggio è identico a quello usato per le API degli eventi CoreWindow. In questo scenario, è possibile scegliere di implementare un modo per configurare l'app per instradare gli eventi della tastiera a una modalità di "debug solo input" durante le sessioni di debug.
 * Anche i controller Bluetooth funzionano.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Accessori hardware](hardware-accessories.md)

@@ -1,17 +1,17 @@
 ---
 title: Input vocale
 description: L'input vocale è un input di base per HoloLens e per le cuffie immersive in realtà mista di Windows. La voce può essere usata per i comandi, la dettatura, il Cortana e altro ancora.
-author: Hak0n
+author: hak0n
 ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, input
-ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277979"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -275,7 +275,7 @@ Quando i comandi vocali vengono applicati in modo corretto, l'utente capisce **c
 
 ## <a name="communication"></a>Comunicazione
 
-Per le applicazioni che vogliono sfruttare le opzioni di elaborazione dell'input audio personalizzato fornite da HoloLens, è importante comprendere le diverse categorie di [flussi audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) che l'app può utilizzare. Windows 10 supporta diverse categorie di flusso e HoloLens ne usa tre per consentire l'elaborazione personalizzata per ottimizzare la qualità audio del microfono personalizzata per la comunicazione vocale, la comunicazione e altro che può essere usata per l'audio dell'ambiente di ambiente scenari di acquisizione, ad esempio "videocamera".
+Per le applicazioni che vogliono sfruttare le opzioni di elaborazione dell'input audio personalizzato fornite da HoloLens, è importante comprendere le diverse categorie di [flussi audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) che l'app può utilizzare. Windows 10 supporta diverse categorie di flusso e HoloLens ne usa tre per consentire l'elaborazione personalizzata per ottimizzare la qualità audio del microfono adattata per la comunicazione vocale, la comunicazione e altro che può essere usata per gli scenari di acquisizione audio dell'ambiente di ambiente (ad esempio "videocamera").
 * La categoria AudioCategory_Communications Stream è personalizzata per gli scenari di qualità della chiamata e di narrazione e fornisce al client un flusso audio mono 16kHz 24bit della voce dell'utente
 * La categoria AudioCategory_Speech Stream è personalizzata per il motore di riconoscimento vocale HoloLens (Windows) e fornisce un flusso di 16kHz 24bit mono della voce dell'utente. Questa categoria può essere usata dai motori di sintesi vocale di terze parti, se necessario.
 * La categoria AudioCategory_Other Stream è personalizzata per la registrazione audio dell'ambiente di ambiente e fornisce al client un flusso audio stereo a 24 bit a 48 bit.

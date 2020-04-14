@@ -1,17 +1,17 @@
 ---
 title: Archivio emulatore di HoloLens
 description: Elenco delle build rilasciate dell'emulatore di Microsoft HoloLens.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 keywords: HoloLens, emulatore, Build, versioni
-ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a50be8c83607882996e5981c4be502a0a617a797
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278159"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivio emulatore HoloLens 2
 
@@ -19,6 +19,7 @@ HoloLens Emulator (1st Gen) e HoloLens 2 Emulator Builds install side-by-side. Ã
 
 |  Compila |  Data di rilascio |  Note | 
 |----------|----------|----------|
+|  [10.0.18362.1059 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2126826) | 13 aprile, 2020 | Aprile 2020 HoloLens 2 compilazione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1056 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 marzo 2020 | HoloLens di marzo 2020 2.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 febbraio 2020 | Febbraio 2020 HoloLens 2 compilazione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | 13 gennaio, 2020 | Gennaio 2020 HoloLens 2 compilazione.  Per le note sulla versione di HoloLens 2, vedere https://docs.microsoft.com/hololens/hololens-release-notes |

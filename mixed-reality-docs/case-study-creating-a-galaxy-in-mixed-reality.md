@@ -1,17 +1,17 @@
 ---
 title: Case Study-creazione di una galassia in realtà mista
 description: Prima che Microsoft HoloLens spedito, abbiamo chiesto al nostro community di sviluppatori quale tipo di app vorrebbero vedere un'esperienza di Team Build interna per il nuovo dispositivo. Sono state condivise più di 5000 idee e dopo un sondaggio Twitter di 24 ore, il vincitore era un'idea denominata "Galaxy Explorer".
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, realtà mista di Windows, Condividi la tua idea case study
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278179"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Case Study-creazione di una galassia in realtà mista
 
@@ -23,7 +23,7 @@ Andy Zibits, il responsabile dell'arte del progetto e Karim Luccin, il tecnico d
 
 Il [nostro team](galaxy-explorer.md#meet-the-team) , composto da due progettisti, tre sviluppatori, quattro artisti, un produttore e un tester, aveva sei settimane per creare un'app completamente funzionante che consentiva agli utenti di apprendere ed esplorare la vastità e la bellezza della nostra galassia lattiginosa.
 
-Volevamo sfruttare appieno la capacità di HoloLens di eseguire il rendering degli oggetti 3D direttamente nello spazio di lavoro, quindi abbiamo deciso di voler creare una galassia realistica in cui le persone sarebbero in grado di eseguire lo zoom avanti e visualizzare le singole stelle, ognuna sulle proprie traiettorie .
+Volevamo sfruttare appieno la capacità di HoloLens di eseguire il rendering degli oggetti 3D direttamente nello spazio di lavoro, quindi abbiamo deciso di voler creare una galassia realistica in cui le persone sarebbero in grado di eseguire lo zoom avanti e visualizzare le singole stelle, ognuna sulle proprie traiettorie.
 
 Nella prima settimana dello sviluppo sono stati introdotti alcuni obiettivi per la rappresentazione della galassia del modo lattiginoso: era necessario disporre di profondità, spostamento e sensazione volumetrica, pieno di stelle che consentivano di creare la forma della galassia.
 
@@ -41,7 +41,7 @@ Sono stati avviati test di stress con migliaia di particelle puntiformi in vari 
 
 ### <a name="creating-the-position-of-the-stars"></a>Creazione della posizione delle stelle
 
-Uno dei membri del team ha già scritto il C# codice che genera stelle nella posizione iniziale. Le stelle si trovano su un'ellisse e la loro posizione può essere descritta da (**curveOffset**, **ellipseSize**, **elevazione**) dove **curveOffset** è l'angolo della stella lungo l'ellisse, **ellipseSize** è la dimensione dell'ellisse. lungo X e Z e elevazione dell'elevazione corretta della stella all'interno della galassia. In questo modo, è possibile creare un buffer ([ComputeBuffer di Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) che verrebbe inizializzato con ogni attributo Star e lo invierà alla GPU in cui risiederà per il resto dell'esperienza. Per creare questo buffer, viene usato [DrawProcedural di Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) che consente l'esecuzione di uno shader (codice su una GPU) in un set arbitrario di punti senza avere una mesh effettiva che rappresenti la galassia:
+Uno dei membri del team ha già scritto il C# codice che genera stelle nella posizione iniziale. Le stelle si trovano su un'ellisse e la loro posizione può essere descritta da (**curveOffset**, **ellipseSize**, **elevazione**) dove **curveOffset** è l'angolo della stella lungo l'ellisse, **ellipseSize** è la dimensione dell'ellisse lungo X e Z ed elevazione dell'elevazione corretta della stella all'interno della galassia. In questo modo, è possibile creare un buffer ([ComputeBuffer di Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) che verrebbe inizializzato con ogni attributo Star e lo invierà alla GPU in cui risiederà per il resto dell'esperienza. Per creare questo buffer, viene usato [DrawProcedural di Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) che consente l'esecuzione di uno shader (codice su una GPU) in un set arbitrario di punti senza avere una mesh effettiva che rappresenti la galassia:
 
 **CPU**
 
@@ -74,7 +74,7 @@ Abbiamo iniziato con modelli circolari non elaborati con migliaia di particelle.
 
 Sono stati tentati diversi modelli e sistemi particellari ruotati, come questi.
 
-Il nostro team ha eseguito alcune ricerche sul funzionamento delle galassie ed è stato creato un sistema particellare personalizzato appositamente per la galassia, in modo da poter spostare le particelle sui puntini di sospensione in base alla "[teoria delle onde di densità](https://en.wikipedia.org/wiki/Density_wave_theory)", che ipotizza che le braccia di una galassia siano aree di densità più elevata ma in flusso costante, ad esempio un ingorgo del traffico. Sembra stabile e uniforme, ma le stelle sono in realtà spostate in e fuori dalle braccia mentre si spostano lungo i rispettivi ellissi. Nel nostro sistema, le particelle non sono mai presenti sulla CPU: le schede vengono generate e ne vengono orientate tutte sulla GPU, quindi l'intero sistema è semplicemente stato iniziale + tempo. Questa operazione è stata avanzata in questo modo:
+Il nostro team ha eseguito alcune ricerche sul funzionamento delle galassie e abbiamo creato un sistema particellare personalizzato appositamente per la galassia, in modo da poter spostare le particelle sui puntini di sospensione in base alla "[teoria della densità dell'onda](https://en.wikipedia.org/wiki/Density_wave_theory)", che ipotizza che le braccia di una galassia siano aree di densità più elevata, ma in un flusso costante, ad esempio una Jam del traffico. Sembra stabile e uniforme, ma le stelle sono in realtà spostate in e fuori dalle braccia mentre si spostano lungo i rispettivi ellissi. Nel nostro sistema, le particelle non sono mai presenti sulla CPU: le schede vengono generate e ne vengono orientate tutte sulla GPU, quindi l'intero sistema è semplicemente stato iniziale + tempo. Questa operazione è stata avanzata in questo modo:
 
 ![Progressione del sistema particellare con rendering GPU](images/spiral-galaxy-arms-500px.jpg)
 
@@ -203,6 +203,6 @@ Si è interessati a trovare altre informazioni sul processo di sviluppo per Gala
 </table>
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Galaxy Explorer su GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Aggiornamenti del progetto di Galaxy Explorer in YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

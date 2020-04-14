@@ -1,17 +1,17 @@
 ---
 title: Lettore di comunicazione remota olografica
 description: Il lettore di comunicazione remota olografico è un'app complementare che si connette a app e giochi per PC che supportano la comunicazione remota olografica. La comunicazione remota olografica trasmette contenuto olografico da un PC a Microsoft HoloLens in tempo reale, usando una connessione Wi-Fi.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 88a9aa0bb058776a32016e51fc22bcb73f08ab85
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092372"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278209"
 ---
 # <a name="holographic-remoting-player"></a>Lettore di comunicazione remota olografica
 
@@ -75,7 +75,7 @@ Nella schermata principale è possibile **disabilitare** la diagnostica per disa
 * Si consiglia di usare una scheda grafica GeForce GTX 970 o AMD Radeon R9 290 o superiore.
 * Si consiglia di connettere il PC alla rete tramite Ethernet per ridurre il numero di hop wireless.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [HoloLens (1a generazione): aggiungere la comunicazione remota olografica](add-holographic-remoting.md)
 * [HoloLens 2: scrittura di un'app remota di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

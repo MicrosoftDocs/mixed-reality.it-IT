@@ -1,23 +1,23 @@
 ---
 title: Test dell'app in HoloLens
 description: Linee guida e suggerimenti per il test dell'app HoloLens
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, test
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277589"
 ---
 # <a name="testing-your-app-on-hololens"></a>Test dell'app in HoloLens
 
 Il test delle applicazioni HoloLens è molto simile a quello delle applicazioni Windows. Tutte le aree comuni devono essere considerate (funzionalità, interoperabilità, prestazioni, sicurezza, affidabilità e così via). Esistono, tuttavia, alcune aree che richiedono una particolare gestione o attenzione ai dettagli che non vengono in genere osservati nelle app per PC o telefoni. Le app olografiche devono essere eseguite senza problemi in un set eterogeneo di ambienti. Devono inoltre mantenere sempre le prestazioni e la comodità degli utenti. Le linee guida per il test di queste aree sono descritte in dettaglio in questo argomento.
 
-## <a name="performance"></a>Performance
+## <a name="performance"></a>Prestazioni
 
 Le app olografiche devono essere eseguite senza problemi in un set eterogeneo di ambienti. Devono inoltre mantenere sempre le prestazioni e la comodità degli utenti. Le prestazioni sono molto importanti per l'esperienza dell'utente con un'app olografica a cui è dedicato un intero argomento. Assicurarsi di leggere e seguire le [prestazioni di comprensione per la realtà mista](understanding-performance-for-mixed-reality.md)
 
@@ -112,5 +112,5 @@ Alcuni sviluppatori di app potrebbero voler automatizzare il test delle proprie 
 
 Per offrire all'app la possibilità di essere [pubblicata in Windows Store](submitting-an-app-to-the-microsoft-store.md), convalidarla e testarla localmente prima di inviarla per la certificazione. Se l'app è destinata al gruppo di dispositivi Windows. olografico, il [Kit di certificazione app Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) eseguirà solo i test di analisi statica locali nel PC. Nessun test verrà eseguito nella HoloLens.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Invio di un'app a Windows Store](submitting-an-app-to-the-microsoft-store.md)

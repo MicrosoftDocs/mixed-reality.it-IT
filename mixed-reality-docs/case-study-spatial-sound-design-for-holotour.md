@@ -1,17 +1,17 @@
 ---
 title: 'Case Study: progettazione di suoni spaziali per HoloTour'
 description: Per creare una presentazione virtuale 3D realmente immersiva per Microsoft HoloLens, i video panoramici e i paesaggi olografici sono solo parte della formula.
-author: JSyltebo
+author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HoloLens, HoloTour, audio spaziale, case study
-ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 5c6331bd93447f53c1dd4c9941bfa13a5eadc1bd
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278139"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>Case Study: progettazione di suoni spaziali per HoloTour
 
@@ -56,7 +56,7 @@ Quando è stato indicizzato nell'audio di acquisizione della fotocamera, abbiamo
 
 In un approccio diverso, talvolta si riproduce un ambiente stereo in loop insieme a emettitori di suoni spaziali posizionati intorno alla scena. Questi emettitori svolgono suoni monouso di volume casuale, pitch e frequenza del trigger. Questa tecnica crea un ambiente con un senso di direzionalità migliorato. In Aguas Aliens, ad esempio, è possibile scoprire in che modo ciascun quadrante del panorama dispone di emettitori specifici che evidenziano aree specifiche della geografia, ma che interagiscono per creare un ambiente immersivo generale.
 
-## <a name="tips-and-tricks"></a>Suggerimenti
+## <a name="tips-and-tricks"></a>Suggerimenti e trucchi
 
 Esistono altri modi per evidenziare la direzionalità e migliorare l'immersione per sfruttare al meglio le funzionalità audio spaziali di HoloLens. Un elenco è disponibile qui. Attendere questi effetti la volta successiva che si prova a HoloTour.
 * **Cerca destinazioni:** Questi suoni vengono attivati quando si esamina un oggetto specifico o un'area del frame olografico. Si osservi, ad esempio, il caffè sul lato strada a Roma, Piazza Navona, per attivare leggermente i suoni del ristorante occupato.
@@ -65,7 +65,7 @@ Esistono altri modi per evidenziare la direzionalità e migliorare l'immersione 
 * **Emettitore spline:** Questi emettitori si muovono nello spazio 3D rispetto alla posizione visiva dell'oggetto a cui sono collegati. Un esempio è il treno di Machu Picchu, in cui è stato usato un emettitore spline per fornire un senso di direzionalità e movimento distinti.
 * **Musica e SFX:** Alcuni aspetti di HoloTour che rappresentano un approccio più stilizzato o cinematografico usano musica e effetti audio per aumentare l'impatto emotivo. Nella battaglia gladiatore alla fine della tournée di Roma, ad esempio, gli effetti speciali come whooshes e Stingers contribuiscono a rafforzare l'effetto delle etichette visualizzate in background.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Audio spaziale](spatial-sound.md)
 * [Progettazione dell'audio spaziale](spatial-sound-design.md)
 * [Audio spaziale in Unity](spatial-sound-in-unity.md)

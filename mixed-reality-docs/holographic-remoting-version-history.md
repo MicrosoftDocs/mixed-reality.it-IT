@@ -1,67 +1,67 @@
 ---
 title: Cronologia delle versioni remota olografica
 description: Cronologia delle versioni per la comunicazione remota olografica in HoloLens 2.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 5ba3aaa8874dea4418114b331d3d99fc977e982c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375658"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278199"
 ---
 # <a name="holographic-remoting-version-history"></a>Cronologia delle versioni remota olografica
 
 > [!IMPORTANT]
 > Queste linee guida sono specifiche per la comunicazione remota olografica in HoloLens 2.
 
-## Versione 2.1.0 (11 marzo 2020)<a name="v2.1.0"></a>
+## <a name="version-210-march-11-2020"></a>Versione 2.1.0 (11 marzo 2020)<a name="v2.1.0"></a>
 * Commutazione del trasporto di rete per l'uso di [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) tramite UDP. Le connessioni sicure usano [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) Now. Si noti che il [lettore di comunicazione remota olografico](holographic-remoting-player.md) è ancora compatibile con tutte le versioni di comunicazione remota olografica precedentemente disponibili. Per trarre vantaggio dal nuovo trasporto di rete, il lettore di comunicazione remota olografica e l'app remota in questione devono usare la versione 2.1.0.
 * Aggiunta del supporto per [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_). 
 
-## Versione 2.0.20 (2 febbraio 2020)<a name="v2.0.20"></a>
+## <a name="version-2020-february-2-2020"></a>Versione 2.0.20 (2 febbraio 2020)<a name="v2.0.20"></a>
 * Corretti vari bug che causavano arresti anomali.
 
-## Versione 2.0.18 (17 dicembre 2019)<a name="v2.0.18"></a>
+## <a name="version-2018-december-17-2019"></a>Versione 2.0.18 (17 dicembre 2019)<a name="v2.0.18"></a>
 * Aggiunta del supporto per [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration)
 * Corretti vari bug che causavano arresti anomali.
 * Correzione del bug in cui è necessario un callback HolographicSpace. CameraAdded per l'accettazione di un HolographicCamera e la visualizzazione come fotocamera aggiuntiva in HoloraphicFrame.
 
-## Versione 2.0.16 (11 novembre 2019)<a name="2.0.16"></a>
+## <a name="version-2016-november-11-2019"></a>Versione 2.0.16 (11 novembre 2019)<a name="2.0.16"></a>
 * Correzione di un deadlock nel rilevamento del codice QR.
 * Correzione dell'eccezione unhandeld a causa dell'attesa del blocco nel thread principale.
 
-## Versione 2.0.14 (26 ottobre 2019)<a name="v2.0.14"></a>
+## <a name="version-2014-october-26-2019"></a>Versione 2.0.14 (26 ottobre 2019)<a name="v2.0.14"></a>
 * Supporto per le nuove API PerceptionDevice (aggiornamento di Windows 10 di novembre 2019).
 * Correzione di un problema che impedisce l'attivazione degli eventi di movimento da SpatialGestureRecognizer.
 * Correzione del problema di threading quando si utilizza SpatialSurfaceObserver. SetBoundingVolume.
 
-## Versione 2.0.12 (18 ottobre 2019)<a name="v2.0.12"></a>
+## <a name="version-2012-october-18-2019"></a>Versione 2.0.12 (18 ottobre 2019)<a name="v2.0.12"></a>
 * Correzione di un arresto anomalo in SpatialGestureRecognizer quando si utilizza NavigationRail (X/Y/Z).
 
-## Versione 2.0.10 (10 ottobre 2019)<a name="v2.0.10"></a>
+## <a name="version-2010-october-10-2019"></a>Versione 2.0.10 (10 ottobre 2019)<a name="v2.0.10"></a>
 * Correzione di un arresto anomalo quando si usa il pulsante trigger dei controller VR. La comunicazione remota olografica non supporta completamente i controller, ma solo il pulsante trigger e il pulsante Windows funzionano se abbinati a HoloLens 2.
 
-## Versione 2.0.9 (19 settembre 2019)<a name="v2.0.9"></a>
+## <a name="version-209-september-19-2019"></a>Versione 2.0.9 (19 settembre 2019)<a name="v2.0.9"></a>
 * Aggiunta del supporto per [SpatialAnchorExporter](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter)
 * Aggiunta di una nuova interfaccia ```IPlayerContext2``` (implementata da ```PlayerContext```) che fornisce i membri seguenti:
   - Proprietà [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout) .
 * Aggiunto ```Failed_RemoteFrameTooOld``` valore per ```BlitResult```
 * Miglioramenti alla stabilità e all'affidabilità
 
-## Versione 2.0.8 (20 agosto 2019)<a name="v2.0.8"></a>
+## <a name="version-208-august-20-2019"></a>Versione 2.0.8 (20 agosto 2019)<a name="v2.0.8"></a>
 
 * Correzione di un arresto anomalo quando si chiama [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer) con un [IDXGISurface2](https://docs.microsoft.com/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgisurface2) come parametro.
 * Miglioramenti alla stabilità e all'affidabilità
 
-## Versione 2.0.7 (26 luglio 2019)<a name="v2.0.7"></a>
+## <a name="version-207-july-26-2019"></a>Versione 2.0.7 (26 luglio 2019)<a name="v2.0.7"></a>
 
 * Prima versione pubblica della comunicazione remota olografica per HoloLens 2.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)

@@ -1,17 +1,17 @@
 ---
 title: Case Study-HoloTour
 description: HoloTour per Microsoft HoloLens fornisce tour personali immersivi 3D di posizioni iconiche in tutto il mondo. In questo case study verrà illustrato il processo di acquisizione e creazione del contenuto utilizzato per HoloTour.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, realtà mista di Windows
-ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 59c3dffd48009aa792643ea27b59f8f6f85b64d7
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278189"
 ---
 # <a name="case-study---holotour"></a>Case Study-HoloTour
 
@@ -152,5 +152,5 @@ Ci auguriamo che la condivisione di soluzioni ad alcune delle principali problem
 
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Video: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

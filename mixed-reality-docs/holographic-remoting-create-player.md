@@ -1,17 +1,17 @@
 ---
 title: Scrittura di un lettore di comunicazione remota olografica personalizzata
 description: Grazie alla creazione di un'app lettore di comunicazione remota olografica personalizzata è possibile creare un'applicazione personalizzata in grado di visualizzare il contenuto di cui è stato eseguito il rendering in un computer remoto in HoloLens 2. Questo articolo descrive il modo in cui è possibile ottenere questo risultato.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: eaa6549eb34d3a37c21b3decb348bf43594a110f
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b276558e43fc545be9e5c0be6feded229904ee97
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278219"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Scrittura di un'app lettore di comunicazione remota olografica personalizzata
 
@@ -218,7 +218,7 @@ A partire dalla versione [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 - la trasformazione ```Remote```-Projection riflette le distanze del piano vicino/lontano specificate dall'app remota.
 - ```Merged``` le distanze del piano vicino/estremo dall'app remota e l'app per giocatori personalizzata vengono unite. Per impostazione predefinita, questa operazione viene eseguita impostando il valore minimo delle distanze vicino al piano e il valore massimo delle distanze del piano lontano. Nel caso in cui il lato remoto o locale sia invertito, ad esempio lontano < vicino, le distanze del piano remoto vicino/lontano vengono capovolte.
 
-## Facoltativo: set BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
+## <a name="optional-set-blitremoteframetimeout"></a>Facoltativo: set BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
 > ```PlayerContext::BlitRemoteFrameTimeout``` è supportato a partire dalla versione [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
 
@@ -250,7 +250,7 @@ Per ulteriori informazioni, vedere la documentazione ```PlayerFrameStatistics```
 
 I canali di dati personalizzati possono essere utilizzati per inviare dati utente tramite la connessione remota già stabilita. Per ulteriori informazioni, vedere [canali di dati personalizzati](holographic-remoting-custom-data-channels.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Scrittura di un'app remota olografica remota](holographic-remoting-create-host.md)
 * [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
 * [Stabilire una connessione sicura con la comunicazione remota olografica](holographic-remoting-secure-connection.md)

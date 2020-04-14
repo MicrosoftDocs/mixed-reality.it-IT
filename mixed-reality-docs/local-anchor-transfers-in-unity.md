@@ -1,17 +1,17 @@
 ---
 title: Trasferimenti di ancoraggio locali in Unity
 description: Trasferire gli ancoraggi tra più dispositivi HoloLens in un'applicazione Unity.
-author: fieldsJacksonG
+author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Sharing, Anchor, WorldAnchor, MR sharing 250, WorldAnchorTransferBatch, SpatialPerception, Transfer, local Anchor Transfer, Anchor Export, Anchor import
-ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: fd071f736add094fd65ae4d889f8008eefd8515d
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278059"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Trasferimenti di ancoraggio locali in Unity
 
@@ -34,12 +34,12 @@ Come abilitare la funzionalità *SpatialPerception* :
 
 ### <a name="anchor-transfer"></a>Trasferimento di ancoraggio
 
-**Namespace** *UnityEngine. XR. WSA. sharing*<br>
+**Spazio dei nomi:** *UnityEngine. XR. WSA. sharing*<br>
 **Tipo**: *WorldAnchorTransferBatch*
 
 Per trasferire un [WorldAnchor](coordinate-systems-in-unity.md), è necessario stabilire l'ancoraggio da trasferire. L'utente di un HoloLens analizza l'ambiente e sceglie manualmente o a livello di codice un punto nello spazio come ancoraggio per l'esperienza condivisa. I dati che rappresentano questo punto possono quindi essere serializzati e trasmessi agli altri dispositivi che condividono nell'esperienza. Ogni dispositivo deserializza quindi i dati di ancoraggio e tenta di individuare il punto nello spazio. Per il corretto funzionamento del trasferimento di ancoraggio, è necessario che ogni dispositivo abbia eseguito una scansione sufficiente dell'ambiente, in modo che sia possibile identificare il punto rappresentato dall'ancoraggio.
 
-### <a name="setup"></a>Configurazione
+### <a name="setup"></a>Programma di installazione
 
 Il codice di esempio in questa pagina contiene alcuni campi che dovranno essere inizializzati:
 1. *GameObject rootGameObject* è un *GameObject* in Unity in cui è presente un componente *WorldAnchor* . Un utente nell'esperienza condivisa inserisce questo *GameObject* ed Esporta i dati negli altri utenti.

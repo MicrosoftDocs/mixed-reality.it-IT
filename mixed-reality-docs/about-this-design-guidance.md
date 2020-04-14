@@ -1,17 +1,17 @@
 ---
 title: Informazioni sulle linee guida di progettazione
 description: Queste linee guida sono state create da progettisti, sviluppatori, program manager e ricercatori Microsoft impegnati nella realizzazione di dispositivi olografici (come HoloLens) e dispositivi di tipo immersive (come i visori VR di Windows Mixed Reality Acer e HP).
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, introduzione, guida
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277519"
 ---
 # <a name="about-this-design-guidance"></a>Informazioni sulle linee guida di progettazione
 
@@ -25,7 +25,7 @@ Si sta immettendo un'eccezionale nuova era di elaborazione. Le novità negli sch
 
 Laddove possibile, offriamo linee guida di progettazione di utilità pratica con il codice correlato in GitHub. Detto questo, dal momento che si sta imparando con l'utente, non sarà sempre possibile offrire indicazioni specifiche e fruibili. Una parte di ciò che condividiamo si troverà nello spirito di "lezioni apprese" ed evitando di incorrere in tale percorso.
 
-E sappiamo che molte innovazioni saranno generate dalla più ampia community di progettazione. Quindi, siamo lieti di ricevere notizie da te, imparando da te e lavorando a stretto contatto con te. Per la nostra parte, possiamo condividere le nostre informazioni approfondite, anche se sono esplorative e tempestive con lo scopo di consentire a sviluppatori e progettisti di progettare, procedure consigliate e controlli, modelli e app di esempio correlati, che puoi usare direttamente nel proprio lavoro.
+E sappiamo che molte innovazioni saranno generate dalla più ampia community di progettazione. Quindi, siamo lieti di ricevere notizie da te, imparando da te e lavorando a stretto contatto con te. Per la nostra parte, possiamo condividere le nostre informazioni approfondite, anche se sono esplorative e tempestive, con lo scopo di consentire agli sviluppatori e ai progettisti la progettazione, le procedure consigliate e i controlli, i modelli e le app di esempio correlati, che puoi usare direttamente nel tuo lavoro.
 
 ## <a name="overview"></a>Panoramica
 
@@ -58,7 +58,7 @@ Sebbene sia importante concentrarsi sui problemi specifici dei clienti, è anche
 
 ![Scopri i creatori in cui sono](images/500px-creators.jpg) <br>
 
-Ci auguriamo che molti destinatari trovino questa guida per essere utile. Sono disponibili diversi set di competenze (inizio, intermedio, avanzato), usare diversi strumenti (Unity, C++DirectX C#,, other), che hanno familiarità con le varie piattaforme (Windows, iOS, Android), provenienti da diversi sfondi (dispositivi mobili, aziendali, giochi ) e lavorano su team di dimensioni diverse (solo, piccolo, medio, grande). Questo materiale sussidiario può quindi essere visualizzato con diverse prospettive e esigenze. Quando possibile, si proverà a tenere presente questa diversità e si renderà le indicazioni più rilevanti possibile per il maggior numero di persone possibile. Inoltre, sappiamo che molti di voi si trovano già in GitHub. Ti invieremo direttamente il collegamento ai repository e ai forum di GitHub per soddisfare le tue esigenze. 
+Ci auguriamo che molti destinatari trovino questa guida per essere utile. Sono disponibili diversi set di competenze (inizio, intermedio, avanzato), usare diversi strumenti (Unity, C++DirectX C#,, other), che hanno familiarità con le varie piattaforme (Windows, iOS, Android), provenienti da diversi sfondi (per dispositivi mobili, aziendali e di gioco) e che lavorano su team di dimensioni diverse (solo, piccolo, medio, grande). Questo materiale sussidiario può quindi essere visualizzato con diverse prospettive e esigenze. Quando possibile, si proverà a tenere presente questa diversità e si renderà le indicazioni più rilevanti possibile per il maggior numero di persone possibile. Inoltre, sappiamo che molti di voi si trovano già in GitHub. Ti invieremo direttamente il collegamento ai repository e ai forum di GitHub per soddisfare le tue esigenze. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Condividi quanto più possibile, da sperimentale a esplicita
 

@@ -1,17 +1,17 @@
 ---
 title: Impostazioni consigliate per Unity
 description: Unity offre alcuni comportamenti specifici per la realtà mista che possono essere alternate tramite le impostazioni del progetto.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278009"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -42,28 +42,28 @@ Per ulteriori informazioni, leggere l' [illuminazione globale da Unity](https://
 
 Nelle applicazioni di realtà mista la scena viene visualizzata due volte, una per ogni occhio all'utente. Rispetto allo sviluppo 3D tradizionale, questo raddoppia effettivamente la quantità di lavoro che deve essere calcolata. Pertanto, è importante selezionare il percorso di rendering più efficiente in Unity per risparmiare sia sulla CPU che sul tempo GPU. Il rendering con istanza Single Pass ottimizza la pipeline di rendering Unity per le app di realtà miste ed è quindi consigliabile abilitare questa impostazione per impostazione predefinita per ogni progetto.
 
-Per abilitare questa funzionalità nel progetto Unity
+Per abilitare questa funzionalità nel tuo progetto Unity
 
-1)  Aprire **le impostazioni di Player XR** (per **modificare** le impostazioni del **progetto** >  > **lettore** > **XR**)
-2) Selezionare **istanza passaggio singolo** dal menu a discesa **metodo di rendering stereo** (casella di controllo**Virtual Reality supported** )
+1)  Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
+2) Scegli **Single Pass Instanced** (Con istanze a singolo passaggio) dal menu a discesa **Stereo Rendering Method** (Metodo di rendering stereo). Deve essere selezionata la casella di controllo **Virtual Reality Supported** (Realtà virtuale supportata)
 
 Per informazioni dettagliate su questo approccio di rendering, vedere gli articoli seguenti di Unity.
 
-- [Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Istanze Single Pass](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/) (Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato)
+- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html) (Creazione di istanze a singolo passaggio)
 
 >[!NOTE]
-> Si verifica un problema comune con il rendering con istanze di single pass se gli sviluppatori dispongono già di shader personalizzati non scritti per le istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che GameObject solo il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non dispongono delle proprietà appropriate per le istanze.
+> Un problema comune relativo al rendering con istanze a singolo passaggio si verifica se gli sviluppatori dispongono già di shader personalizzati non scritti per la creazione di istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che per alcuni GameObject viene eseguito il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non hanno le proprietà appropriate per la creazione di istanze.
 >
-> Per informazioni su come risolvere questo problema, vedere [rendering stereo a passaggio singolo per HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) da Unity
+> Per informazioni su come risolvere questo problema, vedi l'articolo di Unity [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) (Rendering stereo a singolo passaggio per HoloLens)
 
 ### <a name="enable-depth-buffer-sharing"></a>Abilita condivisione buffer di profondità
 
 Per ottenere una migliore stabilità dell'ologramma dalla percezione dell'utente, è consigliabile abilitare la proprietà **depth buffer sharing** in Unity. Se si attiva questa impostazione, Unity condividerà la mappa di profondità prodotta dall'applicazione con la piattaforma di realtà mista di Windows. La piattaforma sarà quindi in grado di ottimizzare la stabilità degli ologrammi in modo specifico per la scena in cui viene eseguito il rendering dell'applicazione da parte di un frame specifico.
 
-Per abilitare questa funzionalità nel progetto Unity
+Per abilitare questa funzionalità nel tuo progetto Unity
 
-1) Aprire **le impostazioni di Player XR** (per **modificare** le impostazioni del **progetto** >  > **lettore** > **XR**)
+1) Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
 2) Selezionare la casella di controllo **Abilita condivisione buffer di profondità** nell' **SDK della realtà virtuale** > espansione della **realtà mista di Windows** . è necessario selezionare la casella di controllo**Virtual Reality supported** .
 
 Si consiglia inoltre di selezionare la **profondità a 16 bit** nell'impostazione del **formato Depth** in questo pannello, specialmente per lo sviluppo HoloLens. La selezione di 16 bit rispetto a 24 bit ridurrà in modo significativo i requisiti di larghezza di banda, in quanto sarà necessario spostare o elaborare i dati.
@@ -116,10 +116,10 @@ Per abilitare o disabilitare la schermata iniziale olografica:
 
 |  Mostra schermata iniziale Unity  |  Immagine Splash olografica  |  Comportamento |
 |----------|----------|----------|
-|  In  |  Nessuno  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
-|  In  |  Personalizzata  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
-|  Disattiva  |  Nessuno  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
-|  Disattiva  |  Personalizzata  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  Attivato  |  None  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
+|  Attivato  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  Disattivata  |  None  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
+|  Disattivata  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
 
 Per altre informazioni, vedere [la documentazione della schermata iniziale di Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
@@ -141,7 +141,7 @@ Per personalizzare l'immagine del rilevamento perso:
 
 Per rifiutare esplicitamente il comportamento di sospensione automatica:
 
-1) Vai alla pagina > modifica **Impostazioni progetto** > **lettore**
+1) Vai alla pagina **Edit** > modifica **Impostazioni progetto** > **lettore**
 2) Fare clic sulla scheda **Windows Store** e aprire la sezione **immagine iniziale** .
 3) Modificare la casella **di controllo > Windows olografico nella casella di controllo Sospendi perdita e Mostra immagine** .
 
@@ -161,7 +161,7 @@ Per fare in modo che un'app sfrutti i vantaggi di determinate funzionalità, dev
 Le funzionalità applicabili per l'abilitazione delle API di uso comune per le app olografiche sono:
 <br>
 
-|  Capability  |  API che richiedono funzionalità |
+|  Funzionalità  |  API che richiedono funzionalità |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  WebCam  |  Acquisizione e VideoCapture |
@@ -169,7 +169,7 @@ Le funzionalità applicabili per l'abilitazione delle API di uso comune per le a
 |  Microfono  |  VideoCapture (durante l'acquisizione dell'audio), DictationRecognizer, GrammarRecognizer e KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (e per usare Unity Profiler) |
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)

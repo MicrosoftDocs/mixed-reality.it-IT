@@ -1,17 +1,17 @@
 ---
 title: Aggiungere la comunicazione remota olografica
 description: Viene illustrato come usare la comunicazione remota olografica per eseguire il rendering degli ologrammi in una HoloLens in rete.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, comunicazione remota olografica, rendering remoto, rendering di rete, HoloLens, ologrammi remoti
-ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2f6ade5552c993f66281d0be8a7e62c8f076deac
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277709"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Aggiungere la comunicazione remota olografica (HoloLens (1st Gen))
 
@@ -30,7 +30,7 @@ Gli sviluppatori HoloLens che usano la comunicazione remota olografica dovranno 
 
 Questa pagina descrive come aggiungere la comunicazione remota olografica a un'app desktop o UWP.
 
-La comunicazione remota olografica consente all'app di avere come destinazione un HoloLens con contenuto olografico ospitato in un computer desktop o in un dispositivo UWP, ad esempio la Xbox One, consentendo l'accesso a più risorse di sistema e rendendo possibile l'integrazione di [visualizzazioni immersive](app-views.md) remote in software per PC desktop esistente. Un'app host Remoting riceve un flusso di dati di input da un HoloLens, esegue il rendering del contenuto in una visualizzazione immersiva virtuale e trasmette i frame di contenuto a HoloLens. La connessione viene eseguita usando il Wi-Fi standard. Per usare la comunicazione remota, si userà un pacchetto NuGet per aggiungere la comunicazione remota olografica all'app desktop o UWP e scrivere il codice per gestire la connessione e per eseguire il rendering in una visualizzazione immersiva. Le librerie helper sono incluse nell'esempio di codice che semplificano l'attività di gestione della connessione del dispositivo.
+La comunicazione remota olografica consente all'app di avere come destinazione un HoloLens con contenuto olografico ospitato in un computer desktop o in un dispositivo UWP come Xbox One, consentendo l'accesso a più risorse di sistema e rendendo possibile l'integrazione di [visualizzazioni immersive](app-views.md) remote in software per PC desktop esistenti. Un'app host Remoting riceve un flusso di dati di input da un HoloLens, esegue il rendering del contenuto in una visualizzazione immersiva virtuale e trasmette i frame di contenuto a HoloLens. La connessione viene eseguita usando il Wi-Fi standard. Per usare la comunicazione remota, si userà un pacchetto NuGet per aggiungere la comunicazione remota olografica all'app desktop o UWP e scrivere il codice per gestire la connessione e per eseguire il rendering in una visualizzazione immersiva. Le librerie helper sono incluse nell'esempio di codice che semplificano l'attività di gestione della connessione del dispositivo.
 
 Una tipica connessione remota avrà una bassa di 50 ms di latenza. L'App Player può segnalare la latenza in tempo reale.
 

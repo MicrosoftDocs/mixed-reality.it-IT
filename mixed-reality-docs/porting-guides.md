@@ -1,17 +1,17 @@
 ---
 title: Guide alla conversione
 description: Procedura dettagliata walthrough che spiega come trasferire un'applicazione immersiva esistente a una realtà mista di Windows.
-author: ChimeraScorn
+author: chimerascorn
 ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Port, porting, Unity, middleware, Engine, UWP
-ms.openlocfilehash: 5d3debc9a810873f21a9f55a32061565d4ce75ae
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539515"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278039"
 ---
 # <a name="porting-guides"></a>Guide alla conversione
 
@@ -152,7 +152,7 @@ La realtà mista di Windows sarà disponibile in un'ampia gamma di dispositivi, 
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) e [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) includono i profiler delle prestazioni e le linee guida per la pubblicazione di [Microsoft](understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) per la profilatura e l'ottimizzazione delle prestazioni. [Per informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md), è disponibile una descrizione approfondita delle prestazioni. Sono inoltre disponibili dettagli specifici per Unity in [raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Guida alla conversione dell'input per Unity](input-porting-guide-for-unity.md)
 * [Linee guida per la compatibilità hardware con la realtà mista di Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)

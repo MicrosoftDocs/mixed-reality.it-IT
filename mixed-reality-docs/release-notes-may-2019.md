@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Note sulla versione, versione, Windows 10, Build, 19h1, sistema operativo, 2019 maggio
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438314"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277629"
 ---
 # <a name="release-notes---may-2019"></a>Note sulla versione-2019 maggio
 
@@ -44,6 +44,10 @@ Si cerca continuamente di migliorare la compatibilità.  Se le applicazioni Win3
 
 HoloLens (1st Gen) sta immettendo lo stato di Long Term Servicing (LTS). Gli aggiornamenti futuri si concentrano sul problema e sulle correzioni per la sicurezza, mantenendo al tempo stesso la parità di funzionalità con la [versione di Windows 10 ottobre 2018](release-notes-october-2018.md) per HoloLens (nota anche come RS5). 
 
+## <a name="known-issues"></a>Problemi noti
+
+Si sta verificando un problema che richiede la connessione di un monitor al PC per il corretto funzionamento dell'auricolare immersiva. È possibile che gli utenti di Backpack PC vogliano usare una scheda di visualizzazione attiva (o un emulatore EDID) per assicurarsi che la cuffia coinvolgente continui a eseguire il rendering quando non è in uso alcun monitor di PC. 
+
 ## <a name="provide-feedback-and-report-issues"></a>Inviare commenti e suggerimenti e segnalare problemi
 
 Usare l' [App Hub di feedback nel PC Windows 10](give-us-feedback.md) o il dispositivo HoloLens per inviare commenti e suggerimenti e segnalare problemi. L'uso dell'hub feedback garantisce che tutte le informazioni di diagnostica necessarie siano incluse per aiutare i nostri tecnici a eseguire rapidamente il debug e risolvere il problema.
@@ -61,7 +65,7 @@ Usare l' [App Hub di feedback nel PC Windows 10](give-us-feedback.md) o il dispo
 * [Note sulla versione - maggio 2016](release-notes-may-2016.md)
 * [Note sulla versione - marzo 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Supporto per cuffie immersive (collegamento esterno)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Supporto di HoloLens (collegamento esterno)](https://support.microsoft.com/products/hololens)
 * [Installare gli strumenti](install-the-tools.md)

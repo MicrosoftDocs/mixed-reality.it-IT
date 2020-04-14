@@ -1,17 +1,17 @@
 ---
 title: Informazioni sulle prestazioni per la realtà mista
 description: Argomenti avanzati e dettagli sull'ottimizzazione delle prestazioni per le app di realtà mista di Windows
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Realtà mista di Windows, realtà mista, realtà virtuale, VR, MR, prestazioni, ottimizzazione, CPU, GPU
-ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
-ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
+ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79479574"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277479"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Informazioni sulle prestazioni per la realtà mista
 
@@ -66,7 +66,7 @@ Dopo la riduzione della risoluzione del rendering, se:
 
 ## <a name="how-to-improve-your-application"></a>Come migliorare l'applicazione
 
-### <a name="cpu-performance-recommendations"></a>Raccomandazioni sulle prestazioni della CPU
+### <a name="cpu-performance-recommendations"></a>Consigli sulle prestazioni della CPU
 
 In genere, la maggior parte del lavoro in un'applicazione di realtà mista sulla CPU comporta l'esecuzione della "simulazione" della scena e l'elaborazione della logica dell'applicazione. Le aree seguenti sono in genere destinate all'ottimizzazione:
 
@@ -75,7 +75,7 @@ In genere, la maggior parte del lavoro in un'applicazione di realtà mista sulla
 - Allocazioni di memoria
 - Algoritmi complessi, ad esempio cinematica inversa, ricerca di percorsi
 
-### <a name="gpu-performance-recommendations"></a>Suggerimenti sulle prestazioni della GPU
+### <a name="gpu-performance-recommendations"></a>Consigli sulle prestazioni della GPU
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>Informazioni sulla larghezza di banda e sulla velocità di riempimento
 Quando si esegue il rendering di un frame sulla GPU, un'applicazione è in genere associata alla larghezza di banda della memoria o alla velocità di riempimento.
@@ -101,7 +101,7 @@ La velocità di riempimento si concentra sulla riduzione del numero di operazion
 
 I conteggi di poligoni più elevati generano più operazioni per la GPU; [riducendo il numero di poligoni](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) nella scena si riduce il tempo di rendering. Ci sono altri fattori che interessano l'ombreggiatura della geometria che può essere costosa, ma il conteggio dei poligoni è la metrica più semplice per determinare il costo di rendering di una scena.
 
-#### <a name="limit-overdraw"></a>Limite di sovralievo
+#### <a name="limit-overdraw"></a>Limitare le sovrapposizioni
 
 Un elevato livello di sovradisegnazione si verifica quando viene eseguito il rendering di più oggetti ma non vengono visualizzati sullo schermo perché sono nascosti da un oggetto occlusione. Si supponga di esaminare un muro con oggetti sottostanti. Tutta la geometria verrebbe elaborata per il rendering, ma è necessario eseguire il rendering solo del muro opaco. Ciò comporta operazioni non necessarie.
 
@@ -131,9 +131,9 @@ Gli effetti di post-elaborazione possono essere molto costosi e aumentare la vel
 
 Un numero eccessivo di operazioni di allocazione e deallocazione della memoria può comportare prestazioni incoerenti, frame bloccati e altro comportamento dannoso. È particolarmente importante comprendere le considerazioni sulla memoria durante lo sviluppo in Unity, perché la gestione della memoria è controllata dal Garbage Collector.
 
-#### <a name="object-pooling"></a>Pool di oggetti
+#### <a name="object-pooling"></a>Pooling di oggetti
 
-Il pool di oggetti è una tecnica comune per ridurre i costi delle allocazioni e delle deallocazioni continue degli oggetti. Questa operazione viene eseguita allocando un pool di grandi dimensioni di oggetti identici e riutilizzando le istanze disponibili inattive da questo pool invece di generare ed eliminare costantemente gli oggetti nel tempo. I pool di oggetti sono ottimi per i componenti riutilizzabili con durata variabile durante un'app.
+Il pool di oggetti è una tecnica comune per ridurre i costi delle allocazioni e delle deallocazioni continue degli oggetti. Viene eseguito allocando un pool di grandi dimensioni di oggetti identici e riutilizzando le istanze disponibili inattive di questo pool invece di generare ed eliminare costantemente gli oggetti nel tempo. I pool di oggetti sono la soluzione ideale per i componenti riutilizzabili con durata variabile durante un'app.
 
 ## <a name="see-also"></a>Vedere anche
 - [Consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md)

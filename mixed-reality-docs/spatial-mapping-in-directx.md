@@ -1,17 +1,17 @@
 ---
 title: Mapping spaziale in DirectX
 description: Viene illustrato come implementare il mapping spaziale nell'app DirectX. Questo include una spiegazione dettagliata dell'applicazione di esempio di mapping spaziale inclusa con l'SDK piattaforma UWP (Universal Windows Platform).
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, mapping spaziale, ambiente, interazione, DirectX, WinRT, API, codice di esempio, UWP, SDK, procedura dettagliata
-ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b3ef74a7e11e0e73fce47e4c7193ace42ffe7c20
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277499"
 ---
 # <a name="spatial-mapping-in-directx"></a>Mapping spaziale in DirectX
 
@@ -85,7 +85,7 @@ A questo punto, viene illustrato come aggiungere la funzionalità di mapping del
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurare l'app per l'uso della funzionalità spatialPerception
 
-L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa operazione è necessaria perché la mesh spaziale è una rappresentazione dell'ambiente dell'utente, che può essere considerato dati privati. Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Di seguito è riportato un esempio:
+L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa operazione è necessaria perché la mesh spaziale è una rappresentazione dell'ambiente dell'utente, che può essere considerato dati privati. Dichiarare questa funzionalità nel file Package. appxmanifest per l'app. Ecco un esempio:
 
 ```xml
 <Capabilities>
@@ -93,7 +93,7 @@ L'app deve essere in grado di usare la funzionalità di mapping spaziale. Questa
 </Capabilities>
 ```
 
-La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Di seguito è riportato un esempio:
+La funzionalità deriva dallo spazio dei nomi **uap2** . Per ottenere l'accesso a questo spazio dei nomi nel manifesto, includerlo come attributo *xlmns* nell'elemento &lt;Package >. Ecco un esempio:
 
 ```xml
 <Package

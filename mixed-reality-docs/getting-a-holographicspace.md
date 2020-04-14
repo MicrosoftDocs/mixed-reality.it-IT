@@ -1,17 +1,17 @@
 ---
 title: Recupero di un HolographicSpace
 description: Viene illustrata l'API HolographicSpace, un concetto di base per il rendering olografico e l'input spaziale.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Realtà mista di Windows, HolographicSpace, CoreWindow, input spaziale, rendering, catena di scambio, frame olografico, ciclo di aggiornamento, ciclo di gioco, frame di riferimento, locatability, codice di esempio, procedura dettagliata
-ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 76211c8a5394e2e296748253df4eac063841746c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525442"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277829"
 ---
 # <a name="getting-a-holographicspace"></a>Recupero di un HolographicSpace
 
@@ -21,13 +21,13 @@ La classe <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holograph
 
 La creazione dell'oggetto spazio olografico è il primo passaggio per creare un'app per la realtà mista di Windows. Le applicazioni Windows tradizionali eseguono il rendering di una catena di scambio Direct3D creata per la finestra principale della visualizzazione dell'applicazione. Questa catena di scambio viene visualizzata in uno Slate nell'interfaccia utente olografica. Per rendere olografica la visualizzazione dell'applicazione anziché una lavagna 2D, creare uno spazio olografico per la finestra principale anziché una catena di scambio. La presentazione di frame olografici creati da questo spazio olografico consente di inserire l'app in modalità di rendering a schermo intero.
 
-Per un' **app UWP** [a partire dal *modello di app DirectX 11 (Windows universale) olografico*](creating-a-holographic-directx-project.md), cercare questo codice nel  metodo sewindow in AppView. cpp:
+Per un' **app UWP** [a partire dal *modello di app DirectX 11 (Windows universale) olografico*](creating-a-holographic-directx-project.md), cercare questo codice nel metodo **sewindow** in AppView. cpp:
 
 ```cpp
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-Per un' **app Win32** [a partire dall'esempio Win32 *BasicHologram* ](creating-a-holographic-directx-project.md#creating-a-win32-project), vedere **app:: CreateWindowAndHolographicSpace** per un esempio di come creare un HWND e quindi convertirlo in un HWND immersivo creando un oggetto associato <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank"> HolographicSpace</a>:
+Per un' **app Win32** [a partire dall'esempio Win32 *BasicHologram* ](creating-a-holographic-directx-project.md#creating-a-win32-project), vedere **app:: CreateWindowAndHolographicSpace** per un esempio di come creare un HWND e quindi convertirlo in un HWND immersivo creando un <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>associato:
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
