@@ -196,9 +196,11 @@
 #### [Oggetti nativi di realtà mista in Unity](unity-xrdevice-advanced.md)
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 ## Unreal
-### [Panoramica dello sviluppo non reale](unreal-development-overview.md)
-## WebVR
-### [Uso di WebVR in Microsoft Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
+### [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)
+## JavaScript
+### [Panoramica dello sviluppo con JavaScript](javascript-development-overview.md)
+### [WebXR](webxr-overview.md)
+### [WebVR](webvr-overview.md)
 ## Nativa
 ### [Panoramica dello sviluppo nativo](directx-development-overview.md)
 ### OpenXR
