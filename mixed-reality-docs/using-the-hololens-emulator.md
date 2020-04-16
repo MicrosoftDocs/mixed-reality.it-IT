@@ -1,18 +1,18 @@
 ---
 title: Uso dell'emulatore HoloLens
 description: Uso dell'emulatore HoloLens per testare le app di realtà mista nel PC senza un dispositivo HoloLens fisico.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulatore
-ms.openlocfilehash: 57a20b476ba0b1cc02a7e9bf41b33367b64d539c
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79028257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278019"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso dell'emulatore HoloLens
 
@@ -20,12 +20,15 @@ L'emulatore HoloLens consente di testare le app olografiche nel PC senza un disp
 
 Se intendi sviluppare applicazioni per visori VR immersive per Windows Mixed Reality o giochi per PC desktop, vedi le informazioni relative al [simulatore di Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md), che consente di simulare i visori per computer desktop.
 
+## <a name="hololens-2-emulator-overview"></a>Panoramica sull'emulatore HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Emulator-Overview/player?format=ny]
 
 ## <a name="installing-the-hololens-emulator"></a>Installazione dell'emulatore HoloLens
 Scarica l'emulatore HoloLens.
 
 Versioni: 
-* [Emulatore HoloLens 2 (aggiornamento di marzo 2020)](https://go.microsoft.com/fwlink/?linkid=2121323).
+* [Emulatore HoloLens 2 (aggiornamento aprile 2020)](https://go.microsoft.com/fwlink/?linkid=2126826).
 * [Emulatore HoloLens (prima generazione) e modelli di progetti olografici](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Nella pagina relativa all'[archivio dell'emulatore HoloLens](hololens-emulator-archive.md) puoi trovare le note sulla versione e le build meno recenti dell'emulatore.
