@@ -6,17 +6,25 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 5ba3aaa8874dea4418114b331d3d99fc977e982c
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
+ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278199"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484301"
 ---
 # <a name="holographic-remoting-version-history"></a>Cronologia delle versioni remota olografica
 
 > [!IMPORTANT]
 > Queste linee guida sono specifiche per la comunicazione remota olografica in HoloLens 2.
+
+## <a name="version-212-april-5-2020"></a>Versione 2.1.2 (5 aprile 2020)<a name="v2.1.2"></a>
+* Correzione del problema di compatibilità con le versioni precedenti dell'audio tra la versione più recente di Remote Remoting Player e le app Remote con una versione inferiore a 2.1.0.
+* Problema di ancoraggio spaziale fisso che ha chiuso in modo imprevisto il lettore remoto olografico. Questo problema interessa anche i giocatori personalizzati.
+
+## <a name="version-211-march-20-2020"></a>Versione 2.1.1 (20 marzo 2020)<a name="v2.1.1"></a>
+* Correzione del problema di codifica video con le app remote quando si usano GPU AMD.
+* Miglioramenti delle prestazioni del lettore di comunicazione remota olografico.
 
 ## <a name="version-210-march-11-2020"></a>Versione 2.1.0 (11 marzo 2020)<a name="v2.1.0"></a>
 * Commutazione del trasporto di rete per l'uso di [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) tramite UDP. Le connessioni sicure usano [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) Now. Si noti che il [lettore di comunicazione remota olografico](holographic-remoting-player.md) è ancora compatibile con tutte le versioni di comunicazione remota olografica precedentemente disponibili. Per trarre vantaggio dal nuovo trasporto di rete, il lettore di comunicazione remota olografica e l'app remota in questione devono usare la versione 2.1.0.
@@ -28,7 +36,7 @@ ms.locfileid: "81278199"
 ## <a name="version-2018-december-17-2019"></a>Versione 2.0.18 (17 dicembre 2019)<a name="v2.0.18"></a>
 * Aggiunta del supporto per [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration)
 * Corretti vari bug che causavano arresti anomali.
-* Correzione del bug in cui è necessario un callback HolographicSpace. CameraAdded per l'accettazione di un HolographicCamera e la visualizzazione come fotocamera aggiuntiva in HoloraphicFrame.
+* Correzione del bug in cui è necessario un callback HolographicSpace. CameraAdded per l'accettazione di un HolographicCamera e la visualizzazione come fotocamera aggiuntiva in HolographicFrame.
 
 ## <a name="version-2016-november-11-2019"></a>Versione 2.0.16 (11 novembre 2019)<a name="2.0.16"></a>
 * Correzione di un deadlock nel rilevamento del codice QR.
@@ -61,7 +69,7 @@ ms.locfileid: "81278199"
 
 * Prima versione pubblica della comunicazione remota olografica per HoloLens 2.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)
