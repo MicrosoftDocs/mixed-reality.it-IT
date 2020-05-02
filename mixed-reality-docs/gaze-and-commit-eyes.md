@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: tracciamento oculare, realtà mista, input, sguardo fisso, selezione oculare della destinazione, HoloLens 2, selezione con gli occhi
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437827"
 ---
 # <a name="eye-gaze-and-commit"></a>Sguardo fisso e commit
@@ -39,7 +39,7 @@ Non è necessario che l'effetto dissolvenza finale avvenga con la stessa lentezz
 
 **Cercare di ottenere la sincronizzazione dei segnali dello sguardo fisso e del commit**: la sincronizzazione dei segnali di input non è essenziale per un uso di base delle simulazioni del tocco e delle pressioni dei pulsanti. Devi cercare di ottenerla se vuoi usare azioni di commit più complesse che possono comportare lunghi comandi vocali o movimenti della mano complicati. Immagina di guardare una destinazione e di pronunciare un lungo comando vocale. Considerando il tempo che impieghi per pronunciare il comando e il tempo necessario al sistema per rilevare quanto hai detto, intanto lo sguardo in genere si sposta su una nuova destinazione presente nella scena. Pertanto, avvisa gli utenti che potrebbero dover continuare a guardare la destinazione fino al riconoscimento del comando oppure gestisci l'input in modo da determinare l'inizio del comando e l'elemento che l'utente stava guardando.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Interazione basata sullo sguardo] (eye-gaze-interaction.md)
 * [Tracciamento oculare in HoloLens 2] (eye-tracking.md)
 * [Sguardo e commit](gaze-and-commit.md)

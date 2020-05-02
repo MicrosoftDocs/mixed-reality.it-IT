@@ -7,12 +7,12 @@ ms.date: 3/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: informazioni aggiornate, strumenti, inizio, nozioni di base, unity, visual studio, toolkit
-ms.openlocfilehash: 79f0e529f2c1c8331b14dcdbdd69d4fbfe11db79
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 131d2a91c882fbcd31c4deb76a5ab5c3f97d7d42
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278109"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137876"
 ---
 # <a name="install-the-tools"></a>Installare gli strumenti
 
@@ -43,8 +43,7 @@ Il modo più semplice per iniziare a creare app di realtà mista consiste nell'i
 
 :::row:::
     :::column:::
-        <a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">![Unity](images/unity_logo.png)<br>
-        **Unity**</a><br>
+        <a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">![Unity](images/unity_logo.png)<br>**Unity**</a><br>
         È in genere consigliabile il flusso Unity LTS (Long Term Support) come versione ottimale per iniziare nuovi progetti, eseguendo l'aggiornamento alla revisione più recente per usufruire delle ultime fix stabili.<br>
         <br>
         Il suggerimento corrente è di usare **Unity 2018.4.x**, che è la build LTS necessaria per MRTK v2 indicato di seguito.<br>
@@ -53,15 +52,13 @@ Il modo più semplice per iniziare a creare app di realtà mista consiste nell'i
         <br>
         Vedi [Panoramica dello sviluppo con Unity](unity-development-overview.md) per iniziare lo sviluppo con Unity per HoloLens 2 o i visori VR immersive di Windows Mixed Reality.<br>
         <br>
-        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">![MRTK](images/final_mrtk-small_logo.png)<br>
-        **Mixed Reality Toolkit (MRTK)** </a><br>
+        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">![MRTK](images/final_mrtk-small_logo.png)<br>**Mixed Reality Toolkit (MRTK)** </a><br>
         Mixed Reality Toolkit (MRTK) v2 per Unity è un kit di sviluppo multipiattaforma open source per applicazioni di realtà mista.<br>
         <br>
         Permette di accelerare lo sviluppo di applicazioni destinate a Microsoft HoloLens, visori VR immersive di Windows Mixed Reality e la piattaforma OpenVR. Il progetto mira a ridurre le barriere di accesso alla creazione di applicazioni di realtà mista offrendo inoltre un contributo alla community quando si realizzano progressi.
     :::column-end:::
     :::column:::
-        <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>
-        **Unreal**</a><br>
+        <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>**Unreal**</a><br>
         Unreal Engine 4 è un potente motore di creazione open source con supporto completo per la realtà mista sia in C++ che nei progetti.<br>
         <br>
         Il supporto di HoloLens per Unreal Engine 4.24 è attualmente in versione beta.<br>

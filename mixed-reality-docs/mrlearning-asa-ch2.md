@@ -8,10 +8,10 @@ ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
 ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80362013"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Salvataggio, recupero e condivisione di ancoraggi nello spazio di Azure

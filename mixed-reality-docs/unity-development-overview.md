@@ -7,18 +7,20 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realtà mista, sviluppo, guida introduttiva, nuovo progetto, conversione, funzionalità, fotocamera, simulazione, emulazione, documentazione
-ms.openlocfilehash: 23b3d9a3fe419911e774722a7d2db6809c2955cf
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: e0fe775f5fe891416145d91e52a5a801e049c568
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491091"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81433417"
 ---
 # <a name="unity-development-overview"></a>Panoramica dello sviluppo con Unity
 
 [Unity](https://unity.com) offre la soluzione più veloce per creare un'[app di realtà mista](app-views.md). Ti consigliamo di dedicare un po' di tempo a esplorare le esercitazioni di [Unity](https://unity3d.com/learn/tutorials). Se hai bisogno di asset, Unity offre un [Asset Store](https://www.assetstore.unity3d.com/) ben fornito. Dopo avere acquisito una conoscenza di base di Unity, potrai eseguire le [esercitazioni](tutorials.md) per apprendere le specifiche dello sviluppo di app di realtà mista con Unity. Visita i [forum di Unity relativi alla realtà mista](https://forum.unity3d.com/forums/hololens.102/) per collaborare con i membri della community impegnati a creare app di realtà mista in Unity. Ti aiuteranno a trovare le soluzioni ai problemi che potresti incontrare.
 
 Per iniziare a creare app di realtà mista con Unity, devi prima [installare gli strumenti](install-the-tools.md). 
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Setting-up-your-HoloLens-2-development-environment/player?format=ny]
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Nuovo progetto Unity con Mixed Reality Toolkit 
 
@@ -79,7 +81,7 @@ Oltre a questa documentazione disponibile in docs.microsoft.com, è disponibile 
     * Questo manuale è stato progettato per facilitare l'utente nel processo di apprendimento di Unity, dalle tecniche di base a quelle più avanzate.
     * È accessibile dall'editor di Unity tramite **Help > Manual** (Guida > Manuale)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
 * [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)

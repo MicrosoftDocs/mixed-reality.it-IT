@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 title: Informazioni di base sulla realtà mista
 description: Per aiutare gli utenti che non hanno familiarità con la realtà mista a scoprire che cos'è e quali funzionalità offre.
 author: grbury
@@ -8,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
-ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 71777327d9eca488ceffdaa1ee4d7a78efe56713
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375568"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137886"
 ---
 # <a name="get-started-with-mixed-reality"></a>Informazioni di base sulla realtà mista
 

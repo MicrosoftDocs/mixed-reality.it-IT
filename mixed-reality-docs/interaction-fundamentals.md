@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, sguardo fisso, selezione della destinazione con lo sguardo fisso, interazione, progettazione, HoloLens, MMR, multimodale
 ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74539725"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introduzione alle interazioni istintive
@@ -176,7 +176,7 @@ Se per un'esperienza sono necessari più modelli di interazione, tieni presente 
 > Continueremo a fornire altre indicazioni che saranno rese disponibili per sviluppatori e progettisti per informarli su come, quando e perché usare più modelli di interazione di realtà mista.
  
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Comodità](comfort.md)
 * [Interazione basata sullo sguardo](eye-gaze-interaction.md)
 * [Tracciamento oculare in HoloLens 2](eye-tracking.md)
