@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realtà mista, debug, distribuzione
-ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8708ca39460fbd381bd41f5887e1276291f48b07
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277999"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81484321"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso di Visual Studio per la distribuzione e il debug
 
@@ -31,8 +31,8 @@ Per iniziare, abilita **Modalità sviluppatore** sul tuo dispositivo per consent
 
 ### <a name="hololens"></a>HoloLens
 1. Accendi HoloLens e il dispositivo.
-2. Esegui il gesto [bloom](system-gesture.md#bloom) per avviare il menu principale.
-3. Rivolgi lo sguardo al riquadro **Impostazioni** ed esegui il movimento di [simulazione del tocco con un dito](gaze-and-commit.md#composite-gestures). Esegui un secondo gesto identico per posizionare l'app nel tuo ambiente. Una volta posizionata, l'app Impostazioni viene avviata.
+2. Esegui il [gesto Start](system-gesture.md) per avviare il menu principale.
+3. Seleziona il riquadro **Impostazioni** per avviare l'app nell'ambiente in uso.
 4. Scegli la voce di menu **Aggiorna**.
 5. Scegli la voce di menu **Per gli sviluppatori**.
 6. Abilita **Modalità sviluppatore**. In questo modo potrai [distribuire le app da Visual Studio](using-visual-studio.md) al dispositivo HoloLens.
@@ -84,6 +84,9 @@ Se l'indirizzo IP di HoloLens cambia, puoi modificare l'indirizzo IP del compute
 4. La prima volta che distribuisci un'app in HoloLens dal PC, ti verrà chiesto di specificare un PIN. Segui le istruzioni riportate di seguito in **Associazione del dispositivo**.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>Distribuzione di un'app tramite USB - HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
+
 1. Seleziona una configurazione di build **ARM** o **ARM64** per l'app</br>
 ![Configurazione di build ARM64 in Visual Studio](images/arm64setting.png)</br>
 2. Seleziona **Dispositivo** nel menu a discesa delle destinazioni di distribuzione</br>

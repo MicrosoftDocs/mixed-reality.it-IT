@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, beta, streaming, controllo remoto, realtà mista, sviluppo, guida introduttiva, nuovo progetto, emulatore, documentazione
 ms.openlocfilehash: 96b0259e4ac567389f999d3a453fb68bb848b266
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491178"
 ---
 # <a name="unreal-development-overview"></a>Panoramica dello sviluppo con Unreal
@@ -38,5 +38,5 @@ La trasmissione in streaming dell'app dal desktop all'app Holographic Remoting P
 
 Per acquisire familiarità con lo streaming, vedi <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartStreaming/index.html" target="_blank">HoloLens 2 Streaming Quick Start</a>[]() (Avvio rapido allo streaming in HoloLens 2).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * <a href="https://docs.unrealengine.com//Platforms/Mobile/Performance/index.html" target="_blank">Unreal performance guidelines for mobile devices</a> (Linee guida sulle prestazioni di Unreal per i dispositivi mobili)

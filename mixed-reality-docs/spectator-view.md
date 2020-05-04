@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Spectator View, iPhone, iOS, iPad, OpenCV, Camera, ARKit, HoloLens, Realtà mista, MixedRealityToolkit, demo, record
 ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491167"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Spectator View per HoloLens e HoloLens 2
 
-![Marker](images/SpecViewPhoneHero.jpg)
+![Marcatore](images/SpecViewPhoneHero.jpg)
 
 ## <a name="overview"></a>Panoramica
 
@@ -42,12 +42,12 @@ Più utenti guest iOS.
 Registrazione di video + ologrammi + audio dell'ambiente + audio dell'ologramma.
 Strumento di condivisione per poter salvare video, inviare un messaggio e-mail o condividere l'esperienza con altre app supportate.
 
-![Marker](images/SpecViewPhoneDemo.jpg)
-![Marker](images/hololensspectatorview-500px.jpg) ![Marker](images/spectatorview-300px.png)
+![Marcatore](images/SpecViewPhoneDemo.jpg)
+![Marcatore](images/hololensspectatorview-500px.jpg) ![Marcatore](images/spectatorview-300px.png)
 
 La tabella seguente illustra le diverse funzionalità di Spectator View e le opzioni supportate. Scegli l'opzione più adatta alle tue esigenze di registrazione video:
 
-|                                      | Dispositivi mobili                  |                    Videocamera              |
+|                                      | Cellulare                  |                    Videocamera              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
 | Qualità HD                           |         Full HD         |        Registrazioni di qualità professionale (in base alla videocamera)      |
 | Facilità di spostamento della videocamera                 |            ✔            |                      ✔                      |
@@ -56,11 +56,11 @@ La tabella seguente illustra le diverse funzionalità di Spectator View e le opz
 | Portabile                             |            ✔            |                                             |
 | Wireless                             |            ✔            |                                             |
 | Altri requisiti hardware         |     Telefono Android, iPhone    | HoloLens + attrezzatura + treppiede + videocamera + PC + Unity |
-| Investimento hardware                  |           Bassa            |                     Alto                    |
+| Investimento hardware                  |           Basso            |                     Alto                    |
 | Multipiattaforma                       |           Android, iOS   |                                             |
 | Contenuto sincronizzato                 |            ✔            |                      ✔                      |
 | Durata di configurazione del runtime               |         Istantanea          |                     Lenta                    |
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Acquisizione realtà mista](mixed-reality-capture.md) 
 * [Acquisizione realtà mista per sviluppatori](mixed-reality-capture-for-developers.md)
