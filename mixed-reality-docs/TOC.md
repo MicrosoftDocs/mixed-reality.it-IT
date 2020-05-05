@@ -123,10 +123,9 @@
 ###### [4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
 ##### Esercitazioni sulle funzionalità multiutente
 ###### [1. Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Preparazione di Unity per lo sviluppo](mrlearning-sharing(photon)-ch2.md)
-###### [3. Connessione di più utenti](mrlearning-sharing(photon)-ch3.md)
-###### [4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
-###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch5.md)
+###### [2. Connessione di più utenti](mrlearning-sharing(photon)-ch2.md)
+###### [3. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch3.md)
+###### [4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)
 ##### Esercitazioni sull'audio spaziale
 ###### [1. Aggiunta dell'audio spaziale al progetto](unity-spatial-audio-ch1.md)
 ###### [2. Spazializzazione dei suoni di interazione del pulsante](unity-spatial-audio-ch2.md)
