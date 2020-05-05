@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: tracciamento oculare, realtà mista, input, sguardo fisso, selezione oculare della destinazione, HoloLens 2, selezione con gli occhi, attesa
-ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: ba793f6b1a95fe4b95aa9a043d36823487886b5e
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926612"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604902"
 ---
 # <a name="eye-gaze-and-dwell"></a>Sguardo fisso e attesa
 
@@ -32,14 +32,15 @@ Se il tempo di attesa è troppo breve, è possibile che l'utente sia sopraffatto
 
 ## <a name="design-recommendations"></a>Suggerimenti per la progettazione
 È consigliabile usare un approccio a due stati per il feedback dell'attesa:
-1. *Ritardo iniziale*: quando l'utente inizia a guardare una destinazione, non dovrebbe prodursi alcuna azione per evitare un'esperienza utente spiacevole e schiacciante. Viene invece avviato un timer per rilevare se l'utente stia intenzionalmente guardando la destinazione o semplicemente sfiorandola con lo sguardo.
-2. *Inizio feedback attesa:* dopo aver verificato che l'utente stia intenzionalmente guardando la destinazione, si inizia a mostrare un feedback dell'attesa per informarlo che sta per essere avviata l'attivazione dell'attesa. Si consiglia un tempo di inizio di 150-250 ms in una determinata prossimità (differenza tra concentrare lo sguardo su una destinazione di grandi dimensioni e guardarsi intorno).  
+1. *Ritardo iniziale*: quando l'utente inizia a guardare una destinazione, non dovrebbe prodursi alcuna azione per evitare un'esperienza utente spiacevole e schiacciante. Viene invece avviato un timer per rilevare se l'utente stia intenzionalmente fissando la destinazione o semplicemente guardandola.
+Si consiglia un tempo di inizio di 150-250 ms in una determinata prossimità (differenza tra concentrare lo sguardo su una destinazione di grandi dimensioni e guardarsi intorno).  
+2. *Inizio feedback attesa:* dopo aver verificato che l'utente stia intenzionalmente fissando la destinazione, si inizia a mostrare un feedback dell'attesa per informarlo che sta per essere avviata l'attivazione dell'attesa. 
 3. *Feedback continuo:* mentre l'utente fissa lo sguardo sulla destinazione, visualizza un indicatore di avanzamento continuo che gli indica che non deve distogliere lo sguardo dalla destinazione. In particolare, per l'input con sguardo fisso è consigliabile _trattenere l'attenzione visiva dell'utente_ iniziando con un cerchio o una sfera più grande che si contrae in una versione più piccola. La visualizzazione di un indicatore per lo stato finale (cerchio piccolo) consente di comunicare all'utente quando termina l'attesa. Di seguito è riportata un'illustrazione di esempio. 
 4. *Fine:* se l'utente ha continuato a fissare la destinazione (per altri 650-850 ms), completa l'attivazione dell'attesa e seleziona la destinazione fissata con lo sguardo.
 
 ![Stati dell'attesa](images/eyes_dwellstate_recommendation.png)<br>
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Tracciamento oculare](eye-tracking.md)
 * [Sguardo fisso e commit](gaze-and-commit-eyes.md)
 * [Sguardo e commit](gaze-and-commit.md)
