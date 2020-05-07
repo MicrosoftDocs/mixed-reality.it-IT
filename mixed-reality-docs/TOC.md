@@ -163,6 +163,13 @@
 ##### [MR e Azure 311: Microsoft Graph](mr-azure-311.md)
 ##### [MR e Azure 312: Integrazione di bot](mr-azure-312.md)
 ##### [MR e Azure 313: Servizio hub IoT](mr-azure-313.md)
+### Unreal
+#### [1. Guida introduttiva](unreal-uxt-ch1.md)
+#### [2. Inizializzazione del progetto e prima applicazione](unreal-uxt-ch2.md)
+#### [3. Configurazione del computer per la realtà mista](unreal-uxt-ch3.md)
+#### [4. Rendere la scena interattiva](unreal-uxt-ch4.md)
+#### [5. Aggiunta di un pulsante e reimpostazione delle posizioni della parte](unreal-uxt-ch5.md)
+#### [6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulatore](unreal-uxt-ch6.md)
 ## Unity
 ### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 ### Guida introduttiva
@@ -196,6 +203,14 @@
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 ## Unreal
 ### [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)
+### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
+### [Input sguardo fisso in Unreal](unreal-gaze-input.md)
+### [Mapping spaziale in Unreal](unreal-spatial-mapping.md)
+### [Ancoraggi nello spazio in Unreal](unreal-spatial-anchors.md)
+### [Input vocale in Unreal](unreal-voice-input.md)
+### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
+### [Codici a matrice in Unreal](unreal-qr-codes.md)
+### [Consigli sulle prestazioni per Unreal](performance-recommendations-for-unreal.md)
 ## JavaScript
 ### [Panoramica dello sviluppo con JavaScript](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
