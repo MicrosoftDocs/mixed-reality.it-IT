@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, realtà mista di Windows, Web VR, Web XR, Web Mr, Web AR, 360, 360 video, 360 video, 360 foto, 360 foto, 360 contenuto, immersive Web, immersive-Web, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278482"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835610"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>Panoramica dello sviluppo di realtà miste con JavaScript
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Applicazioni di realtà mista sul Web
 
-Le funzionalità della realtà mista sono disponibili sul Web mediante l'uso delle [API del dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) e [API WebVR deprecate] ([Panoramica di WebXR](webxr-overview.md). Per i browser che non supportano le funzionalità complete di WebXR, è possibile aggiungere [WebXR di riempimento](https://github.com/immersive-web/webxr-polyfill) al sito Web.
+Le funzionalità di realtà mista sono disponibili sul Web mediante l'uso di [API del dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) e di [API WebVR deprecate](webxr-overview.md). Per i browser che non supportano le funzionalità complete di WebXR, è possibile aggiungere [WebXR di riempimento](https://github.com/immersive-web/webxr-polyfill) al sito Web.
 
 ## <a name="what-is-webxr-polyfill"></a>Informazioni su WebXR Refill
 
@@ -55,7 +55,7 @@ La piattaforma [nativa di Babylon](https://www.babylonjs.com/native/) consente a
 
 [React native](https://reactnative.dev/) è un'altra libreria open source che consente agli sviluppatori di compilare con JavaScript e distribuirla su più piattaforme. È possibile scaricare [React native su GitHub](https://github.com/facebook/react-native) e ottenere altre informazioni sul [Blog React native](https://reactnative.dev/blog/).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Panoramica di WebXR](webxr-overview.md)
 * [Specifica API del dispositivo WebXR](https://immersive-web.github.io/webxr/)

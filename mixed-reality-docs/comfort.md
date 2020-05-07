@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, progettazione, comfort, HoloLens 2, HoloLens (prima generazione)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376068"
 ---
 # <a name="comfort"></a>Comfort
 
-Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni indizi si basano su un solo occhio (indizi monoculari), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità di campo](https://en.wikipedia.org/wiki/Depth_of_field) e [accomodazione](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altri indizi si basano su entrambi gli occhi (indizi binoculari) e includono la [convergenza](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi necessarie per guardare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello delle differenze tra le proiezioni della scena sul retro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante che i progettisti e gli sviluppatori creino e presentino contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richieda movimenti faticosi del collo o delle braccia. In questo articolo esamineremo gli aspetti principali da tenere in considerazione per raggiungere questi obiettivi.
+Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni indizi si basano su un solo occhio (indizi monoculari), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità di campo](https://en.wikipedia.org/wiki/Depth_of_field) e [accomodazione](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altri indizi si basano su entrambi gli occhi (indizi binoculari) e includono la [convergenza](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi necessarie per guardare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello delle differenze tra le proiezioni della scena sul retro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richieda movimenti faticosi del collo o delle braccia. In questo articolo esamineremo gli aspetti principali da tenere in considerazione per raggiungere questi obiettivi.
 
 ## <a name="vergence-accommodation-conflict"></a>Conflitto tra convergenza e accomodazione
 
@@ -173,7 +173,7 @@ L'angolo dello sguardo considerato ottimale (condizione di riposo) è compreso t
 
 L'affaticamento muscolare può aumentare quando gli utenti devono tenere una mano alzata per tutta la durata di un'esperienza. Può anche essere faticoso per l'utente dover effettuare ripetutamente movimenti di simulazione del tocco con un dito per periodi prolungati. Consigliamo pertanto di evitare di richiedere movimenti ripetuti e costanti. Questo obiettivo può essere raggiunto incorporando brevi interruzioni oppure offrendo la possibilità di interagire con l'app con una combinazione di gesti e input vocale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Sguardo fisso](gaze-and-commit.md)
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [Interazioni istintive](interaction-fundamentals.md)

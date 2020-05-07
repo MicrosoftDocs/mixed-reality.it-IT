@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni sulle funzionalità multiutente - 3. Connessione di più utenti
+title: Esercitazioni sulle funzionalità multiutente - 4. Condivisione dei movimenti di oggetti con più utenti
 description: Completa questo corso per imparare a implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,70 +7,56 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbe0d8d2db6c34ba262fe9c946b68366ed3dbb93
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 41b62eb2d9f400d0af341c9fcce887c72af7a3aa
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031223"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610645"
 ---
-# <a name="3-connecting-multiple-users"></a>3. Connessione di più utenti
+# <a name="3-sharing-object-movements-with-multiple-users"></a>3. Condivisione dei movimenti di oggetti con più utenti
 
-In questa lezione impareremo a connettere più utenti all'interno di un'esperienza live condivisa. Al termine di questa lezione, sarai in grado di aprire l'applicazione in più dispositivi e visualizzare l'avatar, rappresentato da una sfera per ogni persona che partecipa.
+In questa esercitazione imparerai a condividere i movimenti degli oggetti in modo che tutti i partecipanti di un'esperienza condivisa possano collaborare e visualizzare le interazioni reciproche.
 
 ## <a name="objectives"></a>Obiettivi
 
-* Configurare PUN all'interno dell'applicazione
-* Configurare i giocatori
-* Imparare a connettere più utenti in un'esperienza condivisa
+* Configurare il progetto per condividere i movimenti degli oggetti
+* Imparare a creare un'applicazione collaborativa multiutente di base
 
-## <a name="instructions"></a>Istruzioni
+## <a name="preparing-the-scene"></a>Preparazione della scena
 
-1. Nella cartella Assets->Resources->Prefabs (Asset->Risorse->Prefab) del riquadro Project (Progetto) trascina il prefab NetworkLobby selezionato nella gerarchia, come illustrato nell'immagine seguente.
+In questa sezione preparerai la scena aggiungendo il prefab dell'esercitazione.
 
-    ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+Nella finestra Project (Progetto) passa alla cartella **Assets** (Asset) > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** (Prefab) e trascina il prefab **TableAnchor** nella parte superiore dell'oggetto **SharedPlayground** nella finestra Hierarchy (Gerarchia) per aggiungerlo alla scena come elemento figlio dell'oggetto SharedPlayground:
 
-2. Quando espandi NetworkLobby, verrà visualizzato un oggetto figlio denominato NetworkRoom. Con NetworkRoom selezionato, passa al riquadro Inspector (Controllo) e fai clic su Add Component (Aggiungi componente). Cerca PhotonView e aggiungi il componente.
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section1-step1-1.png)
 
-    ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+## <a name="configuring-pun-to-instantiate-the-objects"></a>Configurazione di PUN per creare un'istanza degli oggetti
 
-3. Crea un nuovo oggetto gioco vuoto nella gerarchia. Fai clic con il pulsante destro del mouse nella gerarchia e scegli Empty (Vuoto) dal menu di scelta rapida. Verifica che il posizionamento sia impostato su x = 0, y = 0, z = 0 e assegna all'oggetto il nome PhotonUser.
+In questa sezione configurerai il progetto per l'uso del prefab RocketLauncher_Complete_Variant creato nella sezione precedente e definirai la posizione in cui verrà creata l'istanza.
 
-    ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+Nella finestra Project (Progetto) passa alla cartella **Assets** (Asset) > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** (Risorse).
 
-4. Fai clic su Add Component (Aggiungi componente) e digita Generic Net Sync. Seleziona la classe Generic Net Sync (Sincronizzazione rete generica). Quando la classe viene visualizzata, fai clic sulla casella di controllo User (Utente) per attivarla.
+Nella finestra Hierarchy (Gerarchia) espandi l'oggetto **NetworkLobby** e seleziona l'oggetto figlio **NetworkRoom** e quindi nella finestra Inspector (Controllo) individua il componente **Photon Room (Script)** (Stanza Photon - Script) e configuralo nel modo seguente:
 
-    ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+* Al campo **Photon User Prefab** (Prefab utente Photon) assegna il prefab **PhotonUser** dalla cartella Resources (Risorse)
 
-5. Fai di nuovo clic su Add Component (Aggiungi componente) e digita Photon View. Seleziona la classe Photon View (Visualizzazione Photon) visualizzata nell'elenco a discesa.
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section2-step1-1.png)
 
-    ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+Con l'oggetto figlio **NetworkRoom** ancora selezionato, nella finestra Hierarchy (Gerarchia) espandi l'oggetto **TableAnchor** e quindi nella finestra Inspector (Controllo) individua il componente **Photon Room (Script)** (Stanza Photon - Script) e configuralo nel modo seguente:
 
-6. Fai clic sull'icona File relativa alla classe Generic Net Sync (Sincronizzazione rete generica). Seleziona e trascina tale icona nel campo Observed Components (Componenti osservati) di Photon View (Visualizzazione Photon).
+* Al campo **Rocket Launcher Location** (Posizione lanciamissili) assegna l'oggetto figlio **Table** dalla finestra Hierarchy (Gerarchia)
 
-    ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png)
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section2-step1-2.png)
 
-7. Successivamente, creiamo sfere che rappresentano ogni persona che partecipa a un'esperienza condivisa. Fai clic con il pulsante destro del mouse sull'oggetto PhotonUser creato, scorri verso il basso fino a 3D Object (Oggetto 3D) e scegli Sphere (Sfera). Verrà creato un oggetto gioco a forma di sfera come elemento figlio dell'oggetto PhotonUser.
+## <a name="trying-the-experience-with-shared-object-movement"></a>Prova dell'esperienza con il movimento di un oggetto condiviso
 
-    ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+Se ora compili e distribuisci il progetto Unity in HoloLens e quindi, tornando in Unity, premi il pulsante Play per attivare la modalità di gioco mentre l'applicazione è in esecuzione in HoloLens, vedrai l'oggetto muoversi in Unity quando lo muovi in HoloLens:
 
-8. Ridimensiona la sfera a x = 0,06, y = 0,06 e z = 0,06.
-
-    ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
-
-9. Trascina l'oggetto gioco PhotonUser nella cartella Prefabs (Prefab) del riquadro Project (Progetto) e quindi eliminalo dalla scena. Hai ora creato un prefab che può essere usato durante la generazione o la creazione di istanze di nuovi giocatori nell'ambito di un'esperienza condivisa.
-
-    ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
-
-    >[!NOTE]
-    >Verifica che l'oggetto gioco sia stato copiato nella cartella Prefabs (Prefab) prima di eliminarlo dalla gerarchia.
-
-10. Crea un nuovo oggetto nella gerarchia seguendo le istruzioni fornite nel passaggio 3 e assegna a tale oggetto il nome SharedPlayground. Fai quindi clic su Add Component (Aggiungi componente) e cerca Generic Network Manager (Gestione rete generica).  Fai clic di nuovo per aggiungere il componente Generic Network Manager (Gestione rete generica). Modifica la posizione dell'oggetto in x = 0, y = 0 e z = 0.
-
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section3-step1-1.gif)
 
 ## <a name="congratulations"></a>Lezione completata
 
-Dopo aver completato tutti i passaggi precedenti e il processo di compilazione, premi il pulsante Play (Esegui) e connetti il dispositivo HoloLens 2. Vedrai una sfera che si muove quando muovi la testa. Tale oggetto verrà visualizzato per qualsiasi utente che partecipa al progetto Unity.
+Hai configurato il progetto in modo che i movimenti degli oggetti siano sincronizzati e gli utenti possano vedere gli oggetti muoversi quando vengono mossi da altri utenti. Nella prossima esercitazione implementerai le funzionalità in modo che l'esperienza condivisa sia allineata nel mondo fisico, gli utenti possano vedersi nella rispettiva posizione fisica effettiva e quindi gli oggetti vengano visualizzati nella stessa posizione fisica e con la medesima rotazione per tutti gli utenti.
 
-[Lezione successiva: 4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)
+[Esercitazione successiva: 4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)

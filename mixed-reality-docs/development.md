@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: Informazioni sugli strumenti e sull'architettura
+title: ottieni informazioni sugli strumenti e sull'architettura
 description: Documentazione per sviluppatori di realtà mista per HoloLens e visori VR immersive.
 author: grbury
 ms.author: grbury
@@ -9,10 +9,10 @@ ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, directx
 ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81277724"
 ---
 # <a name="learn-the-tools-and-architecture"></a>ottieni informazioni sugli strumenti e sull'architettura
@@ -140,7 +140,7 @@ Tutti gli elementi di base necessari per iniziare a scrivere un'app di realtà m
         Di seguito vengono illustrati i concetti di base che ti serviranno per iniziare a progettare e a creare prototipi.
     :::column-end:::
     :::column:::
-        [![Installare gli strumenti](images/icon-developer.jpg)](install-the-tools.md)<br>
+        [![Installa gli strumenti](images/icon-developer.jpg)](install-the-tools.md)<br>
          **[Installa gli strumenti](install-the-tools.md)**<br>
         Usa l'elenco di controllo dell'installazione per ottenere gli strumenti necessari per creare app per HoloLens e per la realtà mista.
     :::column-end:::

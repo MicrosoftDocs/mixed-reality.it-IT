@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, interazione, progettazione, HoloLens, mani, da lontano, puntamento e commit
 ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75901533"
 ---
 # <a name="point-and-commit-with-hands"></a>Puntamento e commit con le mani
@@ -38,8 +38,8 @@ Puntamento e commit con le mani è un modello di input che consente agli utenti 
 <tr>
      <td>Puntamento e commit con le mani</td>
      <td>❌ Non supportato</td>
-     <td>✔️ Consigliata</td>
-     <td>✔️ Consigliata</td>
+     <td>✔️ Consigliato</td>
+     <td>✔️ Consigliato</td>
 </tr>
 </table>
 
@@ -139,15 +139,15 @@ Gli utenti usano i raggi mano per puntare e vedere il cubo di delimitazione e gl
 :::row:::
     :::column:::
        ![Manipolazione di un oggetto 3D - spostamento da lontano](images/3d-object-manipulation-far-move.jpg)<br>
-       **Spostamento**<br>
+       **Sposta**<br>
     :::column-end:::
     :::column:::
        ![Manipolazione di un oggetto 3D - rotazione da lontano](images/3d-object-manipulation-far-rotate.jpg)<br>
-        **Rotazione**<br>
+        **Ruota**<br>
     :::column-end:::
     :::column:::
        ![Manipolazione di un oggetto 3D - ridimensionamento da lontano](images/3d-object-manipulation-far-scale.jpg)<br>
-       **Ridimensionamento**<br>
+       **Ridimensiona**<br>
     :::column-end:::
 :::row-end:::
 
@@ -211,9 +211,9 @@ Per impostazione predefinita, MRTK fornisce un file prefab relativo al raggio de
 
 ---
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Manipolazione diretta con le mani](direct-manipulation.md)
-* [Sguardo fisso e commit](gaze-and-commit.md)
+* [Sguardo e commit](gaze-and-commit.md)
 * [Mani - Manipolazione diretta](direct-manipulation.md)
 * [Mani - Movimenti](gaze-and-commit.md#composite-gestures)
 * [Interazioni istintive](interaction-fundamentals.md)
