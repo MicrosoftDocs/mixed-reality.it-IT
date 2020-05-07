@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni sulle funzionalità multiutente - 3. Connessione di più utenti
+title: Esercitazioni sulle funzionalità multiutente - 4. Condivisione dei movimenti di oggetti con più utenti
 description: Completa questo corso per imparare a implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,70 +7,56 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbe0d8d2db6c34ba262fe9c946b68366ed3dbb93
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 41b62eb2d9f400d0af341c9fcce887c72af7a3aa
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031223"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610645"
 ---
-# <a name="3-connecting-multiple-users"></a><span data-ttu-id="aa03d-105">3. Connessione di più utenti</span><span class="sxs-lookup"><span data-stu-id="aa03d-105">3. Connecting multiple users</span></span>
+# <a name="3-sharing-object-movements-with-multiple-users"></a><span data-ttu-id="f3812-105">3. Condivisione dei movimenti di oggetti con più utenti</span><span class="sxs-lookup"><span data-stu-id="f3812-105">3. Sharing object movements with multiple users</span></span>
 
-<span data-ttu-id="aa03d-106">In questa lezione impareremo a connettere più utenti all'interno di un'esperienza live condivisa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-106">In this lesson, we learn how to connect multiple users as part of a live shared experience.</span></span> <span data-ttu-id="aa03d-107">Al termine di questa lezione, sarai in grado di aprire l'applicazione in più dispositivi e visualizzare l'avatar, rappresentato da una sfera per ogni persona che partecipa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-107">By the end of this lesson, you'll be able to open the application on multiple devices and see the avatar, represented by a sphere for each person that joins.</span></span>
+<span data-ttu-id="f3812-106">In questa esercitazione imparerai a condividere i movimenti degli oggetti in modo che tutti i partecipanti di un'esperienza condivisa possano collaborare e visualizzare le interazioni reciproche.</span><span class="sxs-lookup"><span data-stu-id="f3812-106">In this tutorial, you will learn how to share the movements of objects so that all participants of a shared experience can collaborate and view each others' interactions.</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="aa03d-108">Obiettivi</span><span class="sxs-lookup"><span data-stu-id="aa03d-108">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="f3812-107">Obiettivi</span><span class="sxs-lookup"><span data-stu-id="f3812-107">Objectives</span></span>
 
-* <span data-ttu-id="aa03d-109">Configurare PUN all'interno dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="aa03d-109">Configure PUN within your application</span></span>
-* <span data-ttu-id="aa03d-110">Configurare i giocatori</span><span class="sxs-lookup"><span data-stu-id="aa03d-110">Configure players</span></span>
-* <span data-ttu-id="aa03d-111">Imparare a connettere più utenti in un'esperienza condivisa</span><span class="sxs-lookup"><span data-stu-id="aa03d-111">Learn how to connect multiple users in a shared experience</span></span>
+* <span data-ttu-id="f3812-108">Configurare il progetto per condividere i movimenti degli oggetti</span><span class="sxs-lookup"><span data-stu-id="f3812-108">Configure your project to share the movements of objects</span></span>
+* <span data-ttu-id="f3812-109">Imparare a creare un'applicazione collaborativa multiutente di base</span><span class="sxs-lookup"><span data-stu-id="f3812-109">Learn how to build a basic multi-user collaborative application</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="aa03d-112">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="aa03d-112">Instructions</span></span>
+## <a name="preparing-the-scene"></a><span data-ttu-id="f3812-110">Preparazione della scena</span><span class="sxs-lookup"><span data-stu-id="f3812-110">Preparing the scene</span></span>
 
-1. <span data-ttu-id="aa03d-113">Nella cartella Assets->Resources->Prefabs (Asset->Risorse->Prefab) del riquadro Project (Progetto) trascina il prefab NetworkLobby selezionato nella gerarchia, come illustrato nell'immagine seguente.</span><span class="sxs-lookup"><span data-stu-id="aa03d-113">In the Assets->Resources->Prefabs folder of the Project panel, drag and drop the NetworkLobby prefab into the hierarchy as shown in the image below.</span></span>
+<span data-ttu-id="f3812-111">In questa sezione preparerai la scena aggiungendo il prefab dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="f3812-111">In this section, you will prepare the scene by adding the tutorial prefab.</span></span>
 
-    ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+<span data-ttu-id="f3812-112">Nella finestra Project (Progetto) passa alla cartella **Assets** (Asset) > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** (Prefab) e trascina il prefab **TableAnchor** nella parte superiore dell'oggetto **SharedPlayground** nella finestra Hierarchy (Gerarchia) per aggiungerlo alla scena come elemento figlio dell'oggetto SharedPlayground:</span><span class="sxs-lookup"><span data-stu-id="f3812-112">In the Project window, navigate to the **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** folder and drag the **TableAnchor** prefab on top of the **SharedPlayground** object in the Hierarchy window to add it to your scene as a child of the SharedPlayground object:</span></span>
 
-2. <span data-ttu-id="aa03d-115">Quando espandi NetworkLobby, verrà visualizzato un oggetto figlio denominato NetworkRoom.</span><span class="sxs-lookup"><span data-stu-id="aa03d-115">When you expand NetworkLobby, you'll see a child object called NetworkRoom.</span></span> <span data-ttu-id="aa03d-116">Con NetworkRoom selezionato, passa al riquadro Inspector (Controllo) e fai clic su Add Component (Aggiungi componente).</span><span class="sxs-lookup"><span data-stu-id="aa03d-116">With NetworkRoom selected, go into the Inspector panel and click Add Component.</span></span> <span data-ttu-id="aa03d-117">Cerca PhotonView e aggiungi il componente.</span><span class="sxs-lookup"><span data-stu-id="aa03d-117">Search for PhotonView and add the component.</span></span>
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section1-step1-1.png)
 
-    ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+## <a name="configuring-pun-to-instantiate-the-objects"></a><span data-ttu-id="f3812-114">Configurazione di PUN per creare un'istanza degli oggetti</span><span class="sxs-lookup"><span data-stu-id="f3812-114">Configuring PUN to instantiate the objects</span></span>
 
-3. <span data-ttu-id="aa03d-119">Crea un nuovo oggetto gioco vuoto nella gerarchia.</span><span class="sxs-lookup"><span data-stu-id="aa03d-119">Create a new empty game object in the hierarchy.</span></span> <span data-ttu-id="aa03d-120">Fai clic con il pulsante destro del mouse nella gerarchia e scegli Empty (Vuoto) dal menu di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="aa03d-120">Right-click in the hierarchy and select Empty from the Context menu.</span></span> <span data-ttu-id="aa03d-121">Verifica che il posizionamento sia impostato su x = 0, y = 0, z = 0 e assegna all'oggetto il nome PhotonUser.</span><span class="sxs-lookup"><span data-stu-id="aa03d-121">Ensure the positioning is set to x =0, y=0, z=0 and name the object, PhotonUser.</span></span>
+<span data-ttu-id="f3812-115">In questa sezione configurerai il progetto per l'uso del prefab RocketLauncher_Complete_Variant creato nella sezione precedente e definirai la posizione in cui verrà creata l'istanza.</span><span class="sxs-lookup"><span data-stu-id="f3812-115">In this section, you will configure the project to use the RocketLauncher_Complete_Variant prefab you created in the previous section and define where it will be instantiated.</span></span>
 
-    ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+<span data-ttu-id="f3812-116">Nella finestra Project (Progetto) passa alla cartella **Assets** (Asset) > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** (Risorse).</span><span class="sxs-lookup"><span data-stu-id="f3812-116">In the Project window, navigate to the **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** folder.</span></span>
 
-4. <span data-ttu-id="aa03d-123">Fai clic su Add Component (Aggiungi componente) e digita Generic Net Sync. Seleziona la classe Generic Net Sync (Sincronizzazione rete generica).</span><span class="sxs-lookup"><span data-stu-id="aa03d-123">Click Add Component and type Generic Net Sync. Select the Generic Net Sync class.</span></span> <span data-ttu-id="aa03d-124">Quando la classe viene visualizzata, fai clic sulla casella di controllo User (Utente) per attivarla.</span><span class="sxs-lookup"><span data-stu-id="aa03d-124">When the class appears, click the User check box to turn it on.</span></span>
+<span data-ttu-id="f3812-117">Nella finestra Hierarchy (Gerarchia) espandi l'oggetto **NetworkLobby** e seleziona l'oggetto figlio **NetworkRoom** e quindi nella finestra Inspector (Controllo) individua il componente **Photon Room (Script)** (Stanza Photon - Script) e configuralo nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="f3812-117">In the Hierarchy window, expand the **NetworkLobby** object and select the **NetworkRoom** child object, then in the Inspector window, locate the **Photon Room (Script)** component and configure it as follows:</span></span>
 
-    ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+* <span data-ttu-id="f3812-118">Al campo **Photon User Prefab** (Prefab utente Photon) assegna il prefab **PhotonUser** dalla cartella Resources (Risorse)</span><span class="sxs-lookup"><span data-stu-id="f3812-118">To the **Photon User Prefab** field, assign the **PhotonUser** prefab from the Resources folder</span></span>
 
-5. <span data-ttu-id="aa03d-126">Fai di nuovo clic su Add Component (Aggiungi componente) e digita Photon View.</span><span class="sxs-lookup"><span data-stu-id="aa03d-126">Click Add Component again, and type Photon View.</span></span> <span data-ttu-id="aa03d-127">Seleziona la classe Photon View (Visualizzazione Photon) visualizzata nell'elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-127">Select the Photon View class that appears in the drop-down list.</span></span>
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section2-step1-1.png)
 
-    ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+<span data-ttu-id="f3812-120">Con l'oggetto figlio **NetworkRoom** ancora selezionato, nella finestra Hierarchy (Gerarchia) espandi l'oggetto **TableAnchor** e quindi nella finestra Inspector (Controllo) individua il componente **Photon Room (Script)** (Stanza Photon - Script) e configuralo nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="f3812-120">With the **NetworkRoom** child object still selected, in the Hierarchy window, expand the **TableAnchor** object, then in the Inspector window, locate the **Photon Room (Script)** component and configure it as follows:</span></span>
 
-6. <span data-ttu-id="aa03d-129">Fai clic sull'icona File relativa alla classe Generic Net Sync (Sincronizzazione rete generica).</span><span class="sxs-lookup"><span data-stu-id="aa03d-129">Click the File icon for the Generic Net Sync class.</span></span> <span data-ttu-id="aa03d-130">Seleziona e trascina tale icona nel campo Observed Components (Componenti osservati) di Photon View (Visualizzazione Photon).</span><span class="sxs-lookup"><span data-stu-id="aa03d-130">Drag and drop it in the Photon View's Observed Components field.</span></span>
+* <span data-ttu-id="f3812-121">Al campo **Rocket Launcher Location** (Posizione lanciamissili) assegna l'oggetto figlio **Table** dalla finestra Hierarchy (Gerarchia)</span><span class="sxs-lookup"><span data-stu-id="f3812-121">To the **Rocket Launcher Location** field, assign the **Table** child object from the Hierarchy window</span></span>
 
-    ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png)
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section2-step1-2.png)
 
-7. <span data-ttu-id="aa03d-132">Successivamente, creiamo sfere che rappresentano ogni persona che partecipa a un'esperienza condivisa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-132">Next, we create spheres to represent each person that joins a shared experience.</span></span> <span data-ttu-id="aa03d-133">Fai clic con il pulsante destro del mouse sull'oggetto PhotonUser creato, scorri verso il basso fino a 3D Object (Oggetto 3D) e scegli Sphere (Sfera).</span><span class="sxs-lookup"><span data-stu-id="aa03d-133">Right-click the PhotonUser object you just created, scroll-down to "3D Object and click Sphere.</span></span> <span data-ttu-id="aa03d-134">Verrà creato un oggetto gioco a forma di sfera come elemento figlio dell'oggetto PhotonUser.</span><span class="sxs-lookup"><span data-stu-id="aa03d-134">This will create a sphere game object as a child of the PhotonUser object.</span></span>
+## <a name="trying-the-experience-with-shared-object-movement"></a><span data-ttu-id="f3812-123">Prova dell'esperienza con il movimento di un oggetto condiviso</span><span class="sxs-lookup"><span data-stu-id="f3812-123">Trying the experience with shared object movement</span></span>
 
-    ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+<span data-ttu-id="f3812-124">Se ora compili e distribuisci il progetto Unity in HoloLens e quindi, tornando in Unity, premi il pulsante Play per attivare la modalità di gioco mentre l'applicazione è in esecuzione in HoloLens, vedrai l'oggetto muoversi in Unity quando lo muovi in HoloLens:</span><span class="sxs-lookup"><span data-stu-id="f3812-124">If you now build and deploy the Unity project to your HoloLens, and then, back in Unity, press the Play button to enter Game mode while the application is running on your HoloLens, you will see the object move in Unity when you move the object in HoloLens:</span></span>
 
-8. <span data-ttu-id="aa03d-136">Ridimensiona la sfera a x = 0,06, y = 0,06 e z = 0,06.</span><span class="sxs-lookup"><span data-stu-id="aa03d-136">Scale the sphere down to x=0.06, y=0.06, ad z=0.06.</span></span>
+![Condivisione apprendimento Realtà mista](images/mrlearning-sharing/tutorial3-section3-step1-1.gif)
 
-    ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
+## <a name="congratulations"></a><span data-ttu-id="f3812-126">Lezione completata</span><span class="sxs-lookup"><span data-stu-id="f3812-126">Congratulations</span></span>
 
-9. <span data-ttu-id="aa03d-138">Trascina l'oggetto gioco PhotonUser nella cartella Prefabs (Prefab) del riquadro Project (Progetto) e quindi eliminalo dalla scena.</span><span class="sxs-lookup"><span data-stu-id="aa03d-138">Drag the PhotonUser game object into the Prefabs folder in the Project panel and then delete it from the scene.</span></span> <span data-ttu-id="aa03d-139">Hai ora creato un prefab che può essere usato durante la generazione o la creazione di istanze di nuovi giocatori nell'ambito di un'esperienza condivisa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-139">You have now created a prefab that can be used when spawning or instantiating new players in a shared experience.</span></span>
+<span data-ttu-id="f3812-127">Hai configurato il progetto in modo che i movimenti degli oggetti siano sincronizzati e gli utenti possano vedere gli oggetti muoversi quando vengono mossi da altri utenti.</span><span class="sxs-lookup"><span data-stu-id="f3812-127">You have successfully configured your project so object movements are synchronized and users can see the objects move when other users move the objects.</span></span> <span data-ttu-id="f3812-128">Nella prossima esercitazione implementerai le funzionalità in modo che l'esperienza condivisa sia allineata nel mondo fisico, gli utenti possano vedersi nella rispettiva posizione fisica effettiva e quindi gli oggetti vengano visualizzati nella stessa posizione fisica e con la medesima rotazione per tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="f3812-128">In the next tutorial, you will implement functionality so the shared experience is aligned in the physical world and the users see each other in their actual physical location and so the objects appear in the same physical position and rotation for all users.</span></span>
 
-    ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
-
-    >[!NOTE]
-    ><span data-ttu-id="aa03d-141">Verifica che l'oggetto gioco sia stato copiato nella cartella Prefabs (Prefab) prima di eliminarlo dalla gerarchia.</span><span class="sxs-lookup"><span data-stu-id="aa03d-141">Ensure that the game object has successfully copied into the Prefabs folder before deleting it from your hierarchy.</span></span>
-
-10. <span data-ttu-id="aa03d-142">Crea un nuovo oggetto nella gerarchia seguendo le istruzioni fornite nel passaggio 3 e assegna a tale oggetto il nome SharedPlayground.</span><span class="sxs-lookup"><span data-stu-id="aa03d-142">Create a new object in the hierarchy by following the instructions in Step 3 and name it SharedPlayground.</span></span> <span data-ttu-id="aa03d-143">Fai quindi clic su Add Component (Aggiungi componente) e cerca Generic Network Manager (Gestione rete generica).</span><span class="sxs-lookup"><span data-stu-id="aa03d-143">Then, click Add Component and search for generic network manager.</span></span>  <span data-ttu-id="aa03d-144">Fai clic di nuovo per aggiungere il componente Generic Network Manager (Gestione rete generica).</span><span class="sxs-lookup"><span data-stu-id="aa03d-144">Click it again to add the Generic Network Manager component.</span></span> <span data-ttu-id="aa03d-145">Modifica la posizione dell'oggetto in x = 0, y = 0 e z = 0.</span><span class="sxs-lookup"><span data-stu-id="aa03d-145">Change the position of the object to x=0, y=0, and z =0.</span></span>
-
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
-
-## <a name="congratulations"></a><span data-ttu-id="aa03d-147">Lezione completata</span><span class="sxs-lookup"><span data-stu-id="aa03d-147">Congratulations</span></span>
-
-<span data-ttu-id="aa03d-148">Dopo aver completato tutti i passaggi precedenti e il processo di compilazione, premi il pulsante Play (Esegui) e connetti il dispositivo HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="aa03d-148">Once all the steps above are complete and the build process is also complete, press the Play button and connect your HoloLens 2.</span></span> <span data-ttu-id="aa03d-149">Vedrai una sfera che si muove quando muovi la testa.</span><span class="sxs-lookup"><span data-stu-id="aa03d-149">You should see a sphere moving around as you move your head.</span></span> <span data-ttu-id="aa03d-150">Tale oggetto verrà visualizzato per qualsiasi utente che partecipa al progetto Unity.</span><span class="sxs-lookup"><span data-stu-id="aa03d-150">This will be shown for any user that joins your Unity project!</span></span>
-
-<span data-ttu-id="aa03d-151">[Lezione successiva: 4. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch4.md)</span><span class="sxs-lookup"><span data-stu-id="aa03d-151">[Next Lesson: 4. Sharing object movements with multiple users](mrlearning-sharing(photon)-ch4.md)</span></span>
+<span data-ttu-id="f3812-129">[Esercitazione successiva: 4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)</span><span class="sxs-lookup"><span data-stu-id="f3812-129">[Next tutorial: 4. Integrating Azure Spatial Anchors into a shared experience](mrlearning-sharing(photon)-ch4.md)</span></span>
