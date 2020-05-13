@@ -1,19 +1,19 @@
 ---
-title: Informazioni di riferimento sull'API del portale del dispositivo
+title: Informazioni di riferimento sulle API di Portale di dispositivi
 description: Informazioni di riferimento sulle API per il portale per dispositivi Windows in HoloLens
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portale per dispositivi Windows, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278239"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227961"
 ---
-# <a name="device-portal-api-reference"></a>Informazioni di riferimento sull'API del portale del dispositivo
+# <a name="device-portal-api-reference"></a>Informazioni di riferimento sulle API di Portale di dispositivi
 
 Tutti gli elementi del [portale per dispositivi Windows](using-the-windows-device-portal.md) sono basati sulle API REST che è possibile usare per accedere ai dati e controllare il dispositivo a livello di codice.
 
@@ -183,6 +183,10 @@ Aprire una connessione Web socket per un flusso di controllo.
 **/API/Holographic/Simulation/Control/Stream (POST)**
 
 Creare un flusso di controllo (priorità obbligatoria) o pubblicare i dati in un flusso creato (streamId richiesto). È previsto che i dati inviati siano di tipo ' Application/ottetto-Stream '.
+
+**/API/Holographic/Simulation/Display/Stream (GET/WebSocket)**
+
+Richiedere un flusso video di simulazione contenente il contenuto di cui è stato eseguito il rendering nella visualizzazione del sistema in modalità "simulazione".  Inizialmente verrà inviata un'intestazione di descrittore di formato semplice, seguita da trame con codifica H. 264, ognuna preceduta da un'intestazione che indica l'indice degli occhi e le dimensioni della trama.
 
 ## <a name="perception-simulation-playback"></a>Riproduzione della simulazione di percezione
 
@@ -415,7 +419,7 @@ Restituisce le statistiche sulle prestazioni di sistema (lettura/scrittura di I/
 Restituisce i dati
 * JSON con informazioni di sistema: CPU, GPU, memoria, rete, IO
 
-## <a name="power"></a>Alimentazione
+## <a name="power"></a>Power
 
 **/API/Power/Battery (GET)**
 

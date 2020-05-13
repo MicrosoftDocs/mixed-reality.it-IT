@@ -3,15 +3,15 @@ title: Simulazione della percezione
 description: Guida all'uso della libreria di simulazione della percezione per automatizzare l'input simulato per le applicazioni immersive
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 04/26/2019
+ms.date: 05/12/2020
 ms.topic: article
 keywords: HoloLens, simulazione, test
-ms.openlocfilehash: 503533bc5a2e9307b7c5217632d42670285aac0a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 701fd39490d87b70df9bd68cc99da6482d41b676
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437542"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228026"
 ---
 # <a name="perception-simulation"></a>Simulazione della percezione
 
@@ -23,21 +23,21 @@ Per iniziare a usare la simulazione nel codice, iniziare creando un oggetto IPer
 
 ## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>Configurazione di un progetto di Visual Studio per la simulazione della percezione
 1. [Installare l'emulatore di HoloLens](install-the-tools.md) nel PC di sviluppo. L'emulatore include le librerie che si utilizzeranno per la simulazione della percezione.
-2. Creare un nuovo progetto desktop C# di Visual Studio (un progetto console è molto interessante per iniziare).
-3. Aggiungere i file binari seguenti al progetto come riferimenti (informazioni di riferimento sul > di aggiunta di Project->...). È possibile trovarli in% ProgramFiles (x86)% \ Microsoft XDE\\(versione), ad esempio **% ProgramFiles (x86)% \ Microsoft XDE\\10.0.18362.0** per l'emulatore HoloLens 2.  Nota: anche se i file binari fanno parte dell'emulatore HoloLens 2, funzionano anche per la realtà mista di Windows sul desktop. un. Wrapper gestito C# da PerceptionSimulationManager. Interop. dll per la simulazione della percezione.
+2. Creare un nuovo progetto desktop di Visual Studio C# (un progetto console è molto interessante per iniziare).
+3. Aggiungere i file binari seguenti al progetto come riferimenti (informazioni di riferimento sul >di aggiunta di Project->...). È possibile trovarli in% ProgramFiles (x86)% \ Microsoft XDE \\ (Version), ad esempio **% ProgramFiles (x86)% \ Microsoft XDE \\ 10.0.18362.0** per l'emulatore HoloLens 2.  Nota: anche se i file binari fanno parte dell'emulatore HoloLens 2, funzionano anche per la realtà mista di Windows sul desktop. un. PerceptionSimulationManager. Interop. dll: wrapper C# gestito per la simulazione della percezione.
     b. PerceptionSimulationRest. dll-libreria per la configurazione di un canale di comunicazione del socket Web per HoloLens o emulatore.
     c. SimulationStream. Interop. dll: tipi condivisi per la simulazione.
-4. Aggiungere il file binario di implementazione PerceptionSimulationManager. dll al progetto a. Per prima cosa, aggiungere il file come binario al progetto (> elemento esistente del > di progetto...). Salvarlo come collegamento in modo che non venga copiato nella cartella di origine del progetto. ![aggiungere PerceptionSimulationManager. dll al progetto come collegamento](images/saveaslink.png) b. Assicurarsi quindi che venga copiato nella cartella di output durante la compilazione. Si trova nella finestra delle proprietà per il file binario. ![contrassegnare PerceptionSimulationManager. dll per la copia nella directory di output](images/copyalways.png)
+4. Aggiungere il file binario di implementazione PerceptionSimulationManager. dll al progetto a. Per prima cosa, aggiungere il file come binario al progetto (>elemento esistente del >di progetto...). Salvarlo come collegamento in modo che non venga copiato nella cartella di origine del progetto. ![Aggiungere PerceptionSimulationManager. dll al progetto come collegamento ](images/saveaslink.png) b. Assicurarsi quindi che venga copiato nella cartella di output durante la compilazione. Si trova nella finestra delle proprietà per il file binario. ![Contrassegnare PerceptionSimulationManager. dll per la copia nella directory di output](images/copyalways.png)
 5. Impostare la piattaforma della soluzione attiva su x64.  Usare il Configuration Manager per creare una voce della piattaforma per x64, se non ne esiste già una.
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>Creazione di un oggetto IPerceptionSimulation Manager
 
 Per controllare la simulazione, è possibile eseguire aggiornamenti agli oggetti recuperati da un oggetto IPerceptionSimulationManager. Il primo passaggio consiste nell'ottenere l'oggetto e connetterlo al dispositivo o all'emulatore di destinazione. È possibile ottenere l'indirizzo IP dell'emulatore facendo clic sul pulsante portale del dispositivo sulla [barra degli strumenti](using-the-hololens-emulator.md) .
 
-![icona Apri portale del dispositivo](images/emulator-deviceportal.png) **Apri portale**del dispositivo: aprire il portale del dispositivo Windows per il sistema operativo HoloLens nell'emulatore.  Per la realtà mista di Windows, questo può essere recuperato nell'app impostazioni in "Aggiorna & sicurezza", quindi "per sviluppatori" nella sezione "Connetti tramite:" in "abilitare il portale del dispositivo".  Assicurarsi di annotare l'indirizzo IP e la porta.
+![Aprire l'icona del portale del dispositivo ](images/emulator-deviceportal.png) **aprire il portale**del dispositivo: aprire il portale del dispositivo Windows per il sistema operativo HoloLens nell'emulatore.  Per la realtà mista di Windows, questo può essere recuperato nell'app impostazioni in "Aggiorna & sicurezza", quindi "per sviluppatori" nella sezione "Connetti tramite:" in "abilitare il portale del dispositivo".  Assicurarsi di annotare l'indirizzo IP e la porta.
 
 In primo luogo, si chiamerà RestSimulationStreamSink. create per ottenere un oggetto RestSimulationStreamSink. Si tratta del dispositivo o dell'emulatore di destinazione che si controllerà su una connessione HTTP. I comandi verranno passati e gestiti dal [portale del dispositivo Windows](using-the-windows-device-portal.md) in esecuzione nel dispositivo o nell'emulatore. I quattro parametri necessari per creare un oggetto sono:
-* Uri URI-indirizzo IP del dispositivo di destinazione (ad esempio, "https://123.123.123.123" o "https://123.123.123.123:50080")
+* Uri URI-indirizzo IP del dispositivo di destinazione (ad esempio, " https://123.123.123.123 " o " https://123.123.123.123:50080 ")
 * System .NET. NetworkCredential credentials: nome utente/password per la connessione al [portale per dispositivi Windows](using-the-windows-device-portal.md) sul dispositivo o sull'emulatore di destinazione. Se ci si connette all'emulatore tramite l'indirizzo locale (ad esempio,*168...* *) nello stesso computer verranno accettate le credenziali.
 * bool Normal-true per la priorità normale, false per priorità bassa. In genere è consigliabile impostare questo valore su *true* per gli scenari di test, che consente al test di assumere il controllo.  L'emulatore e la simulazione di realtà mista di Windows usano connessioni con priorità bassa.  Se il test USA anche una connessione con priorità bassa, la connessione stabilita più di recente sarà controllata.
 * System. Threading. CancellationToken token-token per annullare l'operazione asincrona.
@@ -219,14 +219,14 @@ namespace ConsoleApplication1
 ## <a name="note-on-6-dof-controllers"></a>Nota sui controller da 6 a DOF
 
 Prima di chiamare qualsiasi proprietà nei metodi in un controller 6-DOF simulato, è necessario attivare il controller.  In caso contrario, viene generata un'eccezione.  A partire dall'aggiornamento 2019 di Windows 10, è possibile installare e attivare i controller 6-DOF simulati impostando la proprietà Status dell'oggetto ISimulatedSixDofController su SimulatedSixDofControllerStatus. Active.
-Nell'aggiornamento di Windows 10 ottobre 2018 e versioni precedenti, è necessario installare prima di tutto un controller 6-DOF simulato chiamando lo strumento PerceptionSimulationDevice disponibile nella cartella \Windows\System32.  L'utilizzo di questo strumento è il seguente:
+Nell'aggiornamento di Windows 10 ottobre 2018 e versioni precedenti, è necessario installare prima di tutto un controller 6-DOF simulato chiamando lo strumento PerceptionSimulationDevice disponibile nella cartella \Windows\System32..  L'utilizzo di questo strumento è il seguente:
 
 
 ```
     PerceptionSimulationDevice.exe <action> 6dof <instance>
 ```
 
-Per esempio
+Ad esempio:
 
 ```
     PerceptionSimulationDevice.exe i 6dof 1
@@ -428,7 +428,7 @@ La calibrazione degli occhi non è disponibile.
 
 **Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. Ready**
 
-Gli occhi sono stati calibrati.  Questo è il valore predefinito.
+Gli occhi sono stati calibrati.  Si tratta del valore predefinito.
 
 **Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. Configuring**
 
@@ -655,6 +655,52 @@ Campo orizzontale della visualizzazione di tronco, in radianti (minore di PI).
 
 Rapporto tra il campo orizzontale e la visualizzazione e il campo verticale della visualizzazione.
 
+### <a name="microsoftperceptionsimulationsimulateddisplayconfiguration"></a>Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration
+
+Descrive la configurazione del display simulato dell'auricolare.
+
+```
+public struct SimulatedDisplayConfiguration
+{
+    public Vector3 LeftEyePosition;
+    public Rotation3 LeftEyeRotation;
+    public Vector3 RightEyePosition;
+    public Rotation3 RightEyeRotation;
+    public float Ipd;
+    public bool ApplyEyeTransforms;
+    public bool ApplyIpd;
+}
+```
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyePosition**
+
+Trasformazione dal centro della parte centrale all'occhio sinistro per il rendering stereo.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyeRotation**
+
+Rotazione dell'occhio sinistro a scopo di rendering stereo.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. RightEyePosition**
+
+Trasformazione dal centro dell'inizio all'occhio destro per il rendering stereo.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. RightEyeRotation**
+
+Rotazione dell'occhio destro per il rendering stereo.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. dpi**
+
+Valore di dpi segnalato dal sistema per il rendering stereo.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. ApplyEyeTransforms**
+
+Indica se i valori specificati per le trasformazioni a sinistra e a destra devono essere considerati validi e applicati al sistema in esecuzione.
+
+**Microsoft. PerceptionSimulation. SimulatedDisplayConfiguration. ApplyIpd**
+
+Indica se il valore specificato per la funzione DPI deve essere considerato valido e applicato al sistema in esecuzione.
+
+
 ### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>Microsoft. PerceptionSimulation. IPerceptionSimulationManager
 
 Radice per la generazione dei pacchetti usati per controllare un dispositivo.
@@ -707,6 +753,27 @@ Impostare le proprietà del dispositivo simulato in modo che corrispondano al ti
 
 Parametri
 * Tipo: nuovo tipo di dispositivo simulato
+
+### <a name="microsoftperceptionsimulationisimulateddevice2"></a>Microsoft. PerceptionSimulation. ISimulatedDevice2
+
+Sono disponibili proprietà aggiuntive eseguendo il cast di ISimulatedDevice a ISimulatedDevice2
+
+```
+public interface ISimulatedDevice2
+{
+    bool IsUserPresent { [return: MarshalAs(UnmanagedType.Bool)] get; [param: MarshalAs(UnmanagedType.Bool)] set; }
+    SimulatedDisplayConfiguration DisplayConfiguration { get; set; }
+
+};
+```
+
+**Microsoft. PerceptionSimulation. ISimulatedDevice2. IsUserPresent**
+
+Recuperare o impostare un valore che indica se l'uomo simulato sta attivamente indossando l'auricolare.
+
+**Microsoft. PerceptionSimulation. ISimulatedDevice2. DisplayConfiguration**
+
+Recuperare o impostare le proprietà della visualizzazione simulata.
 
 ### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>Microsoft. PerceptionSimulation. ISimulatedHeadTracker
 
@@ -1252,7 +1319,10 @@ public enum StreamDataTypes
     SpatialMapping = 0x08,
     Calibration = 0x10,
     Environment = 0x20,
-    All = None | Head | Hands | SpatialMapping | Calibration | Environment
+    SixDofControllers = 0x40,
+    Eyes = 0x80,
+    DisplayConfiguration = 0x100
+    All = None | Head | Hands | SpatialMapping | Calibration | Environment | SixDofControllers | Eyes | DisplayConfiguration
 }
 ```
 
@@ -1279,6 +1349,18 @@ Flusso di dati relativi alla calibrazione del dispositivo. I pacchetti di calibr
 **Microsoft. PerceptionSimulation. StreamDataTypes. Environment**
 
 Flusso dei dati relativi all'ambiente del dispositivo.
+
+**Microsoft. PerceptionSimulation. StreamDataTypes. SixDofControllers**
+
+Flusso di dati relativi ai controller di movimento.
+
+**Microsoft. PerceptionSimulation. StreamDataTypes. Eyes**
+
+Flusso di dati relativi agli occhi dell'uomo simulato.
+
+**Microsoft. PerceptionSimulation. StreamDataTypes. DisplayConfiguration**
+
+Flusso di dati relativi alla configurazione di visualizzazione del dispositivo.
 
 **Microsoft. PerceptionSimulation. StreamDataTypes. All**
 

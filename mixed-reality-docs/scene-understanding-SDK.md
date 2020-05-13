@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604952"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228016"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Panoramica dell'SDK per la comprensione della scena
 
@@ -158,7 +158,7 @@ Il primo passaggio per lavorare con SceneUnderstanding è che l'applicazione ott
 Le scene vengono calcolate usando un SceneObserver. Prima di creare una scena, l'applicazione deve eseguire una query sul dispositivo per assicurarsi che supporti SceneUnderstanding, oltre a richiedere l'accesso utente per le informazioni necessarie a SceneUnderstanding.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ Si noti che si tratta del SceneObject con la trasformazione rispetto all'origine
 
 La comprensione della scena ha effettuato un tentativo intenzionale di allinearsi alle rappresentazioni tradizionali della scena 3D quando si gestiscono le trasformazioni. Ogni scena è quindi confinata a un singolo sistema di coordinate, in modo analogo alla maggior parte delle rappresentazioni ambientali 3D. SceneObjects forniscono la posizione e l'orientamento all'interno del sistema di coordinate. Se l'applicazione sta affrontando scenari che estendono il limite di una singola origine, può ancorare SceneObjects a SpatialAnchors o generare diverse scene e unirle, ma per semplicità si presuppone che esistano scene ermetiche nella propria origine localizzata da un NodeId definito da scene. OriginSpatialGraphNodeId.
 
-Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde all'origine mondiale `.ToUnity()` di Unity, nonché `System.Numerics.Matrix4x4` il `UnityEngine.Matrix4x4`metodo di estensione per la conversione tra e.
+Il codice Unity seguente, ad esempio, Mostra come usare la percezione di Windows e le API Unity per allineare i sistemi di coordinate. Vedere [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) e [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) per informazioni dettagliate sulle API di percezione di Windows e sugli [oggetti nativi della realtà mista in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) per informazioni dettagliate su come ottenere un SpatialCoordinateSystem che corrisponde all'origine mondiale di Unity, nonché il `.ToUnity()` metodo di estensione per la conversione tra `System.Numerics.Matrix4x4` e `UnityEngine.Matrix4x4` .
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Ogni `SceneObject` ha una `Position` proprietà `Orientation` e che può essere usata per posizionare il contenuto corrispondente rispetto all'origine dell'oggetto che `Scene`lo contiene. Ad esempio, nell'esempio seguente si presuppone che il gioco sia un figlio della radice della scena e assegna la posizione e la rotazione locali per allinearsi a `SceneObject`un dato:
+Ogni `SceneObject` ha una `Position` `Orientation` proprietà e che può essere usata per posizionare il contenuto corrispondente rispetto all'origine dell'oggetto che lo contiene `Scene` . Ad esempio, nell'esempio seguente si presuppone che il gioco sia un figlio della radice della scena e assegna la posizione e la rotazione locali per allinearsi a un dato `SceneObject` :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ I passaggi 1-4 dipendono in modo estremamente da un particolare Framework/implem
 
 ### <a name="mesh"></a>Mesh
 
-Le mesh rappresentano rappresentazioni geometriche di oggetti o ambienti. In modo analogo al [mapping spaziale](spatial-mapping.md), i dati relativi a indici mesh e vertici forniti con ogni mesh di superficie spaziale utilizzano lo stesso layout familiare dei vertex buffer e degli indici utilizzati per il rendering di mesh triangolari in tutte le moderne API per il rendering. Le posizioni dei vertici sono disponibili nel sistema di `Scene`coordinate di. Le API specifiche usate per fare riferimento a questi dati sono le seguenti:
+Le mesh rappresentano rappresentazioni geometriche di oggetti o ambienti. In modo analogo al [mapping spaziale](spatial-mapping.md), i dati relativi a indici mesh e vertici forniti con ogni mesh di superficie spaziale utilizzano lo stesso layout familiare dei vertex buffer e degli indici utilizzati per il rendering di mesh triangolari in tutte le moderne API per il rendering. Le posizioni dei vertici sono disponibili nel sistema di coordinate di `Scene` . Le API specifiche usate per fare riferimento a questi dati sono le seguenti:
 
 ```cs
 void GetTriangleIndices(int[] indices);
