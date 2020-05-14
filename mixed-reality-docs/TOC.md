@@ -100,6 +100,7 @@
 ## [Informazioni sugli strumenti e sull'architettura](development.md)
 ## [Installare gli strumenti](install-the-tools.md)
 ## Servizi cloud di realtà mista
+### [Rendering remoto di Azure](https://docs.microsoft.com/azure/remote-rendering)
 ### [Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors)
 ## [Esercitazioni e app di esempio](tutorials.md)
 ### Unity
