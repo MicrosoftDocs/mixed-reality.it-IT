@@ -1,19 +1,19 @@
 ---
 layout: LandingPage
-title: ottieni informazioni sugli strumenti e sull'architettura
+title: Informazioni sugli strumenti e sull'architettura
 description: Documentazione per sviluppatori di realtà mista per HoloLens e visori VR immersive.
 author: grbury
 ms.author: grbury
-ms.date: 08/27/2019
+ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
-keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, directx
-ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, unreal, directx
+ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277724"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835290"
 ---
 # <a name="learn-the-tools-and-architecture"></a>ottieni informazioni sugli strumenti e sull'architettura
 
@@ -36,12 +36,12 @@ Quando Microsoft lanciava HoloLens per un pubblico di sviluppatori entusiasti ne
     :::column:::    
        [![Unity](images/unity_logo.png)](development.md#unity)<br>
         **[Unity](development.md#unity)**<br>   
-        L'uso di Unity rappresenta il percorso più veloce per creare un'app di realtà mista. 
+        Crea un'app di realtà mista multipiattaforma e completa con Unity.
     :::column-end:::    
     :::column:::    
         [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
-         **[Unreal](development.md#unreal)**<br>    
-        Il supporto per la produzione per HoloLens 2 sarà incluso anche in Unreal Engine 4.23.    
+        **[Unreal](development.md#unreal)**<br> 
+        Crea fantastiche esperienze di realtà mista con supporto per la produzione in Unreal Engine. 
     :::column-end:::
     :::column:::    
         [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
@@ -98,6 +98,16 @@ Vengono fornite informazioni su come creare un'app di realtà mista con Unreal.
 
 <br>
 
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[Mixed Reality Toolkit (MRTK) Microsoft per Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal)
+Mixed Reality Toolkit per Unreal (MRTK-Unreal) è un set di componenti, sotto forma di plug-in, esempi e documentazione, progettati per accelerare lo sviluppo di applicazioni con realtà mista usando Unreal Engine.
+
+<br>
+
+### <a name="open-source-sample-apps-and-a-step-by-step-tutorial"></a>[App di esempio open source e un'esercitazione dettagliata](unreal-uxt-ch1.md)
+L'esercitazione per iniziare lo sviluppo di realtà mista in Unreal illustra agli sviluppatori il processo end-to-end per la creazione di un'app HoloLens 2 usando il plug-in [UX Tools per Unreal versione 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
+
+<br>
+
 ---
 
 ## <a name="javascript"></a>JavaScript   
@@ -140,7 +150,7 @@ Tutti gli elementi di base necessari per iniziare a scrivere un'app di realtà m
         Di seguito vengono illustrati i concetti di base che ti serviranno per iniziare a progettare e a creare prototipi.
     :::column-end:::
     :::column:::
-        [![Installa gli strumenti](images/icon-developer.jpg)](install-the-tools.md)<br>
+        [![Installare gli strumenti](images/icon-developer.jpg)](install-the-tools.md)<br>
          **[Installa gli strumenti](install-the-tools.md)**<br>
         Usa l'elenco di controllo dell'installazione per ottenere gli strumenti necessari per creare app per HoloLens e per la realtà mista.
     :::column-end:::

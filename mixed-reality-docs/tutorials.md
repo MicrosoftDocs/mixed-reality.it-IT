@@ -8,24 +8,26 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, academy, esercitazione
-ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334464"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835650"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
 ![Utente HoloLens 2](images/08_Tutorials.png)
 
-Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity. Man mano che vengono sviluppati contenuti per altri motori e piattaforme, potrai trovarli sotto l'intestazione pertinente nel Sommario.
+Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity o Unreal. Man mano che vengono sviluppati contenuti per altri motori e piattaforme, potrai trovarli sotto l'intestazione pertinente nel Sommario.
 
 ## <a name="hololens-2-tutorials"></a>Esercitazioni su HoloLens 2
 
-Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista. Le esercitazioni sono basate su [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista. Le esercitazioni di Unity sono basate sul [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity), l'esercitazione di Unreal è basata su [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
-* Esercitazioni introduttive: [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
+* Esercitazioni introduttive
+    * Unity: [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
+    * Unreal: [1 di 6 Introduzione](unreal-uxt-ch1.md)
 * Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 3 Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
 * Esercitazioni sui servizi Voce di Azure: [1 di 4 Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 * Esercitazioni sulle funzionalità multiutente: [1 di 5 Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
