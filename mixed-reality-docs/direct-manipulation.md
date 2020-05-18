@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, sguardo fisso, selezione della destinazione con lo sguardo, interazione, progettazione, a portata di mano, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723250"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227996"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipolazione diretta con le mani
 
@@ -41,7 +41,7 @@ La manipolazione diretta è basata sull'invito, ovvero è facile da usare. Non e
      <td>Manipolazione diretta con le mani</td>
      <td>❌ Non supportata</td>
      <td>✔️ Consigliata</td>
-     <td>➕ È consigliabile un'alternativa, <a href="point-and-commit.md">puntamento e commit con le mani</a>.</td>
+     <td>➕ Supportata.  Per l'interfaccia utente, consigliamo invece <a href="point-and-commit.md">Puntamento e commit con le mani</a>.</td>
     
 </tr>
 </table>
