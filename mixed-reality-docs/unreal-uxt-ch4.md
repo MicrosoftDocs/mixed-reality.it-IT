@@ -7,14 +7,14 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 17f7ab1c1126c47e5ac6388d125d45cf3f2c2d87
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+ms.openlocfilehash: 2e4d26ed4e0b8199bfc629016aea688bd1c41ef8
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851549"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83520026"
 ---
-# <a name="3-making-your-scene-interactive"></a>3. Rendere la scena interattiva
+# <a name="4-making-your-scene-interactive"></a>4. Rendere la scena interattiva
 
 Questa sezione presenta il plug-in open source UX Tools di Mixed Reality Toolkit, che fornisce un set di strumenti per rendere la scena interattiva. Al termine di questa sezione, i pezzi degli scacchi risponderanno all'input dell'utente. 
 
