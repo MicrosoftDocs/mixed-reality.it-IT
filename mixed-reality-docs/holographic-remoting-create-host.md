@@ -1,19 +1,19 @@
 ---
-title: Scrittura di un'app remota olografica remota
+title: Scrivere un'app remota Holographic Remoting
 description: Creando un contenuto remoto dell'app remota olografica, di cui viene eseguito il rendering in un computer remoto, può essere trasmesso a HoloLens 2. Questo articolo descrive il modo in cui è possibile ottenere questo risultato.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 6c6da16d83f593d9987bf7e534f9f663f11abd01
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 53f370dc32b4fe56eb610b6e5687022e0908f7a8
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278119"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866861"
 ---
-# <a name="writing-a-holographic-remoting-remote-app"></a>Scrittura di un'app remota olografica remota
+# <a name="writing-a-holographic-remoting-remote-app"></a>Scrivere un'app remota Holographic Remoting
 
 >[!IMPORTANT]
 >Questo documento descrive la creazione di un'applicazione remota per HoloLens 2. Le applicazioni remote per **HoloLens (1a Gen)** devono usare il pacchetto NuGet versione **1. x. x**. Ciò implica che le applicazioni remote scritte per HoloLens 2 non sono compatibili con HoloLens 1 e viceversa. La documentazione per HoloLens 1 è disponibile [qui](add-holographic-remoting.md).
@@ -26,17 +26,17 @@ Una tipica connessione remota avrà una bassa di 50 ms di latenza. L'App Player 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Un punto di partenza efficace è un'app desktop o UWP basata su DirectX funzionante che è destinata all'API di realtà mista di Windows. Per informazioni dettagliate, vedere [Cenni preliminari sullo sviluppo DirectX](directx-development-overview.md). Il [ C++ modello di progetto olografico](creating-a-holographic-directx-project.md) è un punto di partenza valido.
+Un punto di partenza efficace è un'app desktop o UWP basata su DirectX funzionante che è destinata all'API di realtà mista di Windows. Per informazioni dettagliate, vedere [Cenni preliminari sullo sviluppo DirectX](directx-development-overview.md). Il [modello di progetto olografico C++](creating-a-holographic-directx-project.md) è un punto di partenza valido.
 
 >[!IMPORTANT]
->Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Apartment a thread singolo](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si C++USA/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) un apartment multithread è il valore predefinito.
+>Qualsiasi app che usa la comunicazione remota olografica deve essere creata per usare un [Apartment](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L'uso di un [Apartment a thread singolo](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) è supportato, ma comporta prestazioni ottimali e possibilmente balbettanti durante la riproduzione. Quando si usa C++/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) un apartment multithread è il valore predefinito.
 
 
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Ottenere il pacchetto NuGet per la comunicazione remota olografica
 
 I passaggi seguenti sono necessari per aggiungere il pacchetto NuGet a un progetto in Visual Studio.
-1. Apri il progetto in Visual Studio.
+1. Aprire il progetto in Visual Studio.
 2. Fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Gestisci pacchetti NuGet...**
 3. Nel pannello visualizzato fare clic su **Sfoglia** e quindi cercare "comunicazione remota olografica".
 4. Selezionare **Microsoft. olografic. Remoting**, assicurarsi di selezionare la versione **2. x.** x più recente e fare clic su **Installa**.
@@ -75,7 +75,7 @@ CreateRemoteContext(m_remoteContext, 20000, false, PreferredVideoCodec::Default)
 >[!WARNING]
 >La comunicazione remota olografica funziona sostituendo il runtime della realtà mista di Windows che fa parte di Windows con un runtime specifico di .NET Remoting. Questa operazione viene eseguita durante la creazione del contesto remoto. Per questo motivo qualsiasi chiamata a qualsiasi API di realtà mista di Windows prima di creare il contesto remoto può causare un comportamento imprevisto. L'approccio consigliato consiste nel creare il contesto remoto il prima possibile prima di interagire con qualsiasi API di realtà mista. Non combinare mai oggetti creati o recuperati tramite qualsiasi API di realtà mista di Windows prima della chiamata a CreateRemoteContext con gli oggetti creati o recuperati in seguito.
 
-Successivamente, è necessario creare lo spazio olografico. Non è necessario specificare un CoreWindow. Le app desktop che non dispongono di un CoreWindow possono semplicemente passare un ```nullptr```.
+Successivamente, è necessario creare lo spazio olografico. Non è necessario specificare un CoreWindow. Le app desktop che non dispongono di un CoreWindow possono semplicemente passare un ```nullptr``` .
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(nullptr);
@@ -89,7 +89,7 @@ La connessione può essere eseguita in uno dei due modi seguenti.
 1) L'app remota si connette al lettore in esecuzione sul dispositivo.
 2) Il lettore in esecuzione sul dispositivo si connette all'app remota.
 
-Per stabilire una connessione dall'app remota a HoloLens 2, chiamare il metodo ```Connect``` nel contesto remoto specificando il nome host e la porta. La porta usata dal lettore di comunicazione remota olografica è **8265**.
+Per stabilire una connessione dall'app remota a HoloLens 2, chiamare il ```Connect``` metodo sul contesto remoto specificando il nome host e la porta. La porta usata dal lettore di comunicazione remota olografica è **8265**.
 
 ```cpp
 try
@@ -103,12 +103,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Come per qualsiasi C++API/WinRT ```Connect``` possibile generare un WinRT:: hresult_error che deve essere gestito.
+>Come per qualsiasi API C++/WinRT, ```Connect``` può generare un WinRT:: hresult_error che deve essere gestito.
 
 >[!TIP]
->Per evitare di [ C++](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) usare la proiezione del linguaggio/WinRT, è possibile includere il file ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` che si trova all'interno del pacchetto NuGet remoto olografico. Contiene le dichiarazioni delle interfacce COM sottostanti. Tuttavia, è C++consigliabile usare/WinRT.
+>Per evitare di usare la proiezione del linguaggio [C++/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` , è possibile includere il file che si trova all'interno del pacchetto NuGet di comunicazione remota olografica. Contiene le dichiarazioni delle interfacce COM sottostanti. Tuttavia, è consigliabile utilizzare C++/WinRT.
 
-L'ascolto delle connessioni in ingresso nell'app remota può essere eseguito chiamando il metodo ```Listen```. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati **8265** e **8266** .
+L'ascolto delle connessioni in ingresso nell'app remota può essere eseguito chiamando il ```Listen``` metodo. Durante questa chiamata è possibile specificare sia la porta di handshake che la porta di trasporto. La porta di handshake viene utilizzata per l'handshake iniziale. I dati vengono quindi inviati tramite la porta di trasporto. Per impostazione predefinita vengono usati **8265** e **8266** .
 
 ```cpp
 try
@@ -122,7 +122,7 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Il ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` nel pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
+>Il contenuto del ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` pacchetto NuGet contiene la documentazione dettagliata per l'API esposta dalla comunicazione remota olografica.
 
 ## <a name="handling-remoting-specific-events"></a>Gestione di eventi specifici della comunicazione remota
 
@@ -174,7 +174,7 @@ m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [thi
 });
 ```
 
-Inoltre, è possibile eseguire query sullo stato della connessione utilizzando la proprietà ```ConnectionState``` nel contesto remoto.
+Inoltre, è possibile eseguire query sullo stato della connessione utilizzando la ```ConnectionState``` proprietà nel contesto remoto.
 ```cpp
 auto connectionState = m_remoteContext.ConnectionState();
 ```
@@ -199,7 +199,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-Utilizzando un metodo helper asincrono è quindi possibile inizializzare il riconoscimento vocale remoto. Questa operazione deve essere eseguita in modo asincrono perché l'inizializzazione potrebbe richiedere una quantità di tempo considerevole. [Le operazioni di concorrenza e asincrone C++con/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) spiegano come creare funzioni asincrone C++con/WinRT.
+Utilizzando un metodo helper asincrono è quindi possibile inizializzare il riconoscimento vocale remoto. Questa operazione deve essere eseguita in modo asincrono perché l'inizializzazione potrebbe richiedere una quantità di tempo considerevole. [Le operazioni di concorrenza e asincrone con c++/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) spiegano come creare funzioni asincrone con c++/WinRT.
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -237,7 +237,7 @@ winrt::fire_and_forget InitializeSpeechAsync(
 
 Esistono due modi per specificare le frasi da riconoscere.
 1) Specifica all'interno di un file XML di grammatica vocale. Per informazioni dettagliate, vedere [come creare una grammatica XML di base](https://docs.microsoft.com//previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) .
-2) Specificare passandoli all'interno del vettore del dizionario per ```ApplyParameters```.
+2) Specificare passandoli all'interno del vettore del dizionario a ```ApplyParameters``` .
 
 All'interno del callback OnRecognizedSpeech è possibile elaborare gli eventi di riconoscimento vocale:
 
@@ -268,7 +268,7 @@ void SampleRemoteMain::OnRecognizedSpeech(const winrt::hstring& recognizedText)
 
 ## <a name="preview-streamed-content-locally"></a>Anteprima del contenuto trasmesso localmente
 
-Per visualizzare lo stesso contenuto nell'app remota che viene inviata al dispositivo, è possibile usare ```OnSendFrame``` evento del contesto remoto. L'evento ```OnSendFrame``` viene attivato ogni volta che la libreria remota olografica invia il frame corrente al dispositivo remoto. Questo è il momento ideale per eseguire il contenuto, blit anche nella finestra desktop o UWP.
+Per visualizzare lo stesso contenuto nell'app remota che viene inviata al dispositivo ```OnSendFrame``` , è possibile usare l'evento del contesto remoto. L' ```OnSendFrame``` evento viene attivato ogni volta che la libreria remota olografica invia il frame corrente al dispositivo remoto. Questo è il momento ideale per eseguire il contenuto, blit anche nella finestra desktop o UWP.
 
 ```cpp
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -293,7 +293,7 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
 
 ## <a name="depth-reprojection"></a>Riproiezione profondità
 
-A partire dalla versione [2.1.0](holographic-remoting-version-history.md#v2.1.0), la comunicazione remota olografica supporta la [riproiezione approfondita](hologram-stability.md#reprojection). Questa operazione richiede, oltre al buffer dei colori, di trasmettere anche il buffer di profondità dall'applicazione remota a HoloLens 2. Per impostazione predefinita, il buffer di profondità viene trasmesso a metà della risoluzione del buffer dei colori. Questo può essere modificato come segue:
+A partire dalla versione [2.1.0](holographic-remoting-version-history.md#v2.1.0), la comunicazione remota olografica supporta la [riproiezione approfondita](hologram-stability.md#reprojection). Questa operazione richiede, oltre al buffer dei colori, di trasmettere anche il buffer di profondità dall'applicazione remota a HoloLens 2. Per impostazione predefinita, il flusso del buffer di profondità è abilitato e configurato per utilizzare la metà della risoluzione del buffer di colore. Questo può essere modificato come segue:
 
 ```cpp
 // class implementation
@@ -308,7 +308,14 @@ m_remoteContext.ConfigureDepthVideoStream(DepthBufferStreamResolution::Half_Reso
 
 ```
 
-Si noti che ```ConfigureDepthVideoStream``` necessario chiamare prima di stabilire una connessione a HoloLens 2. Il posto migliore è quello giusto dopo aver creato il contesto remoto. I valori possibili sono full, Half e Quarter Resolution. Il valore predefinito è la metà della risoluzione. Tenere presente che l'uso di un buffer di profondità di risoluzione completa influiscono anche sui requisiti della larghezza di banda e deve essere considerato nel valore della larghezza di banda massimo fornito per ```CreateRemoteContext```.
+Si noti che se i valori predefiniti non devono essere usati, ```ConfigureDepthVideoStream``` è necessario chiamare prima di stabilire una connessione a HoloLens 2. Il posto migliore è quello giusto dopo aver creato il contesto remoto. I valori possibili per DepthBufferStreamResolution sono:
+
+* Full_Resolution
+* Half_Resolution
+* Quarter_Resolution
+* Disabilitato (aggiunto con la versione [2.1.3](holographic-remoting-version-history.md#v2.1.3) e se utilizzato non viene creato alcun flusso video di profondità aggiuntivo)
+
+Tenere presente che l'uso di un buffer di profondità di risoluzione completa influiscono anche sui requisiti della larghezza di banda e deve essere considerato nel valore della larghezza di banda massima fornito a ```CreateRemoteContext``` .
 
 Oltre a configurare la risoluzione è anche necessario eseguire il commit di un buffer di profondità tramite [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_).
 
@@ -352,10 +359,10 @@ Per verificare se la riproiezione approfondita è siano che funziona in HoloLens
 
 I canali di dati personalizzati possono essere utilizzati per inviare dati utente tramite la connessione remota già stabilita. Per ulteriori informazioni, vedere [canali di dati personalizzati](holographic-remoting-custom-data-channels.md) .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Scrittura di un'app lettore di comunicazione remota olografica personalizzata](holographic-remoting-create-player.md)
 * [Canali di dati di Holographic Remoting personalizzati](holographic-remoting-custom-data-channels.md)
 * [Stabilire una connessione sicura con la comunicazione remota olografica](holographic-remoting-secure-connection.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)
 * [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

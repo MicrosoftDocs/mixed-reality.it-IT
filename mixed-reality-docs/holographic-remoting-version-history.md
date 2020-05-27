@@ -6,17 +6,23 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
-ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
+ms.openlocfilehash: b128f91947fa8700502f7541cba23c726238a067
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484301"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866851"
 ---
 # <a name="holographic-remoting-version-history"></a>Cronologia delle versioni remota olografica
 
 > [!IMPORTANT]
 > Queste linee guida sono specifiche per la comunicazione remota olografica in HoloLens 2.
+
+## <a name="version-213-may-25-2020"></a>Versione 2.1.3 (25 maggio 2020)<a name="v2.1.3"></a>
+* Comportamento modificato dell'evento [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) . Nelle versioni **precedenti non era garantito che** un [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) aggiunto abbia anche un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) valido durante la creazione del frame successivo tramite [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame). A partire dalla versione 2.1.3 [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) è sincronizzato con i dati di post provenienti dal lettore di comunicazione remota olografica e gli utenti possono aspettarsi che, quando viene aggiunta una fotocamera, sia disponibile anche un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) valido per tale fotocamera nel frame successivo.
+* Aggiunto **disabilitato** a DepthBufferStreamResolution che può essere usato per disabilitare il flusso del buffer di profondità tramite RemoteContext. ConfigureDepthVideoStream. Si noti che se si usa [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) avrà esito negativo con *E_ILLEGAL_METHOD_CALL*.
+* La schermata iniziale del lettore di comunicazione remota olografica è stata riprogettata e ora non blocca la visualizzazione degli utenti.
+* Miglioramenti della stabilità e correzioni di BUF.
 
 ## <a name="version-212-april-5-2020"></a>Versione 2.1.2 (5 aprile 2020)<a name="v2.1.2"></a>
 * Correzione del problema di compatibilità con le versioni precedenti dell'audio tra la versione più recente di Remote Remoting Player e le app Remote con una versione inferiore a 2.1.0.
@@ -55,9 +61,9 @@ ms.locfileid: "81484301"
 
 ## <a name="version-209-september-19-2019"></a>Versione 2.0.9 (19 settembre 2019)<a name="v2.0.9"></a>
 * Aggiunta del supporto per [SpatialAnchorExporter](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter)
-* Aggiunta di una nuova interfaccia ```IPlayerContext2``` (implementata da ```PlayerContext```) che fornisce i membri seguenti:
+* Aggiunta ```IPlayerContext2``` di una nuova interfaccia (implementata da ```PlayerContext``` ) che fornisce i membri seguenti:
   - Proprietà [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout) .
-* Aggiunto ```Failed_RemoteFrameTooOld``` valore per ```BlitResult```
+* Aggiunto ```Failed_RemoteFrameTooOld``` valore a```BlitResult```
 * Miglioramenti alla stabilità e all'affidabilità
 
 ## <a name="version-208-august-20-2019"></a>Versione 2.0.8 (20 agosto 2019)<a name="v2.0.8"></a>
@@ -74,4 +80,4 @@ ms.locfileid: "81484301"
 * [Scrittura di un'app host di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Limitazioni e risoluzione dei problemi di comunicazione remota olografica](holographic-remoting-troubleshooting.md)
 * [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

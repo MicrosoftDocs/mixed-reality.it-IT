@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Realtà mista, sguardo, targeting, interazione, progettazione, rilevamento degli sguardi, rilevamento Head
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375848"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866891"
 ---
 # <a name="gaze-and-commit"></a>Sguardo e commit
 
@@ -33,7 +33,7 @@ Di seguito sono riportati alcuni esempi di come uno sviluppatore di realtà mist
 <br>
 
 
-## <a name="device-support"></a>Supporto per i dispositivi
+## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
     <colgroup>
@@ -50,15 +50,15 @@ Di seguito sono riportati alcuni esempi di come uno sviluppatore di realtà mist
     </tr>
      <tr>
         <td>Puntamento con la testa e commit</td>
-        <td>✔️ Consigliato</td>
+        <td>✔️ Consigliata</td>
         <td>✔️ Consigliato (terza scelta - <a href="interaction-fundamentals.md">Vedi le altre opzioni</a>)</td>
         <td>➕ Opzione alternativa</td>
     </tr>
          <tr>
         <td>Sguardo fisso e commit</td>
-        <td>❌ non disponibile</td>
+        <td>❌Non disponibile</td>
         <td>✔️ Consigliato (terza scelta - <a href="interaction-fundamentals.md">Vedi le altre opzioni</a>)</td>
-        <td>❌ non disponibile</td>
+        <td>❌Non disponibile</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Nella tabella riportata di seguito sono stati compilati alcuni Pro e con le vers
     </colgroup>
    <tr>
         <td><strong>Targeting degli sguardi</strong></td>
-        <td><strong>Targeting mirato</strong></td>
+        <td><strong>Selezione della destinazione mediante puntamento con la testa</strong></td>
     </tr>
     <tr>
         <td>Veloce!</td>
@@ -123,7 +123,7 @@ Indipendentemente dal fatto che il modello di input con sguardo e commit venga u
         Per gli occhi, in genere è consigliabile *non* mostrare un cursore, in quanto questa operazione può diventare rapidamente distrazione e fastidioso per l'utente. È invece possibile evidenziare leggermente le destinazioni visive o usare un cursore occhio molto debole per fornire informazioni su ciò che l'utente sta per interagire. Per altre informazioni, vedere le [linee guida di progettazione per l'input basato su occhi](eye-tracking.md) su HoloLens 2.
     :::column-end:::
         :::column:::
-       ![un cursore visivo di esempio per mostrare lo sguardo](images/cursor.jpg)<br>
+       ![Un cursore visivo di esempio per mostrare lo sguardo](images/cursor.jpg)<br>
        *Image: un cursore visivo di esempio per mostrare lo sguardo*
     :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ Dopo la destinazione di un oggetto o di un elemento dell'interfaccia utente, l'u
 Sono supportati i metodi di commit seguenti:
 - Gesto della mano del rubinetto d'aria (ad esempio, alzare la mano davanti all'utente e riunire il dito e il pollice dell'indice)
 - Pronunciare _"Select"_ o uno dei comandi vocali di destinazione
-- Premere un solo pulsante su un [clic del HoloLens](hardware-accessories.md#hololens-clicker)
+- Premere un solo pulsante su un [clic del HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)
 - Premere il pulsante ' A ' in un gamepad Xbox
 - Premere il pulsante "A" in un controller adattivo Xbox
 
@@ -149,11 +149,11 @@ Per simulazione del tocco si intende un gesto tocco fatto con la mano mantenuta 
 
 :::row:::
     :::column:::
-       ![dito nella posizione pronta](images/readyandpress-ready.jpg)<br>
+       ![Dito nella posizione pronta](images/readyandpress-ready.jpg)<br>
        **Dito nella posizione pronta**<br>
     :::column-end:::
     :::column:::
-       ![premere il dito per toccare o fare clic su](images/readyandpress-press.jpg)<br>
+       ![Premere il tasto dito per toccare o fare clic su](images/readyandpress-press.jpg)<br>
         **Premere il tasto dito per toccare o fare clic su**<br>
     :::column-end:::
 :::row-end:::
@@ -192,7 +192,7 @@ Per altre informazioni e per un elenco completo dei comandi vocali disponibili e
         *Immagine: HoloLens Clicker*
     :::column-end:::
         :::column:::
-       ![HoloLens clic](images/hololens-clicker-500px.jpg)<br>
+       ![Dispositivo Clicker HoloLens](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -253,7 +253,7 @@ Il gesto del rubinetto d'aria, così come gli altri movimenti riportati di segui
 La pressione prolungata consiste nel mantenere la posizione del dito abbassato della simulazione del tocco. La combinazione di tocco e mantenimento dell'aria permette una serie di interazioni di tipo "clic e trascinamento" più complesse in combinazione con lo spostamento ARM, ad esempio la selezione di un oggetto anziché l'attivazione di interazioni secondarie MouseDown, ad esempio la visualizzazione di un menu di scelta rapida.
 È tuttavia consigliabile prestare attenzione durante la progettazione di questo movimento perché gli utenti possono avere la tendenza ad allentare la posizione della mano durante l'esecuzione di un movimento esteso.
 
-### <a name="manipulation"></a>Manipulation
+### <a name="manipulation"></a>modifica
 I movimenti di manipolazione possono essere usati per spostare, ridimensionare o ruotare un ologramma quando si vuole che l'ologramma reagisca 1:1 ai movimenti della mano dell'utente. Uno degli usi possibili di tali movimenti 1:1 è quello di consentire all'utente di disegnare o dipingere nel mondo.
 La selezione iniziale della destinazione per un movimento di manipolazione dovrebbe avvenire mediante sguardo fisso o puntamento. Una volta avviato il tocco e l'attesa, qualsiasi modifica dell'oggetto viene gestita da movimenti mano, liberando l'utente per l'aspetto durante la modifica.
 
@@ -263,7 +263,7 @@ La navigazione può essere usata per creare movimenti continui di scorrimento o 
 
 La navigazione con Rails si riferisce alla capacità di riconoscere i movimenti in determinati assi fino a quando non viene raggiunta una determinata soglia sull'asse. Questa operazione è utile solo quando lo sviluppatore sposta in più assi è abilitato in un'applicazione, ad esempio se un'applicazione è configurata in modo da riconoscere i movimenti di navigazione tra l'asse X, l'asse Y ma anche l'asse X specificato con Rails. In questo caso, il sistema rileverà i movimenti di mano sull'asse X, purché rimangano all'interno di una guida immaginaria (Guida) sull'asse X, se lo spostamento della mano si verifica anche sull'asse Y.
 
-Nelle app 2D gli utenti possono usare movimenti di navigazione verticali per scorrere, eseguire lo zoom o trascinare all'interno dell'app. In questo modo vengono inseriti nell'app tocchi delle dita virtuali per simulare tocchi dello stesso tipo. Gli utenti possono selezionare quali di queste azioni si verificano alternando gli strumenti sulla barra sopra l'applicazione, selezionando il pulsante o dicendo "< Scroll/drag/zoom > Tool".
+Nelle app 2D gli utenti possono usare movimenti di navigazione verticali per scorrere, eseguire lo zoom o trascinare all'interno dell'app. In questo modo vengono inseriti nell'app tocchi delle dita virtuali per simulare tocchi dello stesso tipo. Gli utenti possono selezionare quali di queste azioni si verificano alternando gli strumenti sulla barra sopra l'applicazione, selezionando il pulsante o dicendo "<Scroll/drag/zoom> Tool".
 
 [Altre informazioni sui movimenti compositi](gaze-and-commit.md#composite-gestures)
 
