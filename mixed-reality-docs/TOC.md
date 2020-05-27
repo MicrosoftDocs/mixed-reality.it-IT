@@ -20,6 +20,7 @@
 ### [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guida per appassionati](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Intrattenimento basato sulla posizione](location-based-experiences.md)
+## [Accessori hardware](hardware-accessories.md)
 ## [Risorse della community](community.md)
 # Progettazione
 ## [Iniziare a progettare e creare prototipi](design.md)
@@ -117,6 +118,7 @@
 ###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
 ###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
 ###### [3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
+###### [4. Ancoraggi nello spazio di Azure per Android e iOS](mrlearning-asa-ch4.md)
 ##### Esercitazioni sui servizi Voce di Azure
 ###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 ###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
