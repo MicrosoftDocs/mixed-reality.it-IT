@@ -1,17 +1,17 @@
 ---
-title: Interazione basata sugli sguardi
+title: Interazione basata su sguardo fisso
 description: HoloLens 2 consente di raggiungere un nuovo livello di comprensione contestuale e umana all'interno dell'esperienza olografica, offrendo agli sviluppatori la possibilità di usare le informazioni relative a cosa gli utenti stanno guardando. Questa pagina descrive le raccomandazioni di progettazione per gli sviluppatori che vogliono usare gli sguardi come input.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Rilevamento degli occhi, realtà mista, input, sguardi occhi
-ms.openlocfilehash: 93d2cfd82b5aa2a410268c5594b5772bcc0b21c7
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 2ae7723f116771986edc757f1c9d4f454b0a256f
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441100"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111032"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interazione basata sugli sguardi su HoloLens 2
 
@@ -19,7 +19,7 @@ ms.locfileid: "73441100"
 
 Una delle nuove interessanti funzionalità di HoloLens 2 è la verifica degli occhi.
 Nella pagina [HoloLens 2](eye-tracking.md) è stata illustrata la necessità di ogni utente di eseguire una [calibrazione](https://docs.microsoft.com/hololens/hololens-calibration), purché siano disponibili istruzioni per gli sviluppatori e casi di utilizzo evidenziati per la verifica degli occhi.
-L'input con sguardo oculare è ancora un tipo di input utente piuttosto nuovo ed è molto interessante da imparare. Anche se l'input degli sguardi è usato solo in modo molto sottile nell'esperienza della shell olografica (l'interfaccia utente visualizzata quando si avvia HoloLens 2), più app, ad esempio ["Mr Playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), presentano esempi eccezionali su come l'input di sguardi occhi possa aggiungere la magia di esperienza olografica.
+L'input con sguardo oculare è ancora un tipo di input utente piuttosto nuovo ed è molto interessante da imparare. Anche se l'input degli sguardi è usato in modo molto sottile nell'esperienza della shell olografica (l'interfaccia utente visualizzata quando si avvia HoloLens 2), più app, ad esempio ["HoloLens Playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), illustrano esempi eccezionali su come l'input di sguardi occhi possa aggiungere la magia dell'esperienza olografica.
 In questa pagina vengono illustrate le considerazioni di progettazione per l'integrazione dell'input Eye-sguardi per interagire con le applicazioni olografiche.
 Verranno fornite informazioni sui vantaggi principali, oltre a una sfida univoca in grado di ottenere un input mirato.  
 In base a questi, sono disponibili diversi consigli per la progettazione che consentono di creare interfacce utente supportate da sguardi oculisti. 
@@ -105,7 +105,7 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
 
     - **Necessità di sincronizzare gli input multimodali:** Combinando rapidamente i movimenti degli occhi con input aggiuntivi più complessi, ad esempio i comandi di tipo Long Voice o i movimenti della mano, si rischia che l'utente continui a cercare prima che il comando di input aggiuntivo venga completato e riconosciuto. Di conseguenza, se si creano controlli di input personalizzati (ad esempio, movimenti della mano personalizzati), assicurarsi di registrare l'inizio di questo input o la durata approssimativa per correlarla a ciò che un utente ha esaminato in passato.
     
-3. **Feedback sottile per l'input di rilevamento degli occhi:** È utile per fornire commenti e suggerimenti quando viene esaminata una destinazione per indicare che il sistema funziona come previsto, ma deve essere mantenuto sottile. Questo può includere la fusione lenta, in e out, le evidenziazioni visive o eseguire altri comportamenti sottili della destinazione, ad esempio movimenti lenti, ad esempio un lieve aumento delle dimensioni di destinazione, per indicare che il sistema ha rilevato correttamente che l'utente sta esaminando una destinazione senza interruzione inutilmente del flusso di lavoro corrente dell'utente. 
+3. **Feedback sottile per l'input di rilevamento degli occhi:** È utile per fornire commenti e suggerimenti quando viene esaminata una destinazione per indicare che il sistema funziona come previsto, ma deve essere mantenuto sottile. Questo può includere la fusione lenta, l'interno e l'esterno, le evidenziazioni visive o eseguire altri comportamenti sottili della destinazione, ad esempio movimenti lenti, ad esempio un lieve aumento delle dimensioni di destinazione, per indicare che il sistema ha rilevato correttamente che l'utente sta esaminando una destinazione senza interrompere inutilmente il flusso di lavoro corrente dell'utente. 
 
 4. **Evitare di applicare movimenti degli occhi non naturali come input:** Non forzare gli utenti a eseguire movimenti oculari specifici (movimenti sguardi) per attivare azioni nell'applicazione.
 
@@ -117,11 +117,11 @@ Nel caso di un cursore, questo può comportare un effetto di "cursore in fuga" a
 Questa pagina offre una panoramica corretta per iniziare a comprendere gli sguardi come input in realtà mista. Per iniziare a sviluppare, vedere le nostre informazioni sugli sguardi [in Unity](https://aka.ms/mrtk-eyes) e sugli [sguardi in DirectX](gaze-in-directx.md).
 
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Comodità](comfort.md)
 * [Eye-sguardi in DirectX](gaze-in-directx.md)
 * [Eye-sguardi in Unity (Toolkit realtà mista)](https://aka.ms/mrtk-eyes)
-* [Rilevamento degli occhi su HoloLens 2](eye-tracking.md)
+* [Tracciamento oculare in HoloLens 2](eye-tracking.md)
 * [Sguardo e commit](gaze-and-commit.md)
 * [Sguardo fisso e attesa](gaze-and-dwell.md)
 * [Input vocale](voice-design.md)

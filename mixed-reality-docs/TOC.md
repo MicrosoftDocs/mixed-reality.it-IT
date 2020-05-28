@@ -5,7 +5,7 @@
 ## Programmi ed eventi
 ### [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
 ### [CVPR 2019 - Workshop sulla realtà mista](cvpr-2019.md)
-## [Note sulla versione corrente di Realtà mista](release-notes-may-2019.md)
+## [Note sulla versione corrente di Realtà mista](release-notes-may-2020.md)
 ## [Risorse della community](community.md)
 ## [Invio di contributi per questa documentazione](CONTRIBUTING.md)
 # Rilevazione
