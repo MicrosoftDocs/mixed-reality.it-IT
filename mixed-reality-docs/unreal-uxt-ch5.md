@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840400"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519993"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Aggiunta di un pulsante e ripristino delle posizioni dei pezzi
 
@@ -46,13 +46,13 @@ In questa sezione si continua a illustrare le funzionalità del plug-in Mixed Re
 
 ![Creazione di una variabile](images/unreal-uxt/5-var.PNG)
 
-4.  Trascina la variabile WhiteKing da **My Blueprint > Variables** (Progetto personale > Variabile) in Simple Button Event Graph (Grafico eventi SimpleButton). Scegli **Get WhiteKing** (Ottieni WhiteKing). 
+4.  Trascina la variabile WhiteKing da **My Blueprint > Variables** (Progetto personale > Variabile) in Reset Button Event Graph (Grafico eventi ResetButton). Scegli **Get WhiteKing** (Ottieni WhiteKing). 
 
 5.  Trascina il pin di output di WhiteKing e rilascialo per inserire un nuovo nodo. Seleziona la funzione **Reset Location** (Ripristina posizione). Trascina infine il pin di esecuzione in uscita da **On Button Pressed** (Alla pressione del pulsante) al pin di esecuzione in ingresso in **Reset Location** (Ripristina posizione). Fai clic su **Compile** (Compila) e quindi su **Save** (Salva) per salvare il progetto ResetButton e quindi torna alla finestra principale. 
 
 ![Chiamata della funzione di ripristino della posizione alla pressione del pulsante](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Trascina **SimpleButton** nel viewport e impostane la posizione su X = 50, Y =-25, Z = 10. In **Default** (Valore predefinito) imposta il valore della variabile WhiteKing su **WhiteKing**.
+6.  Trascina **ResetButton** nel viewport e impostane la posizione su X = 50, Y =-25, Z = 10. In **Default** (Valore predefinito) imposta il valore della variabile WhiteKing su **WhiteKing**.
 
 ![Impostazione della variabile](images/unreal-uxt/5-buttonlevel.PNG)
 

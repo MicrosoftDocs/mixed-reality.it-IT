@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 35b18e4bb289438f94433827846e94d1014385db
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: b3f0b5f9ca5347c337091539b1cc0e214515c989
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840380"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519968"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulatore
 
@@ -34,6 +34,10 @@ Questa sezione illustra i passaggi necessari per preparare l'app per l'esecuzion
 4.  Dopo esserti connesso, nell'editor di UE4 fai clic sulla freccia a discesa a destra del pulsante di riproduzione e seleziona VR Preview (Anteprima VR).
 
 ## <a name="package-and-deploy-your-app"></a>Creare il pacchetto e distribuire l'app 
+
+>[!NOTE]
+>Se è la prima volta esegui il packaging di un'app Unreal per HoloLens, dovrai scaricare i file di supporto dall'utilità di avvio Epic. A tale scopo, passa alla scheda **Library** (Libreria) nell'utilità di avvio Epic Games. Seleziona la freccia a discesa accanto a **Launch** (Avvia) quindi **Options** (Opzioni). In **Target Platforms** (Piattaforme di destinazione) seleziona **HoloLens 2** e fai clic su **Apply** (Applica). 
+>![Impostazioni del progetto - Descrizione](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  Passa a **Edit > Project Settings** (Modifica > Impostazioni progetto). In **Project > Description > About > Project Name** (Progetto > Descrizione > Informazioni -> Nome progetto) assegna un nome al progetto. In **Project > Description > Publisher > Company Distinguished Name** Progetto > Descrizione > Autore > Nome distinto società inserisci "CN={INSERISCI NOME SOCIETÀ}". Se lasci vuoto uno di questi campi, verrà generato un errore. 
 
