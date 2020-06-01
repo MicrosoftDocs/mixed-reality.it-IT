@@ -4,7 +4,8 @@
 ## [Prepararsi al nuovo Microsoft Edge](new-microsoft-edge.md)
 ## Programmi ed eventi
 ### [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
-### [CVPR 2019 - Workshop sulla realtà mista](cvpr-2019.md)
+### [Mixed Reality Dev Days](mr-dev-days.md)
+#### [Registrazioni delle sessioni](mr-dev-days-sessions.md)
 ## [Note sulla versione corrente di Realtà mista](release-notes-may-2020.md)
 ## [Risorse della community](community.md)
 ## [Invio di contributi per questa documentazione](CONTRIBUTING.md)
