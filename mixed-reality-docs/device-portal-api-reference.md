@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portale per dispositivi Windows, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227961"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451326"
 ---
 # <a name="device-portal-api-reference"></a>Informazioni di riferimento sulle API di Portale di dispositivi
 
@@ -320,7 +320,15 @@ Imposta le impostazioni predefinite di acquisizione della realtà mista.  Alcune
 
 **/API/Holographic/MRC/status (GET)**
 
-Ottiene lo stato della realtà mista registrata (in esecuzione, arrestata)
+Ottiene lo stato dell'acquisizione di realtà mista all'interno del portale del dispositivo Windows.
+
+***Risposta***
+
+La risposta contiene una proprietà JSON che indica se il portale del dispositivo Windows sta registrando o meno il video.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/API/Holographic/MRC/Thumbnail (GET)**
 
@@ -419,7 +427,7 @@ Restituisce le statistiche sulle prestazioni di sistema (lettura/scrittura di I/
 Restituisce i dati
 * JSON con informazioni di sistema: CPU, GPU, memoria, rete, IO
 
-## <a name="power"></a>Power
+## <a name="power"></a>Potenza
 
 **/API/Power/Battery (GET)**
 
@@ -531,6 +539,6 @@ Parametri
 Restituisce i dati
 * All'avvio, restituisce lo stato della sessione WPR.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Avviare il Portale di dispositivi di Windows](using-the-windows-device-portal.md)
 * [Informazioni di riferimento sulle API del portale per dispositivi (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
