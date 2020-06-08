@@ -7,24 +7,26 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d0fd22ad6fbefc6889373b00847721cfc0655ce3
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2a171d601d094375a56734e8d7890c9d3e17c887
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605002"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866911"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introduzione ad Ancoraggi nello spazio di Azure
 
 ## <a name="overview"></a>Panoramica
 
-Questa è la seconda serie di esercitazioni su HoloLens 2. In questa serie di esercitazioni, suddivisa in tre parti, apprenderai le nozioni fondamentali su Ancoraggi nello spazio di Azure.
+Questa è la seconda serie di esercitazioni su HoloLens 2. In questa serie di esercitazioni, suddivisa in quattro parti, apprenderai le nozioni fondamentali su Ancoraggi nello spazio di Azure.
 
 Questa prima esercitazione, [Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md), illustra i diversi passaggi da seguire per avviare e arrestare una sessione di Azure e per creare, caricare e scaricare gli ancoraggi di Azure in un singolo dispositivo.
 
 La seconda esercitazione, [Salvataggio, recupero e condivisione di ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md), illustra come salvare gli ancoraggi nello spazio di Azure in più sessioni di app salvando le informazioni sugli ancoraggi nello spazio di archiviazione di HoloLens 2 e come condividere queste informazioni con altri dispositivi per l'allineamento degli ancoraggi su più dispositivi.
 
 La terza esercitazione, [Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md), illustra come fornire agli utenti feedback sugli eventi e sullo stato degli ancoraggi con Ancoraggi nello spazio di Azure.
+
+La quarta esercitazione, [Ancoraggi nello spazio di Azure per Android e iOS](mrlearning-asa-ch4.md), illustra come creare e distribuire il progetto nei dispositivi Android e iOS.
 
 ## <a name="objectives"></a>Obiettivi
 
@@ -42,6 +44,13 @@ La terza esercitazione, [Visualizzazione del feedback su Ancoraggi nello spazio 
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X installato e il modulo di supporto delle compilazioni UWP (Universal Windows Platform) aggiunto
 * Completa la sezione [Creare una risorsa di Ancoraggi nello spazio](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) dell'esercitazione [Avvio rapido: Creare un'app HoloLens in Unity che usa Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
+* Se è prevista la distribuzione su Android
+    * Un dispositivo Android <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">con le opzioni di sviluppo abilitate</a> e <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">supportato da ARCore</a> con connessione USB a un computer con Windows o macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X installato e il modulo Android Build Support aggiunto
+* Se è prevista la distribuzione su iOS
+    * Un computer macOS con la versione più recente di <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> e <a href="https://cocoapods.org" target="_blank">CocoaPods</a> installata
+    * Un dispositivo iOS <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">compatibile con ARKit</a> con connessione USB al computer macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X installato e il modulo iOS Build Support aggiunto
 
 > [!IMPORTANT]
 > La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.2.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
