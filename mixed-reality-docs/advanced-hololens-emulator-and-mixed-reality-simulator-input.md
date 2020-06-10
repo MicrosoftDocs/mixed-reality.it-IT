@@ -3,15 +3,15 @@ title: Emulatore HoloLens avanzato e input per il simulatore di realtà mista
 description: Istruzioni dettagliate per l'uso di tastiera, mouse e controller Xbox per simulare l'input per l'emulatore di HoloLens e il simulatore di realtà mista di Windows.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 05/12/2020
+ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, emulatore, simulazione, realtà mista di Windows
-ms.openlocfilehash: e9051ae9e7853924f583b6c38f6177f2f967d9f0
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 0812b1d498ea557e84eecc44142b38d86099f832
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631472"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Emulatore HoloLens avanzato e input per il simulatore di realtà mista
 
@@ -42,7 +42,7 @@ Attualmente, il controllo diretto di ogni posizione congiunta non viene esposto 
 
 È anche possibile controllare lo stato dell'input del sensore simulato:
 * **Reset**: restituirà tutti i sensori simulati ai valori predefiniti.  A partire dall'emulatore HoloLens 2, è possibile definire l'ambito di una reimpostazione a una o entrambe le lancette usando le lancette desiderate usando i tasti di modifica appropriati o i pulsanti (Alt a sinistra e/o a destra o il paraurti sinistro e/o destro).
-* **Rilevamento**: scorre le modalità di rilevamento posizionale. ad esempio:
+* **Rilevamento**: scorre le modalità di rilevamento posizionale. vale a dire:
   * **Impostazione predefinita**: il sistema operativo sceglie la modalità di rilevamento migliore in base alle richieste effettuate dal sistema.
    * **Orientation**: impone il rilevamento solo dell'orientamento, indipendentemente dalle richieste effettuate dal sistema.
    * **Posizionale**: forza il rilevamento posizionale, indipendentemente dalle richieste effettuate dal sistema.
@@ -57,11 +57,11 @@ Nella tabella seguente viene illustrato come viene eseguito il mapping di ogni t
 |  Tonalità |  Frecce su/giù |  Trascina su/giù |  Levetta a destra | 
 |  Eseguire il rollback |  DOMANDE E RISPOSTE |  |  DPad a sinistra/destra | 
 |  X |  A/D |  |  Sinistra levetta sinistra/destra | 
-|  Y |  PGSU/PGGIÙ |  |  DPad | 
+|  S |  PGSU/PGGIÙ |  |  DPad | 
 |  Z |  W/S |  |  Levetta verso l'alto o verso il basso | 
 |  Azione |  Immettere o spazio |  Pulsante destro |  Un pulsante o uno o più trigger | 
 |  Bloom/sistema |  Tasto F2 o Windows |  |  Pulsante B | 
-|  Pulsante grip controller |  G  |  |  | 
+|  Pulsante grip del controller/portata mano |  G  |  |  | 
 |  Pulsante di menu controller |  M  |  |  | 
 |  Tocco touchpad del controller |  U  |  |  | 
 |  Pressione del touchpad del controller |  P  |  |  | 
@@ -100,7 +100,7 @@ La tabella seguente illustra in che modo ogni modificatore di destinazione esegu
 |  Tonalità |  Attiva/disattiva intestazione |  Spostare la mano verso l'alto o verso il basso |  Attiva/disattiva intestazione | Sguardi occhi in alto/in basso | 
 |  Eseguire il rollback |  Roll Head verso sinistra/destra |  |  Roll Head verso sinistra/destra | (Nessuna azione) |
 |  X |  Diapositiva corpo sinistro/destro |  Spostare la mano/il controller a sinistra/destra |  Trasforma la testa a sinistra/destra | (Nessuna azione) |
-|  Y |  Sposta il corpo verso l'alto o verso il basso |  Spostare la mano/il controller verso l'alto/il basso |  Attiva/disattiva intestazione | (Nessuna azione) |
+|  S |  Sposta il corpo verso l'alto o verso il basso |  Spostare la mano/il controller verso l'alto/il basso |  Attiva/disattiva intestazione | (Nessuna azione) |
 |  Z |  Sposta il corpo avanti/indietro |  Spostare la mano/il controller avanti/indietro |  Attiva/disattiva intestazione | (Nessuna azione) |
  
  
@@ -131,7 +131,7 @@ Il set di controlli seguente è consigliato per l'utilizzo giornaliero:
 |  Spostamento/rotazione più veloce | Tasto MAIUSC sinistro o destro | Premere e tenere premuto il levetta destro |
 |  Spostamento/rotazione lenta | Tasto CTRL sinistro o destro | Premere e tenere premuto il levetta a sinistra |
 
-## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Uso di un controller di movimento e cuffia a realtà mista di Windows con l'emulatore HoloLens 2
+## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Uso di un visore VR immersive di Windows Mixed Reality e di controller del movimento con l'emulatore HoloLens 2
 
 Quando si usa una cuffia mista a realtà mista di Windows con l'emulatore HoloLens 2, lo spostamento e la rotazione vengono automaticamente mappati alla rotazione e al movimento dell'auricolare.  La posizione e l'orientamento del controller di movimento vengono mappati automaticamente alla posizione e all'orientamento della mano nell'emulatore.  Nella tabella seguente sono elencate le azioni aggiuntive disponibili quando si utilizza un controller di movimento.
 

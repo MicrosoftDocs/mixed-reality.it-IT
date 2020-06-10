@@ -3,15 +3,15 @@ title: Archivio emulatore di HoloLens
 description: Elenco delle build rilasciate dell'emulatore di Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 keywords: HoloLens, emulatore, Build, versioni
-ms.openlocfilehash: e01f58783645bccd473418639d5fa495bbc7817f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 7fe48203a3670490a2ac78040ea9f0ac8e811bd5
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631488"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivio emulatore HoloLens 2
 
@@ -19,8 +19,10 @@ HoloLens Emulator (1st Gen) e HoloLens 2 Emulator Builds install side-by-side. �
 
 |  Compilare |  Data di rilascio |  Note | 
 |----------|----------|----------|
-|  [10.0.19041.1103 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129088) | 12 maggio, 2020 | Windows olografico, versione 2004.  Per controllare e visualizzare l'emulatore di HoloLens 2 in stereo, è possibile usare le cuffie e i controller di movimento per la realtà mista di Windows.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
-|  [10.0.18362.1061 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129833) | 12 maggio, 2020 | Windows olografico, versione 1903 può aggiornare 2020.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
+|  [10.0.19041.1106 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2132415) | 9 giugno 2020 | Windows olografico, versione 2004 giugno 2020.  Risolve i problemi con le applicazioni DirectX 12 senza rendering, la tastiera su schermo che non viene visualizzata, l'uso di oggetti che non funzionano come previsto e l'emulatore non riesce a iniziare con un errore relativo alla virtualizzazione annidata nei sistemi basati su AMD.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
+|  [10.0.18362.1064 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2132601) | 9 giugno 2020 | Windows olografico, versione 1903 giugno 2020.  Risolve i problemi con le applicazioni DirectX 12 senza rendering, la tastiera su schermo che non viene visualizzata e gli oggetti con le mani non funzionano come previsto.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
+|  [10.0.19041.1103 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129088) | 12 maggio 2020 | Windows olografico, versione 2004.  Per controllare e visualizzare l'emulatore di HoloLens 2 in stereo, è possibile usare le cuffie e i controller di movimento per la realtà mista di Windows.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
+|  [10.0.18362.1061 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2129833) | 12 maggio 2020 | Windows olografico, versione 1903 può aggiornare 2020.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1059 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2126826) | 13 aprile, 2020 | Windows olografico, versione 1903 aprile 2020 Update.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1056 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 marzo 2020 | Windows olografico, versione 1903 dell'aggiornamento di marzo 2020.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 compilazione emulatore HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 febbraio 2020 | Windows olografico, versione 1903 febbraio 2020 aggiornamento.  Per le note sulla versione di HoloLens 2, vederehttps://docs.microsoft.com/hololens/hololens-release-notes |
