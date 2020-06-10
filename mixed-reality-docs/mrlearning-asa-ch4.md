@@ -7,12 +7,12 @@ ms.date: 05/18/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, corso, hololens, azure, ancoraggi nello spazio
 ms.localizationpriority: high
-ms.openlocfilehash: a35f73ae5aee493182f0f4990aa345d990c3f513
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78fa6a2cdd29bd424ec3016a5467760063b87a14
+ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83867623"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327936"
 ---
 # <a name="4-azure-spatial-anchors-for-android-and-ios"></a>4. Ancoraggi nello spazio di Azure per Android e iOS
 
@@ -23,7 +23,8 @@ Questa esercitazione illustra come compilare il progetto nei dispositivi Android
 * Imparare a compilare il progetto in un dispositivo Android usando Unity AR Foundation e ARCore XR Plugin.
 * Imparare a compilare il progetto in un dispositivo iOS usando Unity AR Foundation e ARKit XR Plugin.
 
-[!NOTE] Per completare questa esercitazione, è importante avere completato Esercitazioni su Ancoraggi nello spazio di Azure > [Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md).
+> [!NOTE]
+> Per completare questa esercitazione, è importante avere completato Esercitazioni su Ancoraggi nello spazio di Azure > [Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md).
 
 ## <a name="adding-inbuilt-unity-packages"></a>Aggiunta di pacchetti di Unity incorporati
 
@@ -35,7 +36,8 @@ Assicurati di installare le versioni corrette di questi pacchetti Unity indicate
 * **ARCore XR plugin 2.2.0 preview 2**
 * **ARKit XR plugin 2.1.1**
 
-[!NOTE] Se sviluppi il progetto per Android, non è necessario installare il pacchetto ARKit XR Plugin. Analogamente, se sviluppi il progetto per iOS, non è necessario installare ARCore XR Plugin.
+> [!NOTE]
+> Se sviluppi il progetto per Android, non è necessario installare il pacchetto ARKit XR Plugin. Analogamente, se sviluppi il progetto per iOS, non è necessario installare ARCore XR Plugin.
 
 Nel menu di Unity seleziona **Window** (Finestra) > **Package Manager** (Gestione pacchetti):
 
@@ -45,11 +47,11 @@ Potrebbero essere necessari alcuni secondi prima che tutti i pacchetti vengano v
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section1-step1-2.png)
 
-Nella finestra Package Manager (Gestione pacchetti) seleziona **AR Foundation**. Tra le diverse versioni presenti, seleziona la versione 2.1.4, quindi aggiorna il pacchetto facendo clic sul pulsante **Update to 2.1.4** (Aggiorna a 2.1.4):
+Nella finestra Package Manager (Gestione pacchetti) seleziona **AR Foundation**. Tra le diverse versioni presenti, seleziona la **versione 2.1.4**, quindi aggiorna il pacchetto facendo clic sul pulsante **Update to 2.1.4** (Aggiorna a 2.1.4):
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section1-step1-3.png)
 
-Per supportare i dispositivi Android, segui la stessa procedura per importare ARCore XR Plugin 2.2.0 preview 2.
+Per supportare i dispositivi Android, segui la stessa procedura per importare **ARCore XR Plugin 2.2.0 preview 2**.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section1-step1-4.png)
 
@@ -63,36 +65,39 @@ Personalizza le impostazioni di MRTK per supportare AR Foundation selezionando M
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section2-step1-1.png)
 
-Quando fai clic sul pulsante **Clone** (Clona), viene visualizzata una nuova finestra Clone Profile (Clona profilo). Fai di nuovo clic sul pulsante Clone (Clona) per clonare il profilo DefaultMixedRealityToolkitProfile.
+Quando fai clic sul pulsante **Clone** (Clona), viene visualizzata una nuova finestra Clone Profile (Clona profilo). Fai di nuovo clic sul pulsante **Clone** (Clona) per clonare il profilo **DefaultMixedRealityToolkitProfile**.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section2-step1-2.png)
 
-Analogamente, clona il profilo della fotocamera nella finestra Inspector (Controllo), assegna il nome "UnityARConfigurationProfile" al profilo e fai clic sul pulsante **Clone** (Clona). Nella finestra Inspector (Controllo) individua MixedReality e seleziona la scheda Camera (Fotocamera). Espandi i provider di impostazioni della fotocamera nella finestra Inspector (Controllo) e fai clic su **+Add Camera Setting Provider** (+Aggiungi provider impostazioni fotocamera) > espandi **New data provider 1** (Nuovo provider di dati 1) > in Type (Tipo) seleziona **None** (Nessuno) > seleziona **Microsoft.MixedReality.Toolkit.Experimental.UnityAR** > seleziona **UnityARCameraSettings**.
-
+Analogamente, clona **Camera Profile** (Profilo fotocamera) nella finestra Inspector (Controllo).
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section2-step1-3.png)
 
-Con l'oggetto MixedRealityToolKit selezionato nella finestra Hierarchy (Gerarchia), nella finestra Inspector (Controllo), associa gli script di supporto. A questo scopo, fai clic sul pulsante **Add component** (Aggiungi componente), digita AR Reference Point Manager (Gestione punto di riferimento AR) e seleziona lo script.
-
-Quando aggiungi lo script "AR Reference Point Manager" (Gestione punto di riferimento AR), viene aggiunto automaticamente anche lo script "AR Session Origin" (Origine sessione AR) nella finestra Inspector (Controllo). Dopo aver aggiunto gli script di supporto, la finestra Inspector (Controllo) dovrebbe risultare analoga alla seguente.
+Nella finestra Inspector (Controllo) individua MixedReality e seleziona la scheda **Camera** (Fotocamera). Espandi i provider di impostazioni della fotocamera nella finestra Inspector (Controllo) e fai clic su **+Add Camera Setting Provider** (+Aggiungi provider impostazioni fotocamera) > espandi **New data provider 1** (Nuovo provider di dati 1) > in Type (Tipo) seleziona **None** (Nessuno) > seleziona **Microsoft.MixedReality.Toolkit.Experimental.UnityAR** > seleziona **UnityARCameraSettings**.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section2-step1-4.png)
 
-## <a name="build-application-to-android-device"></a>Compilare l'applicazione in un dispositivo Android
+Con l'oggetto MixedRealityToolKit selezionato nella finestra Hierarchy (Gerarchia), nella finestra Inspector (Controllo), associa gli script di supporto. A questo scopo, fai clic sul pulsante **Add component** (Aggiungi componente), digita AR Reference Point Manager (Gestione punto di riferimento AR) e seleziona lo script.
+
+Quando aggiungi lo script **AR Reference Point Manager** (Gestione punto di riferimento AR), viene aggiunto automaticamente anche lo script **AR Session Origin** (Origine sessione AR) nella finestra Inspector (Controllo). Dopo aver aggiunto gli script di supporto, la finestra Inspector (Controllo) dovrebbe risultare analoga alla seguente.
+
+![mrlearning-asa](images/mrlearning-asa/tutorial4-section2-step1-5.png)
+
+## <a name="build-an-application-to-an-android-device"></a>Compilare un'applicazione in un dispositivo Android
 
 Per compilare l'applicazione in un dispositivo Android, fai clic su **File** nella parte superiore della finestra e seleziona **Build Settings** (Impostazioni di compilazione). Viene visualizzata una nuova finestra. Seleziona **Android** e fai clic su **Switch Platform** (Cambia piattaforma). Il cambio di piattaforma richiederà qualche minuto. Dopo il passaggio alla piattaforma Android, fai clic su **Add Open Scene** (Aggiungi scena aperta) e verifica che la scena corrente sia l'unica scena selezionata nell'elenco **Scenes In Build** (Scene nella compilazione).
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section3-step1-1.png)
 
-Chiudi la finestra **Build Settings** (Impostazioni di compilazione). Nel menu di Unity seleziona **Mixed Reality Toolkit** > **Utilities** >  (Utilità) **Configure Unity Project** (Configura progetto Unity) e fai clic su **Apply** (Applica) per configurare il progetto Unity per la piattaforma Android.
+Chiudi la finestra **Build Settings** (Impostazioni di compilazione). Nel menu di Unity seleziona Mixed Reality Toolkit > Utilities (Utilità) > Configure Unity Project (Configura progetto Unity) e fai clic su **Apply** (Applica) per configurare il progetto Unity per la piattaforma Android.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section3-step1-2.png)
 
-Nel menu di Unity scegli **Edit** (Modifica)  > **Project Settings** (Impostazioni progetto) per visualizzare la finestra corrispondente. Nella finestra Project Settings (Impostazioni progetto) seleziona la scheda **Player** (Giocatore), espandi la sezione Other Settings (Altre impostazioni), seleziona **Vulkan** e rimuovila facendo clic sul simbolo "-".
+Nel menu di Unity scegli **Edit** (Modifica)  > **Project Settings** (Impostazioni progetto) per visualizzare la finestra corrispondente. Nella finestra Project Settings (Impostazioni progetto) seleziona la scheda **Player** (Giocatore), espandi la sezione **Other Settings** (Altre impostazioni), seleziona **Vulkan** e rimuovila facendo clic sul simbolo " **-** ".
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section3-step1-3.png)
 
-Chiudi la finestra Player Settings (Impostazioni giocatore) e apri di nuovo la finestra Build Settings (Impostazioni di compilazione). A questo punto, usando un cavo USB, connetti il dispositivo Android al computer e seleziona il dispositivo nell'elenco a discesa **Build and Run on** (Compila ed esegui in), quindi fai clic su **Build And Run** (Compila ed esegui). Ti verrà chiesto di salvare un file APK con un nome qualsiasi.
+Chiudi la finestra **Player Settings** (Impostazioni giocatore) e apri di nuovo la finestra **Build Settings** (Impostazioni di compilazione). A questo punto, usando un cavo USB, connetti il dispositivo Android al computer e seleziona il dispositivo nell'elenco a discesa **Build and Run** (Compila ed esegui), quindi fai clic su **Build And Run** (Compila ed esegui). Ti verrà chiesto di salvare un file APK con un nome qualsiasi.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section3-step1-4.png)
 
@@ -101,13 +106,13 @@ Chiudi la finestra Player Settings (Impostazioni giocatore) e apri di nuovo la f
 
 Al termine del processo di compilazione, le applicazioni dovrebbero essere caricate automaticamente sul dispositivo Android.
 
-## <a name="build-application-to-ios-device"></a>Compilare l'applicazione in un dispositivo iOS
+## <a name="build-an-application-to-ios-device"></a>Compilare un'applicazione in un dispositivo iOS
 
 Per compilare l'applicazione in un dispositivo iOS, fai clic su **File** nella parte superiore della finestra e seleziona **Build Settings** (Impostazioni di compilazione). Viene visualizzata una nuova finestra. Seleziona **iOS** e fai clic su **Switch Platform** (Cambia piattaforma).
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section4-step1-1.png)
 
-Chiudi la finestra **Build Settings** (Impostazioni di compilazione). Nel menu di Unity seleziona **Mixed Reality Toolkit** > **Utilities** >  (Utilità) **Configure Unity Project** (Configura progetto Unity) e fai clic su **Apply** (Applica) per configurare il progetto Unity per la piattaforma iOS.
+Chiudi la finestra **Build Settings** (Impostazioni di compilazione). Nel menu di Unity seleziona Mixed Reality Toolkit > Utilities (Utilità) > Configure Unity Project (Configura progetto Unity) e fai clic su **Apply** (Applica) per configurare il progetto Unity per la piattaforma iOS.
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial4-section4-step1-2.png)
 
