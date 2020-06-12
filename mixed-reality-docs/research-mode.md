@@ -3,15 +3,15 @@ title: Modalità di ricerca HoloLens
 description: Usando la modalità di ricerca su HoloLens, un'applicazione può accedere ai flussi dei sensori del dispositivo chiave (profondità, rilevamento dell'ambiente e riflettanza IR).
 author: hferrone
 ms.author: v-haferr
-ms.date: 05/03/2018
+ms.date: 06/10/2020
 ms.topic: article
 keywords: modalità di ricerca, CV, RS4, visione artificiale, ricerca, HoloLens, HoloLens 2
-ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: 62b82e3a36452d4b104bf04999e556ec19d2a5e3
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533103"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720397"
 ---
 # <a name="hololens-research-mode"></a>Modalità ricerca HoloLens
 
@@ -37,7 +37,7 @@ Se si usa un HoloLens 2, sarà anche possibile accedere agli input seguenti:
 > [!NOTE]
 > La funzionalità modalità di ricerca è stata aggiunta come parte dell' [aggiornamento di Windows 10 aprile 2018](release-notes-april-2018.md) per HoloLens e non è disponibile nelle versioni precedenti.
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Utilizzo
 
 La modalità di ricerca è progettata per ricercatori accademici e industriali che esplorano nuove idee nei campi di Visione artificiale e robotica.  Non è destinata alle applicazioni distribuite in ambienti aziendali o disponibili tramite il Microsoft Store o altri canali di distribuzione.
 
