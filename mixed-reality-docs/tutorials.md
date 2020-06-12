@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, academy, esercitazione
-ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: e5961a178d571d2f71e98ff4c3c729d6feb0fd40
+ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835650"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327961"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
@@ -28,7 +28,7 @@ Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppator
 * Esercitazioni introduttive
     * Unity: [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
     * Unreal: [1 di 6 Introduzione](unreal-uxt-ch1.md)
-* Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 3 Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
+* Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 4 Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
 * Esercitazioni sui servizi Voce di Azure: [1 di 4 Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 * Esercitazioni sulle funzionalità multiutente: [1 di 5 Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
 

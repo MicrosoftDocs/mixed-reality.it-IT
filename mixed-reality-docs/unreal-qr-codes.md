@@ -1,44 +1,74 @@
 ---
 title: Codici a matrice in Unreal
 description: Guida all'uso dei codici a matrice in Unreal
-author: sw5813
-ms.author: jacksonf
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, sviluppo, funzionalità, documentazione, guide, ologrammi, codici a matrice
-ms.openlocfilehash: 67a3a8092ab908cba6768e92ed6a0e7bd2737275
-ms.sourcegitcommit: 5b802078090700e06630c8fc665fedeaa0a16eb7
+ms.openlocfilehash: 90a51227ae455389168fb3262e83f34b64a7bfb5
+ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83342659"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428743"
 ---
 # <a name="qr-codes-in-unreal"></a>Codici a matrice in Unreal
 
-HoloLens può individuare i codici a matrice in uno spazio del mondo reale per il rendering degli ologrammi in posizioni note del mondo reale.  Questi codici possono essere usati anche per eseguire il rendering degli ologrammi su più dispositivi nella stessa posizione, in modo da creare un'esperienza condivisa. 
+## <a name="overview"></a>Panoramica
 
-Per abilitare il rilevamento a matrice in HoloLens, verifica che la funzionalità Webcam sia selezionata nell'editor di Unreal in Project Settings > Platform > HoloLens > Capabilities (Impostazioni progetto > Piattaforma > HoloLens > Funzionalità).  
+HoloLens 2 può individuare i codici a matrice in uno spazio del mondo reale usando la webcam, eseguendone il rendering come ologrammi mediante un sistema di coordinate nella posizione reale di ciascun nodo.  Oltre ai singoli codici a matrice, HoloLens 2 è in grado di eseguire il rendering degli ologrammi nella stessa posizione su più dispositivi per creare un'esperienza condivisa. Assicurati di seguire le procedure consigliate per l'aggiunta di codici a matrice alle tue applicazioni:
 
-Puoi acconsentire esplicitamente all'uso del rilevamento dei codici a matrice in Unreal avviando ARSession con la funzione StartARSession. 
+- Zone silenziose
+- Illuminazione e sfondo
+- Dimensione, distanza e posizione angolare
 
-I codici a matrice vengono esposti tramite il sistema di geometria rilevata AR di Unreal come immagine rilevata.  Per usare questo sistema, aggiungi un componente AR Trackable Notify a un attore del progetto: 
+Presta particolare attenzione alle [considerazioni sull'ambiente](environment-considerations-for-hololens.md) quando vengono inseriti codici a matrice nell'app. Per altre informazioni su questi argomenti e per istruzioni su come scaricare il pacchetto NuGet necessario, vedi il documento principale [Rilevamento di codici a matrice](qr-code-tracking.md). 
+
+## <a name="enabling-qr-detection"></a>Abilitazione del rilevamento di codici a matrice
+Dato che HoloLens 2 deve usare la webcam per visualizzare i codici a matrice, è necessario abilitarla nelle impostazioni del progetto:
+- Apri **Edit > Project Settings** (Modifica > Impostazioni progetto), scorri fino alla sezione **Platforms** (Piattaforme) e fai clic su **HoloLens**.
+    + Espandi la sezione **Capabilities** (Funzionalità) e seleziona **Webcam**.  
+
+Devi anche acconsentire esplicitamente al rilevamento dei codici a matrice [aggiungendo un asset ARSessionConfig](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
+
+## <a name="setting-up-a-tracked-image"></a>Configurazione di un'immagine rilevata
+
+I codici a matrice vengono esposti tramite il sistema di geometria rilevata AR di Unreal come immagine rilevata. Per procedere, è necessario:
+1. Creare un progetto e aggiungere un componente **ARTrackableNotify**.
 
 ![Codice a matrice - AR Trackable Notify](images/unreal-spatialmapping-artrackablenotify.PNG)
 
-Passa quindi ai dettagli del componente e fai clic sul pulsante verde "+" per selezionare gli eventi da monitorare.  
+2. Selezionare **ARTrackableNotify** ed espandere la sezione **Events** (Eventi) nel pannello **Details** (Dettagli). 
 
 ![Eventi dei codici a matrice](images/unreal-spatialmapping-events.PNG)
 
-In questo esempio, abbiamo effettuato la sottoscrizione a OnUpdateTrackedImage per eseguire il rendering di un punto al centro di un codice a matrice e stampare i dati codificati del codice a matrice. 
+3. Fare clic su **+** accanto a **On Add Tracked Geometry** (All'aggiunta della geometria rilevata) per aggiungere il nodo in Event Graph (Grafico eventi).
+    - L'elenco completo degli eventi è disponibile nell'API del componente [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html). 
+
+![Esempio di rendering dei codici a matrice](images/unreal-qr-codes-tracked-geometry.png)
+
+## <a name="using-a-tracked-image"></a>Uso di un'immagine rilevata
+Il grafico degli eventi nell'immagine seguente mostra l'evento **OnUpdateTrackedImage** usato per eseguire il rendering di un punto al centro di un codice a matrice e stamparne i dati. 
 
 ![Esempio di rendering dei codici a matrice](images/unreal-qr-render.PNG)
 
-Esegui innanzitutto il cast dell'immagine rilevata in un codice ARTrackedQRCode, per verificare che l'immagine aggiornata corrente sia un codice a matrice.  I dati codificati possono quindi essere recuperati con la variabile QRCode.  La parte superiore sinistra del codice a matrice può essere recuperata dalla posizione di GetLocalToWorldTransform.  Le dimensioni possono essere recuperate con GetEstimateSize. 
+Ecco cosa accade:
+1. Prima di tutto, viene eseguito il cast dell'immagine rilevata in un codice **ARTrackedQRCode** per verificare che l'immagine aggiornata corrente sia un codice a matrice.  
+2. I dati codificati vengono recuperati dalla variabile **QRCode**. È possibile ottenere la parte superiore sinistra del codice a matrice dalla posizione di **GetLocalToWorldTransform** e le dimensioni con **GetEstimateSize**. 
 
-Ogni codice a matrice ha anche un ID GUID univoco: 
+È anche possibile [ottenere il sistema di coordinate per un codice a matrice](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) nel codice.
+
+## <a name="finding-the-unique-id"></a>Ricerca dell'ID univoco
+Ogni codice a matrice ha un ID GUID univoco. Per trovarlo:
+- Trascina e rilascia il segnaposto **As ARTracked QRCode** e cerca **Get Unique ID** (Ottieni ID univoco).
 
 ![GUID dei codici a matrice](images/unreal-qr-guid.PNG)
 
+Le operazioni sui codici a matrice sono piuttosto complesse, quindi ci sono diversi aspetti da approfondire. I collegamenti riportati di seguito consentono di accedere a informazioni più dettagliate a questo proposito.
+
 ## <a name="see-also"></a>Vedere anche
-* [Rilevamento di codici a matrice](qr-code-tracking.md)
+* [Mapping spaziale](spatial-mapping.md)
+* [Ologrammi](hologram.md)
+* [Sistemi di coordinate](coordinate-systems.md)

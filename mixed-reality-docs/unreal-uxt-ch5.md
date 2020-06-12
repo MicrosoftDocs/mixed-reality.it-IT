@@ -1,63 +1,89 @@
 ---
 title: 5. Aggiunta di un pulsante e ripristino delle posizioni dei pezzi
-description: Parte 5 di un'esercitazione per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Parte 5 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83519993"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330268"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Aggiunta di un pulsante e ripristino delle posizioni dei pezzi
 
-In questa sezione si continua a illustrare le funzionalità del plug-in Mixed Reality Toolkit UX Tools e a creare le funzionalità dell'app di scacchi. Si creerà una nuova funzione e si imparerà a trasferire i riferimenti agli attori dal proprio livello a un progetto.
+
+## <a name="overview"></a>Panoramica
+
+Nell'esercitazione precedente hai aggiunto attori di interazione manuale al pedone e componenti manipolatore alla scacchiera per renderli entrambi interattivi. In questa sezione continuerai a usare il plug-in UX Tools di Mixed Reality Toolkit costruendo le funzionalità dell'app di scacchi. Durante il processo creerai una nuova funzione e scoprirai come ottenere riferimenti agli attori in un progetto. Al termine di questa sezione sarai in grado di creare un pacchetto dell'app di realtà mista e distribuirla in un dispositivo o emulatore.
 
 ## <a name="objectives"></a>Obiettivi
 
-* Aggiungere un pulsante a un progetto
-* Creare una nuova funzione "Reset Location" (Ripristina posizione) che ripristina la posizione originale di un pezzo
-* Associare il pulsante in modo che attivi la funzione appena creata quando viene premuto
+* Aggiunta di un pulsante interattivo
+* Creazione di una funzione per la riportare un pezzo nella posizione iniziale
+* Associazione del pulsante in modo che attivi la funzione quando viene premuto
 
-## <a name="create-a-function-to-reset-location"></a>Creare una funzione per ripristinare la posizione
+## <a name="creating-a-reset-function"></a>Creazione di una funzione di reimpostazione
+La prima attività consiste nel creare un progetto di funzione che riporta un pezzo degli scacchi nella sua posizione originale nella scena. 
 
-1.  Apri **WhiteKing**. Nel pannello **My Blueprint** (Progetto personale) fai clic sul pulsante "+" accanto alla sezione **Functions** (Funzioni) per creare una nuova funzione. Assegna alla funzione il nome "Reset Location" (Ripristina posizione). 
+1.  Apri **WhiteKing** (Re bianco), fai clic sull'icona **+** accanto alla sezione **Functions** (Funzioni) in **My Blueprint** (Progetto personale) e assegna alla funzione il nome **Reset Location** (Ripristina posizione). 
 
-2.  Nel progetto **Reset Location** (Ripristina posizione) appena creato, trascina il pin di esecuzione e rilascialo in un punto qualsiasi della griglia del progetto per chiamare un nodo **SetActorRelativeTransform**. Questa funzione imposta la trasformazione (posizione, rotazione e scala) di un attore rispetto al relativo elemento padre. Questa funzione verrà usata per ripristinare la posizione del Re sulla scacchiera, anche se è stata spostata dalla posizione originale. Crea un nodo **Make Transform** (Esegui trasformazione) nella posizione X = -26, Y = 4, Z = 0 e collegalo all'input New Relative Transform (Nuova trasformazione relativa). 
+2.  Trascina e rilascia l'esecuzione da **Reset Location** (Ripristina posizione) nella griglia del progetto per creare un nodo **SetActorRelativeTransform**. 
+    * Questa funzione imposta la trasformazione (posizione, rotazione e scala) di un attore rispetto al relativo elemento padre. Questa funzione verrà usata per ripristinare la posizione del Re sulla scacchiera, anche se è stata spostata dalla posizione originale. 
+    
+3. Fai clic con il pulsante destro del mouse all'interno di Event Graph (Grafico eventi), scegli **Make Transform** (Crea trasformazione) e imposta **Location** (Posizione) su **X = -26**, **Y = 4**, **Z = 0**.
+    * Connetti il relativo **Return Value** (Valore restituito) al segnaposto **New Relative Transform** (Nuova trasformazione relativa) in **SetActorRelativeTransform**. 
 
 ![Funzione di ripristino della posizione](images/unreal-uxt/5-function.PNG)
 
-3.  Compila e salva **WhiteKing**. Torna alla finestra principale. 
+Scegli **Compile** (Compila) e **Save** (Salva) per compilare e salvare il progetto prima di tornare alla finestra princpale. 
 
-## <a name="add-a-button"></a>Aggiungere un pulsante
 
-1.  Nella cartella **Blueprints** (Progetti) crea un nuovo progetto che costituisca una sottoclasse di SimpleButton. SimpleButton è un Blueprint Actor (attore di progetto) di un pulsante 3D fornito con il plug-in UX Tools. Assegna al pulsante il nome "ResetButton" e fai doppio clic per aprire il progetto. 
+## <a name="adding-a-button"></a>Aggiunta di un pulsante
+Ora che la funzione è stata configurata correttamente, l'attività successiva consiste nel creare un pulsante che la attiva quando viene toccato. 
+
+1.  Fai clic su **Add New > Blueprint Class** (Aggiungi nuovo > Classe progetto), espandi la sezione **All Classes** (Tutte le classi) e cerca **SimpleButton**. 
+    * Assegna il nome **ResetButton** e fai doppio clic per aprire il progetto.
+
+> [!NOTE]
+> **SimpleButton** è un attore di progetto di un pulsante 3D incluso nel plug-in UX Tools. . 
 
 ![Creare il nuovo progetto come sottoclasse di SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2.  Nel pannello **Components** (Componenti ) fai clic su **PressableButton (Inherited)** (PressableButton - Ereditato). Nel pannello dei dettagli scorri fino alla sezione **Events** (Eventi). Fai clic sul pulsante con il segno più verde accanto a **On Button Pressed** (Alla pressione del pulsante). In questo modo, verrà aggiunto un evento **On Button Pressed** (Alla pressione del pulsante) al grafico degli eventi, che verrà chiamato ogni volta che viene premuto il pulsante. Da qui è possibile chiamare la funzione di ripristino della posizione di WhiteKing. A questo scopo, sarà prima necessario ottenere un riferimento all'attore WhiteKing nel livello in uso. 
+2. Fai clic su **PressableButton (Inherited)** (PressableButton - Ereditato) nel pannello **Components** (Componenti) e scorri verso il basso nel pannello **Details** (Dettagli) fino alla sezione **Events** (Eventi). 
+    * Fai clic sul pulsante **+** verde accanto a **On Button Pressed** (Alla pressione del pulsante) per aggiungere un evento al grafico degli eventi, che verrà chiamato ogni volta che viene premuto il pulsante. 
+    
+A questo punto puoi chiamare la funzione **Reset Location** (Ripristina posizione) di **WhiteKing** (Re bianco), che necessita un riferimento all'attore **WhiteKing** (Re bianco) nel livello. 
 
-3.  Nel pannello **My Blueprint** (Progetto personale), trova la sezione **Variables** (Variabili) e fai clic sul pulsante **+** per aggiungere una nuova variabile. Assegna alla variabile il nome "WhiteKing". Nel pannello dei dettagli seleziona l'elenco a discesa accanto a **Variable Type** (Tipo di variabile), cerca "WhiteKing" e seleziona **Object Reference** (Riferimento oggetto). Seleziona infine la casella accanto a **Instance Editable** (Istanza modificabile). In questo modo la variabile potrà essere impostata dal livello principale. 
+1.  Scorri fino alla sezione **Variables** (Variabili) nel pannello **Details** (Dettagli), fai clic sul pulsante **+** e assegna il nome **WhiteKing** alla variabile. 
+    * Seleziona l'elenco a discesa accanto a **Variable Type** (Tipo di variabile) cerca **WhiteKing** e seleziona **Object Reference** (Riferimento oggetto). 
+    * Seleziona la casella accanto a **Instance Editable** (Istanza modificabile). In questo modo la variabile potrà essere impostata dal livello principale. 
 
 ![Creazione di una variabile](images/unreal-uxt/5-var.PNG)
 
-4.  Trascina la variabile WhiteKing da **My Blueprint > Variables** (Progetto personale > Variabile) in Reset Button Event Graph (Grafico eventi ResetButton). Scegli **Get WhiteKing** (Ottieni WhiteKing). 
+2.  Trascina la variabile WhiteKing da **My Blueprint > Variables** (Progetto personale > Variabili) in Reset Button Event Graph (Grafico eventi ResetButton) e scegli **Get WhiteKing** (Ottieni WhiteKing). 
 
-5.  Trascina il pin di output di WhiteKing e rilascialo per inserire un nuovo nodo. Seleziona la funzione **Reset Location** (Ripristina posizione). Trascina infine il pin di esecuzione in uscita da **On Button Pressed** (Alla pressione del pulsante) al pin di esecuzione in ingresso in **Reset Location** (Ripristina posizione). Fai clic su **Compile** (Compila) e quindi su **Save** (Salva) per salvare il progetto ResetButton e quindi torna alla finestra principale. 
+## <a name="firing-the-function"></a>Attivazione della funzione
+A questo punto non resta che attivare la funzione di reimpostazione alla pressione del pulsante.
+
+1.  Trascina il pin di output di WhiteKing e rilascialo per inserire un nuovo nodo. Seleziona la funzione **Reset Location** (Ripristina posizione). Trascina infine il pin di esecuzione in uscita da **On Button Pressed** (Alla pressione del pulsante) al pin di esecuzione in ingresso in **Reset Location** (Ripristina posizione). Fai clic su **Compile** (Compila) e quindi su **Save** (Salva) per salvare il progetto ResetButton e quindi torna alla finestra principale. 
 
 ![Chiamata della funzione di ripristino della posizione alla pressione del pulsante](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Trascina **ResetButton** nel viewport e impostane la posizione su X = 50, Y =-25, Z = 10. In **Default** (Valore predefinito) imposta il valore della variabile WhiteKing su **WhiteKing**.
+2.  Trascina **ResetButton** nel viewport e impostane la posizione su **X = 50**, **Y = -25** e **Z = 10**. In **Default** (Valore predefinito) imposta il valore della variabile **WhiteKing** su **WhiteKing**.
 
 ![Impostazione della variabile](images/unreal-uxt/5-buttonlevel.PNG)
 
-Disponi ora di un'app di realtà mista con un pezzo degli scacchi afferrabile e una scacchiera, nonché un pulsante completamente funzionante che, quando viene premuto, ripristina la posizione del pezzo. L'app completata fino a questo punto è disponibile in [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp). Al termine di questa esercitazione, è possibile andare avanti e configurare gli altri pezzi degli scacchi, in modo che venga ripristinata l'intera scacchiera quando l'utente preme il pulsante.
+Esegui l'app, sposta il pezzo in una nuova posizione e premi il pulsante grande di colore rosa per vedere in azione la logica di reimpostazione.
+
+Ora hai un'app di realtà mista con un pezzo degli scacchi e una scacchiera con cui puoi interagire, nonché un pulsante completamente funzionante che, quando viene premuto, ripristina la posizione del pezzo. L'app completata fino a questo punto è disponibile nel repository di [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp) corrispondente. Al termine di questa esercitazione puoi proseguire configurando gli altri pezzi degli scacchi, in modo che venga ripristinata l'intera scacchiera quando viene premuto il pulsante.
 
 ![Schermata finale in viewport](images/unreal-uxt/5-endscene.PNG)
+
+Ora puoi passare alla sezione finale di questa esercitazione, in cui viene illustrato come creare un pacchetto dell'app e distribuirla in un dispositivo o emulatore.
 
 [Sezione successiva: 6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulatore](unreal-uxt-ch6.md)

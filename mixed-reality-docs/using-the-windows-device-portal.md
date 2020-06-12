@@ -1,18 +1,18 @@
 ---
 title: Uso del Portale di dispositivi di Windows
 description: Il Portale di dispositivi di Windows per HoloLens consente di configurare e gestire un dispositivo in remoto tramite Wi-Fi o USB. Device Portal è un server Web in HoloLens a cui è possibile connettersi da un browser Web nel PC. Il Portale di dispositivi include molti strumenti che ti consentono di gestire HoloLens, nonché di eseguire il debug delle app e ottimizzarle.
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portale di dispositivi di Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd9b33fed12802e5b41afa3fee850356911a989
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278029"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451361"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del Portale di dispositivi di Windows
 
@@ -152,17 +152,44 @@ Usa la pagina 3D View per osservare in che modo HoloLens interpreta l'ambiente c
 *Pagina Mixed Reality Capture (Acquisizione realtà mista) del Portale di dispositivi di Windows in Microsoft HoloLens*
 
 Usa la pagina Mixed Reality Capture per salvare flussi multimediali da HoloLens.
-* **Settings** (Impostazioni): controlla i flussi multimediali acquisiti selezionando le impostazioni seguenti:
+* **Impostazioni di acquisizione**: controlla i flussi multimediali acquisiti selezionando le impostazioni seguenti:
   * **Holograms** (Ologrammi): acquisisce il contenuto olografico nel flusso video. Il rendering degli ologrammi avviene in modalità mono, non in stereo.
   * **PV camera** (Fotocamera/videocamera): acquisisce il flusso video dalla fotocamera/videocamera.
   * **Mic Audio** (Audio microfoni): acquisisce l'audio dal gruppo di microfoni.
   * **App Audio** (Audio app): acquisisce l'audio dall'app attualmente in esecuzione.
   * **Render from Camera** (Rendering dalla fotocamera): allinea l'acquisizione dal punto di vista della fotocamera/videocamera, se [supportato dall'app in esecuzione](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (solo HoloLens 2).
   * **Live preview quality** (Qualità anteprima dinamica): consente di selezionare la risoluzione dello schermo, la frequenza dei fotogrammi e la frequenza di streaming per l'anteprima dinamica.
+* **Impostazioni audio** (solo HoloLens 2):
+  * **Audio Media Category** (Categoria supporto audio): consente di selezionare la categoria usata durante l'elaborazione del microfono. **Default** (Predefinita) include una parte dell'ambiente, mentre **Communications** (Comunicazioni) applica la cancellazione del rumore di fondo.
+  * **App Audio Gain** (Guadagno audio app): guadagno applicato al volume dell'audio dell'app.
+  * **Mic Audio Gain** (Guadagno audio microfoni): guadagno applicato al volume dell'audio dei microfoni.
+* **Impostazioni foto e video** (HoloLens 2, versione 2004 o successive):
+  * **Capture Profile** (Profilo acquisizione): consente di selezionare il profilo usato per l'acquisizione di foto e video. Il profilo determina quali risoluzioni e frequenze fotogrammi sono disponibili.
+  * **Photo Resolution** (Risoluzione foto): risoluzione con cui verrà scattata la foto.
+  * **Video Resolution and Frame-rate** (Risoluzione video e frequenza fotogrammi): risoluzione e frequenza fotogrammi con cui verrà acquisito il video.
+  * **Video Stabilization Buffer** (Buffer di stabilizzazione video): dimensioni del buffer usate durante l'acquisizione di un video. Maggiore è il valore, più è in grado di compensare i movimenti rapidi.
 * Tocca o fai clic sul pulsante **Live preview** (Anteprima dinamica) per visualizzare il flusso di acquisizione. **Stop live preview** (Arresta anteprimna dinamica) arresta il flusso di acquisizione.
 * Tocca o fai clic su **Record** (Registra) per avviare la registrazione del flusso in realtà mista, usando le impostazioni specificate. **Stop recording** (Arresta registrazione) termina la registrazione e la salva.
 * Tocca o fai clic su **Take photo** (Scatta foto) per acquisire un fermo immagine dal flusso di acquisizione.
+* Tocca o fai clic su **Restore Default Settings** (Ripristina impostazioni predefinite) per ripristinare le impostazioni predefinite per audio, foto e video.
 * **Videos and photos** (Video e foto): mostra un elenco di acquisizioni di foto e video create nel dispositivo.
+
+Tutte le impostazioni in questa pagina si applicano alle acquisizioni effettuate usando il Portale di dispositivi di Windows, ma alcune si applicano anche al sistema MRC (menu Start, pulsanti hardware, comandi vocali globali, Miracast) e ai registratori MRC personalizzati.
+|  Impostazione  |  Si applica al sistema MRC  |  Si applica ai registratori MRC personalizzati |
+|----------|----------|----------|
+|  Holograms (Ologrammi)  |  No  |  No |
+|  PV camera (Fotocamera/videocamera)  |  No  |  No |
+|  Mic Audio (Audio microfoni)  |  No  |  No |
+|  App Audio (Audio app)  |  No  |  No |
+|  Render from Camera (Rendering dalla fotocamera)  |  Sì    |  Yes (Sì) (è possibile eseguirne l'override) |
+|  Live preview quality (Qualità anteprima dinamica)  |  No  |  No |
+|  Audio Media Category (Categoria supporto audio)  |  Sì  |  No |
+|  App Audio Gain (Guadagno audio app)  |  Sì  |  Yes (Sì) (è possibile eseguirne l'override) |
+|  Mic Audio Gain (Guadagno audio microfoni)  |  Sì  |  Yes (Sì) (è possibile eseguirne l'override) |
+|  Capture Profile (Profilo acquisizione)  |  Sì  |  No |
+|  Photo Resolution (Risoluzione foto)  |  Sì  |  No |
+|  Video Resolution and Frame-rate (Risoluzione video e frequenza fotogrammi)  |  Sì  |  No |
+|  Video Stabilization Buffer (Buffer di stabilizzazione video)  |  Sì  |  Yes (Sì) (è possibile eseguirne l'override) |
 
 > [!NOTE]
 > Esistono [limitazioni per le acquisizioni simultanee in realtà mista](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):

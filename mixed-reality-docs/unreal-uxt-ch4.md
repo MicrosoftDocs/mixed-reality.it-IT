@@ -1,84 +1,122 @@
 ---
 title: 4. Rendere la scena interattiva
-description: Parte 4 di un'esercitazione per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Parte 4 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 2e4d26ed4e0b8199bfc629016aea688bd1c41ef8
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: a9de5755ab86c96322a8d50fecd7ba2cdea866d3
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83520026"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330218"
 ---
 # <a name="4-making-your-scene-interactive"></a>4. Rendere la scena interattiva
 
-Questa sezione presenta il plug-in open source UX Tools di Mixed Reality Toolkit, che fornisce un set di strumenti per rendere la scena interattiva. Al termine di questa sezione, i pezzi degli scacchi risponderanno all'input dell'utente. 
+## <a name="overview"></a>Panoramica
+
+Nell'esercitazione precedente hai aggiunto un asset ARSession, il pedone e la modalità gioco per completare la configurazione della realtà mista per l'app di scacchi. Questa sezione è dedicata al plug-in open source [UX Tools di Mixed Reality Toolkit](https://github.com/microsoft/MixedReality-UXTools-Unreal), che include gli strumenti necessari per rendere la scena interattiva. Alla fine della sezione sarai in grado di spostare i pezzi sulla scacchiera con l'input dell'utente. 
 
 ## <a name="objectives"></a>Obiettivi
 
-* Includere il plug-in UX Tools di Mixed Reality Toolkit nel progetto
-* Aggiungere attori di interazione manuale sulla punta delle dita
-* Creare e collegare i manipolatori alla scacchiera e ai pezzi 
-* Usare la simulazione dell'input per convalidare il progetto
+* Download del plug-in UX Tools di Mixed Reality Toolkit 
+* Aggiunta di attori di interazione manuale sulla punta delle dita
+* Creazione e aggiunta di manipolatori agli oggetti nella scena
+* Uso della simulazione dell'input per convalidare il progetto
 
-## <a name="download-the-mixed-reality-toolkit-ux-tools-plugin"></a>Scaricare il plug-in UX Tools di Mixed Reality Toolkit
+## <a name="downloading-the-mrtk-ux-tools-plugin"></a>Download del plug-in UX Tools di MRTK
+Prima di iniziare a usare l'input dell'utente, è necessario aggiungere il plug-in al progetto.
 
-1.  Clona o scarica e decomprimi la versione più recente del plug-in UX Tools di MRTK dal [repository GitHub UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal/releases).
+1.  Clona o scarica la versione più recente del plug-in UX Tools di MRTK dal [repository GitHub](https://github.com/microsoft/MixedReality-UXTools-Unreal/releases) e decomprimi il file.
 
-2.  Nella cartella radice del progetto degli scacchi crea una nuova cartella denominata "Plugins" (Plug-in). Copia il plug-in UX Tools decompresso in questa cartella. Riavvia l'editor di Unreal. 
+2.  Crea una nuova cartella denominata **Plugins** (Plug-in) nella cartella radice del progetto. Copia il plug-in UXTools decompresso in questa cartella e riavvia l'editor Unreal. 
 
 ![Creare una cartella dei plug-in del progetto](images/unreal-uxt/4-plugins.PNG)
 
-3.  Dopo il riavvio, se il contenuto del plug-in UX Tools non viene visualizzato nel pannello delle origini, può essere necessario fare clic su **View Options > Show Plugin Content** (Opzioni di visualizzazione > Mostra contenuto plug-in). Noterai che il plug-in UX Tools fornisce una cartella Content (Contenuto) con le sottocartelle Pointers (Puntatori), Input Simulation (Simulazione di input) e Simple Button (Pulsante semplice), oltre a una cartella C++ Classes (Classi C++) con sottocartelle separate in base alla funzione.  
+3.  Il plug-in UX Tools include una cartella Content (Contenuto) con le sottocartelle **Pointers** (Puntatori), **Input Simulation** (Simulazione di input) e **Simple Button** (Pulsante semplice), oltre a una cartella C++ Classes (Classi C++) separata in base alla funzione.  
+
+> [!NOTE]
+> Se non viene visualizzata la sezione **UXTools Content** (Contenuto UXTools) in **Content Browser** (Browser contenuto), fai clic su **View Options > Show Plugin Content** (Opzioni visualizzazione > Mostra contenuto plug-in). 
 
 ![Mostra contenuto plug-in](images/unreal-uxt/4-showplugincontent.PNG)
 
-## <a name="spawn-hand-interaction-actors"></a>Generare attori di interazione manuale
+Una volta installato correttamente il plug-in, puoi iniziare a usare gli strumenti che include, iniziando dagli attori di interazione manuale.
 
-1.  Iniziamo con la generazione di attori di interazione manuale dall'oggetto MRPawn in modo da 1) visualizzare MRPawn con un cursore sulla punta del dito indice del pedone 2) specificare eventi di input manuale articolati (e, di conseguenza, manipolare direttamente gli attori) tramite il pedone e 3) specificare eventi di input di interazione da lontano tramite raggi che si estendono dal palmo della mano. Apri il progetto **MRPawn** e passa a **Event Graph** (Grafico evento). 
+## <a name="spawning-hand-interaction-actors"></a>Generazione di attori di interazione manuale
+L'interazione manuale con gli elementi UX avviene con gli attori di interazione manuale, che creano e guidano i puntatori e gli oggetti visivi per le interazioni da vicino e da lontano.
+- Le *interazioni da vicino* avvengono pizzicando gli elementi tra l'indice e il pollice oppure colpendoli con la punta del dito. 
+- Le *interazioni da lontano* avvengono puntando un raggio dalla mano virtuale su un elemento e premendo indice e pollice insieme.
 
-2.  Trascina il segnaposto di esecuzione da Event BeginPlay (Evento inizio partita) e rilascialo per inserire un nuovo nodo. Seleziona il nodo **Spawn Actor from Class** (Genera attore dalla classe). Fai clic sull'elenco a discesa accanto al segnaposto **Class** (Classe) e cerca **Uxt Hand Interaction Actor** (Attore di interazione manuale Uxt). Trascina il segnaposto di esecuzione dal nodo SpawnActor Uxt Hand Interaction (Genera attore - Interazione manuale Uxt), rilascia e cerca la funzione **Set Hand** (Imposta mano) contenuta nella classe Uxt Hand Interaction Actor (Attore di interazione manuale Uxt). Connetti il valore restituito del nodo SpawnActor (Genera attore) al segnaposto di destinazione del nodo Set Hand (Imposta mano) per impostare la mano dell'attore di interazione manuale su **Left** (Sinistra). Genera un secondo **attore di interazione manuale Uxt**, questa volta impostando la mano su **Right** (Destra), in modo che, quando l'evento viene avviato, viene generato un attore di interazione manuale Uxt su ogni mano. 
+In questo caso, l'aggiunta di un attore di interazione manuale a **MRPawn** consentirà di:
+- Aggiungere un cursore sulla punta degli indici del pedone.
+- Specificare eventi di input della mano articolata che possono essere manipolati tramite il pedone.
+- Prevedere eventi di input di interazione da lontano tramite raggi che si estendono dai palmi delle mani virtuali.
+
+Per comprendere appieno questi concetti, è consigliabile leggere la [documentazione](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/HandInteraction.md) relativa alle interazioni manuali prima di proseguire. 
+
+Quando sei pronto, apri il progetto **MRPawn** e passa a **Event Graph** (Grafico eventi). 
+
+1. Trascina e rilascia il segnaposto di esecuzione da **Event BeginPlay** (Evento BeginPlay) per inserire un nuovo nodo. 
+    * Seleziona **Spawn Actor from Class** (Genera attore da classe), fai clic sull'elenco a discesa accanto al segnaposto **Class** (Classe) e cerca **Uxt Hand Interaction Actor** (Attore di interazione manuale Uxt). 
+
+2. Trascina e rilascia il segnaposto di esecuzione dal nodo **SpawnActor Uxt Hand Interaction** (Genera attore - Interazione manuale Uxt) e cerca la funzione **Set Hand** (Imposta mano) nella classe **Uxt Hand Interaction Actor** (Attore di interazione manuale Uxt). 
+    * Connetti **Return Value** (Valore restituito) del nodo **SpawnActor** (Genera attore) al segnaposto **Target** (Destinazione) del nodo **Set Hand** (Imposta mano). In questo modo, la mano dell'attore di interazione manuale viene impostata su **Left** (Sinistra). 
+
+3. Genera un secondo **Uxt Hand Interaction Actor** (Attore di interazione manuale Uxt), questa volta impostando la mano su **Right** (Destra). All'avvio dell'evento, verrà generato un attore di interazione manuale Uxt su ogni mano. 
+
+La finestra **Event Graph** (Grafico eventi) dovrebbe risultare analoga alla seguente:
 
 ![Generare attori di interazione manuale Uxt](images/unreal-uxt/4-spawnactor.PNG)
 
-3.  A questo punto, dobbiamo fornire agli attori di interazione manuale Uxt una trasformazione iniziale in cui generare e un proprietario. Trascina il segnaposto fuori da uno dei segnaposto **Spawn Transform** (Genera trasformazione) e rilascia per inserire un nuovo nodo. Cerca il nodo **Make Transform** (Crea trasformazione). La trasformazione iniziale in realtà non è importante perché gli attori di interazione manuale passano da una mano all'altra non appena sono visibili (codice scritto automaticamente nel plug-in UX Tools). In caso contrario, scompariranno. La funzione SpawnActor (Genera attore) richiede, tuttavia, una trasformazione come input, per evitare un errore del compilatore. Manterremo quindi i valori predefiniti in Make Transform (Crea trasformazione) così come sono. Trascina il **valore restituito** di Make Transform (Crea trasformazione) anche su Interaction Actor Spawn Transform (Attore di interazione - Genera trasformazione) dell'altra mano. 
+Entrambi gli attori di interazione manuale Uxt devono avere proprietari e posizioni di trasformazione iniziale. La trasformazione iniziale non è rilevante perché gli attori di interazione manuale passano alle mani virtuali non appena sono visibili (questo comportamento è incluso nel plug-in UX Tools). La funzione `SpawnActor`, tuttavia, richiede un input di trasformazione per evitare un errore del compilatore, quindi useremo i valori predefiniti. 
 
-4.  Fai clic sulla **freccia verso il basso** nella parte inferiore di entrambi i nodi SpawnActor (Genera attore) per visualizzare il segnaposto **Owner** (Proprietario). Trascina il segnaposto fuori da uno dei segnaposto **Owner** (Proprietario) e rilascialo per inserire un nuovo nodo. Cerca "self" e seleziona la variabile **Get a reference to self** (Ottieni riferimento a Self). Crea un collegamento tra il nodo di riferimento all'oggetto Self e l'altro segnaposto Owner (Proprietario) dell'attore di interazione manuale. Trascina i nodi per rendere il progetto più leggibile. **Compila**, **Salva** e torna alla finestra principale. 
+1. Trascina e rilascia il segnaposto fuori da uno dei segnaposto **Spawn Transform** (Genera trasformazione) per inserire un nuovo nodo. 
+    * Cerca il nodo **Make Transform** (Crea trasformazione) e quindi trascina **Return Value** (Valore restituito) su **Spawn Transform** (Genera trasformazione) dell'altra mano, in modo che entrambi i nodi **SpawnActor** (Genera attore) siano connessi. 
 
-![Configurazione completa dell'attore di interazione manuale Uxt](images/unreal-uxt/4-fingerptrs.PNG)
+3.  Fai clic sulla **freccia in giù** nella parte inferiore di entrambi i nodi **SpawnActor** (Genera attore) per visualizzare il segnaposto **Owner** (Proprietario).    
+    * Trascina il segnaposto fuori da uno dei segnaposto **Owner** (Proprietario) e rilascialo per inserire un nuovo nodo. 
+    * Cerca **self** e seleziona la variabile **Get a reference to self** (Ottieni riferimento a Self), quindi crea un collegamento tra il nodo di riferimento dell'oggetto **Self** e il segnaposto **Owner** (Proprietario) dell'altro attore di interazione manuale. 
+    * **Compila**, **Salva** e torna alla finestra principale. 
 
-Per altre informazioni sull'attore di interazione manuale specificato nel plug-in UX Tools di MRTK, consulta la [documentazione ufficiale](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/HandInteraction.html).
+Assicurati che le connessioni corrispondano allo screenshot seguente, ma trascina liberamente i nodi per rendere più leggibile il progetto
 
-## <a name="attach-manipulators"></a>Collegare i manipolatori
+![Configurazione completa dell'attore di interazione manuale Uxt](images/unreal-uxt/4-fingerptrs.PNG) 
 
-1.  Successivamente, collegheremo i manipolatori alla scacchiera e agli attori Re. Un manipolatore è un componente che risponde a input della mano articolati e può essere afferrato, ruotato e spostato. Applicando la trasformazione del manipolatore a quella di un attore, gli attori possono essere manipolati direttamente. 
+Per altre informazioni sull'attore di interazione manuale specificato nel plug-in UX Tools di MRTK, consulta la [documentazione](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/HandInteraction.html).
 
-2.  Apri il progetto Board (Tavola). Nel pannello **Components** (Componenti) fai clic su **Add Component** (Aggiungi componente) e cerca **Uxt Generic Manipolator** (Manipolatore generico Uxt). Nel pannello Details (Dettagli) è disponibile una sezione intitolata **Generic Manipulator** (Manipolatore generico) in cui puoi specificare se vuoi abilitare una manipolazione con una o due mani, la modalità di rotazione e lo smussamento. Seleziona la modalità desiderata e quindi **Compile** (Compila) e **Save** (Salva) la tavola. 
+Ora le mani virtuali nel progetto sono in grado di selezionare gli oggetti, ma non possono ancora manipolarli. L'ultima attività prima di testare l'app consiste nell'aggiungere i componenti del manipolatore agli attori nella scena.
+
+## <a name="attaching-manipulators"></a>Collegamento di manipolatori
+
+Un manipolatore è un componente che risponde agli input della mano articolata e può essere afferrato, ruotato o spostato. Quando si applica la trasformazione del manipolatore a quella degli attori, gli attori possono essere manipolati direttamente. 
+
+1. Apri il progetto **Board** (Tavola), fai clic su **Add Component** (Aggiungi componente) e cerca **Uxt Generic Manipulator** (Manipolatore generico Uxt) nel pannello **Components** (Componenti).
 
 ![Aggiungere un manipolatore generico](images/unreal-uxt/4-addmanip.PNG)
 
+2. Espandi la sezione **Generic Manipulator** (Manipolatore generico) nel panello **Details** (Dettagli). Da qui puoi impostare la manipolazione a una mano o a due mani, la modalità di rotazione e i movimenti uniformi. Seleziona la modalità desiderata e quindi **Compile** (Compila) e **Save** (Salva) per salvare la tavola. 
+
 ![Impostare la modalità](images/unreal-uxt/4-setrotmode.PNG)
 
-3.  Ripeti i passaggi precedenti per l'attore WhiteKing.
+3. Ripeti i passaggi precedenti per l'attore **WhiteKing** (Re bianco).
 
-Per altre informazioni sui componenti del manipolatore disponibili nel plug-in UX Tools di MRTK, consulta la [documentazione](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/Manipulator.html) ufficiale.
+Per altre informazioni sui componenti del manipolatore disponibili nel plug-in UX Tools di MRTK, consulta la [documentazione](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/Manipulator.html).
 
-## <a name="test-out-your-scene-with-simulated-hands"></a>Testare la scena con le mani simulate
-
-1.  Nella finestra principale premere **Play**. Visualizzerai due mani con mesh fornite dal plug-in UX Tools di MRTK, con i raggi della mano che si estendono dal palmo. 
+## <a name="testing-the-scene"></a>Test della scena
+Ottimo! A questo punto puoi testare l'app con le nuove mani virtuali e l'input utente. Premi **Play** (Gioca) nella finestra principale e vedrai due mani con mesh fornite dal plug-in UX Tools di MRTK, con i raggi della mano che si estendono dal palmo. Puoi controllare le mani e le relative interazioni nel modo seguente:
+- Tieni premuto **ALT di sinistra** per controllare la **mano sinistra** e **MAIUSC di sinistra** per controllare la **mano destra**. 
+- Sposta il mouse per muovere la mano e scorri con la **rotellina del mouse** per spostare la mano **avanti** o **indietro**. 
+- Fai clic con il pulsante sinistro del mouse per **pizzicare** e con il pulsante centrale del mouse per **picchiettare con le dita**. 
 
 ![Mani simulate nel riquadro di visualizzazione](images/unreal-uxt/4-handsim.PNG)
 
-2.  Per controllare la **mano destra**, tieni premuto il pulsante **ALT** sinistro. Per muovere la mano, sposta il mouse. Per spostare la mano **avanti** o **indietro**, scorri con la **rotellina del mouse**. Fai clic sul pulsante sinistro del mouse per **pizzicare** e sul pulsante centrale del mouse per **picchiettare con le dita**.
+Prova a usare le mani simulate per sollevare, spostare e appoggiare il re bianco e manipolare la scacchiera. Prova a usare l'interazione da vicino e da lontano. Tieni presente che, quando le mani si avvicinano abbastanza da poter afferrare direttamente la scacchiera e il re, il raggio della mano scompare e viene sostituito con un cursore a forma di dito sulla punta dell'indice. 
 
-3.  Per controllare la **mano sinistra**, tieni premuto il pulsante **MAIUSC** sinistro. I controlli per spostare la mano sinistra sono uguali a quelli per la mano destra. 
+Per altre informazioni sulla funzionalità delle mani simulate fornita dal plug-in UX Tools di MRTK, consulta la [documentazione](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/InputSimulation.html).
 
-4.  A questo punto, prova a usare le mani simulate per sollevare, spostare e appoggiare il re bianco degli scacchi. Puoi manipolare anche la tavola. Prova a usare l'interazione da vicino e da lontano. Tieni presente che, quando le mani si avvicinano abbastanza da poter afferrare direttamente la tavola e il re, il raggio della mano scompare e viene sostituito con un cursore a forma di dito sulla punta dell'indice. 
-
-Per altre informazioni sulla funzionalità delle mani simulate fornita dal plug-in UX Tools di MRTK, consulta la [documentazione](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/InputSimulation.html) ufficiale.
+Ora che le mani virtuali possono interagire con gli oggetti, puoi passare all'esercitazione successiva e aggiungere interfacce utente ed eventi.
 
 [Sezione successiva: 5. Aggiunta di un pulsante e reimpostazione delle posizioni della parte](unreal-uxt-ch5.md)

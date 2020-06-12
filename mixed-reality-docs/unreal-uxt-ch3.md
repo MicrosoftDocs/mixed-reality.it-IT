@@ -1,67 +1,92 @@
 ---
 title: 3. Configurazione del progetto per la realtà mista
-description: Parte 3 di un'esercitazione per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Parte 3 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: b5b5e2de787279602341e60f2bfa29aa05ea9b31
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840620"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330293"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configurazione del progetto per la realtà mista
 
-Questa sezione illustra il processo di configurazione dell'app per lo sviluppo della realtà mista. 
+## <a name="overview"></a>Panoramica
+
+Nell'esercitazione precedente ti sei dedicato alla configurazione del progetto dell'app di scacchi. In questa sezione viene illustrato come configurare l'app per lo sviluppo in realtà mista, ovvero aggiungendo una sessione AR. Per questa attività userai un asset di dati ARSessionConfig che include numerose impostazioni AR utili come il mapping spaziale e l'occlusione. Se vuoi approfondire questo argomento, la documentazione di Unreal Engine contiene altri dettagli sull'asset [ARSessionConfig](https://docs.unrealengine.com/en-US/PythonAPI/class/ARSessionConfig.html) e sulla classe [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html).
 
 ## <a name="objectives"></a>Obiettivi
+* Uso delle impostazioni AR di Unreal Engine 
+* Uso di un asset di dati ARSessionConfig
+* Configurazione di un pedone e modalità di gioco
 
-* Informazioni su come configurare un progetto di realtà mista con ARSessionConfig, Pawn e GameMode
+## <a name="adding-the-session-asset"></a>Aggiunta dell'asset della sessione
+Le sessioni AR in Unreal non funzionano da sole. Per usare una sessione, è necessario un asset di dati ARSessionConfig con cui interagire, che costituisce la tua prossima attività:
 
-## <a name="configure-the-session"></a>Configurare la sessione
-
-1. Nel browser dei contenuti torna alla cartella **Content** (Contenuto). Fai clic su **Add New > Miscellaneous > Data Asset** (Aggiungi nuovo > Varie > Asset dati). 
-
-2. Seleziona **ARSessionConfig** come classe e fai clic su **Select** (Seleziona). Assegna all'asset il nome "ARSessionConfig".
+1. Fai clic su **Add New > Miscellaneous > Data Asset** (Aggiungi nuovo > Varie > Asset dati) in **Content Browser** (Browser contenuto). Assicurati di essere nella cartella **Content** radice. 
+    * Seleziona **ARSessionConfig**, fai clic su **Select** (Seleziona) e assegna all'asset il nome **ARSessionConfig**.
 
 ![Creazione di un'origine dati](images/unreal-uxt/3-createasset.PNG)
 
-3. Fai doppio clic sulla classe ARSessionConfig per aprirla. Un asset di dati ARSessionConfig contiene una serie di utili impostazioni di realtà aumentata (AR), tra cui il mapping spaziale e l'occlusione. Per altri dettagli su ARSessionConfig, consulta la documentazione relativa a Unreal Engine in [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html). Per l'app di scacchi non è necessario modificare le impostazioni, quindi premi **Save** (Salva) e torna alla finestra principale. 
+3. Fai doppio clic su **ARSessionConfig** per aprirlo, lascia tutte le impostazioni predefinite e premi **Save** (Salva). Torna alla finestra principale. 
 
 ![ARSessionConfig](images/unreal-uxt/3-arsessionconfig.PNG)
 
-4. Sulla barra degli strumenti sopra il viewport fai clic su **Blueprints > Open Level Blueprint** (Progetti > Progetto Level aperto). Level è un progetto speciale che svolge la funzione di grafico di evento globale e prende come riferimento il livello. Verrà ora avviata una sessione di realtà aumentata, in modo che la configurazione di questa sessione venga applicata all'inizio del livello.  
+Al termine, il passaggio successivo consiste nell'assicurarsi che la sessione AR venga avviata quando viene caricato il livello. In Unreal è disponibile un particolare tipo di progetto denominato **Level Blueprint** (Progetto livello) che svolge la funzione di grafico eventi globale che prende come riferimento il livello. La connessione dell'asset ARSessionConfig in **Level Blueprint** (Progetto livello) garantisce l'avvio della sessione nel momento in cui viene avviato il gioco.
 
-5. Trascina fuori e rilascia il nodo di esecuzione **Event BeginPlay** (Evento BeginPlay). Cerca il nodo **Start AR Session** (Avvia sessione AR). Fai clic su **Session Config** (Configurazione sessione) e seleziona l'asset **ARSessionConfig** appena creato. Seleziona **Compile** (Compila) e quindi **Save** (Salva). Torna alla finestra principale.
+1. Fai clic su **Blueprints > Open Level Blueprint** (Progetti > Apri progetto livello) sulla barra degli strumenti dell'editor: 
 
-![Start AR Session (Avvia sessione AR)](images/unreal-uxt/3-startarsession.PNG)
+![Open Level Blueprint (Apri progetto livello)](images/unreal-uxt/3-level-blueprint.PNG)
+
+5. Trascina il nodo di esecuzione (freccia rivolta verso sinistra) fuori da **Event BeginPlay** (Evento BeginPlay) e rilascia. Cerca il nodo **Start AR Session** (Avvia sessione AR) e premi INVIO.  
+    * Fai clic sull'elenco a discesa **Select Asset** (Seleziona asset) in **Session Config** (Configurazione sessione) e scegli l'asset **ARSessionConfig**. 
+    * Seleziona **Compile** (Compila) e **Save** (Salva) e torna alla finestra principale.
+
+![Start AR Session (Avvia sessione AR)](images/unreal-uxt/3-start-ar-session.PNG)
 
 ## <a name="create-a-pawn"></a>Creare un pedone
+A questo punto, il progetto necessita ancora di un oggetto Player. In Unreal, l'oggetto **Pawn** (Pedone) rappresenta l'utente del gioco, ma in questo caso sarà l'esperienza HoloLens 2.
 
-1.  Nella cartella dei contenuti crea un nuovo progetto basato su **DefaultPawn**. In Unreal, un pedone rappresenta l'utente del gioco o, in questo caso, l'esperienza HoloLens 2. Rinomina il nuovo pedone "MRPawn" e fai doppio clic su MRPawn per aprirlo. 
+1. Fai clic su **Add New > Blueprint Class** (Aggiungi nuovo > Classe progetto) nella cartella **Content** ed espandi la sezione **All Classes** (Tutte le classi) in fondo. 
+    * Cerca **DefaultPawn**, fai clic su **Select** (Seleziona) e fai doppio clic sull'asset per aprirlo. 
 
 ![Creare un nuovo pedone basato su DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
-2.  Per impostazione predefinita, il pedone include un componente mesh e un componente di collisione, poiché nella maggior parte dei progetti Unreal, i pedoni controllati dall'utente sono oggetti solidi che si scontrano con altri componenti. In questa situazione, l'utente corrisponde al pedone e si vuole quindi passare attraverso gli ologrammi senza generare collisioni. Nel pannello dei componenti seleziona **CollisionComponent**. Nel pannello dei dettagli scorri verso il basso fino alla sezione Collision (Collisione) e fai clic sull'elenco a discesa accanto a Collision Presets (Set di impostazioni per la collisione). Modifica il valore da Pawn (Pedone) a **NoCollision**. Esegui la stessa operazione per **MeshComponent**. Fai clic su **Compile** (Compila) e quindi su **Save** (Salva) per salvare il progetto. Torna alla finestra principale. 
+> [!NOTE]
+> Per impostazione predefinita, i pedoni hanno componenti mesh e collisione. Nella maggior parte dei progetti Unreal, i pedoni sono oggetti solidi che possono collidere con altri componenti. Dato che il pedone e l'utente coincidono nella realtà mista, è necessario poter passare attraverso gli ologrammi senza collisioni. 
+
+2. Seleziona **CollisionComponent** nel pannello **Components** (Componenti) e scorri fino alla sezione **Collision** (Collisione) del pannello **Details** (Dettagli). 
+    * Fai clic sull'elenco a discesa **Collision Presets** (Set di impostazioni di collisione) e cambia il valore in **NoCollision**. 
+    * Esegui la stessa operazione per **MeshComponent** e fai clic su **Compile** (Compila) e **Save** (Salva) per salvare il progetto. 
 
 ![Modifica dei set di impostazioni di collisione del pedone](images/unreal-uxt/3-nocollision.PNG)
 
-## <a name="create-a-game-mode"></a>Crea una modalità di gioco
+Al termine, torna alla finestra principale.
 
-1.  Nella cartella Content (Contenuto) del browser dei contenuti crea un nuovo progetto il cui elemento padre è **Game Mode Base** (Base modalità gioco). Denominalo MRGameMode e fai doppio clic per aprirlo. In Unreal, la modalità di gioco determina una serie di impostazioni relative al gioco o all'esperienza, incluso il pedone predefinito da usare. 
+## <a name="create-a-game-mode"></a>Creare una modalità di gioco
+Per completare la configurazione della realtà mista manca solo la modalità di gioco. La modalità di gioco determina una serie di impostazioni relative al gioco o all'esperienza, incluso il pedone predefinito da usare.
+
+1.  Fai clic su **Add New > Blueprint Class** (Aggiungi nuovo > Classe progetto) nella cartella **Content** (Contenuto) ed espandi la sezione **All Classes** (Tutte le classi) in fondo. 
+    * Cerca **Game Mode Base** (Base modalità gioco), assegna il nome **MRGameMode** e fai doppio clic per aprire l'elemento. 
 
 ![MRGameMode nel browser dei contenuti](images/unreal-uxt/3-gamemode.PNG)
 
-2.  Nel pannello dei dettagli individua la sezione Classes (Classi). Modifica il parametro Default Pawn Class (Classe pedone predefinito) da DefaultPawn a **MRPawn**. Seleziona **Compile** (Compila) e quindi **Save** (Salva). Torna alla finestra principale. 
+2.  Passa alla sezione **Classes** (Classi) nel pannello **Details** (Dettagli) e modifica **Default Pawn Class** (Classe pedone predefinito) in **MRPawn**. 
+    * Seleziona **Compile** (Compila) e **Save** (Salva) e torna alla finestra principale. 
 
 ![Impostazione della classe di pedone predefinita](images/unreal-uxt/3-setpawn.PNG)
 
-3.  L'ultimo passaggio di configurazione del progetto prevede di indicare a Unreal che l'impostazione predefinita è MRGameMode. Passa a **Edit > Projects Settings > Maps & modes** (Modifica > Impostazioni progetti > Mappe e modalità) nella sezione Projects (Progetti). Nella sezione Default Modes (Modalità predefinite) fai clic sull'elenco a discesa e scegli **MRGameMode**. Nella sezione Default Maps (Mappe predefinite) sottostante, modifica sia **EditorStartupMap** sia **GameDefaultMap** sostituendoli con **Main** (Principale). In questo modo, quando si chiude e si riapre l'editor, per impostazione predefinita viene selezionata la mappa principale. Analogamente, quando si riproduce il gioco, la mappa principale è il livello avviato. 
+3.  Seleziona **Edit > Projects Settings** (Modifica > Impostazioni progetti) e fai clic su **Maps & Modes** (Mappe e modalità) nell'elenco a sinistra. 
+    * Espandi **Default Modes** (Modalità predefinite) e cambia **Default Game Mode** (Modalità gioco predefinita) in **MRGameMode**. 
+    * Espandi **Default Maps** (Mappe predefinite) e imposta sia **EditorStartupMap** sia **GameDefaultMap** su **Main** (Principale). In questo modo, quando si chiude e si riapre l'editor o si usa il gioco, per impostazione predefinita viene selezionata la mappa principale.
 
 ![Project Settings - Maps & Modes (Impostazioni progetto - Mappe e modalità)](images/unreal-uxt/3-mapsandmodes.PNG)
+
+Dopo avere completato la configurazione del progetto per la realtà mista, puoi passare all'esercitazione successiva e iniziare ad aggiungere input utente alla scena. 
 
 [Sezione successiva: 4. Rendere la scena interattiva](unreal-uxt-ch4.md)

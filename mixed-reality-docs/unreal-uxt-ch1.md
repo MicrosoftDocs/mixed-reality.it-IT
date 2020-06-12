@@ -1,39 +1,53 @@
 ---
 title: 1. Guida introduttiva
-description: Parte 1 di un'esercitazione per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Parte 1 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 3ca47cfe7bb0a733932f3777cc8b531ef9df8e71
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: c16671fc8f4233378dafa646786df1f7b5ae18e1
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840130"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330168"
 ---
 # <a name="1-getting-started"></a>1. Guida introduttiva
 
-Questa è un'esercitazione dettagliata che descrive come creare un'app di scacchi interattiva HoloLens 2 con Unreal Engine 4. Imparerai anche come usare il plug-in UX Tools di Mixed Reality Toolkit per Unreal per uno sviluppo più rapido. 
+Che tu sia alle prime armi o un professionista esperto, questo è il punto di partenza ideale per esplorare [HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/) e [Unreal Engine](https://www.unrealengine.com/en-US/). Questa serie di esercitazioni ti offrirà una guida dettagliata su come creare un'app di scacchi interattiva con il [plug-in UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal), che fa parte di [Mixed Reality Toolkit per Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal). Con il plug-in potrai aggiungere comuni funzionalità UX ai tuoi progetti con codice, progetti ed esempi. 
+
+![Schermata finale in viewport](images/unreal-uxt/5-endscene.PNG)
+
+Alla fine della serie avrai acquisito esperienza pratica su:
+* Avvio di un nuovo progetto
+* Configurazione per la realtà mista
+* Gestione dell'input utente
+* Aggiunta di pulsanti
+* Riproduzione su un emulatore o dispositivo
+
+Per eventuali chiarimenti, vedi [Panoramica dello sviluppo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).
 
 ## <a name="prerequisites"></a>Prerequisiti
-
+Prima di iniziare, è importante verificare che siano soddisfatti questi requisiti:
 * Windows 10 1809 o versioni successive
 * Windows 10 SDK 10.0.18362.0 o versioni successive
-* Unreal Engine 4.25 o versioni successive
+* [Unreal Engine](https://www.unrealengine.com/en-US/get-now) 4.25 o versioni successive
 * Dispositivo Microsoft HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode) o emulatore
-* Visual Studio 2019 con i carichi di lavoro e i componenti seguenti
+* Visual Studio 2019 con i carichi di lavoro seguenti
 
-### <a name="installing-visual-studio-2019-workloads-and-components"></a>Installazione di Visual Studio 2019, carichi di lavoro e componenti
-1. Installa Visual Studio 2019 o aggiorna alla versione più recente
-* [Scarica Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-2. Installa i carichi di lavoro seguenti:
-* Sviluppo per desktop con C++
-* Sviluppo per desktop .NET
-* Sviluppo per la piattaforma UWP
-3. Installa i singoli componenti seguenti:
-* Compilatori, strumenti di compilazione e runtime > MSVC versione 142 - VS 2019 C++ ARM64 Build Tools (versione più recente)
+### <a name="installing-visual-studio-2019"></a>Installazione di Visual Studio 2019
+L'ultimo passaggio consiste nel configurare Visual Studio nel modo seguente:
+1. Installa la versione più recente di [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+2. Installa i [carichi di lavoro](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads) seguenti:
+    * Sviluppo per desktop con C++
+    * Sviluppo per desktop .NET
+    * Sviluppo per la piattaforma UWP
+
+3. Installa i [componenti](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?view=vs-2019#modify-individual-components) seguenti:
+    * Compilatori, strumenti di compilazione e runtime > MSVC versione 142 - VS 2019 C++ ARM64 Build Tools (versione più recente)
+
+Ecco fatto! Ora è tutto pronto per iniziare il progetto di app di scacchi.
 
 [Sezione successiva: 2. Inizializzazione del progetto e prima applicazione](unreal-uxt-ch2.md)
