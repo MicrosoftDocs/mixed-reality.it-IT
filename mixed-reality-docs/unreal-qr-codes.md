@@ -1,44 +1,74 @@
 ---
 title: Codici a matrice in Unreal
 description: Guida all'uso dei codici a matrice in Unreal
-author: sw5813
-ms.author: jacksonf
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, sviluppo, funzionalità, documentazione, guide, ologrammi, codici a matrice
-ms.openlocfilehash: 67a3a8092ab908cba6768e92ed6a0e7bd2737275
-ms.sourcegitcommit: 5b802078090700e06630c8fc665fedeaa0a16eb7
+ms.openlocfilehash: 90a51227ae455389168fb3262e83f34b64a7bfb5
+ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83342659"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428743"
 ---
-# <a name="qr-codes-in-unreal"></a><span data-ttu-id="9d9d4-104">Codici a matrice in Unreal</span><span class="sxs-lookup"><span data-stu-id="9d9d4-104">QR codes in Unreal</span></span>
+# <a name="qr-codes-in-unreal"></a><span data-ttu-id="b6698-104">Codici a matrice in Unreal</span><span class="sxs-lookup"><span data-stu-id="b6698-104">QR codes in Unreal</span></span>
 
-<span data-ttu-id="9d9d4-105">HoloLens può individuare i codici a matrice in uno spazio del mondo reale per il rendering degli ologrammi in posizioni note del mondo reale.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-105">HoloLens can locate QR codes in world space to render holograms at known positions in the real world.</span></span>  <span data-ttu-id="9d9d4-106">Questi codici possono essere usati anche per eseguire il rendering degli ologrammi su più dispositivi nella stessa posizione, in modo da creare un'esperienza condivisa.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-106">This can also be used to render holograms on multiple devices in the same location to create a shared experience.</span></span> 
+## <a name="overview"></a><span data-ttu-id="b6698-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="b6698-105">Overview</span></span>
 
-<span data-ttu-id="9d9d4-107">Per abilitare il rilevamento a matrice in HoloLens, verifica che la funzionalità Webcam sia selezionata nell'editor di Unreal in Project Settings > Platform > HoloLens > Capabilities (Impostazioni progetto > Piattaforma > HoloLens > Funzionalità).</span><span class="sxs-lookup"><span data-stu-id="9d9d4-107">To enable QR detection on HoloLens, ensure the “Webcam” capability is checked in the Unreal editor under Project Settings > Platform > HoloLens > Capabilities.</span></span>  
+<span data-ttu-id="b6698-106">HoloLens 2 può individuare i codici a matrice in uno spazio del mondo reale usando la webcam, eseguendone il rendering come ologrammi mediante un sistema di coordinate nella posizione reale di ciascun nodo.</span><span class="sxs-lookup"><span data-stu-id="b6698-106">The HoloLens 2 can see QR codes in world space using the webcam, which renders them as holograms using a coordinate system at each code's real-world position.</span></span>  <span data-ttu-id="b6698-107">Oltre ai singoli codici a matrice, HoloLens 2 è in grado di eseguire il rendering degli ologrammi nella stessa posizione su più dispositivi per creare un'esperienza condivisa.</span><span class="sxs-lookup"><span data-stu-id="b6698-107">In addition to single QR codes, HoloLens 2 can also render holograms in the same location on multiple devices to create a shared experience.</span></span> <span data-ttu-id="b6698-108">Assicurati di seguire le procedure consigliate per l'aggiunta di codici a matrice alle tue applicazioni:</span><span class="sxs-lookup"><span data-stu-id="b6698-108">Make sure you're following the best practices for adding QR codes to your applications:</span></span>
 
-<span data-ttu-id="9d9d4-108">Puoi acconsentire esplicitamente all'uso del rilevamento dei codici a matrice in Unreal avviando ARSession con la funzione StartARSession.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-108">Opt into using QR code tracking in Unreal by starting an ARSession with the StartARSession function.</span></span> 
+- <span data-ttu-id="b6698-109">Zone silenziose</span><span class="sxs-lookup"><span data-stu-id="b6698-109">Quiet zones</span></span>
+- <span data-ttu-id="b6698-110">Illuminazione e sfondo</span><span class="sxs-lookup"><span data-stu-id="b6698-110">Lighting and backdrop</span></span>
+- <span data-ttu-id="b6698-111">Dimensione, distanza e posizione angolare</span><span class="sxs-lookup"><span data-stu-id="b6698-111">Size, distance, and angular position</span></span>
 
-<span data-ttu-id="9d9d4-109">I codici a matrice vengono esposti tramite il sistema di geometria rilevata AR di Unreal come immagine rilevata.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-109">QR Codes are surfaced through Unreal’s AR tracked geometry system as a tracked image.</span></span>  <span data-ttu-id="9d9d4-110">Per usare questo sistema, aggiungi un componente AR Trackable Notify a un attore del progetto:</span><span class="sxs-lookup"><span data-stu-id="9d9d4-110">To use this, add an AR Trackable Notify component to a Blueprint actor:</span></span> 
+<span data-ttu-id="b6698-112">Presta particolare attenzione alle [considerazioni sull'ambiente](environment-considerations-for-hololens.md) quando vengono inseriti codici a matrice nell'app.</span><span class="sxs-lookup"><span data-stu-id="b6698-112">Pay special attention to the [environment considerations](environment-considerations-for-hololens.md) when QR codes are being placed in your app.</span></span> <span data-ttu-id="b6698-113">Per altre informazioni su questi argomenti e per istruzioni su come scaricare il pacchetto NuGet necessario, vedi il documento principale [Rilevamento di codici a matrice](qr-code-tracking.md).</span><span class="sxs-lookup"><span data-stu-id="b6698-113">You can find more information on each of these topics and instructions on how to download the required NuGet package in the main [QR code tracking](qr-code-tracking.md) document.</span></span> 
+
+## <a name="enabling-qr-detection"></a><span data-ttu-id="b6698-114">Abilitazione del rilevamento di codici a matrice</span><span class="sxs-lookup"><span data-stu-id="b6698-114">Enabling QR detection</span></span>
+<span data-ttu-id="b6698-115">Dato che HoloLens 2 deve usare la webcam per visualizzare i codici a matrice, è necessario abilitarla nelle impostazioni del progetto:</span><span class="sxs-lookup"><span data-stu-id="b6698-115">Since the HoloLens 2 needs to use the webcam to see QR codes, you'll need to enable it in the project settings:</span></span>
+- <span data-ttu-id="b6698-116">Apri **Edit > Project Settings** (Modifica > Impostazioni progetto), scorri fino alla sezione **Platforms** (Piattaforme) e fai clic su **HoloLens**.</span><span class="sxs-lookup"><span data-stu-id="b6698-116">Open **Edit > Project Settings**, scroll to the **Platforms** section and click **HoloLens**.</span></span>
+    + <span data-ttu-id="b6698-117">Espandi la sezione **Capabilities** (Funzionalità) e seleziona **Webcam**.</span><span class="sxs-lookup"><span data-stu-id="b6698-117">Expand the **Capabilities** section and check **Webcam**.</span></span>  
+
+<span data-ttu-id="b6698-118">Devi anche acconsentire esplicitamente al rilevamento dei codici a matrice [aggiungendo un asset ARSessionConfig](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).</span><span class="sxs-lookup"><span data-stu-id="b6698-118">You'll also need to opt into QR code tracking by [adding an ARSessionConfig asset](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).</span></span>
+
+## <a name="setting-up-a-tracked-image"></a><span data-ttu-id="b6698-119">Configurazione di un'immagine rilevata</span><span class="sxs-lookup"><span data-stu-id="b6698-119">Setting up a tracked image</span></span>
+
+<span data-ttu-id="b6698-120">I codici a matrice vengono esposti tramite il sistema di geometria rilevata AR di Unreal come immagine rilevata.</span><span class="sxs-lookup"><span data-stu-id="b6698-120">QR codes are surfaced through Unreal’s AR tracked geometry system as a tracked image.</span></span> <span data-ttu-id="b6698-121">Per procedere, è necessario:</span><span class="sxs-lookup"><span data-stu-id="b6698-121">To get this working, you'll need to:</span></span>
+1. <span data-ttu-id="b6698-122">Creare un progetto e aggiungere un componente **ARTrackableNotify**.</span><span class="sxs-lookup"><span data-stu-id="b6698-122">Create a Blueprint and add an **ARTrackableNotify** component.</span></span>
 
 ![Codice a matrice - AR Trackable Notify](images/unreal-spatialmapping-artrackablenotify.PNG)
 
-<span data-ttu-id="9d9d4-112">Passa quindi ai dettagli del componente e fai clic sul pulsante verde "+" per selezionare gli eventi da monitorare.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-112">Then go to the component’s details and click on the green “+” button on the events to monitor.</span></span>  
+2. <span data-ttu-id="b6698-124">Selezionare **ARTrackableNotify** ed espandere la sezione **Events** (Eventi) nel pannello **Details** (Dettagli).</span><span class="sxs-lookup"><span data-stu-id="b6698-124">Select **ARTrackableNotify** and expand the **Events** section in the **Details** panel.</span></span> 
 
 ![Eventi dei codici a matrice](images/unreal-spatialmapping-events.PNG)
 
-<span data-ttu-id="9d9d4-114">In questo esempio, abbiamo effettuato la sottoscrizione a OnUpdateTrackedImage per eseguire il rendering di un punto al centro di un codice a matrice e stampare i dati codificati del codice a matrice.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-114">Here, we have subscribed to OnUpdateTrackedImage to render a point in the center of a QR Code and print the QR code’s encoded data.</span></span> 
+3. <span data-ttu-id="b6698-126">Fare clic su **+** accanto a **On Add Tracked Geometry** (All'aggiunta della geometria rilevata) per aggiungere il nodo in Event Graph (Grafico eventi).</span><span class="sxs-lookup"><span data-stu-id="b6698-126">Click **+** next to **On Add Tracked Geometry** to add the node to the Event Graph.</span></span>
+    - <span data-ttu-id="b6698-127">L'elenco completo degli eventi è disponibile nell'API del componente [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html).</span><span class="sxs-lookup"><span data-stu-id="b6698-127">You can find the full list of events in the [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html) component API.</span></span> 
+
+![Esempio di rendering dei codici a matrice](images/unreal-qr-codes-tracked-geometry.png)
+
+## <a name="using-a-tracked-image"></a><span data-ttu-id="b6698-129">Uso di un'immagine rilevata</span><span class="sxs-lookup"><span data-stu-id="b6698-129">Using a tracked image</span></span>
+<span data-ttu-id="b6698-130">Il grafico degli eventi nell'immagine seguente mostra l'evento **OnUpdateTrackedImage** usato per eseguire il rendering di un punto al centro di un codice a matrice e stamparne i dati.</span><span class="sxs-lookup"><span data-stu-id="b6698-130">The Event Graph in the following image shows the **OnUpdateTrackedImage** event being used to render a point in the center of a QR code and print out its data.</span></span> 
 
 ![Esempio di rendering dei codici a matrice](images/unreal-qr-render.PNG)
 
-<span data-ttu-id="9d9d4-116">Esegui innanzitutto il cast dell'immagine rilevata in un codice ARTrackedQRCode, per verificare che l'immagine aggiornata corrente sia un codice a matrice.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-116">First cast the tracked image to an ARTrackedQRCode to verify that the current updated image is a QR code.</span></span>  <span data-ttu-id="9d9d4-117">I dati codificati possono quindi essere recuperati con la variabile QRCode.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-117">Then the encoded data can be retrieved with the QRCode variable.</span></span>  <span data-ttu-id="9d9d4-118">La parte superiore sinistra del codice a matrice può essere recuperata dalla posizione di GetLocalToWorldTransform.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-118">The top-left of the QR code can be retrieved from the location of GetLocalToWorldTransform.</span></span>  <span data-ttu-id="9d9d4-119">Le dimensioni possono essere recuperate con GetEstimateSize.</span><span class="sxs-lookup"><span data-stu-id="9d9d4-119">The dimensions can be retrieved with GetEstimateSize.</span></span> 
+<span data-ttu-id="b6698-132">Ecco cosa accade:</span><span class="sxs-lookup"><span data-stu-id="b6698-132">Here's waht's going on:</span></span>
+1. <span data-ttu-id="b6698-133">Prima di tutto, viene eseguito il cast dell'immagine rilevata in un codice **ARTrackedQRCode** per verificare che l'immagine aggiornata corrente sia un codice a matrice.</span><span class="sxs-lookup"><span data-stu-id="b6698-133">First, the tracked image is cast to an **ARTrackedQRCode** to check that the current updated image is a QR code.</span></span>  
+2. <span data-ttu-id="b6698-134">I dati codificati vengono recuperati dalla variabile **QRCode**.</span><span class="sxs-lookup"><span data-stu-id="b6698-134">The encoded data is retrieved from the **QRCode** variable.</span></span> <span data-ttu-id="b6698-135">È possibile ottenere la parte superiore sinistra del codice a matrice dalla posizione di **GetLocalToWorldTransform** e le dimensioni con **GetEstimateSize**.</span><span class="sxs-lookup"><span data-stu-id="b6698-135">You can get the top-left of the QR code from the location of **GetLocalToWorldTransform** and the dimensions with **GetEstimateSize**.</span></span> 
 
-<span data-ttu-id="9d9d4-120">Ogni codice a matrice ha anche un ID GUID univoco:</span><span class="sxs-lookup"><span data-stu-id="9d9d4-120">Every QR code also has a unique guid ID:</span></span> 
+<span data-ttu-id="b6698-136">È anche possibile [ottenere il sistema di coordinate per un codice a matrice](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) nel codice.</span><span class="sxs-lookup"><span data-stu-id="b6698-136">You can also [get the coordinate system for a QR code](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) in code.</span></span>
+
+## <a name="finding-the-unique-id"></a><span data-ttu-id="b6698-137">Ricerca dell'ID univoco</span><span class="sxs-lookup"><span data-stu-id="b6698-137">Finding the unique ID</span></span>
+<span data-ttu-id="b6698-138">Ogni codice a matrice ha un ID GUID univoco. Per trovarlo:</span><span class="sxs-lookup"><span data-stu-id="b6698-138">Every QR code has a unique guid ID, which you can find by:</span></span>
+- <span data-ttu-id="b6698-139">Trascina e rilascia il segnaposto **As ARTracked QRCode** e cerca **Get Unique ID** (Ottieni ID univoco).</span><span class="sxs-lookup"><span data-stu-id="b6698-139">Dragging and dropping the **As ARTracked QRCode**  pin and searching for **Get Unique ID**.</span></span>
 
 ![GUID dei codici a matrice](images/unreal-qr-guid.PNG)
 
-## <a name="see-also"></a><span data-ttu-id="9d9d4-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d9d4-122">See also</span></span>
-* [<span data-ttu-id="9d9d4-123">Rilevamento di codici a matrice</span><span class="sxs-lookup"><span data-stu-id="9d9d4-123">QR code tracking</span></span>](qr-code-tracking.md)
+<span data-ttu-id="b6698-141">Le operazioni sui codici a matrice sono piuttosto complesse, quindi ci sono diversi aspetti da approfondire.</span><span class="sxs-lookup"><span data-stu-id="b6698-141">There's a lot going on behind the scenes with QR codes, so this isn't the end of the road.</span></span> <span data-ttu-id="b6698-142">I collegamenti riportati di seguito consentono di accedere a informazioni più dettagliate a questo proposito.</span><span class="sxs-lookup"><span data-stu-id="b6698-142">Be sure to check out the following links for more details on what's under the hood.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="b6698-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b6698-143">See also</span></span>
+* [<span data-ttu-id="b6698-144">Mapping spaziale</span><span class="sxs-lookup"><span data-stu-id="b6698-144">Spatial mapping</span></span>](spatial-mapping.md)
+* [<span data-ttu-id="b6698-145">Ologrammi</span><span class="sxs-lookup"><span data-stu-id="b6698-145">Holograms</span></span>](hologram.md)
+* [<span data-ttu-id="b6698-146">Sistemi di coordinate</span><span class="sxs-lookup"><span data-stu-id="b6698-146">Coordinate systems</span></span>](coordinate-systems.md)
