@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nuovo, Web immersivo, Microsoft Edge, browser, VR
-ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
-ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
+ms.openlocfilehash: d61780045e795850012536a36fde67b9934c76aa
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885616"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216232"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Realtà mista di Windows e la nuova Microsoft Edge
 
@@ -30,7 +30,7 @@ Il nuovo Microsoft Edge [adotta il progetto Chromium Open Source](https://blogs.
 
 I clienti che vogliono usare la nuova Microsoft Edge nella Home realtà mista di Windows per la realtà mista di Windows sono in grado di **eseguire l'aggiornamento a Windows 10 versione 1903 o successiva per il supporto nativo di applicazioni Win32, come il nuovo Microsoft Edge,** nella Home realtà mista. Controllare Windows Update o [installare manualmente la versione più recente di Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
-Per ottenere la migliore esperienza Microsoft Edge nella Home realtà mista, è consigliabile attendere **alcune ottimizzazioni della realtà mista di Windows per i nuovi Microsoft Edge che arrivano con l'aggiornamento cumulativo 2020-01 per Windows 10 versione 1903 (o versione successiva)** , che dovrebbe essere disponibile in Windows Update entro la fine del gennaio.
+Per ottenere la migliore esperienza Microsoft Edge nella Home realtà mista, è consigliabile attendere **alcune ottimizzazioni della realtà mista di Windows per i nuovi Microsoft Edge che arrivano con l'aggiornamento cumulativo 2020-01 per Windows 10 versione 1903 (o versione successiva)**, che dovrebbe essere disponibile in Windows Update entro la fine del gennaio.
 
 >[!IMPORTANT]
 >Se si sceglie di scaricare il nuovo Microsoft Edge prima di eseguire questi aggiornamenti, si verificano alcuni problemi noti con il relativo comportamento nella realtà mista di Windows (che è possibile leggere di seguito).
@@ -49,9 +49,10 @@ Per ottenere la migliore esperienza Microsoft Edge nella Home realtà mista, è 
 ### <a name="additional-known-issues"></a>Problemi noti aggiuntivi
 
 -   I siti Web aperti in realtà mista di Windows andranno perduti quando si chiude il portale di realtà mista, anche se le finestre Microsoft Edge rimarranno nella posizione in cui sono state inserite nella Home realtà mista.
+- Le esperienze di WebXR, tra cui l'estensione del Visualizzatore 360, potrebbero non essere avviate correttamente nei PC con una configurazione GPU ibrida. È possibile risolvere questo problema selezionando la GPU dedicata come GPU predefinita nel software della scheda grafica.
 -   L'audio da Microsoft Edge Windows non è spaziale.
--   **Correzione della versione dell'estensione del visualizzatore 360 2.3.8**: l'apertura di un video 360 da YouTube in realtà mista di Windows può comportare la distorsione del video nell'auricolare. Il riavvio di Microsoft Edge dovrebbe aggiornare in modo invisibile l'estensione del Visualizzatore 360 per risolvere il problema. È possibile verificare la versione dell'estensione immettendo `edge://system/` nella barra degli indirizzi e selezionando il pulsante **Espandi** accanto a "estensioni".
--   Durante le sessioni di realtà mista di Windows, i monitoraggi virtuali verranno visualizzati come monitoraggi fisici generici nelle impostazioni > Visualizzazione > di sistema.
+-   **Correzione della versione dell'estensione del visualizzatore 360 2.3.8**: l'apertura di un video 360 da YouTube in realtà mista di Windows può comportare la distorsione del video nell'auricolare. Il riavvio di Edge dovrebbe aggiornare in modo invisibile l'estensione del Visualizzatore 360 per risolvere il problema. Per verificare quale versione dell'estensione è possibile immettere `edge://system/` nella barra degli indirizzi e selezionare il pulsante **Espandi** accanto a "estensioni".
+-   Durante le sessioni di realtà mista di Windows, i monitoraggi virtuali verranno visualizzati come monitoraggi fisici generici nelle impostazioni > visualizzazione > di sistema.
 
 
 
