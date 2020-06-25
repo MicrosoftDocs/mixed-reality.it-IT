@@ -6,20 +6,17 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, Coach mano, auricolare immersivo, MRTK, Hands, assistenza
-ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.openlocfilehash: 38da046256dce3242b464a0741f2afa7fb19ff3c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202737"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345666"
 ---
 # <a name="hand-coach"></a>Coach mano
+![Esempio: Hand Coach](images/HandCoach/MRTK_handCoach.jpg)<br>
 
 Hand Coach è un modello 3D che viene attivato quando il sistema non rileva le mani dell'utente. Viene implementato come componente "didattico" che aiuta a guidare l'utente quando il movimento non è stato insegnato. Se gli utenti non hanno eseguito il movimento specificato per un periodo, il ciclo passa con un ritardo. Il coach della mano può essere usato per rappresentare la pressione di un pulsante o la selezione di un ologramma.  
-
-
-Esempio di ![:](images/HandCoach/MRTK_handCoach.jpg) di allenamenti a mano<br>
-*Esempio di HandCoach da MRTK*
 
 ## <a name="hand-coach-provided"></a>Hand Coach fornito
 
@@ -27,43 +24,43 @@ Il modello di interazione corrente rappresenta un'ampia gamma di controlli di mo
 
 :::row:::
     :::column:::
-       ![esempio di near Select](images/HandCoach/NearSelect.gif)<br>
+       ![Esempio di near Select](images/HandCoach/NearSelect.gif)<br>
        **Esempio di near Select-used Mostra come selezionare i pulsanti o chiudere gli oggetti interagibili**<br>
     :::column-end:::
     :::column:::
-       ![esempio di](images/HandCoach/AirTap.gif) di tocco aereo<br>
+       ![Esempio di rubinetto aereo](images/HandCoach/AirTap.gif)<br>
         **Esempio di tocco aereo: usato per mostrare come selezionare gli oggetti che sono lontani**<br>
     :::column-end:::
     :::column:::
-       ![esempio di spostamento](images/HandCoach/Move.gif)<br>
+       ![Esempio di spostamento](images/HandCoach/Move.gif)<br>
        **Esempio di spostamento di un oggetto nello spazio: usato per mostrare come spostare un ologramma nello spazio**<br>
     :::column-end:::
     :::column:::
-       ![esempio di rotazione](images/HandCoach/Rotate.gif)<br>
+       ![Esempio di rotazione](images/HandCoach/Rotate.gif)<br>
        **Esempio di rotazione: usata per mostrare come ruotare gli ologrammi o gli oggetti**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ![esempio di](images/HandCoach/Scale.gif) di scalabilità<br>
+       ![Esempio di scala](images/HandCoach/Scale.gif)<br>
        **Esempio di scala: usato per illustrare come modificare gli ologrammi in modo che siano più grandi o più piccoli**<br>
     :::column-end:::
     :::column:::
-       Esempio di ![di Palm up](images/HandCoach/PalmUp.gif)<br>
+       ![Esempio di Palm up](images/HandCoach/PalmUp.gif)<br>
         **Esempio di palmare: uso suggerito per visualizzare i menu a mano**<br>
     :::column-end:::
     :::column:::
-       ![esempio di HandFlip](images/HandCoach/HandFlip.gif)<br>
+       ![Esempio di HandFlip](images/HandCoach/HandFlip.gif)<br>
        **Esempio of hand Flip: un altro modo per visualizzare i menu a mano**<br>
     :::column-end:::
     :::column:::
-       ![esempio di](images/HandCoach/Scoll.gif) di scorrimento<br>
+       ![Esempio di scorrimento](images/HandCoach/Scoll.gif)<br>
        **Esempio di scorrimento: usato per scorrere un elenco o un documento lungo**<br>
     :::column-end:::
 :::row-end:::
 
-## <a name="design-concepts"></a>Concetti di progettazione
+## <a name="design-concepts"></a>Concetti relativi alla progettazione
 
 Per Hololens2, abbiamo progettato le interazioni Hand in base a movimenti di mano istintiva e naturale. Si ritiene che questi siano intuitivi per la maggior parte degli utenti e pertanto non hanno creato momenti dedicati per l'apprendimento dei movimenti. Al contrario, abbiamo creato il coach per aiutare gli utenti che potrebbero rimanere bloccati o che non hanno familiarità con l'interazione con gli ologrammi. Scopri questi movimenti. Senza un momento di apprendimento, abbiamo pensato che gli utenti che mostravano come eseguire un'azione dimostrando che sarebbe l'opzione migliore. Negli studi, abbiamo scoperto che gli utenti erano in grado di capire il gesto ma aveva bisogno di una piccola guida. Se si rileva che un utente non interagisce con un oggetto per un periodo di tempo, viene attivato un coach della mano che mostra la posizione corretta e la posizione del dito. 
 
@@ -73,7 +70,7 @@ Quando si animano le mani, dovrebbe essere ovvio e shoudn ' t causare confusione
 
 Ad esempio, se si vuole che un utente prema un pulsante, viene attivata una mano che preme un pulsante.
 
-Esempio di ![: allenamento a mano vicino a Tap](images/HandCoach/NearSelect_unity.gif)<br>
+![Esempio: coach della mano vicino al tocco](images/HandCoach/NearSelect_unity.gif)<br>
 *Coach della mano che illustra quasi un gioiello*  
 
 ### <a name="hand-scale"></a>Scalabilità manuale
@@ -88,19 +85,19 @@ Non aspettarsi che gli utenti possano restare in ascolto di un set di istruzioni
 ## <a name="can-i-create-my-own"></a>È possibile crearne una personalizzata?
 
 Sì. Si consiglia di creare un proprio gesto univoco per il gioco e contribuire alla community.
-È stato fornito un file Maya di una mano truccata che può essere usata per l'app che può essere scaricata qui: <a href="files/HandCoach_MRTK.zip">Download HandCoach_MRTK. zip</a>
+È stato fornito un file Maya di una mano truccata che può essere usata per l'app che può essere scaricata qui: <a href="files/HandCoach_MRTK.zip">scaricare HandCoach_MRTK.zip</a>
 
-![esempio di mani animate in Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
+![Esempio di mani animate in Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
 *Esempio di mano animata di una casella in Maya*
 
 
 **Strumento di creazione consigliato**
 
-Tra gli artisti 3D, molti scelgono di usare il [Maya di Autodesk, che a sua volta è in grado di usare HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) per trasformare il modo in cui vengono create le risorse. Il file hands fornito è un file binario Maya, quindi è consigliabile usare Maya per animare ed esportare le mani. Se si preferisce usare un altro programma 3D, di seguito è riportato un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">scaricare HandCoachMRTK_FBX. zip</a> per creare la configurazione del controller. 
+Tra gli artisti 3D, molti scelgono di usare il [Maya di Autodesk, che a sua volta è in grado di usare HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) per trasformare il modo in cui vengono create le risorse. Il file hands fornito è un file binario Maya, quindi è consigliabile usare Maya per animare ed esportare le mani. Se si preferisce usare un altro programma 3D, di seguito è riportato un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">scaricare HandCoachMRTK_FBX.zip</a> per creare la configurazione del controller. 
 
 Se si usa il file della mano Maya scaricabile fornito, si consiglia di ridimensionare le mani in Unity a 0,6.
 
-![esempio: rig a mano in Maya](images/HandCoach/MayaExample.png)<br>
+![Esempio: rig della mano del coach in Maya](images/HandCoach/MayaExample.png)<br>
 *Mani truccate*
 
 ### <a name="technical-specs"></a>Specifiche tecniche
@@ -116,12 +113,12 @@ Se si usa il file della mano Maya scaricabile fornito, si consiglia di ridimensi
 *   Quando si ritiene soddisfacente l'animazione:
     *   Selezionare tutti i giunti e cuocere i fotogrammi chiave
     *   Eliminare i controller, selezionare le giunzioni e la mesh ed esportare come FBX
-    *  Se sono presenti più animazioni, è possibile usare l'utilità di esportazione del gioco integrata di Maya: https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
+    *  Se sono presenti più animazioni, è possibile usare l'utilità di esportazione del gioco integrata di Maya:https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
 
 ## <a name="exporting-from-maya"></a>Esportazione da Maya
 
 Una volta soddisfatta l'animazione
-* Seleziona tutte le giunzioni: Seleziona > gerarchia
+* Seleziona tutte le giunzioni: seleziona > gerarchia
 
      ![Esempio: posizione del menu](images/HandCoach/Hierarchy.png)<br>
 * Cuocere l'animazione: passare a animazione > chiave > animazione Bake
@@ -142,7 +139,7 @@ Una volta soddisfatta l'animazione
 
  Quando si esporta come FBX e si inserisce in Unity, ridimensionare le mani fino a 0,6. Abbiamo scoperto che questo era il giusto equilibrio per la visualizzazione delle mani. 
 
-![esempio: impostazioni Unity](images/HandCoach/HandHintScale.png)<br>
+![Esempio: impostazioni Unity](images/HandCoach/HandHintScale.png)<br>
 *Impostazioni Unity per HandCoach_R prefabbricate trovato in MRTK*
 
 
@@ -166,17 +163,17 @@ Una volta soddisfatta l'animazione
 
 
 
-### <a name="what-to-avoid"></a>Cosa evitare
+### <a name="what-to-avoid"></a>Da evitare
 * Ridimensionamento delle mani troppo grandi
 * Posizionare le mani troppo vicino all'utente
 * Le mani devono essere insegnate una sola volta. Il superamento dell'insegnamento può causare confusione e confusione
-*   Per portarlo in Unity, scaricare la versione più recente di MRTK qui: https://github.com/microsoft/MixedRealityToolkit-Unity
+*   Per portarla in Unity, scaricare la versione più recente di MRTK qui:https://github.com/microsoft/MixedRealityToolkit-Unity
     *   Materiale: Teaching_Hand2
     *   Script: fare riferimento alle linee guida di MRTK per <a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">MRTK Hand Coach</a>
     *   Impostazione per progetto
         *   Scenografia impostata su UWP: è possibile trovare l'istruzione nel [progetto di Unity](Configure-Unity-Project.md) per la realtà mista di Windows
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Interazione-nozioni fondamentali](interaction-fundamentals.md)
 * [Processo di creazione dell'asset](asset-creation-process.md)
 * [Movimenti](gestures.md)

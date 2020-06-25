@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, input
-ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866921"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345701"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -219,7 +219,7 @@ Anche se l'input vocale è ideale per molte applicazioni diverse, presenta anche
 La chiave consiste nel risolvere questo problema nell'applicazione fornendo commenti e suggerimenti all'utente quando il sistema è in ascolto e ciò che il sistema ha compreso per creare chiarezza sui potenziali problemi nella comprensione corretta dell'utente.  
 
 **Input vocale negli spazi condivisi** La voce potrebbe non essere socialmente accettabile negli spazi condivisi con altri utenti.
-Ecco alcuni esempi:
+Di seguito sono disponibili alcuni esempi:
 * L'utente potrebbe non voler disturbare altri, ad esempio in una libreria interattiva o in una sede condivisa
 * Gli utenti potrebbero sembrare imbarazzanti,
 * Un utente potrebbe non essere scomodo a indicare un messaggio personale o riservato (incluse le password) mentre altri sono in ascolto
@@ -282,9 +282,9 @@ Per le applicazioni che vogliono sfruttare le opzioni di elaborazione dell'input
 
 Questa elaborazione audio è accelerata dall'hardware, il che significa che le funzionalità svuotano molto meno energia rispetto a quando la stessa elaborazione è stata eseguita sulla CPU HoloLens. Evitare di eseguire altre elaborazioni di input audio sulla CPU per ottimizzare la durata della batteria del sistema e sfruttare i vantaggi dell'elaborazione dell'input audio con offload incorporato.
 
-## <a name="languages"></a>Languages
+## <a name="languages"></a>Linguaggi
 
-HoloLens 2 supporta inoltre lingue aggiuntive. Tenere presente che i comandi vocali verranno sempre eseguiti nella lingua di visualizzazione del sistema anche se sono installate più tastiere o se le app tentano di creare un riconoscimento vocale in una lingua diversa.
+HoloLens 2 [supporta più lingue](https://docs.microsoft.com/hololens/hololens2-language-support). Tenere presente che i comandi vocali verranno sempre eseguiti nella lingua di visualizzazione del sistema anche se sono installate più tastiere o se le app tentano di creare un riconoscimento vocale in una lingua diversa.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -304,7 +304,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, è possi
 
 ---
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Sguardo e commit](gaze-and-commit.md)
 * [Interazioni istintive](interaction-fundamentals.md)
 * [Input MR 212: Voce](holograms-212.md)

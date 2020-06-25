@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensione della scena, mapping spaziale, realtà mista di Windows, Unity
-ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228016"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345681"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Panoramica dell'SDK per la comprensione della scena
 
@@ -117,7 +117,7 @@ SceneObjects può avere uno dei seguenti elementi:
 
 <table>
 <tr>
-<th>SceneObjectKind</th> <th>Descrizione</th>
+<th>SceneObjectKind</th> <th>Description</th>
 </tr>
 <tr><td>Background</td><td>Il SceneObject <b>non</b> è noto come uno degli altri tipi di oggetto scena riconosciuti. Questa classe non deve essere confusa con Unknown, in cui lo sfondo non è a parete/piano/soffitto e così via... mentre Unknown non è ancora stato categorizzato.</b></td></tr>
 <tr><td>Parete</td><td>Una parete fisica. Si presuppone che i muri siano strutture ambientali non mobili.</td></tr>
@@ -199,7 +199,7 @@ byte[] newSceneData = new byte[newSceneBuffer.Size];
 newSceneBuffer.GetData(newSceneData);
 Scene mySceneDeSerialized = Scene.Deserialize(newSceneData);
 
-// Save newSceneBlob for later
+// Save newSceneData for later
 ```
 
 ### <a name="sceneobject-enumeration"></a>Enumerazione SceneObject
