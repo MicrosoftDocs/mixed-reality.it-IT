@@ -1,17 +1,17 @@
 ---
 title: Informazioni di riferimento sulle API di Portale di dispositivi
 description: Informazioni di riferimento sulle API per il portale per dispositivi Windows in HoloLens
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portale per dispositivi Windows, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451326"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441798"
 ---
 # <a name="device-portal-api-reference"></a>Informazioni di riferimento sulle API di Portale di dispositivi
 
@@ -372,19 +372,19 @@ Parametri facoltativi (solo HoloLens 2)
 * Vstab: Abilita stabilizzazione video: true o false (il valore predefinito è false)
 * vstabbuffer: latenza buffer di stabilizzazione video: da 0 a 30 fotogrammi (il valore predefinito è 15 fotogrammi)
 
-**/API/Holographic/Stream/Live.mp4 (GET)**
+**live.mp4/API/Holographic/Stream/(GET)**
 
 Flusso di 5Mbit 1280x720p 30 fps.
 
-**/API/Holographic/Stream/live_high. mp4 (GET)**
+**live_high.mp4/API/Holographic/Stream/(GET)**
 
 Flusso di 5Mbit 1280x720p 30 fps.
 
-**/API/Holographic/Stream/live_med. mp4 (GET)**
+**live_med.mp4/API/Holographic/Stream/(GET)**
 
 Un flusso 854x480p 30 fps da 2 MB.
 
-**/API/Holographic/Stream/live_low. mp4 (GET)**
+**live_low.mp4/API/Holographic/Stream/(GET)**
 
 Flusso 428x240p 15fps 0.6 Mbit.
 
@@ -534,7 +534,7 @@ Restituisce i dati
 Avvia una sessione di traccia WPR (performance)
 
 Parametri
-* profilo: nome profilo. I profili disponibili sono archiviati in perfprofiles/Profiles. JSON
+* profilo: nome profilo. I profili disponibili vengono archiviati in perfprofiles/profiles.jsin
 
 Restituisce i dati
 * All'avvio, restituisce lo stato della sessione WPR.

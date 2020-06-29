@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, input
-ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 37364e90aa1d8a7b607a99f4c9b830972f7f80b3
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345701"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441828"
 ---
 # <a name="voice-input"></a>Input vocale
 
@@ -96,6 +96,8 @@ Anche senza aggiungere in modo specifico il supporto vocale all'app, gli utenti 
 * "Scattare un'immagine"
 * "Avvia registrazione"
 * "Arresta registrazione"
+* "Mostra raggio della mano"
+* "Nascondi raggio di mano"
 * "Aumentare la luminosità"
 * "Riduzione della luminosità"
 * "Aumento del volume"

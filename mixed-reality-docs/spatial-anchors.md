@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema di coordinate, sistema di coordinate nello spazio, scala del mondo, mondo, scala, posizione, orientamento, ancoraggio, ancoraggio nello spazio, vincolato al mondo, vincolo con il mondo, persistenza, condivisione
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438024"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441788"
 ---
 # <a name="spatial-anchors"></a>Ancoraggi nello spazio
 
@@ -22,7 +22,7 @@ Un ancoraggio spaziale rappresenta un punto importante nel mondo in cui il siste
 * Usando gli <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancoraggi spaziali di Azure</a> per creare un ancoraggio cloud, l'applicazione può condividere un ancoraggio spaziale tra più dispositivi HoloLens, iOS e Android. Poiché ogni dispositivo esegue il rendering di un ologramma usando lo stesso ancoraggio spaziale, gli utenti vedranno che l'ologramma viene visualizzato nella stessa posizione nel mondo reale. Ciò rende possibili esperienze condivise in tempo reale.
 * Puoi usare <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Ancoraggi nello spazio di Azure</a> anche per la persistenza asincrona degli ologrammi su dispositivi HoloLens, iOS e Android. Condividendo un ancoraggio durevole nello spazio del cloud, più dispositivi possono osservare nel tempo lo stesso ologramma salvato in modo permanente, anche se tali dispositivi non sono presenti insieme contemporaneamente.
 
-Per le esperienze su scala o su larga scala per gli auricolari desktop con tethering che resteranno entro un diametro di 5 metri, in genere è possibile usare il [frame della fase di riferimento](coordinate-systems.md#stage-frame-of-reference) anziché gli ancoraggi spaziali, che fornisce un unico sistema di coordinate in cui esegue il rendering di tutto il contenuto. Tuttavia, se l'applicazione intende consentire agli utenti di aggirare oltre 5 metri in HoloLens, probabilmente operando in un intero piano di un edificio, saranno necessari ancoraggi spaziali per assicurare la stabilità del contenuto.
+Per esperienze su scala o su larga scala per gli auricolari desktop con tethering che resteranno entro un diametro di 5 metri, in genere è possibile usare il [frame della fase di riferimento](coordinate-systems.md#stage-frame-of-reference) anziché gli ancoraggi spaziali, che fornisce un unico sistema di coordinate in cui eseguire il rendering di tutto il contenuto. Tuttavia, se l'applicazione intende consentire agli utenti di aggirare oltre 5 metri in HoloLens, probabilmente operando in un intero piano di un edificio, saranno necessari ancoraggi spaziali per assicurare la stabilità del contenuto.
 
 Gli ancoraggi nello spazio sono uno strumento utilissimo per gli ologrammi che devono rimanere fissi nel mondo. Tuttavia, una volta posizionati, non possono essere spostati. Sono disponibili alternative agli ancoraggi più appropriati per gli ologrammi dinamici con tag insieme all'utente. È pertanto preferibile posizionare gli ologrammi dinamici usando una cornice di riferimento non spostabile (la base per le coordinate globali di Unity) oppure una cornice di riferimento associata.
 
@@ -52,7 +52,7 @@ Per mantenere la stabilità dell'ologramma, è necessario seguire la regola di 3
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Eseguire il rendering degli ologrammi a elevata dinamicità usando la cornice di riferimento non spostabile invece di un ancoraggio nello spazio locale
 
-Se si dispone di un ologramma altamente dinamico, ad esempio un carattere che cammina intorno a una stanza o un'interfaccia utente mobile che segue lungo il muro vicino all'utente, è preferibile ignorare gli ancoraggi spaziali locali ed eseguire il rendering degli ologrammi direttamente nel sistema di coordinate fornito dal [ cornice fissa di riferimento](coordinate-systems.md#stationary-frame-of-reference). Unity, a tale scopo, si posizionano gli ologrammi direttamente nelle coordinate internazionali senza una WorldAnchor. Gli ologrammi in un frame di riferimento fisso possono comportare la deriva quando l'utente è distante dall'ologramma. Tuttavia, è meno probabile che sia evidente per gli ologrammi dinamici: l'ologramma è costantemente in movimento o il suo movimento continua a essere sempre vicino all'utente in cui la deriva verrà ridotta a icona.
+Se si dispone di un ologramma altamente dinamico, ad esempio un carattere che cammina intorno a una stanza o un'interfaccia utente mobile che segue lungo la parete vicino all'utente, è preferibile ignorare gli ancoraggi spaziali locali ed eseguire il rendering degli ologrammi direttamente nel sistema di coordinate fornito dal [frame di riferimento fisso](coordinate-systems.md#stationary-frame-of-reference). In Unity è possibile ottenere questo risultato inserendo gli ologrammi direttamente nelle coordinate internazionali senza una WorldAnchor. Gli ologrammi in un frame di riferimento fisso possono comportare la deriva quando l'utente è distante dall'ologramma. Tuttavia, è meno probabile che sia evidente per gli ologrammi dinamici: l'ologramma è costantemente in movimento o il suo movimento continua a essere sempre vicino all'utente in cui la deriva verrà ridotta a icona.
 
 Un caso interessante di ologrammi dinamici è costituito da un oggetto che si anima da un sistema di coordinate ancorato a un altro. Ad esempio, è possibile che si disponga di due castelli a 10 metri di distanza, ciascuno sul proprio ancoraggio spaziale con un castello che spara una palla di cannone all'altro castello. Al momento della generazione di Cannonball, è possibile eseguirne il rendering nella posizione appropriata nel frame di riferimento fisso per coincidere con il cannone nel sistema di coordinate ancorato del primo castello. La palla può quindi seguire la sua traiettoria nella cornice di riferimento non spostabile mentre percorre 10 metri in aria. Quando la Cannonball raggiunge l'altro castello, è possibile scegliere di spostarla nel sistema di coordinate ancorato del secondo castello per consentire i calcoli fisici con i corpi rigidi del castello.
 
