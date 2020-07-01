@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278009"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570324"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -25,11 +25,11 @@ Unity offre un set di opzioni predefinite che in genere corrispondono al caso me
 
 In Unity 2018 LTS +, il livello di qualità del progetto può essere impostato:
 
-In **modifica** > **Impostazioni progetto** > **qualità** > impostare l' **impostazione predefinita** facendo clic sulla freccia verso il basso per il livello di qualità **molto basso** .
+In **modifica**  >  **Impostazioni progetto**  >  **qualità** > impostare il **valore predefinito** facendo clic sulla freccia verso il basso fino al livello di qualità **molto basso** .
 
 ### <a name="lighting-settings"></a>Impostazioni di illuminazione
 
-Analogamente alle impostazioni della scena di qualità, è importante impostare impostazioni di illuminazione ottimali per l'applicazione di realtà mista. In Unity, l'impostazione di illuminazione che in genere avrà un maggiore effetto sulle prestazioni sulla scena è l' **illuminazione globale in tempo reale**. Questa impostazione può essere disattivata in **finestra** > **rendering** > **impostazioni di illuminazione** > **illuminazione globale in tempo reale**.
+Analogamente alle impostazioni della scena di qualità, è importante impostare impostazioni di illuminazione ottimali per l'applicazione di realtà mista. In Unity, l'impostazione di illuminazione che in genere avrà un maggiore effetto sulle prestazioni sulla scena è l' **illuminazione globale in tempo reale**. Questa opzione può essere disattivata selezionando **Window**  >  **Rendering**  >  **Impostazioni illuminazione**  >  **globale in tempo reale**per il rendering della finestra.
 
 È disponibile un'altra impostazione di illuminazione, un' **illuminazione globale al forno**. Questa impostazione consente di ottenere risultati accattivanti e visivi per gli auricolari immersivi, ma in genere non è applicabile per lo sviluppo di HoloLens. Il **Illumniation globale cotto** viene calcolato solo per GameObject statici che in genere non sono disponibili in scenari HoloLens a causa della natura di un ambiente sconosciuto e mutevole.
 
@@ -42,29 +42,29 @@ Per ulteriori informazioni, leggere l' [illuminazione globale da Unity](https://
 
 Nelle applicazioni di realtà mista la scena viene visualizzata due volte, una per ogni occhio all'utente. Rispetto allo sviluppo 3D tradizionale, questo raddoppia effettivamente la quantità di lavoro che deve essere calcolata. Pertanto, è importante selezionare il percorso di rendering più efficiente in Unity per risparmiare sia sulla CPU che sul tempo GPU. Il rendering con istanza Single Pass ottimizza la pipeline di rendering Unity per le app di realtà miste ed è quindi consigliabile abilitare questa impostazione per impostazione predefinita per ogni progetto.
 
-Per abilitare questa funzionalità nel tuo progetto Unity
+Per abilitare questa funzionalità nel progetto Unity
 
-1)  Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
-2) Scegli **Single Pass Instanced** (Con istanze a singolo passaggio) dal menu a discesa **Stereo Rendering Method** (Metodo di rendering stereo). Deve essere selezionata la casella di controllo **Virtual Reality Supported** (Realtà virtuale supportata)
+1)  Aprire **le impostazioni di Player XR** (Vai a **modifica**impostazioni  >  **progetto**  >  **lettore**  >  **XR**)
+2) Selezionare **istanza passaggio singolo** dal menu a discesa **metodo di rendering stereo** (casella di controllo**Virtual Reality supported** )
 
 Per informazioni dettagliate su questo approccio di rendering, vedere gli articoli seguenti di Unity.
 
-- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/) (Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato)
-- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html) (Creazione di istanze a singolo passaggio)
+- [Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Istanze Single Pass](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problema comune relativo al rendering con istanze a singolo passaggio si verifica se gli sviluppatori dispongono già di shader personalizzati non scritti per la creazione di istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che per alcuni GameObject viene eseguito il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non hanno le proprietà appropriate per la creazione di istanze.
+> Si verifica un problema comune con il rendering con istanze di single pass se gli sviluppatori dispongono già di shader personalizzati non scritti per le istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che GameObject solo il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non dispongono delle proprietà appropriate per le istanze.
 >
-> Per informazioni su come risolvere questo problema, vedi l'articolo di Unity [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) (Rendering stereo a singolo passaggio per HoloLens)
+> Per informazioni su come risolvere questo problema, vedere [rendering stereo a passaggio singolo per HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) da Unity
 
 ### <a name="enable-depth-buffer-sharing"></a>Abilita condivisione buffer di profondità
 
 Per ottenere una migliore stabilità dell'ologramma dalla percezione dell'utente, è consigliabile abilitare la proprietà **depth buffer sharing** in Unity. Se si attiva questa impostazione, Unity condividerà la mappa di profondità prodotta dall'applicazione con la piattaforma di realtà mista di Windows. La piattaforma sarà quindi in grado di ottimizzare la stabilità degli ologrammi in modo specifico per la scena in cui viene eseguito il rendering dell'applicazione da parte di un frame specifico.
 
-Per abilitare questa funzionalità nel tuo progetto Unity
+Per abilitare questa funzionalità nel progetto Unity
 
-1) Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
-2) Selezionare la casella di controllo **Abilita condivisione buffer di profondità** nell' **SDK della realtà virtuale** > espansione della **realtà mista di Windows** . è necessario selezionare la casella di controllo**Virtual Reality supported** .
+1) Aprire **le impostazioni di Player XR** (Vai a **modifica**impostazioni  >  **progetto**  >  **lettore**  >  **XR**)
+2) Selezionare la casella di controllo **Abilita condivisione buffer di profondità** in **Virtual Reality SDK**  >  espansione di**realtà mista Windows** (casella di controllo**Virtual Reality supported** )
 
 Si consiglia inoltre di selezionare la **profondità a 16 bit** nell'impostazione del **formato Depth** in questo pannello, specialmente per lo sviluppo HoloLens. La selezione di 16 bit rispetto a 24 bit ridurrà in modo significativo i requisiti di larghezza di banda, in quanto sarà necessario spostare o elaborare i dati.
 
@@ -85,7 +85,7 @@ Se si usa il [Toolkit di realtà misto standard shader](https://github.com/micro
 
 ### <a name="building-for-il2cpp"></a>Compilazione per IL2CPP
 
-Unity ha deprecato il supporto per il back-end di scripting .NET e pertanto consiglia agli sviluppatori di usare **IL2CPP** per le compilazioni UWP di Visual Studio. Anche se questo offre diversi vantaggi, la creazione della soluzione di Visual Studio da Unity per **Il2CPP** può essere notevolmente più lenta rispetto al vecchio metodo .NET. Pertanto, è consigliabile seguire le procedure consigliate per la compilazione di **IL2CPP** per risparmiare sul tempo di iterazione dello sviluppo.
+Unity ha deprecato il supporto per il back-end di scripting .NET e pertanto consiglia agli sviluppatori di usare **IL2CPP** per le compilazioni UWP di Visual Studio. Anche se questo offre diversi vantaggi, la creazione della soluzione di Visual Studio da Unity per **IL2CPP** può essere notevolmente più lenta rispetto al vecchio metodo .NET. Pertanto, è consigliabile seguire le procedure consigliate per la compilazione di **IL2CPP** per risparmiare sul tempo di iterazione dello sviluppo.
 
 1) Utilizzare la compilazione incrementale compilando il progetto nella stessa directory ogni volta, riutilizzando i file predefiniti
 2) Disabilitare le analisi del software anti-malware per il progetto & cartelle di compilazione
@@ -108,7 +108,7 @@ HoloLens dispone di una CPU e GPU di classe mobile, il che significa che le app 
 
 Per abilitare o disabilitare la schermata iniziale olografica:
 
-1) Passare a **modifica** **Impostazioni progetto** > pagina **lettore** di > 
+1) Vai alla pagina **modifica**  >  **Impostazioni progetto**  >  **lettore**
 2) Fare clic sulla scheda **Windows Store** e aprire la sezione **immagine iniziale** .
 3) Applicare l'immagine desiderata sotto la proprietà **olografica >** olografica di Windows.
     - Impostando l'opzione **Mostra schermata iniziale di Unity** sarà abilitata o disabilitata la schermata iniziale di Unity personalizzata. Se non si ha una licenza Pro Unity, viene sempre visualizzata la schermata iniziale di Unity personalizzata.
@@ -116,14 +116,14 @@ Per abilitare o disabilitare la schermata iniziale olografica:
 
 |  Mostra schermata iniziale Unity  |  Immagine Splash olografica  |  Comportamento |
 |----------|----------|----------|
-|  Attivato  |  None  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
-|  Attivato  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
-|  Disattivata  |  None  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
-|  Disattivata  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  On  |  nessuno  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
+|  On  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  Off  |  nessuno  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
+|  Off  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
 
 Per altre informazioni, vedere [la documentazione della schermata iniziale di Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
-### <a name="tracking-loss"></a>Perdita di rilevamento
+### <a name="tracking-loss"></a>Perdita del tracciamento
 
 Una cuffia a realtà mista dipende dall'ambiente in cui si trova l'ambiente per costruire [sistemi di coordinate con blocco globale](coordinate-systems-in-unity.md), che consentono di mantenere la posizione degli ologrammi. Quando l'auricolare non riesce a trovarsi nel mondo, si dice che l'auricolare ha *perso il rilevamento*. In questi casi, le funzionalità che dipendono da sistemi di coordinate con blocco globale, ad esempio fasi spaziali, ancoraggi spaziali e mapping spaziale, non funzionano.
 
@@ -131,7 +131,7 @@ Se si verifica una perdita di rilevamento, il comportamento predefinito di Unity
 
 Per personalizzare l'immagine del rilevamento perso:
 
-1) Passare a **modifica** **Impostazioni progetto** > pagina **lettore** di > 
+1) Vai alla pagina **modifica**  >  **Impostazioni progetto**  >  **lettore**
 2) Fare clic sulla scheda **Windows Store** e aprire la sezione **immagine iniziale** .
 3) Applicare l'immagine desiderata sotto la proprietà **olografica Windows > Tracking Loss** .
 
@@ -141,7 +141,7 @@ Per personalizzare l'immagine del rilevamento perso:
 
 Per rifiutare esplicitamente il comportamento di sospensione automatica:
 
-1) Vai alla pagina **Edit** > modifica **Impostazioni progetto** > **lettore**
+1) Vai alla pagina **modifica**  >  **Impostazioni progetto**  >  **lettore**
 2) Fare clic sulla scheda **Windows Store** e aprire la sezione **immagine iniziale** .
 3) Modificare la casella **di controllo > Windows olografico nella casella di controllo Sospendi perdita e Mostra immagine** .
 
@@ -155,7 +155,7 @@ Per fare in modo che un'app sfrutti i vantaggi di determinate funzionalità, dev
 
 È possibile abilitare le funzionalità per un'applicazione di realtà mista:
 
-1) Passare a **modifica** **Impostazioni progetto** > pagina **lettore** di > 
+1) Vai alla pagina **modifica**  >  **Impostazioni progetto**  >  **lettore**
 2) Fare clic sulla scheda **Windows Store** , aprire la sezione **impostazioni di pubblicazione** e cercare l'elenco delle **funzionalità**
 
 Le funzionalità applicabili per l'abilitazione delle API di uso comune per le app olografiche sono:

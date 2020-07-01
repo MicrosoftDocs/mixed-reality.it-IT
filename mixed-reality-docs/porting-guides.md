@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Port, porting, Unity, middleware, Engine, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278039"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570312"
 ---
 # <a name="porting-guides"></a>Guide alla conversione
 
@@ -70,6 +70,7 @@ Con qualsiasi aggiornamento di Unity, è possibile che sia necessario aggiornare
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity Step 4: indirizzare l'applicazione per l'esecuzione in piattaforma UWP (Universal Windows Platform) (UWP)
 
 Dopo aver installato gli strumenti, è necessario fare in modo che l'app venga eseguita come app di Windows universale.
+
 * Seguire le istruzioni [dettagliate](https://unity3d.com/partners/microsoft/porting-guides) fornite da Unity. Si noti che è necessario rimanere nella versione LTS più recente (qualsiasi versione di 20XX. 4) per Windows MR.
 * Per altre risorse di sviluppo UWP, vedere la [Guida allo sviluppo di giochi per Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e).
 * Si noti che Unity continua a migliorare il supporto per IL2CPP; IL2CPP rende notevolmente più semplici le porte UWP. Se la destinazione è il back-end di scripting .NET, è consigliabile prendere in considerazione la conversione per sfruttare il back-end IL2CPP.
@@ -104,7 +105,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 
 In questo modo si imposta il sistema di coordinate globale di Unity per tenere traccia del [frame di riferimento fisso](coordinate-systems.md#spatial-coordinate-systems). Nella modalità di rilevamento fisso, il contenuto inserito nell'editor appena davanti alla posizione predefinita della fotocamera (avanti è-Z) verrà visualizzato davanti all'utente all'avvio dell'app. Per ricentrare l'origine di seduta dell'utente, è possibile chiamare XR di Unity [. Metodo InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
-Se si sta effettuando il porting di un'esperienza di **scalabilità permanente** o di **scalabilità**in modalità locale, il contenuto verrà inserito in relazione al pavimento. Si ragiona sul pavimento dell'utente usando la **[fase spaziale](coordinate-systems.md#spatial-coordinate-systems)** , che rappresenta l'origine di livello del piano definita dall'utente e il limite di spazio facoltativo, configurato durante la prima esecuzione. Per queste esperienze è necessario assicurarsi che Unity sia impostato sul tipo di spazio di rilevamento **RoomScale** . Anche se RoomScale è il valore predefinito, è consigliabile impostarlo in modo esplicito e assicurarsi di tornare a true per individuare le situazioni in cui l'utente ha spostato il computer dalla stanza in cui è stato calibrato:
+Se si sta effettuando il porting di un'esperienza di **scalabilità permanente** o di **scalabilità**in modalità locale, il contenuto verrà inserito in relazione al pavimento. Si ragiona sul pavimento dell'utente usando la **[fase spaziale](coordinate-systems.md#spatial-coordinate-systems)**, che rappresenta l'origine di livello del piano definita dall'utente e il limite di spazio facoltativo, configurato durante la prima esecuzione. Per queste esperienze è necessario assicurarsi che Unity sia impostato sul tipo di spazio di rilevamento **RoomScale** . Anche se RoomScale è il valore predefinito, è consigliabile impostarlo in modo esplicito e assicurarsi di tornare a true per individuare le situazioni in cui l'utente ha spostato il computer dalla stanza in cui è stato calibrato:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))

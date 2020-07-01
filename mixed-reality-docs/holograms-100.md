@@ -6,29 +6,27 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realtà mista, realtà mista di Windows, HoloLens, immersiva, VR, Mr, introduzione, ologramma, Accademia, esercitazione
-ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 58a1785ef74872c633cf65d6a32e24d517367359
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082055"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570308"
 ---
->[!NOTE]
+# <a name="mr-basics-100-getting-started-with-unity"></a>Nozioni di base MR 100: Introduzione a Unity
+
+>[!IMPORTANT]
 >Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista.  Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi.  Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2.  Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
-
-<br>
-
-# <a name="mr-basics-100-getting-started-with-unity"></a>Nozioni fondamentali 100: Introduzione a Unity
 
 Questa esercitazione illustra come creare un'app di base per realtà mista compilata con Unity.
 
-## <a name="device-support"></a>Supporto per i dispositivi
+## <a name="device-support"></a>Supporto di dispositivi
 
 <table>
 <tr>
 <th>Corso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Visori VR immersive</a></th>
 </tr><tr>
-<td>Nozioni fondamentali 100: Introduzione a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Nozioni di base MR 100: Introduzione a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -40,7 +38,7 @@ Questa esercitazione illustra come creare un'app di base per realtà mista compi
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Per compilare un'app con Unity, è prima di tutto necessario creare un progetto. Questo progetto è organizzato in alcune cartelle, il più importante dei quali è la cartella assets. Si tratta della cartella che include tutte le risorse importate da strumenti per la creazione di contenuti digitali, ad esempio Maya, max cinema 4D o Photoshop, tutto il codice creato con Visual Studio o l'editor di codice preferito e un numero qualsiasi di file di contenuto creati da Unity durante la composizione di scene , animazioni e altri tipi di asset Unity nell'editor.
+Per compilare un'app con Unity, è prima di tutto necessario creare un progetto. Questo progetto è organizzato in alcune cartelle, il più importante dei quali è la cartella assets. Si tratta della cartella che include tutte le risorse importate dagli strumenti di creazione di contenuti digitali, ad esempio Maya, max cinema 4D o Photoshop, tutto il codice creato con Visual Studio o l'editor di codice preferito e un numero qualsiasi di file di contenuto creati da Unity durante la composizione di scene, animazioni e altri tipi di asset Unity nell'editor.
 
 Per compilare e distribuire app UWP, Unity può esportare il progetto come una soluzione di Visual Studio che conterrà tutti i file di asset e di codice necessari.
 
@@ -93,7 +91,7 @@ Infine, dobbiamo salvare il nostro progresso fino a questo punto. Per salvare le
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-In questo capitolo vengono impostate alcune impostazioni di progetto Unity che ci aiutano a usare Windows Olografic SDK per lo sviluppo. Vengono inoltre impostate alcune impostazioni di qualità per l'applicazione. Infine, si assicurerà che le destinazioni di compilazione siano impostate su Windows Store.
+In questo capitolo vengono impostate alcune impostazioni di progetto Unity che ci aiutano a usare Windows Olografic SDK per lo sviluppo. Vengono inoltre impostate alcune impostazioni di qualità per l'applicazione. Infine, si assicurerà che le destinazioni di compilazione siano impostate su piattaforma UWP (Universal Windows Platform).
 
 ### <a name="unity-performance-and-quality-settings"></a>Impostazioni delle prestazioni e della qualità di Unity
 
@@ -104,7 +102,7 @@ In questo capitolo vengono impostate alcune impostazioni di progetto Unity che c
 Poiché la gestione di un framerate elevato su HoloLens è così importante, è opportuno ottimizzare le impostazioni di qualità per ottenere prestazioni più rapide. Per informazioni più dettagliate sulle prestazioni, [consigli sulle prestazioni per Unity](performance-recommendations-for-unity.md).
 
 1. Selezionare **modifica > impostazioni progetto > qualità**
-2. Selezionare l' **elenco a discesa** sotto il logo di **Windows Store** e selezionare **molto basso**. Si saprà che l'impostazione viene applicata correttamente quando la casella nella colonna Windows Store e con **una riga molto bassa** è verde.
+2. Selezionare l' **elenco a discesa** sotto il logo **piattaforma UWP (Universal Windows Platform)** e selezionare **molto basso**. Si saprà che l'impostazione viene applicata correttamente quando la casella nella colonna piattaforma UWP (Universal Windows Platform) e la riga **molto bassa** è verde.
 
 **Per le applicazioni di realtà miste destinate a schermi**bloccati, è possibile lasciare le impostazioni di qualità ai valori predefiniti.
 
@@ -117,21 +115,13 @@ Poiché la gestione di un framerate elevato su HoloLens è così importante, è 
 È necessario informare Unity che l'app che si sta tentando di esportare deve creare una [visualizzazione immersiva](app-views.md) anziché una visualizzazione 2D. Questa operazione viene eseguita abilitando il supporto della realtà virtuale in Unity per Windows 10 SDK.
 
 1. Passare a **Edit > Settings Project > Player**.
-2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona di **Windows Store** .
-3. Espandere il gruppo di **Impostazioni XR** .
+2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona **piattaforma UWP (Universal Windows Platform)** .
+3. Espandere il gruppo **Impostazioni XR**.
 4. Nella sezione **rendering** selezionare la casella di controllo **realtà virtuale supportata** per aggiungere un nuovo elenco **SDK di realtà virtuale** .
-5. Verificare che l'opzione **realtà mista di Windows** sia presente nell'elenco. In caso contrario, selezionare il pulsante **+** nella parte inferiore dell'elenco e scegliere **realtà mista di Windows**.
+5. Verificare che **Realtà mista di Windows** sia visualizzato nell'elenco. In caso contrario, selezionare il pulsante **+** nella parte inferiore dell'elenco e scegliere **Realtà mista di Windows**.
 
 >[!NOTE]
->Se l'icona di **Windows Store** non è visualizzata, verificare di aver selezionato il back-end di scripting .NET di Windows Store prima di procedere all'installazione. In caso contrario, potrebbe essere necessario reinstallare Unity con l'installazione di Windows corretta.
-
-**Verificare la configurazione .NET**
-
-![Verificare la configurazione .NET](images/configoptions-375px.png)
-
-1. Passare a **Edit > Settings (Impostazioni progetto) > Player** (è possibile continuare a eseguire questa operazione dal passaggio precedente).
-2. Nel **pannello Inspector** per le impostazioni del lettore selezionare l'icona di **Windows Store** .
-3. Nella sezione **altre impostazioni** di configurazione, assicurarsi che **lo scripting backend** sia impostato su **.NET** .
+>Se l'icona **piattaforma UWP (Universal Windows Platform)** non viene visualizzata, verificare di aver selezionato piattaforma UWP (Universal Windows Platform) supporto della compilazione durante l'installazione. In caso contrario, potrebbe essere necessario reinstallare Unity con la corretta installazione di Windows.
 
 Un processo straordinario per il recupero di tutte le impostazioni del progetto applicate. Quindi, aggiungiamo un ologramma!
 
@@ -186,20 +176,19 @@ A questo punto è possibile compilare il progetto in Visual Studio e distribuirl
 
 ### <a name="export-to-the-visual-studio-solution"></a>Esporta nella soluzione di Visual Studio
 
-1.  Aprire **File > finestra impostazioni di compilazione** .
-2.  Fare clic su **Aggiungi scene aperte** per aggiungere la scena.
-3.  Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su **Cambia piattaforma**.
-4.  Nelle impostazioni di **Windows Store** assicurarsi che **SDK** sia **universale 10**.
-5.  Per il dispositivo di destinazione, lasciare a **qualsiasi dispositivo** per visualizzare le schermate o passare a **HoloLens**.
-6.  Il **tipo di compilazione UWP** deve essere **D3D**.
-7.  L' **SDK di UWP** potrebbe essere rimasto **installato più di recente**.
-8.  Controllare **i C# progetti Unity** in fase di debug.
-9.  Fare clic su **Compila**.
-10. In Esplora file fare clic su **nuova cartella** e denominare la cartella **"app"** .
-11. Con la cartella **app** selezionata, fare clic sul pulsante **Seleziona cartella** .
-12. Al termine della compilazione di Unity, viene visualizzata una finestra Esplora file di Windows.
-13. Aprire la cartella dell' **app** in Esplora file.
-14. Aprire la soluzione di Visual Studio generata (MixedRealityIntroduction. sln in questo esempio)
+1. Aprire **File > finestra impostazioni di compilazione** .
+1. Fare clic su **Aggiungi scene aperte** per aggiungere la scena.
+1. Modificare la **piattaforma** in **piattaforma UWP (Universal Windows Platform)** e fare clic su **Cambia piattaforma**.
+1. In **piattaforma UWP (Universal Windows Platform)** impostazioni assicurarsi che l' **SDK** sia **universale 10**.
+1. Per il dispositivo di destinazione, lasciare a **qualsiasi dispositivo** per visualizzare le schermate o passare a **HoloLens**.
+1. Il **tipo di compilazione UWP** deve essere **D3D**.
+1. L' **SDK di UWP** potrebbe essere rimasto **installato più di recente**.
+1. Fare clic su **Compila**.
+1. In Esplora file fare clic su **nuova cartella** e denominare la cartella **"app"**.
+1. Con la cartella **app** selezionata, fare clic sul pulsante **Seleziona cartella** .
+1. Al termine della compilazione di Unity, viene visualizzata una finestra Esplora file di Windows.
+1. Aprire la cartella dell' **app** in Esplora file.
+1. Aprire la soluzione di Visual Studio generata (MixedRealityIntroduction. sln in questo esempio)
 
 ### <a name="compile-the-visual-studio-solution"></a>Compilare la soluzione di Visual Studio
 
@@ -238,5 +227,5 @@ Ora che l'app è stata distribuita, provare a spostarsi in tutto il cubo e osser
 
 * [Panoramica dello sviluppo per Unity](unity-development-overview.md)
 * [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-* [Nozioni fondamentali 101](holograms-101.md)
-* [Nozioni di base su 101E](holograms-101e.md)
+* [Nozioni di base MR 101](holograms-101.md)
+* [Nozioni di base MR 101E](holograms-101e.md)
