@@ -3,16 +3,16 @@ title: Uso dell'emulatore HoloLens
 description: Uso dell'emulatore HoloLens per testare le app di realtà mista nel PC senza un dispositivo HoloLens fisico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulatore
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631509"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso dell'emulatore HoloLens
 
@@ -28,7 +28,7 @@ Se intendi sviluppare applicazioni per visori VR immersive per Windows Mixed Rea
 Scarica l'emulatore HoloLens.
 
 Versioni: 
-* [Emulatore HoloLens 2 (Windows Holographic, versione 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
+* [Emulatore HoloLens 2 (Windows Holographic, versione 2004, aggiornamento di giugno 2020)](https://go.microsoft.com/fwlink/?linkid=2132415).
 * [Emulatore HoloLens (prima generazione) e modelli di progetti olografici](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Nella pagina relativa all'[archivio dell'emulatore HoloLens](hololens-emulator-archive.md) puoi trovare le note sulla versione e le build meno recenti dell'emulatore.
@@ -251,7 +251,7 @@ Nell'emulatore vedrai solo gli ologrammi di cui esegui il rendering. Ma non vedr
 
 ## <a name="known-issues"></a>Problemi noti
 
-* Quando si disinstalla l'emulatore HoloLens 2, è possibile che l'immagine del disco rigido (Flash.vhdx) rimanga sul disco rigido nella cartella di Windows Kits\10\Emulation\HoloLens\<numero build>.  È consigliabile eliminare questo file.
+* Quando si disinstalla l'emulatore HoloLens 2, è possibile che l'immagine del disco rigido (Flash.vhdx) rimanga sul disco rigido nella cartella Windows Kits\10\Emulation\HoloLens\<build number>.  È consigliabile eliminare questo file.
 * L'accelerazione grafica hardware può causare l'arresto anomalo delle app di Holographic in alcuni sistemi con grafica AMD o Intel.  La disabilitazione dell'accelerazione grafica hardware nella finestra degli strumenti dell'emulatore offre una soluzione a questo problema.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi

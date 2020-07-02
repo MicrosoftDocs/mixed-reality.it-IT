@@ -3,16 +3,16 @@ title: 6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulator
 description: Parte 6 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 99c431920c72cf85fed5a0eec6fc72ddf9fb112c
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330238"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345691"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulatore
 
@@ -41,37 +41,47 @@ Dopo esserti connesso, fai clic sulla freccia a discesa a destra del pulsante **
 ## <a name="packaging-and-deploying-the-app"></a>Creazione del pacchetto e distribuzione dell'app 
 
 >[!NOTE]
->Se è la prima volta esegui il packaging di un'app Unreal per HoloLens, dovrai scaricare i file di supporto dal laucher Epic. 
+>Se è la prima volta esegui il packaging di un'app Unreal per HoloLens, dovrai scaricare i file di supporto dall'utilità di avvio Epic. 
 >- Passa alla scheda **Library** (Libreria) nel launcher di Epic Games, seleziona la freccia a discesa accanto a **Launch** (Avvia) e fai clic su **Options** (Opzioni). 
 >- In **Target Platforms** (Piattaforme di destinazione) seleziona **HoloLens 2** e fai clic su **Apply** (Applica). 
 >![Impostazioni del progetto - Descrizione](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  Passa a **Edit > Project Settings** (Modifica > Impostazioni progetto). 
     * Aggiungi un nome progetto in **Project > Description > About > Project Name** (Progetto > Descrizione > Informazioni -> Nome progetto). 
-    * Aggiungi **CN={INSERISCI NOME SOCIETÀ}** in **Project > Description > Publisher > Company Distinguished Name** (Progetto > Descrizione > Autore > Nome distinto società).
+    * Aggiungi **CN=NomeSocietà** in **Project > Description > Publisher > Company Distinguished Name** (Progetto > Descrizione > Autore > Nome distinto società).
 
 > [!IMPORTANT]
-> Se lasci vuoto uno di questi campi, verrà generato un errore. 
+> Se lasci vuoto uno di questi campi, viene generato un errore quando tenti di generare un nuovo certificato nel passaggio 3. 
+
+> [!IMPORTANT]
+> Il nome dell'autore deve essere nel [formato LADPv3 Distinguished Names](https://www.ietf.org/rfc/rfc2253.txt). Se il nome dell'autore non è valido, viene visualizzato un errore che indica che la chiave di firma non è stata trovata e che non è stato possibile firmare digitalmente l'app durante la creazione del pacchetto.
 
 ![Impostazioni del progetto - Descrizione](images/unreal-uxt/6-cn.PNG)
 
 2.  Abilita **Build for HoloLens Emulation** (Build per emulazione HoloLens) e/o **Build for HoloLens Device** (Build per dispositivo HoloLens) in **Platforms > HoloLens** (Piattaforme > HoloLens).
 
-3.  Fai clic su **Generate new** (Genera nuovo) nella sezione **Packaging** (Pacchetto), accanto a **Signing Certificate** (Certificato di firma), quindi torna alla finestra principale.
+3.  Fai clic su **Generate new** (Genera nuovo) nella sezione **Packaging** (Pacchetto), accanto a **Signing Certificate** (Certificato di firma).
+
+> [!IMPORTANT]
+> Se usi un certificato già generato, il nome dell'autore del certificato deve corrispondere al nome dell'autore dell'applicazione. In caso contrario, viene visualizzato un errore che indica che la chiave di firma non è stata trovata e che non è stato possibile firmare digitalmente l'app .
 
 ![Impostazioni di progetto - Piattaforme - HoloLens](images/unreal-uxt/6-packaging.PNG)
 
-4.  Passa a **File > Package Project** (File > Crea pacchetto progetto) e seleziona **HoloLens**. 
-    * Crea una nuova cartella in cui salvare il pacchetto e fai clic su **Select Folder** (Seleziona cartella). 
+4. Fai clic su **None** (Nessuno) a scopo di test quando ti viene chiesto di creare una password di chiave privata.
 
-5.  Dopo avere creato il pacchetto dell'app, apri il [Portale di dispositivi di Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal), passa a **Views > Apps** (Viste > App) e trova la sezione **Deploy apps** (Distribuzione app).
+![Generazione di un nuovo certificato](images/unreal-uxt/6-private-key-testing.png)
 
-6.  Fai clic su **Sfoglia** (Sfoglia), passa al file **ChessApp.appxbundle** e fai clic su **Apri**. 
+5. Passa a **File > Package Project** (File > Crea pacchetto progetto) e seleziona **HoloLens**. 
+    * Crea una nuova cartella in cui salvare il pacchetto e fare clic su **Select Folder** (Seleziona cartella). 
+
+6.  Dopo avere creato il pacchetto dell'app, apri il [Portale di dispositivi di Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal), passa a **Views > Apps** (Viste > App) e trova la sezione **Deploy apps** (Distribuzione app).
+
+7.  Fai clic su **Sfoglia** (Sfoglia), passa al file **ChessApp.appxbundle** e fai clic su **Apri**. 
 
     * Se è la prima volta che installi l'app sul dispositivo, seleziona la casella accanto a **Allow me to select framework packages** (Consenti di selezionare i pacchetti del framework). 
     * Nella finestra di dialogo successiva includi i file **VCLibs** e **appx** appropriati (arm64 per il dispositivo e x64 per l'emulatore). Li trovi in **HoloLens** all'interno della cartella in cui hai salvato il pacchetto.
 
-7.  Fai clic su **Install** (Installa).
+8.  Fai clic su **Install** (Installa).
     * Ora puoi passare a **All Apps** (Tutte le app) e toccare l'app appena installata per eseguirla oppure avviare l'app direttamente dal **Portale di dispositivi di Windows**. 
 
 A questo punto, la tua applicazione in realtà mista HoloLens è completa e pronta per l'uso. Ci sono però molti altri aspetti da esplorare. MRTK include molte funzionalità autonome che puoi aggiungere ai progetti, ad esempio il mapping spaziale, lo sguardo e l'input vocale e persino codici a matrice. Per altre informazioni su queste funzionalità, consulta la [Panoramica sullo sviluppo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).

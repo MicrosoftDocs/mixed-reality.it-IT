@@ -3,16 +3,16 @@ title: 5. Aggiunta di un pulsante e ripristino delle posizioni dei pezzi
 description: Parte 5 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330268"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720257"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Aggiunta di un pulsante e ripristino delle posizioni dei pezzi
 
@@ -54,7 +54,7 @@ Ora che la funzione è stata configurata correttamente, l'attività successiva c
 
 ![Creare il nuovo progetto come sottoclasse di SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2. Fai clic su **PressableButton (Inherited)** (PressableButton - Ereditato) nel pannello **Components** (Componenti) e scorri verso il basso nel pannello **Details** (Dettagli) fino alla sezione **Events** (Eventi). 
+2. Fai clic su **Pressable Button (Inherited)** (Pulsante a pressione - Ereditato) nel pannello **Components** (Componenti) e scorri verso il basso nel pannello **Details** (Dettagli) fino alla sezione **Events** (Eventi). 
     * Fai clic sul pulsante **+** verde accanto a **On Button Pressed** (Alla pressione del pulsante) per aggiungere un evento al grafico degli eventi, che verrà chiamato ogni volta che viene premuto il pulsante. 
     
 A questo punto puoi chiamare la funzione **Reset Location** (Ripristina posizione) di **WhiteKing** (Re bianco), che necessita un riferimento all'attore **WhiteKing** (Re bianco) nel livello. 

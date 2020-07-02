@@ -3,20 +3,22 @@ title: Comfort
 description: Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e la posizione relativa degli oggetti.
 author: erickjpaul
 ms.author: erpau
-ms.date: 04/5/2019
+ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realtà mista, progettazione, comfort, HoloLens 2, HoloLens (prima generazione)
-ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 12dc632e4cba925abb1c4ac9e17364f94a6804c9
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441818"
 ---
 # <a name="comfort"></a>Comfort
 
-Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni indizi si basano su un solo occhio (indizi monoculari), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità di campo](https://en.wikipedia.org/wiki/Depth_of_field) e [accomodazione](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altri indizi si basano su entrambi gli occhi (indizi binoculari) e includono la [convergenza](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi necessarie per guardare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello delle differenze tra le proiezioni della scena sul retro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richieda movimenti faticosi del collo o delle braccia. In questo articolo esamineremo gli aspetti principali da tenere in considerazione per raggiungere questi obiettivi.
+## <a name="overview"></a>Panoramica
+
+Nella visione naturale, il sistema visivo umano si basa su più fonti di informazioni, o "indizi", per interpretare le forme 3D e le posizioni relative degli oggetti. Alcuni indizi si basano su un solo occhio (indizi monoculari), tra cui [prospettiva lineare](https://en.wikipedia.org/wiki/Perspective_(graphical)), [dimensioni note](https://en.wikipedia.org/wiki/Size#Perception_of_size), occlusione, [sfocatura della profondità di campo](https://en.wikipedia.org/wiki/Depth_of_field) e [accomodazione](https://en.wikipedia.org/wiki/Accommodation_(eye)). Altri indizi si basano su entrambi gli occhi (indizi binoculari) e includono la [convergenza](https://en.wikipedia.org/wiki/Vergence) (essenzialmente le rotazioni relative degli occhi necessarie per guardare un oggetto) e la [disparità binoculare](https://en.wikipedia.org/wiki/Stereopsis) (il modello delle differenze tra le proiezioni della scena sul retro dei due occhi). Per garantire il massimo comfort per i caschi con visore, è importante che i progettisti e gli sviluppatori creino e presentino contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale. Dal punto di vista fisico, è anche importante progettare contenuto che non richieda movimenti faticosi del collo o delle braccia. In questo articolo esamineremo gli aspetti principali da tenere in considerazione per raggiungere questi obiettivi.
 
 ## <a name="vergence-accommodation-conflict"></a>Conflitto tra convergenza e accomodazione
 
@@ -125,37 +127,28 @@ Nei videogiochi in cui si spara in prima persona, i visori a sovrimpressione (HU
 
 ## <a name="text-legibility"></a>Leggibilità del testo
 
-La leggibilità ottimale del testo può aiutare a ridurre l'affaticamento oculare e a mantenere una posizione confortevole, soprattutto in applicazioni o scenari che richiedono la lettura di testo usando un casco con visore. La leggibilità del testo dipende da diversi fattori, tra cui varie proprietà di visualizzazione (ad esempio, la densità dei pixel, la luminosità e il contrasto), le proprietà delle lenti (ad esempio, l'aberrazione cromatica) e le proprietà del testo o del tipo di carattere (ad esempio, le caratteristiche specifiche del tipo di carattere, come lo spessore, la spaziatura, la presenza di grazie, il colore del carattere e quello dello sfondo).  
+La leggibilità ottimale del testo può aiutare a ridurre l'affaticamento oculare e a mantenere una posizione confortevole, soprattutto in applicazioni o scenari che richiedono la lettura quando si usa un casco con visore. La leggibilità del testo dipende da diversi fattori, tra cui:
+* Proprietà del display, come la densità in pixel, la luminosità e il contrasto. 
+* Proprietà dell'obiettivo, come l'aberrazione cromatica
+* Proprietà del testo e del carattere, ad esempio lo spessore, la spaziatura, la presenza di grazie e il colore dello sfondo e del carattere.  
 
-In generale, consigliamo di testare le applicazioni specifiche per determinare la leggibilità del testo e aumentare il più possibile le dimensioni dei caratteri per assicurare un'esperienza confortevole. Di seguito sono riportate alcune indicazioni generali come punto di partenza per lo sviluppo. Tieni presente che tutte le dimensioni dei caratteri sono indicate in gradi di [angolo visivo](https://en.wikipedia.org/wiki/Visual_angle) anziché in specifiche dimensioni fisiche. Questo consente di determinare qualsiasi distanza entro la zona di posizionamento ottimale degli ologrammi perché tiene conto sia delle dimensioni del testo sia della distanza in cui il testo appare all'utente. 
+In generale, consigliamo di testare le applicazioni specifiche per determinare la leggibilità del testo e aumentare il più possibile le dimensioni dei caratteri per assicurare un'esperienza confortevole. Informazioni più dettagliate per i dispositivi olografici e immersivi sono disponibili nelle pagine dedicate a [tipografia](typography.md) e [testo in Unity](text-in-unity.md).
 
-Per istruzioni più dettagliate, vedi gli articoli [Caratteri tipografici](typography.md) e [Testo in Unity](text-in-unity.md).
+## <a name="holographic-frame-considerations"></a>Considerazioni sul frame olografico
 
-### <a name="guidance-for-holographic-devices"></a>Indicazioni per i dispositivi olografici
+Per le esperienze in realtà mista con oggetti di grandi dimensioni o con molti oggetti, è fondamentale valutare la quantità di movimento della testa e del collo necessaria per interagire con il contenuto. Le esperienze possono essere suddivise in tre categorie in termini di movimento della testa: 
+* **Orizzontale** (laterale)
+* **Verticale** (su o giù)
+* **Immersiva** (sia orizzontale sia verticale)
+ 
+Quando possibile, limita la maggior parte delle interazioni alle categorie orizzontali o verticali, preferibilmente con la maggior parte delle esperienze al centro del frame olografico mentre la testa dell'utente si trova in posizione neutra. Evita le interazioni che costringono l'utente a spostare costantemente la testa in una posizione innaturale, ad esempio guardare sempre in alto per accedere all'interazione con il menu principale.
 
-Per i dispositivi olografici, il rendering di testo nero/scuro su uno sfondo bianco/chiaro fornisce il rapporto di contrasto più coerente perché lo sfondo ha l'effetto di occludere l'interferenza del mondo reale dietro il rendering. Il rendering di testo bianco/chiaro su uno sfondo nero/scuro consente una maggiore interferenza del mondo reale, che può influire sulla leggibilità del testo. 
+![L'area ottimale per il contenuto è da 0 a 35 gradi sotto l'orizzonte](images/optimal-field-of-view-2.png)<br>
+*L'area ottimale per il contenuto è da 0 a 35 gradi sotto l'orizzonte*
 
-#### <a name="hololens-1st-gen"></a>HoloLens (prima generazione)
+Lo spostamento della testa in orizzontale è più adatto alle interazioni frequenti, mentre i movimenti verticali devono essere riservati agli eventi non comuni. Ad esempio, un'esperienza che coinvolge una lunga sequenza temporale orizzontale deve limitare lo spostamento verticale della testa per le interazioni, ad esempio guardare un menu in basso.
 
-La dimensione minima per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) è approssimativamente di 0,35° e il valore più confortevole per questa dimensione è almeno di circa 0,5° per la lettura di contenuto presentato a una distanza di 2 m dall'utente. 
-
-#### <a name="hololens-2"></a>HoloLens 2
-
-Le dimensioni minime per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) sono approssimativamente le seguenti: 
-   - 0,4°-0,5° a 45 cm (distanza di manipolazione diretta) 
-   - 0,35°-0, 4° a 2 m
-   
-Le dimensioni confortevoli per la leggibilità dei caratteri (dalla linea di base all'estremità dell'asta ascendente) sono approssimativamente le seguenti: 
-   - 0,65°-0,8° a 45 cm (distanza di manipolazione diretta)
-   - 0,6°-0,75° a 2 m
-
-Si noti che le dimensioni dei caratteri devono essere leggermente più grandi per il testo a distanza di manipolazione diretta a causa del conflitto tra convergenza e accomodazione descritto in precedenza. Gli occhi degli utenti riescono ad accomodarsi a una distanza di 2 m sul display HoloLens e pertanto il contenuto sottoposto a rendering a una distanza minore, ad esempio 45 cm, può apparire più sfocato agli utenti. 
-
-### <a name="guidance-for-immersive-devices"></a>Indicazioni per i dispositivi di tipo immersive
-
-I dispositivi di tipo immersive presentano in genere rapporti di contrasto più elevati a causa dell'occlusione completa dell'ambiente esterno, ma in parte possono avere una minore densità di pixel effettiva, a causa dell'ingrandimento delle lenti di fronte ai display. 
-
-Per i caschi con visore di tipo immersive di Windows Mixed Reality, la dimensione minima per la leggibilità dei caratteri in verticale (dalla linea di base all'estremità dell'asta ascendente) è approssimativamente di 0,7-0,9° e il valore più confortevole per questa dimensione è di circa 1,0° per la lettura di contenuto presentato a una distanza di 2 m dall'utente.
+È preferibile incoraggiare lo spostamento completo del corpo, anziché semplicemente il movimento della testa, posizionando gli oggetti attorno allo spazio dell'utente. Per le esperienze con oggetti in movimento o di grandi dimensioni è bene prestare particolare attenzione al movimento della testa, soprattutto se richiedono un movimento frequente lungo gli assi orizzontale e verticale.
 
 ## <a name="gaze-direction"></a>Direzione dello sguardo
 
@@ -166,14 +159,11 @@ Per evitare l'affaticamento oculare e la tensione a livello cervicale, il conten
 
 L'angolo dello sguardo considerato ottimale (condizione di riposo) è compreso tra 10 e 20 gradi al di sotto dell'orizzonte, poiché la testa tende a inclinarsi leggermente verso il basso, soprattutto nel corso delle attività.
 
-![Campo di visualizzazione consentito in base all'intervallo di movimento del collo](images/optimal-field-of-view-2.png)<br>
-*Campo di visualizzazione consentito in base all'intervallo di movimento del collo*
-
 ## <a name="arm-positions"></a>Posizioni delle braccia
 
 L'affaticamento muscolare può aumentare quando gli utenti devono tenere una mano alzata per tutta la durata di un'esperienza. Può anche essere faticoso per l'utente dover effettuare ripetutamente movimenti di simulazione del tocco con un dito per periodi prolungati. Consigliamo pertanto di evitare di richiedere movimenti ripetuti e costanti. Questo obiettivo può essere raggiunto incorporando brevi interruzioni oppure offrendo la possibilità di interagire con l'app con una combinazione di gesti e input vocale.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [Sguardo fisso](gaze-and-commit.md)
 * [Stabilità degli ologrammi](hologram-stability.md)
 * [Interazioni istintive](interaction-fundamentals.md)

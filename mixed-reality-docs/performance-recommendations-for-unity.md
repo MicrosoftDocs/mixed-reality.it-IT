@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: grafica, cpu, gpu, rendering, garbage collection, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277569"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216242"
 ---
 # <a name="performance-recommendations-for-unity"></a>Consigli sulle prestazioni per Unity
 
@@ -282,6 +282,8 @@ La funzionalità [Real-time Global Illumination](https://docs.unity3d.com/Manual
 
 **Edit** (Modifica)  > **Project Settings** (Impostazioni progetto) e quindi seleziona la categoria **Quality** (Qualità) > Seleziona **Low Quality** (Qualità bassa) per la piattaforma UWP. È anche sufficiente impostare la proprietà **Shadows** (Ombreggiature) su **Disable Shadows** (Disabilita ombreggiature).
 
+È consigliabile usare l'illuminazione con baking con i modelli in Unity.
+
 ### <a name="reduce-poly-count"></a>Ridurre il numero dei poligoni
 
 Il numero dei poligoni in genere viene ridotto tramite
@@ -344,7 +346,7 @@ Una delle procedure più comuni che porta a un numero eccessivo di Garbage Colle
 Altri suggerimenti rapidi:
 - Usa la classe [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) di C# per compilare dinamicamente stringhe complesse in fase di runtime
 - Rimuovi le chiamate a Debug.Log() quando non sono più necessarie, in quanto vengono comunque eseguite in tutte le versioni delle build di un'app
-- Se la tua app olografica di solito richiede molta memoria, considera la possibilità di chiamare [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante le fasi di caricamento, ad esempio durante la presentazione di una schermata di caricamento o di transizione
+- Se la tua app olografica di solito richiede molta memoria, considera la possibilità di chiamare [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante le fasi di caricamento, ad esempio durante la presentazione di una schermata di caricamento o di transizione
 
 #### <a name="object-pooling"></a>Pooling di oggetti
 

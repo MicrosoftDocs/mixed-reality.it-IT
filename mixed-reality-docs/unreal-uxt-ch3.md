@@ -3,16 +3,16 @@ title: 3. Configurazione del progetto per la realtà mista
 description: Parte 3 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879545"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configurazione del progetto per la realtà mista
 
@@ -37,7 +37,7 @@ Le sessioni AR in Unreal non funzionano da sole. Per usare una sessione, è nece
 
 ![ARSessionConfig](images/unreal-uxt/3-arsessionconfig.PNG)
 
-Al termine, il passaggio successivo consiste nell'assicurarsi che la sessione AR venga avviata quando viene caricato il livello. In Unreal è disponibile un particolare tipo di progetto denominato **Level Blueprint** (Progetto livello) che svolge la funzione di grafico eventi globale che prende come riferimento il livello. La connessione dell'asset ARSessionConfig in **Level Blueprint** (Progetto livello) garantisce l'avvio della sessione nel momento in cui viene avviato il gioco.
+Al termine, il passaggio successivo consiste nell'assicurarsi che la sessione AR venga avviata quando viene caricato il livello e si arresti alla fine del livello. In Unreal è disponibile un particolare tipo di progetto denominato **Level Blueprint** (Progetto livello) che svolge la funzione di grafico eventi globale che prende come riferimento il livello. La connessione dell'asset ARSessionConfig in **Level Blueprint** (Progetto livello) garantisce l'avvio della sessione nel momento in cui viene avviato il gioco.
 
 1. Fai clic su **Blueprints > Open Level Blueprint** (Progetti > Apri progetto livello) sulla barra degli strumenti dell'editor: 
 
@@ -45,9 +45,13 @@ Al termine, il passaggio successivo consiste nell'assicurarsi che la sessione AR
 
 5. Trascina il nodo di esecuzione (freccia rivolta verso sinistra) fuori da **Event BeginPlay** (Evento BeginPlay) e rilascia. Cerca il nodo **Start AR Session** (Avvia sessione AR) e premi INVIO.  
     * Fai clic sull'elenco a discesa **Select Asset** (Seleziona asset) in **Session Config** (Configurazione sessione) e scegli l'asset **ARSessionConfig**. 
-    * Seleziona **Compile** (Compila) e **Save** (Salva) e torna alla finestra principale.
 
 ![Start AR Session (Avvia sessione AR)](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. Fai clic con il pulsante destro del mouse in un punto qualsiasi di EventGraph e crea un nuovo nodo **Event EndPlay**. Trascina e rilascia il pin di esecuzione. Cerca un nodo **Stop AR Session** (Arresta sessione AR) e premi INVIO. Se la sessione AR non viene arrestata al termine del livello, alcune funzionalità potrebbero smettere di funzionare se l'app viene riavviata durante lo streaming a un visore VR. 
+    * Seleziona **Compile** (Compila) e **Save** (Salva) e torna alla finestra principale.
+
+![Stop AR Session (Arresta sessione AR)](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>Creare un pedone
 A questo punto, il progetto necessita ancora di un oggetto Player. In Unreal, l'oggetto **Pawn** (Pedone) rappresenta l'utente del gioco, ma in questo caso sarà l'esperienza HoloLens 2.
@@ -68,7 +72,7 @@ A questo punto, il progetto necessita ancora di un oggetto Player. In Unreal, l'
 
 Al termine, torna alla finestra principale.
 
-## <a name="create-a-game-mode"></a>Creare una modalità di gioco
+## <a name="create-a-game-mode"></a>Crea una modalità di gioco
 Per completare la configurazione della realtà mista manca solo la modalità di gioco. La modalità di gioco determina una serie di impostazioni relative al gioco o all'esperienza, incluso il pedone predefinito da usare.
 
 1.  Fai clic su **Add New > Blueprint Class** (Aggiungi nuovo > Classe progetto) nella cartella **Content** (Contenuto) ed espandi la sezione **All Classes** (Tutte le classi) in fondo. 

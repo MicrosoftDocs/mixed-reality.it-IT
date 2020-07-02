@@ -3,16 +3,16 @@ title: 2. Inizializzazione del progetto e prima applicazione
 description: Parte 2 di 6 in una serie di esercitazioni per la creazione di una semplice app di scacchi con Unreal Engine 4 e il plug-in UX Tools di Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330353"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345731"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inizializzazione del progetto e prima applicazione
 
@@ -20,15 +20,15 @@ ms.locfileid: "84330353"
 
 In questa prima esercitazione inizierai a creare una nuova applicazione Unreal per HoloLens 2. Eseguirai varie operazioni, come aggiungere il plug-in HoloLens, creare e illuminare un livello e popolarlo con una scacchiera e un pezzo degli scacchi. Non dovrai modellare nulla da zero perché userai asset predefiniti per il pezzo degli scacchi 3D e i materiali degli oggetti. Al termine di questa esercitazione avrai un'area di disegno vuota pronta da configurare per la realtà mista.
 
-Prima di proseguire, assicurarsi di disporre di tutti i prerequisiti indicati nella [Guida introduttiva](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
+Prima di proseguire, assicurati di disporre di tutti i prerequisiti indicati nella [Guida introduttiva](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
 
 ## <a name="objectives"></a>Obiettivi
-* Configurazione di un progetto Unreal per lo sviluppo per HoloLens
+* Configurazione di un progetto Unreal per lo sviluppo con HoloLens
 * Importazione di asset e configurazione di una scena
 * Creazione di attori ed eventi a livello di script con progetti
 
 ## <a name="creating-a-new-unreal-project"></a>Creazione di un nuovo progetto Unreal
-Prima di tutto, è necessario un progetto su cui lavorare.
+Prima di tutto, è necessario un progetto su cui lavorare. Se è la prima volta che crei un'app Unreal per HoloLens, dovrai [scaricare i file di supporto](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) dal launcher Epic.
 
 1. Avvia Unreal Engine
 
@@ -42,6 +42,9 @@ Prima di tutto, è necessario un progetto su cui lavorare.
 
 4. Imposta **C++** , **Scalable 3D or 2D, Mobile/Tablet** (3D o 2D scalabile, Cellulare/Tablet) e **No Starter Content** (Nessun contenuto iniziale) in **Project Settings** (Impostazioni progetto). 
     * Scegli una posizione di salvataggio e fai clic su **Create Project** (Crea progetto). 
+
+> [!NOTE]
+> Devi selezionare un progetto C++ anziché un progetto Blueprint per compilare il plug-in UX Tools, che verrà configurato più avanti nella sezione 4.
 
 ![Impostazioni iniziali del progetto](images/unreal-uxt/2-project-settings.PNG)
 
@@ -174,7 +177,7 @@ Gli oggetti che hai creato sono grigi per impostazione predefinita e questo non 
     * Imposta **Texture** su **ChessBoard_Metal**(Scacchiera_Metallo) e collega **RGB** al segnaposto **Metallic** (Metallico). 
     * Imposta **Texture** su **ChessBoard_Normal** (Scacchiera_Normale) e collega **RGB** al segnaposto **Normal** (Normale).
     * Imposta **Texture** su **ChessBoard_Rough**(Scacchiera_Ruvido) e collega **RGB** al segnaposto **Roughness** (Ruvidezza). 
-    * Fai clic su **Save** (Salva). 
+    * Fare clic su **Save**. 
 
 ![Associare le texture rimanenti](images/unreal-uxt/2-boardmat.PNG)
 
@@ -207,7 +210,7 @@ A questo punto creerai un pezzo degli scacchi seguendo la stessa procedura usata
     * Imposta **Texture** su **ChessWhite_Metal**(ScacchiBianco_Metallo) e collega **RGB** al segnaposto **Metallic** (Metallico). 
     * Imposta **Texture** su **ChessWhite_Normal** (ScacchiBianco_Normale) e collega **RGB** al segnaposto **Normal** (Normale).
     * Imposta **Texture** su **ChessWhite_Rough**(ScacchiBianco_Ruvido) e collega **RGB** al segnaposto **Roughness** (Ruvidezza). 
-    * Fai clic su **Save** (Salva). 
+    * Fare clic su **Save**. 
 
 Prima di continuare, il materiale **M_ChessKing** (M_ScacchiRe) deve essere simile all'immagine seguente.
 
