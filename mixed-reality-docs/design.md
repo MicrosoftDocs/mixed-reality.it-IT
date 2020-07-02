@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, guide pratiche per HoloLens, progetti open source, concetti di base, interazione
-ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334079"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345651"
 ---
 # <a name="start-designing-and-prototyping"></a>Iniziare a progettare e a creare prototipi
 
@@ -31,12 +31,12 @@ Quando Microsoft lanciava HoloLens per un pubblico di sviluppatori entusiasti ne
 ## <a name="what-are-the-core-concepts-of-an-experience"></a>Quali sono i concetti di base di un'esperienza?
 
 ### <a name="keep-the-user-comfortable---comfort"></a>[Fare in modo che l'utente possa operare comodamente (comfort)](comfort.md)
-Per garantire il massimo comfort per i caschi con visore, è importante per i progettisti e gli sviluppatori creare e presentare contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale.
+Per garantire il massimo comfort per i caschi con visore, è importante che i progettisti e gli sviluppatori creino e presentino contenuti in modo da simulare il funzionamento di questi segnali nel mondo naturale.
 
 <br>
 
 ### <a name="consider-how-the-user-sees-the-world---holographic-frame"></a>[Considerare il modo in cui l'utente vede il mondo (frame olografico)](holographic-frame.md)
-Gli utenti vedono il mondo della realtà mista attraverso un riquadro di visualizzazione rettangolare controllato dal visore VR. In HoloLens quest'area rettangolare è detta frame olografico e consente agli utenti di visualizzare il contenuto digitale sovrapposto al mondo reale circostante.
+Gli utenti vedono il mondo della realtà mista attraverso un riquadro di visualizzazione rettangolare controllato tramite il visore VR. In HoloLens quest'area rettangolare è detta frame olografico e consente agli utenti di visualizzare il contenuto digitale sovrapposto al mondo reale circostante.
 
 <br>
 
@@ -60,7 +60,7 @@ Il mapping spaziale consente di posizionare gli oggetti su superfici reali. In q
 
 <br>
 
-![Fattori di progettazione delle interazioni](images/MRTK_BoundingBox_Main.png)
+![Fattori di progettazione delle interazioni](images/UX/UX_Hero_Manipulation.jpg)
 
 ## <a name="interaction-design-factors-to-consider"></a>Fattori di progettazione delle interazioni da considerare
 
@@ -85,13 +85,24 @@ HoloLens 2 consente di raggiungere un nuovo livello di comprensione contestuale 
 
 <br>
 
+
+---
+
+<br>
+
+
+![Elementi UX](images/UX/UX_Hero_BoundingBox.jpg)
+
+## <a name="user-experience-elements-for-mixed-reality"></a>Elementi dell'esperienza utente per la realtà mista
+
+
 ### <a name="color-light-and-materials"></a>[Colore, luce e materiali](color,-light-and-materials.md)
 La progettazione di contenuto per la realtà mista richiede un'attenta considerazione del colore, dell'illuminazione e dei materiali per ognuno degli asset visivi usati nell'esperienza.
 
 <br>
 
 ### <a name="suggesting-the-scale-of-an-object"></a>[Suggerire la scala di un oggetto](scale.md)
-Per visualizzare contenuto che sembri realistico in forma olografica, è importante simulare quanto più possibile le caratteristiche visive del mondo reale. Ciò significa incorporare il maggior numero possibile di segnali visivi utili (nel mondo reale) per comprendere dove si trovino gli oggetti, quanto siano grandi e di cosa siano fatti.
+Per visualizzare contenuto che sembri realistico in forma olografica, è importante simulare quanto più possibile le caratteristiche visive del mondo reale. Ciò significa incorporare il maggior numero possibile dei segnali visivi utili (nel mondo reale) per comprendere dove si trovino gli oggetti, quanto siano grandi e di cosa siano fatti.
 
 <br>
 
@@ -100,8 +111,11 @@ Proprio come per la tipografia su schermi 2D, l'obiettivo è chiarezza e leggibi
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-reality"></a>[Elementi UX per la realtà mista](app-patterns-landingpage.md)
-Scopri le caratteristiche dei componenti di base per le interazioni spaziali e l'interfaccia utente nella realtà mista.
+### <a name="common-controls-and-behaviors"></a>[Controlli e comportamenti comuni](app-patterns-landingpage.md)
+Informazioni sulle interazioni spaziali e sui blocchi predefiniti dell'interfaccia utente usati di frequente per le esperienze in realtà mista.
+
+
+
 <br>
 
 
@@ -144,12 +158,12 @@ Scopri le caratteristiche dei componenti di base per le interazioni spaziali e l
     :::column:::
        [![Acquisisci i concetti di base](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[Acquisisci i concetti di base](index.md#understand-the-basics)**<br>
-        Comprendi meglio ciò che si intende per realtà mista e il modo in cui viene usata.
+        Approfondisci il significato di realtà mista e come viene usata.
     :::column-end:::
     :::column:::
-        [![Partecipare a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+        [![Partecipa a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
          **[Partecipa a un evento](sf-academy-events.md)**<br>
-        Vieni a vedere l'hardware e partecipa a un'esercitazione pratica per creare la tua prima applicazione HoloLens 2.
+        Vieni a vedere l'hardware e partecipa all'esercitazione pratica per creare la tua prima applicazione HoloLens 2.
     :::column-end:::
     :::column:::
         [![Installa gli strumenti](images/icon-design.jpg)](install-the-tools.md)<br>
