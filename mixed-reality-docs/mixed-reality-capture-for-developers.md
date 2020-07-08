@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, foto, video, acquisizione, fotocamera
-ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: 44b853e96ab956e5ea6c03d8c23a61e91ac733d4
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720417"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061144"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Acquisizione realtà mista per sviluppatori
 
@@ -64,10 +64,10 @@ Per abilitare il rendering dalla fotocamera PV sono disponibili tre passaggi:
 Per acconsentire esplicitamente al rendering dalla fotocamera PV, un'app Abilita semplicemente il [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)di PhotoVideoCamera:
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
-var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
+var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfigurationKind.PhotoVideoCamera);
 if (view != null)
 {
-   view.IsEnabled = true;
+    view.IsEnabled = true;
 }
 ```
 
@@ -97,12 +97,12 @@ Questa operazione viene eseguita automaticamente da Unity.
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Abilita PhotoVideoCamera HolographicViewConfiguration in Unreal
 
 > [!NOTE]
-> Questa operazione richiede **Unreal Engine 4,25** o versione successiva.
+> Questa operazione richiede **Unreal Engine 4.25** o versioni successive.
 
-Per acconsentire esplicitamente al rendering dalla fotocamera PV:
+Per acconsentire esplicitamente al rendering dalla fotocamera/videocamera:
 
-1. Chiamare **SetEnabledMixedRealityCamera** e **ResizeMixedRealityCamera**
-    * Usare i valori **X** e **size Y** per impostare le dimensioni del video.
+1. Chiama **SetEnabledMixedRealityCamera** e **ResizeMixedRealityCamera**.
+    * Usa i valori **Size X** (Dimensione X) e **Size Y** (Dimensione Y) per impostare le dimensioni video.
 
 ![Terza fotocamera](images/unreal-camera-3rd.PNG)
 
@@ -288,7 +288,7 @@ In precedenza all'aggiornamento di Windows 10 aprile 2018, il registratore MRC p
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Acquisizione realtà mista](mixed-reality-capture.md)
+* [Acquisizione in realtà mista (MRC, Mixed Reality Capture)](mixed-reality-capture.md)
 * [Visualizzazione spettatore](spectator-view.md)
 * [Panoramica sullo sviluppo Unity](unity-development-overview.md)
 * [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)

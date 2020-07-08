@@ -6,41 +6,83 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menu, pulsante, accesso rapido, layout
-ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
+ms.openlocfilehash: d1d15b36bab2ca2082ca4ba91b9c64862893f80c
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092055"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061169"
 ---
 # <a name="hand-menu"></a>Menu a mano
 
 ![Posizione della mano del lato ulnare](images/UX/UX_Hero_HandMenu.jpg)
 
-I menu a mano consentono agli utenti di visualizzare rapidamente l'interfaccia utente collegata manualmente per le funzioni usate di frequente. 
+Il menu a mano è uno dei modelli UX più esclusivi in HoloLens 2. Consente di visualizzare rapidamente l'interfaccia utente collegata manualmente. Poiché è accessibile in qualsiasi momento e può essere visualizzato e nascosto facilmente, è ideale per le azioni rapide.
 
-Di seguito sono riportate le procedure consigliate per i menu a mano. È anche possibile trovare una scena di esempio che illustra il menu a mano in [MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup).
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAg]
+
+Sono disponibili le procedure consigliate per l'uso dei menu a mano nell'elenco seguente. È anche possibile trovare una scena di esempio che illustra il menu a mano in [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html).
 
 <br>
+
 
 ---
 
-## <a name="behavior-best-practices"></a>Procedure consigliate per il comportamento
-**A. mantenere il numero di pulsanti piccoli:** a causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), si consiglia di mantenere il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando un utente sposta le mani al centro di FOV. 
+## <a name="best-practices"></a>Procedure consigliate
+**Mantieni il numero di pulsanti piccoli** 
 
-**B. utilizzare il menu a mano per un'azione rapida:** la generazione di un ARM e la gestione della posizione possono causare un facile affaticamento dell'ARM. Usare un metodo con blocco manuale per il menu che richiede una breve interazione. Se il menu è complesso e richiede tempi di interazione estesi, prendere in considerazione l'uso di un blocco globale o del corpo. 
+A causa della distanza di chiusura tra un menu con blocco manuale e gli occhi e anche la tendenza dell'utente a concentrarsi su un'area visiva relativamente piccola in qualsiasi momento (il cono di attenzione è di circa 10 gradi), è consigliabile mantenere il numero di pulsanti piccoli. In base all'esplorazione, una colonna con tre pulsanti funziona bene mantenendo tutto il contenuto all'interno del campo di visualizzazione (FOV) anche quando un utente sposta le mani al centro di FOV. 
 
-**C. angolo del pulsante/pannello:** i menu devono essere posizionati nella parte opposta e al centro della testa: ciò consente a una mano naturale di interagire con il menu con la mano opposta, evitando posizioni scomode o scomode quando si toccano i pulsanti. 
+**Usare il menu a mano per l'azione rapida** 
 
-**D. provare a supportare il supporto di una sola mano o di un'operazione senza mani:** non presupporre che entrambe le mani dell'utente siano sempre disponibili. Prendere in considerazione una vasta gamma di contesti quando una o entrambe le mani non sono disponibili e assicurarsi che gli account di progettazione per tali situazioni. Per supportare un menu a mano singola, è possibile provare a eseguire la transizione della posizione del menu da Hand-locked a blocco globale quando viene eseguito il capovolgimento della mano (passa a una Palma). Per gli scenari pratici, provare a usare un comando vocale per richiamare i pulsanti del menu a forma di mano.
+La generazione di un ARM e la gestione della posizione possono causare un facile affaticamento del braccio. Usare un metodo con blocco manuale per il menu che richiede una breve interazione. Se il menu è complesso e richiede tempi di interazione estesi, prendere in considerazione l'uso di un blocco globale o del corpo. 
 
-**E. chiamata in due passaggi:** se si usa solo il palmare come evento per attivare il menu a mano, è possibile che venga visualizzato accidentalmente quando non è necessario (falso positivo), perché le persone spostano le mani molto intenzionalmente (per la manipolazione delle comunicazioni e degli oggetti) e non intenzionalmente. Se si verificano falsi positivi nell'app, è consigliabile aggiungere un passaggio aggiuntivo oltre all'evento di backup per richiamare il menu a mano, ad esempio le dita completamente aperte.
+**Angolo pulsante/pannello**
 
-**F. evitare di aggiungere pulsanti vicino al polso (pulsante Home System):** se i pulsanti del menu a mano sono posizionati troppo vicino al pulsante Home, è possibile che venga accidentalmente attivato durante l'interazione con il menu a mano.
+I menu devono essere posizionati sulla spalla opposta e al centro della testa: ciò consente a una mano naturale di interagire con il menu con la mano opposta, evitando eventuali posizioni scomode o scomode quando si toccano i pulsanti. 
 
-**G. test** , test, test: le persone hanno corpi diversi, con soglie diverse per comodità e disagio e così via. Assicurarsi di testare la progettazione e di ricevere commenti e suggerimenti da un'ampia gamma di persone.
+**Provare a supportare un'operazione a mano o senza mani**
+
+Non presupporre che entrambe le mani dell'utente siano sempre disponibili. Prendere in considerazione una vasta gamma di contesti quando una o entrambe le mani non sono disponibili e assicurarsi che gli account di progettazione per tali situazioni. Per supportare un menu a mano singola, è possibile provare a eseguire la transizione della posizione del menu da Hand-locked a blocco globale quando viene eseguito il capovolgimento della mano (passa a una Palma). Per gli scenari senza praticità, provare a usare un comando vocale per richiamare il menu a forma di mano.
+
+**Evitare di aggiungere pulsanti vicino al polso (pulsante Home System)**
+
+Se i pulsanti del menu a mano sono posizionati troppo vicino al pulsante Home, è possibile che venga accidentalmente attivato durante l'interazione con il menu a mano.
 
 <br>
+
+## <a name="hand-menu-with-large-and-complex-ui-controls"></a>Menu a mano con controlli dell'interfaccia utente complessi e di grandi dimensioni
+<img src="images/UX/HandMenu_SizeExample.png" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
+È consigliabile limitare il numero di pulsanti o controlli dell'interfaccia utente nei menu collegati manualmente. Questo perché l'interazione estesa con un numero elevato di elementi dell'interfaccia utente può causare affaticamento ARM. Se l'esperienza richiede un menu di grandi dimensioni, è possibile consentire all'utente di bloccare il menu in modo semplice. Una tecnica consigliata è quella di bloccare in tutto il mondo quando la mano scende o si capovolge dall'utente. Una seconda tecnica consiste nel consentire all'utente di acquisire direttamente il menu con l'altra parte. Quando l'utente rilascia il menu, il menu deve bloccare il mondo. In questo modo, un utente può interagire con diversi elementi dell'interfaccia utente in modo confortevole e sicuro per un lungo periodo di tempo. 
+
+Quando il menu è bloccato a livello globale, assicurarsi di fornire un modo per spostare il menu e chiudere il menu quando non è più necessario. Rendere il menu mobile fornendo handle sui lati o nella parte superiore del menu. Aggiungere un pulsante Chiudi per consentire la chiusura del menu. Consente al menu di ricollegare la mano quando l'utente si trova a far fronte all'utente. Si consiglia inoltre di richiedere che gli utenti si trovino a loro disposizione per evitare le attivazioni false (vedere di seguito).
+
+**Menu di grandi dimensioni che mostra un problema di usabilità**
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AOPx]
+
+**Menu con blocco globale sulla selezione della mano**
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AGZi]
+
+**Manuale di & pull per il menu di scelta rapida**
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAf]
+
+
+## <a name="how-to-prevent-false-activation"></a>Come impedire l'attivazione falsa
+
+Se si usa solo il Palm-up come un evento per attivare il menu a mano, è possibile che venga accidentalmente visualizzato quando non è necessario (falso positivo), perché le persone spostano le mani intenzionalmente (per la manipolazione delle comunicazioni e degli oggetti) e non intenzionalmente. Per ridurre le attivazioni false, aggiungere un passaggio aggiuntivo oltre all'evento di backup per richiamare il menu a mano, ad esempio le dita completamente aperte, o l'utente che sta intenzionalmente guardando la mano.
+
+**Richiedi Palma piatta**
+
+Richiedendo una mano piatta aperta, è possibile impedire l'attivazione falsa che può verificarsi quando l'utente manipola oggetti o movimenti durante la comunicazione all'interno di un ambiente. 
+
+**Richiedi lo sguardo**
+
+Richiedendo all'utente di guardare la mano (con lo sguardo o con lo sguardo), impedisce le attivazioni false dovute all'utente che deve indirizzare intenzionalmente la propria attenzione alla mano come passaggio di attivazione secondaria (con una soglia di distanza ottimizzabile usata per consentire la comodità dell'utente).  
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Asn4]
 
 ---
 
@@ -53,12 +95,12 @@ Di seguito sono riportati 2 posizionamenti consigliati in base alle esplorazioni
 
 :::row:::
     :::column:::
-        ![posizione della mano del lato ulnare](images/UlnarSideHandMenu.gif)<br>
+        ![Posizione della mano del lato ulnare](images/UlnarSideHandMenu.gif)<br>
         **A. ulnare all'interno di Palm**<br>
         Questa posizione è affidabile perché le mani non si sovrappongono. Si tratta di un fattore fondamentale per il rilevamento e il rilevamento delle carte accurate.
     :::column-end:::
     :::column:::
-        ![posizione della mano del lato ulnare](images/UlnarAboveHandMenu.gif)<br>
+        ![Posizione della mano del lato ulnare](images/UlnarAboveHandMenu.gif)<br>
         **B. oltre la mano del ulnare**<br>
         Questa posizione è comoda per gli utenti perché non è necessario aumentare il proprio ARM per interagire con il menu a mano. È consigliabile posizionare i menu **13cm** sopra la Palma e allineare i pulsanti all'interno della palma ulnar. [Altre informazioni sulle dimensioni dei pulsanti ottimali](interactable-object.md)<br>
         <br>
@@ -80,13 +122,13 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 
 :::row:::
     :::column:::
-        ![sopra](images/AboveArm.gif) ARM<br>
+        ![Sopra ARM](images/AboveArm.gif)<br>
         **Sopra il ARM**<br>
         1-difficile mantenere il rilevamento della mano corretta<br>
         2-causa la fatica dell'utente a causa di una posizione non naturale
     :::column-end:::
     :::column:::
-        ![sopra le dita](images/AboveFingers.gif)<br>
+        ![Sopra le dita](images/AboveFingers.gif)<br>
         **Sopra le dita**<br>
         affaticamento a 1 mano dovuto alla conservazione della mano da molto tempo<br>
         problemi di rilevamento a due mani sull'indice e le dita centrali
@@ -97,13 +139,13 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 
 :::row:::
     :::column:::
-        ![sopra il centro](images/handCenter.gif) Palm<br>
+        ![Sopra il centro Palm](images/handCenter.gif)<br>
         **Sopra-centro Palm**<br>
         problemi di rilevamento a una mano dovuti a mani sovrapposte<br>
         affaticamento a due mani a causa del tempo di attesa lungo per interagire con i menu
     :::column-end:::
     :::column:::
-        ![parte superiore](images/TopFingerTip.gif) a **portata di mano**<br>
+        ![Parte superiore ](images/TopFingerTip.gif) della parte superiore **della mano**<br>
         problemi di rilevamento a una mano<br>
         un affaticamento a 2 mano da tenere sotto la postura normale<br>
         3-problemi durante la pressione di pulsanti con altre dita per errore a causa dello spazio limitato tra le dita
@@ -114,7 +156,7 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 
 :::row:::
     :::column:::
-        ![back of the ARM](images/BackOfTheArm.gif)<br>
+        ![Back of the ARM](images/BackOfTheArm.gif)<br>
         **Back of the ARM**<br>
         1-è possibile attivare il pulsante Home per errore<br>
         2-posizione naturale o comoda
@@ -128,10 +170,13 @@ La ricerca degli utenti è stata eseguita con layout e percorsi di menu diversi.
 ---
 
 ## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menu a mano in MRTK (Mixed Reality Toolkit) per Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce gli script e le scene di esempio per il menu a mano. Lo script del Risolutore HandConstraintPalmUp consente di associare facilmente tutti gli oggetti alle mani con diverse opzioni configurabili.
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fornisce gli script e le scene di esempio per il menu a mano. Lo script del Risolutore HandConstraintPalmUp consente di associare qualsiasi oggetto a mani con diverse opzioni configurabili. Gli esempi di menu della mano di MRTK includono opzioni utili, ad esempio il requisito della palma piatta e lo sguardo per impedire l'attivazione falsa.
 
-* [Menu a MRTK con HandConstraint e HandConstraintPalmUp](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
+* [Documenti menu a mano](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html)
+* [Scena di esempio del menu a mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
 
+È possibile provare esempi di menu a mano in HoloLens 2 con l'App Hub esempi di MRTK. 
+* [Scena menu a mano nell'hub esempi MRTK](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
 
 <br>
 

@@ -1,19 +1,19 @@
 ---
-title: Lettore di comunicazione remota olografica
+title: Holographic Remoting Player
 description: Il lettore di comunicazione remota olografico è un'app complementare che si connette a app e giochi per PC che supportano la comunicazione remota olografica. La comunicazione remota olografica trasmette contenuto olografico da un PC a Microsoft HoloLens in tempo reale, usando una connessione Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8b1d58b2c2ce8f379a87059bb5add0f85f507259
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278209"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061134"
 ---
-# <a name="holographic-remoting-player"></a>Lettore di comunicazione remota olografica
+# <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
 >La comunicazione remota olografica per HoloLens 2 è una modifica di versione principale. [Le applicazioni remote per **HoloLens (1st Gen)** ](add-holographic-remoting.md) devono usare il pacchetto NuGet versione **1. x.** x e [le applicazioni remote per **HoloLens 2** ](holographic-remoting-create-host.md) devono usare **2. x. x**. Ciò implica che le applicazioni remote scritte per HoloLens 2 non sono compatibili con HoloLens (1a generazione) e viceversa.
@@ -24,11 +24,14 @@ Il lettore di servizi remoti olografici può essere usato solo con le app PC pro
 
 Il lettore di comunicazione remota olografico è disponibile sia per HoloLens (1 gen) che per HoloLens 2.  È necessario aggiornare le app PC che supportano la comunicazione remota olografica con HoloLens per supportare la comunicazione remota olografica con HoloLens 2. Per domande sulle versioni supportate, contattare il provider di app.
 
+>[!TIP]
+>A partire dalla versione [2.2.0](holographic-remoting-version-history.md#v2.2.0) , il lettore di comunicazione remota olografico è disponibile anche per i PC Windows che eseguono la [realtà mista Windows](navigating-the-windows-mixed-reality-home.md).
+
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Connessione al lettore di comunicazione remota olografica
 
 Seguire le istruzioni dell'app per connettersi al lettore di comunicazione remota olografica. È necessario immettere l'indirizzo IP del dispositivo HoloLens, che è possibile visualizzare nella schermata principale del lettore remoto, come indicato di seguito:
 
-![Lettore di comunicazione remota olografica](images/holographicremotingplayer.png)
+![Holographic Remoting Player](images/holographicremotingplayer.png)
 
 Quando viene visualizzata la schermata principale, si saprà che non è presente un'app connessa.
 
@@ -55,9 +58,9 @@ In **HoloLens 2** l'app visualizzerà:
 * **Render** : numero di frame di cui il lettore remoto ha eseguito il rendering durante l'ultimo secondo. Si noti che questo è indipendente dal numero di frame ricevuti tramite la rete (vedere **video frame**). Inoltre, viene visualizzato il tempo Delta medio/massimo di rendering in millisecondi nell'ultimo secondo tra i frame sottoposti a rendering.
 
 * **Fotogrammi video** : il primo numero visualizzato è quello dei fotogrammi video ignorati, il secondo viene riusato per i fotogrammi video e la terza riceve i fotogrammi video. Tutti i numeri rappresentano il conteggio nell'ultimo secondo.
-    * ```Received frames``` è il numero di fotogrammi video raggiunti nell'ultimo secondo. In condizioni normali, deve essere 60, ma se non si tratta di un indicatore, i frame vengono eliminati a causa di problemi di rete o il lato remoto o remoto non produce frame con la frequenza prevista.
-    * ```Reused frames``` è il numero di fotogrammi video utilizzati più di una volta nell'ultimo secondo. Ad esempio, se i fotogrammi video arrivano in ritardo, il ciclo di rendering del lettore esegue comunque il rendering di un frame, ma deve *riutilizzare* il fotogramma video già usato per il frame precedente.
-    * ```Skipped frames``` è il numero di fotogrammi video che non sono stati utilizzati dal ciclo di rendering del lettore. Ad esempio, l'instabilità della rete può avere l'effetto che i fotogrammi video in arrivo non sono più distribuiti in modo uniforme. Ad esempio, se alcune sono in ritardo e altre arrivano nel tempo con il risultato che non hanno più un Delta di 16,66 millisecondi quando sono in esecuzione su 60Hz. Può verificarsi che più di un frame arrivi tra due cicli del ciclo di rendering del lettore. In questo caso, il giocatore *Ignora* uno o più frame perché dovrebbe visualizzare sempre il frame video ricevuto più di recente.
+    * ```Received frames```numero di fotogrammi video raggiunti nell'ultimo secondo. In condizioni normali, deve essere 60, ma se non si tratta di un indicatore, i frame vengono eliminati a causa di problemi di rete o il lato remoto o remoto non produce frame con la frequenza prevista.
+    * ```Reused frames```numero di fotogrammi video utilizzati più di una volta nell'ultimo secondo. Ad esempio, se i fotogrammi video arrivano in ritardo, il ciclo di rendering del lettore esegue comunque il rendering di un frame, ma deve *riutilizzare* il fotogramma video già usato per il frame precedente.
+    * ```Skipped frames```numero di fotogrammi video che non sono stati utilizzati dal ciclo di rendering del lettore. Ad esempio, l'instabilità della rete può avere l'effetto che i fotogrammi video in arrivo non sono più distribuiti in modo uniforme. Ad esempio, se alcune sono in ritardo e altre arrivano nel tempo con il risultato che non hanno più un Delta di 16,66 millisecondi quando sono in esecuzione su 60Hz. Può verificarsi che più di un frame arrivi tra due cicli del ciclo di rendering del lettore. In questo caso, il giocatore *Ignora* uno o più frame perché dovrebbe visualizzare sempre il frame video ricevuto più di recente.
 
     >[!NOTE]
     >Quando viene rilevata un'instabilità della rete, i frame ignorati e riutilizzati sono in genere uguali. Al contrario, se vengono visualizzati solo i frame ignorati, questo indica che il lettore non raggiunge la frequenza dei fotogrammi di destinazione. In questo caso, è necessario tenere sotto controllo il tempo delta massimo di rendering durante la diagnosi dei problemi.
@@ -75,8 +78,8 @@ Nella schermata principale è possibile **disabilitare** la diagnostica per disa
 * Si consiglia di usare una scheda grafica GeForce GTX 970 o AMD Radeon R9 290 o superiore.
 * Si consiglia di connettere il PC alla rete tramite Ethernet per ridurre il numero di hop wireless.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 * [HoloLens (1a generazione): aggiungere la comunicazione remota olografica](add-holographic-remoting.md)
 * [HoloLens 2: scrittura di un'app remota di comunicazione remota olografica](holographic-remoting-create-host.md)
 * [Condizioni di licenza software per Holographic Remoting](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
