@@ -5,19 +5,19 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: Port, porting, Unity, middleware, Engine, UWP
-ms.openlocfilehash: 5cf66ce857806ab6fcf8c94b94c7a9a540339b97
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+keywords: Port, porting, Unity, middleware, Engine, UWP, Win32
+ms.openlocfilehash: a1e3cd47096d728091d62d6c038bf6b2eb6bab16
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061154"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156772"
 ---
 # <a name="porting-guides"></a>Guide alla conversione
 
 ## <a name="overview"></a>Panoramica
 
-Windows 10 include il supporto diretto per auricolari immersivi e olografici. Se è stato creato contenuto per altri dispositivi, ad esempio Oculus Rift o HTC vive, questi hanno dipendenze da librerie esistenti sopra l'API della piattaforma del sistema operativo. Il riutilizzo del contenuto esistente in realtà mista di Windows implica il reindirizzamento dell'utilizzo di questi altri SDK alle API Windows. Le [API della piattaforma Windows per la realtà mista](https://docs.microsoft.com/uwp/api/Windows.Perception) funzionano con il modello di app Windows x86 e il piattaforma UWP (Universal Windows Platform) (UWP). Se l'app non è già stata compilata per UWP, il passaggio a UWP sarà parte integrante dell'esperienza di porting.
+Windows 10 include il supporto diretto per auricolari immersivi e olografici. Se è stato creato contenuto per altri dispositivi, ad esempio Oculus Rift o HTC vive, questi hanno dipendenze da librerie esistenti sopra l'API della piattaforma del sistema operativo. Il riutilizzo del contenuto esistente in realtà mista di Windows implica il reindirizzamento dell'utilizzo di questi altri SDK alle API Windows. Le [API della piattaforma Windows per la realtà mista](https://docs.microsoft.com/uwp/api/Windows.Perception) funzionano con il modello di app Win32 e il piattaforma UWP (Universal Windows Platform) (UWP). Se l'app non è già stata compilata per UWP, il passaggio a UWP sarà parte integrante dell'esperienza di porting.
 
 ## <a name="porting-overview"></a>Panoramica del porting
 
@@ -74,7 +74,7 @@ Con qualsiasi aggiornamento di Unity, è possibile che sia necessario aggiornare
 
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity Step 4: indirizzare l'applicazione per l'esecuzione in piattaforma UWP (Universal Windows Platform) (UWP)
 
-Se la destinazione è Windows x86, è possibile ignorare questo passaggio e continuare con il passaggio 5.
+Se la destinazione è Win32, è possibile ignorare questo passaggio e continuare con il passaggio 5.
 
 Dopo aver installato gli strumenti, è necessario fare in modo che l'app venga eseguita come app di Windows universale.
 
@@ -84,12 +84,12 @@ Dopo aver installato gli strumenti, è necessario fare in modo che l'app venga e
 > [!NOTE]
 > Unity continua a migliorare il supporto per IL2CPP; IL2CPP rende più semplici le porte UWP. Se la destinazione è il back-end di scripting .NET, è consigliabile prendere in considerazione la conversione per sfruttare il back-end IL2CPP.
 
-* È possibile ignorare "Unity Step 5" poiché la destinazione è UWP anziché x86.
+* È possibile ignorare "Unity Step 5" poiché la destinazione è UWP anziché Win32.
 
 > [!NOTE] 
 > Se l'applicazione dispone di dipendenze da servizi specifici del dispositivo, ad esempio la corrispondenza da Steam, sarà necessario disabilitarli in questo passaggio. È possibile associare i servizi equivalenti forniti da Windows in un secondo momento.
 
-### <a name="unity-step-5-target-your-application-to-run-on-windows-x86"></a>Unity Step 5: indirizzare l'applicazione per l'esecuzione in Windows x86
+### <a name="unity-step-5-target-your-application-to-run-on-win32"></a>Unity Step 5: indirizzare l'applicazione per l'esecuzione in Win32
 
 Dall'interno dell'applicazione Unity:
 
