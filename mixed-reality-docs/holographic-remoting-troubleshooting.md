@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Realtà mista di Windows, ologrammi, comunicazione remota olografica, rendering remoto, rendering di rete, HoloLens, ologrammi remoti, risoluzione dei problemi, guida
-ms.openlocfilehash: 79650ceab5d0125a8a06c776a59a45a78d0aa20c
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 593b242326b83d4596d22a7e1a39ef18c26bc67a
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061114"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300503"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Risoluzione dei problemi di comunicazione remota olografica
 
@@ -24,9 +24,13 @@ Per le app di esempio per la comunicazione remota olografica è stata abilitata 
 
 Se viene visualizzato un errore irreversibile del linker che indica che non è possibile aprire ' vccorlib. lib ', verificare che il carico di lavoro di Visual Studio includa le librerie mitigate di Spectre. Per altre informazioni, vedere https://aka.ms/Ofhn4c.
 
-## <a name="speech"></a>Sintesi vocale
+## <a name="speech"></a>Voce
 
 Il lettore di comunicazione remota olografica supporta una sovrapposizione di diagnostica che può essere abilitata in base a quanto detto ```Enable Diagnostics``` e disabilitato ```Disable Diagnostics``` . Se si riscontrano problemi con questi comandi vocali, è anche possibile avviare il lettore di comunicazione remota olografica tramite un Web browser usando ```ms-holographic-remoting:?stats``` come URL.
+
+## <a name="h265-video-codec-not-available"></a>Codec video H265 non disponibile
+
+È necessario installare le [estensioni video di HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) quando si usa il codec video di H265 nell'app remota. Se si verificano problemi in cui il codec è installato ma non può essere usato, consultare la guida alla [risoluzione dei problemi](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) .
 
 ## <a name="limitations"></a>Limitazioni
 
@@ -39,10 +43,12 @@ Le API seguenti **non** sono attualmente supportate quando si usa la comunicazio
   - Nelle versioni precedenti genera sempre un errore.
 * [HolographicCamera.IsHardwareContentProtectionEnabled](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.ishardwarecontentprotectionenabled#Windows_Graphics_Holographic_HolographicCamera_IsHardwareContentProtectionEnabled)
 * [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
-  - Non ha esito negativo, ma le dimensioni della destinazione di rendering non verranno modificate.
+  - Supportato a partire dalla versione [2.2.0](holographic-remoting-version-history.md#v2.2.0)
+  - Nelle versioni precedenti non ha esito negativo, ma le dimensioni della destinazione di rendering non verranno modificate.
 * [HolographicCameraPose.OverrideProjectionTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [HolographicCameraPose.OverrideViewport](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
+  - Supportato a partire dalla versione [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - Non ha esito negativo, ma il buffer di profondità non sarà remoto.
   - Supportato a partire dalla versione [2.1.0](holographic-remoting-version-history.md#v2.1.0)

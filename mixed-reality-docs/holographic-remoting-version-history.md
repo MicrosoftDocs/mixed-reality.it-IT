@@ -6,17 +6,21 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicazione remota, comunicazione remota olografica
-ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 1f4d463ab734cbb627f251486b0058fbf295d2ed
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061124"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300522"
 ---
 # <a name="holographic-remoting-version-history"></a>Cronologia delle versioni remota olografica
 
 > [!IMPORTANT]
 > Queste linee guida sono specifiche per la comunicazione remota olografica in HoloLens 2.
+
+## <a name="version-222-july-10-2020"></a>Versione 2.2.2 (10 luglio 2020)<a name="v2.2.2"></a>
+* Correzione di un problema relativo a [HolographicCamera. LeftViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_LeftViewportParameters) e [HolographicCamera. RightViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_RightViewportParameters) che non restituisce alcun vertice di mesh di area nascosta durante il flusso da un auricolare a realtà mista di Windows.
+* Correzione di un arresto anomalo che può verificarsi con una connessione di rete insufficiente.
 
 ## <a name="version-221-july-6-2020"></a>Versione 2.2.1 (6 luglio 2020)<a name="v2.2.1"></a>
 > [!IMPORTANT]
