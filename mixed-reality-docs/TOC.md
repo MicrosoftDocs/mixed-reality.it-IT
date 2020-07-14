@@ -112,34 +112,47 @@
 ### Unity
 #### Esercitazioni su HoloLens 2
 ##### Esercitazioni introduttive
-###### [1. Panoramica e obiettivi](mrlearning-base.md)
-###### [2. Inizializzazione del progetto e prima applicazione](mrlearning-base-ch1.md)
-###### [3. Creazione dell'interfaccia utente e configurazione di Mixed Reality Toolkit](mrlearning-base-ch2.md)
-###### [4. Inserimento di contenuto dinamico e uso dei risolutori](mrlearning-base-ch3.md)
-###### [5. Interazione con oggetti 3D](mrlearning-base-ch4.md)
-###### [6. Esplorazione delle opzioni di input avanzate](mrlearning-base-ch5.md)
-###### [7. Creazione dell'applicazione di esempio Lunar Module](mrlearning-base-ch6.md)
+###### [1. Introduzione](mr-learning-base-01.md)
+###### [2. Inizializzazione del progetto e prima applicazione](mr-learning-base-02.md)
+###### [3. Configurazione dei profili di Mixed Reality Toolkit](mr-learning-base-03.md)
+###### [4. Posizionamento degli oggetti nella scena](mr-learning-base-04.md)
+###### [5. Creazione di contenuto dinamico tramite risolutori](mr-learning-base-05.md)
+###### [6. Creazione dell'interfaccia utente](mr-learning-base-06.md)
+###### [7. Interazione con oggetti 3D](mr-learning-base-07.md)
+###### [8. Uso del tracciamento oculare](mr-learning-base-08.md)
+###### [9. Uso dei comandi vocali](mr-learning-base-09.md)
 ##### Esercitazioni su Ancoraggi nello spazio di Azure
-###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
-###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
-###### [3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
-###### [4. Ancoraggi nello spazio di Azure per Android e iOS](mrlearning-asa-ch4.md)
+###### [1. Introduzione](mr-learning-asa-01.md)
+###### [2. Introduzione ad Ancoraggi nello spazio di Azure](mr-learning-asa-02.md)
+###### [3. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mr-learning-asa-03.md)
+###### [4. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mr-learning-asa-04.md)
+###### [5. Ancoraggi nello spazio di Azure per Android e iOS](mr-learning-asa-05.md)
+##### Esercitazioni sulle funzionalità multiutente
+###### [1. Introduzione](mr-learning-sharing-01.md)
+###### [2. Configurazione di Photon Unity Networking](mr-learning-sharing-02.md)
+###### [3. Connessione di più utenti](mr-learning-sharing-03.md)
+###### [4. Condivisione dei movimenti di oggetti con più utenti](mr-learning-sharing-04.md)
+###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mr-learning-sharing-05.md)
 ##### Esercitazioni sui servizi Voce di Azure
 ###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 ###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
 ###### [3. Aggiunta del componente di traduzione vocale in Servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
 ###### [4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
-##### Esercitazioni sulle funzionalità multiutente
-###### [1. Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Connessione di più utenti](mrlearning-sharing(photon)-ch2.md)
-###### [3. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch3.md)
-###### [4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)
 ##### Esercitazioni sull'audio spaziale
 ###### [1. Aggiunta dell'audio spaziale al progetto](unity-spatial-audio-ch1.md)
 ###### [2. Spazializzazione dei suoni di interazione del pulsante](unity-spatial-audio-ch2.md)
 ###### [3. Spazializzazione dell'audio da un video](unity-spatial-audio-ch3.md)
 ###### [4. Abilitazione e disabilitazione dell'audio spaziale in fase di esecuzione](unity-spatial-audio-ch4.md)
 ###### [5. Uso del riverbero per aggiungere distanza all'audio spaziale](unity-spatial-audio-ch5.md)
+#### Esercitazioni su Servizi cloud di Azure
+##### [1. Servizi cloud di Azure per HoloLens 2](mr-learning-azure-01.md)
+##### [2. Integrazione di Archiviazione di Azure](mr-learning-azure-02.md)
+##### [3. Integrazione di Visione personalizzata di Azure](mr-learning-azure-03.md)
+##### [4. Integrazione di Ancoraggi nello spazio di Azure](mr-learning-azure-04.md)
+##### [5. Integrazione del servizio Azure Bot](mr-learning-azure-05.md)
+#### Esercitazioni su Holographic Remoting per PC
+##### [1. Introduzione a Holographic Remoting per PC](mr-learning-pc-holographic-remoting-01.md)
+##### [2. Creazione di un'applicazione Holographic Remoting per PC](mr-learning-pc-holographic-remoting-02.md)
 #### App di esempio open source per HoloLens 2
 ##### [Superfici](sampleapp-surfaces.md)
 ##### [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
@@ -217,15 +230,17 @@
 
 ## Unreal
 ### [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)
-### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
 ### [Input sguardo fisso in Unreal](unreal-gaze-input.md)
+### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
+### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
+### [Codici a matrice in Unreal](unreal-qr-codes.md)
 ### [Mapping spaziale in Unreal](unreal-spatial-mapping.md)
 ### [Audio spaziale in Unreal](unreal-spatial-audio.md)
 ### [Ancoraggi nello spazio in Unreal](unreal-spatial-anchors.md)
-### [Input vocale in Unreal](unreal-voice-input.md)
-### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
-### [Codici a matrice in Unreal](unreal-qr-codes.md)
 ### [Streaming in Unreal](unreal-streaming.md)
+### [Distribuire nel dispositivo in Unreal](unreal-deploying.md)
+### [Input vocale in Unreal](unreal-voice-input.md)
+### [WinRT in Unreal](unreal-winrt.md)
 ### [Consigli sulle prestazioni per Unreal](performance-recommendations-for-unreal.md)
 
 ## JavaScript
