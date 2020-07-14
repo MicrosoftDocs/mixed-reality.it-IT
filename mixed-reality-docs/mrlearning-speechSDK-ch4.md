@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: b2342e7d0d502af2787ca311d18a44f8726acf2d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 8cebe1fb203aeed9a262a2e9f482993b4775e0a6
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79028554"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303662"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configurazione della comprensione delle finalità e del linguaggio naturale
 
@@ -63,7 +63,7 @@ Nella pagina Create (Crea) fai clic sull'opzione **Prediction** (Stima) e immett
 > Al momento della stesura di questo articolo, non è necessario creare una risorsa di creazione perché quando viene creata l'app LUIS (Language Understanding Intelligent Service) nella sezione successiva viene generata automaticamente una chiave di prova per la creazione in LUIS.
 
 > [!TIP]
-> Se disponi già di un altro gruppo di risorse appropriato nell'account di Azure, ad esempio se hai completato l'esercitazione sugli [ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md), puoi usarlo anziché crearne uno nuovo.
+> Se disponi già di un altro gruppo di risorse appropriato nell'account di Azure, ad esempio se hai completato l'esercitazione sugli [ancoraggi nello spazio di Azure](mr-learning-asa-01.md), puoi usarlo anziché crearne uno nuovo.
 
 Sempre nella pagina Create (Crea) immetti i valori seguenti:
 
