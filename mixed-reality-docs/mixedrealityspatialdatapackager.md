@@ -5,20 +5,20 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: LBE, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539683"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402740"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentazione del pacchetto di dati spaziali della realtà mista
 
 >[!NOTE]
 > Questo strumento e le relative operazioni sono offerti così come sono. È soggetta a modifiche senza preavviso e potrebbe non essere compatibile con le versioni future di Windows o Windows Mixed Reality HMD.
 
-## <a name="download"></a>Scarica
+## <a name="download"></a>Download
  Scarica [MixedRealitySpatialDataPackager qui](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
 ## <a name="device-support"></a>Supporto di dispositivi
@@ -44,7 +44,7 @@ ms.locfileid: "74539683"
     </tr>
 </table>
 
-## <a name="quickstart"></a>QuickStart
+## <a name="quickstart"></a>Avvio rapido
 
 Lo strumento di combinazione dei dati spaziali della realtà mista copia i dati spaziali di un'app di destinazione da un PC a un altro tramite un processo di esportazione e importazione in due passaggi. Lo strumento deve essere eseguito con privilegi di amministratore ed Elimina i dati spaziali esistenti durante l'importazione. L'esportazione lascia intatti i dati spaziali esistenti.
 
@@ -60,7 +60,7 @@ Requisiti e limitazioni principali:
 
 ## <a name="mapping-best-practices"></a>Procedure consigliate per il mapping
 
-1. Cancellare le mappe esistenti dal pannello di controllo (Impostazioni-> realtà mista-> ambiente-> cancellare i dati dell'ambiente)
+1. Cancellare le mappe esistenti dal pannello di controllo (impostazioni-> realtà mista-> ambiente-> cancellare i dati dell'ambiente)
 2. Assicurarsi che l'illuminazione sia sufficiente per un corretto rilevamento e se l'esecuzione della modalità Mappa bloccata tenti di mantenere la stessa illuminazione
 3. Quando possibile, evitare di ridurre l'intervallo dinamico di illuminazione evitando aree di illuminazione elevata accanto a aree ombreggiate scure
 4. Ridurre al minimo le superfici senza trama, ad esempio inserire un intervallo di poster diversi sui muri bianchi
@@ -71,7 +71,7 @@ Requisiti e limitazioni principali:
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Esecuzione di pacchetti di dati spaziali di realtà mista con script complementare
 
-È stato fornito MRSpatialPackagerHelperScript. ps1 che esegue gli strumenti della mappa di pacchetti. 
+È stato fornito MRSpatialPackagerHelperScript.ps1 che esegue gli strumenti della mappa. 
 
 
 I parametri dello script sono definiti di seguito:
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Come esportare con MixedRealityPackager. exe
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>Come esportare usando MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 L'esportazione delle mappe dal dispositivo genera due file MapX, het. MapX e sa. MapX. Durante il processo di esportazione tutti gli ancoraggi spaziali vengono rimossi tranne l'app specificata e il limite creato dall'utente (se esistente). Il nome della famiglia di pacchetti di origine deve corrispondere a un'app installata esistente o il file exe non riuscirà.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Come importare con MixedRealityPackager. exe
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>Come importare utilizzando MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
@@ -150,7 +150,7 @@ L'importazione Elimina i dati spaziali esistenti e li sostituisce con i dati del
 
 
 ***
-## <a name="error-messages"></a>Messaggi di errore
+## <a name="error-messages"></a>messaggi di errore
 Inoltre, i messaggi di errore che seguono gli errori saranno associati a un HRESULT
 
 ### <a name="if-there-was-an-error-invalid-arguments"></a>Se si è verificato un errore di argomenti non validi
