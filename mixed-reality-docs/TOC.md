@@ -230,18 +230,21 @@
 
 ## Unreal
 ### [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)
-### [Input sguardo fisso in Unreal](unreal-gaze-input.md)
-### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
-### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
-### [Codici a matrice in Unreal](unreal-qr-codes.md)
-### [Mapping spaziale in Unreal](unreal-spatial-mapping.md)
-### [Audio spaziale in Unreal](unreal-spatial-audio.md)
-### [Ancoraggi nello spazio in Unreal](unreal-spatial-anchors.md)
-### [Streaming in Unreal](unreal-streaming.md)
-### [Distribuire nel dispositivo in Unreal](unreal-deploying.md)
-### [Input vocale in Unreal](unreal-voice-input.md)
-### [WinRT in Unreal](unreal-winrt.md)
-### [Consigli sulle prestazioni per Unreal](performance-recommendations-for-unreal.md)
+### Componenti fondamentali
+#### [Input sguardo fisso in Unreal](unreal-gaze-input.md)
+#### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
+#### [Mapping spaziale in Unreal](unreal-spatial-mapping.md)
+#### [Audio spaziale in Unreal](unreal-spatial-audio.md)
+#### [Ancoraggi nello spazio in Unreal](unreal-spatial-anchors.md)
+#### [Input vocale in Unreal](unreal-voice-input.md)
+### API e funzionalità della piattaforma
+#### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
+#### [Codici a matrice in Unreal](unreal-qr-codes.md)
+#### [WinRT in Unreal](unreal-winrt.md)
+### Prestazioni e distribuzione
+#### [Distribuire nel dispositivo in Unreal](unreal-deploying.md)
+#### [Consigli sulle prestazioni per Unreal](performance-recommendations-for-unreal.md)
+#### [Streaming in Unreal](unreal-streaming.md)
 
 ## JavaScript
 ### [Panoramica dello sviluppo con JavaScript](javascript-development-overview.md)
