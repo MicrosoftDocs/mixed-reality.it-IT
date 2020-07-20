@@ -1,28 +1,26 @@
-# Novità 
-## [Preparare l'app per HL2](mrtk-porting-guide.md)
-## [Informazioni sui servizi di Azure](azure-services.md)
-## [Prepararsi al nuovo Microsoft Edge](new-microsoft-edge.md)
-## Programmi ed eventi
-### [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
-### [Mixed Reality Dev Days](mr-dev-days.md)
-#### [Registrazioni delle sessioni](mr-dev-days-sessions.md)
-## [Note sulla versione corrente di Realtà mista](release-notes-may-2020.md)
-## [Risorse della community](community.md)
-## [Invio di contributi per questa documentazione](CONTRIBUTING.md)
+<!-- Hub landing page -->
+# [Benvenuti in Realtà mista](index.yml)
+
+<!-- Discover top level folder -->
 # Rilevazione
-## [Informazioni di base sulla realtà mista](index.md)
+## [Informazioni di base sulla realtà mista](get-started-with-mr.md)
 ## [Espandere il processo di progettazione](case-study-expanding-the-design-process-for-mixed-reality.md)
-## [Raccolta di case study](case-studies-overview.md)
+
 ## Hardware HoloLens
 ### [Dettagli sull'hardware HoloLens 2](https://docs.microsoft.com/hololens/hololens2-hardware)
 ### [Dettagli sull'hardware HoloLens (prima generazione)](https://docs.microsoft.com/hololens/hololens1-hardware)
+
 ## Visori VR immersive
 ### [Dettagli sull'hardware dei visori VR immersive](immersive-headset-hardware-details.md)
 ### [Esplorazione dello spazio iniziale di Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guida per appassionati](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Intrattenimento basato sulla posizione](location-based-experiences.md)
-## [Accessori hardware](hardware-accessories.md)
+
 ## [Risorse della community](community.md)
+## [Raccolta di case study](case-studies-overview.md)
+## [Accessori hardware](hardware-accessories.md)
+
+<!-- Design top level folder -->
 # Progettazione
 ## [Iniziare a progettare e creare prototipi](design.md)
 ## [Informazioni su queste linee guida per la progettazione](about-this-design-guidance.md)
@@ -60,6 +58,7 @@
 #### [Sguardo fisso e commit](gaze-and-commit-eyes.md)
 #### [Puntamento con la testa e commit](gaze-and-commit-head.md)
 ### [Interazione basata su sguardo fisso](eye-gaze-interaction.md)
+
 ## Elementi UX
 ### [Panoramica](app-patterns-landingpage.md)
 ### Elementi di base
@@ -92,6 +91,7 @@
 #### [Billboarding e tag-along](billboarding-and-tag-along.md)
 #### [Visualizzazione dello stato](progress.md)
 #### [Magnetismo di superficie](surface-magnetism.md)
+
 ## Risorse
 ### [Informazioni su Unity](https://learn.unity.com/)
 ### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
@@ -100,16 +100,28 @@
 ### [Processo di creazione degli asset](asset-creation-process.md)
 ### [Progettare ambienti immersivi personalizzati](add-custom-home-environments.md)
 
+<!-- Develop top level folder -->
 # Sviluppo
 ## [Informazioni sugli strumenti e sull'architettura](development.md)
 ## [Installare gli strumenti](install-the-tools.md)
+## [Panoramica dei servizi cloud](mixed-reality-cloud-services.md)
 
-## Servizi cloud di realtà mista
-### [Rendering remoto di Azure](https://docs.microsoft.com/azure/remote-rendering)
-### [Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors)
+<!-- Deprecated
+## Mixed reality cloud services
+### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
+### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
+-->
 
-## [Esercitazioni e app di esempio](tutorials.md)
-### Unity
+<!-- Unity section -->
+## Unity
+### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
+### Guida introduttiva
+#### [Introduzione a Mixed Reality Toolkit v2](mrtk-getting-started.md)
+#### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
+#### [Preparare l'app per HL2](mrtk-porting-guide.md)
+
+### Esercitazioni
+#### [Panoramica](tutorials.md)
 #### Esercitazioni su HoloLens 2
 ##### Esercitazioni introduttive
 ###### [1. Introduzione](mr-learning-base-01.md)
@@ -122,57 +134,43 @@
 ###### [8. Uso del tracciamento oculare](mr-learning-base-08.md)
 ###### [9. Uso dei comandi vocali](mr-learning-base-09.md)
 ##### Esercitazioni su Ancoraggi nello spazio di Azure
-###### [1. Introduzione](mr-learning-asa-01.md)
-###### [2. Introduzione ad Ancoraggi nello spazio di Azure](mr-learning-asa-02.md)
-###### [3. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mr-learning-asa-03.md)
-###### [4. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mr-learning-asa-04.md)
-###### [5. Ancoraggi nello spazio di Azure per Android e iOS](mr-learning-asa-05.md)
-##### Esercitazioni sulle funzionalità multiutente
-###### [1. Introduzione](mr-learning-sharing-01.md)
-###### [2. Configurazione di Photon Unity Networking](mr-learning-sharing-02.md)
-###### [3. Connessione di più utenti](mr-learning-sharing-03.md)
-###### [4. Condivisione dei movimenti di oggetti con più utenti](mr-learning-sharing-04.md)
-###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mr-learning-sharing-05.md)
+###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
+###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
+###### [3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
+###### [4. Ancoraggi nello spazio di Azure per Android e iOS](mrlearning-asa-ch4.md)
 ##### Esercitazioni sui servizi Voce di Azure
 ###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 ###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
 ###### [3. Aggiunta del componente di traduzione vocale in Servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
 ###### [4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
+##### Esercitazioni sulle funzionalità multiutente
+###### [1. Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
+###### [2. Connessione di più utenti](mrlearning-sharing(photon)-ch2.md)
+###### [3. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch3.md)
+###### [4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)
 ##### Esercitazioni sull'audio spaziale
 ###### [1. Aggiunta dell'audio spaziale al progetto](unity-spatial-audio-ch1.md)
 ###### [2. Spazializzazione dei suoni di interazione del pulsante](unity-spatial-audio-ch2.md)
 ###### [3. Spazializzazione dell'audio da un video](unity-spatial-audio-ch3.md)
 ###### [4. Abilitazione e disabilitazione dell'audio spaziale in fase di esecuzione](unity-spatial-audio-ch4.md)
 ###### [5. Uso del riverbero per aggiungere distanza all'audio spaziale](unity-spatial-audio-ch5.md)
+
 #### Esercitazioni su Servizi cloud di Azure
 ##### [1. Servizi cloud di Azure per HoloLens 2](mr-learning-azure-01.md)
 ##### [2. Integrazione di Archiviazione di Azure](mr-learning-azure-02.md)
 ##### [3. Integrazione di Visione personalizzata di Azure](mr-learning-azure-03.md)
 ##### [4. Integrazione di Ancoraggi nello spazio di Azure](mr-learning-azure-04.md)
 ##### [5. Integrazione del servizio Azure Bot](mr-learning-azure-05.md)
+
 #### Esercitazioni su Holographic Remoting per PC
 ##### [1. Introduzione a Holographic Remoting per PC](mr-learning-pc-holographic-remoting-01.md)
 ##### [2. Creazione di un'applicazione Holographic Remoting per PC](mr-learning-pc-holographic-remoting-02.md)
-#### App di esempio open source per HoloLens 2
-##### [Superfici](sampleapp-surfaces.md)
-##### [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
-#### App di esempio open source per HoloLens (prima generazione)
-##### [Tavola periodica degli elementi 1.0](periodic-table-of-the-elements.md)
-##### [Galaxy Explorer 1.0](galaxy-explorer.md)
-##### [Lunar Module](lunar-module.md)
+
 #### Esercitazioni per HoloLens (prima generazione) e per i visori VR immersivi
 ##### [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
 ##### [Nozioni di base MR 101: Progetto completo con dispositivo](holograms-101.md)
 ##### [Nozioni di base MR 101E: Progetto completo con emulatore](holograms-101e.md)
-##### [Input MR 210: Sguardo fisso](holograms-210.md)
-##### [Input MR 211: Movimento](holograms-211.md)
-##### [Input MR 212: Voce](holograms-212.md)
-##### [Input MR 213: Controller del movimento](mixed-reality-213.md)
-##### [Spaziale MR 220: Audio spaziale](holograms-220.md)
-##### [Spaziale MR 230: Mapping spaziale](holograms-230.md)
-##### [Condivisione MR 240: Più dispositivi HoloLens](holograms-240.md)
-##### [Condivisione MR 250: HoloLens (prima generazione) e visori VR immersivi](mixed-reality-250.md)
+
 #### Esercitazioni per realtà mista e servizi di Azure
 ##### [MR e Azure 301: Traduzioni](mr-azure-301.md)
 ##### [MR e Azure 302: Visione artificiale](mr-azure-302.md)
@@ -188,24 +186,18 @@
 ##### [MR e Azure 311: Microsoft Graph](mr-azure-311.md)
 ##### [MR e Azure 312: Integrazione di bot](mr-azure-312.md)
 ##### [MR e Azure 313: Servizio hub IoT](mr-azure-313.md)
-### Unreal
-#### [1. Guida introduttiva](unreal-uxt-ch1.md)
-#### [2. Inizializzazione del progetto e prima applicazione](unreal-uxt-ch2.md)
-#### [3. Configurazione del computer per la realtà mista](unreal-uxt-ch3.md)
-#### [4. Rendere la scena interattiva](unreal-uxt-ch4.md)
-#### [5. Aggiunta di un pulsante e reimpostazione delle posizioni della parte](unreal-uxt-ch5.md)
-#### [6. Creazione di pacchetti e distribuzione nel dispositivo o nell'emulatore](unreal-uxt-ch6.md)
 
-## Unity
-### [Panoramica dello sviluppo per Unity](unity-development-overview.md)
-### Guida introduttiva
-#### [Introduzione a Mixed Reality Toolkit v2](mrtk-getting-started.md)
-#### [Configurare un progetto Unity per Windows Mixed Reality](Configure-Unity-Project.md)
-#### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
-#### [Modalità di gioco Unity](unity-play-mode.md)
-#### [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
-#### [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-#### [Debug gestito con Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
+<!-- Deprecated HTK tutorials
+##### [MR Input 210: Gaze](holograms-210.md)
+##### [MR Input 211: Gesture](holograms-211.md)
+##### [MR Input 212: Voice](holograms-212.md)
+##### [MR Input 213: Motion controllers](mixed-reality-213.md)
+##### [MR Spatial 220: Spatial sound](holograms-220.md)
+##### [MR Spatial 230: Spatial mapping](holograms-230.md)
+##### [MR Sharing 240: Multiple HoloLens devices](holograms-240.md)
+##### [MR Sharing 250: HoloLens (1st gen) and immersive headsets](mixed-reality-250.md)
+-->
+
 ### Componenti fondamentali
 #### [MRTK 101: Come usare Mixed Reality Toolkit Unity per le interazioni di base](mrtk-101.md)
 #### [Fotocamera in Unity](camera-in-unity.md)
@@ -218,6 +210,7 @@
 #### [Input vocale in Unity](voice-input-in-unity.md)
 #### [Mapping spaziale in Unity](spatial-mapping-in-unity.md)
 #### [Audio spaziale in Unity](spatial-sound-in-unity.md)
+
 ### API e funzionalità della piattaforma
 #### [Esperienze condivise in Unity](shared-experiences-in-unity.md)
 #### [Fotocamera individuabile in Unity](locatable-camera-in-unity.md)
@@ -228,8 +221,35 @@
 #### [Oggetti nativi di realtà mista in Unity](unity-xrdevice-advanced.md)
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 
+### App di esempio
+#### HoloLens 2 
+##### [Superfici](sampleapp-surfaces.md)
+##### [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
+#### HoloLens (prima generazione)
+##### [Tavola periodica degli elementi 1.0](periodic-table-of-the-elements.md)
+##### [Galaxy Explorer 1.0](galaxy-explorer.md)
+##### [Lunar Module](lunar-module.md)
+
+### Impostazioni e debug
+#### [Debug gestito con Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
+#### [Impostazioni consigliate per Unity](recommended-settings-for-unity.md)
+#### [Modalità di gioco Unity](unity-play-mode.md)
+### Soluzioni di Visual Studio
+#### [Esportazione e creazione di una soluzione di Visual Studio Unity](exporting-and-building-a-unity-visual-studio-solution.md)
+#### [Procedure consigliate per l'uso con Unity e Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+
+<!-- Unreal section -->
 ## Unreal
 ### [Panoramica dello sviluppo con Unreal](unreal-development-overview.md)
+### Esercitazioni
+#### Creare un'app per gli scacchi con UX Tools di MRTK
+##### [1. Guida introduttiva](unreal-uxt-ch1.md)
+##### [2. Inizializzazione del progetto](unreal-uxt-ch2.md)
+##### [3. Configurazione di Realtà mista](unreal-uxt-ch3.md)
+##### [4. Aggiunta di interattività](unreal-uxt-ch4.md)
+##### [5. Interfaccia utente e funzioni](unreal-uxt-ch5.md)
+##### [6. Creazione di pacchetti e distribuzione](unreal-uxt-ch6.md)
 ### Componenti fondamentali
 #### [Input sguardo fisso in Unreal](unreal-gaze-input.md)
 #### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
@@ -246,6 +266,7 @@
 #### [Consigli sulle prestazioni per Unreal](performance-recommendations-for-unreal.md)
 #### [Streaming in Unreal](unreal-streaming.md)
 
+<!-- Javascript section -->
 ## JavaScript
 ### [Panoramica dello sviluppo con JavaScript](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
@@ -322,11 +343,27 @@
 ### [Aggiornamento dell'applicazione SteamVR per Windows Mixed Reality](updating-your-steamvr-application-for-windows-mixed-reality.md)
 ### [Aggiornamento di app UWP 2D per la realtà mista](building-2d-apps.md)
 
+<!-- Distribute top level folder -->
 # Distribuire
-## [Linee guida per la progettazione di utilità di avvio di app 3D](3d-app-launcher-design-guidance.md)
-## [Creare modelli 3D per l'uso nello spazio iniziale](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-## [Implementare utilità di avvio per app 3D (app UWP)](implementing-3d-app-launchers.md)
-## [Implementare utilità di avvio per app 3D (app Win32)](implementing-3d-app-launchers-win32.md)
-## [Abilitare il posizionamento di modelli 3D nello spazio iniziale](enable-placement-of-3d-models-in-the-home.md)
+## Launcher di app 3D
+### [Linee guida per la progettazione](3d-app-launcher-design-guidance.md)
+### [Creazione di modelli 3D per l'uso nell'ambiente iniziale](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+### Implementazione di launcher di app 3D
+#### [App UWP](implementing-3d-app-launchers.md)
+#### [App Win32](implementing-3d-app-launchers-win32.md)
+### [Abilitare il posizionamento di modelli 3D nello spazio iniziale](enable-placement-of-3d-models-in-the-home.md)
 ## [Acquisti in-app](in-app-purchases.md)
 ## [Invio di un'app a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+
+<!-- What's new? top level folder -->
+# Novità
+## [Informazioni sui servizi di Azure](azure-services.md)
+## [Prepararsi al nuovo Microsoft Edge](new-microsoft-edge.md)
+## Programmi ed eventi
+### [Calendario degli eventi di San Francisco Reactor Academy](sf-academy-events.md)
+### [Mixed Reality Dev Days](mr-dev-days.md)
+#### [Registrazioni delle sessioni](mr-dev-days-sessions.md)
+## [Note sulla versione corrente di Realtà mista](release-notes-may-2020.md)
+## [Risorse della community](community.md)
+## [Invio di contributi per questa documentazione](CONTRIBUTING.md)
+## [Distribuzione di HoloLens su larga scala](https://docs.microsoft.com/hololens/)
