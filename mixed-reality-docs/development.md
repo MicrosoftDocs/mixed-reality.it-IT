@@ -8,12 +8,12 @@ ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, unity, unreal, directx
-ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 3c874e45e555ec6defa611bd5404abbb18e6612e
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835290"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447857"
 ---
 # <a name="learn-the-tools-and-architecture"></a>ottieni informazioni sugli strumenti e sull'architettura
 
@@ -140,8 +140,8 @@ Tutti gli elementi di base necessari per iniziare a scrivere un'app di realtà m
 
 :::row:::
     :::column:::
-       [![Acquisisci i concetti di base](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
-        **[Acquisisci i concetti di base](index.md#understand-the-basics)**<br>
+       [![Acquisisci i concetti di base](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
+        **[Acquisisci i concetti di base](get-started-with-mr.md#understand-the-basics)**<br>
         Comprendi meglio ciò che si intende per realtà mista e il modo in cui viene usata.
     :::column-end:::
     :::column:::
