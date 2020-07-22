@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Windows Mixed Reality OpenXR Strumenti di sviluppo, DirectX, native, app nativa, motore personalizzato, middleware, Guida introduttiva, 101, estensioni di anteprima, versione runtime di OpenXR, stato del sistema
-ms.openlocfilehash: b4cf91c7a7b5bd203a4fef43c7a988d3ff1e9b16
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: e09ff2748921789d74bafdb321f19882336ea500
+ms.sourcegitcommit: 3c32f45fd941767d408cccc5a76f1ff1cec763da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228056"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86879231"
 ---
 # <a name="getting-started-with-openxr"></a>Informazioni di base su OpenXR
 
@@ -29,20 +29,18 @@ Per iniziare a sviluppare applicazioni OpenXR per HoloLens 2:
 Per iniziare a sviluppare applicazioni OpenXR per cuffie di realtà miste di Windows Immersive:
 
 1. Assicurarsi di eseguire almeno l'aggiornamento 2019 di Windows 10 (1903), che è il requisito minimo per gli utenti finali di Windows Mixed Reality per l'esecuzione di applicazioni OpenXR.  Se si usa una versione precedente di Windows 10, è possibile eseguire l'aggiornamento con <a href="https://www.microsoft.com/software-download/windows10" target="_blank">Windows 10 Update Assistant</a>.
-2. Configurare un auricolare di realtà mista di Windows o seguire le istruzioni per [abilitare il simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md).  Quando si configura la realtà mista di Windows, il portale di realtà mista installerà automaticamente il runtime di OpenXR di realtà mista di Windows.  Il Microsoft Store manterrà aggiornato il Runtime.
-3. Rendere attiva la realtà mista di Windows OpenXR runtime avviando il portale di realtà mista dal menu Start, facendo clic sul pulsante... menu in basso a sinistra e selezionando "Configura OpenXR".<br>
+2. Configurare un auricolare di realtà mista di Windows o seguire le istruzioni per [abilitare il simulatore di realtà mista di Windows](using-the-windows-mixed-reality-simulator.md).
+
+L'operazione è terminata.  Il runtime di OpenXR per la realtà mista di Windows viene installato e reso attivo automaticamente per tutti gli utenti della realtà mista di Windows.  Il Microsoft Store mantiene il runtime aggiornato.
+
+Se è necessario che il runtime di OpenXR di Windows Mixed Reality sia nuovamente attivo, avviare il portale di realtà mista dal menu Start, fare clic su... menu in basso a sinistra e selezionare "Configura OpenXR".  Se la voce di menu non è presente, il runtime di OpenXR è già attivo.<br>
 ![Configurazione di OpenXR nel portale per la realtà mista](images/mixed-reality-portal-set-up-openxr.png)
-
-Se è necessario riattivare la realtà mista di Windows OpenXR Runtime, ripetere il passaggio 3.
-
-> [!NOTE]
-> Il runtime di OpenXR per la realtà mista di Windows verrà presto reso attivo automaticamente per tutti gli utenti finali della realtà mista di Windows.
 
 ## <a name="getting-the-windows-mixed-reality-openxr-developer-tools"></a>Ottenere la realtà mista di Windows OpenXR Strumenti di sviluppo
 
 Per provare il runtime di OpenXR per la realtà mista di Windows, è possibile installare la <a href="https://www.microsoft.com/store/productId/9n5cvvl23qbt" target="_blank">realtà mista OpenXR strumenti di sviluppo app</a>.  Questa app fornisce una scena demo che esercita varie funzionalità di OpenXR, insieme a una pagina di stato del sistema che fornisce informazioni chiave sul runtime attivo e sull'auricolare corrente.
 
-Se si usa l'emulatore, il modo più semplice per installare la realtà mista OpenXR Strumenti di sviluppo è l'uso del [portale per dispositivi Windows](using-the-windows-device-portal.md), passando alla pagina "OpenXR" e quindi facendo clic sul pulsante "Installa" in "funzionalità per sviluppatori". (funziona anche su un dispositivo HoloLens 2 fisico)
+Se si usa l'emulatore HoloLens 2, il modo più semplice per installare la realtà mista OpenXR Strumenti di sviluppo usa il [portale per dispositivi Windows](using-the-windows-device-portal.md), passando alla pagina "OpenXR" e quindi facendo clic sul pulsante "Installa" in "funzionalità per sviluppatori". (funziona anche su un dispositivo HoloLens 2 fisico)
 
 ![Realtà mista OpenXR Strumenti di sviluppo app](images/mixed-reality-openxr-developer-tools.png)
 
@@ -50,9 +48,9 @@ Se si usa l'emulatore, il modo più semplice per installare la realtà mista Ope
 
 Assicurarsi di [installare gli strumenti](install-the-tools.md) necessari per lo sviluppo di OpenXR, se non è già stato fatto.
 
-Il progetto <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> illustra un semplice esempio di OpenXR con due file di progetto di Visual Studio, uno per un'app desktop Win32 e uno per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto HoloLens UWP, è necessario che il [carico di lavoro di sviluppo piattaforma UWP (Universal Windows Platform)](install-the-tools.md#installation-checklist) installato in Visual Studio per aprirlo completamente.
+Il progetto <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> illustra un semplice esempio di OpenXR con due file di progetto di Visual Studio, rispettivamente per un'app desktop Win32 e per un'app UWP HoloLens 2.  Poiché la soluzione contiene un progetto HoloLens UWP, è necessario che il [carico di lavoro di sviluppo piattaforma UWP (Universal Windows Platform)](install-the-tools.md#installation-checklist) installato in Visual Studio per aprirlo completamente.
 
-Si noti che, mentre i file di progetto Win32 e UWP sono separati a causa delle differenze nella creazione di pacchetti e distribuzione, il codice dell'app all'interno di ogni progetto è uguale al 100%.
+Si noti che, mentre i file di progetto Win32 e UWP sono separati a causa delle differenze nella creazione di pacchetti e distribuzione, il codice dell'app all'interno di ogni progetto è quasi identico.
 
 Dopo la compilazione di un desktop Win32 OpenXR. EXE, è possibile usarlo con una cuffia VR su qualsiasi piattaforma desktop VR che supporta OpenXR, sia che si tratti di un auricolare a realtà mista di Windows o di qualsiasi altro auricolare.
 
@@ -99,6 +97,7 @@ Per attivare il supporto dell'estensione di anteprima nel HoloLens 2 o desktop P
      * Se il dispositivo di destinazione è un dispositivo HoloLens 2, [seguire queste istruzioni](using-the-windows-device-portal.md) sul dispositivo di destinazione.  Si noti che questa operazione richiede una cuffia fisica, perché un problema noto nell'emulatore HoloLens 2 impedisce che l'interfaccia utente nel passaggio successivo venga visualizzata nell'emulatore.
      * Se il dispositivo di destinazione è un PC desktop con una periferica di auricolare immersiva collegata, <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#set-up-device-portal-on-windows-desktop" target="_blank">seguire queste istruzioni</a> sul PC desktop di destinazione.
   1. Passare alla scheda **OpenXR** nel riquadro sinistro e abilitare l' **uso dell'ultima versione di anteprima OpenXR Runtime**.  In questo modo viene abilitato il runtime di anteprima nel dispositivo, in cui sono attivate le estensioni di anteprima.
+     ![Casella di controllo OpenXR Preview runtime del portale del dispositivo](images/device-portal-openxr-preview-runtime.png)
   1. Verificare che la **versione del runtime** visualizzata nella scheda **stato del sistema** di [OpenXR realtà mista di Windows strumenti di sviluppo](openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-tools) ora corrisponda alla versione richiesta delle estensioni di anteprima che si prevede di provare.  In tal caso, l'estensione verrà visualizzata nell'elenco **estensioni** .  Si noti che una volta che è disponibile un'estensione stabile, la relativa estensione di anteprima verrà rimossa.<br />
      ![Realtà mista OpenXR Strumenti di sviluppo scheda stato del sistema app](images/mixed-reality-openxr-developer-tools-status.png)
 
