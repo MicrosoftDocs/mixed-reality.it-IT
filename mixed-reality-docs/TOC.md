@@ -134,20 +134,22 @@
 ###### [8. Uso del tracciamento oculare](mr-learning-base-08.md)
 ###### [9. Uso dei comandi vocali](mr-learning-base-09.md)
 ##### Esercitazioni su Ancoraggi nello spazio di Azure
-###### [1. Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
-###### [2. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mrlearning-asa-ch2.md)
-###### [3. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mrlearning-asa-ch3.md)
-###### [4. Ancoraggi nello spazio di Azure per Android e iOS](mrlearning-asa-ch4.md)
+###### [1. Introduzione](mr-learning-asa-01.md)
+###### [2. Introduzione ad Ancoraggi nello spazio di Azure](mr-learning-asa-02.md)
+###### [3. Salvataggio, recupero e condivisione di Ancoraggi nello spazio di Azure](mr-learning-asa-03.md)
+###### [4. Visualizzazione del feedback su Ancoraggi nello spazio di Azure](mr-learning-asa-04.md)
+###### [5. Ancoraggi nello spazio di Azure per Android e iOS](mr-learning-asa-05.md)
+##### Esercitazioni sulle funzionalità multiutente
+###### [1. Introduzione](mr-learning-sharing-01.md)
+###### [2. Configurazione di Photon Unity Networking](mr-learning-sharing-02.md)
+###### [3. Connessione di più utenti](mr-learning-sharing-03.md)
+###### [4. Condivisione dei movimenti di oggetti con più utenti](mr-learning-sharing-04.md)
+###### [5. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mr-learning-sharing-05.md)
 ##### Esercitazioni sui servizi Voce di Azure
 ###### [1. Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 ###### [2. Aggiunta di una modalità offline per la conversione locale della voce in testo scritto](mrlearning-speechSDK-ch2.md)
 ###### [3. Aggiunta del componente di traduzione vocale in Servizi cognitivi di Azure](mrlearning-speechSDK-ch3.md)
 ###### [4. Configurazione di finalità e comprensione del linguaggio naturale](mrlearning-speechSDK-ch4.md)
-##### Esercitazioni sulle funzionalità multiutente
-###### [1. Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Connessione di più utenti](mrlearning-sharing(photon)-ch2.md)
-###### [3. Condivisione dei movimenti di oggetti con più utenti](mrlearning-sharing(photon)-ch3.md)
-###### [4. Integrazione di Ancoraggi nello spazio di Azure in un'esperienza condivisa](mrlearning-sharing(photon)-ch4.md)
 ##### Esercitazioni sull'audio spaziale
 ###### [1. Aggiunta dell'audio spaziale al progetto](unity-spatial-audio-ch1.md)
 ###### [2. Spazializzazione dei suoni di interazione del pulsante](unity-spatial-audio-ch2.md)
