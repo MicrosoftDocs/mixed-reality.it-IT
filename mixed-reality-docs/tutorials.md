@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, academy, esercitazione
-ms.openlocfilehash: 57ddf1569ff87a278134eff0204942094b1cd014
-ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
+ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216252"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303652"
 ---
 # <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
 
@@ -26,11 +26,11 @@ Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity o U
 Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista. Le esercitazioni di Unity sono basate sul [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity), l'esercitazione di Unreal è basata su [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
 * Esercitazioni introduttive
-    * Unity: [1 di 7 Panoramica e obiettivi](mrlearning-base.md)
+    * Unity: [1 di 9 Introduzione](mr-learning-base-01.md)
     * Unreal: [1 di 6 Introduzione](unreal-uxt-ch1.md)
-* Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 4 Introduzione ad Ancoraggi nello spazio di Azure](mrlearning-asa-ch1.md)
+* Esercitazioni su Ancoraggi nello spazio di Azure: [1 di 5 Introduzione](mr-learning-asa-01.md)
+* Esercitazioni sulle funzionalità multiutente: [1 di 5 Introduzione](mr-learning-sharing-01.md)
 * Esercitazioni sui servizi Voce di Azure: [1 di 4 Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
-* Esercitazioni sulle funzionalità multiutente: [1 di 5 Configurazione di Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
 
 ## <a name="open-source-sample-apps"></a>App di esempio open source
 
@@ -56,7 +56,7 @@ Mixed Reality Academy è un set di esercitazioni dettagliate online con i file d
 * Un PC Windows 10 con gli [strumenti installati](install-the-tools.md) corretti è un prerequisito comune per completare ogni esercitazione.
 
 >[!NOTE]
->Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista. Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi. Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2. Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mrlearning-base.md).
+>Le esercitazioni di Mixed Reality Academy sono state progettate in base a HoloLens (prima generazione) e ai visori VR immersive di realtà mista. Pertanto, riteniamo importante lasciarle a disposizione degli sviluppatori a cui serve ancora materiale sussidiario per lo sviluppo di questi dispositivi. Queste esercitazioni **_non_** verranno aggiornate con i set di strumenti o le interazioni più recenti usati per HoloLens 2. Rimarranno invariate per consentire di continuare a lavorare sui dispositivi supportati. Per HoloLens 2 è stata pubblicata [una nuova serie di esercitazioni](mr-learning-base-01.md).
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">

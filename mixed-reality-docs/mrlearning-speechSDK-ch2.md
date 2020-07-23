@@ -7,12 +7,12 @@ ms.date: 06/27/2019
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 7a0fa915a80763300eff470e29356034d6a0f841
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031604"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303672"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. Uso del riconoscimento vocale per l'esecuzione di comandi
 
@@ -46,7 +46,7 @@ Puoi anche riabilitarlo pronunciando la parola di attivazione **Activate termina
 > Poiché l'applicazione deve connettersi ad Azure, assicurati che il computer o il dispositivo sia connesso a Internet.
 
 > [!TIP]
-> Se prevedi di non essere spesso in grado di connetterti ad Azure, puoi implementare i comandi vocali anche con MRTK seguendo le istruzioni contenute in [Abilitazione dei comandi vocali](mrlearning-base-ch5.md#enabling-voice-commands).
+> Se si prevede di non essere spesso in grado di connettersi ad Azure, è possibile implementare i comandi vocali anche con MRTK seguendo le istruzioni contenute in [Uso dei comandi vocali](mr-learning-base-09.md).
 
 ## <a name="congratulations"></a>Lezione completata
 

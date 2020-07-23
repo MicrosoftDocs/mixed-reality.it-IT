@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, prestazioni, ottimizzazione, impostazioni, documentazione
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533123"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303637"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Consigli sulle prestazioni per Unreal
 
@@ -32,10 +32,11 @@ Tutte le impostazioni seguenti sono disponibili in **Edit > Project Settings** (
     * Scorri fino alla sezione **Engine** (Motore), seleziona **Rendering**, espandi la sezione **Culling** e deseleziona **Occlusion Culling** (Culling occlusioni).
         + Se è necessario il culling delle occlusioni per il rendering di una scena molto dettagliata, è consigliabile abilitare **Support Software Occlusion Culling** (Supporta culling occlusioni software) in **Engine > Rendering** (Motore > Rendering). Ciò consente ad Unreal di operare sulla CPU ed evitare query di occlusione della GPU, che influiscono negativamente sulle prestazioni di HoloLens 2.
 
-![Impostazione di dispositivi mobili come destinazione](images/unreal/performance-recommendations-img-02.png)
+![Disabilitare il culling delle occlusioni](images/unreal/performance-recommendations-img-02.png)
 
-3. Aggiornamento del rendering VR:
-    * Scorri fino alla sezione **Engine** (Motore), seleziona **Rendering**, espandi la sezione **VR** e abilita **Instanced Stereo** (Stereo con istanze) e **Mobile Multi-View** (Visualizzazioni multiple dispositivi mobili).
-        + Può essere necessario deselezionare **Mobile Post-Processing** (Post-elaborazione dispositivi mobili) per controllare **Mobile Multi-View** (Visualizzazioni multiple dispositivi mobili).
+3. Uso delle visualizzazioni multiple dei dispositivi mobili:
+    * Scorri fino alla sezione **Engine** (Motore), seleziona **Rendering**, espandi la sezione **VR** e abilita **Instanced Stereo** (Stereo con istanze) e **Mobile Multi-View** (Visualizzazioni multiple dispositivi mobili). L'opzione Mobile HDR (HDR per dispositivi mobili) deve essere deselezionata.
 
-![Impostazione di dispositivi mobili come destinazione](images/unreal/performance-recommendations-img-03.png)
+![Impostazioni di rendering VR](images/unreal/performance-recommendations-img-03.png)
+
+4. Impostazione di **Maximum number of CSM cascades to render** (Numero massimo di catene CSM di cui eseguire il rendering) su **1** e di **Max Movable Spotlights / Point Lights** (Numero massimo di riflettori/punti luce mobili) su **0**. 
