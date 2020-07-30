@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, controlli, carattere, tipografia, interfaccia utente, UX
-ms.openlocfilehash: 8662ff8a8e1e99455354392d7dc852feb1fe1589
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345711"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376573"
 ---
 # <a name="text-in-unity"></a>Testo in Unity
 
@@ -65,14 +65,14 @@ Per l'interazione near a 0,45 m (45 cm), l'angolo di visualizzazione del tipo di
  *nell'intervallo di interazione near and lontano*
 
 ### <a name="the-minimum-legible-font-size"></a>Dimensioni minime del carattere leggibili
-| Distance | Angolo di visualizzazione | Altezza testo | Dimensioni del carattere |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensioni del carattere |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0.4 °-0,5 ° | 3.14 – 3,9 mm | 8,9 – 11.13 PT |
 | 2m | 0,35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Dimensioni del carattere facilmente leggibili
-| Distance | Angolo di visualizzazione | Altezza testo | Dimensioni del carattere |
+| Distanza | Angolo di visualizzazione | Altezza testo | Dimensioni del carattere |
 |---------|---------|---------|---------|
 | 45 cm (distanza di manipolazione diretta) | 0,65 °-0,8 ° | 5.1-6,3 mm | 14.47-17,8 PT |
 | 2m | 0.6 °-0,75 ° | 20,9-26.2 mm | 59.4-74.2 PT |
@@ -98,8 +98,8 @@ Il materiale del tipo di carattere predefinito di Unity non supporta l'occlusion
 *Shader con supporto occlusione*
 
 
-## <a name="see-also"></a>Vedi anche
-* [Prefabbricato di testo in MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
+## <a name="see-also"></a>Vedere anche
+* [Prefabbricato di testo in MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Tipografia](typography.md)
 
  

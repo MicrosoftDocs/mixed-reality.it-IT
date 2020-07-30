@@ -3,15 +3,15 @@ title: Impostazioni consigliate per Unity
 description: Unity offre alcuni comportamenti specifici per la realtà mista che possono essere alternate tramite le impostazioni del progetto.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: Unity, impostazioni, realtà mista
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570324"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390118"
 ---
 # <a name="recommended-settings-for-unity"></a>Impostazioni consigliate per Unity
 
@@ -23,9 +23,7 @@ Unity offre un set di opzioni predefinite che in genere corrispondono al caso me
 
 È importante modificare le impostazioni di **qualità di Unity** per l'ambiente in modo **molto basso**. Ciò consentirà di garantire che l'applicazione esegua performantly al framerate appropriato. Questa operazione è estremamente significativa per lo sviluppo di HoloLens. Per lo sviluppo di auricolari immersivi, a seconda delle specifiche del desktop che sfruttano l'esperienza VR, è comunque possibile ottenere un framerate senza i parametri di qualità più bassi.
 
-In Unity 2018 LTS +, il livello di qualità del progetto può essere impostato:
-
-In **modifica**  >  **Impostazioni progetto**  >  **qualità** > impostare il **valore predefinito** facendo clic sulla freccia verso il basso fino al livello di qualità **molto basso** .
+In Unity 2019 LTS + è possibile impostare il livello di qualità del **progetto modificando**  >  la qualità**delle impostazioni del progetto**  >  **Quality** e impostando il **valore predefinito** facendo clic sulla freccia verso il basso fino al livello di qualità **molto basso** .
 
 ### <a name="lighting-settings"></a>Impostazioni di illuminazione
 
@@ -42,28 +40,28 @@ Per ulteriori informazioni, leggere l' [illuminazione globale da Unity](https://
 
 Nelle applicazioni di realtà mista la scena viene visualizzata due volte, una per ogni occhio all'utente. Rispetto allo sviluppo 3D tradizionale, questo raddoppia effettivamente la quantità di lavoro che deve essere calcolata. Pertanto, è importante selezionare il percorso di rendering più efficiente in Unity per risparmiare sia sulla CPU che sul tempo GPU. Il rendering con istanza Single Pass ottimizza la pipeline di rendering Unity per le app di realtà miste ed è quindi consigliabile abilitare questa impostazione per impostazione predefinita per ogni progetto.
 
-Per abilitare questa funzionalità nel progetto Unity
+Per abilitare questa funzionalità nel tuo progetto Unity
 
-1)  Aprire **le impostazioni di Player XR** (Vai a **modifica**impostazioni  >  **progetto**  >  **lettore**  >  **XR**)
-2) Selezionare **istanza passaggio singolo** dal menu a discesa **metodo di rendering stereo** (casella di controllo**Virtual Reality supported** )
+1)  Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
+2) Scegli **Single Pass Instanced** (Con istanze a singolo passaggio) dal menu a discesa **Stereo Rendering Method** (Metodo di rendering stereo). Deve essere selezionata la casella di controllo **Virtual Reality Supported** (Realtà virtuale supportata)
 
 Per informazioni dettagliate su questo approccio di rendering, vedere gli articoli seguenti di Unity.
 
-- [Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Istanze Single Pass](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/) (Come ottimizzare le prestazioni di AR e VR con il rendering stereo avanzato)
+- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html) (Creazione di istanze a singolo passaggio)
 
 >[!NOTE]
-> Si verifica un problema comune con il rendering con istanze di single pass se gli sviluppatori dispongono già di shader personalizzati non scritti per le istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che GameObject solo il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non dispongono delle proprietà appropriate per le istanze.
+> Un problema comune relativo al rendering con istanze a singolo passaggio si verifica se gli sviluppatori dispongono già di shader personalizzati non scritti per la creazione di istanze. Dopo l'abilitazione di questa funzionalità, gli sviluppatori possono notare che per alcuni GameObject viene eseguito il rendering in un solo occhio. Ciò è dovuto al fatto che gli shader personalizzati associati non hanno le proprietà appropriate per la creazione di istanze.
 >
-> Per informazioni su come risolvere questo problema, vedere [rendering stereo a passaggio singolo per HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) da Unity
+> Per informazioni su come risolvere questo problema, vedi l'articolo di Unity [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) (Rendering stereo a singolo passaggio per HoloLens)
 
 ### <a name="enable-depth-buffer-sharing"></a>Abilita condivisione buffer di profondità
 
 Per ottenere una migliore stabilità dell'ologramma dalla percezione dell'utente, è consigliabile abilitare la proprietà **depth buffer sharing** in Unity. Se si attiva questa impostazione, Unity condividerà la mappa di profondità prodotta dall'applicazione con la piattaforma di realtà mista di Windows. La piattaforma sarà quindi in grado di ottimizzare la stabilità degli ologrammi in modo specifico per la scena in cui viene eseguito il rendering dell'applicazione da parte di un frame specifico.
 
-Per abilitare questa funzionalità nel progetto Unity
+Per abilitare questa funzionalità nel tuo progetto Unity
 
-1) Aprire **le impostazioni di Player XR** (Vai a **modifica**impostazioni  >  **progetto**  >  **lettore**  >  **XR**)
+1) Apri **Player XR Settings** (Impostazioni XR riproduttore). A tale scopo, vai a **Edit** (Modifica) > **Project Settings** (Impostazioni progetto) > **Player** (Riproduttore) > **XR Settings** (Impostazioni XR)
 2) Selezionare la casella di controllo **Abilita condivisione buffer di profondità** in **Virtual Reality SDK**  >  espansione di**realtà mista Windows** (casella di controllo**Virtual Reality supported** )
 
 Si consiglia inoltre di selezionare la **profondità a 16 bit** nell'impostazione del **formato Depth** in questo pannello, specialmente per lo sviluppo HoloLens. La selezione di 16 bit rispetto a 24 bit ridurrà in modo significativo i requisiti di larghezza di banda, in quanto sarà necessario spostare o elaborare i dati.
@@ -116,10 +114,10 @@ Per abilitare o disabilitare la schermata iniziale olografica:
 
 |  Mostra schermata iniziale Unity  |  Immagine Splash olografica  |  Comportamento |
 |----------|----------|----------|
-|  On  |  nessuno  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
-|  On  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
-|  Off  |  nessuno  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
-|  Off  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  Sì  |  Nessuno  |  Mostra la schermata iniziale di Unity predefinita per 5 secondi o fino a quando non viene caricata l'app, a seconda del valore più lungo |
+|  Sì  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
+|  Disattivato  |  Nessuno  |  Mostra il nero trasparente (Nothing) finché l'app non viene caricata. |
+|  Disattivato  |  Personalizzato  |  Mostra la schermata iniziale personalizzata per 5 secondi o fino al caricamento dell'app, a seconda di quale sia il più lungo. |
 
 Per altre informazioni, vedere [la documentazione della schermata iniziale di Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
