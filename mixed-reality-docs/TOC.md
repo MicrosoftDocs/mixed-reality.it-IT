@@ -156,17 +156,15 @@
 ###### [3. Spazializzazione dell'audio da un video](unity-spatial-audio-ch3.md)
 ###### [4. Abilitazione e disabilitazione dell'audio spaziale in fase di esecuzione](unity-spatial-audio-ch4.md)
 ###### [5. Uso del riverbero per aggiungere distanza all'audio spaziale](unity-spatial-audio-ch5.md)
-
-#### Esercitazioni su Servizi cloud di Azure
-##### [1. Servizi cloud di Azure per HoloLens 2](mr-learning-azure-01.md)
-##### [2. Integrazione di Archiviazione di Azure](mr-learning-azure-02.md)
-##### [3. Integrazione di Visione personalizzata di Azure](mr-learning-azure-03.md)
-##### [4. Integrazione di Ancoraggi nello spazio di Azure](mr-learning-azure-04.md)
-##### [5. Integrazione del servizio Azure Bot](mr-learning-azure-05.md)
-
-#### Esercitazioni su Holographic Remoting per PC
-##### [1. Introduzione a Holographic Remoting per PC](mr-learning-pc-holographic-remoting-01.md)
-##### [2. Creazione di un'applicazione Holographic Remoting per PC](mr-learning-pc-holographic-remoting-02.md)
+##### Esercitazioni su Servizi cloud di Azure
+###### [1. Servizi cloud di Azure per HoloLens 2](mr-learning-azure-01.md)
+###### [2. Integrazione di Archiviazione di Azure](mr-learning-azure-02.md)
+###### [3. Integrazione di Visione personalizzata di Azure](mr-learning-azure-03.md)
+###### [4. Integrazione di Ancoraggi nello spazio di Azure](mr-learning-azure-04.md)
+###### [5. Integrazione del servizio Azure Bot](mr-learning-azure-05.md)
+##### Esercitazioni su Holographic Remoting per PC
+###### [1. Introduzione a Holographic Remoting per PC](mr-learning-pc-holographic-remoting-01.md)
+###### [2. Creazione di un'applicazione Holographic Remoting per PC](mr-learning-pc-holographic-remoting-02.md)
 
 #### Esercitazioni per HoloLens (prima generazione) e per i visori VR immersivi
 ##### [Nozioni di base MR 100: Introduzione a Unity](holograms-100.md)
@@ -224,7 +222,7 @@
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 
 ### App di esempio
-#### HoloLens 2 
+#### HoloLens 2
 ##### [Superfici](sampleapp-surfaces.md)
 ##### [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
@@ -257,7 +255,8 @@
 #### [Tracciamento mano in Unreal](unreal-hand-tracking.md)
 #### [Mapping spaziale in Unreal](unreal-spatial-mapping.md)
 #### [Audio spaziale in Unreal](unreal-spatial-audio.md)
-#### [Ancoraggi nello spazio in Unreal](unreal-spatial-anchors.md)
+#### [Ancoraggi nello spazio locali in Unreal](unreal-spatial-anchors.md)
+#### [Ancoraggi nello spazio di Azure in Unreal](unreal-azure-spatial-anchors.md)
 #### [Input vocale in Unreal](unreal-voice-input.md)
 ### API e funzionalità della piattaforma
 #### [Fotocamera HoloLens in Unreal](unreal-hololens-camera.md)
