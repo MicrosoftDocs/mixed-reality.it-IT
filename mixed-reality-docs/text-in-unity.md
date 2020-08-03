@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Realtà mista di Windows, progettazione, controlli, carattere, tipografia, interfaccia utente, UX
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376573"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476943"
 ---
 # <a name="text-in-unity"></a>Testo in Unity
 
@@ -83,22 +83,24 @@ Segoe UI (il tipo di carattere predefinito per Windows) funziona correttamente n
 ![Visualizzazione angolo, ](images/Text_In_Unity_ViewingAngle.jpg)
  *angolo e altezza del testo*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualità rendering testo nitido con dimensione corretta
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Testo con Mixed Reality toolkit V2
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualità rendering testo nitido con dimensione corretta
 
 In base a questi fattori di scalabilità, sono stati creati [prefabbricati di testo con testo dell'interfaccia utente e mesh di testo 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text). Gli sviluppatori possono usare questi prefabbricati per ottenere testo nitido e dimensioni del carattere coerenti.
 
 ![Qualità rendering testo nitido con dimensione corretta](images/hug-text-06-1000px.png)<br>
 *Qualità rendering testo nitido con dimensione corretta*
 
-## <a name="shader-with-occlusion-support"></a>Shader con supporto occlusione
+### <a name="shader-with-occlusion-support"></a>Shader con supporto occlusione
 
-Il materiale del tipo di carattere predefinito di Unity non supporta l'occlusione. Per questo motivo, per impostazione predefinita verrà visualizzato il testo dietro gli oggetti. È stato incluso un semplice [shader che supporta l'occlusione](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). L'immagine seguente mostra il testo con il materiale carattere predefinito (a sinistra) e il testo con occlusione corretta (destra).
+Il materiale del tipo di carattere predefinito di Unity non supporta l'occlusione. Per questo motivo, per impostazione predefinita verrà visualizzato il testo dietro gli oggetti. È stato incluso un semplice [shader che supporta l'occlusione](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). L'immagine seguente mostra il testo con il materiale carattere predefinito (a sinistra) e il testo con occlusione corretta (destra).
 
 ![Shader con supporto occlusione](images/hug-text-07-1000px.png)<br>
 *Shader con supporto occlusione*
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Prefabbricato di testo in MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Tipografia](typography.md)
 

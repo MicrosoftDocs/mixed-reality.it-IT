@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: Port, porting, Unity, middleware, Engine, UWP, Win32
-ms.openlocfilehash: ff97f843d6af62a5d49d7920abdf78fa4d1e46c9
-ms.sourcegitcommit: 2813f5b3027d47f7c6e9772338935eeccfa2aaec
+ms.openlocfilehash: ed6c613c8aa3649cffb42d08dbb18661f06b9a53
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86408199"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476933"
 ---
 # <a name="porting-guides"></a>Guide alla conversione
 
@@ -33,7 +33,7 @@ A livello generale, sono necessari i passaggi seguenti per trasferire il contenu
 
 ### <a name="common-step-1-make-sure-you-have-the-right-development-hardware"></a>Passaggio comune 1: assicurarsi di avere il giusto hardware di sviluppo
 
-Nella pagina [installa strumenti](install-the-tools.md#for-immersive-vr-headset-development) è elencato l'hardware di sviluppo consigliato.
+Nella pagina [installa strumenti](install-the-tools.md#immersive-vr-headset-requirements) è elencato l'hardware di sviluppo consigliato.
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>Passaggio comune 2: eseguire l'aggiornamento all'ultimo volo di Windows 10
 
@@ -154,7 +154,7 @@ La realtà mista di Windows sarà disponibile in un'ampia gamma di dispositivi, 
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) e [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) includono i profiler delle prestazioni e le linee guida per la pubblicazione di [Microsoft](understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) per la profilatura e l'ottimizzazione delle prestazioni. È disponibile una descrizione approfondita delle prestazioni disponibili [per comprendere le prestazioni della realtà mista](understanding-performance-for-mixed-reality.md). Sono inoltre disponibili dettagli specifici per Unity in [raccomandazioni sulle prestazioni per Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 * [Guida alla conversione dell'input per Unity](input-porting-guide-for-unity.md)
 * [Linee guida per la compatibilità hardware con la realtà mista di Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Informazioni sulle prestazioni per la realtà mista](understanding-performance-for-mixed-reality.md)
