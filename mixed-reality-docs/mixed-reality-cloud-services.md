@@ -8,12 +8,12 @@ ms.date: 06/5/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, sviluppare, sviluppo, HoloLens, servizi cloud
-ms.openlocfilehash: 80b0b802222684c1219987b197e4219eca8bfc56
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 26c5f91eab2b39fbd809010ab0ac738d81dff854
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451387"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390218"
 ---
 # <a name="cloud-services"></a>Servizi cloud
 
@@ -31,7 +31,7 @@ Sono disponibili anche altri servizi di Azure che è possibile aggiungere facilm
 ![Esempio di Rendering remoto di Azure in un'app di presentazione Unity](images/showcase-app.png)
 
 ### <a name="azure-spatial-anchors"></a>Ancoraggi nello spazio di Azure
-[Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors) (ASA) è un servizio multipiattaforma che consente di creare applicazioni di realtà mista con riconoscimento dello spazio. Con Ancoraggi nello spazio di Azure è possibile eseguire il mapping, mantenere in modo permanente e condividere contenuto olografico tra più dispositivi in scala reale. 
+[Ancoraggi nello spazio di Azure](https://docs.microsoft.com/azure/spatial-anchors) (ASA) è un servizio multipiattaforma che consente di creare applicazioni di realtà mista con riconoscimento dello spazio. Con Ancoraggi nello spazio di Azure è possibile eseguire il mapping, mantenere in modo permanente e condividere contenuto olografico tra più dispositivi in scala reale.
 
 ![Esempio di Ancoraggi nello spazio di Azure](images/persistence.gif)
 
