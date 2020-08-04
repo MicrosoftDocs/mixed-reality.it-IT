@@ -3,16 +3,16 @@ title: Esercitazioni sul cloud di Azure - 4. Integrazione di Ancoraggi nello spa
 description: In questo corso viene illustrato come implementare Ancoraggi nello spazio di Azure in un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens, hololens 2, Ancoraggi nello spazio di Azure
 ms.localizationpriority: high
-ms.openlocfilehash: 4eac2b96519abeebc277a53ad83d1b6dec8d61fd
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 468ba0d8e9fca85dc266b662f402f5c956dc94bb
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304932"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376443"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integrazione di Ancoraggi nello spazio di Azure
 
@@ -60,7 +60,7 @@ Si osserverà che il campo **Anchor Manager** (Gestione ancoraggi) nel component
 Non è possibile eseguire Ancoraggi nello spazio di Azure in Unity. Pertanto, per testare la funzionalità di questo servizio devi distribuire il progetto nel tuo dispositivo.
 
 > [!TIP]
-> Per un promemoria su come compilare e distribuire il progetto Unity in HoloLens 2, puoi fare riferimento alle istruzioni riportate in [Compilare l'applicazione nel dispositivo](mr-learning-base-ch1.md#build-your-application-to-your-device).
+> Per rivedere la procedura di compilazione e distribuzione di un progetto Unity in HoloLens 2, puoi fare riferimento alle istruzioni riportate in [Compilazione dell'applicazione nel dispositivo HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 ## <a name="run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>Eseguire l'app in HoloLens 2 e seguire le istruzioni in-app
 

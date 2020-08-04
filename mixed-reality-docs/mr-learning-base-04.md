@@ -3,16 +3,16 @@ title: Esercitazioni introduttive - 4 Posizionamento degli oggetti nella scena
 description: Questo corso illustra come usare Mixed Reality Toolkit (MRTK) per creare un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 356bfa788cd28e8c763a45a2d44c3a1241b8467e
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 71990db23b5154de916f0eda86a978885ab53547
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305513"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376633"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4. Posizionamento degli oggetti nella scena
 

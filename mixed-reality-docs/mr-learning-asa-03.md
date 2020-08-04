@@ -3,16 +3,16 @@ title: Esercitazioni su Ancoraggi nello spazio di Azure - 3. Salvataggio, recupe
 description: Completa questo corso per apprendere come implementare ancoraggi nello spazio di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 25676404a71daf41b6a5c7587fa9bed95ab813f6
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 274722588f156cb01fdd45525912e2e15687bc2d
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304947"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376533"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Salvataggio, recupero e condivisione di ancoraggi nello spazio di Azure
 

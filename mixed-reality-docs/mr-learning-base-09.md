@@ -3,16 +3,16 @@ title: Esercitazioni introduttive - 9. Uso dei comandi vocali
 description: Questo corso illustra come usare Mixed Reality Toolkit (MRTK) per creare un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: ed31c3b11497a0adc91b7ddc1c09b3fb4ca1c573
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: b0b9771d9569d100a354af96a34cd20ef2a3d7c4
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305094"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376593"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso dei comandi vocali
 

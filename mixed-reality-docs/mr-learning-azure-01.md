@@ -3,16 +3,16 @@ title: Esercitazioni sul cloud di Azure - 1. Servizi cloud di Azure per HoloLens
 description: Completa questo corso per imparare a implementare vari servizi di Azure all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: azure, realtà mista, unity, esercitazione, hololens, hololens 2, archiviazione blob di azure, archiviazione tabelle di azure, ancoraggi nello spazio di azure, azure bot framework
 ms.localizationpriority: high
-ms.openlocfilehash: 649046f9416c880d6e69b544866fba60d3e43f4c
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: d69ce965718e31bb5a261631f3f40217e8f7c7d6
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304980"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376483"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1. Servizi cloud di Azure per HoloLens 2
 

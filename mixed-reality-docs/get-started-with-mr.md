@@ -3,16 +3,16 @@ title: Informazioni di base sulla realtà mista
 description: Per aiutare gli utenti che non hanno familiarità con la realtà mista a scoprire che cos'è e quali funzionalità offre.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, procedure per HoloLens, progetti open source
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451377"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476923"
 ---
 # <a name="get-started-with-mixed-reality"></a>Informazioni di base sulla realtà mista
 
@@ -184,7 +184,7 @@ Per visualizzare contenuto che sembri realistico in forma olografica, è importa
     :::column:::
        [![Prova](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[Prova la realtà mista](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        Chiedi una demo di Realtà mista e HoloLens presso il tuo Microsoft Store. 
+        Chiedi una demo di Realtà mista e HoloLens presso il tuo Microsoft Store.
     :::column-end:::
     :::column:::
         [![Diventa un autore](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ Per visualizzare contenuto che sembri realistico in forma olografica, è importa
 
 
 >[!IMPORTANT]
->Tutto il materiale per lo sviluppo della realtà mista viene fornito in questo sito solo per riferimento. L'applicazione, il relativo utilizzo e l'impatto sugli utenti finali sono esclusiva responsabilità dello sviluppatore dell'applicazione, che è tenuto anche ad assicurarsi che l'applicazione non causi disagi, lesioni o altri danni agli utenti finali, oltre che a includere le dichiarazioni di non responsabilità e le avvertenze appropriate. È sempre necessario che lo sviluppatore adotti le misure appropriate in fase di sviluppo e pubblicazione dell'applicazione per assicurarsi che l'applicazione sia sicura e soddisfi tutti gli obblighi previsti nel [Contratto per gli sviluppatori di app con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Tutto il materiale per lo sviluppo della realtà mista viene fornito in questo sito solo per riferimento. L'applicazione, il relativo utilizzo e l'impatto sugli utenti finali sono esclusiva responsabilità dello sviluppatore dell'applicazione, che è tenuto anche ad assicurarsi che l'applicazione non causi disagi, lesioni o altri danni agli utenti finali, oltre che a includere le dichiarazioni di non responsabilità e le avvertenze appropriate. È sempre necessario che lo sviluppatore adotti le misure appropriate in fase di sviluppo e pubblicazione dell'applicazione per assicurarsi che l'applicazione sia sicura e soddisfi tutti gli obblighi previsti nel [Contratto per gli sviluppatori di app con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).

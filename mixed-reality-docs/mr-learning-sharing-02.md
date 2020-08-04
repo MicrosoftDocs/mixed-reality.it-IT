@@ -3,16 +3,16 @@ title: Esercitazioni sulle funzionalità multiutente - 2. Configurazione di Phot
 description: Completa questo corso per imparare a implementare esperienze condivise multiutente all'interno di un'applicazione HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: e5817338dbed944232664a86f8b0625bc9d3e1e7
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: ed55d1f84db7ee8dc33f0f738de2b6b98a305fd3
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305710"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376403"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2. Configurazione di Photon Unity Networking
 

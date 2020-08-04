@@ -3,16 +3,16 @@ title: Esercitazioni introduttive - 3. Configurazione dei profili di Mixed Reali
 description: Questo corso illustra come usare Mixed Reality Toolkit (MRTK) per creare un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2c413964a435814275a1b908770ca977412f92be
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: d3381241bb1418fb0e1fb7e5d29d552a533faa32
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305773"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376643"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3. Configurazione dei profili di Mixed Reality Toolkit
 

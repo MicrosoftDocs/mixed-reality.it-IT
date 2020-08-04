@@ -3,16 +3,16 @@ title: Esercitazioni su Ancoraggi nello spazio di Azure - 1. Introduzione
 description: Completare questo corso per imparare a implementare Ancoraggi nello spazio di Azure in un'applicazione di realtà mista.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 6a015b4c9f6a5c1a92697ef9909443234a98ab09
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: f273c573d40b1e65e325bd31b5dd9e14c1ee66ec
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304998"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376553"
 ---
 # <a name="1-introduction"></a>1. Introduzione
 

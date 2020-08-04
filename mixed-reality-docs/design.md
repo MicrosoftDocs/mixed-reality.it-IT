@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realtà mista, individuare, distribuire, indice, pagina di destinazione, progettazione, sviluppo, esercitazioni, app di esempio, nozioni di base, case study, risorse, guide pratiche per HoloLens, progetti open source, concetti di base, interazione
-ms.openlocfilehash: 708a6f83c2de149be9c221130b83f5d787f8f56a
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: a95de2020e4020db86e7e226a81fcad8a12e7427
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447917"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476868"
 ---
 # <a name="start-designing-and-prototyping"></a>Iniziare a progettare e a creare prototipi
 
 
-![Progettazione astratta di realtà mista](images/03_Design.png)
+![Progettazione astratta di realtà mista](images/design-hero-image.png)
 
 ## <a name="expand-your-design-process"></a>[Espandere il processo di progettazione](case-study-expanding-the-design-process-for-mixed-reality.md)
 
