@@ -102,7 +102,7 @@
 
 <!-- Develop top level folder -->
 # Sviluppo
-## [Informazioni sugli strumenti e sull'architettura](development.md)
+## [Introduzione allo sviluppo di app di Realtà mista](development.md)
 ## [Installare gli strumenti](install-the-tools.md)
 ## [Panoramica dei servizi cloud](mixed-reality-cloud-services.md)
 
@@ -222,6 +222,7 @@
 #### [Uso di Vuforia con Unity](vuforia-development-overview.md)
 
 ### App di esempio
+#### [Panoramica](samples.md)
 #### HoloLens 2
 ##### [Superfici](sampleapp-surfaces.md)
 ##### [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
