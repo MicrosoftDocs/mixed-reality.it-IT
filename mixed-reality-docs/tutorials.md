@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
-title: Esercitazioni e app di esempio
-description: Fornisce esempi di codice ed esercitazioni per lo sviluppo di app di realtà mista.
+title: Esercitazioni
+description: Offre esercitazioni per lo sviluppo di app di realtà mista.
 author: keveleigh
 ms.author: kurtie
-ms.date: 10/22/2019
+ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, academy, esercitazione
-ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, esercitazione
+ms.openlocfilehash: dc446be531e2a2fa1b27cdaefbf3adfeb7814740
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303652"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477003"
 ---
-# <a name="tutorials-and-sample-apps"></a>Esercitazioni e app di esempio
+# <a name="tutorials"></a>Esercitazioni 
 
 ![Utente HoloLens 2](images/08_Tutorials.png)
 
 Attualmente, tutte le esercitazioni e le app di esempio sono basate su Unity o Unreal. Man mano che vengono sviluppati contenuti per altri motori e piattaforme, potrai trovarli sotto l'intestazione pertinente nel Sommario.
 
-## <a name="hololens-2-tutorials"></a>Esercitazioni su HoloLens 2
+## <a name="hololens-2"></a>HoloLens 2 
 
 Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppatori ad apprendere le tecniche e le procedure consigliate per sviluppare applicazioni di realtà mista. Le esercitazioni di Unity sono basate sul [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity), l'esercitazione di Unreal è basata su [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
@@ -32,21 +32,7 @@ Le esercitazioni di HoloLens 2 sono state realizzate per aiutare gli sviluppator
 * Esercitazioni sulle funzionalità multiutente: [1 di 5 Introduzione](mr-learning-sharing-01.md)
 * Esercitazioni sui servizi Voce di Azure: [1 di 4 Integrazione e uso del riconoscimento vocale e della trascrizione](mrlearning-speechSDK-ch1.md)
 
-## <a name="open-source-sample-apps"></a>App di esempio open source
-
-Le app di esempio open source sono applicazioni create dai team Microsoft il cui codice sorgente è stato messo a disposizione degli sviluppatori per consentire loro di esaminarlo e apprendere dai progetti già disponibili.
-
-### <a name="hololens-2-open-source-sample-apps"></a>App di esempio open source per HoloLens 2
-* [Superfici](sampleapp-surfaces.md)
-* [Tavola periodica degli elementi 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-* [Galaxy Explorer 2.0](galaxy-explorer-update.md)
-
-### <a name="hololens-1st-gen-open-source-sample-apps"></a>App di esempio open source per HoloLens (prima generazione)
-* [Tavola periodica degli elementi 1.0](periodic-table-of-the-elements.md)
-* [Galaxy Explorer 1.0](galaxy-explorer.md)
-* [Lunar Module](lunar-module.md)
-
-## <a name="mixed-reality-academy-tutorials"></a>Esercitazioni di Mixed Reality Academy
+## <a name="mixed-reality-academy"></a>Mixed Reality Academy 
 
 Mixed Reality Academy è un set di esercitazioni dettagliate online con i file di progetto corrispondenti:
 

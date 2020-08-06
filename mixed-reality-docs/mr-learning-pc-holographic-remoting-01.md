@@ -3,16 +3,16 @@ title: Esercitazioni su Holographic Remoting per PC - 1. Introduzione a Holograp
 description: Completa questo corso per apprendere come usare in remoto l'esperienza di realtà mista da PC a HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: realtà mista, unity, esercitazione, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbbad9548abeb1b8392b99d187b5b051d5b4ddd4
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 4929634d70a082e835eb7bd6b5680719338a5e92
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305779"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476973"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. Introduzione a Holographic Remoting per PC
 
@@ -38,10 +38,11 @@ ms.locfileid: "86305779"
 * Un dispositivo HoloLens 2 [configurato per lo sviluppo](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.3.X montato e il modulo di supporto delle compilazioni UWP (Universal Windows Platform) aggiunto
 
->[!ASSOLUTAMENTE CONSIGLIATO] Completamento della serie di esercitazioni introduttive o esperienza di base precedente con Unity e MRTK
+Prima di proseguire, è **consigliabile** completare la serie di [Esercitazioni introduttive](mr-learning-base-01.md) o alcune esperienze pregresse di base con Unity e MRTK.
 
 > [!IMPORTANT]
-> La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.3.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
+> * La versione di Unity consigliata per questa serie di esercitazioni è Unity 2019.3.X. Questa istruzione sostituisce gli eventuali requisiti o suggerimenti relativi alla versione di Unity indicati negli argomenti visualizzabili facendo clic sui collegamenti dei prerequisiti sopra riportati.
+> * Holographic Remoting con i progetti MRTK funzionerà solo con XR legacy. L'SDK di XR non è attualmente supportato.
 
 ## <a name="creating-and-preparing-the-unity-project"></a>Creazione e preparazione del progetto Unity
 
@@ -168,11 +169,11 @@ In questa esercitazione verrà usato solo il modello MarsCuriosityRover per illu
 
 In questa sezione esaminerai come abilitare il tracciamento oculare nel tuo progetto. Ad esempio, implementerai la funzionalità per evidenziare le descrizioni comandi associate alle parti di MarsCuriosityRover quando le guardi e per nasconderle quando distogli lo sguardo da esse.
 
-### <a name="1-identify-target-objects-and-associated-tooltips"></a>1. Identificare gli oggetti di destinazione e le descrizioni comandi associate.
+### <a name="1-identify-target-objects-and-associated-tooltips"></a>1. Identificare gli oggetti di destinazione e le descrizioni comandi associate
 
 Nella finestra Hierarchy (Gerarchia) seleziona l'oggetto ModelParent. Espandi ***MarsCuriosity -> Rover*** per trovare cinque parti principali di MarsCuriosityRover: **POI-Camera**, **POI-Wheels**, **POI-Antena**, **POI-Spectrometer** e **POI-RUHF Antenna**.
 
-* Osserva cinque oggetti descrizione comando corrispondenti associati a parti di MarsCuriosityRover nella finestra Hierarchy (Gerarchia). 
+* Osserva cinque oggetti descrizione comando corrispondenti associati a parti di MarsCuriosityRover nella finestra Hierarchy (Gerarchia).
 * Configurerai questi oggetti per evidenziare l'esperienza quando guardi le parti di MarsCuriosityRover.
 
 ![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)
