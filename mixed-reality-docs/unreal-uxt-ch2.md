@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 1fce9c34b1d31c56eb628979089399926f3cbf51
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345731"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376508"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inizializzazione del progetto e prima applicazione
 
@@ -40,8 +40,7 @@ Prima di tutto, è necessario un progetto su cui lavorare. Se è la prima volta 
 
 ![Selezionare il modello vuoto](images/unreal-uxt/2-template.PNG)
 
-4. Imposta **C++** , **Scalable 3D or 2D, Mobile/Tablet** (3D o 2D scalabile, Cellulare/Tablet) e **No Starter Content** (Nessun contenuto iniziale) in **Project Settings** (Impostazioni progetto). 
-    * Scegli una posizione di salvataggio e fai clic su **Create Project** (Crea progetto). 
+4. Impostare **C++** , **Scalable 3D or 2D, Mobile/Tablet** (3D o 2D scalabile, Cellulare/Tablet) e **No Starter Content** (Nessun contenuto iniziale) come **Project Settings** (Impostazioni progetto) e quindi scegliere un percorso di salvataggio e fare clic su **Create Project** (Crea progetto). 
 
 > [!NOTE]
 > Devi selezionare un progetto C++ anziché un progetto Blueprint per compilare il plug-in UX Tools, che verrà configurato più avanti nella sezione 4.

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, esercitazione, guida introduttiva, mrtk, uxt, UX Tools, documentazione
-ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: 105e817e54f7de12afdcab9fde1dfce0c38ff4a7
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879545"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376383"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configurazione del progetto per la realtà mista
 
@@ -57,7 +57,7 @@ Al termine, il passaggio successivo consiste nell'assicurarsi che la sessione AR
 A questo punto, il progetto necessita ancora di un oggetto Player. In Unreal, l'oggetto **Pawn** (Pedone) rappresenta l'utente del gioco, ma in questo caso sarà l'esperienza HoloLens 2.
 
 1. Fai clic su **Add New > Blueprint Class** (Aggiungi nuovo > Classe progetto) nella cartella **Content** ed espandi la sezione **All Classes** (Tutte le classi) in fondo. 
-    * Cerca **DefaultPawn**, fai clic su **Select** (Seleziona) e fai doppio clic sull'asset per aprirlo. 
+    * Cercare **DefaultPawn**, fare clic su **Select** (Seleziona), assegnare il nome **MRPawn** e fare doppio clic sull'asset per aprirlo. 
 
 ![Creare un nuovo pedone basato su DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -66,9 +66,13 @@ A questo punto, il progetto necessita ancora di un oggetto Player. In Unreal, l'
 
 2. Seleziona **CollisionComponent** nel pannello **Components** (Componenti) e scorri fino alla sezione **Collision** (Collisione) del pannello **Details** (Dettagli). 
     * Fai clic sull'elenco a discesa **Collision Presets** (Set di impostazioni di collisione) e cambia il valore in **NoCollision**. 
-    * Esegui la stessa operazione per **MeshComponent** e fai clic su **Compile** (Compila) e **Save** (Salva) per salvare il progetto. 
+    * Eseguire la stessa operazione per **MeshComponent**.
 
 ![Modifica dei set di impostazioni di collisione del pedone](images/unreal-uxt/3-nocollision.PNG)
+
+3. Fare clic su **Add Component > Camera** (Aggiungi componente > Fotocamera) nel pannello **Components** (Componenti) e assegnare all'elemento il nome **Camera** (Fotocamera). In tal modo, la fotocamera del giocatore si muoverà insieme al dispositivo HoloLens 2.
+
+4. Fare clic su **Compile** (Compila) e quindi su **Save** (Salva) per salvare il progetto.
 
 Al termine, torna alla finestra principale.
 

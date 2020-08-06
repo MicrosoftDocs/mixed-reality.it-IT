@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulatore
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383073"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376663"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso dell'emulatore HoloLens
 
@@ -253,6 +253,8 @@ Nell'emulatore vedrai solo gli ologrammi di cui esegui il rendering. Ma non vedr
 
 * Quando si disinstalla l'emulatore HoloLens 2, è possibile che l'immagine del disco rigido (Flash.vhdx) rimanga sul disco rigido nella cartella Windows Kits\10\Emulation\HoloLens\<build number>.  È consigliabile eliminare questo file.
 * L'accelerazione grafica hardware può causare l'arresto anomalo delle app di Holographic in alcuni sistemi con grafica AMD o Intel.  La disabilitazione dell'accelerazione grafica hardware nella finestra degli strumenti dell'emulatore offre una soluzione a questo problema.
+* Dopo aver installato gli aggiornamenti di Windows più recenti da luglio 2020, l'accelerazione grafica hardware dell'emulatore HoloLens (prima generazione) potrebbe non essere più disponibile.
+Il componente RemoteFX necessario per l'accelerazione grafica hardware è stato deprecato e verrà rimosso in una versione futura di Windows.  Per abilitare nuovamente l'accelerazione grafica hardware, usare il [cmdlet PowerShell Enable-VMRemoteFXPhysicalVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps).  Per altre informazioni, fare riferimento alla [documentazione sulla deprecazione e sulla rimozione del supporto RemoteFX in Windows](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component). 
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 

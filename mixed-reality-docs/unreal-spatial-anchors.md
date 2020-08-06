@@ -1,5 +1,5 @@
 ---
-title: Ancoraggi nello spazio in Unreal
+title: Ancoraggi nello spazio locali in Unreal
 description: Guida all'uso degli ancoraggi nello spazio in Unreal
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realtà mista, sviluppo, funzionalità, documentazione, guide, ologrammi, ancoraggi nello spazio
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720317"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376048"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Ancoraggi nello spazio in Unreal
+# <a name="local-spatial-anchors-in-unreal"></a>Ancoraggi nello spazio locali in Unreal
 
 ## <a name="overview"></a>Panoramica
 
-Gli ancoraggi nello spazio consentono di salvare gli ologrammi nel mondo reale in più sessioni dell'applicazione.  Questi vengono esposti tramite Unreal come oggetti **ARPin** e salvati nell'archivio degli ancoraggi di HoloLens che viene caricato nelle sessioni future. 
+Gli ancoraggi nello spazio consentono di salvare gli ologrammi nel mondo reale in più sessioni dell'applicazione. Questi vengono esposti tramite Unreal come oggetti **ARPin** e salvati nell'archivio degli ancoraggi di HoloLens che viene caricato nelle sessioni future. Gli ancoraggi locali sono ideali come fallback in assenza di connettività Internet.
+
+> [!IMPORTANT]
+> Gli ancoraggi locali vengono archiviati nel dispositivo, mentre i dati relativi ad Ancoraggi nello spazio di Azure vengono archiviati nel cloud. Se si vuole usare i servizi cloud di Azure per archiviare gli ancoraggi, è disponibile un documento che fornisce informazioni dettagliate sull'integrazione di [Ancoraggi nello spazio di Azure](unreal-azure-spatial-anchors.md). Si noti che è possibile includere ancoraggi locali e ancoraggi di Azure nello stesso progetto senza che si verifichino conflitti.
 
 ## <a name="checking-the-anchor-store"></a>Verifica dell'archivio degli ancoraggi
 
@@ -65,5 +68,6 @@ Terminate le operazioni su un ancoraggio, puoi eliminare singoli ancoraggi o l'i
 > Tieni presente che gli ancoraggi spaziali sono ancora in versione beta, quindi visualizza di nuovo questa pagina in futuro per verificare se sono presenti informazioni e funzionalità aggiornate.
 
 ## <a name="see-also"></a>Vedere anche
+* [Ancoraggi nello spazio di Azure](unreal-azure-spatial-anchors.md)
 * [Ancoraggi nello spazio](spatial-anchors.md)
 * [Sistemi di coordinate](coordinate-systems.md)
